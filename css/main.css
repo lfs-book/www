@@ -18,9 +18,6 @@ p {
 #banner {
 	height: 40px;
 	margin:0; padding:0;
-/*	border-top: 1px dotted grey;
-	border-left: 1px dotted grey;
-	border-right: 1px dotted grey; */
 }
 
 div.navbar {
@@ -31,14 +28,12 @@ div.navbar {
 }
 
 #menu {
-/*  min-width: 63em; */
   list-style-type: none;
   padding: 0;
   margin: 0;
   height: 2em;
-  background-color: #eee;
-  border-bottom: solid 1px #004090;
-  border-top: solid 1px #004090;
+  border-bottom: groove 1px #004090;
+  border-top: groove 1px #004090;
 }
 
 #menu li {
@@ -50,15 +45,14 @@ div.navbar {
 #menu li a:link, #menu li a:visited {
   text-decoration: none;
   text-align: center;
-  float: left;
+  float: right;
   display: block;
   width: 6em;
-  padding: 4px 0px;
+  padding: 4.5px 0px;
   margin: 0;
-  background-color: #eee;
   color: #0072ff;
   font-size: 1em;
-  border-right: dotted 1px #004090;
+  border-right: groove 1px #004090;
   border-bottom: none;
 }
 
@@ -71,13 +65,10 @@ div.navbar {
   text-decoration: none;
   background-color: #dedede;
   color: #004090;
-  border-right: groove 1px #004090;
-/*  border-bottom: none; */
 }
 
 #menu li a:active {
   color: #053188;
-  border-right: solid 1px #ddd;
   text-decoration: none;
 }
 
