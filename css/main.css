@@ -25,12 +25,12 @@ p {
 	top: 5px;
 	margin: 5px 0 5px 0;
 }	
-#search input {
+input {
 	border: 1px solid #ccc;
 	background: #eee;
 	color: #0072ff;
 }
-#search input:hover {
+input:hover {
 	color: #004090;
 	background: #ddd;
 }
