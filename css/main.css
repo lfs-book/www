@@ -131,6 +131,7 @@ border-bottom: solid 3px blue;
   top: 100px;
   border-top: solid 1px #ccc;
   border-right: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
 }
 
 #leftmenulist li a:link, #leftmenulist li a:visited, #lfsmenulist li a:link, #lfsmenulist li a:visited, #alfsmenulist li a:link, #alfsmenulist li a:visited, #blfsmenulist li a:link, #blfsmenulist li a:visited, #hlfsmenulist li a:link, #hlfsmenulist li a:visited, #hintsmenulist li a:link, #hintsmenulist li a:visited, #patchesmenulist li a:link, #patcheslist li a:visited { 
@@ -144,6 +145,7 @@ border-bottom: solid 3px blue;
   background: #dedede;
 }
 
+#leftmenulist li a:hover { border-bottom: solid 3px silver; }
 #lfsmenulist li a:hover { border-bottom: solid 3px #0072ff; }
 #alfsmenulist li a:hover { border-bottom: solid 3px #a4c700; }
 #blfsmenulist li a:hover { border-bottom: solid 3px #fd7700; }
