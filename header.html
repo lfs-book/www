@@ -8,10 +8,17 @@
   </head>
   <body>
     <div id="banner"><img src="images/lfs-banner.png" alt="" /></div>
-      <form id="search" action="search.cgi">
-        <p><input type="text" />
-           <input type="submit" value="Search" /></p>
-      </form>
+    <!-- SiteSearch Google -->
+    <form id ="search" method="get" action="http://www.google.com/search">
+      <p>
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="hidden" name="oe" value="UTF-8" />
+        <input type="text" name="q" size="31" maxlength="255" />
+        <input type="submit" name="btnG" value="Google Search" />
+      </p>
+    </form>
+    <!-- SiteSearch Google -->
+
     <div class="navbar">
       <ul id="menu">
         <li><a href="patches/">Patches</a></li>
