@@ -5,7 +5,7 @@
   </xsl:template>
 
   <xsl:template match="channel">
-    &lt;!--#set var=&quot;pageTitle&quot; value=&quot;LFS Project Homepage&quot; --&gt;
+    &lt;!--#set var=&quot;pageTitle&quot; value=&quot;<xsl:value-of select="description"/> --&gt;
     &lt;!--#include virtual=&quot;header.html&quot; --&gt;
     &lt;!--#include virtual=&quot;menu.html&quot; --&gt;
     <div class="main">
