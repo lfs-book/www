@@ -29,7 +29,7 @@ select {
 	color: #333;
 }
 select:hover {
-	background: #0072ff;
+	background-color: #0072ff;
 	color: white;
 }	
 input {
