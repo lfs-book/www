@@ -29,8 +29,6 @@ select {
 	color: #333;
 }
 select:hover {
-	background-color: #0072ff;
-	color: white;
 }	
 input {
 	border: 1px solid #ccc;
