@@ -75,10 +75,10 @@ div.navbar {
 border-bottom: solid 3px #0072ff;
 }
 #alfsactive:link, #alfsactive:visited {
-border-bottom: solid 3px #a4c700;
+border-bottom: solid 3px #92d800;
 }
 #blfsactive:link, #blfsactive:visited {
-border-bottom: solid 3px #e8c61b;
+border-bottom: solid 3px #ffd500;
 }
 #hlfsactive:link, #hlfsactive:visited {
 border-bottom: solid 3px #fd7700;
@@ -98,8 +98,8 @@ text-decoration: none; text-align: center; float: right; display: block; width: 
 }
 
 #lfs:hover, #lfsactive:hover { text-decoration: none; border-bottom: solid 3px #0072ff; background-color: #ddd }
-#alfs:hover, #alfsactive:hover { text-decoration: none; border-bottom: solid 3px #a4c700; background-color: #ddd }
-#blfs:hover, #blfsactive:hover { text-decoration: none; border-bottom: solid 3px #e8c61b; background-color: #ddd }
+#alfs:hover, #alfsactive:hover { text-decoration: none; border-bottom: solid 3px #92d800; background-color: #ddd }
+#blfs:hover, #blfsactive:hover { text-decoration: none; border-bottom: solid 3px #ffd500; background-color: #ddd }
 #hlfs:hover, #hlfsactive:hover { text-decoration: none; border-bottom: solid 3px #fd7700; background-color: #ddd }
 #hints:hover, #hintsactive:hover { text-decoration: none; border-bottom: solid 3px red; background-color: #ddd }
 #livecd:hover, #livecdactive:hover { text-decoration: none; border-bottom: solid 3px #8400ff; background-color: #ddd }
@@ -139,8 +139,8 @@ text-decoration: none; text-align: center; float: right; display: block; width: 
 
 #leftmenulist li a:hover { border-bottom: solid 3px silver; }
 #lfsmenulist li a:hover { border-bottom: solid 3px #0072ff; }
-#alfsmenulist li a:hover { border-bottom: solid 3px #a4c700; }
-#blfsmenulist li a:hover { border-bottom: solid 3px #e8c61b; }
+#alfsmenulist li a:hover { border-bottom: solid 3px #92d800; }
+#blfsmenulist li a:hover { border-bottom: solid 3px #ffd500; }
 #hlfsmenulist li a:hover { border-bottom: solid 3px #fd7700; }
 #hintsmenulist li a:hover { border-bottom: solid 3px red; }
 #livecdmenulist li a:hover { border-bottom: solid 3px #8400ff; }
