@@ -101,7 +101,7 @@ div.navbar {
 }
 
 #subs li {
-  margin: 10px 0 10px -20px;
+  margin: 10px 0 10px -30px;
 }
 
 #leftmenulist {
@@ -137,7 +137,7 @@ div.navbar {
 em {
 	color: #004090;
 }
-a img {
+a img, span.footer a:link, span.footer a:hover, span.footer a:visited {
 	border: none;
 }
 a:link, a:visited {
@@ -164,4 +164,17 @@ div.main {
 	position: absolute;
 	top: 95px;
 	left: 150px;
+}
+span.footer #first {
+	margin-top: 60px;
+}
+span.footer #firefox {
+	position: relative;
+	top: 5px;
+	margin-left: 5px;
+}
+span.footer p {
+	color: #bcbcbc;
+	font-size: .8em;
+	margin-top: -5px;
 }
