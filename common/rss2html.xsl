@@ -12,7 +12,7 @@
     <h1><xsl:value-of select="title"/></h1>
     <xsl:for-each select="item">
       <h2><xsl:value-of select="title"/></h2>
-      <h3><xsl:value-of select="author"/> - <xsl:value-of select="pubDate"/></h3>
+      <h3 class="newsItem"><xsl:value-of select="author"/> - <xsl:value-of select="pubDate"/></h3>
       <p><xsl:value-of select="description"/></p>
     </xsl:for-each>
     &lt;!--#include virtual=&quot;/common/footer.html&quot; --&gt;
