@@ -1,8 +1,8 @@
 <rss version="2.0">
   <channel>
-    <title>LFS News</title>
-    <link>http://www.linuxfromscratch.org/lfs/news.html</link>
-    <description>LFS Project News</description>
+    <title>Sitewide News</title>
+    <link>http://www.linuxfromscratch.org/news.html</link>
+    <description>LFS Organization News</description>
 
     <item>
       <title>Subversion repository rearranged</title>
