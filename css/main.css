@@ -69,20 +69,6 @@ div.navbar {
   margin: 0;
 }
 
-/* #menu li a:link, #menu li a:visited {
-  text-decoration: none;
-  text-align: center;
-  float: right;
-  display: block;
-  width: 6em;
-  padding: 5px 0 5px 0;
-  color: #0072ff;
-  font-size: 1em;
-  border-left: solid 1px #ccc;
-  border-bottom: none;
-  margin-bottom: -1px;
-} */
-
 #lfsactive:link, #lfsactive:visited, #alfsactive:link, #alfsactive:visited, #blfsactive:link, #blfsactive:visited, #hlfsactive:link, #hlfsactive:visited, #hintsactive:link, #hintsactive:visited, #patchesactive:link, #patchesactive:visited { text-decoration: none; text-align: center; float: right; display: block; width: 6em; padding: 5px 0 2px 0; background-color: #ddd; color: #0072ff; font-size: 1em; border-bottom: solid 3px #ddd; margin-bottom: -1px; }
 
 #lfsactive:link, #lfsactive:visited {
