@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      6.63.&nbsp;Cleaning Up
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="6.1-testing-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version 6.1-testing-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;6.&nbsp;Installing Basic System Software
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="strippingagain.html" title=
+          "Stripping Again">Prev</a>
+          <p>
+            Stripping Again
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="../chapter07/chapter07.html" title=
+          "Setting Up System Bootscripts">Next</a>
+          <p>
+            Setting Up System Bootscripts
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing Basic System Software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.1-testing-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sect1" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          6.63. Cleaning Up
+        </h1>
+      </div>
+      <p>
+        From now on, when reentering the chroot environment after exiting,
+        use the following modified chroot command:
+      </p>
+      <pre class="userinput"><kbd class=
+      "command">chroot "$LFS" /usr/bin/env -i \
+    HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
+    PATH=/bin:/usr/bin:/sbin:/usr/sbin \
+    /bin/bash --login</kbd></pre>
+      <p>
+        The reason for this is that, since the programs in <tt class=
+        "filename">/tools</tt> are no longer needed, the directory can be
+        deleted to regain space. Before actually deleting the directory, exit
+        from chroot and reenter it with the above command. Also, before
+        removing <tt class="filename">/tools</tt>, tar it up and store it in
+        a safe place in case another LFS system will be built.
+      </p>
+      <div class="note">
+        <div class="admonhead">
+          <img alt="[Note]" src="../images/note.png" />
+          <h3 class="admontitle">
+            Note
+          </h3>
+        </div>
+        <div class="admonbody">
+          <p>
+            Removing <tt class="filename">/tools</tt> will also remove the
+            temporary copies of Tcl, Expect, and DejaGNU which were used for
+            running the toolchain tests. To use these programs later on, they
+            will need to be recompiled and re-installed. The installation
+            instructions are the same as in <a href=
+            "../chapter05/chapter05.html">Chapter 5</a>, apart from changing
+            the prefix from <tt class="filename">/tools</tt> to <tt class=
+            "filename">/usr</tt>. The BLFS book discusses a slightly
+            different approach to installing Tcl (see <a href=
+            "http://www.linuxfromscratch.org/blfs/"><i>http://www.linuxfromscratch.org/blfs/</i></a>).
+          </p>
+        </div>
+      </div>
+      <p>
+        The packages and patches stored in <tt class="filename">/sources</tt>
+        can also be moved to a more usual location, such as <tt class=
+        "filename">/usr/src/packages</tt>. The entire directory can also be
+        deleted if its contents have been burned to a CD.
+      </p>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="strippingagain.html" title=
+          "Stripping Again">Prev</a>
+          <p>
+            Stripping Again
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="../chapter07/chapter07.html" title=
+          "Setting Up System Bootscripts">Next</a>
+          <p>
+            Setting Up System Bootscripts
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing Basic System Software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.1-testing-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      7.2.&nbsp;LFS-Bootscripts-2.2.3
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="6.1-testing-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version 6.1-testing-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;7.&nbsp;Setting Up System Bootscripts
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="chapter07.html" title=
+          "Setting Up System Bootscripts">Prev</a>
+          <p>
+            Setting Up System Bootscripts
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="usage.html" title=
+          "How Do These Bootscripts Work?">Next</a>
+          <p>
+            How Do These Bootscripts Work?
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter07.html" title=
+          "Chapter&nbsp;7.&nbsp;Setting Up System Bootscripts">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.1-testing-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          7.2. LFS-Bootscripts-2.2.3
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <p>
+          The LFS-Bootscripts package contains a set of bootscripts.
+        </p>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 0.1 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 0.3 MB
+            </div>
+          </div>
+        </div>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">LFS-Bootscripts installation
+              depends on:</span></strong> Bash and Coreutils
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            7.2.1. Installation of LFS-Bootscripts
+          </h2>
+        </div>
+        <p>
+          Install the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make install</kbd></pre>
+        <p>
+          Since this version of LFS also uses the Hotplug and Syslog-ng
+          packages, install the bootscripts for those packages as well:
+        </p>
+        <pre class="userinput"><kbd class="command">make install-hotplug
+make install-syslog-ng</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-bootscripts" name="contents-bootscripts"></a>
+          <h2 class="sect2">
+            7.2.2. Contents of LFS-bootscripts
+          </h2>
+        </div>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Installed
+              scripts:</span></strong> checkfs, cleanfs, console, functions,
+              halt, ifdown, ifup, localnet, mountfs, mountkernfs, network,
+              rc, reboot, sendsignals, setclock, static, swap, sysklogd,
+              template, and udev
+            </div>
+          </div>
+        </div>
+        <div class="variablelist">
+          <h3>
+            Short Descriptions
+          </h3>
+          <dl>
+            <dt>
+              <a id="checkfs-bootscripts" name=
+              "checkfs-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">checkfs</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Checks the file systems before they are mounted (with the
+                exception of journal and network based file systems)
+              </p>
+            </dd>
+            <dt>
+              <a id="cleanfs-bootscripts" name=
+              "cleanfs-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">cleanfs</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Removes files that should not be preserved between reboots,
+                such as those in <tt class="filename">/var/run/</tt> and
+                <tt class="filename">/var/lock/</tt>; it re-creates
+                <tt class="filename">/var/run/utmp</tt> and removes the
+                possibly present <tt class="filename">/etc/nologin</tt>,
+                <tt class="filename">/fastboot</tt>, and <tt class=
+                "filename">/forcefsck</tt> files
+              </p>
+            </dd>
+            <dt>
+              <a id="console-bootscripts" name=
+              "console-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">console</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Loads the keymap table specified as proper for the keyboard
+                layout; it also sets the screen font
+              </p>
+            </dd>
+            <dt>
+              <a id="functions-bootscripts" name=
+              "functions-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">functions</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Contains functions shared among different scripts, such as
+                error and status checking
+              </p>
+            </dd>
+            <dt>
+              <a id="halt-bootscripts" name=
+              "halt-bootscripts"></a><span class="term"><span><strong class=
+              "command">halt</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Halts the system
+              </p>
+            </dd>
+            <dt>
+              <a id="hotplug-bootscripts" name=
+              "hotplug-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">hotplug</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Load modules for system devices
+              </p>
+            </dd>
+            <dt>
+              <a id="ifdown-bootscripts" name=
+              "ifdown-bootscripts"></a><span class=
+              "term"><span><strong class="command">ifdown</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Assists the network script with network devices
+              </p>
+            </dd>
+            <dt>
+              <a id="ifup-bootscripts" name=
+              "ifup-bootscripts"></a><span class="term"><span><strong class=
+              "command">ifup</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Assists the network script with network devices
+              </p>
+            </dd>
+            <dt>
+              <a id="localnet-bootscripts" name=
+              "localnet-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">localnet</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets up the system's hostname and local loopback device
+              </p>
+            </dd>
+            <dt>
+              <a id="mountfs-bootscripts" name=
+              "mountfs-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">mountfs</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Mounts all file systems, except ones that are marked
+                <span class="emphasis"><em>noauto</em></span> or are network
+                based
+              </p>
+            </dd>
+            <dt>
+              <a id="mountkernfs-bootscripts" name=
+              "mountkernfs-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">mountkernfs</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Is used to mount kernel-provided file systems, such as
+                <tt class="systemitem">proc</tt>
+              </p>
+            </dd>
+            <dt>
+              <a id="network-bootscripts" name=
+              "network-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">network</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets up network interfaces, such as network cards, and sets
+                up the default gateway (where applicable)
+              </p>
+            </dd>
+            <dt>
+              <a id="rc-bootscripts" name="rc-bootscripts"></a><span class=
+              "term"><span><strong class="command">rc</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                The master run-level control script; it is responsible for
+                running all other scripts one-by-one, in a sequence
+                determined by the name of the symbolic links being processed
+              </p>
+            </dd>
+            <dt>
+              <a id="reboot-bootscripts" name=
+              "reboot-bootscripts"></a><span class=
+              "term"><span><strong class="command">reboot</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reboots the system
+              </p>
+            </dd>
+            <dt>
+              <a id="sendsignals-bootscripts" name=
+              "sendsignals-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">sendsignals</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Makes sure every process is terminated before the system
+                reboots or halts
+              </p>
+            </dd>
+            <dt>
+              <a id="setclock-bootscripts" name=
+              "setclock-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">setclock</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Resets the kernel clock to local time in case the hardware
+                clock is not set to UTC time
+              </p>
+            </dd>
+            <dt>
+              <a id="static-bootscripts" name=
+              "static-bootscripts"></a><span class=
+              "term"><span><strong class="command">static</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Provides the functionality needed to assign a static Internet
+                Protocol (IP) address to a network interface
+              </p>
+            </dd>
+            <dt>
+              <a id="swap-bootscripts" name=
+              "swap-bootscripts"></a><span class="term"><span><strong class=
+              "command">swap</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Enables and disables swap files and partitions
+              </p>
+            </dd>
+            <dt>
+              <a id="syslog-ng-bootscripts" name=
+              "syslog-ng-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">syslog-ng</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Starts and stops the system and kernel log daemons
+              </p>
+            </dd>
+            <dt>
+              <a id="template-bootscripts" name=
+              "template-bootscripts"></a><span class=
+              "term"><span><strong class=
+              "command">template</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                A template to create custom bootscripts for other daemons
+              </p>
+            </dd>
+            <dt>
+              <a id="udev-bootscripts" name=
+              "udev-bootscripts"></a><span class="term"><span><strong class=
+              "command">udev</strong></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets up udev and create the devices nodes in <tt class=
+                "filename">/dev</tt>
+              </p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="chapter07.html" title=
+          "Setting Up System Bootscripts">Prev</a>
+          <p>
+            Setting Up System Bootscripts
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="usage.html" title=
+          "How Do These Bootscripts Work?">Next</a>
+          <p>
+            How Do These Bootscripts Work?
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter07.html" title=
+          "Chapter&nbsp;7.&nbsp;Setting Up System Bootscripts">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.1-testing-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
