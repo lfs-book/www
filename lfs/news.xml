@@ -5,6 +5,13 @@
     <description>LFS Project News</description>
 
     <item>
+      <title>Subversion repository rearranged</title>
+      <description>The subversion repository has been restructured.</description>
+      <pubDate>Fri, 14 Jan 2005 17:58:00 GMT</pubDate>
+      <author>matthew@linuxfromscratch.org</author>
+    </item>
+
+    <item>
       <title>RSS Feeds available as HTML</title>
       <description>RSS Feeds of this news page are now available in HTML.  All
         teething problems appear to be fixed, so here it is in all its glory!
