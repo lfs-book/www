@@ -23,9 +23,17 @@ p {
 	position: absolute;
 	right: 0;
 	top: 5px;
-	margin: 10px 10px 5px 0;
+	margin: 5px 0 5px 0;
 }	
-
+#search input {
+	border: 1px solid #ccc;
+	background: #eee;
+	color: #0072ff;
+}
+#search input:hover {
+	color: #004090;
+	background: #ddd;
+}
 #banner {
 	height: 40px;
 }
@@ -47,17 +55,12 @@ div.navbar {
 	border-top: solid 1px #ccc;
 }
 
-#search input {
-	border: 1px solid #ccc;
-	background: #eee;
-}
-
 #menu {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
-  height: 26px;
+  height: 24px;
 }
 
 #menu li {
@@ -72,13 +75,12 @@ div.navbar {
   float: right;
   display: block;
   width: 6em;
-  margin-bottom: 20px;
   padding: 5px 0 5px 0;
-  margin: 0;
   color: #0072ff;
   font-size: 1em;
   border-left: solid 1px #ccc;
   border-bottom: none;
+  margin-bottom: -1px;
 }
 
 #menu li a:hover, #selected:link, #selected:visited {
