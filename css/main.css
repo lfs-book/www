@@ -69,12 +69,7 @@ div.navbar {
   border-bottom: none;
 }
 
-#menu li a#selected:link, #menu li a#selected:visited {
-  text-decoration: none;
-  color: #0072ff;
-}
-
-#menu li a:hover {
+#menu li a:hover, #selected:link, #selected:visited {
   text-decoration: none;
   background-color: #dedede;
   color: #004090;
@@ -87,7 +82,12 @@ div.navbar {
   text-decoration: none;
 }
 
-#leftmenu {
+#subs {
+  list-style-type: none;
+}
+
+#subs li {
+  margin: 10px 0 10px -20px;
 }
 
 #leftmenulist {
