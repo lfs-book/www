@@ -28,18 +28,23 @@ a img {
 }
 a:link {
 	text-decoration: none;
-	color: #4a0;
+	color: #0072ff;
+	border-bottom: thin groove #0072ff;
 }
 a:hover {
-	color: #295e05;
+	text-decoration: none;
+	color: #004090;
+	border-bottom: thin dotted #004090;
 }
 a:visited {
 	text-decoration: none;
-	color: #c13d02;	
+	color: #c13d02;
+	border-bottom: thin groove #c13d02;
 }
 a:visited:hover {
 	text-decoration: none;
 	color: #782602;
+	border-bottom: thin dotted #782602;
 }
 div.main {
 	margin-left: 15%;
