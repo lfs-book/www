@@ -14,7 +14,7 @@
       <h2><xsl:value-of select="title"/></h2>
       <p><xsl:value-of select="description"/></p>
     </xsl:for-each>
-    </div>
     &lt;!--#include virtual=&quot;/common/footer.html&quot; --&gt;
+    </div>
   </xsl:template>
 </xsl:stylesheet>
