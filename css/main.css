@@ -165,15 +165,15 @@ div.main {
 	top: 95px;
 	left: 150px;
 }
-span.footer #first {
+div.footer #first {
 	margin-top: 40px;
 }
-span.footer #firefox {
+div.footer #firefox {
 	position: relative;
 	top: 5px;
 	margin-left: 5px;
 }
-span.footer p {
+div.footer p {
 	color: #bcbcbc;
 	font-size: .8em;
 	margin-top: -5px;
