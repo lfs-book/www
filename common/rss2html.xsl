@@ -13,6 +13,6 @@
       <h2><xsl:value-of select="title"/></h2>
       <p><xsl:value-of select="description"/></p>
     </xsl:for-each>
-    &lt;!--#include virtual=&quot;footer.html&quot; --&gt;
+    &lt;!--#include virtual=&quot;/common/footer.html&quot; --&gt;
   </xsl:template>
 </xsl:stylesheet>
