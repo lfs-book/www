@@ -1,0 +1,46 @@
+body {
+	background: #fefefe;
+	font: .8em Verdana, Arial, sans-serif;
+	color: black;
+}
+h1,h2,h3 {
+	color: #444;
+}
+p {
+	margin: 10px;
+}
+#menu span {
+	margin: 7px;
+}
+#menu span a:link {
+	text-decoration: none;
+	color: #116;
+}
+#menu span a:hover {
+	font-weight: bold;
+	color: #227;
+}
+#menu span a:visited {
+	color: #116;
+}
+a img {
+	border: none;
+}
+a:link {
+	text-decoration: none;
+	color: #4a0;
+}
+a:hover {
+	color: #295e05;
+}
+a:visited {
+	text-decoration: none;
+	color: #c13d02;	
+}
+a:visited:hover {
+	text-decoration: none;
+	color: #782602;
+}
+div.main {
+	margin-left: 15%;
+}
