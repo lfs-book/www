@@ -36,6 +36,14 @@ div.navbar {
 	margin: 0;
 	padding: 0;
 	background-color: #eee;
+	text-align: right;
+	border-bottom: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+}
+
+div.navbar input {
+	border: 1px solid #999;
+	background: #ddd;
 }
 
 #menu {
@@ -44,8 +52,6 @@ div.navbar {
   margin: 0;
   position: relative;
   height: 26px;
-  border-bottom: solid 1px #ccc;
-  border-top: solid 1px /*#a0b0c4*/#ccc;
 }
 
 #menu li {
