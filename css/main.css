@@ -134,7 +134,7 @@ border-bottom: solid 3px blue;
   border-bottom: solid 1px #ccc;
 }
 
-#leftmenulist li a:link, #leftmenulist li a:visited, #lfsmenulist li a:link, #lfsmenulist li a:visited, #alfsmenulist li a:link, #alfsmenulist li a:visited, #blfsmenulist li a:link, #blfsmenulist li a:visited, #hlfsmenulist li a:link, #hlfsmenulist li a:visited, #hintsmenulist li a:link, #hintsmenulist li a:visited, #patchesmenulist li a:link, #patcheslist li a:visited { 
+#leftmenulist li a:link, #leftmenulist li a:visited, #lfsmenulist li a:link, #lfsmenulist li a:visited, #alfsmenulist li a:link, #alfsmenulist li a:visited, #blfsmenulist li a:link, #blfsmenulist li a:visited, #hlfsmenulist li a:link, #hlfsmenulist li a:visited, #hintsmenulist li a:link, #hintsmenulist li a:visited, #patchesmenulist li a:link, #patchesmenulist li a:visited { 
   text-decoration: none;
   border-bottom: solid 3px #eee;
   padding: 5px 15px 5px 15px;
