@@ -9,6 +9,9 @@ h1,h2,h3 {
 p {
 	margin: 10px;
 }
+em {
+	color: #0072ff;
+}
 #menu span {
 	margin: 7px;
 }
