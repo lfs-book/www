@@ -190,3 +190,29 @@ div.footer p {
 	font-size: .8em;
 	margin-top: -5px;
 }
+
+/** Navigation Headers ***/
+.vc_navheader {
+ /* background-color: #cccccc; */
+}
+
+
+/*** Table Headers ***/
+.vc_header {
+  text-align: left;
+  background-color: #eee;
+}
+.vc_header_sort {
+  text-align: left;
+  background-color: #0072ff;
+}
+
+
+/*** Table Rows ***/
+.vc_row_even {
+  background-color: #ffffff;
+}
+.vc_row_odd {
+  background-color: #eee;
+}
+
