@@ -159,8 +159,7 @@ text-decoration: none; text-align: center; float: right; display: block; width: 
 #patchesmenulist li a:hover { border-bottom: solid 3px blue; }
 
 em {
-	text-decoration: underline;
-	color: #777;
+	color: #444;
 }
 a img, div.footer a:link, div.footer a:hover, div.footer a:visited {
 	border: none;
