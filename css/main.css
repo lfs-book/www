@@ -96,10 +96,10 @@ border-bottom: solid 3px #ffd500;
 border-bottom: solid 3px #fd7700;
 }
 #hintsactive:link, #hintsactive:visited {
-border-bottom: solid 3px red;
+border-bottom: solid 3px #8400ff;
 }
 #livecdactive:link, #livecdactive:visited {
-border-bottom: solid 3px #8400ff;
+border-bottom: solid 3px red;
 }
 #patchesactive:link, #patchesactive:visited {
 border-bottom: solid 3px blue;
@@ -113,8 +113,8 @@ text-decoration: none; text-align: center; float: right; display: block; width: 
 #alfs:hover, #alfsactive:hover { text-decoration: none; border-bottom: solid 3px #92d800; background-color: #ddd }
 #blfs:hover, #blfsactive:hover { text-decoration: none; border-bottom: solid 3px #ffd500; background-color: #ddd }
 #hlfs:hover, #hlfsactive:hover { text-decoration: none; border-bottom: solid 3px #fd7700; background-color: #ddd }
-#hints:hover, #hintsactive:hover { text-decoration: none; border-bottom: solid 3px red; background-color: #ddd }
-#livecd:hover, #livecdactive:hover { text-decoration: none; border-bottom: solid 3px #8400ff; background-color: #ddd }
+#hints:hover, #hintsactive:hover { text-decoration: none; border-bottom: solid 3px #8400ff; background-color: #ddd }
+#livecd:hover, #livecdactive:hover { text-decoration: none; border-bottom: solid 3px red; background-color: #ddd }
 #patches:hover, #patchesactive:hover { text-decoration: none; border-bottom: solid 3px blue; background-color: #ddd }
 
 #subs {
@@ -154,11 +154,12 @@ text-decoration: none; text-align: center; float: right; display: block; width: 
 #alfsmenulist li a:hover { border-bottom: solid 3px #92d800; }
 #blfsmenulist li a:hover { border-bottom: solid 3px #ffd500; }
 #hlfsmenulist li a:hover { border-bottom: solid 3px #fd7700; }
-#hintsmenulist li a:hover { border-bottom: solid 3px red; }
-#livecdmenulist li a:hover { border-bottom: solid 3px #8400ff; }
+#hintsmenulist li a:hover { border-bottom: solid 3px #8400ff; }
+#livecdmenulist li a:hover { border-bottom: solid 3px red; }
 #patchesmenulist li a:hover { border-bottom: solid 3px blue; }
 
 em {
+	text-decoration: underline;
 	color: #777;
 }
 a img, div.footer a:link, div.footer a:hover, div.footer a:visited {
