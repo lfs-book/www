@@ -24,13 +24,20 @@ p {
 	right: 0;
 	top: 5px;
 	margin: 5px 0 5px 0;
+}
+select {
+	color: #333;
+}
+select:hover {
+	background: #0072ff;
+	color: white;
 }	
-input, select {
+input {
 	border: 1px solid #ccc;
 	background: #eee;
 	color: #0072ff;
 }
-input:hover, select:hover {
+input:hover {
 	color: #004090;
 	background: #ddd;
 }
