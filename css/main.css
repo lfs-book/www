@@ -143,12 +143,12 @@ a img, span.footer a:link, span.footer a:hover, span.footer a:visited {
 a:link, a:visited {
 	text-decoration: none;
 	color: #0072ff;
-	border-bottom: thin groove #0072ff;
+	border-bottom: groove 1px #0072ff;
 }
 a:hover {
 	text-decoration: none;
 	color: #004090;
-	border-bottom: thin dotted #004090;
+	border-bottom: dotted 1px #004090;
 }
 /*a:visited {
 	text-decoration: none;
