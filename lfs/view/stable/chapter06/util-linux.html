@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      6.58.&nbsp;Util-linux-2.12b
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.66.1" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="6.0">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version 6.0
+        </h4>
+        <h3>
+          Chapter&nbsp;6.&nbsp;Installing Basic System Software
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="udev.html" title="Udev-030">Prev</a>
+          <p>
+            Udev-030
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="aboutdebug.html" title=
+          "About Debugging Symbols">Next</a>
+          <p>
+            About Debugging Symbols
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing Basic System Software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.0">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          6.58. Util-linux-2.12b
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <p>
+          The Util-linux package contains miscellaneous utility programs.
+          Among them are utilities for handling file systems, consoles,
+          partitions, and messages.
+        </p>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 0.2 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 16 MB
+            </div>
+          </div>
+        </div>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Util-linux installation depends
+              on:</span></strong> Bash, Binutils, Coreutils, Diffutils, GCC,
+              Gettext, Glibc, Grep, Make, Ncurses, Sed, and Zlib
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.58.1. FHS compliance notes
+          </h2>
+        </div>
+        <p>
+          The FHS recommends using the <tt class=
+          "filename">/var/lib/hwclock</tt> directory instead of the usual
+          <tt class="filename">/etc</tt> directory as the location for the
+          <tt class="filename">adjtime</tt> file. To make the <span><b class=
+          "command">hwclock</b></span> program FHS-compliant, run the
+          following:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">sed -i 's@etc/adjtime@var/lib/hwclock/adjtime@g' \
+    hwclock/hwclock.c
+mkdir -p /var/lib/hwclock</kbd></pre>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.58.2. Installation of Util-linux
+          </h2>
+        </div>
+        <p>
+          GCC-3.4.1 does not properly compile <span><b class=
+          "command">sfdisk</b></span> if the default optimization level is
+          used. The following patch corrects the problem:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">patch -Np1 -i ../util-linux-2.12b-sfdisk-2.patch</kbd></pre>
+        <p>
+          Prepare Util-linux for compilation:
+        </p>
+        <pre class="userinput"><kbd class="command">./configure</kbd></pre>
+        <p>
+          Compile the package:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">make HAVE_KILL=yes HAVE_SLN=yes</kbd></pre>
+        <p>
+          The meaning of the make parameters:
+        </p>
+        <div class="variablelist">
+          <dl>
+            <dt>
+              <span class="term"><i class=
+              "parameter"><tt>HAVE_KILL=yes</tt></i></span>
+            </dt>
+            <dd>
+              <p>
+                This prevents the <span><b class="command">kill</b></span>
+                program (already installed by Procps) from being built and
+                installed again.
+              </p>
+            </dd>
+            <dt>
+              <span class="term"><i class=
+              "parameter"><tt>HAVE_SLN=yes</tt></i></span>
+            </dt>
+            <dd>
+              <p>
+                This prevents the <span><b class="command">sln</b></span>
+                program (a statically linked version of <span><b class=
+                "command">ln</b></span> already installed by Glibc) from
+                being built and installed again.
+              </p>
+            </dd>
+          </dl>
+        </div>
+        <p>
+          This package does not come with a test suite.
+        </p>
+        <p>
+          Install the package:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">make HAVE_KILL=yes HAVE_SLN=yes install</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-utillinux" name="contents-utillinux"></a>
+          <h2 class="sect2">
+            6.58.3. Contents of Util-linux
+          </h2>
+        </div>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Installed
+              programs:</span></strong> agetty, arch, blockdev, cal, cfdisk,
+              chkdupexe, col, colcrt, colrm, column, ctrlaltdel, cytune,
+              ddate, dmesg, elvtune, fdformat, fdisk, fsck.cramfs,
+              fsck.minix, getopt, hexdump, hwclock, ipcrm, ipcs, isosize,
+              line, logger, look, losetup, mcookie, mkfs, mkfs.bfs,
+              mkfs.cramfs, mkfs.minix, mkswap, more, mount, namei, pg,
+              pivot_root, ramsize (link to rdev), raw, rdev, readprofile,
+              rename, renice, rev, rootflags (link to rdev), script,
+              setfdprm, setsid, setterm, sfdisk, swapdev, swapoff (link to
+              swapon), swapon, tunelp, ul, umount, vidmode (link to rdev),
+              whereis, and write
+            </div>
+          </div>
+        </div>
+        <div class="variablelist">
+          <h3>
+            Short Descriptions
+          </h3>
+          <dl>
+            <dt>
+              <a id="agetty" name="agetty"></a><span class=
+              "term"><span><b class="command">agetty</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Opens a tty port, prompts for a login name, and then invokes
+                the <span><b class="command">login</b></span> program
+              </p>
+            </dd>
+            <dt>
+              <a id="arch" name="arch"></a><span class="term"><span><b class=
+              "command">arch</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reports the machine's architecture
+              </p>
+            </dd>
+            <dt>
+              <a id="blockdev" name="blockdev"></a><span class=
+              "term"><span><b class="command">blockdev</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Allows users to call block device ioctls from the command
+                line
+              </p>
+            </dd>
+            <dt>
+              <a id="cal" name="cal"></a><span class="term"><span><b class=
+              "command">cal</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Displays a simple calendar
+              </p>
+            </dd>
+            <dt>
+              <a id="cfdisk" name="cfdisk"></a><span class=
+              "term"><span><b class="command">cfdisk</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Manipulates the partition table of the given device
+              </p>
+            </dd>
+            <dt>
+              <a id="chkdupexe" name="chkdupexe"></a><span class=
+              "term"><span><b class="command">chkdupexe</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Finds duplicate executables
+              </p>
+            </dd>
+            <dt>
+              <a id="col" name="col"></a><span class="term"><span><b class=
+              "command">col</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Filters out reverse line feeds
+              </p>
+            </dd>
+            <dt>
+              <a id="colcrt" name="colcrt"></a><span class=
+              "term"><span><b class="command">colcrt</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Filters <span><b class="command">nroff</b></span> output for
+                terminals that lack some capabilities, such as overstriking
+                and half-lines
+              </p>
+            </dd>
+            <dt>
+              <a id="colrm" name="colrm"></a><span class=
+              "term"><span><b class="command">colrm</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Filters out the given columns
+              </p>
+            </dd>
+            <dt>
+              <a id="column" name="column"></a><span class=
+              "term"><span><b class="command">column</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Formats a given file into multiple columns
+              </p>
+            </dd>
+            <dt>
+              <a id="ctrlaltdel" name="ctrlaltdel"></a><span class=
+              "term"><span><b class="command">ctrlaltdel</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets the function of the Ctrl+Alt+Del key combination to a
+                hard or a soft reset
+              </p>
+            </dd>
+            <dt>
+              <a id="cytune" name="cytune"></a><span class=
+              "term"><span><b class="command">cytune</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Tunes the parameters of the serial line drivers for Cyclades
+                cards
+              </p>
+            </dd>
+            <dt>
+              <a id="ddate" name="ddate"></a><span class=
+              "term"><span><b class="command">ddate</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Gives the Discordian date or converts the given Gregorian
+                date to a Discordian one
+              </p>
+            </dd>
+            <dt>
+              <a id="dmesg" name="dmesg"></a><span class=
+              "term"><span><b class="command">dmesg</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Dumps the kernel boot messages
+              </p>
+            </dd>
+            <dt>
+              <a id="elvtune" name="elvtune"></a><span class=
+              "term"><span><b class="command">elvtune</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Tunes the performance and interactivity of a block device
+              </p>
+            </dd>
+            <dt>
+              <a id="fdformat" name="fdformat"></a><span class=
+              "term"><span><b class="command">fdformat</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Low-level formats a floppy disk
+              </p>
+            </dd>
+            <dt>
+              <a id="fdisk" name="fdisk"></a><span class=
+              "term"><span><b class="command">fdisk</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Manipulates the partition table of the given device
+              </p>
+            </dd>
+            <dt>
+              <a id="fsck.cramfs" name="fsck.cramfs"></a><span class=
+              "term"><span><b class="command">fsck.cramfs</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Performs a consistency check on the Cramfs file system on the
+                given device
+              </p>
+            </dd>
+            <dt>
+              <a id="fsck.minix" name="fsck.minix"></a><span class=
+              "term"><span><b class="command">fsck.minix</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Performs a consistency check on the Minix file system on the
+                given device
+              </p>
+            </dd>
+            <dt>
+              <a id="getopt" name="getopt"></a><span class=
+              "term"><span><b class="command">getopt</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Parses options in the given command line
+              </p>
+            </dd>
+            <dt>
+              <a id="hexdump" name="hexdump"></a><span class=
+              "term"><span><b class="command">hexdump</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Dumps the given file in hexadecimal or in another given
+                format
+              </p>
+            </dd>
+            <dt>
+              <a id="hwclock" name="hwclock"></a><span class=
+              "term"><span><b class="command">hwclock</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reads or sets the system's hardware clock, also called the
+                Real-Time Clock (RTC)) or Basic Input-Output System (BIOS)
+                clock
+              </p>
+            </dd>
+            <dt>
+              <a id="ipcrm" name="ipcrm"></a><span class=
+              "term"><span><b class="command">ipcrm</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Removes the given Inter-Process Communication (IPC) resource
+              </p>
+            </dd>
+            <dt>
+              <a id="ipcs" name="ipcs"></a><span class="term"><span><b class=
+              "command">ipcs</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Provides IPC status information
+              </p>
+            </dd>
+            <dt>
+              <a id="isosize" name="isosize"></a><span class=
+              "term"><span><b class="command">isosize</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reports the size of an iso9660 file system
+              </p>
+            </dd>
+            <dt>
+              <a id="line" name="line"></a><span class="term"><span><b class=
+              "command">line</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Copies a single line
+              </p>
+            </dd>
+            <dt>
+              <a id="logger" name="logger"></a><span class=
+              "term"><span><b class="command">logger</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Enters the given message into the system log
+              </p>
+            </dd>
+            <dt>
+              <a id="look" name="look"></a><span class="term"><span><b class=
+              "command">look</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Displays lines that begin with the given string
+              </p>
+            </dd>
+            <dt>
+              <a id="losetup" name="losetup"></a><span class=
+              "term"><span><b class="command">losetup</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets up and controls loop devices
+              </p>
+            </dd>
+            <dt>
+              <a id="mcookie" name="mcookie"></a><span class=
+              "term"><span><b class="command">mcookie</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Generates magic cookies (128-bit random hexadecimal numbers)
+                for <span><b class="command">xauth</b></span>
+              </p>
+            </dd>
+            <dt>
+              <a id="mkfs" name="mkfs"></a><span class="term"><span><b class=
+              "command">mkfs</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Builds a file system on a device (usually a hard disk
+                partition)
+              </p>
+            </dd>
+            <dt>
+              <a id="mkfs.bfs" name="mkfs.bfs"></a><span class=
+              "term"><span><b class="command">mkfs.bfs</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Creates an Santa Cruz Operations (SCO) bfs file system
+              </p>
+            </dd>
+            <dt>
+              <a id="mkfs.cramfs" name="mkfs.cramfs"></a><span class=
+              "term"><span><b class="command">mkfs.cramfs</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Creates a cramfs file system
+              </p>
+            </dd>
+            <dt>
+              <a id="mkfs.minix" name="mkfs.minix"></a><span class=
+              "term"><span><b class="command">mkfs.minix</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Creates a Minix file system
+              </p>
+            </dd>
+            <dt>
+              <a id="mkswap" name="mkswap"></a><span class=
+              "term"><span><b class="command">mkswap</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Initializes the given device or file to be used as a swap
+                area
+              </p>
+            </dd>
+            <dt>
+              <a id="more" name="more"></a><span class="term"><span><b class=
+              "command">more</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                A filter for paging through text one screen at a time
+              </p>
+            </dd>
+            <dt>
+              <a id="mount" name="mount"></a><span class=
+              "term"><span><b class="command">mount</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Attaches the file system on the given device to a specified
+                directory in the file-system tree
+              </p>
+            </dd>
+            <dt>
+              <a id="namei" name="namei"></a><span class=
+              "term"><span><b class="command">namei</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Shows the symbolic links in the given pathnames
+              </p>
+            </dd>
+            <dt>
+              <a id="pg" name="pg"></a><span class="term"><span><b class=
+              "command">pg</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Displays a text file one screen full at a time
+              </p>
+            </dd>
+            <dt>
+              <a id="pivot_root" name="pivot_root"></a><span class=
+              "term"><span><b class="command">pivot_root</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Makes the given file system the new root file system of the
+                current process
+              </p>
+            </dd>
+            <dt>
+              <a id="ramsize" name="ramsize"></a><span class=
+              "term"><span><b class="command">ramsize</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets the size of the RAM disk in a bootable image
+              </p>
+            </dd>
+            <dt>
+              <a id="raw" name="raw"></a><span class="term"><span><b class=
+              "command">raw</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Used to bind a Linux raw character device to a block device
+              </p>
+            </dd>
+            <dt>
+              <a id="rdev" name="rdev"></a><span class="term"><span><b class=
+              "command">rdev</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Queries and sets the root device, among other things, in a
+                bootable image
+              </p>
+            </dd>
+            <dt>
+              <a id="readprofile" name="readprofile"></a><span class=
+              "term"><span><b class="command">readprofile</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reads kernel profiling information
+              </p>
+            </dd>
+            <dt>
+              <a id="rename" name="rename"></a><span class=
+              "term"><span><b class="command">rename</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Renames the given files, replacing a given string with
+                another
+              </p>
+            </dd>
+            <dt>
+              <a id="renice" name="renice"></a><span class=
+              "term"><span><b class="command">renice</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Alters the priority of running processes
+              </p>
+            </dd>
+            <dt>
+              <a id="rev" name="rev"></a><span class="term"><span><b class=
+              "command">rev</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reverses the lines of a given file
+              </p>
+            </dd>
+            <dt>
+              <a id="rootflags" name="rootflags"></a><span class=
+              "term"><span><b class="command">rootflags</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets the rootflags in a bootable image
+              </p>
+            </dd>
+            <dt>
+              <a id="script" name="script"></a><span class=
+              "term"><span><b class="command">script</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Makes a typescript of a terminal session
+              </p>
+            </dd>
+            <dt>
+              <a id="setfdprm" name="setfdprm"></a><span class=
+              "term"><span><b class="command">setfdprm</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets user-provided floppy disk parameters
+              </p>
+            </dd>
+            <dt>
+              <a id="setsid" name="setsid"></a><span class=
+              "term"><span><b class="command">setsid</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Runs the given program in a new session
+              </p>
+            </dd>
+            <dt>
+              <a id="setterm" name="setterm"></a><span class=
+              "term"><span><b class="command">setterm</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets terminal attributes
+              </p>
+            </dd>
+            <dt>
+              <a id="sfdisk" name="sfdisk"></a><span class=
+              "term"><span><b class="command">sfdisk</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                A disk partition table manipulator
+              </p>
+            </dd>
+            <dt>
+              <a id="swapdev" name="swapdev"></a><span class=
+              "term"><span><b class="command">swapdev</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets the swap device in a bootable image
+              </p>
+            </dd>
+            <dt>
+              <a id="swapoff" name="swapoff"></a><span class=
+              "term"><span><b class="command">swapoff</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Disables devices and files for paging and swapping
+              </p>
+            </dd>
+            <dt>
+              <a id="swapon" name="swapon"></a><span class=
+              "term"><span><b class="command">swapon</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Enables devices and files for paging and swapping
+              </p>
+            </dd>
+            <dt>
+              <a id="tunelp" name="tunelp"></a><span class=
+              "term"><span><b class="command">tunelp</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Tunes the parameters of the line printer
+              </p>
+            </dd>
+            <dt>
+              <a id="ul" name="ul"></a><span class="term"><span><b class=
+              "command">ul</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                A filter for translating underscores into escape sequences
+                indicating underlining for the terminal in use
+              </p>
+            </dd>
+            <dt>
+              <a id="umount" name="umount"></a><span class=
+              "term"><span><b class="command">umount</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Disconnects a file system from the system's file tree
+              </p>
+            </dd>
+            <dt>
+              <a id="vidmode" name="vidmode"></a><span class=
+              "term"><span><b class="command">vidmode</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sets the video mode in a bootable image
+              </p>
+            </dd>
+            <dt>
+              <a id="whereis" name="whereis"></a><span class=
+              "term"><span><b class="command">whereis</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reports the location of binary, the source, and the manual
+                page for the given command
+              </p>
+            </dd>
+            <dt>
+              <a id="write" name="write"></a><span class=
+              "term"><span><b class="command">write</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sends a message to the given user <span class=
+                "emphasis"><em>if</em></span> that user has not disabled
+                receipt of such messages
+              </p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="udev.html" title="Udev-030">Prev</a>
+          <p>
+            Udev-030
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="aboutdebug.html" title=
+          "About Debugging Symbols">Next</a>
+          <p>
+            About Debugging Symbols
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing Basic System Software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.0">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

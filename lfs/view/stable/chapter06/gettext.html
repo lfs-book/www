@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      6.30.&nbsp;Gettext-0.14.1
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.66.1" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="6.0">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version 6.0
+        </h4>
+        <h3>
+          Chapter&nbsp;6.&nbsp;Installing Basic System Software
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="flex.html" title="Flex-2.5.31">Prev</a>
+          <p>
+            Flex-2.5.31
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="inetutils.html" title=
+          "Inetutils-1.4.2">Next</a>
+          <p>
+            Inetutils-1.4.2
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing Basic System Software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.0">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          6.30. Gettext-0.14.1
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <p>
+          The Gettext package contains utilities for internationalization and
+          localization. These allow programs to be compiled with NLS,
+          enabling them to output messages in the user's native language.
+        </p>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 0.5 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 55 MB
+            </div>
+          </div>
+        </div>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Gettext installation depends
+              on:</span></strong> Bash, Binutils, Bison, Coreutils,
+              Diffutils, Gawk, GCC, Glibc, Grep, Make, and Sed
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.30.1. Installation of Gettext
+          </h2>
+        </div>
+        <p>
+          Prepare Gettext for compilation:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">./configure --prefix=/usr</kbd></pre>
+        <p>
+          Compile the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make</kbd></pre>
+        <p>
+          To test the results, issue: <b class="userinput"><tt>make
+          check</tt></b>. This takes a very long time, around 7 SBUs.
+        </p>
+        <p>
+          Install the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make install</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-gettext" name="contents-gettext"></a>
+          <h2 class="sect2">
+            6.30.2. Contents of Gettext
+          </h2>
+        </div>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Installed
+              programs:</span></strong> autopoint, config.charset,
+              config.rpath, envsubst, gettext, gettextize, hostname,
+              msgattrib, msgcat, msgcmp, msgcomm, msgconv, msgen, msgexec,
+              msgfilter, msgfmt, msggrep, msginit, msgmerge, msgunfmt,
+              msguniq, ngettext, and xgettext
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Installed
+              libraries:</span></strong> libasprintf[a,so],
+              libgettextlib[a,so], libgettextpo[a,so] and libgettextsrc[a,so]
+            </div>
+          </div>
+        </div>
+        <div class="variablelist">
+          <h3>
+            Short Descriptions
+          </h3>
+          <dl>
+            <dt>
+              <a id="autopoint" name="autopoint"></a><span class=
+              "term"><span><b class="command">autopoint</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Copies standard Gettext infrastructure files into a source
+                package
+              </p>
+            </dd>
+            <dt>
+              <a id="config.charset" name="config.charset"></a><span class=
+              "term"><span><b class=
+              "command">config.charset</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Outputs a system-dependent table of character encoding
+                aliases
+              </p>
+            </dd>
+            <dt>
+              <a id="config.rpath" name="config.rpath"></a><span class=
+              "term"><span><b class="command">config.rpath</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Outputs a system-dependent set of variables, describing how
+                to set the runtime search path of shared libraries in an
+                executable
+              </p>
+            </dd>
+            <dt>
+              <a id="envsubst" name="envsubst"></a><span class=
+              "term"><span><b class="command">envsubst</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Substitutes environment variables in shell format strings
+              </p>
+            </dd>
+            <dt>
+              <a id="gettext" name="gettext"></a><span class=
+              "term"><span><b class="command">gettext</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Translates a natural language message into the user's
+                language by looking up the translation in a message catalog
+              </p>
+            </dd>
+            <dt>
+              <a id="gettextize" name="gettextize"></a><span class=
+              "term"><span><b class="command">gettextize</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Copies all standard Gettext files into the given top-level
+                directory of a package to begin internationalizing it
+              </p>
+            </dd>
+            <dt>
+              <a id="hostname-gettext" name=
+              "hostname-gettext"></a><span class="term"><span><b class=
+              "command">hostname</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Displays a network hostname in various forms
+              </p>
+            </dd>
+            <dt>
+              <a id="msgattrib" name="msgattrib"></a><span class=
+              "term"><span><b class="command">msgattrib</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Filters the messages of a translation catalog according to
+                their attributes and manipulates the attributes
+              </p>
+            </dd>
+            <dt>
+              <a id="msgcat" name="msgcat"></a><span class=
+              "term"><span><b class="command">msgcat</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Concatenates and merges the given <tt class=
+                "filename">.po</tt> files
+              </p>
+            </dd>
+            <dt>
+              <a id="msgcmp" name="msgcmp"></a><span class=
+              "term"><span><b class="command">msgcmp</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Compares two <tt class="filename">.po</tt> files to check
+                that both contain the same set of msgid strings
+              </p>
+            </dd>
+            <dt>
+              <a id="msgcomm" name="msgcomm"></a><span class=
+              "term"><span><b class="command">msgcomm</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Finds the messages that are common to to the given <tt class=
+                "filename">.po</tt> files
+              </p>
+            </dd>
+            <dt>
+              <a id="msgconv" name="msgconv"></a><span class=
+              "term"><span><b class="command">msgconv</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Converts a translation catalog to a different character
+                encoding
+              </p>
+            </dd>
+            <dt>
+              <a id="msgen" name="msgen"></a><span class=
+              "term"><span><b class="command">msgen</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Creates an English translation catalog
+              </p>
+            </dd>
+            <dt>
+              <a id="msgexec" name="msgexec"></a><span class=
+              "term"><span><b class="command">msgexec</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Applies a command to all translations of a translation
+                catalog
+              </p>
+            </dd>
+            <dt>
+              <a id="msgfilter" name="msgfilter"></a><span class=
+              "term"><span><b class="command">msgfilter</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Applies a filter to all translations of a translation catalog
+              </p>
+            </dd>
+            <dt>
+              <a id="msgfmt" name="msgfmt"></a><span class=
+              "term"><span><b class="command">msgfmt</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Generates a binary message catalog from from a translation
+                catalog
+              </p>
+            </dd>
+            <dt>
+              <a id="msggrep" name="msggrep"></a><span class=
+              "term"><span><b class="command">msggrep</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Extracts all messages of a translation catalog that match a
+                given pattern or belong to some given source files
+              </p>
+            </dd>
+            <dt>
+              <a id="msginit" name="msginit"></a><span class=
+              "term"><span><b class="command">msginit</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Creates a new <tt class="filename">.po</tt> file,
+                initializing the meta information with values from the user's
+                environment
+              </p>
+            </dd>
+            <dt>
+              <a id="msgmerge" name="msgmerge"></a><span class=
+              "term"><span><b class="command">msgmerge</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Combines two raw translations into a single file
+              </p>
+            </dd>
+            <dt>
+              <a id="msgunfmt" name="msgunfmt"></a><span class=
+              "term"><span><b class="command">msgunfmt</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Decompiles a binary message catalog into raw translation text
+              </p>
+            </dd>
+            <dt>
+              <a id="msguniq" name="msguniq"></a><span class=
+              "term"><span><b class="command">msguniq</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Unifies duplicate translations in a translation catalog
+              </p>
+            </dd>
+            <dt>
+              <a id="ngettext" name="ngettext"></a><span class=
+              "term"><span><b class="command">ngettext</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Displays native language translations of a textual message
+                whose grammatical form depends on a number
+              </p>
+            </dd>
+            <dt>
+              <a id="xgettext" name="xgettext"></a><span class=
+              "term"><span><b class="command">xgettext</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Extracts the translatable message lines from the given source
+                files to make the first translation template
+              </p>
+            </dd>
+            <dt>
+              <a id="libasprintf" name="libasprintf"></a><span class=
+              "term"><tt class="filename">libasprintf</tt></span>
+            </dt>
+            <dd>
+              <p>
+                defines the <span class=
+                "emphasis"><em>autosprintf</em></span> class, which makes C
+                formatted output routines usable in C++ programs, for use
+                with the <span class=
+                "emphasis"><em>&lt;string&gt;</em></span> strings and the
+                <span class="emphasis"><em>&lt;iostream&gt;</em></span>
+                streams
+              </p>
+            </dd>
+            <dt>
+              <a id="libgettextlib" name="libgettextlib"></a><span class=
+              "term"><tt class="filename">libgettextlib</tt></span>
+            </dt>
+            <dd>
+              <p>
+                a private library containing common routines used by the
+                various Gettext programs; these are not intended for general
+                use
+              </p>
+            </dd>
+            <dt>
+              <a id="libgettextpo" name="libgettextpo"></a><span class=
+              "term"><tt class="filename">libgettextpo</tt></span>
+            </dt>
+            <dd>
+              <p>
+                Used to write specialized programs that process <tt class=
+                "filename">.po</tt> files; this library is used when the
+                standard applications shipped with Gettext (such as
+                <span><b class="command">msgcomm</b></span>, <span><b class=
+                "command">msgcmp</b></span>, <span><b class=
+                "command">msgattrib</b></span>, and <span><b class=
+                "command">msgen</b></span>) will not suffice
+              </p>
+            </dd>
+            <dt>
+              <a id="libgettextsrc" name="libgettextsrc"></a><span class=
+              "term"><tt class="filename">libgettextsrc</tt></span>
+            </dt>
+            <dd>
+              <p>
+                A private library containing common routines used by the
+                various Gettext programs; these are not intended for general
+                use
+              </p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="flex.html" title="Flex-2.5.31">Prev</a>
+          <p>
+            Flex-2.5.31
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="inetutils.html" title=
+          "Inetutils-1.4.2">Next</a>
+          <p>
+            Inetutils-1.4.2
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing Basic System Software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.0">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

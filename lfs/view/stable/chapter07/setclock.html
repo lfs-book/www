@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      7.5.&nbsp;Configuring the setclock Script
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.66.1" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="6.0">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version 6.0
+        </h4>
+        <h3>
+          Chapter&nbsp;7.&nbsp;Setting Up System Bootscripts
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="udev.html" title=
+          "Device and Module Handling on an LFS System">Prev</a>
+          <p>
+            Device and Module Handling on an LFS System
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="console.html" title=
+          "Configuring the Linux Console">Next</a>
+          <p>
+            Configuring the Linux Console
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter07.html" title=
+          "Chapter&nbsp;7.&nbsp;Setting Up System Bootscripts">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.0">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sect1" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          7.5. Configuring the setclock Script
+        </h1>
+      </div>
+      <p>
+        The <span><b class="command">setclock</b></span> script reads the
+        time from the hardware clock, also known as BIOS or the Complementary
+        Metal Oxide Semiconductor (CMOS) clock. If the hardware clock is set
+        to UTC, this script will convert the hardware clock's time to the
+        local time using the <tt class="filename">/etc/localtime</tt> file
+        (which tells the <span><b class="command">hwclock</b></span> program
+        which timezone the user is in). There is no way to detect whether or
+        not the hardware clock is set to UTC time, so this needs to be
+        manually configured.
+      </p>
+      <p>
+        If you cannot remember whether or not the hardware clock is set to
+        UTC time, find out by running the <b class="userinput"><tt>hwclock
+        --localtime --show</tt></b> command. This will tell what the current
+        time is according to the hardware clock. If this time matches
+        whatever your watch says, then the hardware clock is set to local
+        time. If the output from <span><b class="command">hwclock</b></span>
+        is not local time, chances are it is set to UTC time. Verify this by
+        adding or subtracting the proper amount of hours for the timezone to
+        this <span><b class="command">hwclock</b></span> time. For example,
+        if you live in the MST timezone, which is also known as GMT -0700,
+        add seven hours to the local time. Then, account for Daylight Savings
+        Time, which requires subtracting an hour (or only add six in the
+        first place) during the summer months.
+      </p>
+      <p>
+        Change the value of the <tt class="envar">UTC</tt> variable below to
+        a value of <i class="parameter"><tt>0</tt></i> (zero) if the hardware
+        clock is <span class="emphasis"><em>not</em></span> set to UTC time.
+      </p>
+      <p>
+        Create a new file <tt class="filename">/etc/sysconfig/clock</tt> by
+        running the following:
+      </p>
+      <pre class="userinput"><kbd class=
+      "command">cat &gt; /etc/sysconfig/clock &lt;&lt; "EOF"
+<tt class="literal"># Begin /etc/sysconfig/clock
+
+UTC=1
+
+# End /etc/sysconfig/clock</tt>
+EOF</kbd></pre>
+      <p>
+        A good hint explaining how to deal with time on LFS is available at
+        <a href=
+        "http://www.linuxfromscratch.org/hints/downloads/files/time.txt"><i>http://www.linuxfromscratch.org/hints/downloads/files/time.txt</i></a>.
+        It explains issues such as time zones, UTC, and the <tt class=
+        "envar">TZ</tt> environment variable.
+      </p>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="udev.html" title=
+          "Device and Module Handling on an LFS System">Prev</a>
+          <p>
+            Device and Module Handling on an LFS System
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="console.html" title=
+          "Configuring the Linux Console">Next</a>
+          <p>
+            Configuring the Linux Console
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter07.html" title=
+          "Chapter&nbsp;7.&nbsp;Setting Up System Bootscripts">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.0">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      6.51.&nbsp;Procps-3.2.3
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.66.1" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="6.0">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version 6.0
+        </h4>
+        <h3>
+          Chapter&nbsp;6.&nbsp;Installing Basic System Software
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="patch.html" title="Patch-2.5.4">Prev</a>
+          <p>
+            Patch-2.5.4
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="psmisc.html" title="Psmisc-21.5">Next</a>
+          <p>
+            Psmisc-21.5
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing Basic System Software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.0">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          6.51. Procps-3.2.3
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <p>
+          The Procps package contains programs for monitoring processes.
+        </p>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 0.1 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 6.2 MB
+            </div>
+          </div>
+        </div>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Procps installation depends
+              on:</span></strong> Bash, Binutils, Coreutils, GCC, Glibc,
+              Make, and Ncurses
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.51.1. Installation of Procps
+          </h2>
+        </div>
+        <p>
+          Compile the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make</kbd></pre>
+        <p>
+          Install the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make install</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-procps" name="contents-procps"></a>
+          <h2 class="sect2">
+            6.51.2. Contents of Procps
+          </h2>
+        </div>
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Installed
+              programs:</span></strong> free, kill, pgrep, pkill, pmap, ps,
+              skill, snice, sysctl, tload, top, uptime, vmstat, w, and watch
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Installed
+              library:</span></strong> libproc.so
+            </div>
+          </div>
+        </div>
+        <div class="variablelist">
+          <h3>
+            Short Descriptions
+          </h3>
+          <dl>
+            <dt>
+              <a id="free" name="free"></a><span class="term"><span><b class=
+              "command">free</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reports the amount of free and used memory (both physical and
+                swap memory) in the system
+              </p>
+            </dd>
+            <dt>
+              <a id="kill" name="kill"></a><span class="term"><span><b class=
+              "command">kill</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sends signals to processes
+              </p>
+            </dd>
+            <dt>
+              <a id="pgrep" name="pgrep"></a><span class=
+              "term"><span><b class="command">pgrep</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Looks up processes based on their name and other attributes
+              </p>
+            </dd>
+            <dt>
+              <a id="pkill" name="pkill"></a><span class=
+              "term"><span><b class="command">pkill</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Signals processes based on their name and other attributes
+              </p>
+            </dd>
+            <dt>
+              <a id="pmap" name="pmap"></a><span class="term"><span><b class=
+              "command">pmap</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reports the memory map of the given process
+              </p>
+            </dd>
+            <dt>
+              <a id="ps" name="ps"></a><span class="term"><span><b class=
+              "command">ps</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Lists the current running processes
+              </p>
+            </dd>
+            <dt>
+              <a id="skill" name="skill"></a><span class=
+              "term"><span><b class="command">skill</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Sends signals to processes matching the given criteria
+              </p>
+            </dd>
+            <dt>
+              <a id="snice" name="snice"></a><span class=
+              "term"><span><b class="command">snice</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Changes the scheduling priority of processes matching the
+                given criteria
+              </p>
+            </dd>
+            <dt>
+              <a id="sysctl" name="sysctl"></a><span class=
+              "term"><span><b class="command">sysctl</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Modifies kernel parameters at run time
+              </p>
+            </dd>
+            <dt>
+              <a id="tload" name="tload"></a><span class=
+              "term"><span><b class="command">tload</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Prints a graph of the current system load average
+              </p>
+            </dd>
+            <dt>
+              <a id="top" name="top"></a><span class="term"><span><b class=
+              "command">top</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Displays the top CPU processes; it provides an ongoing look
+                at processor activity in real time
+              </p>
+            </dd>
+            <dt>
+              <a id="uptime" name="uptime"></a><span class=
+              "term"><span><b class="command">uptime</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reports how long the system has been running, how many users
+                are logged on, and the system load averages
+              </p>
+            </dd>
+            <dt>
+              <a id="vmstat" name="vmstat"></a><span class=
+              "term"><span><b class="command">vmstat</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Reports virtual memory statistics, giving information about
+                processes, memory, paging, block Input/Output (IO), traps,
+                and CPU activity
+              </p>
+            </dd>
+            <dt>
+              <a id="w" name="w"></a><span class="term"><span><b class=
+              "command">w</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Shows which users are currently logged on, where, and since
+                when
+              </p>
+            </dd>
+            <dt>
+              <a id="watch" name="watch"></a><span class=
+              "term"><span><b class="command">watch</b></span></span>
+            </dt>
+            <dd>
+              <p>
+                Runs a given command repeatedly, displaying the first
+                screen-full of its output; this allows a user to watch the
+                output change over time
+              </p>
+            </dd>
+            <dt>
+              <a id="libproc" name="libproc"></a><span class=
+              "term"><tt class="filename">libproc</tt></span>
+            </dt>
+            <dd>
+              <p>
+                Contains the functions used by most programs in this package
+              </p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="patch.html" title="Patch-2.5.4">Prev</a>
+          <p>
+            Patch-2.5.4
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="psmisc.html" title="Psmisc-21.5">Next</a>
+          <p>
+            Psmisc-21.5
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing Basic System Software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version 6.0">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
