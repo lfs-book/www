@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      5.4.&nbsp;Binutils-2.15.94.0.2 - Pass 1
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;5.&nbsp;Constructing a temporary system
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="toolchaintechnotes.html" title=
+          "Toolchain technical notes">Prev</a>
+          <p>
+            Toolchain technical notes
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="gcc-pass1.html" title=
+          "GCC-3.4.3 - Pass 1">Next</a>
+          <p>
+            GCC-3.4.3 - Pass 1
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter05.html" title=
+          "Chapter&nbsp;5.&nbsp;Constructing a temporary system">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          5.4. Binutils-2.15.94.0.2 - Pass 1
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 1.0 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 194 MB
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            5.4.1. Installation of Binutils
+          </h2>
+        </div>
+        <p>
+          Create a build dir:
+        </p>
+        <pre class="userinput"><kbd class="command">mkdir ../binutils-build
+cd ../binutils-build</kbd></pre>
+        <div class="note">
+          <div class="admonhead">
+            <img alt="[Note]" src="../images/note.png" />
+            <h3 class="admontitle">
+              Note
+            </h3>
+          </div>
+          <div class="admonbody">
+            <p>
+              If you want the SBU values you could wrap the four commands in
+              a <span><strong class="command">time</strong></span> command
+              like this: <strong class="userinput"><tt>time { ./configure ...
+              &amp;&amp; ... &amp;&amp; ... &amp;&amp; make install;
+              }</tt></strong>.
+            </p>
+          </div>
+        </div>
+        <p>
+          Now prepare Binutils for compilation:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">../binutils-2.15.94.0.2/configure --prefix=/tools --disable-nls</kbd></pre>
+        <p>
+          Continue with compiling the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make configure-host
+make LDFLAGS="-all-static"</kbd></pre>
+        <p>
+          Now install the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make install</kbd></pre>
+        <p>
+          Now prepare the linker for the &ldquo;<span class=
+          "quote">Adjusting</span>&rdquo; phase later on:
+        </p>
+        <pre class="userinput"><kbd class="command">make -C ld clean
+make -C ld LDFLAGS="-all-static" LIB_PATH=/tools/lib</kbd></pre>
+        <div class="warning">
+          <div class="admonhead">
+            <img alt="[Warning]" src="../images/warning.png" />
+            <h3 class="admontitle">
+              Warning
+            </h3>
+          </div>
+          <div class="admonbody">
+            <p>
+              <span class="emphasis"><em>Do not yet remove</em></span> the
+              Binutils build and source directories. You will need them again
+              in their current state a bit further on in this chapter.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="toolchaintechnotes.html" title=
+          "Toolchain technical notes">Prev</a>
+          <p>
+            Toolchain technical notes
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="gcc-pass1.html" title=
+          "GCC-3.4.3 - Pass 1">Next</a>
+          <p>
+            GCC-3.4.3 - Pass 1
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter05.html" title=
+          "Chapter&nbsp;5.&nbsp;Constructing a temporary system">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

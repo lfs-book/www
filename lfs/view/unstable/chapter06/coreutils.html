@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      6.15.&nbsp;Coreutils-5.2.1
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;6.&nbsp;Installing basic system software
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="gcc.html" title="GCC-3.4.3">Prev</a>
+          <p>
+            GCC-3.4.3
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="zlib.html" title="Zlib-1.2.2">Next</a>
+          <p>
+            Zlib-1.2.2
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing basic system software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          6.15. Coreutils-5.2.1
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 0.9 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 69 MB
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.15.1. Installation of Coreutils
+          </h2>
+        </div>
+        <p>
+          Apply a patch:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">patch -Np1 -i ../coreutils-5.2.1-uname-2.patch</kbd></pre>
+        <p>
+          Apply another patch:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">patch -Np1 -i ../coreutils-5.2.1-suppress_uptime_kill_su-1.patch</kbd></pre>
+        <p>
+          Now prepare Coreutils for compilation:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">DEFAULT_POSIX2_VERSION=199209 ./configure --prefix=/usr</kbd></pre>
+        <p>
+          Compile the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make</kbd></pre>
+        <p>
+          Create two dummy groups and a dummy user name:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">echo "dummy1:x:1000:" &gt;&gt; /etc/group
+echo "dummy2:x:1001:dummy" &gt;&gt; /etc/group
+echo "dummy:x:1000:1000:::/bin/bash" &gt;&gt; /etc/passwd</kbd></pre>
+        <p>
+          Run the <span class="emphasis"><em>root</em></span> tests:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">make NON_ROOT_USERNAME=dummy check-root</kbd></pre>
+        <p>
+          Run the user tests:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">src/su dummy -c "make RUN_EXPENSIVE_TESTS=yes check"</kbd></pre>
+        <p>
+          Remove the dummy user and groups:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">sed -i '/dummy/d' /etc/passwd /etc/group</kbd></pre>
+        <p>
+          Install the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make install</kbd></pre>
+        <p>
+          And move some programs to their proper locations:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">mv /usr/bin/{[,basename,cat,chgrp,chmod,chown,cp,dd,df} /bin
+mv /usr/bin/{date,echo,false,head,install,ln,ls} /bin
+mv /usr/bin/{mkdir,mknod,mv,pwd,rm,rmdir,sync} /bin
+mv /usr/bin/{sleep,stty,test,touch,true,uname} /bin
+mv /usr/bin/hostname /bin
+mv /usr/bin/chroot /usr/sbin</kbd></pre>
+        <p>
+          Create a symlink:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">ln -s ../../bin/install /usr/bin</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-coreutils" name="contents-coreutils"></a>
+          <h2 class="sect2">
+            6.15.2. Contents of Coreutils
+          </h2>
+        </div>
+        <p>
+          See testing
+        </p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="gcc.html" title="GCC-3.4.3">Prev</a>
+          <p>
+            GCC-3.4.3
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="zlib.html" title="Zlib-1.2.2">Next</a>
+          <p>
+            Zlib-1.2.2
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing basic system software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

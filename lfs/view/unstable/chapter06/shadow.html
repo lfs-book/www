@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      6.54.&nbsp;Shadow-4.0.6
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;6.&nbsp;Installing basic system software
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="psmisc.html" title="Psmisc-21.5">Prev</a>
+          <p>
+            Psmisc-21.5
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="libol.html" title="Libol-0.3.14">Next</a>
+          <p>
+            Libol-0.3.14
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing basic system software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          6.54. Shadow-4.0.6
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 0.4 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 11 MB
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.54.1. Installation of Shadow
+          </h2>
+        </div>
+        <p>
+          Prepare Shadow for compilation:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">./configure --libdir=/lib --enable-shared</kbd></pre>
+        <p>
+          Remove the installation of the groups program, and it's man page:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">sed -i 's/groups$(EXEEXT) //' src/Makefile
+sed -i '/groups/d' man/Makefile</kbd></pre>
+        <p>
+          Compile the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make</kbd></pre>
+        <p>
+          Then install it:
+        </p>
+        <pre class="userinput"><kbd class="command">make install</kbd></pre>
+        <p>
+          Install two config files:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">cp etc/{limits,login.access} /etc</kbd></pre>
+        <p>
+          Change a configuration file while copying it:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">sed -e's@#MD5_CRYPT_ENAB.no@MD5_CRYPT_ENAB yes@' \
+    -e 's@/var/spool/mail@/var/mail@' \
+    &lt; etc/login.defs.linux &gt; /etc/login.defs</kbd></pre>
+        <p>
+          Move a program:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">mv /usr/bin/passwd /bin</kbd></pre>
+        <p>
+          Move a library:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">mv /lib/libshadow.*a /usr/lib</kbd></pre>
+        <p>
+          Create the following symlinks:
+        </p>
+        <pre class="userinput"><kbd class="command">rm /lib/libshadow.so
+ln -sf ../../lib/libshadow.so.0 /usr/lib/libshadow.so</kbd></pre>
+        <p>
+          Create a dir:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">mkdir /etc/default</kbd></pre>
+      </div>
+      <div class="configuration" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="conf-shadow" name="conf-shadow"></a>
+          <h2 class="sect2">
+            6.54.2. Configuring Shadow
+          </h2>
+        </div>
+        <p>
+          To enable shadowed passwords:
+        </p>
+        <pre class="userinput"><kbd class="command">pwconv</kbd></pre>
+        <p>
+          To enable shadowed group passwords, run:
+        </p>
+        <pre class="userinput"><kbd class="command">grpconv</kbd></pre>
+      </div>
+      <div class="configuration" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.54.3. Setting the root password
+          </h2>
+        </div>
+        <p>
+          Choose a password for user root and set it via:
+        </p>
+        <pre class="userinput"><kbd class="command">passwd root</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-shadow" name="contents-shadow"></a>
+          <h2 class="sect2">
+            6.54.4. Contents of Shadow
+          </h2>
+        </div>
+        <p>
+          See testing
+        </p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="psmisc.html" title="Psmisc-21.5">Prev</a>
+          <p>
+            Psmisc-21.5
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="libol.html" title="Libol-0.3.14">Next</a>
+          <p>
+            Libol-0.3.14
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing basic system software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

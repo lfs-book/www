@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      8.3.&nbsp;Linux-2.6.10
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;8.&nbsp;Making the LFS system bootable
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="fstab.html" title=
+          "Creating the /etc/fstab file">Prev</a>
+          <p>
+            Creating the /etc/fstab file
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="grub.html" title=
+          "Making the LFS system bootable">Next</a>
+          <p>
+            Making the LFS system bootable
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter08.html" title=
+          "Chapter&nbsp;8.&nbsp;Making the LFS system bootable">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          8.3. Linux-2.6.10
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> All default options: 4.20 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> All default options: 181 MB
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            8.3.1. Installation of the kernel
+          </h2>
+        </div>
+        <p>
+          Kernel version 2.6.10 has a security vulnerability that will allow
+          user processes to gain root privledges upon loading of a kernel
+          module. See: <a href=
+          "http://www.uwsg.iu.edu/hypermail/linux/kernel/0412.3/0679.html"><i>
+          http://www.uwsg.iu.edu/hypermail/linux/kernel/0412.3/0679.html</i></a>
+          for more information. The following patch fixes this problem:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">patch -Np1 -i ../linux-2.6.10-security_fix-1.patch</kbd></pre>
+        <p>
+          Prepare for compilation by running the following command:
+        </p>
+        <pre class="userinput"><kbd class="command">make mrproper</kbd></pre>
+        <p>
+          If, in <a href="../chapter07/console.html" title=
+          "7.5.&nbsp;Configuring the Linux console">Section 7.5,
+          &ldquo;Configuring the Linux console&rdquo;</a>, you decided you
+          want to compile the keymap into the kernel, issue the command
+          below:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">loadkeys -m /usr/share/kbd/keymaps/<em class=
+        "replaceable"><tt>[path to  keymap]</tt></em> &gt; \
+    <em class=
+"replaceable"><tt>[unpacked sources dir]</tt></em>/linux-2.6.10/drivers/char/defkeymap.c</kbd></pre>
+        <p>
+          Configure the kernel via a menu-driven interface:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">make menuconfig</kbd></pre>
+        <p>
+          Compile the kernel image and modules:
+        </p>
+        <pre class="userinput"><kbd class="command">make</kbd></pre>
+        <p>
+          Install the modules, if your kernel configuration uses them:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">make modules_install</kbd></pre>
+        <p>
+          The path to the kernel image may vary depending on the platform
+          you're using. Issue the following command to install the kernel:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">cp arch/i386/boot/bzImage /boot/lfskernel-2.6.10</kbd></pre>
+        <pre class="userinput"><kbd class=
+        "command">cp System.map /boot/System.map-2.6.10</kbd></pre>
+        <pre class="userinput"><kbd class=
+        "command">cp .config /boot/config-2.6.10</kbd></pre>
+        <p>
+          If you are going to keep the kernel source tree around, you may
+          want to run <span><strong class="command">chown -R
+          0:0</strong></span> on the <tt class="filename">linux-2.6.10</tt>
+          directory to ensure all files are owned by user <span class=
+          "emphasis"><em>root</em></span>.
+        </p>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-kernel" name="contents-kernel"></a>
+          <h2 class="sect2">
+            8.3.2. Contents of Linux
+          </h2>
+        </div>
+        <p>
+          See testing
+        </p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="fstab.html" title=
+          "Creating the /etc/fstab file">Prev</a>
+          <p>
+            Creating the /etc/fstab file
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="grub.html" title=
+          "Making the LFS system bootable">Next</a>
+          <p>
+            Making the LFS system bootable
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter08.html" title=
+          "Chapter&nbsp;8.&nbsp;Making the LFS system bootable">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

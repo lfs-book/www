@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      7.6.&nbsp;Creating the /etc/inputrc file
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;7.&nbsp;Setting up system boot scripts
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="console.html" title=
+          "Configuring the Linux console">Prev</a>
+          <p>
+            Configuring the Linux console
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="profile.html" title=
+          "The Bash Shell Startup Files">Next</a>
+          <p>
+            The Bash Shell Startup Files
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter07.html" title=
+          "Chapter&nbsp;7.&nbsp;Setting up system boot scripts">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sect1" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          7.6. Creating the /etc/inputrc file
+        </h1>
+      </div>
+      <p>
+        Create the /etc/inputrc file:
+      </p>
+      <pre class="userinput"><kbd class=
+      "command">cat &gt; /etc/inputrc &lt;&lt; "EOF"
+# Begin /etc/inputrc
+
+# Make sure we don't output everything on the 1 line
+set horizontal-scroll-mode Off
+
+# Enable 8bit input
+set meta-flag On 
+set input-meta On
+
+# Turns off 8th bit stripping
+set convert-meta Off
+
+# Keep the 8th bit for display
+set output-meta On
+
+# none, visible or audible
+set bell-style none
+
+# All of the following map the escape sequence of the 
+# value contained inside the 1st argument to the 
+# readline specific functions
+
+"\eOd": backward-word
+"\eOc": forward-word
+
+# for linux console
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[5~": beginning-of-history
+"\e[6~": end-of-history
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+
+# for xterm
+"\eOH": beginning-of-line
+"\eOF": end-of-line
+
+# for Konsole
+"\e[H": beginning-of-line
+"\e[F": end-of-line
+
+# End /etc/inputrc
+EOF</kbd></pre>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="console.html" title=
+          "Configuring the Linux console">Prev</a>
+          <p>
+            Configuring the Linux console
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="profile.html" title=
+          "The Bash Shell Startup Files">Next</a>
+          <p>
+            The Bash Shell Startup Files
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter07.html" title=
+          "Chapter&nbsp;7.&nbsp;Setting up system boot scripts">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

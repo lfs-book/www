@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      9.3.&nbsp;Rebooting the system
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;9.&nbsp;The End
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="getcounted.html" title=
+          "Get Counted">Prev</a>
+          <p>
+            Get Counted
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="whatnow.html" title="What now?">Next</a>
+          <p>
+            What now?
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter09.html" title=
+          "Chapter&nbsp;9.&nbsp;The End">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sect1" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          9.3. Rebooting the system
+        </h1>
+      </div>
+      <pre class="userinput"><kbd class="command">logout</kbd></pre>
+      <pre class="userinput"><kbd class="command">umount $LFS/dev/pts
+umount $LFS/dev/shm
+umount $LFS/dev
+umount $LFS/proc
+umount $LFS/sys</kbd></pre>
+      <pre class="userinput"><kbd class="command">umount $LFS</kbd></pre>
+      <p>
+        If multiple partitions were created, unmount the other partitions
+        before unmounting the main one, like this:
+      </p>
+      <pre class="userinput"><kbd class="command">umount $LFS/usr
+umount $LFS/home
+umount $LFS</kbd></pre>
+      <pre class="userinput"><kbd class="command">shutdown -r now</kbd></pre>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="getcounted.html" title=
+          "Get Counted">Prev</a>
+          <p>
+            Get Counted
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="whatnow.html" title="What now?">Next</a>
+          <p>
+            What now?
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter09.html" title=
+          "Chapter&nbsp;9.&nbsp;The End">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      6.13.&nbsp;Binutils-2.15.94.0.2
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;6.&nbsp;Installing basic system software
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="readjusting.html" title=
+          "Readjusting the toolchain">Prev</a>
+          <p>
+            Readjusting the toolchain
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="gcc.html" title="GCC-3.4.3">Next</a>
+          <p>
+            GCC-3.4.3
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing basic system software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          6.13. Binutils-2.15.94.0.2
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 1.4 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 167 MB
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.13.1. Installation of Binutils
+          </h2>
+        </div>
+        <p>
+          Check if there is PTYs for the test suites:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">expect -c "spawn ls"</kbd></pre>
+        <p>
+          Create the build directory:
+        </p>
+        <pre class="userinput"><kbd class="command">mkdir ../binutils-build
+cd ../binutils-build</kbd></pre>
+        <p>
+          Now prepare Binutils for compilation:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">../binutils-2.15.94.0.2/configure --prefix=/usr --enable-shared</kbd></pre>
+        <p>
+          Compile the package:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">make tooldir=/usr</kbd></pre>
+        <p>
+          Test the results:
+        </p>
+        <pre class="userinput"><kbd class="command">make -k check</kbd></pre>
+        <p>
+          The test suite notes from <a href=
+          "../chapter05/binutils-pass2.html" title=
+          "5.13.&nbsp;Binutils-2.15.94.0.2 - Pass 2">Section 5.13,
+          &ldquo;Binutils-2.15.94.0.2 - Pass 2&rdquo;</a> are still very much
+          appropriate here..
+        </p>
+        <p>
+          Install the package:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">make tooldir=/usr install</kbd></pre>
+        <p>
+          Install the <tt class="filename">libiberty</tt> header file:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">cp ../binutils-2.15.94.0.2/include/libiberty.h /usr/include</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-binutils" name="contents-binutils"></a>
+          <h2 class="sect2">
+            6.13.2. Contents of Binutils
+          </h2>
+        </div>
+        <p>
+          See testing
+        </p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="readjusting.html" title=
+          "Readjusting the toolchain">Prev</a>
+          <p>
+            Readjusting the toolchain
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="gcc.html" title="GCC-3.4.3">Next</a>
+          <p>
+            GCC-3.4.3
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing basic system software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      7.9.&nbsp;Creating the /etc/hosts file
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;7.&nbsp;Setting up system boot scripts
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="hostname.html" title=
+          "Configuring the localnet script">Prev</a>
+          <p>
+            Configuring the localnet script
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="network.html" title=
+          "Configuring the network script">Next</a>
+          <p>
+            Configuring the network script
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter07.html" title=
+          "Chapter&nbsp;7.&nbsp;Setting up system boot scripts">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sect1" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          7.9. Creating the /etc/hosts file
+        </h1>
+      </div>
+      <p>
+        If a network card is not going to be configured, create the
+        <tt class="filename">/etc/hosts</tt> file by running:
+      </p>
+      <pre class="userinput"><kbd class=
+      "command">cat &gt; /etc/hosts &lt;&lt; "EOF"
+# Begin /etc/hosts (no network card version)
+
+127.0.0.1 <em class=
+"replaceable"><tt>[&lt;value of HOSTNAME&gt;.example.org]</tt></em> <em class="replaceable"><tt>[value of HOSTNAME]</tt></em> localhost
+
+# End /etc/hosts (no network card version)
+EOF</kbd></pre>
+      <p>
+        If a network card is to be configured, create the <tt class=
+        "filename">/etc/hosts</tt> file by running:
+      </p>
+      <pre class="userinput"><kbd class=
+      "command">cat &gt; /etc/hosts &lt;&lt; "EOF"
+# Begin /etc/hosts (network card version)
+
+127.0.0.1 localhost
+<em class="replaceable"><tt>[192.168.1.1]</tt></em> <em class=
+"replaceable"><tt>[&lt;value of HOSTNAME&gt;.example.org]</tt></em> <em class="replaceable"><tt>[value of HOSTNAME]</tt></em>
+
+# End /etc/hosts (network card version)
+EOF</kbd></pre>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="hostname.html" title=
+          "Configuring the localnet script">Prev</a>
+          <p>
+            Configuring the localnet script
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="network.html" title=
+          "Configuring the network script">Next</a>
+          <p>
+            Configuring the network script
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter07.html" title=
+          "Chapter&nbsp;7.&nbsp;Setting up system boot scripts">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      6.21.&nbsp;Ncurses-5.4
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;6.&nbsp;Installing basic system software
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="gawk.html" title="Gawk-3.1.4">Prev</a>
+          <p>
+            Gawk-3.1.4
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="readline.html" title="Readline-5.0">Next</a>
+          <p>
+            Readline-5.0
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing basic system software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          6.21. Ncurses-5.4
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 0.6 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 27 MB
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            6.21.1. Installation of Ncurses
+          </h2>
+        </div>
+        <p>
+          Prepare Ncurses for compilation:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">./configure --prefix=/usr --with-shared --without-debug</kbd></pre>
+        <p>
+          Compile the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make</kbd></pre>
+        <p>
+          Install the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make install</kbd></pre>
+        <p>
+          Give the Ncurses libraries execute permissions:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">chmod 755 /usr/lib/*.5.4</kbd></pre>
+        <p>
+          Now fix a library:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">chmod 644 /usr/lib/libncurses++.a</kbd></pre>
+        <p>
+          Move the libraries to the <tt class="filename">/lib</tt> directory:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">mv /usr/lib/libncurses.so.5* /lib</kbd></pre>
+        <p>
+          Recreate some symlinks:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">ln -sf ../../lib/libncurses.so.5 /usr/lib/libncurses.so
+ln -sf libncurses.so /usr/lib/libcurses.so</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-ncurses" name="contents-ncurses"></a>
+          <h2 class="sect2">
+            6.21.2. Contents of Ncurses
+          </h2>
+        </div>
+        <p>
+          See testing
+        </p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="gawk.html" title="Gawk-3.1.4">Prev</a>
+          <p>
+            Gawk-3.1.4
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="readline.html" title="Readline-5.0">Next</a>
+          <p>
+            Readline-5.0
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter06.html" title=
+          "Chapter&nbsp;6.&nbsp;Installing basic system software">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

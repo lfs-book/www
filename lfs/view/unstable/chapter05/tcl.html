@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      5.9.&nbsp;Tcl-8.4.9
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;5.&nbsp;Constructing a temporary system
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="adjusting.html" title=
+          "Adjusting the toolchain">Prev</a>
+          <p>
+            Adjusting the toolchain
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="expect.html" title="Expect-5.42.1">Next</a>
+          <p>
+            Expect-5.42.1
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter05.html" title=
+          "Chapter&nbsp;5.&nbsp;Constructing a temporary system">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          5.9. Tcl-8.4.9
+        </h1>
+      </div>
+      <div class="package" lang="en" xml:lang="en">
+        <div class="segmentedlist">
+          <div class="seglistitem">
+            <div class="seg">
+              <strong><span class="segtitle">Approximate build
+              time:</span></strong> 0.9 SBU
+            </div>
+            <div class="seg">
+              <strong><span class="segtitle">Required disk
+              space:</span></strong> 23 MB
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="installation" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <h2 class="sect2">
+            5.9.1. Installation of Tcl
+          </h2>
+        </div>
+        <p>
+          Prepare Tcl for compilation:
+        </p>
+        <pre class="userinput"><kbd class="command">cd unix
+./configure --prefix=/tools</kbd></pre>
+        <p>
+          Build the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make</kbd></pre>
+        <p>
+          To test the results, issue: <strong class="userinput"><tt>TZ=UTC
+          make test</tt></strong>.
+        </p>
+        <p>
+          Install the package:
+        </p>
+        <pre class="userinput"><kbd class="command">make install</kbd></pre>
+        <div class="warning">
+          <div class="admonhead">
+            <img alt="[Warning]" src="../images/warning.png" />
+            <h3 class="admontitle">
+              Warning
+            </h3>
+          </div>
+          <div class="admonbody">
+            <p>
+              <span class="emphasis"><em>Do not remove</em></span> the
+              <tt class="filename">tcl8.4.9</tt> source directory yet, as the
+              next package will need its internal headers.
+            </p>
+          </div>
+        </div>
+        <p>
+          Now make a necessary symbolic link:
+        </p>
+        <pre class="userinput"><kbd class=
+        "command">ln -s tclsh8.4 /tools/bin/tclsh</kbd></pre>
+      </div>
+      <div class="content" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <a id="contents-tcl" name="contents-tcl"></a>
+          <h2 class="sect2">
+            5.9.2. Contents of Tcl
+          </h2>
+        </div>
+        <p>
+          See testing
+        </p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="adjusting.html" title=
+          "Adjusting the toolchain">Prev</a>
+          <p>
+            Adjusting the toolchain
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="expect.html" title="Expect-5.42.1">Next</a>
+          <p>
+            Expect-5.42.1
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter05.html" title=
+          "Chapter&nbsp;5.&nbsp;Constructing a temporary system">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

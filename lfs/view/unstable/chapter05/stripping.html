@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content=
+    "application/xhtml+xml; charset=iso-8859-1" />
+    <title>
+      5.34.&nbsp;Stripping
+    </title>
+    <link rel="stylesheet" href="../stylesheets/lfs.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.67.2" />
+    <link rel="stylesheet" href="../stylesheets/lfs-print.css" type=
+    "text/css" media="print" />
+  </head>
+  <body id="lfs" class="SVN-20050109">
+    <div class="navheader">
+      <div class="headertitles">
+        <h4>
+          Linux From Scratch - Version SVN-20050109
+        </h4>
+        <h3>
+          Chapter&nbsp;5.&nbsp;Constructing a temporary system
+        </h3>
+      </div>
+      <ul class="headerlinks">
+        <li class="prev">
+          <a accesskey="p" href="perl.html" title="Perl-5.8.6">Prev</a>
+          <p>
+            Perl-5.8.6
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="../part3.html" title=
+          "Building the LFS System">Next</a>
+          <p>
+            Building the LFS System
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter05.html" title=
+          "Chapter&nbsp;5.&nbsp;Constructing a temporary system">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sect1" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <h1 class="sect1">
+          5.34. Stripping
+        </h1>
+      </div>
+      <p>
+        Strip the programs and libraries:
+      </p>
+      <pre class="userinput"><kbd class=
+      "command">strip --strip-debug /tools/lib/*
+strip --strip-unneeded /tools/{,s}bin/*</kbd></pre>
+      <p>
+        Remove the documentation:
+      </p>
+      <pre class="userinput"><kbd class=
+      "command">rm -rf /tools/{doc,info,man}</kbd></pre>
+    </div>
+    <div class="navfooter">
+      <ul>
+        <li class="prev">
+          <a accesskey="p" href="perl.html" title="Perl-5.8.6">Prev</a>
+          <p>
+            Perl-5.8.6
+          </p>
+        </li>
+        <li class="next">
+          <a accesskey="n" href="../part3.html" title=
+          "Building the LFS System">Next</a>
+          <p>
+            Building the LFS System
+          </p>
+        </li>
+        <li class="up">
+          <a accesskey="u" href="chapter05.html" title=
+          "Chapter&nbsp;5.&nbsp;Constructing a temporary system">Up</a>.
+        </li>
+        <li class="home">
+          <a accesskey="h" href="../index.html" title=
+          "Linux From Scratch - Version SVN-20050109">Home</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
