@@ -22,10 +22,16 @@ p {
 
 #banner {
 	height: 40px;
-	margin:0; padding:0;
 }
 
+#banner img {
+	position: absolute;
+	left: 0;
+	border: none;
+}
 div.navbar {
+	position: absolute;
+	top: 58px;
 	border: 0;
 	margin: 0;
 	padding: 0;
@@ -91,7 +97,7 @@ div.navbar {
   display: inline;
   position: absolute;
   left: -40px;
-  top: 85px;
+  top: 100px;
   border-top: solid 1px #ccc;
   border-right: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
@@ -142,6 +148,6 @@ a:visited:hover {
 }*/
 div.main {
 	position: absolute;
-	top: 80px;
+	top: 95px;
 	left: 150px;
 }
