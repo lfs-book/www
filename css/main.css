@@ -192,13 +192,13 @@ div.footer p {
 }
 
 /** Navigation Headers ***/
-.vc_navheader {
- /* background-color: #cccccc; */
-}
-
+/*.vc_navheader {
+ background-color: #cccccc;
+} 
+*/
 
 /*** Table Headers ***/
-.vc_header {
+/* .vc_header {
   text-align: left;
   background-color: #eee;
 }
@@ -206,13 +206,13 @@ div.footer p {
   text-align: left;
   background-color: #eee;
 }
-
+*/
 
 /*** Table Rows ***/
-.vc_row_even {
+/* .vc_row_even {
   background-color: #ffffff;
 }
 .vc_row_odd {
   background-color: #eee;
 }
-
+*/
