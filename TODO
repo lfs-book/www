@@ -2,6 +2,8 @@
 2. Viewcvs customisation (Done)
 3. Bugzilla customization (Done - mostly, perhaps some tweaking yet)
 4. News rendering (One global news feed, or by subproject?)
+	Note: Need to figure out how to get links and other html tags to render
+	correctly in the news xml
 5. Templates (for each subproject)
 6. Mailman customization
 7. Google integration
