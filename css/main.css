@@ -137,7 +137,7 @@ div.navbar {
 em {
 	color: #004090;
 }
-a img, span.footer a:link, span.footer a:hover, span.footer a:visited {
+a img, div.footer a:link, div.footer a:hover, div.footer a:visited {
 	border: none;
 }
 a:link, a:visited {
