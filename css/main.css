@@ -58,7 +58,7 @@ div.navbar {
   background-color: #eee;
   color: #0072ff;
   font-size: 1em;
-  border-right: groove 1px #004090;
+  border-right: dotted 1px #004090;
   border-bottom: none;
 }
 
