@@ -71,7 +71,9 @@ div.navbar {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  position: relative;
+  position: absolute;
+  top 58px;
+  right 0;
   height: 24px;
   right: 0;
 }
