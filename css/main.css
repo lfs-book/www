@@ -142,6 +142,25 @@ text-decoration: none; text-align: center;  float: right ; display: block; width
 #livecdmenulist li a:hover { border-bottom: solid 3px red; }
 #patchesmenulist li a:hover { border-bottom: solid 3px blue; }
 
+#alfsactive:link, #alfsactive:visited {
+border-bottom: solid 3px #92d800;
+}
+#blfsactive:link, #blfsactive:visited {
+border-bottom: solid 3px #ffd500;
+}
+#hlfsactive:link, #hlfsactive:visited {
+border-bottom: solid 3px #fd7700;
+}
+#hintsactive:link, #hintsactive:visited {
+border-bottom: solid 3px #8400ff;
+}
+#livecdactive:link, #livecdactive:visited {
+border-bottom: solid 3px red;
+}
+#patchesactive:link, #patchesactive:visited {
+border-bottom: solid 3px blue;
+}
+
 em {
 	font-weight: bold;
 	color: #444;
