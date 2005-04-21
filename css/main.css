@@ -40,7 +40,7 @@ select:hover {
 input {
 	border: 1px solid #ccc;
 	background: #eee;
-	color: #0072ff;
+	color: #242474;
 }
 input:hover {
 	color: #004090;
@@ -71,7 +71,7 @@ div.navbar {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  position: relative;
+/* position: relative; */
   height: 24px;
 }
 
@@ -167,8 +167,8 @@ a img, div.footer a:link, div.footer a:hover, div.footer a:visited {
 }
 a:link, a:visited {
 	text-decoration: none;
-	color: #0072ff;
-	border-bottom: groove 1px #0072ff;
+	color: #242474;
+	border-bottom: groove 1px #242474;
 }
 a:hover {
 	text-decoration: none;
