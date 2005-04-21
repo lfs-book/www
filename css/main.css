@@ -60,6 +60,8 @@ div.navbar {
 	top: 58px;
 	border: 0;
 	margin: 0;
+	width: 100%;
+	height: 25px;
 	padding: 0;
 	background-color: #eee;
 	text-align: right;
@@ -71,8 +73,6 @@ div.navbar {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  top 58px;
-  height: 24px;
   text-align: right;
 }
 
@@ -80,43 +80,26 @@ div.navbar {
   display: inline;
   padding: 0;
   margin: 0;
+  text-align: right;
 }
 
-#lfsactive:link, #lfsactive:visited, #alfsactive:link, #alfsactive:visited, #blfsactive:link, #blfsactive:visited, #hlfsactive:link, #hlfsactive:visited, #hintsactive:link, #hintsactive:visited, #livecdactive:link, #livecdactive:visited, #patchesactive:link, #patchesactive:visited { text-decoration: none; text-align: center; float: left; display: block; width: 6em; padding: 5px 0 2px 0; background-color: #ddd; color: #0072ff; font-size: 1em; border-bottom: solid 3px #ddd; margin-bottom: -1px; }
+#menu li a {
+border-bottom: none;
+}
 
-#lfsactive:link, #lfsactive:visited {
-border-bottom: solid 3px #0072ff;
-}
-#alfsactive:link, #alfsactive:visited {
-border-bottom: solid 3px #92d800;
-}
-#blfsactive:link, #blfsactive:visited {
-border-bottom: solid 3px #ffd500;
-}
-#hlfsactive:link, #hlfsactive:visited {
-border-bottom: solid 3px #fd7700;
-}
-#hintsactive:link, #hintsactive:visited {
-border-bottom: solid 3px #8400ff;
-}
-#livecdactive:link, #livecdactive:visited {
-border-bottom: solid 3px red;
-}
-#patchesactive:link, #patchesactive:visited {
-border-bottom: solid 3px blue;
-}
+#lfsactive:link, #lfsactive:visited, #alfsactive:link, #alfsactive:visited, #blfsactive:link, #blfsactive:visited, #hlfsactive:link, #hlfsactive:visited, #hintsactive:link, #hintsactive:visited, #livecdactive:link, #livecdactive:visited, #patchesactive:link, #patchesactive:visited { text-decoration: none; text-align: center; float: right; display: block; width: 6em; padding: 5px 0 5px 0; background-color: #ddd; color: #0072ff; font-size: 1em; margin-bottom: -1px; }
 
 #lfs:link, #lfs:visited, #blfs:link, #blfs:visited, #alfs:link, #alfs:visited, #hlfs:link, #hlfs:visited, #hints:link, #hints:visited, #livecd:link, #livecd:visited, #patches:link, #patches:visited {
-text-decoration: none; text-align: center;  float: left ; display: block; width: 6em; padding: 5px 0 2px 0; color: #0072ff; font-size: 1em; border-bottom: solid 3px #eee; margin-bottom: -1px;
+text-decoration: none; text-align: center;  float: right ; display: block; width: 6em; padding: 5px 0 5px 0; color: #0072ff; font-size: 1em; /* border-bottom: solid 3px #eee; */ margin-bottom: -1px;
 }
 
-#lfs:hover, #lfsactive:hover { text-decoration: none; border-bottom: solid 3px #0072ff; background-color: #ddd }
-#alfs:hover, #alfsactive:hover { text-decoration: none; border-bottom: solid 3px #92d800; background-color: #ddd }
-#blfs:hover, #blfsactive:hover { text-decoration: none; border-bottom: solid 3px #ffd500; background-color: #ddd }
-#hlfs:hover, #hlfsactive:hover { text-decoration: none; border-bottom: solid 3px #fd7700; background-color: #ddd }
-#hints:hover, #hintsactive:hover { text-decoration: none; border-bottom: solid 3px #8400ff; background-color: #ddd }
-#livecd:hover, #livecdactive:hover { text-decoration: none; border-bottom: solid 3px red; background-color: #ddd }
-#patches:hover, #patchesactive:hover { text-decoration: none; border-bottom: solid 3px blue; background-color: #ddd }
+#lfs:hover, #lfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #0072ff; background-color: #ddd }
+#alfs:hover, #alfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #92d800; background-color: #ddd }
+#blfs:hover, #blfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #ffd500; background-color: #ddd }
+#hlfs:hover, #hlfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #fd7700; background-color: #ddd }
+#hints:hover, #hintsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #8400ff; background-color: #ddd }
+#livecd:hover, #livecdactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px red; background-color: #ddd }
+#patches:hover, #patchesactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px blue; background-color: #ddd }
 
 #subs {
   list-style-type: none;
@@ -176,16 +159,6 @@ a:hover {
 	color: #004090;
 	border-bottom: dotted 1px #004090;
 }
-/*a:visited {
-	text-decoration: none;
-	color: #c13d02;
-	border-bottom: thin groove #c13d02;
-}
-a:visited:hover {
-	text-decoration: none;
-	color: #782602;
-	border-bottom: thin dotted #782602;
-}*/
 div.main {
 	position: absolute;
 	top: 95px;
@@ -204,33 +177,6 @@ div.footer p {
 	font-size: .8em;
 	margin-top: -5px;
 }
-
-/** Navigation Headers ***/
-/*.vc_navheader {
- background-color: #cccccc;
-} 
-*/
-
-/*** Table Headers ***/
-/* .vc_header {
-  text-align: left;
-  background-color: #eee;
-}
-.vc_header_sort {
-  text-align: left;
-  background-color: #eee;
-}
-*/
-
-/*** Table Rows ***/
-/* .vc_row_even {
-  background-color: #ffffff;
-}
-.vc_row_odd {
-  background-color: #eee;
-}
-*/
-/* a { text-decoration: none; } a:hover { color: #99f; } a:visited { color:  #711; } a:visited:hover { color: #866; }*/
 
 .cmd { font: 1.1em monospace; background: #eee; padding: 5px 0; margin: 0 10px; border: 1px dashed blue }
 .cmd p { margin: 10px 15px; }
