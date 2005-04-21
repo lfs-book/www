@@ -73,7 +73,7 @@ div.navbar {
   margin: 0;
   top 58px;
   height: 24px;
-  left: 100%;
+  right: 100%;
 }
 
 #menu li {
