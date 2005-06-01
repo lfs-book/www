@@ -1,0 +1,97 @@
+<!--#set var="pageTitle" value="How to Contribute" -->
+<!--#include virtual="header.html" -->
+<!--#include virtual="menu.html" -->
+    <div class="main">
+     <h1>How to Contribute</h1>
+       <h2>Make a donation</h2>
+       <p>One of the ways to help the Linux From Scratch project is by
+          making donations. Financial donations can be made through 
+          <a href="http://www.paypal.com">PayPal</a>
+          using a major credit card.
+       </p>
+       <form action="https://www.paypal.com/cgi-bin/webscr" enctype="application/x-www-form-urlencoded" method="post">
+         <p>
+            <input type="hidden" name="cmd" value="_xclick" />
+            <input type="hidden" name="business" value="gerard&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;" />
+            <input type="hidden" name="undefined_quantity" value="1" />
+            <input type="hidden" name="item_name" value="LFS Donation" />USD $ 
+            <input type="text" size="5" name="amount" value="25" />
+            <input type="submit" value="Submit" />
+         </p>
+       </form>
+       <p>If you want to donate but can't use PayPal, please contact 
+          <a href="mailto:&#103;&#101;&#114;&#97;&#114;&#100;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Gerard Beekmans</a>.
+       </p>
+       <p>The majority of donations will be used to pay the monthly server colocation bill.
+          Anything left over will be put back into the project such as sending people cdroms
+          who don't have a high-speed Internet connection to download all the required
+          packages, upgrade the server hardware when necessary, or whatever else needs done
+          to keep the LFS project running smoothly.
+       </p>
+
+       <h2>Become a mirror</h2>
+       <p>You can assist the LFS project by providing a mirror for HTTP and/or FTP.  HTTP
+          consists of the xhtml, books, patches and hints, while FTP consists of packages,
+          patches and tarballs thereof.
+       </p>
+          <h4>HTTP Mirror</h4>
+          <p>Here is a checklist of requirements for HTTP mirrors:</p>
+          <ul>
+             <li><a href="http://samba.org/rsync/">Rsync</a> for syncing with the LFS server.</li>
+             <li>A cron-like program to sync twice an hour.</li>
+             <li>At least 125MB of disk space.</li>
+             <li><a href="http://www.apache.org">Apache Webserver</a> or equivalent with the
+                 following options enabled:</li>
+                <ul>
+                   <li>Indexes</li>
+                   <li>FollowSymlinks</li>
+                   <li>IncludesNOEXEC</li>
+                   <li>AllowOverride FileInfo</li>
+                   <li>+Includes</li>
+                   <li>XBitHack on</li>
+                   <li>The mod_rewrite.so module loaded</li>
+                </ul>
+          </ul>
+          <h4>FTP Mirror</h4>
+          <p>Here is a checklist of requirements for FTP mirrors:</p>
+          <ul>
+             <li><a href="http://samba.org/rsync/">Rsync</a> for syncing with the LFS FTP server.</li>
+             <li>A cron-like program to sync twice a day.</li>
+             <li>At least 1.5GB of disk space.</li>
+             <li>The path to the mirror being &quot;/pub/lfs&quot;, if possible.</li>
+          </ul>
+          <h4>Rsync Scripts</h4>
+          <p>For HTTP mirrors, please download the 
+             <a href="/scripts/lfs-rsync.sh">lfs-rsync.sh</a> script and change the HTMLDIR 
+             variable to where you store your LFS website.  Schedule this script to run twice an
+             hour at a randomly choosen time.
+          </p>
+          <p>For FTP mirrors, please download the
+             <a href="/scripts/lfs-ftp=rsync.sh">lfs-ftp-rsync.sh</a> script.  Next please ask
+             for a hour to sync from the FTP Mirror Maintainer (E-mail below) and schedule this
+             script to run twice a day at the scheduled times.
+          </p>
+          <h4>Still interested?</h4>
+          <p>For HTTP mirrors, once you have the server available, please email the 
+             <a href="mailto:&#115;&#101;&#114;&#118;&#101;&#114;&#45;&#97;&#100;&#109;&#105;&#110;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">&#115;&#101;&#114;&#118;&#101;&#114;&#45;&#97;&#100;&#109;&#105;&#110; list</a>
+             with the following information:
+          </p>
+          <ul>
+             <li>Location (City and Country)</li>
+             <li>Hostname and/or IP Address</li>
+             <li>Bandwidth</li>
+          </ul>
+          <p>For FTP mirrors, please e-mail the FTP Mirror Maintainer 
+             <a href="mailto:&#106;&#117;&#115;&#116;&#105;&#110;&#64;&#107;&#110;&#105;&#101;&#114;&#105;&#109;&#46;&#111;&#114;&#103;">&#74;&#117;&#115;&#116;&#105;&#110;&#32;&#75;&#110;&#105;&#101;&#114;&#105;&#109;</a>     
+             or 
+             <a href="mailto:&#116;&#105;&#109;&#64;&#97;&#110;&#103;&#101;&#108;&#105;&#110;&#97;&#99;&#111;&#117;&#110;&#116;&#121;&#46;&#110;&#101;&#116;">&#84;&#105;&#109;&#32;&#74;&#97;&#99;&#107;&#115;&#111;&#110;</a>
+             to receive a rsync time.  Please include the following information as well:
+          </p>
+          <ul>
+             <li>Location (City and Country)</li>
+             <li>Hostname and/or IP Address</li>
+             <li>Bandwidth</li>
+             <li>Contact Name and E-mail Address</li>
+          </ul>
+
+<!--#include virtual="/common/footer.html" -->
