@@ -11,7 +11,7 @@
 
 	<p>The process of making an LFS livecd is actually fairly straightforward. I've broken it down into six basic steps:</p>
 	  <ol>
-	    <li>Build a base LFS system according to the usual <a href="http://www.linuxfromscratch.org/view/stable">procedure</a>.</li>
+	    <li>Build a base LFS system according to the usual <a href="http://www.linuxfromscratch.org/view/stable/">procedure</a>.</li>
 	    <li>Add wanted additional packages with the help of <a href="http://www.linuxfromscratch.org/blfs/news.html">BLFS</a>.</li>
 	    <li>Modify your bootscripts and tweak system settings to meet your needs.</li>
 	    <li>Create an initial script/program that will set up your special environment.</li>
@@ -61,7 +61,7 @@
 	   (Note: these commands assume you have subversion and cpio installed. If you don't you can build them according to
 	   the instructions in BLFS):</p>
 	<div class="cmd">
-	  <p>svn co svn://svn.linuxfromscratch.org/livecd/trunk/initramfs</p>
+	  <p>svn co svn://svn.linuxfromscratch.org/livecd/trunk/initramfs/</p>
 	  <p>cd initramfs</p>
 	  <p>make</p>
 	</div>
@@ -77,5 +77,6 @@
 	</div>
 	<p>This is necessary because the init looks for that file containing that string to ensure that it has found
 	   the correct cd drive (the one that contains the livecd) before it mounts the cdrom.</p>
+
 <!--#include virtual="/common/footer.html" -->
 
