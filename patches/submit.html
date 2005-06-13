@@ -4,14 +4,25 @@
     <div class="main">
 
 <h1>Patches Submission Guidelines</h1>
-	<p>Before submitting a patch, check if there is an already existing patch for the current version or a previous version. If there is a patch for the previous version that applies without an error (Note: Getting an offset/fuzz when applying the patch is not an error) just drop a note on the list and the patches maintainers will copy the file over to the new version.</p>
+	<p>Before submitting a patch, check if there is an already existing
+	   patch for the current version or a previous version. If there is
+	   a patch for the previous version that applies without an error
+	   (Note: Getting an offset/fuzz when applying the patch is not an
+	   error) just drop a note on the list and the patches maintainers
+	   will copy the file over to the new version.
+	</p>
 	<p>A suggested command for creating the patch file is:</p>
 	<div class="cmd">
 	  <p>LC_ALL=C TZ=UTC0 diff -Naur [old...] [new...] > [patch name...].patch</p>
 	</div>
-	<p>Note that this is not an absolute requirement and you are free to create the patch any way you like as long as the following requirement is satisfied.  When creating the patch, you should be in a directory just above the package directory so that the resulting patch can be applied with <code>patch -p1</code> as per the current instructions in the book.</p>
+	<p>Note that this is not an absolute requirement and you are free to
+	   create the patch any way you like as long as the following requirement
+	   is satisfied.  When creating the patch, you should be in a directory
+	   just above the package directory so that the resulting patch can be applied
+	   with <code>patch -p1</code> as per the current instructions in the book.
+	</p>
 	<p>The patch file name should be in the following format:</p>
-	<p>${packageName}-${packageVersion}-${patchName}-${patchVersion}.patch</p>
+	<p><code>${packageName}-${packageVersion}-${patchName}-${patchVersion}.patch<code></p>
 		<dl>
 			<dt>packageName</dt>
 				<dd>Official name of the package. Be sure to follow the same capitalization that is followed by the official tarball for the package (i.e. cracklib would be cracklib,2.7, gcc would be gcc-3.3.4, etc.). changing conventions (e.g. ',' or '-' or differing package names) shouldn't be a consideration - it's up to upstream how they package their tarballs and we should reflect their naming convention. Where package descriptions have multiple words, those words should be '_' separated to differentiate between the '-' separated fields we have on the patches project at present.</dd>
