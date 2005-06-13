@@ -168,6 +168,10 @@ em {
 	font-weight: bold;
 	color: #444;
 }
+code {
+	font-weight: bold;
+	font: 1em monospace;
+}
 a img, div.footer a:link, div.footer a:hover, div.footer a:visited {
 	border: none;
 }
