@@ -6,22 +6,20 @@
 NAME="LFS ftp archive"
 SITE=rsync.osuosl.org
 MODULE=lfs
-LOCAL=/local/path/
-LOG=/path/to/logfile
+LOCAL=/local/path/   			# Edit this line
+LOG=/path/to/logfile 			# Edit this line
 USER=root  
-MAILER=/usr/bin/your_favorite_mailer
+MAILER=/usr/bin/your_favorite_mailer 	# Edit this line
 
 OUTPUT=`rsync -clprtz --delete ${SITE}::${MODULE} ${LOCAL} 2>&1`
 
 if [ $? = 0 ]
 then
-    echo "Subject: rsync of ${NAME} on igwe.vub.ac.be OK" |${MAILER}
+    echo "Subject: rsync of ${NAME} OK" |${MAILER}
 ${USER};
     echo "Rsync succeeded of ${NAME} on" `date` >> ${LOG}
 else
-    (echo "Subject: rsync of ${NAME} on igwe.vub.ac.be FAILED"; echo -e "${OUTPUT}") |${MAILER} ${USER};
+    (echo "Subject: rsync of ${NAME} FAILED"; echo -e "${OUTPUT}") |${MAILER} ${USER};
     echo "Rsync failed of ${NAME} on" `date` >> ${LOG};
     echo -e "${OUTPUT}" >> ${LOG}
 fi
-
-
