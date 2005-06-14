@@ -90,7 +90,7 @@ border-bottom: none;
 #lfsactive:link, #lfsactive:visited, #alfsactive:link, #alfsactive:visited, #blfsactive:link, #blfsactive:visited, #hlfsactive:link, #hlfsactive:visited, #hintsactive:link, #hintsactive:visited, #livecdactive:link, #livecdactive:visited, #patchesactive:link, #patchesactive:visited { text-decoration: none; text-align: center; float: right; display: block; width: 6em; padding: 5px 0 5px 0; background-color: #ddd; color: #0072ff; font-size: 1em; margin-bottom: -1px; }
 
 #lfs:link, #lfs:visited, #blfs:link, #blfs:visited, #alfs:link, #alfs:visited, #hlfs:link, #hlfs:visited, #hints:link, #hints:visited, #livecd:link, #livecd:visited, #patches:link, #patches:visited {
-text-decoration: none; text-align: center;  float: right ; display: block; width: 6em; padding: 5px 0 5px 0; color: #0072ff; font-size: 1em; /* border-bottom: solid 3px #eee; */ margin-bottom: -1px;
+text-decoration: none; text-align: center;  float: right ; display: block; width: 6em; padding: 5px 0 5px 0; color: #0072ff; font-size: 5px; margin-bottom: -1px;
 }
 
 #lfs:hover, #lfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #0072ff; background-color: #ddd }
