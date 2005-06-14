@@ -1,15 +1,12 @@
 #!/bin/bash
 
-HTMLDIR=/var/www/htdocs/lfssite
+SITE=linuxfromscratch.org
+MODULE=lfs-website
+LOCAL=/path/to/local/site	# Edit this line
+USER=admin@<your domain here>	# Edit this line
+MAILER=/usr/sbin/sendmail	# Edit this line, if necessary
 
-cd $HTMLDIR/timestamp
-oldstamp=$(cat timestamp)
+OUTPUT=`rsync -clprtzv --delete ${SITE}::${MODULE} ${LOCAL}`
 
-rsync -cr linuxfromscratch.org::lfs-timestamp .
-
-newstamp=$(cat timestamp)
-
-if [ $newstamp -gt $oldstamp ]; then
-	rsync -clprtz --delete linuxfromscratch.org::lfs-website $HTMLDIR
-fi
-
+# Run the command and mail the results
+(echo "Subject: LFS HTTP Mirror Updated - RC $?"; echo -e "${OUTPUT}") | ${MAILER} ${USER};
