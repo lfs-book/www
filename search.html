@@ -1,0 +1,90 @@
+<!--#set var="pageTitle" value="Welcome to Linux From Scratch!" -->
+<!--#include virtual="header.html" -->
+<!--#include virtual="menu.html" -->
+    <div class="main">
+     <h1>Search Linux From Scratch</h1>
+     <h2>Swish search</h2>
+	<form method="get" action="http://search.linuxfromscratch.org/index.cgi"
+	 enctype="application/x-www-form-urlencoded" class="form">
+	  <table summary="Search the website and mailinglists with swish by filling out this form"><tbody>
+	   <tr>
+	     <th>Search in:</th>
+	     <td>
+		<label title="alfs-discuss"><input type="checkbox" name="si" value="0" />alfs-discuss Mailing List</label><br />
+		<label title="alfs-log"><input type="checkbox" name="si" value="1" />alfs-log Mailing List</label><br />
+		<label title="blfs-book"><input type="checkbox" name="si" value="2" />blfs-book Mailing List</label><br />
+		<label title="blfs-dev"><input type="checkbox" name="si" value="3" />blfs-dev Mailing List</label><br />
+		<label title="blfs-support"><input type="checkbox" name="si" value="4" />blfs-support Mailing List</label><br />
+		<label title="faq"><input type="checkbox" name="si" value="5" />faq Mailing List</label><br />
+		<label title="hints"><input type="checkbox" name="si" value="6" />hints Mailing List</label><br />
+		<label title="hlfs-book"><input type="checkbox" name="si" value="7" />hlfs-book Mailing List</label><br />
+		<label title="hlfs-dev"><input type="checkbox" name="si" value="8" />hlfs-dev Mailing List</label><br />
+        	<label title="lfs-book"><input type="checkbox" name="si" value="9" />lfs-book Mailing List</label><br />
+	     </td>
+	     <td valign="top">
+		<label title="lfs-chat"><input type="checkbox" name="si" value="10"/>lfs-chat Mailing List</label><br />
+		<label title="lfs-dev"><input type="checkbox" name="si" value="11" />lfs-dev Mailing List</label><br />
+		<label title="lfs-hackers"><input type="checkbox" name="si" value="12" />lfs-hackers Mailing List</label><br />
+		<label title="lfs-security"><input type="checkbox" name="si" value="13" />lfs-security Mailing List</label><br />
+		<label title="lfs-support"><input type="checkbox" name="si" value="14" />lfs-support Mailing List</label><br />
+		<label title="lfs-traducfr"><input type="checkbox" name="si" value="15" />lfs-traducfr Mailing List</label><br />
+		<label title="livecd"><input type="checkbox" name="si" value="16" />livecd Mailing List</label><br />
+		<label title="patches"><input type="checkbox" name="si" value="17" />patches Mailing List</label><br />
+        	<label title="website"><input type="checkbox" name="si" value="18" />website Mailing List</label>
+	     </td>
+	  </tr>
+	  <tr>
+	     <th>Limit search to:</th>
+	     <td colspan="2">
+		<label title="Search title AND body"><input type="radio" name="metaname" value="swishdefault" checked="checked" />Title &amp; Body</label><br />
+       		<label title="Search only title"><input type="radio" name="metaname" value="swishtitle" />Title</label>
+	     </td>
+	  </tr><tr>
+	     <th>Sort by:</th>
+	     <td colspan="2">
+		<select name="sort">
+		  <option selected="selected" value="swishrank">Rank</option>
+		  <option value="swishlastmodified">Last Modified Date</option>
+		  <option value="swishtitle">Title</option>
+		  <option value="swishdocpath">Mailing List</option>
+		</select>
+		<label title="Ascending or descending output"><input type="checkbox" name="reverse" value="on" />Reverse Sort</label>
+	     </td>
+	  </tr><tr>
+	     <th><label for="swishsearch">Search with swish:</label></th>
+	     <td colspan="2">
+		<label title="Enter the text to search for"><input maxlength="200" size="32" id="swishsearch" type="text" name="query" onfocus="if(this.value==this.defaultValue) this.value='';" value="Enter text here" /></label>
+		<label title="Submit the search query"><input class="button" type="submit" value="Go!" /></label>
+	     </td>
+	  </tr>
+	 </tbody></table>
+	</form>
+
+<p><em>Search Tips: A multiple word search can include logical constructs such as &quot;and&quot;, &quot;or&quot;, and &quot;not&quot;. A boolean &quot;and&quot; between words is assumed, meaning documents that contain all of the words will be found. If you wish to find all of the documents that have any one of the specified words, then include an &quot;or&quot; between the words.</em></p>
+<p><em>To truncate a word, type an asterisk (*) at the end of the word. For example, searching for &quot;serv*&quot; will find documents that contain the words &quot;server&quot;, &quot;serving&quot;, and &quot;service&quot;, among others.</em></p>
+<p><a href="http://swish-e.org/"><img alt="Powered by SWISH-E" width="109" height="35" src="images/powered_by_swish-e_109x35.png" /></a></p>
+
+<h2>Google search</h2>
+<form method="get" action="http://www.google.com/search">
+<table summary="Search the website with google"><tbody>
+<tr>
+	<th>Choose the domain:</th>
+	<td><label title="Search google with site:linuxfromscratch.org"><input type="radio" name="sitesearch" value="linuxfromscratch.org" checked="checked" />linuxfromscratch.org</label>
+	<br />
+	<label title="Search WWW on google"><input type="radio" name="sitesearch" value="WWW" />WWW</label>
+	</td>
+</tr><tr>
+	<th><label for="inputField">Search with google:</label></th>
+	<td>
+		<label title="Enter the text to search for"><input type="text" size="32" tabindex="3" id="inputField" name="q" maxlength="255"  onfocus="if(this.value==this.defaultValue) this.value='';" value="Enter text here" /></label>&nbsp;
+		<label title="Submit the search query"><input type="submit" value="Go!" /></label>
+		<input type="hidden" name="domains" value="linuxfromscratch.org" />
+		<em><a href="http://www.google.com/help/features.html">Search help</a></em>
+	</td>
+</tr>
+</tbody></table>
+</form>
+
+<p><a href="http://www.google.com/"><img alt="Powered by Google" width="135" height="35" src="images/powered_by_google_135x35.png" /></a></p>
+
+<!--#include virtual="/common/footer.html" -->
