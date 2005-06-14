@@ -21,9 +21,31 @@ software you want for your systems.</p>
 	insight into the compilation and management of his LFS build.
      </p>
 
+     <h2>How is ALFS implemented?</h2>
+     <p>Currently, the official implementation is nALFS by Neven Has. nALFS is a small
+	program written in C. It first parses an XML profile that contains information
+	concerning the LFS build process into a series of internal commands. It can
+	then execute these at your discretion, thus automating the compilation of LFS.
+     </p>
+
+     <p>There are many in-depth features that have been requested for future
+	ALFS implementations. Because of this, development has been slated for an entirely
+	new build tool which will be called alfs. To see a list of features that will
+	appear in alfs, please read our
+	<a href="http://linuxfromscratch.org/~matthew/alfs-srs/alfs-srs.html">Software Requirements Specification</a>.
+	If you wish to help develop this new tool, please subscribe to the
+	<a href="http://linuxfromscratch.org/mailman/listinfo/alfs-discuss">alfs-discuss mailing list</a>
+	and leave a note there explaining your desire to help.
+     </p>
+
      <h2>Who's who:</h2>
      <ul>
         <li>Project Leader: Jeremy Huntwork</li>
+        <li>Developer/Maintainer: Jamie Bennett</li>
+	<li>Developer (XML): Matthew Burgess</li>
+        <li>Profile Editor: Thomas Pegg </li>
+        <li>Profile Editor: Joachim Beckers</li>
+        <li>Profile Editor: Kevin Fleming</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
