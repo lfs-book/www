@@ -1,4 +1,4 @@
-1. Patches Integration (Done - except for the symlinks - Matt's working on it)
+1. Patches Integration (Done)
 2. Viewcvs customisation (Done)
 3. Bugzilla customization (Done - mostly, perhaps some tweaking yet)
 4. News rendering (One global news feed, or by subproject?)
@@ -8,4 +8,4 @@
 6. Mailman customization
 7. Google integration
 8. Add mailing list info for each subproject
-9. Add svn logs to news page, if possible.
+9. Add svn logs to news page, if possible (Done)
