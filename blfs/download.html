@@ -1,98 +1,68 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
 <!--#set var="pageTitle" value="Download BLFS" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
-<div class="main">
-  <h1>Download the Beyond Linux From Scratch Book</h1>
-  <p>Several versions of the BLFS book are available for download, in several
-  formats:</p>
-  <h2>Current Stable</h2>
-  <p>This is the latest released BLFS book.</p>
-  <ul>
-    <li>
-      <a href="downloads/stable/blfs-book-6.0-html.tar.bz2">HTML format,
-      multiple pages</a>
-    </li>
-    <li>
-      <a href="downloads/stable/blfs-book-6.0-nochunks.html.bz2">HTML format,
-      single page</a>
-    </li>
-    <li>
-      <a href="downloads/stable/blfs-book-6.0.pdf">PDF format</a>
-    </li>
-  </ul>
-  <h2>Current Development</h2>
-  <p>This is the BLFS Book in its current development state. Changes can
-  happen that break the build temporarily.
-  <br />
-  <em>Not recommended for inexperienced LFS'ers.</em></p>
-  <p>Daily rendered 
-  <a href="downloads/svn/">snapshots</a>may be downloaded. Or check out the
-  book's XML from the Subversion repository and render it yourself:</p>
-  <div class="cmd">
-    <p>svn co svn://svn.linuxfromscratch.org/BLFS/trunk/BOOK/</p>
-  </div>
-  <h2>BLFS Museum</h2>
-  <p>Old and crusty. But still useful as an educational experience, or to see
-  how BLFS has grown over the years. 
-  <a href="http://archive.linuxfromscratch.org/blfs-museum/">
-  http://archive.linuxfromscratch.org/blfs-museum/</a></p>
-  <h2 id="packages">Packages for BLFS</h2>
-  <p>BLFS has a list of packages which you can download. Please use the
-  versions which are 
-  <a href="http://www.linuxfromscratch.org/faq/#why-not-version">listed in
-  the book</a>; these are tested versions which are known to work with each
-  other. In addition to the packages you will need to download some patches
-  that are also listed in the book. There are several ways to download the
-  packages.</p>
-  <h3>Hunt and Peck/Freshmeat.net</h3>
-  <p>When a package is not available from the location listed in the book,
-  some other places to try are:</p>
-  <ul>
-    <li>A search for the full package name in 
-    <a href="http://www.google.com">google</a>or your favorite search
-    engine</li>
-    <li>
-      <a href="http://www.debian.org/distrib/packages">Debian Package Search
-      Page</a>
-    </li>
-    <li>
-      <a href="http://www.filemirrors.com/">filemirrors.com</a>
-    </li>
-    <li>
-      <a href="http://freshmeat.net/">freshmeat.net</a>
-    </li>
-    <li>Sources from your linux distro</li>
-  </ul>
-  <h3>BLFS HTTP/FTP Sites</h3>
-  <p>If the above methods are not available to you, the packages are also
-  available individually on the following ftp and http mirrors.</p>
-  <ul>
-    <li>
-    <a href="ftp://ftp.lfs-matrix.net/pub/BLFS/">
-    ftp://ftp.lfs-matrix.net/pub/BLFS/</a>(Montreal, Canada, 100Mbps)</li>
-    <li>
-    <a href="http://ftp.lfs-matrix.net/pub/BLFS/">
-    http://ftp.lfs-matrix.net/pub/BLFS/</a>(Montreal, Canada, 100Mbps)</li>
-    <li>
-    <a href="ftp://ftp.lfs-matrix.de/pub/BLFS/">
-    ftp://ftp.lfs-matrix.de/pub/BLFS/</a>(Frankfurt am Main, Germany,
-    100Mbps)</li>
-    <li>
-    <a href="http://ftp.lfs-matrix.de/pub/BLFS/">
-    http://ftp.lfs-matrix.de/pub/BLFS/</a>(Frankfurt am Main, Germany,
-    100Mbps)</li>
-    <li>
-    <a href="ftp://anduin.linuxfromscratch.org/BLFS/">
-    ftp://anduin.linuxfromscratch.org/BLFS/</a>(Texas, USA, 100Mbps)</li>
-    <li>
-    <a href="http://anduin.linuxfromscratch.org/sources/BLFS/">
-    http://anduin.linuxfromscratch.org/sources/BLFS/</a>(Texas, USA,
-    100Mbps)</li>
-    <li>
-    <a href="ftp://gaosu.rave.org/pub/linux/lfs/BLFS">
-    ftp://gaosu.rave.org/pub/linux/lfs/BLFS</a>(VUB, Brussels, Belgium,
-    100Mbps)</li>
-  </ul>
-  <!--#include virtual="/common/footer.html" -->
-</div>
+    <div class="main">
+     <h1>Download the Beyond Linux From Scratch Book</h1>
+     <p>Several versions of the BLFS book are available for download, in several formats:</p>
+
+     <h2>Current Stable</h2>
+     <p>This is the latest released BLFS book.
+     </p>
+	<ul>
+	   <li><a href="downloads/stable/blfs-book-6.0-html.tar.bz2">HTML format, multiple pages</a></li>
+	   <li><a href="downloads/stable/blfs-book-6.0-nochunks.html.bz2">HTML format, single page</a></li>
+	   <li><a href="downloads/stable/blfs-book-6.0.pdf">PDF format</a></li>
+	</ul>
+     <h2>Current Development</h2>	   
+     <p>This is the BLFS Book in its current development state.  Changes can happen that break the build temporarily.<br />
+     <em>Not recommended for inexperienced LFS'ers.</em>
+     </p>
+     <p>Daily rendered <a href="downloads/svn/">snapshots</a> may be downloaded. Or check
+	out the book's XML from the Subversion repository and render it yourself:</p>
+     <div class="cmd">
+      <p>svn co svn://svn.linuxfromscratch.org/BLFS/trunk/BOOK/</p>
+     </div>
+
+     <h2>BLFS Museum</h2>
+     <p>Old and crusty. But still useful as an educational experience, or to see how BLFS has grown
+	over the years. <a href="http://archive.linuxfromscratch.org/blfs-museum/">http://archive.linuxfromscratch.org/blfs-museum/</a>
+     </p>
+
+     <h2 id="packages">Packages for BLFS</h2>
+     <p>BLFS has a list of packages which you can download. Please use the versions which are
+	<a href="http://www.linuxfromscratch.org/faq/#why-not-version">listed in the book</a>; these
+	are tested versions which are known to work with each other. In addition to the packages you
+	will need to download some patches that are also listed in the book.
+	There are several ways to download the packages.</p>
+	<h3>Hunt and Peck/Freshmeat.net</h3>
+        <p>When a package is not available from the location listed in the book, some other places
+           to try are:</p>
+        <ul>
+           <li>A search for the full package name in <a href="http://www.google.com">google</a> or your 
+           favorite search engine</li>
+           <li><a href="http://www.debian.org/distrib/packages">Debian Package Search Page</a></li>
+           <li><a href="http://www.filemirrors.com/">filemirrors.com</a></li>
+           <li><a href="http://freshmeat.net/">freshmeat.net</a></li>
+           <li>Sources from your linux distro</li>
+        </ul>
+	<h3>BLFS HTTP/FTP Sites</h3>
+        <p>If the above methods are not available to you, the packages are also available individually
+           on the following ftp and http mirrors.
+        </p>
+        <ul>
+           <li><a href="ftp://ftp.lfs-matrix.net/pub/BLFS/">ftp://ftp.lfs-matrix.net/pub/BLFS/</a>
+               (Montreal, Canada, 100Mbps)</li>
+           <li><a href="http://ftp.lfs-matrix.net/pub/BLFS/">http://ftp.lfs-matrix.net/pub/BLFS/</a>
+               (Montreal, Canada, 100Mbps)</li>
+           <li><a href="ftp://ftp.lfs-matrix.de/pub/BLFS/">ftp://ftp.lfs-matrix.de/pub/BLFS/</a>
+               (Frankfurt am Main, Germany, 100Mbps)</li>
+           <li><a href="http://ftp.lfs-matrix.de/pub/BLFS/">http://ftp.lfs-matrix.de/pub/BLFS/</a>
+               (Frankfurt am Main, Germany, 100Mbps)</li>
+           <li><a href="ftp://anduin.linuxfromscratch.org/BLFS/">ftp://anduin.linuxfromscratch.org/BLFS/</a>
+               (Texas, USA, 100Mbps)</li>
+           <li><a href="http://anduin.linuxfromscratch.org/sources/BLFS/">http://anduin.linuxfromscratch.org/sources/BLFS/</a>
+               (Texas, USA, 100Mbps)</li>
+           <li><a href="ftp://gaosu.rave.org/pub/linux/lfs/BLFS">ftp://gaosu.rave.org/pub/linux/lfs/BLFS</a>
+               (VUB, Brussels, Belgium, 100Mbps)</li>
+        </ul>
+<!--#include virtual="/common/footer.html" -->

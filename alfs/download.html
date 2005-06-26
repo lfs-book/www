@@ -1,72 +1,49 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
 <!--#set var="pageTitle" value="Download ALFS" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
-<div class="main">
-  <h1>Download ALFS</h1>
-  <h2>Download Modules and Profiles</h2>
-  <p>Here you will find Several versions of nALFS available for download:</p>
-  <ul>
-    <li>
-      <a href="downloads/stable/">Current Stable</a>
-    </li>
-    <li>
-      <a href="downloads/test/">Test Version</a>
-    </li>
-    <li>
-      <a href="downloads/svn/">Current SVN</a>
-    </li>
-    <li>
-      <a href="http://archive.linuxfromscratch.org/alfs-museum/">Previous
-      Releases</a>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="downloads/profiles/">Profiles</a>
-    </li>
-  </ul>
-  <h2>Packages required for nALFS</h2>
-  <p>For actual parsing of XML profiles, nALFS uses the 
-  <a href="http://xmlsoft.org/">libxml2</a>(a.k.a. gnome-xml) library. There
-  are 
-  <a href="/blfs/view/stable/general/libxml2.html">build instructions</a>in
-  BLFS.</p>
-  <p>If you use 
-  <em>&lt;download&gt;</em>and/or 
-  <em>&lt;unpack&gt;</em>elements in your profiles, and wish to have the
-  source file contents verified by computing digests, you can use MD5 digests
-  without requiring any additional libraries while building nALFS. If you
-  wish to use digests other than MD5 (i.e. SHA-1), nALFS can be built using
-  the 
-  <a href="http://www.openssl.org/">OpenSSL</a>library. There are 
-  <a href="/blfs/view/stable/postlfs/security.html#openssl">build
-  instructions</a>in BLFS. Also if you wish to get better download
-  performance (and more reliability) than using wget for the download
-  processes, nALFS can be built using the 
-  <a href="http://curl.haxx.se/">curl libraries</a>that are included in the
-  curl distribution. There are 
-  <a href="/blfs/view/stable/basicnet/netlibs.html#curl">build
-  instructions</a>in BLFS.</p>
-  <h2>Getting nALFS from SVN</h2>
-  <p>You have two options to access the SVN archive of the ALFS modules. If
-  you have the SVN program installed, you can checkout a copy of the current
-  ALFS modules and work with the files yourself. There are many choices
-  presented here.</p>
-  <p>To get the current nALFS sources:</p>
-  <div class="cmd">
-    <p>svn co svn://svn.linuxfromscratch.org/ALFS/nALFS/nALFS/trunk/</p>
-  </div>
-  <p>To get the current LFS unstable profile:</p>
-  <div class="cmd">
-    <p>svn co svn://svn.linuxfromscratch.org/ALFS/profiles/LFS/trunk/</p>
-  </div>
-  <p>To get all available ALFS DTDs:</p>
-  <div class="cmd">
-    <p>svn co svn://svn.linuxfromscratch.org/ALFS/DTD/trunk/</p>
-  </div>
-  <p>An alternative is to view the ALFS source tree online on the 
-  <a href="http://svn.linuxfromscratch.org/viewcvs.cgi/?root=ALFS">SVN Web
-  Interface</a>.</p>
-  <!--#include virtual="/common/footer.html" -->
-</div>
+    <div class="main">
+     <h1>Download ALFS</h1>
+     <h2>Download Modules and Profiles</h2>
+     <p>Here you will find Several versions of nALFS available for download:</p>
+	<ul>
+	   <li><a href="downloads/stable/">Current Stable</a></li>
+	   <li><a href="downloads/test/">Test Version</a></li>
+	   <li><a href="downloads/svn/">Current SVN</a></li>
+           <li><a href="http://archive.linuxfromscratch.org/alfs-museum/">Previous Releases</a></li>
+        </ul>
+        <ul>
+	   <li><a href="downloads/profiles/">Profiles</a></li>
+	</ul>
+     <h2>Packages required for nALFS</h2>	   
+     <p>For actual parsing of XML profiles, nALFS uses the 
+        <a href="http://xmlsoft.org/">libxml2</a> (a.k.a. gnome-xml) library. There are
+        <a href="/blfs/view/stable/general/libxml2.html">build instructions</a> in BLFS.
+     </p>
+     <p>If you use <em>&lt;download&gt;</em> and/or <em>&lt;unpack&gt;</em> elements in your profiles,
+        and wish to have the source file contents verified by computing digests, you can use MD5 digests
+        without requiring any additional libraries while building nALFS. If you wish to use digests other
+        than MD5 (i.e. SHA-1), nALFS can be built using the 
+        <a href="http://www.openssl.org/">OpenSSL</a> library. There are 
+        <a href="/blfs/view/stable/postlfs/security.html#openssl">build instructions</a> in BLFS.  Also
+        if you wish to get better download performance (and more reliability) than using wget for the 
+        download processes, nALFS can be built using the
+        <a href="http://curl.haxx.se/">curl libraries</a> that are included in the curl distribution.
+        There are
+        <a href="/blfs/view/stable/basicnet/netlibs.html#curl">build instructions</a> in BLFS.
+     </p>
+     <h2>Getting nALFS from SVN</h2>
+     <p>You have two options to access the SVN archive of the ALFS modules. If you have the SVN program
+        installed, you can checkout a copy of the current ALFS modules and work with the files yourself.
+        There are many choices presented here.
+     </p>
+     <p>To get the current nALFS sources:</p>
+     <div class="cmd"><p>svn co svn://svn.linuxfromscratch.org/ALFS/nALFS/nALFS/trunk/</p></div>
+     <p>To get the current LFS unstable profile:</p>
+     <div class="cmd"><p>svn co svn://svn.linuxfromscratch.org/ALFS/profiles/LFS/trunk/</p></div>
+     <p>To get all available ALFS DTDs:</p>
+     <div class="cmd"><p>svn co svn://svn.linuxfromscratch.org/ALFS/DTD/trunk/</p></div>
+     <p>An alternative is to view the ALFS source tree online on the
+        <a href="http://svn.linuxfromscratch.org/viewcvs.cgi/?root=ALFS">SVN Web Interface</a>.
+     </p>
+
+<!--#include virtual="/common/footer.html" -->

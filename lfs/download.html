@@ -1,198 +1,138 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
 <!--#set var="pageTitle" value="Download LFS" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
-<div class="main">
-  <h1>Download the Linux From Scratch Book</h1>
-  <p>Several versions of the LFS book are available for download, in several
-  formats:</p>
-  <h2>Current Stable</h2>
-  <p>This is the latest released LFS book, well tested and mature enough for
-  everyday use.</p>
-  <ul>
-    <li>
-      <a href="downloads/stable/LFS-BOOK-6.0-HTML.tar.bz2">HTML format,
-      multiple pages</a>
-    </li>
-    <li>
-      <a href="downloads/stable/LFS-BOOK-6.0-NOCHUNKS.html.bz2">HTML format,
-      single page</a>
-    </li>
-    <li>
-      <a href="downloads/stable/LFS-BOOK-6.0-XML.tar.bz2">XML format</a>
-    </li>
-    <li>
-      <a href="downloads/stable/LFS-BOOK-6.0.pdf">PDF format</a>
-    </li>
-    <li>
-      <a href="downloads/stable/LFS-BOOK-6.0.txt.bz2">TXT format</a>
-    </li>
-  </ul>
-  <h2>Current Development</h2>
-  <p>This is the LFS Book in its current development state. Changes can
-  happen that break the build temporarily.
-  <br />
-  <em>Not recommended for inexperienced LFS'ers.</em></p>
-  <p>Daily rendered 
-  <a href="downloads/development/">snapshots</a>may be downloaded. Or check
-  out the book's XML from the Subversion repository and render it
-  yourself:</p>
-  <div class="cmd">
-    <p>svn co svn://svn.linuxfromscratch.org/LFS/trunk/BOOK/</p>
-  </div>
-  <h2>LFS Museum</h2>
-  <p>Old and crusty. But still useful as an educational experience, or to see
-  how LFS has grown over the years. 
-  <a href="http://archive.linuxfromscratch.org/lfs-museum/">
-  http://archive.linuxfromscratch.org/lfs-museum/</a></p>
-  <h2 id="packages">Packages for LFS</h2>
-  <p>LFS has a list of packages which you should download. Please use the
-  versions which are 
-  <a href="http://www.linuxfromscratch.org/faq/#why-not-version">listed in
-  the book</a>; these are tested versions which are known to work with each
-  other. In addition to the packages you will need to download some 
-  <a href="http://www.linuxfromscratch.org/patches/lfs/">patches</a>. There
-  are several ways to download the packages.</p>
-  <h3>Hunt and Peck/Freshmeat.net</h3>
-  <p>When a package is not available from the location listed in the book,
-  some other places to try are:</p>
-  <ul>
-    <li>A search for the full package name in 
-    <a href="http://www.google.com">google</a>or your favorite search
-    engine</li>
-    <li>
-      <a href="http://www.debian.org/distrib/packages">Debian Package Search
-      Page</a>
-    </li>
-    <li>
-      <a href="http://www.filemirrors.com/">filemirrors.com</a>
-    </li>
-    <li>
-      <a href="http://freshmeat.net/">freshmeat.net</a>
-    </li>
-    <li>Sources from your linux distro</li>
-  </ul>
-  <h3>Wget Scripts</h3>
-  <p>Another method is a 
-  <a href="http://www.gnu.org/software/wget/wget.html">wget</a>script. We
-  provide 
-  <a href="http://www.linuxfromscratch.org/lfs/wget/">multiple wget
-  scripts</a>, one for each release. Send your updated version to the 
-  <a href="http://linuxfromscratch.org/mailman/listinfo/website/">website
-  mailing list</a>. To use a wget script, enter:</p>
-  <div class="cmd">
-    <p>wget -i lfs-stable.wget</p>
-  </div>
-  <h3>Peer-2-peer Networks</h3>
-  <p>P2P Networks are another good source for packages or the LFS LiveCD,
-  depending on how many people have it available for download in their shared
-  directory. If you have some bandwidth to spare, please consider adding the
-  packages to your shared directory. Here are our P2P links:</p>
-  <ul>
-    <li>
-    <a href="http://www.bittorrent.com">BitTorrent</a>:&#160; 
-    <a href="http://www.nelug.org.uk/torrents/lfs-6.0-packages.torrent">
-    6.0</a>&#160; 
-    <a href="http://www.nelug.org.uk/torrents/lfs-5.1.1-packages.torrent">
-    5.1.1</a>&#160; 
-    <a href="http://www.nelug.org.uk/torrents/LFS-5.0-Packages.torrent">
-    5.0</a></li>
-    <li>eDonkey:&#160; 
-    <a href="ed2k://|file|lfs-packages-6.0.tar|139520000|C5D7FD5706587FA55AFA619CC5E8DBE4|h=TDEWUVXHSHK4AG52ICUUCTBVULFGIF3Q|/">
-    6.0</a>&#160; 
-    <a href="ed2k://|file|lfs-packages-5.1.1.tar|134440960|10192443710593D2F0542D07E7B34110|/">
-    5.1.1</a>&#160; 
-    <a href="ed2k://|file|lfs-packages-5.0.tar|130201600|AAEA975A539D470A3EE314F563D8C2B5|/">
-    5.0</a>&#160;</li>
-  </ul>
-  <p>For instructions on how to use the ed2k: links above, take a look at the
-  
-  <a href="http://www.linuxfromscratch.org/hints/downloads/files/p2p.txt">P2P
-  Hint</a>. A couple good eDonkey clients are 
-  <a href="http://savannah.nongnu.org/projects/mldonkey/">
-  mlDonkey</a>(console) and 
-  <a href="http://www.xmule.ws/">xMule</a>(GUI).</p>
-  <h3 id="ftp">LFS HTTP/FTP Sites</h3>
-  <p>If the above methods are not available to you, the packages are also
-  available in a tarball or individually on the following ftp and http
-  mirrors.</p>
-  <ul>
-    <li>
-    <a href="ftp://ftp.planetmirror.com/pub/lfs/">
-    ftp://ftp.planetmirror.com/pub/lfs/</a>(Brisbane, Australia, 1Gbps)</li>
-    <li>
-    <a href="ftp://ftp.lfs-matrix.net/pub/lfs/">
-    ftp://ftp.lfs-matrix.net/pub/lfs/</a>(Montreal, Canada, 100Mbps)</li>
-    <li>
-    <a href="http://ftp.lfs-matrix.net/pub/lfs/">
-    http://ftp.lfs-matrix.net/pub/lfs/</a>(Montreal, Canada, 100Mbps)</li>
-    <li>
-    <a href="ftp://diane.cict.fr/pub/lfs/">
-    ftp://diane.cict.fr/pub/lfs/</a>(Toulouse, France, 100Mbps)</li>
-    <li>
-    <a href="ftp://diane-2.cict.fr/pub/lfs/">
-    ftp://diane-2.cict.fr/pub/lfs/</a>(Toulouse, France, 100Mbps)</li>
-    <li>
-    <a href="ftp://gaosu.rave.org/pub/lfs/">
-    ftp://gaosu.rave.org/pub/lfs/</a>(VUB, Brussels, Belgium, 100Mbps)</li>
-    <li>
-    <a href="ftp://ftp.lfs-matrix.de/pub/lfs/">
-    ftp://ftp.lfs-matrix.de/pub/lfs/</a>(Frankfurt am Main, Germany,
-    100Mbps)</li>
-    <li>
-    <a href="http://ftp.lfs-matrix.de/pub/lfs/">
-    http://ftp.lfs-matrix.de/pub/lfs/</a>(Frankfurt am Main, Germany,
-    100Mbps)</li>
-    <li>
-    <a href="ftp://ftp.lauf-forum.at/pub/lfs/">
-    ftp://ftp.lauf-forum.at/pub/lfs/</a>(Nürnberg, Germany, 100Mbs)</li>
-    <!--<li><a href="ftp://lfs.tux.ee/pub/lfs/">ftp://lfs.tux.ee/pub/lfs/</a>
+    <div class="main">
+     <h1>Download the Linux From Scratch Book</h1>
+     <p>Several versions of the LFS book are available for download, in several formats:</p>
+
+     <h2>Current Stable</h2>
+     <p>This is the latest released LFS book, well tested and mature enough for everyday use.
+     </p>
+	<ul>
+	   <li><a href="downloads/stable/LFS-BOOK-6.0-HTML.tar.bz2">HTML format, multiple pages</a></li>
+	   <li><a href="downloads/stable/LFS-BOOK-6.0-NOCHUNKS.html.bz2">HTML format, single page</a></li>
+	   <li><a href="downloads/stable/LFS-BOOK-6.0-XML.tar.bz2">XML format</a></li>
+	   <li><a href="downloads/stable/LFS-BOOK-6.0.pdf">PDF format</a></li>
+	   <li><a href="downloads/stable/LFS-BOOK-6.0.txt.bz2">TXT format</a></li>
+	</ul>
+     <h2>Current Development</h2>	   
+     <p>This is the LFS Book in its current development state. Changes can
+happen that break the build temporarily.<br />
+     <em>Not recommended for inexperienced LFS'ers.</em>
+     </p>
+     <p>Daily rendered <a href="downloads/development/">snapshots</a> may be downloaded. Or check
+	out the book's XML from the Subversion repository and render it yourself:</p>
+     <div class="cmd">
+      <p>svn co svn://svn.linuxfromscratch.org/LFS/trunk/BOOK/</p>
+     </div>
+
+     <h2>LFS Museum</h2>
+     <p>Old and crusty. But still useful as an educational experience, or to see how LFS has grown
+	over the years. <a href="http://archive.linuxfromscratch.org/lfs-museum/">http://archive.linuxfromscratch.org/lfs-museum/</a>
+     </p>
+
+     <h2 id="packages">Packages for LFS</h2>
+     <p>LFS has a list of packages which you should download. Please use the versions which are
+	<a href="http://www.linuxfromscratch.org/faq/#why-not-version">listed in the book</a>; these
+	are tested versions which are known to work with each other. In addition to the packages you
+	will need to download some <a href="http://www.linuxfromscratch.org/patches/lfs/">patches</a>.
+	There are several ways to download the packages.</p>
+	<h3>Hunt and Peck/Freshmeat.net</h3>
+        <p>When a package is not available from the location listed in the book, some other places
+           to try are:</p>
+        <ul>
+           <li>A search for the full package name in <a href="http://www.google.com">google</a> or your 
+           favorite search engine</li>
+           <li><a href="http://www.debian.org/distrib/packages">Debian Package Search Page</a></li>
+           <li><a href="http://www.filemirrors.com/">filemirrors.com</a></li>
+           <li><a href="http://freshmeat.net/">freshmeat.net</a></li>
+           <li>Sources from your linux distro</li>
+        </ul>
+	<h3>Wget Scripts</h3>
+        <p>Another method is a <a href="http://www.gnu.org/software/wget/wget.html">wget</a> script.
+           We provide <a href="http://www.linuxfromscratch.org/lfs/wget/">multiple wget scripts</a>,
+           one for each release.  Send your updated version to the 
+           <a href="http://linuxfromscratch.org/mailman/listinfo/website/">website mailing list</a>.
+           To use a wget script, enter:
+        </p>
+        <div class="cmd">
+           <p>wget -i lfs-stable.wget</p>
+        </div>
+        <h3>Peer-2-peer Networks</h3>
+        <p>P2P Networks are another good source for packages or the LFS LiveCD, depending on how many
+           people have it available for download in their shared directory.  If you have some bandwidth to
+           spare, please consider adding the packages to your shared directory.  Here are our P2P links:</p>
+        <ul>
+           <li><a href="http://www.bittorrent.com">BitTorrent</a>:&nbsp;
+               <a href="http://www.nelug.org.uk/torrents/lfs-6.0-packages.torrent">6.0</a>&nbsp;
+               <a href="http://www.nelug.org.uk/torrents/lfs-5.1.1-packages.torrent">5.1.1</a>&nbsp;
+               <a href="http://www.nelug.org.uk/torrents/LFS-5.0-Packages.torrent">5.0</a>
+           </li>
+           <li>eDonkey:&nbsp;
+               <a href="ed2k://|file|lfs-packages-6.0.tar|139520000|C5D7FD5706587FA55AFA619CC5E8DBE4|h=TDEWUVXHSHK4AG52ICUUCTBVULFGIF3Q|/">6.0</a>&nbsp;
+               <a href="ed2k://|file|lfs-packages-5.1.1.tar|134440960|10192443710593D2F0542D07E7B34110|/">5.1.1</a>&nbsp;
+               <a href="ed2k://|file|lfs-packages-5.0.tar|130201600|AAEA975A539D470A3EE314F563D8C2B5|/">5.0</a>&nbsp;
+           </li>
+        </ul>
+        <p>For instructions on how to use the ed2k: links above, take a look at the 
+           <a href="http://www.linuxfromscratch.org/hints/downloads/files/p2p.txt">P2P Hint</a>.  A couple good
+           eDonkey clients are <a href="http://savannah.nongnu.org/projects/mldonkey/">mlDonkey</a> (console) and
+           <a href="http://www.xmule.ws/">xMule</a> (GUI).
+        </p>
+	<h3 id="ftp">LFS HTTP/FTP Sites</h3>
+        <p>If the above methods are not available to you, the packages are also available in a tarball or
+           individually on the following ftp and http mirrors.
+        </p>
+        <ul>
+           <li><a href="ftp://ftp.planetmirror.com/pub/lfs/">ftp://ftp.planetmirror.com/pub/lfs/</a>
+               (Brisbane, Australia, 1Gbps)</li>
+           <li><a href="ftp://ftp.lfs-matrix.net/pub/lfs/">ftp://ftp.lfs-matrix.net/pub/lfs/</a>
+               (Montreal, Canada, 100Mbps)</li>
+           <li><a href="http://ftp.lfs-matrix.net/pub/lfs/">http://ftp.lfs-matrix.net/pub/lfs/</a>
+               (Montreal, Canada, 100Mbps)</li>
+           <li><a href="ftp://diane.cict.fr/pub/lfs/">ftp://diane.cict.fr/pub/lfs/</a>
+               (Toulouse, France, 100Mbps)</li>
+           <li><a href="ftp://diane-2.cict.fr/pub/lfs/">ftp://diane-2.cict.fr/pub/lfs/</a>
+               (Toulouse, France, 100Mbps)</li>
+           <li><a href="ftp://gaosu.rave.org/pub/lfs/">ftp://gaosu.rave.org/pub/lfs/</a>
+               (VUB, Brussels, Belgium, 100Mbps)</li>
+           <li><a href="ftp://ftp.lfs-matrix.de/pub/lfs/">ftp://ftp.lfs-matrix.de/pub/lfs/</a>
+               (Frankfurt am Main, Germany, 100Mbps)</li>
+           <li><a href="http://ftp.lfs-matrix.de/pub/lfs/">http://ftp.lfs-matrix.de/pub/lfs/</a>
+               (Frankfurt am Main, Germany, 100Mbps)</li>
+           <li><a href="ftp://ftp.lauf-forum.at/pub/lfs/">ftp://ftp.lauf-forum.at/pub/lfs/</a>
+               (Nürnberg, Germany, 100Mbs)</li>
+           <!--<li><a href="ftp://lfs.tux.ee/pub/lfs/">ftp://lfs.tux.ee/pub/lfs/</a>
                (Tallinn, Estonia, 512Kbps)</li>-->
-    <li>
-    <a href="ftp://mirror.averse.net/pub/lfs/">
-    ftp://mirror.averse.net/pub/lfs/</a>(Singapore, 100Mbps)</li>
-    <li>
-    <a href="ftp://mirrors.angelinacounty.net/pub/lfs/">
-    ftp://mirrors.angelinacounty.net/pub/lfs/</a>(Houston, USA, 100Mbps)</li>
-    <li>
-    <a href="http://mirrors.angelinacounty.net/pub/lfs/">
-    http://mirrors.angelinacounty.net/pub/lfs/</a>(Houston, USA,
-    100Mbps)</li>
-  </ul>
-  <h3>LiveCD</h3>
-  <p>The official 
-  <a href="/livecd/">LFS LiveCD</a>is available on the following servers:</p>
-  <ul>
-    <li>
-    <a href="ftp://ftp.lfs-matrix.net/pub/lfs-livecd/">
-    ftp://ftp.lfs-matrix.net/pub/lfs-livecd/</a>(Montreal, Canada,
-    100Mbps)</li>
-    <li>
-    <a href="http://ftp.lfs-matrix.net/pub/lfs-livecd/">
-    http://ftp.lfs-matrix.net/pub/lfs-livecd/</a>(Montreal, Canada,
-    100Mbps)</li>
-    <li>
-    <a href="ftp://gaosu.rave.org/pub/linux/lfs-livecd/">
-    ftp://gaosu.rave.org/pub/linux/lfs-livecd/</a>(VUB, Brussels, Belgium,
-    100Mbps)</li>
-    <li>
-    <a href="ftp://ftp.lfs-matrix.de/pub/lfs-livecd/">
-    ftp://ftp.lfs-matrix.de/pub/lfs-livecd/</a>(Frankfurt am Main, Germany,
-    100Mbps)</li>
-    <li>
-    <a href="http://ftp.lfs-matrix.de/pub/lfs-livecd/">
-    http://ftp.lfs-matrix.de/pub/lfs-livecd/</a>(Frankfurt am Main, Germany,
-    100Mbps)</li>
-    <!-- justin 20050523 - URL not found on server
+           <li><a href="ftp://mirror.averse.net/pub/lfs/">ftp://mirror.averse.net/pub/lfs/</a>
+               (Singapore, 100Mbps)</li>
+           <li><a href="ftp://mirrors.angelinacounty.net/pub/lfs/">ftp://mirrors.angelinacounty.net/pub/lfs/</a>
+               (Houston, USA, 100Mbps)</li>
+           <li><a href="http://mirrors.angelinacounty.net/pub/lfs/">http://mirrors.angelinacounty.net/pub/lfs/</a>
+               (Houston, USA, 100Mbps)</li>
+        </ul>
+	<h3>LiveCD</h3>
+        <p>The official <a href="/livecd/">LFS LiveCD</a> is available on the following servers:
+        </p>
+        <ul>
+           <li><a href="ftp://ftp.lfs-matrix.net/pub/lfs-livecd/">ftp://ftp.lfs-matrix.net/pub/lfs-livecd/</a>
+               (Montreal, Canada, 100Mbps)</li>
+           <li><a href="http://ftp.lfs-matrix.net/pub/lfs-livecd/">http://ftp.lfs-matrix.net/pub/lfs-livecd/</a>
+               (Montreal, Canada, 100Mbps)</li>
+           <li><a href="ftp://gaosu.rave.org/pub/linux/lfs-livecd/">ftp://gaosu.rave.org/pub/linux/lfs-livecd/</a>
+               (VUB, Brussels, Belgium, 100Mbps)</li>
+           <li><a href="ftp://ftp.lfs-matrix.de/pub/lfs-livecd/">ftp://ftp.lfs-matrix.de/pub/lfs-livecd/</a>
+               (Frankfurt am Main, Germany, 100Mbps)</li>
+           <li><a href="http://ftp.lfs-matrix.de/pub/lfs-livecd/">http://ftp.lfs-matrix.de/pub/lfs-livecd/</a>
+               (Frankfurt am Main, Germany, 100Mbps)</li>
+           <!-- justin 20050523 - URL not found on server
            <li><a href="http://ashes.systeminplace.net/lfs-livecd/">http://ashes.systeminplace.net/lfs-livecd/</a>
                (Chicago, USA)</li>
            -->
-    <li>
-    <a href="ftp://anduin.linuxfromscratch.org/isos/">
-    ftp://anduin.linuxfromscratch.org/isos/</a>(Texas, USA, 100Mbps)</li>
-    <li>
-    <a href="http://hlfs.topside.org/lfs-livecd/">
-    http://hlfs.topside.org/lfs-livecd/</a>(Louisiana, USA, 10Mbps)</li>
-  </ul>
-  <!--#include virtual="/common/footer.html" -->
-</div>
+           <li><a href="ftp://anduin.linuxfromscratch.org/isos/">ftp://anduin.linuxfromscratch.org/isos/</a>
+               (Texas, USA, 100Mbps)</li>
+	   <li><a href="http://hlfs.topside.org/lfs-livecd/">http://hlfs.topside.org/lfs-livecd/</a>
+	       (Louisiana, USA, 10Mbps)</li>
+        </ul>
+
+<!--#include virtual="/common/footer.html" -->
