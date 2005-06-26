@@ -1,59 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
 <!--#set var="pageTitle" value="Download HLFS" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
-    <div class="main">
-     <h1>Download the Hardened LFS Book</h1>
-
-     <!-- <h2>Current Stable</h2>
+<div class="main">
+  <h1>Download the Hardened LFS Book</h1>
+  <!-- <h2>Current Stable</h2>
      <p>At this point in time, there is only a development version available.</p>
      -->
-     <h2>Current Development</h2>	   
-     <p>This is the HLFS Book in its current development state. Changes can happen that break
-        the build temporarily.<br /><em>Not recommended for inexperienced LFS'ers.</em>
-     </p>
-     <p>Daily rendered <a href="downloads/unstable/">snapshots</a> may be downloaded. Or check
-	out the book's XML from the Subversion repository and render it yourself:</p>
-     <div class="cmd">
-      <p>svn co svn://svn.linuxfromscratch.org/HLFS/trunk/BOOK/</p>
-     </div>
-     <!--
+  <h2>Current Development</h2>
+  <p>This is the HLFS Book in its current development state. Changes can
+  happen that break the build temporarily.
+  <br />
+  <em>Not recommended for inexperienced LFS'ers.</em></p>
+  <p>Daily rendered 
+  <a href="downloads/unstable/">snapshots</a>may be downloaded. Or check out
+  the book's XML from the Subversion repository and render it yourself:</p>
+  <div class="cmd">
+    <p>svn co svn://svn.linuxfromscratch.org/HLFS/trunk/BOOK/</p>
+  </div>
+  <!--
      <h2>LFS Museum</h2>
      <p>Old and crusty. But still useful as an educational experience, or to see how LFS has grown
-	over the years. <a href="http://archive.linuxfromscratch.org/lfs-museum/">http://archive.linuxfromscratch.org/lfs-museum/</a>
+        over the years. <a href="http://archive.linuxfromscratch.org/lfs-museum/">http://archive.linuxfromscratch.org/lfs-museum/</a>
      </p>
      -->
-
-     <h2 id="packages">Packages for HLFS</h2>
-     <p>HLFS has a list of packages which you should download. Please use the versions which are
-	<a href="http://www.linuxfromscratch.org/faq/#why-not-version">listed in the book</a>; these
-	are tested versions which are known to work with each other.  In addition to the packages you
-	will need to download some <a href="http://www.linuxfromscratch.org/patches/hlfs/">patches</a>.
-	There are several ways to download the packages.</p>
-	<h3>Hunt and Peck/Freshmeat.net</h3>
-        <p>When a package is not available from the location listed in the book, some other places
-           to try are:</p>
-        <ul>
-           <li>A search for the full package name in <a href="http://www.google.com">google</a> or your 
-           favorite search engine</li>
-           <li><a href="http://www.debian.org/distrib/packages">Debian Package Search Page</a></li>
-           <li><a href="http://www.filemirrors.com/">filemirrors.com</a></li>
-           <li><a href="http://freshmeat.net/">freshmeat.net</a></li>
-           <li>Sources from your linux distro</li>
-        </ul>
-	<h3>Wget Scripts</h3>
-        <p>Another method is a <a href="http://www.gnu.org/software/wget/wget.html">wget</a> script.
-           We currently do not have any scripts for HLFS, but if anyone would like to make one, 
-           please send it to the 
-           <a href="http://linuxfromscratch.org/mailman/listinfo/website">website mailing list</a>.
-           To use a wget script, enter:
-        </p>
-        <div class="cmd">
-           <p>wget -i hlfs-unstable.wget</p>
-        </div>
-	<h3>LFS HTTP/FTP Sites</h3>
-        <p>A majority of the packages should be available for download on the LFS HTTP and FTP 
-           mirror sites.  The best place to look would be in the
-           /pub/lfs/lfs-packages/conglomeration directory.  Please check the
-           <a href="/lfs/download.html#ftp">LFS Download</a> page for the links to the servers.</p>
-
-<!--#include virtual="/common/footer.html" -->
+  <h2 id="packages">Packages for HLFS</h2>
+  <p>HLFS has a list of packages which you should download. Please use the
+  versions which are 
+  <a href="http://www.linuxfromscratch.org/faq/#why-not-version">listed in
+  the book</a>; these are tested versions which are known to work with each
+  other. In addition to the packages you will need to download some 
+  <a href="http://www.linuxfromscratch.org/patches/hlfs/">patches</a>. There
+  are several ways to download the packages.</p>
+  <h3>Hunt and Peck/Freshmeat.net</h3>
+  <p>When a package is not available from the location listed in the book,
+  some other places to try are:</p>
+  <ul>
+    <li>A search for the full package name in 
+    <a href="http://www.google.com">google</a>or your favorite search
+    engine</li>
+    <li>
+      <a href="http://www.debian.org/distrib/packages">Debian Package Search
+      Page</a>
+    </li>
+    <li>
+      <a href="http://www.filemirrors.com/">filemirrors.com</a>
+    </li>
+    <li>
+      <a href="http://freshmeat.net/">freshmeat.net</a>
+    </li>
+    <li>Sources from your linux distro</li>
+  </ul>
+  <h3>Wget Scripts</h3>
+  <p>Another method is a 
+  <a href="http://www.gnu.org/software/wget/wget.html">wget</a>script. We
+  currently do not have any scripts for HLFS, but if anyone would like to
+  make one, please send it to the 
+  <a href="http://linuxfromscratch.org/mailman/listinfo/website">website
+  mailing list</a>. To use a wget script, enter:</p>
+  <div class="cmd">
+    <p>wget -i hlfs-unstable.wget</p>
+  </div>
+  <h3>LFS HTTP/FTP Sites</h3>
+  <p>A majority of the packages should be available for download on the LFS
+  HTTP and FTP mirror sites. The best place to look would be in the
+  /pub/lfs/lfs-packages/conglomeration directory. Please check the 
+  <a href="/lfs/download.html#ftp">LFS Download</a>page for the links to the
+  servers.</p>
+  <!--#include virtual="/common/footer.html" -->
+</div>
