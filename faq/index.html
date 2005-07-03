@@ -234,7 +234,7 @@ accepted however; you can use bugzilla or the respective branch mailing list (lf
 		<dd>
 			<p>If this is your first time building LFS, using a version not in the book or varying from the book in any way is not a good idea. The IRC channel regulars have a saying, &quot;FBBG&quot;. As bugz, the resident bot, is quick to say, this means, &quot;Follow Book, Book Good.&quot; They and the people on the lists have helped many an unhappy newbie who deviated from the book during that first build.</p>
 			<p>Once you've built a system &quot;by the book&quot;, you have a stable knowledge base from which to experiment to your heart's content (or pain, as is often the case.)</p>
-			<p>If you'd like to experiment then check out <a href="http://wiki.linuxfromscratch.org/index.php?pagename=UpdatedVersions">the Wiki page</a> about using the latest versions. Another good resource is <a href="http://www.linuxfromscratch.org/~matthew/lfs_packages.html">Matthew Burgess' homepage</a>.</p>
+			<p>If you'd like to experiment then check out <a href="http://wiki.linuxfromscratch.org/index.php?pagename=UpdatedVersions">the Wiki page</a> about using the latest versions. Another good resource is <a href="http://linuxfromscratch.org/~matthew/lfs_packages.html">Matthew Burgess' homepage</a>.</p>
 		</dd>
 	<dt id="new-version">There's a new version of package Foo.</dt>
 		<dd>
@@ -267,7 +267,7 @@ accepted however; you can use bugzilla or the respective branch mailing list (lf
 		<dd>Please refer to <a href="../lfs/packages.html">the LFS packages webpage</a>.</dd>
 	<dt id="how-to-upgrade">How do I upgrade my LFS/BLFS system?</dt>
 		<dd>
-			<p>You probably know this already, but LFS is not a distro in the traditional sense. It's primary goal is: <cite><a href="http://www.linuxfromscratch.org/lfs/whatislfs.html">teaching people how a Linux system works internally. </a></cite></p>
+			<p>You probably know this already, but LFS is not a distro in the traditional sense. It's primary goal is: <cite><a href="../lfs/whatislfs.html">teaching people how a Linux system works internally. </a></cite></p>
 			<p>While this means you have great control over your system (&quot;Your distro. Your rules.&quot;), it also has the drawback of having to take care of updating it yourself.</p>
 			<p>If you've built an LFS system and have extended it to become your primary system, the best thing to do is to decide on an upgrade policy. Do you want to keep the latest version of every package? Then be careful, because you're going to be burned. I recommend slight conservatism when upgrading to keep a healthy system. A general rule of thumb which works for most people is: only upgrade packages if they have security fixes. Subscribe to lfs-security and LWN to keep yourself informed about security fixes. Another rule of thumb is: don't upgrade the toolchain (gcc, glibc and binutils) unless you're going to rebuild your entire system. These packages form the heart of your LFS system, destroying them means destroying the ability to compile packages or even run binaries. </p>
 			<p>Remember that updating packages is at your own risk. LFS takes great care to present a stable mix of packages which are compatible all the way up to BLFS so you can compile OpenOffice.Org and Java (which are real dinosaurs to compile). This means that your LFS system may get slightly outdated but ensures compatibility and stability. You can compare this to Debian's stable and testing releases, although LFS stable is generally bleeding-edge compared to other distro's. </p>
