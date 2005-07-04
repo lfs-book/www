@@ -18,7 +18,7 @@ h2 {
 .newsItem {
 	font-style: italic;
 	padding-bottom: 5px;
-	font-size: .9em;
+/*	font-size: .9em;*/
 	border-bottom: 1px dotted blue;
 }
 
