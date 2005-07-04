@@ -22,6 +22,8 @@ h2 {
 	border-bottom: 1px dotted blue;
 }
 
+.newsItem p { margin: 10px 0 10px 0; }
+
 p {
 	margin: 10px;
 }
