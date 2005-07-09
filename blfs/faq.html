@@ -7,141 +7,119 @@
          answers. The <a href="/lfs/faq.html">LFS FAQ</a> is a selection of LFS-specific FAQ's
          and the <a href="/blfs/faq.html">BLFS FAQ</a> is a selection of BLFS-specific FAQ's.</p>
 
-
-<h1>The BLFS FAQ</h1>
-
-<h3><a href="#genblfs">General BLFS questions</a></h3>
-<ul>
+      <h3 id="blfsfaq"><a href="#genblfs">General BLFS questions</a></h3>
+      <ul>
 	<li><a href="#bootcd">How do I make a bootable CD?</a></li>
-	<li><a href="#quake3">You LFSers play Quake?!?</a></li>
 	<li><a href="#seti">Where do I join the LFS SETI team?</a></li>
-</ul>
-
-<h3><a href="#compissues">Compilation issues</a></h3>
-<ul>
+      </ul>
+      <h3><a href="#compissues">Compilation issues</a></h3>
+      <ul>
 	<li><a href="#gtk-2_0">I'm getting errors building a package that requires GTK+,but I've installed GTK+ 2.x.</a></li>
 	<li><a href="#undefined-deflate">undefined reference to `deflate'</a></li>
 	<li><a href="#missing-x-includes">X11/Xlib.h: No such file or directory</a></li>
 	<li><a href="#gnome-versions">Any error while building part of Gnome</a></li>
 	<li><a href="#xfree-missing-seperator">XFree86: Makefile.proto:32: *** missing separator</a></li>
-</ul>
-
-<h3><a href="#confissues">Configuration issues</a></h3>
-<ul>
+      </ul>
+      <h3><a href="#confissues">Configuration issues</a></h3>
+      <ul>
 	<li><a href="#how-to-print">How do I print?</a></li>
 	<li><a href="#konsole-ps1">How do I set PS1 in Konsole?</a></li>
-</ul>
+      </ul>
 
-<h3 id="genblfs">General BLFS questions</h3>
-<dl>
+      <h3 id="genblfs">General BLFS questions</h3>
+      <dl>
 	<dt id="bootcd">How do I make a bootable CD?</dt>
-		<dd>
-			<p>There are several <a href="../hints/downloads/files/">hints</a> related to boot CD's.</p>
-			<p>There are also ISO images at <a href="http://www.stockwith.co.uk/iso/">http://www.stockwith.co.uk/iso/</a>.</p>
-		</dd>
-	<dt id="quake3">You LFSers play Quake?!?</dt>
-		<dd>
-			<p>Glad you asked ;) Ian Molton in the UK runs a Quake server for LFS users. Here are details:</p>
-			<ul>
-				<li>Players need the latest Quake 3 release. As of February, 2003, this is <a href="ftp://ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-1.32b.x86.run">1.32b</a>.</li>
-				<li>Players need the pak0.pk3 file from the full game of Quake 3. This is available on the Quake 3 CD (even the MS Windows version). It goes in /usr/local/games/quake3/baseq3/ unless you installed Quake 3 somewhere else.</li>
-				<li>Players need the add on maps used in the server which they can get from <a href="http://games.mnementh.co.uk/">http://games.mnementh.co.uk/</a> and install in ~/.q3a/baseq3/ or where ever the pak0.pk3 file is. Downloading the maps manually is absolutely necessary because the server has automatic map downloading disabled.</li>
-				<li>For the same reason that automatic map downloading is disabled, please don't download from the web while a game is in progress.</li>
-				<li>Although the server is only guaranteed to be running when games are scheduled, players may connect to the server for testing whenever they like.</li>
-				<li>Games are held every week on Tuesday at 20:00 UTC and on Saturday at 22:00 UTC. Note that those times are in UTC.</li>
-				<li>Because the server is only for LFS users, and Ian would like to avoid setting a password, the server id is recorded only in the lfs-chat archives.</li>
-				<li>If you've created an entry for the server in your "favorites" but it's not showing up, you may have "Show empty servers" turned off.</li>
-			</ul>
-		</dd>
+	<dd>
+	  <p>There are several <a href="../hints/downloads/files/">hints</a> related to boot CD's.</p>
+	</dd>
 	<dt id="seti">Where do I join the LFS SETI team?</dt>
-		<dd>
-			<p>Because LFS-based installations are built from the sources, these systems are generally very optimized for a specific computer. So it's not surprising a lot of people run the Seti@home client. There's a <a href="http://setiathome2.ssl.berkeley.edu/fcgi-bin/fcgi?cmd=team_lookup&amp;name=Team+LFS">Team LFS</a> for the joint effort of LFS alien searches.</p>
-			<p>So if you have the SETI@Home client running on your LFS box, why not <a href="http://setiathome.ssl.berkeley.edu/cgi-bin/cgi?cmd=team_join_form&amp;id=61060">join Team LFS</a>?</p>
-		</dd>
-</dl>
-<p><a href="#header">Back to the top.</a></p>
-
-<h3 id="compissues">Compilation issues</h3>
-<dl>
+	<dd>
+	  <p>Because LFS-based installations are built from the sources, these systems are generally very optimized for a specific computer. So it's not surprising a lot of people run the Seti@home client. There's a <a href="http://setiathome2.ssl.berkeley.edu/fcgi-bin/fcgi?cmd=team_lookup&amp;name=Team+LFS">Team LFS</a> for the joint effort of LFS alien searches.</p>
+	  <p>So if you have the SETI@Home client running on your LFS box, why not <a href="http://setiathome.ssl.berkeley.edu/cgi-bin/cgi?cmd=team_join_form&amp;id=61060">join Team LFS</a>?</p>
+	</dd>
+      </dl>
+      <p><a href="#blfsfaq">Back to the top.</a></p>
+      <h3 id="compissues">Compilation issues</h3>
+      <dl>
 	<dt id="gtk-2_0">I'm getting errors building a package that requires GTK+, but I've installed GTK+ 2.x.</dt>
-		<dd>
-			<p>GTK+ 2.x and 1.2.x aren't compatible. The package you're installing may need GTK+ (and GLIB) 1.2.x. You can install GTK+ (and GLIB) 1.2.x next to 2.x.</p>
-		</dd>
+	<dd>
+	  <p>GTK+ 2.x and 1.2.x aren't compatible. The package you're installing may need GTK+ (and GLIB) 1.2.x. You can install GTK+ (and GLIB) 1.2.x next to 2.x.</p>
+	</dd>
 	<dt id="undefined-deflate">undefined reference to `deflate'</dt>
-		<dd>
-			<p>If, when compiling XFree86, ghostscript, or anything else that uses libpng, you get an error including the following line:<code>/usr/lib/gcc-lib/i686-pc-linux-gnu/3.2/../../../libpng.so: undefined reference to `deflate'</code>.</p>
-			<p>Then rebuild libpng with the patch at <a href="http://linuxfromscratch.org/%7Esklein/libpng-1.2.5-lz.patch">http://linuxfromscratch.org/~sklein/libpng-1.2.5-lz.patch</a>.  Make sure you apply the patch immediately after  unpacking the sources. Like this:</p>
-			<ul class="code">
-				<li>tar --no-same-owner -xvjf libpng-1.2.5.tar.bz2</li>
-				<li>cd libpng-1.2.5</li>
-				<li>cat ../libpng-1.2.5-lz.patch | patch -p0</li>
-				<li>ln -s scripts/makefile.linux Makefile</li>
-				<li>make ZLIBLIB=/lib ZLIBINC=/usr/include</li>
-				<li>make ZLIBLIB=/lib ZLIBINC=/usr/include install</li>
-				<li>cd ..</li>
-				<li>rm -r libpng-1.2.5</li>
-			</ul>
-			<p>Needless to say, if you originally put zlib in /usr/local or did something else different, you'll have to adjust those instructions accordingly.</p>
-		</dd>
+	<dd>
+	  <p>If, when compiling XFree86, ghostscript, or anything else that uses libpng, you get an error including the following line:<code>/usr/lib/gcc-lib/i686-pc-linux-gnu/3.2/../../../libpng.so: undefined reference to `deflate'</code>.</p>
+	  <p>Then rebuild libpng with the patch at <a href="http://linuxfromscratch.org/%7Esklein/libpng-1.2.5-lz.patch">http://linuxfromscratch.org/~sklein/libpng-1.2.5-lz.patch</a>.  Make sure you apply the patch immediately after  unpacking the sources. Like this:</p>
+	  <ul class="code">
+	    <li>tar --no-same-owner -xvjf libpng-1.2.5.tar.bz2</li>
+	    <li>cd libpng-1.2.5</li>
+	    <li>cat ../libpng-1.2.5-lz.patch | patch -p0</li>
+	    <li>ln -s scripts/makefile.linux Makefile</li>
+	    <li>make ZLIBLIB=/lib ZLIBINC=/usr/include</li>
+	    <li>make ZLIBLIB=/lib ZLIBINC=/usr/include install</li>
+	    <li>cd ..</li>
+	    <li>rm -r libpng-1.2.5</li>
+	  </ul>
+	  <p>Needless to say, if you originally put zlib in /usr/local or did something else different, you'll have to adjust those instructions accordingly.</p>
+	</dd>
 	<dt id="missing-x-includes">X11/Xlib.h: No such file or directory</dt>
-		<dd>
-			<p>Typical symptoms look like this:</p>
-			<ul class="code">
-				<li>$ echo -en 'x11:\n\tgcc x11.c\n' &gt; Makefile</li>
-				<li>$ echo -en '#include &lt;X11/Xlib.h&gt;\nmain() { }\n' &gt; x11.c</li>
-				<li>$ make</li>
-				<li>gcc x11.c</li>
-				<li><strong>x11.c:1: X11/Xlib.h: No such file or directory</strong></li>
-				<li><strong>make: *** [x11] Error 1</strong></li>
-				<li>$ rm Makefile x11.c</li>
-				<li>$</li>
-			</ul>
-			<p>Creating a couple symlinks will fix it. Here are the commands:</p>
-			<ul class="code">
-				<li>cd /usr</li>
-				<li>ln -s X11R6 X11</li>
-				<li>cd include</li>
-				<li>ln -s ../X11/include/X11 X11</li>
-			</ul>
-		</dd>
+	<dd>
+	  <p>Typical symptoms look like this:</p>
+	  <ul class="code">
+	    <li>$ echo -en 'x11:\n\tgcc x11.c\n' &gt; Makefile</li>
+	    <li>$ echo -en '#include &lt;X11/Xlib.h&gt;\nmain() { }\n' &gt; x11.c</li>
+	    <li>$ make</li>
+	    <li>gcc x11.c</li>
+	    <li><strong>x11.c:1: X11/Xlib.h: No such file or directory</strong></li>
+	    <li><strong>make: *** [x11] Error 1</strong></li>
+	    <li>$ rm Makefile x11.c</li>
+	    <li>$</li>
+	  </ul>
+	  <p>Creating a couple symlinks will fix it. Here are the commands:</p>
+	  <ul class="code">
+	    <li>cd /usr</li>
+	    <li>ln -s X11R6 X11</li>
+	    <li>cd include</li>
+	    <li>ln -s ../X11/include/X11 X11</li>
+	  </ul>
+	</dd>
 	<dt id="gnome-versions">Any error while building part of Gnome</dt>
-		<dd>
-			<p>Using the latest version of every Gnome package doesn't work. You have to use versions that are known to work together and are used in the BLFS book.</p>
-			<p>To find a list of such versions go to <a href="http://ftp.gnome.org/pub/GNOME/desktop/">http://ftp.gnome.org/pub/GNOME/desktop/</a>, drill down to the version which is mentioned in BLFS and use those.</p>
-		</dd>
+	<dd>
+	  <p>Using the latest version of every Gnome package doesn't work. You have to use versions that are known to work together and are used in the BLFS book.</p>
+	  <p>To find a list of such versions go to <a href="http://ftp.gnome.org/pub/GNOME/desktop/">http://ftp.gnome.org/pub/GNOME/desktop/</a>, drill down to the version which is mentioned in BLFS and use those.</p>
+	</dd>
 	<dt id="xfree-missing-seperator">XFree86: Makefile.proto:32: *** missing separator</dt>
-		<dd>
-			<p>If you get the following error while building XFree86:</p>
-			<p><code>Makefile.proto:32: *** missing separator. Stop.</code></p>
-			<p>Or something which resembles that, you've probably made a mistake in your host.def. Check the file carefully for errors and try recreating it by copying the example in BLFS.</p>
-		</dd>
-</dl>
-<p><a href="#header">Back to the top.</a></p>
+	<dd>
+	  <p>If you get the following error while building XFree86:</p>
+	  <p><code>Makefile.proto:32: *** missing separator. Stop.</code></p>
+	  <p>Or something which resembles that, you've probably made a mistake in your host.def. Check the file carefully for errors and try recreating it by copying the example in BLFS.</p>
+	</dd>
+      </dl>
+      <p><a href="#blfsfaq">Back to the top.</a></p>
 
-<h3 id="confissues">Configuration issues</h3>
-<dl>
+      <h3 id="confissues">Configuration issues</h3>
+      <dl>
 	<dt id="how-to-print">How do I print?</dt>
-		<dd>
-			<p>See <a href="../hints/downloads/files/">one of the various printing hints</a></p>
-			<p>Before you try any of the advanced printer daemons (for example CUPS) make sure your printer works by following <a href="../hints/downloads/files/pfs.txt">the Printing From Scratch hint</a>. For most people, this hint is all that is required to setup basic printing. </p>
-			<p>When reporting problems with CUPS, please indicate whether the following commands work:</p>
-			<ul class="code">
-				<li># This is an image, so ghostscript is not called</li>
-				<li>lpr -o ppi=100 /usr/share/doc/cups/images/cups-block-diagram.gif</li>
-				<li># This PostScript file doesn't use any fonts</li>
-				<li>lpr /usr/share/ghostscript/&lt;version&gt;/examples/tiger.ps</li>
-				<li># This PostScript file uses fonts</li>
-				<li>lpr /usr/share/ghostscript/&lt;version&gt;/examples/alphabet.ps</li>
-			</ul>
-		</dd>
+	<dd>
+	  <p>See <a href="/hints/downloads/files/">one of the various printing hints</a></p>
+	  <p>Before you try any of the advanced printer daemons (for example CUPS) make sure your printer works by following the <a href="/hints/downloads/files/pfs.txt">Printing From Scratch hint</a>. For most people, this hint is all that is required to setup basic printing.</p>
+	  <p>When reporting problems with CUPS, please indicate whether the following commands work:</p>
+	  <ul class="code">
+	    <li># This is an image, so ghostscript is not called</li>
+	    <li>lpr -o ppi=100 /usr/share/doc/cups/images/cups-block-diagram.gif</li>
+	    <li># This PostScript file doesn't use any fonts</li>
+	    <li>lpr /usr/share/ghostscript/&lt;version&gt;/examples/tiger.ps</li>
+	    <li># This PostScript file uses fonts</li>
+	    <li>lpr /usr/share/ghostscript/&lt;version&gt;/examples/alphabet.ps</li>
+	  </ul>
+	</dd>
 	<dt id="konsole-ps1">How do I set PS1 in Konsole?</dt>
-		<dd>
-			<p>Follow the instructions in <a href="view/stable/postlfs/profile.html">the BLFS page about profile</a> to properly setup your enviroment.</p>
-			<p>Alternatively, you can try the following solutions:</p>
-			<p>Start konsole as a login shell:</p>
-			<code>konsole --ls</code>
-			<p>Change the session in Konsole to start <code>/bin/bash --login</code> instead of <code>/bin/bash</code>.</p>
-		</dd>
-</dl>
+	<dd>
+	  <p>Follow the instructions on the <a href="/blfs/view/svn/postlfs/profile.html">BLFS Bash Shell Startup Files</a> to properly setup your enviroment.</p>
+	  <p>Alternatively, you can try the following solutions:</p>
+	  <p>Start konsole as a login shell:</p>
+	  <code>konsole --ls</code>
+	  <p>Change the session in Konsole to start <code>/bin/bash --login</code> instead of <code>/bin/bash</code>.</p>
+	</dd>
+      </dl>
 
 <!--#include virtual="/common/footer.html" -->
