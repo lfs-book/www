@@ -3,32 +3,6 @@
 <!--#include virtual="menu.html" -->
     <div class="main">
      <h1>How to Contribute</h1>
-       <h2>Make a donation</h2>
-       <p>One of the ways to help the Linux From Scratch project is by
-          making donations. Financial donations can be made through 
-          <a href="http://www.paypal.com">PayPal</a>
-          using a major credit card.
-       </p>
-       <form action="https://www.paypal.com/cgi-bin/webscr" enctype="application/x-www-form-urlencoded" method="post">
-         <p>
-            <input type="hidden" name="cmd" value="_xclick" />
-            <input type="hidden" name="business" value="gerard&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;" />
-            <input type="hidden" name="undefined_quantity" value="1" />
-            <input type="hidden" name="item_name" value="LFS Donation" />USD $ 
-            <input type="text" size="5" name="amount" value="25" />
-            <input type="submit" value="Submit" />
-         </p>
-       </form>
-       <p>If you want to donate but can't use PayPal, please contact 
-          <a href="mailto:&#103;&#101;&#114;&#97;&#114;&#100;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Gerard Beekmans</a>.
-       </p>
-       <p>The majority of donations will be used to pay the monthly server colocation bill.
-          Anything left over will be put back into the project such as sending people cdroms
-          who don't have a high-speed Internet connection to download all the required
-          packages, upgrade the server hardware when necessary, or whatever else needs done
-          to keep the LFS project running smoothly.
-       </p>
-
        <h2>Become a mirror</h2>
        <p>You can assist the LFS project by providing a mirror for HTTP and/or FTP.  HTTP
           consists of the XHTML, books, patches and hints, while FTP consists of packages,
@@ -94,5 +68,31 @@
              <li>Bandwidth</li>
              <li>Contact Name and E-mail Address</li>
           </ul>
+
+       <h2>Make a donation</h2>
+       <p>One of the ways to help the Linux From Scratch project is by
+          making donations. Financial donations can be made through
+          <a href="http://www.paypal.com">PayPal</a>
+          using a major credit card.
+       </p>
+       <form action="https://www.paypal.com/cgi-bin/webscr" enctype="application/x-www-form-urlencoded" method="post">
+         <p>
+            <input type="hidden" name="cmd" value="_xclick" />
+            <input type="hidden" name="business" value="gerard&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;" />
+            <input type="hidden" name="undefined_quantity" value="1" />
+            <input type="hidden" name="item_name" value="LFS Donation" />USD $
+            <input type="text" size="5" name="amount" value="25" />
+            <input type="submit" value="Submit" />
+         </p>
+       </form>
+       <p>If you want to donate but can't use PayPal, please contact
+          <a href="mailto:&#103;&#101;&#114;&#97;&#114;&#100;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Gerard Beekmans</a>.
+       </p>
+       <p>The majority of donations will be used to pay the monthly server colocation bill.
+          Anything left over will be put back into the project such as sending people cdroms
+          who don't have a high-speed Internet connection to download all the required
+          packages, upgrade the server hardware when necessary, or whatever else needs done
+          to keep the LFS project running smoothly.
+       </p>
 
 <!--#include virtual="/common/footer.html" -->
