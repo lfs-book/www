@@ -168,7 +168,7 @@
 	  <p><a href="http://www.tldp.org/">The Linux Documentation Project</a> has the HOW-TOs and a great deal of other documentation. You might find something there.</p>
 	  <p>The <a href="/search.html">website's search</a> includes the mailing lists. Many questions have been discussed there at least once. </p>
 	  <p>For support-type help, IRC is often best. It's faster, and doesn't clog the mailing lists. There's more information about the <a href="/support.html#irc">IRC channels</a> on the <a href="/support.html">support</a> website.</p>
-	  <p>There are two IRC channels of interest. <a href="irc://irc.linuxfromscratch.org/lfs">#LFS</a>, which is a community channel, and <a href="irc://irc.linuxfromscratch.org/lfs-support">#lfs-support</a>, which is for support questions. If you are asking a support question, you are more likely to attract competent and friendly help in <a href="irc://irc.linuxfromscratch.org/lfs-support">#lfs-support</a>.</p>
+	  <p>There are two IRC channels of interest. <a href="irc://irc.linuxfromscratch.org/lfs">#lfs</a>, which is a community channel, and <a href="irc://irc.linuxfromscratch.org/lfs-support">#lfs-support</a>, which is for support questions. If you are asking a support question, you are more likely to attract competent and friendly help in <a href="irc://irc.linuxfromscratch.org/lfs-support">#lfs-support</a>.</p>
 	  <p>As a last resort, there are the mailing lists. People will get frustrated with you if you use the wrong one or cross post. Mailing list information is on the <a href="/support.html#mailinglists">support webpage</a> and tells which list to use.</p>
 	  <p>Please remember to provide enough information when you post to the mailing lists. In <a href="/lfs/view/stable/chapter01/askforhelp.html">chapter 1 of LFS</a> you find a good method for posting. Additionally, someone has written <a href="/hints/downloads/files/errors.txt">a hint</a> which details the error reporting procedure.</p>
 	</dd>
@@ -234,7 +234,7 @@
 	</dd>
 	<dt id="delete_key_not_work">The Delete key doesn't work.</dt>
 	<dd>
-	  <p>Please read the BLFS <a href="../blfs/view/svn/postlfs/inputrc.html">inputrc page</a>.</p>
+	  <p>Please read the LFS <a href="/lfs/view/6.1-pre2/chapter07/inputrc.html">inputrc page</a>.</p>
 	</dd>
 	<dt id="shutdown-on-fsck-error">The system shuts down when fsck errors out!</dt>
 	<dd>
@@ -247,7 +247,7 @@
 	    <li>http://freshmeat.net/projects/gnufileutils/</li>
 	    <li>http://freshmeat.net/projects/sh-utils</li>
 	  </ul>
-	  <p>These projects are discontinued and now maintained in the <a href="http://freshmeat.net/projects/coreutils">coreutils</a> project. Future LFS versions will be updated to this package. For LFS-4.1, refer to <a href="../lfs/packages.html">the new LFS packages webpage</a>.</p>
+	  <p>These projects are discontinued and now maintained in the <a href="http://freshmeat.net/projects/coreutils">coreutils</a> project. Future LFS versions will be updated to this package.</p>
 	</dd>
 	<dt id="how-to-find">How do I find a package or command?</dt>
 	<dd>
@@ -255,7 +255,7 @@
 	</dd>
 	<dt id="how-to-upgrade">How do I upgrade my LFS/BLFS system?</dt>
 	<dd>
-	  <p>You probably know this already, but LFS is not a distro in the traditional sense. Its primary goal is: <cite><a href="../lfs/whatislfs.html">teaching people how a Linux system works internally. </a></cite></p>
+	  <p>You probably know this already, but LFS is not a distro in the traditional sense. Its primary goal is: <a href=/lfs/index.html">teaching people how a Linux system works internally</a>.</p>
 	  <p>While this means you have great control over your system (&quot;Your distro. Your rules.&quot;), it also has the drawback of having to take care of updating it yourself.</p>
 	  <p>If you've built an LFS system and have extended it to become your primary system, the best thing to do is to decide on an upgrade policy. Do you want to keep the latest version of every package? Then be careful, because you're going to be burned. I recommend slight conservatism when upgrading to keep a healthy system. A general rule of thumb which works for most people is: only upgrade packages if they have security fixes. Subscribe to lfs-security and LWN to keep yourself informed about security fixes. Another rule of thumb is: don't upgrade the toolchain (gcc, glibc and binutils) unless you're going to rebuild your entire system. These packages form the heart of your LFS system, destroying them means destroying the ability to compile packages or even run binaries. </p>
 	  <p>Remember that updating packages is at your own risk. LFS takes great care to present a stable mix of packages which are compatible all the way up to BLFS so you can compile OpenOffice.Org and Java (which are real dinosaurs to compile). This means that your LFS system may get slightly outdated but ensures compatibility and stability. You can compare this to Debian's stable and testing releases, although LFS stable is generally bleeding-edge compared to other distro's. </p>
