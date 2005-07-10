@@ -29,7 +29,6 @@
 	<li><a href="#new-version">There's a new version of package Foo.</a></li>
 	<li><a href="#delete_key_not_work">The Delete key doesn't work.</a></li>
 	<li><a href="#shutdown-on-fsck-error">The system shuts down when fsck errors out!</a></li>
-	<li><a href="#missing-fm-project">The freshmeat project page doesn't exist.</a></li>
 	<li><a href="#how-to-find">How do I find a package or command?</a></li>
 	<li><a href="#how-to-upgrade">How do I upgrade my LFS/BLFS system?</a></li>
       </ul>
@@ -234,15 +233,6 @@
 	<dt id="shutdown-on-fsck-error">The system shuts down when fsck errors out!</dt>
 	<dd>
 	  <p>Unix systems normally run sulogin if the normal bootup fsck run errors out so that root can log in and fix it. Because sulogin will accept any password if /etc/passwd is corrupt, the LFS developers decided this was a security risk. Therefore, the LFS bootscripts shut the machine down if fsck errors, and it must be booted with the "init=/bin/bash" kernel parameter to get a root shell. Whether this is wise is beyond the scope of the FAQ, but if it doesn't work for you you'll want to change that boot script before it's too late.</p>
-	</dd>
-	<dt id="missing-fm-project">The freshmeat project page doesn't exist.</dt>
-	<dd>
-	  <p>The following Freshmeat pages have been removed recently:</p>
-	  <ul>
-	    <li>http://freshmeat.net/projects/gnufileutils/</li>
-	    <li>http://freshmeat.net/projects/sh-utils</li>
-	  </ul>
-	  <p>These projects are discontinued and now maintained in the <a href="http://freshmeat.net/projects/coreutils">coreutils</a> project. Future LFS versions will be updated to this package.</p>
 	</dd>
 	<dt id="how-to-find">How do I find a package or command?</dt>
 	<dd>
