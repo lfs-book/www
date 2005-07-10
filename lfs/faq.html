@@ -360,7 +360,7 @@
 	       Ask your system administrator to create more.</p>
 	  </div>
 	  <p>then your linux distribution is either not setup to use Unix98 PTYs or to use the /dev/pts file system.</p>
-	  <p>The solution my require recompiling your kernel. First, go to your kernel's source directory and look at the .config file. If you do not have a .config file, and you are running the pre-compiled kernel that was installed with rpm, aptget, or whatever your distribution uses, then you need to seek support from your distribution's support FAQ's, mailing lists or IRC channels.</p>
+	  <p>The solution may require recompiling your kernel. First, go to your kernel's source directory and look at the .config file. If you do not have a .config file, and you are running the pre-compiled kernel that was installed with rpm, aptget, or whatever your distribution uses, then you need to seek support from your distribution's support FAQ's, mailing lists or IRC channels.</p>
 	  <p>If you do have a .config file, look inside it for the following 2 options:</p>
 	  <div class="cmd">
 	    <p>CONFIG_UNIX98_PTYS=y<br />
@@ -373,7 +373,7 @@
 	  <div class="cmd">
 	    <p>mknod /dev/ptmx c 5 2</p>
 	  </div>
-	  <p>Then, whether is existed or you just created it, run:</p>
+	  <p>Then, whether it existed or you just created it, run:</p>
 	  <div class="cmd">
 	    <p>chmod 666 /dev/ptmx</p>
 	  </div>
