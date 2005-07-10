@@ -40,12 +40,9 @@
 	<li id="add-grub"><a href="/lfs/faq.html#add-grub">Why not use LILO instead of GRUB?</a></li>
 	<li id="why-not-faq"><a href="/lfs/faq.html#why-not-faq">Why not include the FAQ in the book?</a></li>
 	<li id="why-vim"><a href="/lfs/faq.html#why-vim">Why is vim in the book?</a></li>
-	<li id="why-ed"><a href="/lfs/faq.html#why-ed">Why is ed in the book?</a></li>
 	<li id="hjl-binutils"><a href="/lfs/faq.html#hjl-binutils">Why is HJL's Binutils not in the book?</a></li>
 	<li id="why-not-package-management"><a href="/lfs/faq.html#why-not-package-management">Why isn't some package manager in the book?</a></li>
 	<li id="no-poweroff"><a href="/lfs/faq.html#no-poweroff">How do I make my machine poweroff when shut down?</a></li>
-	<li id="kernel-header-copy"><a href="/lfs/faq.html#kernel-header-copy">Why copy the kernel headers instead of linking them?</a></li>
-	<li id="kernel-2.6"><a href="/lfs/faq.html#kernel-2.6">I want to use linux-2.6.x in LFS-5.x?</a></li>
       </ul>
       <h3><a href="/lfs/faq.html#resources">When reading and building LFS</a></h3>
       <ul>
@@ -87,7 +84,6 @@
 	<li id="glibc-no-ld_map"><a href="/lfs/faq.html#glibc-no-ld_map">Glibc: &quot;ld.map: No such file or directory&quot;.</a></li>
 	<li id="glibc-awk-fail"><a href="/lfs/faq.html#glibc-awk-fail">Glibc fails and mentions BEGIN and END.</a></li>
 	<li id="glibc-nss"><a href="/lfs/faq.html#glibc-nss">Glibc compilation errors out due to a missing nss.h header file</a></li>
-	<li id="sh-utils-getloadavg"><a href="/lfs/faq.html#sh-utils-getloadavg">Sh-tuils: &quot;undefined reference to `getloadavg'&quot;.</a></li>
 	<li id="cpp-fails-sanity-check"><a href="/lfs/faq.html#cpp-fails-sanity-check">Ncurses: C++ preprocessor &quot;/lib/cpp&quot; fails sanity check</a></li>
       </ul>
       <h3 id="confboot"><a href="/lfs/faq.html#confboot">Configuration and booting issues</a></h3>
@@ -100,7 +96,6 @@
 	<li id="no-dev-rtc"><a href="/lfs/faq.html#no-dev-rtc">modprobe: Can't locate module /dev/rtc</a></li>
 	<li id="eth0-unknown-interface"><a href="/lfs/faq.html#eth0-unknown-interface">eth0:unknown interface</a></li>
 	<li id="spurious-8259A-interrupt"><a href="/lfs/faq.html#spurious-8259A-interrupt">spurious 8259A interrupt: IRQ14</a></li>
-	<li id="f-hostname"><a href="/lfs/faq.html#f-hostname">My hostname is getting set to &quot;-f&quot;!</a></li>
 	<li id="less-prints-ad"><a href="/lfs/faq.html#less-prints-ad">Why does less (and therefore man) print &lt;AD&gt; instead of hyphens?</a></li>
       </ul>
       <h2 id="blfsfaq">BLFS FAQ:</h2>
@@ -255,7 +250,7 @@
 	</dd>
 	<dt id="how-to-upgrade">How do I upgrade my LFS/BLFS system?</dt>
 	<dd>
-	  <p>You probably know this already, but LFS is not a distro in the traditional sense. Its primary goal is: <a href=/lfs/index.html">teaching people how a Linux system works internally</a>.</p>
+	  <p>You probably know this already, but LFS is not a distro in the traditional sense. Its primary goal is: <a href="/lfs/index.html">teaching people how a Linux system works internally</a>.</p>
 	  <p>While this means you have great control over your system (&quot;Your distro. Your rules.&quot;), it also has the drawback of having to take care of updating it yourself.</p>
 	  <p>If you've built an LFS system and have extended it to become your primary system, the best thing to do is to decide on an upgrade policy. Do you want to keep the latest version of every package? Then be careful, because you're going to be burned. I recommend slight conservatism when upgrading to keep a healthy system. A general rule of thumb which works for most people is: only upgrade packages if they have security fixes. Subscribe to lfs-security and LWN to keep yourself informed about security fixes. Another rule of thumb is: don't upgrade the toolchain (gcc, glibc and binutils) unless you're going to rebuild your entire system. These packages form the heart of your LFS system, destroying them means destroying the ability to compile packages or even run binaries. </p>
 	  <p>Remember that updating packages is at your own risk. LFS takes great care to present a stable mix of packages which are compatible all the way up to BLFS so you can compile OpenOffice.Org and Java (which are real dinosaurs to compile). This means that your LFS system may get slightly outdated but ensures compatibility and stability. You can compare this to Debian's stable and testing releases, although LFS stable is generally bleeding-edge compared to other distro's. </p>
