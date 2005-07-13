@@ -1,8 +1,10 @@
-1. Patches Integration (Done)
-2. Viewcvs customisation 
-3. Bugzilla customization
-4. News rendering (One global news feed, or by subproject?)
-5. Templates (for each subproject)
-6. Mailman customization
-7. Add mailing list info for each subproject (Done - listed in support.html)
-8. Add svn logs to news page, if possible (Done)
+- Viewcvs customisation
+- Bugzilla customization
+- News rendering (done; no RSS yet)
+- Mailman customization
+- Add svn logs to news page (done; verify the possibility of attaching the
+  branch name to each log message)
+- Move templates to the repository and enable post-commit actions for them
+- Create cronjob to check for broken links and HTML/CSS validity errors
+  (post-commit is not an option here, because these tasks take too much time to
+finish).
