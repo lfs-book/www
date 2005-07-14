@@ -24,8 +24,8 @@ h2 {
 
 .newsItem p { margin: 10px 0 10px 0; }
 
-.error {
-	font-style: bold;
+.errorMsg {
+	font-weight: bold;
 	color: red;
 }
 
