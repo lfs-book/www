@@ -33,10 +33,10 @@ h2 {
 	margin: 10px;
 	padding: 10px;
 	background-color: #eee;
-	border-bottom: 1px solid #efe;
-	border-right: 1px solid #efe;
-	border-top: 1px solid #ccc;
-	border-left: 1px solid #ccc;
+	border-bottom: 2px solid #efefee;
+	border-right: 2px solid #efefee;
+	border-top: 2px solid #ccc;
+	border-left: 2px solid #ccc;
 	list-style-type: none;
 }
 
