@@ -32,10 +32,10 @@ h2 {
 .results {
 	margin: 10px
 	background: #333;
-	border-bottom: 2pt groove #92d800;
+	border-bottom: 2pt groove #0072ff;
 }
 
-.results em {
+.results strong {
 	color #92d800;
 	font-style: bold;
 }
