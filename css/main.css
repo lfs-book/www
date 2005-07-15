@@ -29,12 +29,16 @@ h2 {
 	color: red;
 }
 
+.pagenav {
+	list-style-type:none;
+}
+
 .results {
 	margin: 10px;
 	padding: 10px;
 	background-color: #eee;
-	border-bottom: 2px solid #efefee;
-	border-right: 2px solid #efefee;
+	border-bottom: 1px solid #0072ff;
+	border-right: 1px solid #0072ff;
 	border-top: 2px solid #ccc;
 	border-left: 2px solid #ccc;
 	list-style-type: none;
