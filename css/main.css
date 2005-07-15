@@ -30,17 +30,17 @@ h2 {
 }
 
 .results {
-	color: white;
 	margin: 10px;
 	padding: 10px;
-	background-color: #555;
-	border-bottom: 1px solid #333;
-	border-right: 1px solid #333;
-	border-top: 1px solid #777;
-	border-left: 1px solid #777;
+	background-color: #eee;
+	border-bottom: 1px solid #efe;
+	border-right: 1px solid #efe;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	list-style-type: none;
 }
 
-.results strong {
+.results strong, .results em {
 	color: #fd7700;
 	font-style: bold;
 }
