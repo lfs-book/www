@@ -30,7 +30,9 @@ h2 {
 }
 
 .results {
+	color: silver;
 	margin: 10px;
+	padding: 10px;
 	background-color: #333;
 	border: 1pt dotted #0072ff;
 }
