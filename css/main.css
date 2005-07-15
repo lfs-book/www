@@ -45,7 +45,8 @@ h2 {
 }
 
 .results strong, .results em {
-	color: #fd7700;
+/*	color: #fd7700; */
+	color: #92d800;
 	font-style: bold;
 }
 
