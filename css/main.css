@@ -37,10 +37,10 @@ h2 {
 	margin: 10px;
 	padding: 10px;
 	background-color: #eee;
-	border-bottom: 1px solid #0072ff;
-	border-right: 1px solid #0072ff;
-	border-top: 2px solid #ccc;
-	border-left: 2px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-top: 2px solid #777;
+	border-left: 2px solid #777;
 	list-style-type: none;
 }
 
