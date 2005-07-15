@@ -207,10 +207,15 @@ dt {
 a img, div.footer a:link, div.footer a:hover, div.footer a:visited {
 	border: none;
 }
-a:link, a:visited {
+a:link {
 	text-decoration: none;
 	color: #0072ff;
 	border-bottom: groove 1px #0072ff;
+}
+a:visited {
+	text-decoration: none;
+	color: navy;
+	border-bottom: groove 1px navy;
 }
 a:hover {
 	text-decoration: none;
