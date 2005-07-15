@@ -30,13 +30,13 @@ h2 {
 }
 
 .results {
-	margin: 10px
+	margin: 10px;
 	background-color: #333;
-	border: 2pt dotted #0072ff;
+	border: 1pt dotted #0072ff;
 }
 
 .results strong {
-	color: #92d800;
+	color: #fd7700;
 	font-style: bold;
 }
 
