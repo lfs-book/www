@@ -11,5 +11,11 @@
         <li>A security vulnerability exists in zlib-1.2.2 whereby disrupted
             streams can cause a buffer overflow.  Zlib-1.2.3 fixes this issue.
             Users are strongly recommended to upgrade to Zlib-1.2.3.</li>
+        <li>The command 'groups' is listed under Shadow's list of installed
+            files, but it is installed by Coreutils.  Thanks to Randy McMurchy
+            for the report.</li>
+        <li>The symlink 'flex++' is listed under Flex's list of installed files,
+            but it isn't actually installed in the more recent versions of Flex
+            that LFS now uses.  Thanks to Randy McMurchy for the report.</li>
      </ul>
 <!--#include virtual="/common/footer.html" -->
