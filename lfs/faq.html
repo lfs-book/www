@@ -286,7 +286,6 @@
 	    <p>/usr/bin/env: /static/bin/bash: No such file or directory<br />
 	       gcc: No such file or directory</p>
 	  </div>
-	  <h4>If you're using LFS-5.x or later:</h4>
 	  <p>With the new Ch 5 build procedure, the most common cause of this problem is forgetting to apply the specs patch.</p>
 	  <p>What happens is that the path to the dynamic linker embedded inside the executable is still pointing at /lib/ld-linux.so.2 and when one goes to run the binary inside the chroot where /lib/ld-linux.so.2 does not exist yet, the very unhelpful <code>No such file or directory</code> error message is shown.</p>
 	  <p>You can test this with <code>readelf -l {binary} | grep interpreter</code>. It's output should be: <code>Requesting program interpreter: /tools/lib/ld-linux.so.2</code>.</p>
@@ -430,7 +429,7 @@
 	</dd>
 	<dt id="no-asneeded">GCC: Error: unrecognized option '--as-needed'</dt>
 	<dd>
-	  <p>This is caused by using an incompatible host to build LFS (e.g. Fedora Core 2).  The problem is caused by the fact that the host's binutils supports the &quot;--as-needed&quot; option, but the version of GCC we compile in LFS-5.1.1 doesn&apos;t support that option.  To solve this, either use an older host, or build LFS-6.0 (currently in testing).</p>
+	  <p>This is caused by using an incompatible host to build LFS (e.g. Fedora Core 2).  The problem is caused by the fact that the host's binutils supports the &quot;--as-needed&quot; option, but the version of GCC we compile in LFS-5.1.1 doesn&apos;t support that option.  To solve this, either use an older host, or build the latest stable LFS version.</p>
 	</dd>
 	<dt id="no-linuxthreads">Glibc: &quot;... it is normal to compile GNU libc with the `linuxthreads' add-on...&quot;</dt>
 	<dd>
