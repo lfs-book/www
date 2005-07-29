@@ -1,0 +1,49 @@
+<!--#set var="pageTitle" value="Getting Involved with BLFS" -->
+<!--#include virtual="header.html" -->
+<!--#include virtual="menu.html" -->
+    <div class="main">
+     <h1>Getting Involved with BLFS</h1>
+     
+     <p>A common question on the mailing lists is: "How do I get involved?".
+     Therefore, we wrote this page to try and answer that question.  </p>
+    
+     <p>The first thing which we suggest you do is to subscribe to the <a
+     href="mail.html">blfs-book and blfs-dev mailing lists.</a> blfs-dev
+     contains discussion on the book while blfs-book recieves information on
+     all bugzilla traffic associated with BLFS.</p>
+
+     <p>You need to install SVN on your computer to really be able to help out
+     with BLFS. Naturally, the best way to do this is by following the
+     instructions in the BLFS book itself! You can then check out the XML
+     source to the book using the following commands:</p>
+
+     <p><b>svn co svn://svn.linuxfromscratch.org/BLFS/trunk BLFS</b></p>
+
+     <p>The procedure above will get the BLFS tree. When you wish to update
+     your tree, simply do:</p>
+
+     <p><b>svn up</b></p>
+
+     <p>while in the BLFS directory.</p>
+
+     <p>Information on converting the book from XML into HTML format can be
+     found in the INSTALL and README files. You will need to install libxslt,
+     DocBook XSL Stylesheets,  tidy (optional for html), lynx
+     (for text),  JDK-1.5 (for pdf), FOP (for pdf) for this to work. Full
+     information is in the INSTALL file.</p>
+
+     <p>Once you have familiarised yourself with the book layout, have a look
+     at our <a href="http://blfs-bugs.linuxfromscratch.org/">bugzilla
+     system.</a></p>
+
+     <p>Finally, have fun and get involved with discussions on the lists. Try
+     emailing blfs-dev (for book issues) or blfs-suport (for build issues) when
+     you have problems as the BLFS team read those lists regularly. Once you
+     have something which you wish to submit, create a diff file (preferably
+     using diff -Naur) and submit it to the blfs-dev list where one of the
+     editors will pick it up. For more details about how to update the BLFS
+     book, take a look at the <a
+     href="http://www.linuxfromscratch.org/blfs/edguide">BLFS Editors'
+     Guide.</a></p>
+
+<!--#include virtual="/common/footer.html" -->
