@@ -8,6 +8,11 @@
         compiled and installed.
      </p>
      <ul>
+        <li>A security vulnerability exists in vim-6.3 which allows modelines to
+            be constructed that execute arbitrary shell commands
+            (CAN-2005-2368).  Users are strongly recommended to recompile
+            Vim-6.3 with the patch available at
+            <a href="ftp://ftp.vim.org/pub/vim/patches/6.3/6.3.082" />.</li>
         <li>A security vulnerability exists in zlib-1.2.2 whereby disrupted
             streams can cause a buffer overflow (CAN-2005-1849).  Users are
             strongly recommended to upgrade to Zlib-1.2.3, which fixes the
