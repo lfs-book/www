@@ -3,11 +3,28 @@
 <!--#include virtual="/lfs/menu.html" -->
     <div class="main">
      <h1>Errata for the 6.1 Version of the LFS Book</h1>
+
      <p>Below is a list of known security vulnerabilites and other bugfixes that
         are serious enough to warrant a change in how the affected package is
         compiled and installed.
      </p>
      <ul>
+		<li><p>Several security vulnerabilities exist in Perl-5.8.6
+		(<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0448">CAN-2005-0448</a>,
+            <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0452">CAN-2004-0452</a>,
+            <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0155">CAN-2005-0155</a>,
+            <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0156">CAN-2005-0156</a> and
+            <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0976">CAN-2004-0976</a>).</p>
+
+			<p>We advise upgrading to Perl-5.8.7 to fix all but the last of
+			these issues.  <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0976">CAN-2004-0976</a> is deemed to be a low risk vulnerability,
+			given that it largely affects just the scripts in Perl's test suite
+			(the one exception being the `instmodsh' shell script).</p>
+
+			<p>Special thanks go to Ken Moffat for analysing the
+			vulnerabilities, patches and upstream tarballs involved.</p>
+		</li> 
+
         <li>A security vulnerability exists in Vim-6.3 which allows modelines to
             be constructed that execute arbitrary shell commands
             (CAN-2005-2368).  Users are strongly recommended to recompile
