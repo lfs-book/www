@@ -4,10 +4,8 @@
     <div class="main">
      <h1>Errata for the 6.1 Version of the LFS Book</h1>
 
-     <p>Below is a list of known security vulnerabilites and other bugfixes that
-        are serious enough to warrant a change in how the affected package is
-        compiled and installed.
-     </p>
+	 <h2>Known Security Vulnerabilities</h2>
+
      <ul>
 		<li><p>Several security vulnerabilities exist in Perl-5.8.6
 		(<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0448">CAN-2005-0448</a>,
@@ -25,23 +23,30 @@
 			vulnerabilities, patches and upstream tarballs involved.</p>
 		</li> 
 
-        <li>A security vulnerability exists in Vim-6.3 which allows modelines to
+        <li><p>A security vulnerability exists in Vim-6.3 which allows modelines to
             be constructed that execute arbitrary shell commands
-            (CAN-2005-2368).  Users are strongly recommended to recompile
-            Vim-6.3 with the
-            <a href="ftp://ftp.vim.org/pub/vim/patches/6.3/6.3.082">upstream
-            patch</a>.</li>
-        <li>A security vulnerability exists in zlib-1.2.2 whereby disrupted
-            streams can cause a buffer overflow (CAN-2005-1849).  Users are
-            strongly recommended to upgrade to Zlib-1.2.3, which fixes the
-            problem.  Note that this is a different vulnerability than the one
-            addressed by the security patch in LFS-6.1 (that fixes
-            CAN-2005-2096).</li>
-        <li>The command 'groups' is listed under Shadow's list of installed
+			(<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2368">CAN-2005-2368</a>).
+			Users are strongly recommended to recompile Vim-6.3 with the
+			<a href="ftp://ftp.vim.org/pub/vim/patches/6.3/6.3.082">upstream
+			patch</a>.</p></li>
+
+        <li><p>A security vulnerability exists in zlib-1.2.2 whereby disrupted
+            streams can cause a buffer overflow
+			(<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1849">CAN-2005-1849</a>).
+			Users are strongly recommended to upgrade to Zlib-1.2.3, which
+			fixes the problem.  Note that this is a different vulnerability to
+			the one addressed by the security patch in LFS-6.1 (that fixes
+            <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2096">CAN-2005-2096</a>.</p></li>
+	  </ul>
+
+	  <h2>Miscellaneous Errata</h2>
+	  <ul>
+        <li><p>The command 'groups' is listed under Shadow's list of installed
             files, but it is installed by Coreutils.  Thanks to Randy McMurchy
-            for the report.</li>
-        <li>The symlink 'flex++' is listed under Flex's list of installed files,
-            but it isn't actually installed in the more recent versions of Flex
-            that LFS now uses.  Thanks to Randy McMurchy for the report.</li>
+            for the report.</p></li>
+        <li><p>The symlink 'flex++' is listed under Flex's list of installed
+			files, but it isn't actually installed in the more recent versions
+			of Flex that LFS now uses.  Thanks to Randy McMurchy for the
+			report.</p></li>
      </ul>
 <!--#include virtual="/common/footer.html" -->
