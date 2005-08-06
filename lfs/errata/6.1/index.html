@@ -14,10 +14,11 @@
             <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0156">CAN-2005-0156</a> and
             <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0976">CAN-2004-0976</a>).</p>
 
-			<p>We advise upgrading to Perl-5.8.7 to fix all but the last of
-			these issues.  <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0976">CAN-2004-0976</a> is deemed to be a low risk vulnerability,
-			given that it largely affects just the scripts in Perl's test suite
-			(the one exception being the `instmodsh' shell script).</p>
+			<p>We advise upgrading to Perl-5.8.7 to fix the first three
+			vulnerabilities.  The fourth vulnerability is considered low-risk
+			and mainly affect the scripts in the test suite.  An
+			<a href="http://www.kenmoffat.uklinux.net/patches/perl-5.8.7-safe_tmpfiles.patch.bz2">unofficial patch</a>
+			exists for those who may want to apply it.</p>
 
 			<p>Special thanks go to Ken Moffat for analysing the
 			vulnerabilities, patches and upstream tarballs involved.</p>
@@ -27,8 +28,7 @@
             be constructed that execute arbitrary shell commands
 			(<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2368">CAN-2005-2368</a>).
 			Users are strongly recommended to recompile Vim-6.3 with the
-			<a href="ftp://ftp.vim.org/pub/vim/patches/6.3/6.3.082">upstream
-			patch</a>.</p></li>
+			<a href="http://www.linuxfromscratch.org/patches/downloads/vim/vim-6.3-security_fix-2.patch">updated security patch</a>.</p></li>
 
         <li><p>A security vulnerability exists in Zlib-1.2.2 whereby disrupted
             streams can cause a buffer overflow
