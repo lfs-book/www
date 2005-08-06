@@ -1,10 +1,41 @@
 - Viewcvs customisation
-- Bugzilla customization
-- News rendering (done; no RSS yet)
+
+- Bugzilla customization (done; needs to be added to the repository for easy
+  editing)
+
 - Mailman customization
+
+- Place links to RSS feeds on the news pages.
+
 - Add svn logs to news page (done; verify the possibility of attaching the
-  branch name to each log message)
-- Move templates to the repository and enable post-commit actions for them
+  branch name to the log messages)
+
+- Move templates to the repository and enable post-commit actions for them (done
+  for swish-e and error pages; lfscounter and bugzilla are missing).
+
 - Create cronjob to check for broken links and HTML/CSS validity errors
   (post-commit is not an option here, because these tasks take too much time to
-finish).
+  finish). Maybe create a "quick-check" rule (using xmllint) to be run on
+  post-commit, that checks for trivial validation errors.
+
+- Sort out how to make best use of mirrors. RR-DNS would be the best solution,
+  but requires more work/research. Another option is to display the mirrors'
+  list when the user visits http://www.linuxfromscratch.org/, but the "normal"
+  content when accessing http://www.linuxfromscratch.org/index.html explicitely.
+
+- Avoid data duplication on lfscounter.cgi (currently, for a new book release,
+  one has to add the new version both on the cgi script itself and on the
+  template).
+
+- Avoid duplication of news items on "general" and project-specific news.html
+  pages, possibly using SSI.
+
+- No link to LFS Bugzilla on the LFS menu?
+
+- Do a Wiki's content review, add the still relevant parts (if any) to the
+  website and drop it entirely.
+
+- Migrate /search.html contents to swish-e template and replace links pointing
+  to it with http://search.linuxfromscratch.org/ (remembering to remove the
+  "permanent redirect" from /home/httpd/search.linuxfromscratch.org/.htaccess).
+  This would avoid maintaining /search.html manually.
