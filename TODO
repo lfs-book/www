@@ -22,6 +22,8 @@
   but requires more work/research. Another option is to display the mirrors'
   list when the user visits http://www.linuxfromscratch.org/, but the "normal"
   content when accessing http://www.linuxfromscratch.org/index.html explicitely.
+  For now, a link to the mirror page was placed on each submenu until we figure
+  out which way to go.
 
 - Avoid data duplication on lfscounter.cgi (currently, for a new book release,
   one has to add the new version both on the cgi script itself and on the
@@ -29,8 +31,6 @@
 
 - Avoid duplication of news items on "general" and project-specific news.html
   pages, possibly using SSI.
-
-- No link to LFS Bugzilla on the LFS menu?
 
 - Do a Wiki's content review, add the still relevant parts (if any) to the
   website and drop it entirely.
