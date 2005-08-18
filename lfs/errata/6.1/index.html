@@ -7,6 +7,12 @@
 	 <h2>Known Security Vulnerabilities</h2>
 
      <ul>
+		<li><p>Bzip2 (all versions) is subject to the filename vulnerability identified
+			 in zgrep
+		(<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0758">CAN-2005-0758</a>).
+		We advise applying the <a href="http://www.linuxfromscratch.org/patches/downloads/bzip2/bzip2-1.0.3-bzgrep_security-1.patch">bzgrep security patch</a>.</p>
+		</li>
+
 		<li><p>Several security vulnerabilities exist in Perl-5.8.6
 		(<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0448">CAN-2005-0448</a>,
             <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0452">CAN-2004-0452</a>,
