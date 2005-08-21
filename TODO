@@ -5,8 +5,6 @@
 
 - Mailman customization
 
-- Place links to RSS feeds on the news pages.
-
 - Add svn logs to news page (done; verify the possibility of attaching the
   branch name to the log messages)
 
