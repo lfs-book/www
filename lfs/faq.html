@@ -11,7 +11,6 @@
 	<li><a href="#why-not-new-lilo">Why not upgrade LILO to the latest version?</a></li>
 	<li><a href="#why-not-faq">Why not include the FAQ in the book?</a></li>
 	<li><a href="#why-vim">Why is vim in the book?</a></li>
-	<li><a href="#why-ed">Why is ed in the book?</a></li>
 	<li><a href="#hjl-binutils">Why is HJL's Binutils not in the book?</a></li>
 	<li><a href="#why-not-package-management">Why isn't some package manager in the book?</a></li>
 	<li><a href="#no-poweroff">How do I make my machine poweroff when shut down?</a></li>
@@ -23,7 +22,7 @@
 	<li><a href="#gcc-warnings">Are compiler warnings from GCC bad?</a></li>
 	<li><a href="#dirty-sources">Do I need to keep the source after installing?</a></li>
 	<li><a href="#really-small">How do I make that really small install the book mentions?</a></li>
-	<li><a href="#alpha-fixes">Is there information about LFS on the Alpha?</a></li>
+	<li><a href="#procs-lfs">Is there information about building LFS on other processors?</a></li>
 	<li><a href="#cross-compile">How do I cross compile LFS?</a></li>
 	<li><a href="#dos-text">What's a DOS format text file?</a></li>
       </ul>
@@ -60,7 +59,6 @@
       </ul>
       <h3><a href="#confboot">Configuration and booting issues</a></h3>
       <ul>
-	<li><a href="#lilo-errors">What do those LILO errors mean?</a></li>
 	<li><a href="#unable-to-mount-root">Kernel panic: VFS: unable to mount root fs</a></li>
 	<li><a href="#respawning-too-fast">init: Id &quot;1&quot; respawning too fast: disabled for 5 minutes</a></li>
 	<li><a href="#net-pf-x">I'm getting errors about net-pf-?.</a></li>
@@ -87,16 +85,6 @@
 	<dt id="why-vim">Why is vim in the book?</dt>
 	<dd>
 	  <p>This is fairly well discussed in the thread starting at <a href="http://linuxfromscratch.org/pipermail/lfs-dev/2002-February/023030.html">http://linuxfromscratch.org/pipermail/lfs-dev/2002-February/023030.html</a>.</p>
-	</dd>
-	<dt id="why-ed">Why is ed in the book?</dt>
-	<dd>
-	  <p>The book includes ed because patch uses it to process ed scripts. However, these are rare today; everyone uses diff format patches.</p>
-	  <p>But ed does have other uses:</p>
-	  <ul>
-	    <li>For all who've learned to use it, ed is a very useful emergency editor. The MS Windows standard telnet client can deal with ed but has trouble with fullscreen editors (like vim). And a full featured vim requires not only ncurses, but X11 as well! Any trouble with those libraries will leave the system without an editor if ed isn't present.</li>
-	    <li>Though it's not a reason to have ed in the book, some people actually like ed.</li>
-	    <li>Understanding ed helps with understanding vi(m) and Unix history in general.</li>
-	  </ul>
 	</dd>
 	<dt id="hjl-binutils">Why is HJL's Binutils not in the book?</dt>
 	<dd>
@@ -206,13 +194,15 @@
 	<dd>
 	  <p>Gerard describes the process of making a 5MB LFS install in <a href="http://linuxfromscratch.org/pipermail/lfs-support/2001-October/000202.html">an email to lfs-support</a>,  and there are links to many resources in <a href="http://linuxfromscratch.org/pipermail/lfs-support/2002-June/007255.html">a post by Cor Lem</a> and a reply to it.</p>
 	</dd>
-	<dt id="alpha-fixes">Is there information about LFS on the Alpha?</dt>
+	<dt id="procs-lfs">Is there information about building LFS on other processors?</dt>
 	<dd>
-	  <p>Kelledin maintains a list of fixes for building on the Alpha platform at <a href="http://skarpsey.dyndns.org/alpha-lfs/alpha.html">http://skarpsey.dyndns.org/alpha-lfs/alpha.html</a>.</p>
+          <p>For information about building LFS for a wide array of systems, take a look at the <a href="/lfs/read.html">Cross-LFS branch</a> of LFS.</p>
+	  <p>The Alpha systems, Kelledin maintains a list of fixes for building on the Alpha platform at <a href="http://skarpsey.dyndns.org/alpha-lfs/alpha.html">http://skarpsey.dyndns.org/alpha-lfs/alpha.html</a>.</p>
 	</dd>
 	<dt id="cross-compile">How do I cross compile LFS?</dt>
 	<dd>
-	  <p>It's often useful to compile LFS for one machine on another machine. Say using that fast 1Ghz Athlon to build an install for an old 486. While this is technically not cross compiling, binaries compiled for the Athlon cannot be run on the 486 because binaries compiled for the newer processor use features the older processor doesn't have. To make the newer system compile for the older, follow the <a href="../hints/downloads/files/">cross-compiling hint</a>.</p>
+	  <p>It's often useful to compile LFS for one machine on another machine. Say using that fast 1Ghz Athlon to build an install for an old 486. While this is technically not cross compiling, binaries compiled for the Athlon cannot be run on the 486 because binaries compiled for the newer processor use features the older processor doesn't have.</p>
+          <p>The LFS book specifically for cross compiling is the <a href="/lfs/read.html">Cross-LFS</a> book. Another source of information would be the <a href="/hints/downloads/files/">cross-compiling hint</a>.</p>
 	</dd>
 	<dt id="dos-text">What's a DOS format text file?</dt>
 	<dd>
@@ -490,10 +480,6 @@
 
       <h3 id="confboot">Configuration and booting issues</h3>
       <dl>
-	<dt id="lilo-errors">What do those LILO errors mean?</dt>
-	<dd>
-	  <p>The documentation in the LILO distribution lists all errors (such as when it prints "LI" and stops), but a quick overview is available at <a href="http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html">http://sdb.suse.de/sdb/en/html/kgw_lilo_errmsg.html</a>.</p>
-	</dd>
 	<dt id="unable-to-mount-root">Kernel panic: VFS: unable to mount root fs</dt>
 	<dd>
 	  <p>There are several reasons why the kernel might be unable to mount the root filesystem.</p>
