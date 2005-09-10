@@ -252,9 +252,9 @@ div.footer p {
 
 .note { 
         /*font      : 1.1em fantasy;*/
-        background: #9ff;
+        background: #eee;
         border    : dashed 1px red;
         padding   : 0.5em;
-        /* margin    : 1em; */
+        margin    : 0 10px;
      }
 
