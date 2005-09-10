@@ -34,7 +34,7 @@ h2 {
 	margin-left: -10px;
 }
 
-.results, .note {
+.results {
 	margin: 10px;
 	padding: 10px;
 	background-color: #eee;
@@ -250,11 +250,11 @@ div.footer p {
      }
 .cmd p { margin: 10px 15px; }
 
-/*.note { 
-        font      : 1.1em fantasy;
+.note { 
+        /*font      : 1.1em fantasy;*/
         background: #9ff;
-        border    : double black;
+        border    : dashed 1px red;
         padding   : 0.5em;
-        margin    : 1em;
+        /* margin    : 1em; */
      }
-*/
+
