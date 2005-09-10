@@ -241,5 +241,20 @@ div.footer p {
 	margin-top: -5px;
 }
 
-.cmd { font: 1.1em monospace; background: #eee; padding: 5px 0; margin: 0 10px; border: 1px dashed blue }
+.cmd { 
+       font      : 1.1em monospace; 
+       background: #eee; 
+       padding   : 5px 0; 
+       margin    : 0 10px; 
+       border    : 1px dashed blue;
+     }
 .cmd p { margin: 10px 15px; }
+
+.note { 
+        font      : 1.1em fantasy;
+        background: #9ff;
+        border    : double black;
+        padding   : 0.5em;
+        margin    : 1em;
+     }
+
