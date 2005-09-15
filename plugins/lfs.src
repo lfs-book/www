@@ -1,0 +1,17 @@
+# LFS mailing list archives search plugin written by archaic
+
+<search
+  name="LFS"
+  description="Search LFS Archives"
+  version="1.0"
+  action="http://search.linuxfromscratch.org/index.cgi"
+  searchForm="none"
+  method="GET"
+>
+
+<input name="query" user>
+
+<BROWSER
+  update="http://www.linuxfromscratch.org/plugins/lfs.src"
+  updateIcon="http://www.linuxfromscratch.org/plugins/lfs.png"
+  updateCheckDays="1">

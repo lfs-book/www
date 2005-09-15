@@ -1,0 +1,39 @@
+<!--#set var="pageTitle" value="LFS Search Plugin for Firefox / Mozilla" -->
+<!--#include virtual="header.html" -->
+<!--#include virtual="menu.html" -->
+    <div class="main">
+     <h1>Firefox / Mozilla Search Plugin</h1>
+     <p>This plugin allows you to search the LFS mailing list archives directly
+        from the Firefox / Mozilla search bar.
+     </p>
+
+     <p> Please report any issues to <a href="mailto:&#97;&#114;&#99;&#104;&#97;&#105;&#99;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Archaic</a>.
+     </p>
+
+<script type="text/javascript">
+<!--
+function addEngine(name,ext,cat)
+{
+  if ((typeof window.sidebar == "object") && (typeof
+  window.sidebar.addSearchEngine == "function"))
+  {
+    window.sidebar.addSearchEngine(
+      "http://www.linuxfromscratch.org/plugins/"+name+".src",
+      "http://www.linuxfromscratch.org/plugins/"+name+"."+ext,
+      name,
+      cat );
+  }
+  else
+  {
+  alert("Netscape 6 or Mozilla is needed to install a sherlock plugin");
+  }
+}
+//-->
+</script>
+
+     <p>
+       <a href="javascript:addEngine('lfs','png','Web')">Click here to install the LFS Mail Archives Search plugin.</a>
+     </p>
+
+<!--#include virtual="/common/footer.html" -->
+
