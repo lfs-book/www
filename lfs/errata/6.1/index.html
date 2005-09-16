@@ -7,6 +7,14 @@
 	 <h2>Known Security Vulnerabilities</h2>
 
      <ul>
+		<li><p>Util-linux-2.12q (and previous versions) has a
+			vulnerability wherein a user who has permission to
+			unmount a volume can remount it without the nosuid
+			option. It is recommended to apply the <a
+			href="http://www.linuxfromscratch.org/patches/downloads/util-linux/util-linux-2.12q-umount_fix-1.patch">patch</a>.
+		    </p>
+		</li>
+
 		<li><p>Bzip2 (all versions) is subject to the filename vulnerability identified
 			 in zgrep
 		(<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0758">CAN-2005-0758</a>).
