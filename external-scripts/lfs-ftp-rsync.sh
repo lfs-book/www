@@ -3,7 +3,7 @@
 # output to a user. 
 # Parameters are needed in this order:
 
-NAME="LFS ftp archive"
+NAME="LFS FTP Archive"
 SITE=rsync.osuosl.org
 MODULE=lfs
 LOCAL=/local/path/   			# Edit this line
@@ -11,7 +11,7 @@ LOG=/path/to/logfile 			# Edit this line
 USER=root  
 MAILER=/usr/bin/your_favorite_mailer 	# Edit this line
 
-OUTPUT=`rsync -clprtz --delete ${SITE}::${MODULE} ${LOCAL} 2>&1`
+OUTPUT=`rsync -lprtz --delete ${SITE}::${MODULE} ${LOCAL} 2>&1`
 
 if [ $? = 0 ]
 then
