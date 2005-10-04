@@ -33,7 +33,15 @@
              <li><a href="/blfs/view/stable/server/rsync.html">Rsync</a> for syncing with the LFS FTP server.</li>
              <li>A cron-like program to sync twice a day.</li>
              <li>At least 2.5GB of disk space.</li>
-             <li>The path to the mirror being &quot;/pub/lfs&quot;, if possible.</li>
+             <li>The path to the mirror being &quot;/pub/lfs/&quot;, if possible.</li>
+          </ul>
+	  <h4>LiveCD FTP Mirror</h4>
+	  <p>Here is a checklist of requirements for LiveCD FTP mirrors:</p>
+	  <ul>
+             <li><a href="/blfs/view/stable/server/rsync.html">Rsync</a> for syncing with the LFS FTP server.</li>
+             <li>A cron-like program to sync twice a day.</li>
+             <li>At least 4.0GB of disk space.</li>
+             <li>The path to the mirror being &quot;/pub/lfs-livecd/&quot;, if possible.</li>
           </ul>
           <h4>Rsync Scripts</h4>
           <p>For HTTP mirrors, please download the 
@@ -42,7 +50,7 @@
              hour at a randomly chosen time.
           </p>
           <p>For FTP mirrors, please download the
-             <a href="/external-scripts/lfs-ftp-rsync.sh">lfs-ftp-rsync.sh</a> script. Next please ask
+             <a href="/external-scripts/lfs-ftp-rsync.sh">lfs-ftp-rsync.sh</a> script or for LiveCD FTP, the <a href="/external-scripts/lfs-livecd-rsync.sh">lfs-livecd-rsync.sh</a> script. Next please ask
              for an hour to sync from the FTP Mirror Maintainer (e-mail below) and schedule this
              script to run twice a day at the scheduled times.
           </p>

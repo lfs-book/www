@@ -3,9 +3,9 @@
 # output to a user. 
 # Parameters are needed in this order:
 
-NAME="LFS FTP Archive"
+NAME="LFS LiveCD FTP Archive"
 SITE=rsync.osuosl.org
-MODULE=lfs
+MODULE=lfs-livecd
 LOCAL=/local/path/   			# Edit this line
 LOG=/path/to/logfile 			# Edit this line
 USER=root  
