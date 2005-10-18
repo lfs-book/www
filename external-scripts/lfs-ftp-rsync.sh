@@ -6,19 +6,19 @@
 NAME="LFS FTP Archive"
 SITE=rsync.osuosl.org
 MODULE=lfs
-LOCAL=/local/path/   			# Edit this line
-LOG=/path/to/logfile 			# Edit this line
-USER=root  
-MAILER=/usr/bin/your_favorite_mailer 	# Edit this line
+LOCAL=/local/path/				# Edit this line
+LOG=/tmp/lfs_rsync-`date +%Y%m%d%H%M%S`		# Edit this line, if necessary
+USER=your@email.address				# Edit this line
+MAILER=/usr/sbin/sendmail			# Edit this line, if necessary
 
 OUTPUT=`rsync -lprtz --delete ${SITE}::${MODULE} ${LOCAL} 2>&1`
 
 if [ $? = 0 ]
 then
-    echo "Subject: rsync of ${NAME} OK" |${MAILER} ${USER};
-    echo "Rsync succeeded of ${NAME} on" `date` >> ${LOG}
+    echo -e "Subject: rsync of ${NAME} OK\n" |${MAILER} ${USER};
+    echo "Rsync of ${NAME} succeeded on" `date` >> ${LOG}
 else
-    (echo "Subject: rsync of ${NAME} FAILED"; echo -e "${OUTPUT}") |${MAILER} ${USER};
-    echo "Rsync failed of ${NAME} on" `date` >> ${LOG};
+    (echo -e "Subject: rsync of ${NAME} FAILED\n"; echo -e "${OUTPUT}") |${MAILER} ${USER};
+    echo "Rsync of ${NAME} failed on" `date` >> ${LOG};
     echo -e "${OUTPUT}" >> ${LOG}
 fi
