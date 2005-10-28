@@ -72,5 +72,12 @@
 		<li><p>Texinfo installs a shell script `texi2pdf', but this isn't
 			mentioned in Texinfo's list of installed programs.  Thanks to
 			Randy McMurchy for the report.</p></li>
+		<li><p>Glibc-2.3.4 contains a bug where it will segfault when attempting
+			to load a shared library in an empty chroot environment.  This bug is
+			triggered by the OpenSSH-4.x daemon.  Applying this
+			<a href="http://www.linuxfromscratch.org/patches/downloads/glibc/glibc-2.3.4-rtld_search_dirs-1.patch">patch</a>
+			to the Glibc source files will fix the bug.  More discussion can be
+			seen in this
+			<a href="http://blfs-bugs.linuxfromscratch.org/show_bug.cgi?id=1534">bug report</a>.</p></li>
      </ul>
 <!--#include virtual="/common/footer.html" -->
