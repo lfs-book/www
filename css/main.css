@@ -129,7 +129,7 @@ text-decoration: none; text-align: center;  float: right ; display: block; width
 #lfs:hover, #lfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #0072ff; background-color: #ddd }
 #alfs:hover, #alfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #92d800; background-color: #ddd }
 #blfs:hover, #blfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #ffd500; background-color: #ddd }
-#clfs:hover, #clfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #999266; background-color: #ddd }
+#clfs:hover, #clfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #7FFFD4; background-color: #ddd }
 #hlfs:hover, #hlfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #fd7700; background-color: #ddd }
 #hints:hover, #hintsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #8400ff; background-color: #ddd }
 #livecd:hover, #livecdactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px red; background-color: #ddd }
@@ -171,7 +171,7 @@ text-decoration: none; text-align: center;  float: right ; display: block; width
 #lfsmenulist li a:hover { border-bottom: solid 3px #0072ff; }
 #alfsmenulist li a:hover { border-bottom: solid 3px #92d800; }
 #blfsmenulist li a:hover { border-bottom: solid 3px #ffd500; }
-#clfsmenulist li a:hover { border-bottom: solid 3px #999266; }
+#clfsmenulist li a:hover { border-bottom: solid 3px #7FFFD4; }
 #hlfsmenulist li a:hover { border-bottom: solid 3px #fd7700; }
 #hintsmenulist li a:hover { border-bottom: solid 3px #8400ff; }
 #livecdmenulist li a:hover { border-bottom: solid 3px red; }
@@ -187,7 +187,7 @@ padding: 5px 0 2px 0; border-bottom: solid 3px #92d800;
 padding: 5px 0 2px 0; border-bottom: solid 3px #ffd500;
 }
 #clfsactive:link, #clfsactive:visited {
-padding: 5px 0 2px 0; border-bottom: solid 3px #999266;
+padding: 5px 0 2px 0; border-bottom: solid 3px #7FFFD4;
 }
 #hlfsactive:link, #hlfsactive:visited {
 padding: 5px 0 2px 0; border-bottom: solid 3px #fd7700;
