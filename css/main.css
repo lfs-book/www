@@ -120,15 +120,16 @@ div.navbar {
 border-bottom: none;
 }
 
-#lfsactive:link, #lfsactive:visited, #alfsactive:link, #alfsactive:visited, #blfsactive:link, #blfsactive:visited, #hlfsactive:link, #hlfsactive:visited, #hintsactive:link, #hintsactive:visited, #livecdactive:link, #livecdactive:visited, #patchesactive:link, #patchesactive:visited { text-decoration: none; text-align: center; float: right; display: block; width: 6em; padding: 5px 0 5px 0; background-color: #ddd; color: #0072ff; font-size: 1em; margin-bottom: -1px; }
+#lfsactive:link, #lfsactive:visited, #alfsactive:link, #alfsactive:visited, #blfsactive:link, #blfsactive:visited, #clfsactive:link, #clfsactive:visited, #hlfsactive:link, #hlfsactive:visited, #hintsactive:link, #hintsactive:visited, #livecdactive:link, #livecdactive:visited, #patchesactive:link, #patchesactive:visited { text-decoration: none; text-align: center; float: right; display: block; width: 6em; padding: 5px 0 5px 0; background-color: #ddd; color: #0072ff; font-size: 1em; margin-bottom: -1px; }
 
-#lfs:link, #lfs:visited, #blfs:link, #blfs:visited, #alfs:link, #alfs:visited, #hlfs:link, #hlfs:visited, #hints:link, #hints:visited, #livecd:link, #livecd:visited, #patches:link, #patches:visited {
+#lfs:link, #lfs:visited, #blfs:link, #blfs:visited, #alfs:link, #alfs:visited, #clfs:link, #clfs:visited, #hlfs:link, #hlfs:visited, #hints:link, #hints:visited, #livecd:link, #livecd:visited, #patches:link, #patches:visited {
 text-decoration: none; text-align: center;  float: right ; display: block; width: 6em; padding: 5px 0 5px 0; color: #0072ff; font-size: 1em; margin-bottom: -1px;
 }
 
 #lfs:hover, #lfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #0072ff; background-color: #ddd }
 #alfs:hover, #alfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #92d800; background-color: #ddd }
 #blfs:hover, #blfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #ffd500; background-color: #ddd }
+#clfs:hover, #clfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #999266; background-color: #ddd }
 #hlfs:hover, #hlfsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #fd7700; background-color: #ddd }
 #hints:hover, #hintsactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px #8400ff; background-color: #ddd }
 #livecd:hover, #livecdactive:hover { padding: 5px 0 2px 0; text-decoration: none; border-bottom: solid 3px red; background-color: #ddd }
@@ -142,7 +143,7 @@ text-decoration: none; text-align: center;  float: right ; display: block; width
   margin: 10px 0 10px -30px;
 }
 
-#leftmenulist, #lfsmenulist, #alfsmenulist, #blfsmenulist, #hlfsmenulist, #hintsmenulist, #livecdmenulist, #patchesmenulist {
+#leftmenulist, #lfsmenulist, #alfsmenulist, #blfsmenulist, #clfsmenulist, #hlfsmenulist, #hintsmenulist, #livecdmenulist, #patchesmenulist {
   text-align: right;
   background: #eee;
   list-style-type: none;
@@ -155,14 +156,14 @@ text-decoration: none; text-align: center;  float: right ; display: block; width
   border-bottom: solid 1px #ccc;
 }
 
-#leftmenulist li a:link, #leftmenulist li a:visited, #lfsmenulist li a:link, #lfsmenulist li a:visited, #alfsmenulist li a:link, #alfsmenulist li a:visited, #blfsmenulist li a:link, #blfsmenulist li a:visited, #hlfsmenulist li a:link, #hlfsmenulist li a:visited, #hintsmenulist li a:link, #hintsmenulist li a:visited, #livecdmenulist li a:link, #livecdmenulist li a:visited, #patchesmenulist li a:link, #patchesmenulist li a:visited { 
+#leftmenulist li a:link, #leftmenulist li a:visited, #lfsmenulist li a:link, #lfsmenulist li a:visited, #alfsmenulist li a:link, #alfsmenulist li a:visited, #blfsmenulist li a:link, #blfsmenulist li a:visited, #clfsmenulist li a:link, #clfsmenulist li a:visited, #hlfsmenulist li a:link, #hlfsmenulist li a:visited, #hintsmenulist li a:link, #hintsmenulist li a:visited, #livecdmenulist li a:link, #livecdmenulist li a:visited, #patchesmenulist li a:link, #patchesmenulist li a:visited { 
   text-decoration: none;
   border-bottom: solid 3px #eee;
   padding: 5px 15px 5px 15px;
   display: block;
 }
 
-#leftmenulist li a:hover, #lfsmenulist li a:hover, #alfsmenulist li a:hover, #blfsmenulist li a:hover, #hlfsmenulist li a:hover, #hintsmenulist li a:hover, #livecdmenulist li a:hover, #patchesmenulist li a:hover {
+#leftmenulist li a:hover, #lfsmenulist li a:hover, #alfsmenulist li a:hover, #blfsmenulist li a:hover, #clfsmenulist li a:hover, #hlfsmenulist li a:hover, #hintsmenulist li a:hover, #livecdmenulist li a:hover, #patchesmenulist li a:hover {
   background: #dedede;
 }
 
@@ -170,6 +171,7 @@ text-decoration: none; text-align: center;  float: right ; display: block; width
 #lfsmenulist li a:hover { border-bottom: solid 3px #0072ff; }
 #alfsmenulist li a:hover { border-bottom: solid 3px #92d800; }
 #blfsmenulist li a:hover { border-bottom: solid 3px #ffd500; }
+#clfsmenulist li a:hover { border-bottom: solid 3px #999266; }
 #hlfsmenulist li a:hover { border-bottom: solid 3px #fd7700; }
 #hintsmenulist li a:hover { border-bottom: solid 3px #8400ff; }
 #livecdmenulist li a:hover { border-bottom: solid 3px red; }
@@ -183,6 +185,9 @@ padding: 5px 0 2px 0; border-bottom: solid 3px #92d800;
 }
 #blfsactive:link, #blfsactive:visited {
 padding: 5px 0 2px 0; border-bottom: solid 3px #ffd500;
+}
+#clfsactive:link, #clfsactive:visited {
+padding: 5px 0 2px 0; border-bottom: solid 3px #999266;
 }
 #hlfsactive:link, #hlfsactive:visited {
 padding: 5px 0 2px 0; border-bottom: solid 3px #fd7700;
