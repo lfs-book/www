@@ -21,7 +21,7 @@ table {
 .newsItem {
 	padding-bottom: 5pt;
 /*	font-size: .9em;*/
-	border-bottom: 1pt dotted blue;
+	border-bottom: 1px dotted blue;
 }
 
 .newsItem p { margin: 10pt 0 10pt 0; }
