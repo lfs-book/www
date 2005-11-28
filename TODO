@@ -31,7 +31,9 @@
   pages, possibly using SSI.
 
 - Do a Wiki's content review, add the still relevant parts (if any) to the
-  website and drop it entirely.
+  website and drop it entirely. (done; nothing of major value existed there
+  upon my perusal. A tarball of the site exists in my home directory in case
+  I missed something.)
 
 - Migrate /search.html contents to swish-e template and replace links pointing
   to it with http://search.linuxfromscratch.org/ (remembering to remove the
