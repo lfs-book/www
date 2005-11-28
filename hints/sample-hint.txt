@@ -1,5 +1,5 @@
 AUTHOR: Hints Author <hints at linuxfromscratch dot org>
-AUTHOR: Hints Owner <hints-owner@linuxfromscratch.org>
+AUTHOR: Hints Owner <hints-owner at linuxfromscratch dot org>
 
 DATE: 2003-08-15
 
