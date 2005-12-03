@@ -4,8 +4,7 @@
     <div class="main">
      <h1>What is Automated Linux From Scratch?</h1>
      <p>Automated Linux From Scratch (ALFS) is a project that creates the
-	generic framework for an extendable system builder and package installer
-	using XML to describe the process.
+	generic framework for an extendable system builder and package installer.
      </p>
 
      <h2>Why would I want to use ALFS?</h2>
@@ -22,11 +21,23 @@ software you want for your systems.</p>
      </p>
 
      <h2>How is ALFS implemented?</h2>
-     <p>Currently, the official implementation is nALFS by Neven Has. nALFS is a small
-	program written in C. It first parses an XML profile that contains information
-	concerning the LFS build process into a series of internal commands. It can
-	then execute these at your discretion, thus automating the compilation of LFS.
+     <p>Currently, the official implementation is <a href="/alfs/downloads/stable/">nALFS</a>
+	by Neven Has. nALFS is a small program written in C. It first parses an XML profile
+	that contains information concerning the LFS build process into a series of internal
+	commands. It can then execute these at your discretion, thus automating the
+	compilation of LFS.
      </p>
+
+     <p>Recently, work has been done on new implementation of ALFS, called <a href="/alfs/downloads/jhalfs/">jhalfs.</a>
+	Originally created by Jeremy Huntwork, but since co-authored with  Manuel Canales Esparcia,
+	jhalfs has become a light-weight, practical method of automating an LFS build. jhalfs
+	is a Bash shell script that makes use of Subversion and xsltproc to first download the
+	XML sources of the Linux From Scratch book and then extract any necessary commands, placing
+	them into executable shell scripts. If you do not already have the necessary source packages
+	in place on your system jhalfs can fetch them. Finally, jhalfs generates a Makefile which
+	will control the execution of the shell scripts, allowing for recovery if the build should
+	encounter an error. Since jhalfs extracts its commands to run directly from the LFS book,
+	there are no profiles to edit or maintain.</p>
 
      <p>There are many in-depth features that have been requested for future
 	ALFS implementations. Because of this, development has been slated for an entirely
