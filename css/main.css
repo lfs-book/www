@@ -50,7 +50,7 @@ table {
 .results strong, .results em {
 /*	color: #fd7700; */
 	color: navy;
-	font-style: bold;
+	font-weight: bold;
 }
 
 .results small {
@@ -153,7 +153,7 @@ text-decoration: none; text-align: center;  float: right ; display: block; width
   left: -40pt;
   width: 110pt;
   top: 85pt;
-  padding: none;
+  padding: 0;
   border-top: solid 1pt #ccc;
   border-right: solid 1pt #ccc;
   border-bottom: solid 1pt #ccc;
@@ -164,7 +164,7 @@ text-decoration: none; text-align: center;  float: right ; display: block; width
   border-bottom: solid 3pt #eee;
   padding: 5pt 12pt 5pt 20pt;
   display: block;
-  margin: none;
+  margin: 0;
 }
 
 #leftmenulist li a:hover, #lfsmenulist li a:hover, #alfsmenulist li a:hover, #blfsmenulist li a:hover, #clfsmenulist li a:hover, #hlfsmenulist li a:hover, #hintsmenulist li a:hover, #livecdmenulist li a:hover, #patchesmenulist li a:hover {

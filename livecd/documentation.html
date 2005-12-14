@@ -4,12 +4,15 @@
     <div class="main">
      <h1>LFS LiveCD Documentation</h1>
      <h2>Introduction</h2>
-	<p>The main purpose of this page is to document the process of making the official LFS livecd. Specifically,
-           how it differs from previous cds produced from existing <a href="../hints/whatarehints.html">LFS hints</a>. The notes here will deal
-	   mostly with the x86 cd, as the ppc cd is a bit different in some areas and is still under development.
-	   This page should not be considered a full hint, although it may progress to that point in the future.</p>
-
-	<p>The process of making an LFS livecd is actually fairly straightforward. I've broken it down into six basic steps:</p>
+	<p>The main purpose of this page is to document the components the official LFS LiveCD. This is not a
+	   step-by-step guide to building your own LiveCD. Some good documents for that exist already in the
+	   <a href="../hints/whatarehints.html">LFS hints</a> project. However, the official LFS LiveCD contains
+	   more advanced concepts and technologies than are covered by the scope of existing hints, so for the
+	   adventurous or curious, we will attempt to show you in depth how the LiveCD works.
+	</p>
+     <h3>The Process</h3>
+	<p>The process of making a LiveCD from scratch is actually fairly straightforward.
+	   It can be broken it down into six basic steps:</p>
 	  <ol>
 	    <li>Build a base LFS system according to the usual <a href="../lfs/view/stable/">procedure</a>.</li>
 	    <li>Add wanted additional packages with the help of <a href="../blfs/">BLFS</a>.</li>
@@ -18,25 +21,22 @@
 	    <li>Configure your bootloader.</li>
 	    <li>Package it all up into an iso.</li>
 	  </ol>
-	<p>Of course, that is simplifying it a bit, but you get the idea. The official cd uses two new concepts that are not,
-	   to my knowledge, included in any of the hints. They are: Squashfs and Initramfs. These two technologies are central to what
-	   makes the official LFS cd work.</p>
+	<p>Of course, that is simplifying it a bit, but you get the idea.
+	</p>
       <h2>Squashfs</h2>
 	<p>Project homepage: <a href="http://squashfs.sourceforge.net">http://squashfs.sourceforge.net</a></p>
 	<p>Squashfs is a compressed read-only filesystem for Linux. It is mounted as a loop device and files are uncompressed
-	   and read from the squashfs archive as they are needed. I've seen squashfs produce nearly 50% compression.
-	   Needless to say, squashfs is what allows me to pack so many packages onto the cd. The documentation for squashfs is
+	   and read from the squashfs archive as they are needed. At times, squashfs produces nearly 50% compression.
+	   Needless to say, squashfs is what allows us to pack so many packages onto the CD. The documentation for squashfs is
 	   pretty good and it is easy to get yourself up and running with it. Using it basically amounts to patching your kernel
-	   to support the squashfs filesystem and creating squashfs archives. From the top of the lfs partition, what will
-	   become the iso, I ran these commands:</p>
+	   to support the squashfs filesystem and creating squashfs archives. In the official build, once we have the full
+	   LiveCD system compiled, we create a squashfs version of it by (essentially) running:</p>
 	<div class="cmd">
-	  <p>mksquashfs usr usr_sqfs</p>
-	  <p>mksquashfs opt opt_sqfs</p>
+	  <p>mksquashfs ./ .root.sqfs</p>
 	</div>
-	<p>That creates two squashfs archives containing all of the usr and opt directories from your new LFS system. The /usr
-	   directory will by far be your largest after building LFS according to the book. You can now delete (or better yet,
-	   move to a safe location) the /usr and /opt directories from the lfs partiton. You will also need to add a bootscript
-	   that mounts those directories early on in the boot process.  You would mount them like this:</p>
+	<p>That creates a squashfs archive containing the entire LiveCD system (except for kernfs directories
+	   like proc and sys, the boot directory that stores your kernel and the included package tarballs).
+	</p>
 	<div class="cmd">
 	  <p>mount usr_sqfs /usr -o loop</p>
 	  <p>mount opt_sqfs /opt -o loop</p>
