@@ -54,38 +54,38 @@
 	<dd>
 	  <p>If, when compiling XFree86, ghostscript, or anything else that uses libpng, you get an error including the following line:<code>/usr/lib/gcc-lib/i686-pc-linux-gnu/3.2/../../../libpng.so: undefined reference to `deflate'</code>.</p>
 	  <p>Then rebuild libpng with the patch at <a href="http://linuxfromscratch.org/%7Esklein/libpng-1.2.5-lz.patch">http://linuxfromscratch.org/~sklein/libpng-1.2.5-lz.patch</a>.  Make sure you apply the patch immediately after  unpacking the sources. Like this:</p>
-	  <ul class="code">
-	    <li>tar --no-same-owner -xvjf libpng-1.2.5.tar.bz2</li>
-	    <li>cd libpng-1.2.5</li>
-	    <li>cat ../libpng-1.2.5-lz.patch | patch -p0</li>
-	    <li>ln -s scripts/makefile.linux Makefile</li>
-	    <li>make ZLIBLIB=/lib ZLIBINC=/usr/include</li>
-	    <li>make ZLIBLIB=/lib ZLIBINC=/usr/include install</li>
-	    <li>cd ..</li>
-	    <li>rm -r libpng-1.2.5</li>
-	  </ul>
+	  <div class="cmd">
+	    <p>tar --no-same-owner -xvjf libpng-1.2.5.tar.bz2<br />
+	    cd libpng-1.2.5<br />
+	    cat ../libpng-1.2.5-lz.patch | patch -p0<br />
+	    ln -s scripts/makefile.linux Makefile<br />
+	    make ZLIBLIB=/lib ZLIBINC=/usr/include<br />
+	    make ZLIBLIB=/lib ZLIBINC=/usr/include install<br />
+	    cd ..<br />
+	    rm -r libpng-1.2.5</p>
+	  </div>
 	  <p>Needless to say, if you originally put zlib in /usr/local or did something else different, you'll have to adjust those instructions accordingly.</p>
 	</dd>
 	<dt id="missing-x-includes">X11/Xlib.h: No such file or directory</dt>
 	<dd>
 	  <p>Typical symptoms look like this:</p>
-	  <ul class="code">
-	    <li>$ echo -en 'x11:\n\tgcc x11.c\n' &gt; Makefile</li>
-	    <li>$ echo -en '#include &lt;X11/Xlib.h&gt;\nmain() { }\n' &gt; x11.c</li>
-	    <li>$ make</li>
-	    <li>gcc x11.c</li>
-	    <li><strong>x11.c:1: X11/Xlib.h: No such file or directory</strong></li>
-	    <li><strong>make: *** [x11] Error 1</strong></li>
-	    <li>$ rm Makefile x11.c</li>
-	    <li>$</li>
-	  </ul>
+	  <div class="cmd">
+	    <p>$ echo -en 'x11:\n\tgcc x11.c\n' &gt; Makefile<br />
+	    $ echo -en '#include &lt;X11/Xlib.h&gt;\nmain() { }\n' &gt; x11.c<br />
+	    $ make<br />
+	    gcc x11.c<br />
+	    <strong>x11.c:1: X11/Xlib.h: No such file or directory</strong><br />
+	    <strong>make: *** [x11] Error 1</strong><br />
+	    $ rm Makefile x11.c<br />
+	    $</p>
+	  </div>
 	  <p>Creating a couple symlinks will fix it. Here are the commands:</p>
-	  <ul class="code">
-	    <li>cd /usr</li>
-	    <li>ln -s X11R6 X11</li>
-	    <li>cd include</li>
-	    <li>ln -s ../X11/include/X11 X11</li>
-	  </ul><p></p>
+	  <div class="cmd">
+	    <p>cd /usr<br />
+	    ln -s X11R6 X11<br />
+	    cd include<br />
+	    ln -s ../X11/include/X11 X11</p>
+	  </div>
 	</dd>
 	<dt id="gnome-versions">Any error while building part of Gnome</dt>
 	<dd>
@@ -108,21 +108,21 @@
 	  <p>See <a href="/hints/downloads/files/">one of the various printing hints</a></p>
 	  <p>Before you try any of the advanced printer daemons (for example CUPS) make sure your printer works by following the <a href="/hints/downloads/files/pfs.txt">Printing From Scratch hint</a>. For most people, this hint is all that is required to setup basic printing.</p>
 	  <p>When reporting problems with CUPS, please indicate whether the following commands work:</p>
-	  <ul class="code">
-	    <li># This is an image, so ghostscript is not called</li>
-	    <li>lpr -o ppi=100 /usr/share/doc/cups/images/cups-block-diagram.gif</li>
-	    <li># This PostScript file doesn't use any fonts</li>
-	    <li>lpr /usr/share/ghostscript/&lt;version&gt;/examples/tiger.ps</li>
-	    <li># This PostScript file uses fonts</li>
-	    <li>lpr /usr/share/ghostscript/&lt;version&gt;/examples/alphabet.ps</li>
-	  </ul><p></p>
+	  <div class="cmd">
+	    <p># This is an image, so ghostscript is not called<br />
+	    lpr -o ppi=100 /usr/share/doc/cups/images/cups-block-diagram.gif<br />
+	    # This PostScript file doesn't use any fonts<br />
+	    lpr /usr/share/ghostscript/&lt;version&gt;/examples/tiger.ps<br />
+	    # This PostScript file uses fonts<br />
+	    lpr /usr/share/ghostscript/&lt;version&gt;/examples/alphabet.ps</p>
+	  </div>
 	</dd>
 	<dt id="konsole-ps1">How do I set PS1 in Konsole?</dt>
 	<dd>
 	  <p>Follow the instructions on the <a href="/blfs/view/svn/postlfs/profile.html">BLFS Bash Shell Startup Files</a> to properly setup your enviroment.</p>
 	  <p>Alternatively, you can try the following solutions:</p>
 	  <p>Start konsole as a login shell:</p>
-	  <code>konsole --ls</code>
+	  <p><code>konsole --ls</code></p>
 	  <p>Change the session in Konsole to start <code>/bin/bash --login</code> instead of <code>/bin/bash</code>.</p>
 	</dd>
       </dl>
