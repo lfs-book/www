@@ -3,5 +3,33 @@
 <!--#include virtual="/lfs/menu.html" -->
     <div class="main">
      <h1>Errata for the 6.1.1 Version of the LFS Book</h1>
-     <p>No known errata at this time.</p>
+
+<!--       <p>No known errata at this time.</p> -->
+
+<!-- TEMPLATE
+       <h2>Known Security Vulnerabilities</h2>
+         <ul>
+            <li><p>Item 1</p></li>
+            <li><p>Item 2</p></li>
+         </ul>
+
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+           <li><p>Item 1</p></li>
+           <li><p>Item 2</p></li>
+         </ul>
+
+     END TEMPLATE -->
+
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+           <li><p>Compiling gcc-3.4.3 while running a 2.6.12 or later kernel
+               will result in testsuite failures due to a new kernel feature.
+               Use the patch located <a 
+               href="http://www.linuxfromscratch.org/patches/downloads/gcc/gcc-3.4.3-pch-1.patch">here</a>
+               </p></li>
+         </ul>
+
+
+
 <!--#include virtual="/common/footer.html" -->
