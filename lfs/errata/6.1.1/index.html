@@ -39,6 +39,9 @@
                Use the patch located <a 
                href="http://www.linuxfromscratch.org/patches/downloads/gcc/gcc-3.4.3-pch-1.patch">here</a>
                </p></li>
+           <li><p>Tcl's configure script has a syntax error.  Correct it by
+               executing this sed command right before running configure:</p>
+               <p class="cmd">sed -i "s/relid'/relid/" configure</p></li>
          </ul>
 
 
