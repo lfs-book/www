@@ -39,19 +39,13 @@
 	<li><a href="#bad-interpreter-permission-denied">./configure: bad interpreter: Permission denied</a></li>
 	<li><a href="#conf-guess-fail">configure can't guess my host type.</a></li>
 	<li><a href="#config-not-gnu-c">checking whether we are using GNU C... no</a></li>
-	<li><a href="#cannot-find-lc">ld: cannot find -lc</a></li>
-	<li><a href="#where-ncurses-mandrake">Where's libncurses.a in Mandrake?</a></li>
         <li><a href="#no-ptys">The system has no more ptys.  Ask your system administrator to create more.</a></li>
       </ul>
       <h3><a href="#packerrors">Package-specific errors</a></h3>
       <ul>
-	<li><a href="#conflicting-gethostname">Bash: conflicting types for `gethostname'</a></li>
-	<li><a href="#yytext_ptr-undeclared">Modutils: lex.l:429: `yytext_ptr' undeclared"while building modutils</a></li>
 	<li><a href="#perl-missing-separator">Perl fails with &quot;*** missing separator.  Stop.&quot;</a></li>
 	<li><a href="#unknown-pseudo-op-hidden">GCC: Error: Unknown pseudo-op: `.hidden'</a></li>
-	<li><a href="#no-asneeded">GCC: Error: unrecognized option '--as-needed'</a></li>
 	<li><a href="#no-linuxthreads">Glibc: &quot;... it is normal to compile GNU libc with the `linuxthreads' add-on...&quot;</a></li>
-	<li><a href="#asm-global-directive">Glibc: &quot;cannot determine asm global directive&quot;.</a></li>
 	<li><a href="#glibc-no-ld_map">Glibc: &quot;ld.map: No such file or directory&quot;.</a></li>
 	<li><a href="#glibc-awk-fail">Glibc fails and mentions BEGIN and END.</a></li>
 	<li><a href="#glibc-nss">Glibc compilation errors out due to a missing nss.h header file</a></li>
@@ -61,7 +55,6 @@
       <ul>
 	<li><a href="#unable-to-mount-root">Kernel panic: VFS: unable to mount root fs</a></li>
 	<li><a href="#respawning-too-fast">init: Id &quot;1&quot; respawning too fast: disabled for 5 minutes</a></li>
-	<li><a href="#net-pf-x">I'm getting errors about net-pf-?.</a></li>
 	<li><a href="#char-major-10-135">modprobe: Can't locate module char-major-10-135</a></li>
 	<li><a href="#no-dev-rtc">modprobe: Can't locate module /dev/rtc</a></li>
 	<li><a href="#eth0-unknown-interface">eth0:unknown interface</a></li>
@@ -156,7 +149,7 @@
       <dl>
 	<dt id="what-dist">What distribution should I use to start from?</dt>
 	<dd>
-	  <p>Most relatively recent distributions should be fine. Do not use Fedora Core 4 or any other distribution that contains gcc-4.0. This compiler was just released, and many packages will require patches and/or may break. For distributions that do not use gcc-4.0, make sure you have installed and/or updated the development packages. (Look for ones starting in "gcc", "glibc", or "libstdc++" or ending in "-dev".). If you want to use LFS as your main system and you wish to install it without first installing a distribution, try the <a href="http://beta.linuxfromscratch.org/livecd/">LFS LiveCD</a> or <a href="http://www.knopper.net/knoppix/index-en.html">Knoppix</a>.</p>
+	  <p>Most relatively recent distributions should be fine. Do not use Fedora Core 4 as its version of GCC does not work with the current stable version of LFS. Make sure you have installed and/or updated the development packages. (Look for ones starting in "gcc", "glibc", or "libstdc++" or ending in "-dev".). If you want to use LFS as your main system and you wish to install it without first installing a distribution, try the <a href="http://www.linuxfromscratch.org/livecd/">LFS LiveCD</a> or <a href="http://www.knopper.net/knoppix/index-en.html">Knoppix</a>.</p>
 	</dd>
 	<dt id="kernel-modules">How do I compile a kernel or set up modules?</dt>
 	<dd>
@@ -322,21 +315,6 @@
 	  <code>egrep root /etc/passwd</code>
 	  <p>If it doesn't print root's line from /etc/passwd, again, you have a problem. (This test also works if you encounter the problem after rebooting into the new LFS system.)</p>
 	</dd>
-	<dt id="cannot-find-lc">ld: cannot find -lc</dt>
-	<dd>
-	  <p>You get a message early in chapter 5 (LFS-4.1) or at the first pass of gcc (LFS CVS) which ends like this:</p>
-	  <div class="cmd">
-	    <p>-static -o gengenrtl \ gengenrtl.o ../libiberty/libiberty.a<br />
-	       ld: cannot find -lc<br />
-	       collect2: ld returned 1 exit status</p>
-	  </div>
-	  <p>Your host system is probably Mandrake 9 or higher. By default, its base system does not have a static C library (<code>/usr/lib/libc.a</code>) which is required for the static compilation of packages.</p> 
-	  <p>You need to install the glibc-static-devel RPM, which is on the third CD. You can verify the succesfull installation by verifying that /usr/lib/libc.a exists. If you're using LFS 4.1, check that everything in <code>$LFS/static/bin</code> is built static by using <code>file $LFS/static/bin/*</code>. If a package is not statically linked, reinstall it with the instructions from chapter 5.</p>
-	</dd>
-	<dt id="where-ncurses-mandrake">Where's libncurses.a in Mandrake?</dt>
-	<dd>
-	  <p>In Mandrake/RPMS2/libncurses5-devel-5.2-16mdk.1586.rpm on Disk 2. Version numbers might be a little different for you. (If you're missing libcurses.a (no "n"), reread the book's instructions for bash more carefully.)</p>
-	</dd>
 	<dt id="no-ptys">The system has no more ptys.  Ask your system administrator to create more.</dt>
 	<dd>
 	  <p>If you run</p>
@@ -381,24 +359,6 @@
 
       <h3 id="packerrors">Package-specific errors</h3>
       <dl>
-	<dt id="conflicting-gethostname">Bash: conflicting types for `gethostname'</dt>
-	<dd>
-	  <p>If you get an error about <code>conflicting types for `gethostname'</code> when compiling bash in Chapter 5, you need to install the glibc-static-devel RPM. (It's on the third CD.)</p>
-	</dd>
-	<dt id="yytext_ptr-undeclared">Modutils: &quot;lex.l:429: `yytext_ptr' undeclared&quot; while building modutils</dt>
-	<dd>
-	  <p>If, while compiling modutils, you get:</p>
-	  <div class="cmd">
-	    <p>/usr/bin/gcc -O2 -Wall -Wno-uninitialized -I. -I. -I./../include<br />
-	       -D_GNU_SOURCE  -DCONFIG_ROOT_CHECK_OFF=0 -c -o lex.o lex.c<br />
-	       lex.l: In function `yylex':<br />
-	       lex.l:429: `yytext_ptr' undeclared (first use in this function)<br />
-	       lex.l:429: (Each undeclared identifier is reported only once<br />
-	       lex.l:429: for each function it appears in.)<br />
-	       make[1]: *** [lex.o] Error 1</p>
-	  </div>
-	  <p>Then <a href="../faq/#why-not-version">FBBG</a> (Hint: flex).</p>
-	</dd>
 	<dt id="perl-missing-separator">Perl fails with <code>*** missing separator. Stop.</code></dt>
 	<dd>
 	  <p>It's missing a device file. (AFAIK, /dev/null, but maybe /dev/zero.) Anyway, either you forgot to run MAKEDEV, or MAKEDEV failed, or you're using devfs and forgot to mount --bind it under $LFS.</p>
@@ -417,10 +377,6 @@
 	  <code>Error: Unknown pseudo-op: `.hidden'</code>
 	  <p>Try the solution given in <a href="http://linuxfromscratch.org/pipermail/lfs-support/2002-September/009562.html">the lfs-support archives</a>  and replies.</p>
 	</dd>
-	<dt id="no-asneeded">GCC: Error: unrecognized option '--as-needed'</dt>
-	<dd>
-	  <p>This is caused by using an incompatible host to build LFS (e.g. Fedora Core 2).  The problem is caused by the fact that the host's binutils supports the &quot;--as-needed&quot; option, but the version of GCC we compile in LFS-5.1.1 doesn&apos;t support that option.  To solve this, either use an older host, or build the latest stable LFS version.</p>
-	</dd>
 	<dt id="no-linuxthreads">Glibc: &quot;... it is normal to compile GNU libc with the `linuxthreads' add-on...&quot;</dt>
 	<dd>
 	  <p>The exact error looks like this:</p>
@@ -432,10 +388,6 @@
 	       *** using the extra parameter `--disable-sanity-checks'.</p>
 	  </div>
 	  <p>You have not unpacked glibc-linuxthreads-X.X.X.tar.bz2 <em>in the glibc-X.X.X directory.</em> Unpack it there and you'll be all set.</p>
-	</dd>
-	<dt id="asm-global-directive">Glibc: &quot;cannot determine asm global directive&quot;.</dt>
-	<dd>
-	  <p>The error, <code>configure: error: cannot determine asm global directive</code>, while configuring glibc indicates a problem with the binutils installation. Likely it isn't statically linked. (You can check with <code>file $LFS/static/bin/as</code>.) In any case, try reinstalling binutils.</p>
 	</dd>
 	<dt id="glibc-no-ld_map">Glibc: &quot;ld.map: No such file or directory&quot;.</dt>
 	<dd>
@@ -484,8 +436,7 @@
 	<dd>
 	  <p>There are several reasons why the kernel might be unable to mount the root filesystem.</p>
 	  <ul>
-	    <li>Did you specify the correct partition in <code>/etc/lilo.conf</code>?</li>
-	    <li>Did you remember to rerun lilo after changing <code>/etc/lilo.conf</code>?</li>
+	    <li>Did you specify the correct partition in <code>/boot/grub/menu.lst</code>?</li>
 	    <li>Is support for the hard drive enabled in the kernel. For SCSI this means support for the specific SCSI adapter.</li>
 	    <li>Is support for the hard drive compiled into the kernel, not just as a module. (Modules are stored on the filesystem. If a driver needed to access the filesystem is stored as a module on that filesystem, well ... you know ... ;)</li>
 	    <li>Is support for the filesystem compiled into the kernel. Again, not a module. Support for ext2 is enabled by default, but others like ext3, reiser, jfs, and xfs are not.</li>
@@ -496,23 +447,6 @@
 	  <p>When you see, in your syslogs, this line:</p>
 	  <code>init: Id "1" respawning too fast: disabled for 5 minutes</code>
 	  <p>It means you have an error in the /etc/inittab line beginning with the given id ("1" in this example).</p>
-	</dd>
-	<dt id="net-pf-x">I'm getting errors about net-pf-?.</dt>
-	<dd>
-	  <p>When you compiled net-tools you enabled support for a protocol family (that's where the "pf" comes from) that you didn't enable support for in the kernel. (You probably just accepted the default answers.)</p>
-	  <p>A full list of protocols is in /usr/include/linux/socket.h but here is a list of the likely culprits:</p>
-	  <div class="cmd">
-	    <p>net-pf-3: Amateur Radio AX.25 (AF_AX25)<br />
-	       net-pf-4: Novell IPX (AF_IPX)<br />
-	       net-pf-5: AppleTalk DDP (AF_APPLETALK)<br />
-	       net-pf-6: Amateur Radio NET/ROM (AF_NETROM)<br />
-	       net-pf-9: Reserved for X.25 project (AF_X25)</p>
-	  </div>
-	  <p>Naturally the fix is to recompile net-tools without support for the things you don't need. (Or recompile your kernel with support if you find you actually wanted them.) The workaround to put a line like the following in /etc/modules.conf</p>
-	  <code>alias net-pf-? off</code>
-	  <p>Replace the question mark with the correct number, of course. And rerun depmod.</p>
-	  <p>If you get an error about net-pf-7, you probably need to enable support for the loopback network device (not block device) in your kernel. Or you may need to add the following line to /etc/modules.conf and rerun depmod.</p>
-	  <code>alias net-pf-7 loop</code>
 	</dd>
 	<dt id="char-major-10-135">modprobe: Can't locate module char-major-10-135</dt>
 	<dd>

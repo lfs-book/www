@@ -73,13 +73,9 @@
       </ul>
       <h3 id="packerrors"><a href="../lfs/faq.html#packerrors">Package-specific errors</a></h3>
       <ul>
-	<li id="conflicting-gethostname"><a href="/lfs/faq.html#conflicting-gethostname">Bash: conflicting types for `gethostname'</a></li>
-	<li id="yytext_ptr-undeclared"><a href="/lfs/faq.html#yytext_ptr-undeclared">Modutils: lex.l:429: `yytext_ptr' undeclared"while building modutils</a></li>
 	<li id="perl-missing-separator"><a href="/lfs/faq.html#perl-missing-separator">Perl fails with &quot;*** missing separator.  Stop.&quot;</a></li>
 	<li id="unknown-pseudo-op-hidden"><a href="/lfs/faq.html#unknown-pseudo-op-hidden">GCC: Error: Unknown pseudo-op: `.hidden'</a></li>
-	<li id="no-asneeded"><a href="/lfs/faq.html#no-asneeded">GCC: Error: unrecognized option '--as-needed'</a></li>
 	<li id="no-linuxthreads"><a href="/lfs/faq.html#no-linuxthreads">Glibc: &quot;... it is normal to compile GNU libc with the `linuxthreads' add-on...&quot;</a></li>
-	<li id="asm-global-directive"><a href="/lfs/faq.html#asm-global-directive">Glibc: &quot;cannot determine asm global directive&quot;.</a></li>
 	<li id="glibc-no-ld_map"><a href="/lfs/faq.html#glibc-no-ld_map">Glibc: &quot;ld.map: No such file or directory&quot;.</a></li>
 	<li id="glibc-awk-fail"><a href="/lfs/faq.html#glibc-awk-fail">Glibc fails and mentions BEGIN and END.</a></li>
 	<li id="glibc-nss"><a href="/lfs/faq.html#glibc-nss">Glibc compilation errors out due to a missing nss.h header file</a></li>
@@ -253,7 +249,7 @@
 	  <p>If you've built an LFS system and have extended it to become your primary system, the best thing to do is to decide on an upgrade policy. Do you want to keep the latest version of every package? Then be careful, because you're going to be burned. I recommend slight conservatism when upgrading to keep a healthy system. A general rule of thumb which works for most people is: only upgrade packages if they have security fixes. Subscribe to lfs-security and LWN to keep yourself informed about security fixes. Another rule of thumb is: don't upgrade the toolchain (gcc, glibc and binutils) unless you're going to rebuild your entire system. These packages form the heart of your LFS system, destroying them means destroying the ability to compile packages or even run binaries. </p>
 	  <p>Remember that updating packages is at your own risk. LFS takes great care to present a stable mix of packages which are compatible all the way up to BLFS so you can compile OpenOffice.Org and Java (which are real dinosaurs to compile). This means that your LFS system may get slightly outdated but ensures compatibility and stability. You can compare this to Debian's stable and testing releases, although LFS stable is generally bleeding-edge compared to other distro's. </p>
 	  <p>In general it is safe to upgrade single packages; they'll just overwrite the old contents. Package managers take care of uninstalling old versions, and it's really convenient to have some sort of package management system in place. Have a look at the hints; there are several, ranging from RPM to DEB to TGZ (Slackware) to Checkinstall to package users. </p>
-	  <p>A final comment: what package instructions should you use when updating a package? In general, you can use the standard LFS instructions, although you shouldn't blindly assume they will apply to all packages. To keep yourself informed about upgrades and new package instructions, subscribe to lfs-dev, and if you're really bleeding-edge, lfs-hackers. Keep in mind that these are not support lists but development lists.</p>
+	  <p>A final comment: what package instructions should you use when updating a package? In general, you can use the standard LFS instructions, although you shouldn't blindly assume they will apply to all packages. To keep yourself informed about upgrades and new package instructions, subscribe to lfs-dev. Keep in mind that this is not a support list but a development list.</p>
 	</dd>
       </dl>
       <p><a href="#generalfaq">Back to the top.</a></p>
