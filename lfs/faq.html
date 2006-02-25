@@ -43,10 +43,8 @@
       </ul>
       <h3><a href="#packerrors">Package-specific errors</a></h3>
       <ul>
-	<li><a href="#perl-missing-separator">Perl fails with &quot;*** missing separator.  Stop.&quot;</a></li>
 	<li><a href="#unknown-pseudo-op-hidden">GCC: Error: Unknown pseudo-op: `.hidden'</a></li>
 	<li><a href="#no-linuxthreads">Glibc: &quot;... it is normal to compile GNU libc with the `linuxthreads' add-on...&quot;</a></li>
-	<li><a href="#glibc-no-ld_map">Glibc: &quot;ld.map: No such file or directory&quot;.</a></li>
 	<li><a href="#glibc-awk-fail">Glibc fails and mentions BEGIN and END.</a></li>
 	<li><a href="#glibc-nss">Glibc compilation errors out due to a missing nss.h header file</a></li>
 	<li><a href="#cpp-fails-sanity-check">Ncurses: C++ preprocessor &quot;/lib/cpp&quot; fails sanity check</a></li>
@@ -359,18 +357,6 @@
 
       <h3 id="packerrors">Package-specific errors</h3>
       <dl>
-	<dt id="perl-missing-separator">Perl fails with <code>*** missing separator. Stop.</code></dt>
-	<dd>
-	  <p>It's missing a device file. (AFAIK, /dev/null, but maybe /dev/zero.) Anyway, either you forgot to run MAKEDEV, or MAKEDEV failed, or you're using devfs and forgot to mount --bind it under $LFS.</p>
-	  <p>If MAKEDEV failed, often all the device's ids will end with a "-". AFAIK, this happens when MAKEDEV is run without $LFS/proc mounted.</p>
-	  <p>The devices should look exactly like this:</p>
-	  <div class="cmd">
-	    <p>sk@bubook:~ $ ls -l /dev/{null,zero}<br />
-	       crw-rw-rw-  1 root root 1, 3 Dec 31  1969 /dev/null<br />
-	       crw-rw-rw-  1 root root 1, 5 Dec 31  1969 /dev/zero<br />
-	       sk@bubook:~ $</p>
-	  </div>
-	</dd>
 	<dt id="unknown-pseudo-op-hidden">GCC: Error: Unknown pseudo-op: `.hidden'</dt>
 	<dd>
 	  <p>If compiling GCC in Chapter 5 errors out with</p>
@@ -388,10 +374,6 @@
 	       *** using the extra parameter `--disable-sanity-checks'.</p>
 	  </div>
 	  <p>You have not unpacked glibc-linuxthreads-X.X.X.tar.bz2 <em>in the glibc-X.X.X directory.</em> Unpack it there and you'll be all set.</p>
-	</dd>
-	<dt id="glibc-no-ld_map">Glibc: &quot;ld.map: No such file or directory&quot;.</dt>
-	<dd>
-	  <p>You're missing /dev/null. Either you forgot to create it when the glibc build instructions say to, or you're using devfs and forgot to "mount --bind /dev $LFS/dev" before chrooting. You may have to delete and recreate the glibc-N.N.N and glibc-build directories after fixing that.</p>
 	</dd>
 	<dt id="glibc-awk-fail">Glibc fails and mentions BEGIN and END.</dt>
 	<dd>
