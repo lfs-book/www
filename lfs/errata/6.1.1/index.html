@@ -42,6 +42,10 @@
            <li><p>Tcl's configure script has a syntax error.  Correct it by
                executing this sed command right before running configure:</p>
                <p class="cmd">&nbsp;sed -i "s/relid'/relid/" configure</p></li>
+           <li><p>The Module-Init-Tools instructions contain a tar command for 
+               unpacking the testsuite tarball. The tar command has a 
+               --strip-path=1 option - this in incorrect. The correct option is
+               --strip-components=1.</p></li>
          </ul>
 
 
