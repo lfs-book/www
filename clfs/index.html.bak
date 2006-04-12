@@ -1,0 +1,86 @@
+<!--#set var="pageTitle" value="CLFS Project Homepage" -->
+<!--#include virtual="header.html" -->
+<!--#include virtual="menu.html" -->
+    <div class="main">
+     <h1>What is Cross Linux From Scratch?</h1>
+     <p>Cross Linux From Scratch (CLFS) is a project that provides you with 
+        step-by-step instructions for building your own customized Linux 
+        system entirely from source.</p>
+     <p>CLFS is getting ready for a release.  The remaining issues are documented
+        trac's roadmap feature. <a href="http://wiki.linuxfromscratch.org/clfs/roadmap">CLFS Roadmap</a>.</p>
+
+     <h2>Why would I want a CLFS system?</h2>
+     <p>Many wonder why they should go through the hassle of building a Linux
+        system from scratch when they could just download an existing Linux
+        distribution. However, there are several benefits of building CLFS.
+        Consider the following:</p>
+     <p><em>CLFS teaches people how to build a cross compiler</em><br />
+        Building CLFS teaches you how to make a cross-compiler and the 
+        necessary tools, to build a basic system on a different
+        architecture. For example you would be able to build a Sparc toolchain
+        on an x86 machine, and utilize that toolchain to build a Linux system
+        from source code.</p>
+     <p><em>CLFS teaches people how to utilize a multilib system</em><br />
+        CLFS takes advantage of the target systems capability, by utilizing a
+        mulitlib capable build system.</p>
+     <p><em>CLFS teaches people how a Linux system works internally</em><br />
+        Building CLFS teaches you about all that makes Linux tick, how things
+        work together and depend on each other. And most importantly, how to
+        customize it to your own tastes and needs.</p>
+     <p><em>Building CLFS produces a very compact Linux system</em><br />
+        When you install a regular distribution, you often end up installing a
+        lot of programs that you would probably never use. They're just sitting
+        there taking up (precious) disk space.</p>
+     <p><em>CLFS can be built from most Unix Style Operating Systems</em><br />
+        You can build CLFS even if you don't have Linux running. Our build
+	instructions have been tested to build from Solaris and the BSDs.</p>
+     <p><em>CLFS is extremely flexible</em><br />
+        Building CLFS could be compared to a finished house. CLFS will give you
+        the skeleton of a house, but it's up to you to install plumbing,
+        electrical outlets, kitchen, bath, wallpaper, etc. You have the ability
+        to turn it into whatever type of system you need it to be, customized
+        completely for you.</p>
+     <p><em>CLFS offers you added security</em><br />
+        You will compile the entire system from source, thus allowing you to
+        audit everything, if you wish to do so, and apply all the security
+        patches you want or need to apply. You don't have to wait for someone
+        else to provide a new binary package that (hopefully) fixes a security
+        hole. Often, you never truly know whether a security hole is fixed or
+        not unless you do it yourself.</p>
+
+     <h2>What can I do with my CLFS system?</h2>
+     <p>A by-the-book CLFS system is fairly minimal, but is designed to provide
+        a strong base on which you can add any packages you want. See the
+        <a href="/blfs/">BLFS project</a> for a selection of commonly used
+        packages.</p>
+
+     <h2>Who's who:</h2>
+      
+        <table>
+           <tr>
+	      <td>Project Co-Leader: Ryan Oliver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> <td>Arch: x86, x86_64, sparc, mips, powerpc</td>
+           </tr>
+           <tr>
+  	      <td>Project Co-Leader: Jim Gifford</td> <td>Arch: x86, sparc, mips</td>
+           </tr>
+           <tr>
+	      <td>Editor: Jeremy Huntwork</td> <td>Arch: x86, sparc, powerpc</td>
+           </tr>
+           <tr>
+	      <td>Editor: Ken Moffat</td> <td>Arch: x86, x86_64, powerpc</td>
+           </tr>
+           <tr>
+	      <td>Editor: Matt Darcy</td> <td>Arch: x86, x86_64, sparc</td>
+           </tr>
+           <tr>
+	      <td>Editor: Joe Ciccone</td> <td>Arch: x86, mips, alpha, sparc</td>
+           </tr>
+           <tr>
+	      <td>Editor: Chris Staub</td> <td>Arch: x86 Proofreader</td>
+           </tr>
+           <tr>
+	      <td>Editor: Nathan Coulson</td> <td>Bootscripts</td>
+           </tr>
+        </table>
+
+<!--#include virtual="/common/footer.html" -->
