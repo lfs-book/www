@@ -5,13 +5,27 @@
       <h1>LiveCD News</h1>
          <p>|&nbsp;<a href="/livecd/feed.rss">RSS Feed</a>&nbsp;|</p>
          <dl class="newsItem">
-           <dt>LiveCD Version x86-6.2-pre4 Released</dt>
-           <dd><em>Jeremy Huntwork - 2006/5/14</em>
-             <p>The LFS LiveCD team is pleased to announce the latest pre-release of the
-                x86-6.2 LiveCD, x86-6.2-pre4. This latest version features a change in the
-                method used to allow write access to the root filesystem. Instead of unionfs,
-                which has proven to be unstable, device-mapper and an ext2 image are being
-                employed.</p>
+           <dt>LiveCD Version x86-6.2-pre5 Released</dt>
+           <dd><em>Alexander E. Patrakov - 2006/07/17</em>
+	       <p>The LFS LiveCD team is pleased to announce the latest pre-release of the
+                  x86-6.2 LiveCD, x86-6.2-pre5. This LiveCD contains the following changes:
+	       </p>
+               <p>1) The method of making sure that the CD works on i486 processors has been
+                     changed. The uname hack has been dropped and replaced with the config.site file.
+               </p>
+               <p>2) The LFS book and the LFS packages are updated approximately (but not exactly)
+                     to LFS-6.2-pre1. The XML source of the book is in /usr/share/LFS-BOOK-trunk-XML
+                     (and can be updated with "svn up" command"), the HTML version is in /usr/share/LFS-BOOK-trunk-HTML.
+               </p>
+               <p>3) GAIM has been added. The CD now contains 5 chat clients.</p>
+               <p>4) Proprietary drivers for ATI and NVIDIA video cards were added because there are
+                     cases when they are absolutely needed even for 2D graphics with refresh rate more than 60 Hz.
+               </p>
+               <p>5) The CD now supports suspending to disk. This makes it easy to interrupt and resume
+                     the process of building LFS at any point except the testsuites. Read /root/README for more details.
+               </p>
+               <p>For known issues, please see the official release email here:
+               <a href="http://www.linuxfromscratch.org/pipermail/livecd/2006-July/003825.html">http://www.linuxfromscratch.org/pipermail/livecd/2006-July/003825.html</a></p>
              <p>As this CD is a predecessor of what will be finally released as x86-6.2-1,
                 we welcome your feedback concerning it. Please mail any comments to the LFS
                 LiveCD mailing list: <a href="/mail.html">LiveCD Mailing List</a>.
@@ -34,82 +48,6 @@
                 </ul>
              <p>Please mail any comments to the LFS LiveCD mailing list:
                 <a href="/mail.html">LiveCD Mailing List</a>.
-                Thank you.</p>
-             <p>To download the new LiveCD, visit the LFS LiveCD
-                <a href="/livecd/download.html">download page</a>
-                for a list of mirrors.</p>
-           </dd>
-         </dl>
-	 <dl class="newsItem">
-	   <dt>LiveCD Version x86-6.2-pre2 Released</dt>
-	   <dd><em>Jeremy Huntwork - 2005/12/21</em>
-	     <p>The LFS LiveCD team is proud to announce a new pre-release version of the LiveCD.
-		Since this version of the LiveCD is tracking the LFS development instructions and
-		is slated for release when the current LFS development book becomes stable, there
-		will likely be many changes between this CD and the final x86-6.2 CD. We are
-		pre-releasing at this time so that we can receive feedback on the new features we
-		have included. Most notable among new features is the support for UTF-8 locales,
-		and a modified version of the LFS Book for use in building a UTF-8 capable LFS system.
-	     </p>
-	     <p>The CD, <em>lfslivecd-x86-6.2-pre2.iso</em>, is available for download on all mirrors.
-		To download, please visit the <a href="http://www.linuxfromscratch.org/livecd/download.html">download page</a>.
-	     </p>
-	     <p>Please send any comments or suggestions to the <a href="/mail.html">LiveCD Mailing List</a>.</p>
-	   </dd>
-	 </dl> 
-         <dl class="newsItem">
-           <dt>LiveCD Version x86-6.1.1-2 Released</dt>
-           <dd><em>Justin Knierim - 2005/12/11</em>
-             <p>The LFS LiveCD team is proud to announce the release of the x86-6.1.1-2 version
-                of the LFS LiveCD.  This version is built using LFS 6.1.1 and BLFS packages from
-                the svn branch.  This version also fixes bugs found in the previous LiveCD, 6.1.1-1.
-                Changes include:</p>
-                <ul>
-                 <li>nALFS-profile upgraded to 6.1.1-1.</li>
-                 <li>Package tarballs for libxml2 and nALFS included in /lfs-sources (nALFS optional dependency).</li>
-                 <li>Corrected versions of iana-etc and man-pages included in /lfs-sources.</li>
-                 <li>Fixed other timezone related issues.</li>
-                </ul>
-             <p>Please mail any comments to the LFS LiveCD mailing list:
-                <a href="/mail.html">LiveCD Mailing List</a>.
-                Thank you.</p>
-             <p>To download the new LiveCD, visit the LFS LiveCD
-                <a href="/livecd/download.html">download page</a>
-                for a list of mirrors.</p>
-           </dd>
-         </dl>
-         <dl class="newsItem">
-           <dt>LiveCD Version x86-6.1.1-1 Released</dt>
-           <dd><em>Justin Knierim - 2005/12/01</em>
-             <p>The LFS LiveCD team is proud to announce the release of the x86-6.1.1-1 version
-                of the LFS LiveCD.  This version is built using LFS 6.1.1 and BLFS packages from
-                the svn branch.  Other new features include:</p>
-                <ul>
-                 <li>XFCE Terminal with helpful menus, including copy and paste</li>
-                 <li>jhalfs 0.2 included</li>
-		 <li>nALFS LFS 6.1.1 Profile</li>
-		 <li>More new packages:  rsync, sudo, wireless_tools</li>
-                </ul>
-	     <p>Please mail any comments to the LFS LiveCD mailing list: 
-		<a href="/mail.html">LiveCD Mailing List</a>.
-		Thank you.</p>
-             <p>To download the new LiveCD, visit the LFS LiveCD
-                <a href="/livecd/download.html">download page</a>
-                for a list of mirrors.</p>
-           </dd>
-         </dl>
-	 <dl class="newsItem">
-           <dt>LiveCD Version ppc-6.2-pre1 Released</dt>
-           <dd><em>Jeremy Huntwork - 2005/11/30</em>
-             <p>A new ppc LiveCD has been released! Due to the limited number of machines
-		at our disposal, development of the ppc LiveCD moves a little slower than the x86 
-		versions. However, we have merged the once separate x86 and ppc build scripts
-		into one, allowing general development of the ppc CD to move more quickly. This new
-		version of the ppc LiveCD is the first released result of this merge for PowerPC.</p>
-	     <p>This CD is geared specifically toward new-world Macs. If you have one and would
-		like to test this pre-release CD, we would appreciate your assistance in spotting
-		any bugs or missing features. Please mail any comments to the LFS LiveCD mailing list: 
-		<a href="/mail.html">LiveCD mailing list</a>.
                 Thank you.</p>
              <p>To download the new LiveCD, visit the LFS LiveCD
                 <a href="/livecd/download.html">download page</a>
