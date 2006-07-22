@@ -187,13 +187,13 @@
 	</dd>
 	<dt id="procs-lfs">Is there information about building LFS on other processors?</dt>
 	<dd>
-          <p>For information about building LFS for a wide array of systems, take a look at the <a href="/lfs/read.html">Cross-LFS branch</a> of LFS.</p>
+          <p>For information about building LFS for a wide array of systems, take a look at the <a href="http://trac.cross-lfs.org/wiki/read">Cross-LFS branch</a> of LFS.</p>
 	  <p>The Alpha systems, Kelledin maintains a list of fixes for building on the Alpha platform at <a href="http://skarpsey.dyndns.org/alpha-lfs/alpha.html">http://skarpsey.dyndns.org/alpha-lfs/alpha.html</a>.</p>
 	</dd>
 	<dt id="cross-compile">How do I cross compile LFS?</dt>
 	<dd>
 	  <p>It's often useful to compile LFS for one machine on another machine. Say using that fast 1Ghz Athlon to build an install for an old 486. While this is technically not cross compiling, binaries compiled for the Athlon cannot be run on the 486 because binaries compiled for the newer processor use features the older processor doesn't have.</p>
-          <p>The LFS book specifically for cross compiling is the <a href="/clfs/read.html">Cross-LFS</a> book. Another source of information would be the <a href="/hints/downloads/files/">cross-compiling hint</a>.</p>
+          <p>The LFS book specifically for cross compiling is the <a href="http://trac.cross-lfs.org/wiki/read">Cross-LFS</a> book. Another source of information would be the <a href="/hints/downloads/files/">cross-compiling hint</a>.</p>
 	</dd>
 	<dt id="dos-text">What's a DOS format text file?</dt>
 	<dd>
@@ -264,7 +264,7 @@
 	<dd>
 	  <p>Examples of this error are:</p>
 	  <div class="cmd">
-	    <p>/usr/bin/env: /static/bin/bash: No such file or directory<br />
+	    <p>/usr/bin/env: /tools/bin/bash: No such file or directory<br />
 	       gcc: No such file or directory</p>
 	  </div>
 	  <p>With the new Ch 5 build procedure, the most common cause of this problem is forgetting to apply the specs patch.</p>
@@ -277,7 +277,7 @@
 	</dd>
 	<dt id="bad-interpreter-permission-denied">./configure: bad interpreter: Permission denied</dt>
 	<dd>
-	  <p>You're most likely getting this while building bash in Chapter 5 of the LFS Book. The problem is most likely your mount options. You probably have a line in /etc/fstab like:</p>
+	  <p>You're most likely getting this while building binutils in Chapter 5 of the LFS Book. The problem is most likely your mount options. You probably have a line in /etc/fstab like:</p>
 	  <code>/dev/hda10  /mnt/lfs  ext2  user  1  2</code>
 	  <p>'user' is the mount flag, and it's the problem. To quote from the mount man page:</p>
 	  <cite>user:  Allow  an  ordinary  user to mount the file system. This  option  implies  the options noexec, nosuid, and nodev (unless overridden by subsequent options, as in the option line user,exec,dev,suid).</cite>
@@ -407,7 +407,7 @@
 	    <p>checking how to run the C++ preprocessor... /lib/cpp<br />
 	       configure: error: C++ preprocessor "/lib/cpp" fails sanity check</p>
 	  </div>
-	  <p>The problem is that you have no c++ compiler. In chapter five, gcc is built without the C++ compiler. Before building ncurses gcc is built with the C++ compiler. Most probably, you forgot to extract the g++ tarball. There are more details in <a href="http://archives.linuxfromscratch.org/mail-archives/lfs-support/2003-July/018757.html">the mail archive</a>.</p>
+	  <p>The problem is that you have no c++ compiler. In chapter five, gcc is first built without the C++ compiler. Before building ncurses, gcc is rebuilt with the C++ compiler. Most probably, you forgot to extract the g++ tarball, or did not specify "c++" in the --enable-languages configure switch, on the 2nd gcc build. There are more details in <a href="http://archives.linuxfromscratch.org/mail-archives/lfs-support/2003-July/018757.html">the mail archive</a>.</p>
 	</dd>
       </dl>
       <p><a href="#lfsfaq">Back to the top.</a></p>
