@@ -5,11 +5,33 @@
       <h1>LiveCD News</h1>
          <p>|&nbsp;<a href="/livecd/feed.rss">RSS Feed</a>&nbsp;|</p>
          <dl class="newsItem">
+           <dt>LiveCD Version x86-6.2-1 Released</dt>
+           <dd><em>Alexander E. Patrakov - 2006/08/04</em>
+             <p>The LFS LiveCD Team is proud to announce the release of the x86-6.2-1
+                version of the LFS LiveCD. This version is built using LFS 6.2 and many
+                BLFS packages from the SVN branch. Source packages for LFS 6.2, and the
+                LFS book itself, are included on the LiveCD. Other features:</p>
+             <p>* The CD supports hibernation, AKA software suspend, or suspend-to-disk.
+                  This allows to save the system state to a swap partition and turn the
+                  computer off. The saved state can be completely restored later.</p>
+             <p>* The CD filesystem can be written to. The changes actually go to RAM
+                  and don't survive a reboot (but do survive hibernation).</p>
+             <p>* The CD contains a visually pleasing and easy to use window manager,
+                  Xfce.</p>
+             <p>* jhalfs-1.0, a system for autobuilding LFS according to the book, is
+                  included.</p>
+             <p>Please mail any comments to the LFS LiveCD mailing list.</p>
+             <p>To download the new LiveCD, visit the LFS LiveCD
+                <a href="/livecd/download.html">download page</a>
+                for a list of mirrors.</p>
+           </dd>
+         </dl>
+         <dl class="newsItem">
            <dt>LiveCD Version x86-6.2-pre5 Released</dt>
            <dd><em>Alexander E. Patrakov - 2006/07/17</em>
 	       <p>The LFS LiveCD team is pleased to announce the latest pre-release of the
                   x86-6.2 LiveCD, x86-6.2-pre5. This LiveCD contains the following changes:
-	       </p>
+	       </p>i
                <p>1) The method of making sure that the CD works on i486 processors has been
                      changed. The uname hack has been dropped and replaced with the config.site file.
                </p>
