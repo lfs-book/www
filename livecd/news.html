@@ -5,12 +5,13 @@
       <h1>LiveCD News</h1>
          <p>|&nbsp;<a href="/livecd/feed.rss">RSS Feed</a>&nbsp;|</p>
          <dl class="newsItem">
-           <dt>LiveCD Version x86-6.2-1 Released</dt>
-           <dd><em>Alexander E. Patrakov - 2006/08/04</em>
-             <p>The LFS LiveCD Team is proud to announce the release of the x86-6.2-1
+           <dt>LiveCD Version x86-6.2-3 Released</dt>
+           <dd><em>Alexander E. Patrakov - 2006/09/09</em>
+             <p>The LFS LiveCD Team is proud to announce the release of the x86-6.2-3
                 version of the LFS LiveCD. This version is built using LFS 6.2 and many
                 BLFS packages from the SVN branch. Source packages for LFS 6.2, and the
-                LFS book itself, are included on the LiveCD. Other features:</p>
+                LFS book itself, are included on the LiveCD. The CD is also suitable as 
+                a host for building x86 and x86_64 CLFS systems. Other features and bugfixes:</p>
              <p>* The CD supports hibernation, AKA software suspend, or suspend-to-disk.
                   This allows to save the system state to a swap partition and turn the
                   computer off. The saved state can be completely restored later.</p>
@@ -20,71 +21,18 @@
                   Xfce.</p>
              <p>* jhalfs-1.0, a system for autobuilding LFS according to the book, is
                   included.</p>
+             <p>* Added Italian locals on the language configuration screen</p>
+             <p>* Now it is possible to boot even if a different CD is inserted in another drive.</p>
+             <p>* The CD no longer prints a warning about the network configuration when hibernating.</p>
+             <p>* Irssi now in understands the "/charset" command as an alias of "/recode add". So,
+                only GAIM doesn't understand this command now on the CD.</p>
+             <p>* Lilo has been upgraded to a version that has the device mapper patch integrated.</p>
+             <p>* Keymap configuration: fixed English (GB), added Dutch (Belgium).</p>
+             <p>* Xfsprogs now works.</p>
+             <p>* The cpqarray driver is now functional (the official fix is scheduled for 2.6.16.29).</p>
+             <p>* Reiser4 filesystem support in GRUB.</p>
+             <p>* The loop-AES driver is included in the kernel.</p>
              <p>Please mail any comments to the LFS LiveCD mailing list.</p>
-             <p>To download the new LiveCD, visit the LFS LiveCD
-                <a href="/livecd/download.html">download page</a>
-                for a list of mirrors.</p>
-           </dd>
-         </dl>
-         <dl class="newsItem">
-           <dt>LiveCD Version x86-6.2-pre5 Released</dt>
-           <dd><em>Alexander E. Patrakov - 2006/07/17</em>
-	       <p>The LFS LiveCD team is pleased to announce the latest pre-release of the
-                  x86-6.2 LiveCD, x86-6.2-pre5. This LiveCD contains the following changes:
-	       </p>i
-               <p>1) The method of making sure that the CD works on i486 processors has been
-                     changed. The uname hack has been dropped and replaced with the config.site file.
-               </p>
-               <p>2) The LFS book and the LFS packages are updated approximately (but not exactly)
-                     to LFS-6.2-pre1. The XML source of the book is in /usr/share/LFS-BOOK-trunk-XML
-                     (and can be updated with "svn up" command"), the HTML version is in /usr/share/LFS-BOOK-trunk-HTML.
-               </p>
-               <p>3) GAIM has been added. The CD now contains 5 chat clients.</p>
-               <p>4) Proprietary drivers for ATI and NVIDIA video cards were added because there are
-                     cases when they are absolutely needed even for 2D graphics with refresh rate more than 60 Hz.
-               </p>
-               <p>5) The CD now supports suspending to disk. This makes it easy to interrupt and resume
-                     the process of building LFS at any point except the testsuites. Read /root/README for more details.
-               </p>
-               <p>For known issues, please see the official release email here:
-               <a href="http://www.linuxfromscratch.org/pipermail/livecd/2006-July/003825.html">http://www.linuxfromscratch.org/pipermail/livecd/2006-July/003825.html</a></p>
-             <p>As this CD is a predecessor of what will be finally released as x86-6.2-1,
-                we welcome your feedback concerning it. Please mail any comments to the LFS
-                LiveCD mailing list: <a href="/mail.html">LiveCD Mailing List</a>.
-                Thank you.</p>
-             <p>To download the new LiveCD, visit the LFS LiveCD
-                <a href="/livecd/download.html">download page</a>
-                for a list of mirrors.</p>
-           </dd>
-         </dl>
-         <dl class="newsItem">
-           <dt>LiveCD Version x86-6.1.1-3 Released</dt>
-           <dd><em>Justin Knierim - 2005/12/23</em>
-             <p>The LFS LiveCD team is proud to announce the release of the x86-6.1.1-3 version
-                of the LFS LiveCD.  This version is a bugfix release and is the stable release for
-                LFS 6.1.1.
-                Changes include:</p>
-                <ul>
-                 <li>Support for booting from SATA CDROM drives.</li>
-                 <li>Fixed issue with wrong file being used for /etc/login.defs.</li>
-                </ul>
-             <p>Please mail any comments to the LFS LiveCD mailing list:
-                <a href="/mail.html">LiveCD Mailing List</a>.
-                Thank you.</p>
-             <p>To download the new LiveCD, visit the LFS LiveCD
-                <a href="/livecd/download.html">download page</a>
-                for a list of mirrors.</p>
-           </dd>
-         </dl>
-         <dl class="newsItem">
-           <dt>LiveCD Version x86_64-CRS051009-pre1 Released</dt>
-           <dd><em>Justin Knierim - 2005/10/19</em>
-             <p>The LFS LiveCD team is proud to release the x86_64-CRS051009-pre1 version
-                of the LFS LiveCD.  This is an experimental x86_64 version built using cross-lfs
-                x86_64 multilib and is still under development.  At this time not all the
-                software available on the other x86 LiveCD's is available on this one.  Please 
-                report problems to the <a href="/mail.html">LiveCD mailing list</a>.  
-                Thank you.</p>
              <p>To download the new LiveCD, visit the LFS LiveCD
                 <a href="/livecd/download.html">download page</a>
                 for a list of mirrors.</p>
