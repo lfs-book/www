@@ -21,51 +21,20 @@ software you want for your systems.</p>
      </p>
 
      <h2>How is ALFS implemented?</h2>
-     <p>Currently, the official implementation is <a href="/alfs/downloads/stable/">nALFS</a>
-	by Neven Has. nALFS is a small program written in C. It first parses an XML profile
-	that contains information concerning the LFS build process into a series of internal
-	commands. It can then execute these at your discretion, thus automating the
-	compilation of LFS.
-     </p>
-
-     <p>Recently, work has been done on a new implementation of ALFS, called <a href="/alfs/downloads/jhalfs/">jhalfs.</a>
-	Originally created by Jeremy Huntwork, but since co-authored with  Manuel Canales Esparcia,
-	jhalfs has become a light-weight, practical method of automating an LFS build. jhalfs
-	is a Bash shell script that makes use of Subversion and xsltproc to first download the
-	XML sources of the Linux From Scratch book and then extract any necessary commands, placing
-	them into executable shell scripts. If you do not already have the necessary source packages
-	in place on your system jhalfs can fetch them. Finally, jhalfs generates a Makefile which
+     <p>Currently, the official implementation is <a href="/alfs/downloads/jhalfs/">jhalfs.</a>
+	jhalfs is a collection of Bash shell scripts that makes use of Subversion and xsltproc to
+	first download the XML sources of the Linux From Scratch book and then extract any necessary
+	commands, placing them into executable shell scripts. It then generates a Makefile which
 	will control the execution of the shell scripts, allowing for recovery if the build should
 	encounter an error. Since jhalfs extracts its commands to run directly from the LFS book,
-	there are no profiles to edit or maintain.</p>
-
-     <div class='note'><p><strong>Note:</strong> The 0.2 version of jhalfs will only build LFS 6.1.1.
-        The default for jhalfs 0.2 is to build LFS development therefore you must pass the "-L 6.1.1"
-        parameter to the jhalfs program.  To build LFS development version, use the trunk version of jhalfs.
-        This is available via svn with the command:  "svn export svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk jhalfs".</p>
-     </div>
-
-     <p>There are many in-depth features that have been requested for future
-	ALFS implementations. Because of this, development has been slated for an entirely
-	new build tool which will be called alfs. To see a list of features that will
-	appear in alfs, please read our
-	<a href="view/alfs-srs/alfs-srs.html">Software Requirements Specification</a>.
-	If you wish to help develop this new tool, please subscribe to the
-	<a href="http://linuxfromscratch.org/mailman/listinfo/alfs-discuss">alfs-discuss mailing list</a>
-	and leave a note there explaining your desire to help.
+	there are no separate profiles to edit or maintain.</p>
      </p>
 
      <h2>Who's who:</h2>
      <ul>
         <li>Project Leader: Thomas Pegg</li>
-<!-- 20051203 jh These guys are inactive; commenting out
-        <li>Documentation: James Robertson</li>-->
-	<li>Developer (XML): Matthew Burgess</li>
-	<li>Developer (jhalfs): George Boudreau</li>
-        <li>Developer (jhalfs): Manuel Canales Esparcia</li>
-        <li>Developer (jhalfs): Jeremy Huntwork</li>
-	<li>Developer (nALFS): Jamie Bennett</li>
-        <li>Developer (Profile Editor): Joachim Beckers</li>
+	<li>Developer: George Boudreau</li>
+        <li>Developer: Manuel Canales Esparcia</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
