@@ -3,35 +3,80 @@
 <!--#include virtual="menu.html" -->
    <div class="main">
       <h1>BLFS 6.2.0 Release Notes</h1>
-         <p>Version 6.2.0-rc2 of BLFS has been released. This version is the
-         second release candidate of the 6.2.0 release tentatively scheduled
-         to be released on February 14th. For an HTML version you can read
-         on-line, go to <a href="./view/6.2.0-rc2/">an HTML version on your
-         local mirror</a>. For a PDF version, go to
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.pdf">a PDF version on your
+         <p>Version 6.2.0 of BLFS has been released. Version 6.2.0 is the
+         complement to the LFS 6.2 book. More time has elapsed between the
+         release of the previous version (6.1) and this one than in any other
+         release cycle. Much of this is due to the fact that LFS 6.2 took much
+         longer to be released than was originally anticipated. Many new
+         packages have been introduced in the 6.2.0 version, as well as many
+         updates, refinements and additions to the existing packages.</p>
+
+         <p>The BLFS book now provides build and configuration instructions for
+         almost 400 packages (600 if you count every individual package in the
+         new Xorg instructions). Some of the new packages introduced in this
+         version are: autotooled XOrg, HAL, D-BUS, GStreamer (now broken out
+         into separate plugin packages), usbutils, libquicktime, GraphViz, K3b,
+         dvd+rw-tools, NSS, Libidn, GAIM, Poppler, SeaMonkey, XChat, Audacious,
+         cairo and unixODBC. Major updates include GNOME-2.14.3 (with several
+         new GNOME packages such as Totem, gnome-mount and
+         gnome-volume-manager), KDE-3.5.6, Firefox-1.5.x, Thunderbird-1.5.x,
+         and most of the mainline server packages. As always, the list of
+         packages that have been upgraded or added as well as configuration and
+         build command changes are annotated in the Change Log.</p>
+
+         <p>Unfortunately, BLFS activity was semi-stagnant for several months
+         after (and shortly before) the LFS 6.2 release. Therefore, many of the
+         packages are somewhat dated (compared to previous BLFS versions). This
+         brings us to why the versioning scheme has changed. This release is
+         6.2.0 as we fully anticipate releasing another version (6.2.1) just as
+         soon as possible. The 6.2.1 release will also be based on the LFS-6.2
+         book, but will include updated packages, and fixes for any errors
+         which may be discovered in 6.2.0.</p>
+
+         <p>As always, the main thrust of BLFS development will be to support
+         the changes in the current LFS development book, but any changes or
+         updates to the BLFS development book (that are compatible with LFS
+         6.2) will also be merged into the BLFS 6.2 branch. This way, a 6.2.1
+         version of BLFS should be released fairly soon, and should provide a
+         very current and stable Linux platform.</p>
+
+         <p>Enjoy!</p>
+
+         <h2>BLFS-6.2.0 Download Notes</h2>
+
+           <p>For an HTML version you can read on-line, go to
+           <a href="./view/6.2.0/">an HTML version on your local mirror</a>.
+           For a PDF version, go to
+           <a href="./downloads/6.2.0/BLFS-6.2.0.pdf">a PDF version on your
          local mirror</a>.</p>
 
-         <p>You can download the HTML or PDF version in compressed formats by
-         choosing any of the following links below:</p>
+           <p>You can download the HTML or PDF version in compressed formats by
+           choosing any of the following links below:</p>
 
-         <p>
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.tar.bz2">HTML bzipped tarball</a> - 576Kb -
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.tar.bz2.md5sum">MD5sum</a><br/>
+           <p>
+           <a href="./downloads/6.2.0/BLFS-6.2.0.tar.bz2">HTML bzipped tarball</a> - 576Kb -
+           <a href="./downloads/6.2.0/BLFS-6.2.0.tar.bz2.md5sum">MD5sum</a><br/>
 
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.tar.gz">HTML gzipped tarball</a> - 906Kb -
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.tar.gz.md5sum">MD5sum</a><br/>
+           <a href="./downloads/6.2.0/BLFS-6.2.0.tar.gz">HTML gzipped tarball</a> - 906Kb -
+           <a href="./downloads/6.2.0/BLFS-6.2.0.tar.gz.md5sum">MD5sum</a><br/>
 
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.pdf.bz2">PDF bzipped tarball</a> - 1.9Mb -
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.pdf.bz2.md5sum">MD5sum</a><br/>
+           <a href="./downloads/6.2.0/BLFS-6.2.0-nochunks.html.bz2">bzipped single HTML file</a> - 530Kb -
+           <a href="./downloads/6.2.0/BLFS-6.2.0-nochunks.html.bz2.md5sum">MD5sum</a><br/>
 
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.pdf.gz">PDF gzipped tarball</a> - 2.0Mb
-         <a href="./downloads/6.2.0/BLFS-6.2.0-rc2.pdf.gz.md5sum">MD5sum</a>
-         </p>
+           <a href="./downloads/6.2.0/BLFS-6.2.0-nochunks.html.gz">gzipped singel HTML file</a> - 844Kb -
+           <a href="./downloads/6.2.0/BLFS-6.2.0-nochunks.html.gz.md5sum">MD5sum</a><br/>
 
-         <p>If you have <a href="http://subversion.tigris.org/">Subversion</a>
-         installed, you can check out the actual XML sources by issuing
-         the following command:<br/><br/>
+           <a href="./downloads/6.2.0/BLFS-6.2.0.pdf.bz2">PDF bzipped tarball</a> - 1.9Mb -
+           <a href="./downloads/6.2.0/BLFS-6.2.0.pdf.bz2.md5sum">MD5sum</a><br/>
 
-         svn checkout svn://svn.linuxfromscratch.org/BLFS/tags/6.2.0-rc2</p>
+           <a href="./downloads/6.2.0/BLFS-6.2.0.pdf.gz">PDF gzipped tarball</a> - 2.0Mb
+           <a href="./downloads/6.2.0/BLFS-6.2.0.pdf.gz.md5sum">MD5sum</a>
+           </p>
+
+           <p>If you have <a href="http://subversion.tigris.org/">Subversion</a>
+           installed, you can check out the actual XML sources by issuing
+           the following command:<br/><br/>
+
+           svn checkout svn://svn.linuxfromscratch.org/BLFS/tags/6.2.0</p>
 
 <!--#include virtual="/common/footer.html" -->
