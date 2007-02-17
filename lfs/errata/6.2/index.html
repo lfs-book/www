@@ -27,6 +27,14 @@
            href="ftp://ftp.pld.org.pl/software/shadow/old/">
            ftp://ftp.pld.org.pl/software/shadow/old/</a>.
            </p></li>
+           <li><p>Glibc-2.3.6 expects that /bin/sh is `bash' and uses some
+           `bash' specific syntax in the Makefiles. On some hosts, such as
+           Ubuntu, this is not the case and the Chapter 5 glibc build can
+           fail. To work around the problem, add SHELL=/bin/bash to all the
+           `make' commands. For instance, `make install' would become
+           `make install SHELL=/bin/bash'. This is not a problem in Chapter
+           6 where /bin/sh is `bash'.
+           </p></li>
          </ul>
 
 <!--#include virtual="/common/footer.html" -->
