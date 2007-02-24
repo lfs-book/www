@@ -1,12 +1,4 @@
-- Viewcvs customisation
-
-- Bugzilla customization (done; needs to be added to the repository for easy
-  editing)
-
 - Mailman customization
-
-- Add svn logs to news page (done; verify the possibility of attaching the
-  branch name to the log messages)
 
 - Move templates to the repository and enable post-commit actions for them (done
   for swish-e and error pages; lfscounter and bugzilla are missing).
@@ -29,13 +21,3 @@
 
 - Avoid duplication of news items on "general" and project-specific news.html
   pages, possibly using SSI.
-
-- Do a Wiki's content review, add the still relevant parts (if any) to the
-  website and drop it entirely. (done; 20051128 jh: nothing of major value
-  existed there upon my perusal. A tarball of the site exists in my home
-  directory in case I missed something.)
-
-- Migrate /search.html contents to swish-e template and replace links pointing
-  to it with http://search.linuxfromscratch.org/ (remembering to remove the
-  "permanent redirect" from /home/httpd/search.linuxfromscratch.org/.htaccess).
-  This would avoid maintaining /search.html manually.
