@@ -39,13 +39,15 @@
            for Bash in section 5.14. Version 1.875 is the minimum required
            version of Bison.
            </p></li>
-           <li><p>The first pass of Binutils may fail to build with
-           <pre>/bin/ld: unrecognized option '--hash-style=both'</pre> on
-           newer hosts (e.g. Fedora Core 6).  This can be fixed by changing the
-           Binutils configure command to
-           <pre>CC="gcc -B/usr/bin/" ../binutils-2.16.1/configure [configure parameters]</pre>
-           and, similarly, the GCC pass 1 configure command to
-           <pre>CC="gcc -B/usr/bin/" ../gcc-3.4.3/configure [configure parameters]</pre></p></li>
+           <li><p>The first pass of Binutils may fail to build with <span
+           style="font-family: monospace;">/bin/ld: unrecognized option
+           '--hash-style=both'</span> on newer hosts (e.g. Fedora Core 6).  This
+           can be fixed by changing the Binutils configure command to
+           <span style="font-family: monospace;">CC="gcc -B/usr/bin/"
+           ../binutils-2.16.1/configure [configure parameters]</span> and,
+           similarly, the GCC pass 1 configure command to <span
+           style="font-family: monospace;">CC="gcc -B/usr/bin/"
+           ../gcc-3.4.3/configure [configure parameters]</span></p></li>
          </ul>
 
 <!--#include virtual="/common/footer.html" -->
