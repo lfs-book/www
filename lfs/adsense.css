@@ -71,6 +71,33 @@ input:hover {
 	background: #ddd;
 }
 
+/*  HEADER */
+
+.header {
+  width: 100%;
+  margin-top: .6em;
+  margin-left: .6em;
+  margin-right: .6em;
+}
+
+.logo a:link {
+  border: none;
+}
+
+.logo img {
+  margin-right: .6em
+}
+
+.adsense * {
+  text-align: center;
+}
+
+.search table tr {
+  text-align: center;
+}
+
+/*   */
+
 div.navbar {
 	position: absolute;
 	top: 110px;
