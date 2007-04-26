@@ -15,9 +15,6 @@ h2 {
 	font-size: 1.4em;
 }
 
-table {
-	font-size: 1em;
-}
 .newsItem {
 	padding-bottom: 5pt;
 	border-bottom: 1px dotted #0c0470;
@@ -59,12 +56,6 @@ p {
 	margin: 10pt;
 }
 
-#search {
-	position: absolute;
-	right: 0;
-	top: 0px;
-	margin: 5pt 0 5pt 0;
-}
 select {
 	color: #333;
 }
@@ -78,24 +69,6 @@ input {
 input:hover {
 	color: #004090;
 	background: #ddd;
-}
-#banner {
-	height: 47px;
-}
-
-#banner img {
-	position: absolute;
-	left: 10px;
-	top: 10px;
-	border: none;
-}
-
-table.adsense {
-	position: absolute;
-	top: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
 }
 
 div.navbar {
