@@ -164,7 +164,7 @@ div.navbar {
   position: absolute;
   left: 0px;
   top: 141px;
-  border-top: solid 1px #ccc;
+  border-top: none;
   border-right: solid 1px #ccc;
   padding: 0;
   margin: 0;
