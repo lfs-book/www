@@ -89,6 +89,12 @@ input:hover {
 	top: 10px;
 	border: none;
 }
+
+div.adsense {
+	position: absolute;
+	top: 10px;
+}
+
 div.navbar {
 	position: absolute;
 	top: 110px;
