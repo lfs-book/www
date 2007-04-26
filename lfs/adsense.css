@@ -69,7 +69,7 @@ select {
 	color: #333;
 }
 select:hover {
-}	
+}
 input {
 	border: 1px solid #ccc;
 	background: #eee;
@@ -276,7 +276,7 @@ div.main {
 	top: 140px;
 	left: 150px;
 }
-#footer {	
+#footer {
 	margin-top: 30px;
 }
 
@@ -285,16 +285,16 @@ div.main {
 	font-size: .8em;
 }
 
-.cmd { 
-       font      : 1.1em monospace; 
-       background: #eee; 
-       padding   : 5pt 0; 
-       margin    : 0 10pt; 
+.cmd {
+       font      : 1.1em monospace;
+       background: #eee;
+       padding   : 5pt 0;
+       margin    : 0 10pt;
        border    : 1px dashed #0c0470;
      }
 .cmd p { margin: 10pt 15pt; }
 
-.note { 
+.note {
         /*font      : 1.1em fantasy;*/
         background: #eee;
         border    : dashed 1px red;
