@@ -1,3 +1,5 @@
+/* Site-wide formatting of standard tags */
+/* ===================================== */
 body {
 	background: #fefefe;
 	font: .8em sans-serif, Arial;
@@ -6,109 +8,98 @@ body {
 	margin: 0;
 }
 
+p { margin: 10pt; }
+
 h1 {
 	color: #333;
 	font-size: 1.7em;
 }
+
 h2 {
 	color: #333;
 	font-size: 1.4em;
 }
 
-table {
-	font-size: 1em;
-}
-.newsItem {
-	padding-bottom: 5pt;
-	border-bottom: 1px dotted #0c0470;
-}
+table {	font-size: 1em; }
 
-.newsItem p { margin: 10pt 0 10pt 0; }
+select { color: #333; }
 
-.errorMsg {
-	font-weight: bold;
-	color: red;
-}
-
-.pagenav {
-	list-style-type: none;
-	margin-left: -10pt;
-}
-
-.results {
-	margin: 10pt;
-	padding: 10pt;
-	background-color: #eee;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-top: 2px solid #777;
-	border-left: 2px solid #777;
-	list-style-type: none;
-}
-
-.results strong, .results em {
-	color: navy;
-	font-weight: bold;
-}
-
-.results small {
-	font-size: .8em;
-}
-
-p {
-	margin: 10pt;
-}
-
-#search {
-	position: absolute;
-	right: 20px;
-	top: 0px;
-	margin: 5pt 0 5pt 0;
-}
-
-#adsense {
-	position: absolute;
-	right: 0;
-	top: 118px;
-	padding: 15px 0px 15px 10px;
-	border-left: 1px solid #ccc;
-}
-
-select {
-	color: #333;
-}
-select:hover {
-}	
 input {
-	border: 1px solid #ccc;
-	background: #eee;
-	color: #777;
+        border: 1px solid #ccc;
+        background: #eee;
+        color: #777;
 }
+
 input:hover {
-	color: #004090;
-	background: #ddd;
+        color: #004090;
+        background: #ddd;
 }
+
+em {
+        font-weight: bold;
+        color: #444;
+}
+
+dt { font-weight: bold; }
+
+a img, a:link, a:hover { border: none; }
+
+a:link {
+        text-decoration: none;
+        color: #0072ff;
+        border-bottom: groove 1px #0072ff;
+}
+
+a:visited {
+        text-decoration: none;
+        color: navy;
+        border-bottom: groove 1px navy;
+}
+
+a:hover {
+        text-decoration: none;
+        color: #004090;
+        border-bottom: dotted 1px #004090;
+}
+
+hr {
+  background: #eee;
+  height: 1px;
+}
+
+
+/* Header: logo, top menu and search     */
+/* ===================================== */
+
 #banner {
-	height: 47px;
+        height: 47px;
 }
 
 #banner img {
-	position: absolute;
-	left: 10px;
-	top: 10px;
-	border: none;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        border: none;
 }
+
+#search {
+        position: absolute;
+        right: 20px;
+        top: 0px;
+        margin: 5pt 0 5pt 0;
+}
+
 div.navbar {
-	position: absolute;
-	top: 90px;
-	border: 0;
-	margin: 0;
-	width: 100%;
-	padding: 0;
-	background-color: #eee;
-	text-align: right;
-	border-top: solid 1px #ccc;
-  	border-bottom: solid 1px #ccc;
+        position: absolute;
+        top: 90px;
+        border: 0;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        background-color: #eee;
+        text-align: right;
+        border-top: solid 1px #ccc;
+        border-bottom: solid 1px #ccc;
 }
 
 #menu {
@@ -147,14 +138,9 @@ div.navbar {
 
 #lfs:hover, #lfsactive:hover, #alfs:hover, #alfsactive:hover, #blfs:hover, #blfsactive:hover, #clfs:hover, #hlfs:hover, #hlfsactive:hover, #hints:hover, #hintsactive:hover, #livecd:hover, #livecdactive:hover, #patches:hover, #patchesactive:hover { background-color: #ddd }
 
-#subs {
-  list-style-type: none;
-}
 
-#subs li {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+/* Project specfic left-hand menus       */
+/* ===================================== */
 
 #leftmenu ul {
   text-align: right;
@@ -246,37 +232,53 @@ div.navbar {
   background: #0c0470;
 }
 
-em {
-	font-weight: bold;
-	color: #444;
+
+/* Google AdSense                        */
+/* ===================================== */
+
+#adsense {
+        position: absolute;
+        right: 0;
+        top: 118px;
+        padding: 15px 0px 15px 10px;
+        border-left: 1px solid #ccc;
 }
-dt {
-	font-weight: bold;
+
+
+/* Special formatting for News lists     */
+/* ===================================== */
+
+.newsItem {
+	padding-bottom: 5pt;
+	border-bottom: 1px dotted #0c0470;
 }
-a img, a:link, a:hover {
-	border: none;
+
+.newsItem p { margin: 10pt 0 10pt 0; }
+
+
+/* Special formatting for /index.html    */
+/* ===================================== */
+
+#subs {
+  list-style-type: none;
 }
-a:link {
-	text-decoration: none;
-	color: #0072ff;
-	border-bottom: groove 1px #0072ff;
+
+#subs li {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-a:visited {
-	text-decoration: none;
-	color: navy;
-	border-bottom: groove 1px navy;
-}
-a:hover {
-	text-decoration: none;
-	color: #004090;
-	border-bottom: dotted 1px #004090;
-}
+
+
+/* Main page content & footer            */
+/* ===================================== */
+
 div.main {
 	position: absolute;
 	top: 140px;
 	left: 150px;
 	padding-right: 180px;
 }
+
 #footer {	
 	border-top: 1px solid #ccc;
 	margin-top: 10px;
@@ -286,6 +288,10 @@ div.main {
 	color: #bcbcbc;
 	font-size: .8em;
 }
+
+
+/* Commands & notes                      */
+/* ===================================== */
 
 .cmd { 
        font      : 1.1em monospace; 
@@ -297,14 +303,9 @@ div.main {
 .cmd p { margin: 10pt 15pt; }
 
 .note { 
-        /*font      : 1.1em fantasy;*/
         background: #eee;
         border    : dashed 1px red;
         padding   : 3pt;
         margin    : 0 10pt;
 }
 
-hr {
-  background: #eee;
-  height: 1px;
-}
