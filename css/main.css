@@ -61,10 +61,19 @@ p {
 
 #search {
 	position: absolute;
-	right: 0;
-	top: 20px;
+	right: 20px;
+	top: 0px;
 	margin: 5pt 0 5pt 0;
 }
+
+#adsense {
+	position: absolute;
+	right: 0;
+	top: 118px;
+	padding: 15px 0px 15px 10px;
+	border-left: 1px solid #ccc;
+}
+
 select {
 	color: #333;
 }
@@ -266,9 +275,11 @@ div.main {
 	position: absolute;
 	top: 140px;
 	left: 150px;
+	padding-right: 180px;
 }
 #footer {	
-	margin-top: 30px;
+	border-top: 1px solid #ccc;
+	margin-top: 10px;
 }
 
 #footer p {

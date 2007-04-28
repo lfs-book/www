@@ -1,28 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title><!--#echo var="pageTitle" --></title>
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
   </head>
   <body>
     <div id="banner"><a href="/index.html"><img src="/images/lfs-logo.png"
 	alt="Linux From Scratch | Your Distro, Your Rules" /></a></div>
-    <!-- Commenting this out as it breaks the page as it is not in any
-         kind of container and does not display properly
-         SiteSearch Google
-    -->
-    <form id ="search" method="get" action="http://www.google.com/search">
+    <!-- SiteSearch Google -->
+    <form id ="search" method="get" action="http://www.google.com/custom">
       <p>
-        <input type="hidden" name="ie" value="UTF-8" />
-        <input type="hidden" name="oe" value="UTF-8" />
-        <input type="hidden" name="domains" value="linuxfromscratch.org" />
-        <input type="hidden" name="sitesearch" value="linuxfromscratch.org" />
-        <input type="text" name="q" size="31" maxlength="255" />
-        <input type="submit" name="btnG" value="Google Search" />
+         <input type="hidden" name="client" value="pub-1920546463376456" />
+         <input type="hidden" name="forid" value="1" />
+         <input type="hidden" name="ie" value="UTF-8" />
+         <input type="hidden" name="oe" value="UTF-8" />
+         <input type="hidden" name="safe" value="active" />
+         <input type="hidden" name="cof"
+          value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:50;LW:128;L:http://www.linuxfromscratch.org/images/lfs-logo.png;S:http://www.linuxfromscratch.org;FORID:1" />
+         <input type="hidden" name="hl" value="en" />
+         <input type="hidden" name="domains" value="www.linuxfromscratch.org" />
+	 <input type="text" name="q" size="31" maxlength="255" id="sbi" />
+      </p>
+      <p>
+         <input type="submit" name="sa" value="Google Search" id="sbb" />
+         <input type="radio" name="sitesearch" value="" id="ss0" />
+         <label for="ss0" title="Search the Web">Web</label>
+         <input type="radio" name="sitesearch" value="www.linuxfromscratch.org" checked="checked" id="ss1" />
+         <label for="ss1" title="Search www.linuxfromscratch.org">LFS</label>
       </p>
     </form> 
+
+   <div id="adsense">
+      <!-- Google Adsense code -->
+          <script type="text/javascript"><!--
+            google_ad_client = "pub-1920546463376456";
+            google_ad_width = 160;
+            google_ad_height = 600;
+            google_ad_format = "160x600_as";
+            google_ad_type = "text";
+            google_ad_channel = "";
+          //-->
+          </script>
+          <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+      <!-- -->
+   </div>
    <!-- Search Mailing Lists -->
    <!--
    <form id="search" method="get" action="http://search.linuxfromscratch.org/index.cgi">
