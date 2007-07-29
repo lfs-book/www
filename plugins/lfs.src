@@ -3,15 +3,28 @@
 <search
   name="LFS"
   description="Search LFS Archives"
-  version="1.0"
-  action="http://search.linuxfromscratch.org/index.cgi"
-  searchForm="none"
+  version="1.1"
+  action="http://www.google.com/search"
   method="GET"
 >
 
-<input name="query" user>
+  <input name="q" user>
+  <inputnext name="start" factor="10">
+  <inputprev>
+  <input name="domains" value="linuxfromscratch.org" />
+  <input type="radio" name="sitesearch" value="linuxfromscratch.org" checked="checked" />
 
-<BROWSER
+  <interpret 
+    browserResultType="result" 
+    resultListStart="<!--a-->" 
+    resultListEnd="<!--z-->" 
+    resultItemStart="<!--m-->" 
+    resultItemEnd="<!--n-->"
+  >
+</search>
+
+<browser
   update="http://www.linuxfromscratch.org/plugins/lfs.src"
   updateIcon="http://www.linuxfromscratch.org/plugins/lfs.png"
-  updateCheckDays="1">
+  updateCheckDays="1"
+>
