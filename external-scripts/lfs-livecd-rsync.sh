@@ -4,8 +4,8 @@
 # Parameters are needed in this order:
 
 NAME="LFS LiveCD FTP Archive"
-SITE=rsync.osuosl.org
-MODULE=lfs-livecd
+SITE=kerrek.linuxfromscratch.org
+MODULE=livecd
 LOCAL=/local/path/				# Edit this line
 LOG=/tmp/livecd_rsync-`date +%Y%m%d%H%M%S`	# Edit this line, if necessary
 USER=your@email.address				# Edit this line
