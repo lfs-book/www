@@ -1,0 +1,59 @@
+<!--#set var="pageTitle" value="LFS Errata" -->
+<!--#include virtual="/lfs/header.html" -->
+<!--#include virtual="/lfs/menu.html" -->
+    <div class="main">
+     <h1>Errata for the 6.3 Version of the LFS Book</h1>
+
+<!-- TEMPLATE
+       <h2>Known Security Vulnerabilities</h2>
+         <ul>
+            <li><p>Item 1</p></li>
+            <li><p>Item 2</p></li>
+         </ul>
+
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+           <li><p>Item 1</p></li>
+           <li><p>Item 2</p></li>
+         </ul>
+
+     END TEMPLATE -->
+
+       <p>There are no current errata items for LFS 6.3</p>
+<!--
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+           <li><p>A new version of Shadow has been released, changing the
+           location of the tarball used in LFS-6.2. The 4.0.15
+           version can be downloaded from <a
+           href="ftp://ftp.pld.org.pl/software/shadow/old/">
+           ftp://ftp.pld.org.pl/software/shadow/old/</a>.
+           </p></li>
+           <li><p>Glibc-2.3.6 expects that /bin/sh is `bash' and uses some
+           `bash' specific syntax in the Makefiles. On some hosts, such as
+           Ubuntu, this is not the case and the Chapter 5 glibc build can
+           fail. To work around the problem, add SHELL=/bin/bash to all the
+           `make' commands. For instance, `make install' would become
+           `make install SHELL=/bin/bash'. This is not a problem in Chapter
+           6 where /bin/sh is `bash'.
+           </p></li>
+           <li><p>Bison is missing from the Host Requirements. This is needed
+           for Bash in section 5.14. Version 1.875 is the minimum required
+           version of Bison.
+           </p></li>
+           <li><p>The first pass of Binutils may fail to build with <span
+           style="font-family: monospace;">/bin/ld: unrecognized option
+           '--hash-style=both'</span> on newer hosts (e.g. Fedora Core 6).  This
+           can be fixed by changing the Binutils configure command to
+           <span style="font-family: monospace;">CC="gcc -B/usr/bin/"
+           ../binutils-2.16.1/configure [configure parameters]</span> and,
+           similarly, the GCC pass 1 configure command to <span
+           style="font-family: monospace;">CC="gcc -B/usr/bin/"
+           ../gcc-3.4.3/configure [configure parameters]</span></p></li>
+           <li><p>In section 7.6 Configuring the Linux Console, it is suggested
+           to look in the /usr/share/kbd directory for valid fonts and keymaps.
+           The directory should be /lib/kbd as configured in the kbd package
+           in section 6.42.</p></li>
+         </ul>
+-->
+<!--#include virtual="/common/footer.html" -->
