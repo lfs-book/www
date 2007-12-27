@@ -1,321 +1,774 @@
 <!--#set var="pageTitle" value="LFS LiveCD Documentation" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
-    <div class="main">
-     <h1>LFS LiveCD Documentation</h1>
-       <p>Documentation for version x86-6.2-5 of the official Linux From Scratch LiveCD.</p>
-       <h2>Packages</h2>
-         <p>Available packages on this CD for your use:</p>
-         <ul>
-          <li>Xorg (X Window System Environment)</li>
-          <li>Window Managers
-             <ul> <li>xfce </li></ul>
-          </li>
-          <li>Web Tools
-	    <ul>
-		<li>wget (command line file retriever)</li>
-		<li>curl (command line file retriever)</li>
-		<li>lynx (text web browser)</li>
-		<li>w3m (text web browser)</li>
-		<li>irssi (console irc client, unstable version)</li>
-		<li>mozilla (graphical web browser, mail and news reader and irc client)</li>
-		<li>xchat (x-based irc client)</li>
-		<li>GAIM (multiprotocol x-based chat client)</li>
-		<li>msmtp (SMTP client for use with mutt and tin)</li>
-		<li>mutt (console mail and news reader)</li>
-		<li>tin (console news reader)</li>
-	    </ul></li>
-	  <li>Text Editors
-	   <ul>
-		<li>vim</li>
-		<li>nano (unstable version)</li>
-		<li>joe</li>
-	   </ul></li>
-	  <li>Network Tools
-            <ul>
-		<li>SSH server & client</li>
-		<li>NFS server & client</li>
-		<li>Samba (client only)</li>
-		<li>Subversion</li>
-		<li>cvs</li>
-		<li>pppd</li>
-		<li>rp-pppoe</li>
-		<li>dhcpcd</li>
-		<li>ncftp</li>
-		<li>traceroute</li>
-		<li>rsync</li>
-	    </ul></li>
-	  <li>Filesystem Programs
-	    <ul>
-		<li>e2fsprogs</li>
-		<li>reiserfsprogs</li>
-		<li>reiser4progs</li>
-		<li>xfsprogs</li>
-		<li>dosfstools</li>
-		<li>ntfsprogs</li>
-	    </ul></li>
-	  <li>Debugging Programs
-	    <ul><li>strace</li></ul></li>
-	  <li>Boot Loaders
-	    <ul>
-		<li>grub</li>
-		<li>lilo</li>
-	    </ul></li>
-	  <li>Other Programs
-	    <ul>
-		<li>distcc</li>
-		<li>gpm (console mouse)</li>
-		<li>pciutils</li>
-		<li>mdadm</li>
-		<li>LVM2</li>
-		<li>dmraid</li>
-		<li>hdparm</li>
-		<li>parted</li>
-		<li>xlockmore</li>
-		<li>jhalfs (A tool for extracting commands from the Linux From Scratch book and automating the build. NOTE: This tool is designed for LFS developers; Support for those not experienced with building LFS manually is not guaranteed.)</li>
-	     </ul></li>
-	  </ul>
-	<h2>Important Note About the Kernel</h2>
-          <p>The original LFS book recommends using "the latest available 2.6.16.x kernel
-	     version" and gives a link to linux-2.6.16.27. However, at the time of the
-	     release of this CD, the latest linux-2.6.16.x version is 2.6.16.38. For the
-	     convenience of jhalfs users, the LFS book on this CD has been patched
-	     to include this kernel version.
-	  </p>
-         <p>Further kernel updates may be available in the form of compressed incremental
-	    patches from <a href="http://www.kernel.org/pub/linux/kernel/v2.6/incr/">http://www.kernel.org/pub/linux/kernel/v2.6/incr/</a>.
-	    It is recommended that you apply them.</p>
+<h1>Official LFS LiveCD Documentation</h1>
+<p>Version: x86-6.3-r2145</p>
 
-	<h2>Configuring a Network Connection</h2>
-	  <p>The LiveCD attempts to detect the network cards present in the system.
-	   On each detected network card, dhcpcd is automatically started in the
-	   background. If it is not correct to acquire the network settings via DHCP
-	   in your location, or if you want to use dialup or GPRS connection, run the
-	   <b>net-setup</b> command.</p>
-	<h2>Configuring Xorg</h2>
-	  <p>The LiveCD attempts to configure X for your video card automatically. The
-	  process may fail if you have more than one video card, if your video card
-	  doesn't support 24-bit color depth, or if your monitor is not Plug-n-Play
-	  compatible (in other words, doesn't tell its characteristics to Xorg via DDC).
-	  Also, in the following cases, the autodetection process is known to suggest
-	  a non-working driver even for 2D graphics:</p>
-	<ul><li>ATI Radeon X1000 or higher (needs the "vesa" driver)</li></ul>
+<h2>PACKAGES</h2>
 
-	<p>In such cases, you have to edit the /etc/X11/xorg.conf file manually, using
-	  vim, joe or nano:</p>
-	
-	<p>1.  In Section "Device", specify the driver for your video card, e.g.:
-	  <div class="cmd"><pre>
-  Section "Device"
-        Identifier      "Generic Video Card"
-        Driver          "vesa"
-  EndSection</pre></div>
-	<p>2.  In Section "Monitor", specify the allowed frequency ranges for your
-	  monitor. If unsure, consult the manual that came with your monitor. If
-	  such information is not there, but you know a working resolution and refresh
-	  rate, run the "gtf" command. E.g., if your monitor can handle 1280x1024@85Hz:
-	</p>
-	  <div class="cmd"><pre>  $ gtf 1280 1024 85</pre></div>
-	<p>Note: you must specify the refresh rate of 60 Hz for LCD monitors.</p>
-	<p>Then look at the output:</p>
-	<div class="cmd"><pre>
-  # 1280x1024 @ 85.00 Hz (GTF) hsync: 91.38 kHz; pclk: 159.36 MHz
-  Modeline "1280x1024_85.00"  159.36  1280 1376 1512 1744  1024 1025 1028 1075 -HSync +Vsync</pre></div>
-	<p>Put the synchronization ranges that contain the printed values. For the above
-	   example, this means that the following information should be added in the
-	   "Monitor" section:</p>
-<div class="cmd"><pre>
-  Section "Monitor"
-	Identifier	"Generic Monitor"
-	Option		"DPMS"
-	HorizSync	30-92   # because gtf said "hsync: 91.38 kHz"
-	VertRefresh	56-86   # because a 85 Hz mode has been requested
-	# the Modeline may also be pasted here
-  EndSection</pre></div>
-	<p>3.  In the Section "Screen", change the DefaultDepth and add the "Modes"
-	  line to SubSection "Display" with the proper color depth. If you added custom
-	  Modelines, you have to specify them exactly as defined, i.e. "1280x1024_85.00"
-	  in the example above. The built-in Modelines have names similar to "1024x768",
-	  without explicit specification of the refresh rate.</p>
-	<p>When you are finished editing /etc/X11/xorg.conf, run startx.</p>
+<p>Available packages on this CD for your use:</p>
 
-	<h2>Customizing the CD Contents</h2>
-	<p>It is possible to burn a customized version of the official Linux From
-	  Scratch LiveCD, with your own files added. To do that, follow the
-	  instructions in the <b>/root/lfscd-remastering-howto.txt</b> file.</p>
-	<h2>Auto-sshd</h2>
-	<p>It is possible to start the sshd daemon automatically upon boot. To do that,
-	  you have to customize the CD. Create the following files:</p>
-	<dl>
-	 <dt>/.autosshd</dt>
-    	   <dd>This is the file that indicates that the sshd daemon should be started automatically. It should be empty.</dd>
-	 <dt>/root/.ssh/authorized_keys</dt>
-    	   <dd>Add your public key to that file in order to be able to log in. Alternatively, modify /etc/shadow.</dd>
-	 <dt>/etc/shadow</dt>
-	   <dd>Edit this file if you want to allow root to login using a password via
-	       ssh. It is more secure to use public key based authentication instead.</dd>
-	 <dt>/etc/ssh/ssh_host_dsa_key, /etc/ssh/ssh_host_rsa_key</dt>
-    	   <dd>Create those files as described in the ssh-keygen(1) manual page. If you
-    	    don't do that, random host keys will be generated for you automatically
-     	    during the boot process. This is less secure, because you can't verify them.</dd>
-	 <dt>etc/sysconfig/network-devices/ifconfig.eth0</dt>
-   	   <dd>Configure a known static IP address there, as described in the LFS book,
-	    section "7.12. Configuring the network Script".</dd>
-	</dl>
-	<h2>Internationalization</h2>
-	<p>It is possible to specify the locale using the bootloader prompt, like this:</p>
-	<div class="cmd"><pre>  linux LANG=es_ES@euro</pre></div>
-	<p>The CD tries to guess the proper screen font and keymap based on this
-	   information. If the guess is wrong, you can override it by adding the
-	   following parameters:</p>
-  	  <p><b>KEYMAP:</b> specifies the console keymap(s) to load (actually the arguments to
-  	  the "loadkeys" program separated by the "+" sign), e.g:</p>
-	  <div class="cmd"><pre>  KEYMAP=es+euro1</pre></div>
-  	  <p><b>LEGACY_CHARSET:</b> sometimes a ready-made UTF-8 keymap is not available and
-  	  must be obtained by converting an existing keymap from this charset to UTF-8.
-  	  This parameter is not used in non-UTF-8 locales.
-  	  E.g.:</p>
-	  <div class="cmd"><pre>  LEGACY_CHARSET=iso-8859-15</pre></div>
-	  <p><b>FONT:</b> specifies the screen font to set (actually, the arguments to the
-  	  "setfont" program separated by the "+" sign), e.g:
-	  </p>
-	  <div class="cmd"><pre>  FONT=LatArCyrHeb-16+-m+8859-15</pre></div>
-  	  <p><b>XKEYMAP:</b> the keymap to use with X window system, e.g.:</p>
-	  <div class="cmd"><pre>  XKEYMAP=us</pre></div>
-	<p>Alternatively, these items can be configured interactively using dialog-based
-	  interface if the locale is not specified on the boot prompt.</p>
-	<p>For some locales (e.g. lv_LV.ISO-8859-13) there is no valid console keymap,
-	  but there is a keymap for X. In this case, the only solution is to use X.</p>
-	<p>While this CD configures the LANG environment variable, console font and
-	   keymap for you, it's your responsibility to configure other locale-dependent
-	   parameters manually. You may want to configure character sets for SAMBA in
-	   /etc/samba/smb.conf, and to explicitly specify the "iocharset" and "codepage"
-	   options when mounting filesystems with Windows origin (e.g., vfat and isofs).</p>
-	<p>The CD contains TrueType fonts that cover the orthography of most of European
-	   and some Asian languages. No additional configuration is required in order to
-	   use these fonts.</p>
-	<p>Use of this LiveCD with Chinese, Japanese or Korean language requires that
-	   your monitor has at least 80 pixels per inch in order for hieroglyphs to
-	   be recognizable (i.e., at least 12 pixels high). This means the following
-	   minimum resolution:</p>
-	<ul>
-    	 <li>15" => 1024x768</li>
-    	 <li>17" => 1024x768</li>
-    	 <li>19" => 1280x1024</li>
-	 <li>20" => 1280x1024</li>
-	</ul>
-	<p>If your monitor cannot handle such resolution, edit the
-	   /etc/X11/xinit/xserverrc file with vim, nano or joe, and add the -dpi 94
-	   parameter to the X server command line there.</p>
-	<h2>Braille Display Support</h2>
-	<p>The LiveCD includes the <b>brltty</b> program that allows a blind person to read
-	   the contents of Linux text console on a Braille display. In order to
-	   activate it:</p>
-	<ul>
-	  <li>Insert the CD into the drive, reboot the computer. The BIOS will produce
-  	  a beep, indicating successful power-on self-testing. Then it will load
-  	  the boot loader from the CD, and the boot loader will produce a second beep.</li>
-	  <li>After the second beep, type:</li>
-	</ul>
-	<div class="cmd"><pre>  linux brltty=eu,ttyS0</pre></div>
-	<p>This example assumes that the EuroBraille device is connected to the
-	first serial port. For other device types, the brltty parameter will
-	be different.</p>
-	<p>Note: in some locales, brltty displays incorrect Braille patterns. This is
-	related to the fact that Braille tables in brltty are indexed with
-	encoding-dependent byte representing the character. Such representation
-	becomes invalid when another encoding for the same language is used.
-	E.g., that's why the "ru" table (designed for KOI8-R encoding) produces
-	wrong result in the ru_RU.CP1251 locale.</p>
-	<p>Known non-working cases:</p>
-	<ul>
-	 <li>All CP1251-based locales (no CP1251 Braille table in brltty)
-	 </li>
-	 <li>zh_TW (configuration instructions available in Chinese only)
-	 </li>
-	 <li>All other Chinese, Japanese and Korean locales (no support in brltty)
-	 </li>
-	</ul>
-	<p>If brltty displays incorrect Braille patterns displays incorrect Braille
-	 patterns in your locale, please revert to the en_US locale, thus avoiding
-	 the use of non-ASCII characters. If you know how to fix this problem
-	 for your locale, mail this information to livecd@linuxfromscratch.org.
-	</p>
+<ul>
+<li><p>Web Tools</p>
 
-	<h2>Resuming a LFS Build</h2>
-	<p>There is a hint "How to resume your work after a break at different
-	LFS stages" available at:
-	<a href="http://www.linuxfromscratch.org/hints/downloads/files/stages-stop-and-resume.txt">
-	http://www.linuxfromscratch.org/hints/downloads/files/stages-stop-and-resume.txt</a>
-	Instructions from there should work on this CD, however, there is a simpler
-	(but highly experimental) method described below.</p>
+<ul>
+<li>wget (command line file retriever)</li>
+<li>curl (command line file retriever)</li>
+<li>lynx (text web browser)</li>
+<li>w3m (text web browser)</li>
+<li>irssi (console irc client)</li>
+<li>finch (multiprotocol console chat client &#8212; works in UTF-8 locales only)</li>
+<li>msmtp (SMTP client for use with mutt and tin)</li>
+<li>mutt (console email client)</li>
+<li>tin (console news reader)</li>
+</ul></li>
+<li><p>Text Editors</p>
 
-	<p>1.  Make sure you have (or are planning to create) a swap partition not used
-   	by other Linux systems installed on your hard drive. The text below assumes
-   	that /dev/hda2 is your (existing or planned) swap partition.
-	  </p>
+<ul>
+<li>vim</li>
+<li>nano</li>
+<li>joe</li>
+</ul></li>
+<li><p>Network Tools</p>
 
-	<p>Pass "resume=/dev/hda2" as one of the kernel arguments when booting this CD.
-   	I.e., the complete boot line may look as:</p>
+<ul>
+<li>SSH server &amp; client</li>
+<li>NFS server &amp; client</li>
+<li>Samba server &amp; client</li>
+<li>Subversion</li>
+<li>cvs</li>
+<li>pppd</li>
+<li>rp-pppoe</li>
+<li>pptp client</li>
+<li>dhcpcd</li>
+<li>ncftp</li>
+<li>traceroute</li>
+<li>rsync</li>
+</ul></li>
+<li><p>Filesystem Programs</p>
 
-	<div class="cmd"><pre>  linux LANG=ru_RU.UTF-8 TZ=Asia/Yekaterinburg resume=/dev/hda2</pre></div>
-	<p>3.  In chapter 2, the book tells you to create (if you didn't do it already),
-   	  format that partition with mkswap, and activate it with swapon. Follow the
-   	  instructions in the book.</p>
+<ul>
+<li>e2fsprogs</li>
+<li>reiserfsprogs</li>
+<li>reiser4progs</li>
+<li>xfsprogs</li>
+<li>dosfstools</li>
+<li>ntfsprogs</li>
+<li>jfsutils</li>
+</ul></li>
+<li><p>Debugging Programs</p>
 
-	<p>4.  If you use X window system, take the following into account:</p>
-	  <ul><li>Users of old S3 video cards should uncomment the "EnableVbetool" line
-    	    in the /etc/hibernate/common.conf file.</li>
-   	   <li>Hibernation is incompatible with the proprietary "nvidia" driver.</li>
-	  </ul>
-	<p>5.  Follow the book as your time permits.</p>
-	<p>6.  When your time runs out, execute the <b>hibernate</b> command as root. It is not
-        necessary to stop the compilation, but running this command during a
-        testsuite may lead to failures that would not occur otherwise.</p>
-	<p><em>NOTE: you must unmount all USB flash drives and all partitions used by other
-operating systems installed on your computer before hibernating! Don't
+<ul>
+<li>strace</li>
+</ul></li>
+<li><p>Boot Loaders</p>
+
+<ul>
+<li>grub</li>
+<li>lilo</li>
+</ul></li>
+<li><p>Other Programs</p>
+
+<ul>
+<li>distcc</li>
+<li>gpm (console mouse)</li>
+<li>pciutils</li>
+<li>mdadm</li>
+<li>LVM2</li>
+<li>dmraid</li>
+<li>kpartx</li>
+<li>hdparm</li>
+<li>parted</li>
+</ul></li>
+</ul>
+
+<p>This CD also includes jhalfs (a tool for extracting commands from the
+Linux From Scratch book and creating Makefiles that can download, check
+and build each LFS package for you.)</p>
+
+<p>You can compile other programs from sources directly on the CD. All locations
+on the CD can be written to (including /usr).</p>
+
+<h2>VMWARE ISSUE</h2>
+
+<p>This CD does not detect virtual SCSI disks connected to a virtual machine in
+VMware Workstation 5.x or earlier or VMware Server 1.0.3 or earlier. This is
+a known VMware bug. The solution is to upgrade to VMware Workstation >= 6.0 or
+VMware Server >= 1.0.4.</p>
+
+<p>The following workarounds help for older versions of VMware products:</p>
+
+<ul>
+<li><p>Choose &#8220;BusLogic&#8221; as the virtual SCSI controller type instead of the
+default &#8220;LSI Logic&#8221;.</p></li>
+<li><p>Pass the &#8220;mptbase.mpt_channel_mapping=1&#8221; option to the kernel command line.</p></li>
+</ul>
+
+<p>The same issue will be present on an LFS system built from this CD.</p>
+
+<h2>CONFIGURING NET CONNECTION</h2>
+
+<p>The LiveCD attempts to detect the network cards present in the system.
+On each detected network card, dhcpcd is automatically started in the
+background. If it is not correct to acquire the network settings via DHCP
+in your location, or if you want to use dialup or GPRS connection, run the
+&#8220;net-setup&#8221; command.</p>
+
+<p>If you don&#8217;t want the CD to start dhcpcd on the detected network cards,
+type &#8220;linux nodhcp&#8221; at the boot loader prompt. This may be required for
+wireless connections that utilize WEP or WPA encryption.</p>
+
+<h2>CUSTOMIZING THE CD CONTENTS</h2>
+
+<p>It is possible to burn a customized version of the official Linux From
+Scratch LiveCD, with changed default boot parameters and/or your own files
+added.</p>
+
+<p>To change the default boot arguments, follow these steps as root.</p>
+
+<ul>
+<li><p>Create directories:</p>
+
+<pre><code>export WORK=/mnt/lfslivecd
+mkdir -p $WORK/{orig,copy}
+</code></pre></li>
+<li><p>Copy all files except root.ext2 from the original image:</p>
+
+<pre><code>mount -t iso9660 -o loop lfslivecd-x86-6.3-r2145.iso $WORK/orig
+cp -a $WORK/orig/*/ $WORK/orig/README.html $WORK/copy/
+umount $WORK/orig
+</code></pre></li>
+<li><p>Copy the compressed root.ext2 file without uncompressing it:</p>
+
+<pre><code>mount -t iso9660 -o loop,norock lfslivecd-x86-6.3-r2145.iso $WORK/orig
+cp $WORK/orig/root.ext2 $WORK/copy/
+chmod 644 $WORK/copy/root.ext2
+umount $WORK/orig
+</code></pre></li>
+<li><p>Edit the boot loader configuration:</p>
+
+<pre><code># Append new kernel options to the "append" lines
+vim $WORK/copy/boot/isolinux/isolinux.cfg
+</code></pre></li>
+<li><p>Create the new LiveCD image:</p>
+
+<pre><code>mkisofs -z -R -l --allow-leading-dots -D -o \
+    lfslivecd-x86-6.3-r2145-custom.iso -b boot/isolinux/isolinux.bin \
+    -c boot/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table \
+    -V "lfslivecd-x86-6.3-r2145" $WORK/copy
+</code></pre></li>
+</ul>
+
+<p>[NOTE]
+You cannot change the volume label of the customized CD (i.e., the
+argument to the &#8220;-V&#8221; option) this way. The &#8220;-nosrc&#8221; suffix is not part of
+the volume label and should be left out, but &#8220;-min&#8221; should be preserved.</p>
+
+<p>To add or remove files, follow the instructions in the
+/root/lfscd-remastering-howto.txt file instead.</p>
+
+<h2>AUTOSSHD</h2>
+
+<p>It is possible to start the sshd daemon automatically upon boot. To do that,
+you have to customize the CD. Create the following files:</p>
+
+<p>/.autosshd:
+    This is the file that indicates that the sshd daemon should be
+    started automatically. It should be empty.</p>
+
+<p>/root/.ssh/authorized_keys:
+    Add your public key to that file in order to be able to log in.
+    Alternatively, modify /etc/shadow.</p>
+
+<p>/etc/shadow:
+    Edit this file if you want to allow root to login using a password via
+    ssh. It is more secure to use public key based authentication instead.</p>
+
+<p>/etc/ssh/ssh_host_dsa_key, /etc/ssh/ssh_host_rsa_key:
+    Create those files as described in the <em>ssh-keygen(1)</em> manual page. If you
+    do not do that, random host keys will be generated for you automatically
+    during the boot process. This is less secure, because you cannot verify
+    them.</p>
+
+<p>/etc/sysconfig/network-devices/ifconfig.eth0:
+    Configure a known static IP address there, as described in the LFS book,
+    section &#8220;7.12. Configuring the network Script&#8221;.</p>
+
+<h2>INTERNATIONALIZATION</h2>
+
+<p>It is possible to specify the locale using the bootloader prompt, like this:</p>
+
+<pre><code>linux LANG=es_ES@euro
+</code></pre>
+
+<p>For some locales (e.g. lv_LV.ISO-8859-13) there is no valid console keymap,
+but there is a keymap for X. In this case, the only solution is to use a CD
+with X.</p>
+
+<p>While this CD configures the &#8220;LANG&#8221; environment variable, console font and
+keymap for you, it is your responsibility to configure other locale-dependent
+parameters manually. You have to explicitly specify the &#8220;iocharset&#8221; and
+&#8220;codepage&#8221; options when mounting filesystems with Windows origin
+(e.g., vfat and isofs).</p>
+
+<h2>ACCESSIBILITY</h2>
+
+<p>The Live CD includes software (BRLTTY and speakup) that make the contents
+of the Linux text console accessible to visually-impaired users. This
+software is not started by default, and special boot parameters (documented
+below) are needed in order to use it.</p>
+
+<p>Unfortunately, the boot loader expects the parameters to be entered with
+US English keyboard layout, which is not familiar to non-US users, and they
+cannot see their mistakes. Thus, it is recommended for such users to
+customize default boot parameters of the CD as described above instead of
+trying to type them at the boot prompt.</p>
+
+<h3>BRAILLE DISPLAY SUPPORT</h3>
+
+<p>The LiveCD includes the &#8220;brltty&#8221; program that allows a blind person to read
+the contents of the Linux text console on a Braille display. In order to
+activate it, insert the CD into the drive, reboot the computer. Some BIOSes
+will produce a beep indicating successful power-on self-testing. If so, the
+boot loader will produce a second beep indicating the boot prompt is available.
+After that beep (first or second depending on if your computer normally beeps
+upon startup), type:</p>
+
+<pre><code>linux brltty=eu,ttyS0
+</code></pre>
+
+<p>[NOTE]
+This example assumes that the EuroBraille device is connected to the
+first serial port. For other device types, the &#8220;brltty&#8221; parameter will
+be different.</p>
+
+<p>[NOTE]
+In some locales, &#8220;brltty&#8221; displays incorrect Braille patterns. This is
+related to the fact that Braille tables in brltty are indexed with
+encoding-dependent bytes representing the character. Such representation
+becomes invalid when another encoding for the same language is used.
+E.g., that is why the &#8220;ru&#8221; table (designed for the KOI8-R encoding) produces
+wrong result in the ru_RU.CP1251 locale.</p>
+
+<h4>Known non-working cases</h4>
+
+<ul>
+<li><p>All CP1251-based locales (no CP1251 Braille table in &#8220;brltty&#8221;)</p></li>
+<li><p>All UTF-8 locales (kernel deficiency)</p></li>
+<li><p>zh_TW (configuration instructions available in Chinese only). If you use
+this locale, please send mail to <a href="&#109;&#97;&#105;&#x6C;&#116;&#x6F;:&#108;&#105;&#x76;&#x65;&#99;&#x64;&#64;&#108;&#x69;&#x6E;&#x75;&#x78;&#102;&#114;&#x6F;&#109;&#x73;&#99;&#x72;&#x61;&#116;&#x63;&#104;&#x2E;&#x6F;&#x72;&#x67;">&#108;&#105;&#x76;&#x65;&#99;&#x64;&#64;&#108;&#x69;&#x6E;&#x75;&#x78;&#102;&#114;&#x6F;&#109;&#x73;&#99;&#x72;&#x61;&#116;&#x63;&#104;&#x2E;&#x6F;&#x72;&#x67;</a>
+and help us add support for it.</p></li>
+<li><p>All other Chinese, Japanese and Korean locales (no support in &#8216;brltty&#8217;)</p></li>
+</ul>
+
+<p>If &#8216;brltty&#8217; displays incorrect Braille patterns in your locale, please revert
+to the en_US locale, thus avoiding the use of non-ASCII characters. If you
+know how to fix this problem for your locale, mail this information to
+<a href="&#x6D;&#x61;&#105;&#x6C;&#x74;&#111;:&#x6C;&#x69;v&#101;&#x63;&#100;&#64;&#x6C;&#105;&#110;&#x75;&#x78;&#x66;&#114;&#111;m&#x73;&#99;&#114;&#x61;&#x74;&#x63;h&#x2E;&#111;&#x72;&#103;">&#x6C;&#x69;v&#101;&#x63;&#100;&#64;&#x6C;&#105;&#110;&#x75;&#x78;&#x66;&#114;&#111;m&#x73;&#99;&#114;&#x61;&#x74;&#x63;h&#x2E;&#111;&#x72;&#103;</a>.</p>
+
+<h3>SPEECH OUTPUT WITH SPEAKUP</h3>
+
+<p>This CD includes a development version of Speakup (because no stable versions
+work with linux-2.6.22.x), as an alternative method that allows a blind person
+to access the contents of Linux console with the help of a hardware speech
+synthesizer or the &#8220;espeak&#8221; software text-to-speech engine. In order to
+activate it, insert the CD into the drive, reboot the computer. Some BIOSes
+will produce a beep indicating successful power-on self-testing. If so, the
+boot loader will produce a second beep indicating the boot prompt is available.
+After that beep (first or second depending on if your computer normally beeps
+upon startup), type:</p>
+
+<pre><code>linux speakup.synth=soft
+</code></pre>
+
+<p>[NOTE]
+This example assumes that the software text-to-speech engine has to be used.</p>
+
+<p>Hardware speech synthesizers are also supported. E.g., for a
+DoubleTalk LT/LiteTalk synthesizer connected to /dev/ttyS1, use the
+following command line:</p>
+
+<pre><code>linux speakup.synth=ltlk speakup.ser=2
+</code></pre>
+
+<p>Documentation on the official Speakup home page <a href="http://www.linux-speakup.org/">http://www.linux-speakup.org/</a>
+applies to the stable version of Speakup (2.0) and thus contains outdated
+information. Nevertheless, users that are new to Speakup should read it,
+keeping this fact in mind.</p>
+
+<p>The key user-visible differences between the included version of Speakup
+and Speakup 2.0 are listed below.</p>
+
+<ul>
+<li>Copying and pasting produces garbage characters and can crash the computer
+(use the &#8220;screen&#8221; program instead of the built-in copy-and-paste feature).</li>
+<li>Kernel parameters are renamed:
+<ul>
+<li>speakup_synth became speakup.synth, and the &#8220;sftsyn&#8221; synthesizer
+became &#8220;soft&#8221;;</li>
+<li>speakup_ser became speakup.ser, and serial ports are now numbered
+starting from 1, not from 0 (i.e., speakup_ser=1 became speakup.ser=2);</li>
+<li>speakup_quiet became speakup.quiet, valid values are 0 and 1;</li>
+<li>speakup_port became speakup.port.</li>
+</ul></li>
+<li>The /proc/speakup/synth interface does not exist.</li>
+</ul>
+
+<p>Speakup has been tested only with the en_US locale and may work incorrectly in
+other locales.</p>
+
+<h2>RESUMING THE BUILD</h2>
+
+<p>There is a hint &#8220;How to resume your work after a break at different
+-LFS stages&#8221; available at:</p>
+
+<p><a href="http://www.linuxfromscratch.org/hints/downloads/files/stages-stop-and-resume.txt">http://www.linuxfromscratch.org/hints/downloads/files/stages-stop-and-resume.txt</a></p>
+
+<p>Instructions from there should work on this CD, however, there is a simpler
+method (&#8220;hibernation&#8221;) described below.</p>
+
+<p>Make sure you have (or are planning to create) a swap partition not used
+by other Linux systems installed on your hard drive. The text below assumes
+that /dev/hda2 is your (existing or planned) swap partition.</p>
+
+<p>Pass &#8220;resume=/dev/hda2&#8221; as one of the kernel arguments when booting this CD.
+I.e., the complete boot line may look as:</p>
+
+<pre><code>linux LANG=ru_RU.UTF-8 TZ=Asia/Yekaterinburg resume=/dev/hda2
+</code></pre>
+
+<p>Alternatively, once the system is running, you can activate hibernation by
+echoing the major and minor numbers of the partition to &#8216;/sys/power/resume&#8217; as
+such:</p>
+
+<pre><code># ls -l /dev/hda2
+brw-rw---- 1 root disk 3, 2 2006-07-10 17:51 /dev/hda2
+# echo 3:2 &gt;/sys/power/resume
+</code></pre>
+
+<p>At this point, the system is up and running. If you do not already have a
+swap partition, or wish to create a new one, chapter 2 of the LFS book will
+show you how to create, format, and activate one.</p>
+
+<p>Follow the book as your time permits.</p>
+
+<p>When your time runs out, execute the &#8220;hibernate&#8221; command as root. It is not
+necessary to stop the compilation, but running this command during a
+testsuite may lead to failures that would not occur otherwise.</p>
+
+<p>[NOTE]
+You must unmount all USB flash drives and all partitions used by other
+operating systems installed on your computer before hibernating! Do not
 attempt to mount partitions used by a hibernated system from other systems
 (even read-only, because there is no true read-only mount on journaled
-filesystems)!</em></p>
-	<p>7.  The computer will save its state to your swap partition and power down.
-   	 This CD will remain in the drive.</p>
-	<p>8.  When you are ready to resume the build, boot this CD again and pass exactly
-         the same "vga=..." and "resume=..." arguments that you used earlier.</p>
-	<p>9.  The computer will load its state from the swap partition and behave as if
-	you didn't power it off at all (except breaking all network connections).
-	The build will automatically continue.</p>
-	<p>The procedure is a bit more complicated if your swap is on a LVM volume
-	or on software RAID. In this case, instead of passing the resume=... argument,
-	you should boot the CD as usual and make actions needed for the kernel to see
-	the swap device (for LVM, that's "vgchange -ay"). After doing that, note
-	the major and minor device number for that device (assigning persistent numbers
-	is highly recommended), and echo them to /sys/power/resume. E.g., for LVM:</p>
-<div class="cmd"><pre>
-  # ls -lL /dev/myvg/swap
-  brw------- 1 root root 254, 3 2006-07-10 17:51 /dev/myvg/swap
-  # echo 254:3 >/sys/power/resume
-</pre></div>
-	<p>In the case of the first boot, this will print an error, but store the device
-	numbers to be used for hibernation. Ignore the error and hibernate when needed.</p>
-	<p>On the second boot (i.e., after hibernating), this "echo" command will restore
-	the computer state from the swap device.</p>
+filesystems)!</p>
 
-	<h2>Automating a LFS Build</h2>
-	<p>This CD comes with the <b>jhalfs</b> tool that allows extracting commands from the
-	XML version of the LFS, HLFS or CLFS book into Makefiles and shell scripts. You can find
-	the jhalfs installation in the home directory of the "jhalfs" user, and the
-	XML LFS book is in /usr/share/LFS-BOOK-6.2-XML. In order to use jhalfs, you
-	have to:</p>
-	<ul>
-	 <li>create a directory for your future LFS system and mount a partition there</li>
-	 <li>change the ownership of that directory to the "jhalfs" user</li>
-	 <li>run "su - jhalfs" in order to become that user</li>
-	 <li>as user "jhalfs", follow the instructions in the jhalfs README file</li>
-	</ul>
-	<p>Note that this user already has the required sudo access.</p>
-	<h2>Thanks</h2>
-	<p>Many thanks to all whose suggestions, support and hard work have helped create
-	this CD.</p>
+<p>On some systems, hibernation refuses to work due to a broken ACPI
+implementation, with the following message in &#8220;dmesg | tail&#8221;  output:</p>
+
+<pre><code>acpi_pm_prepare does not support 4
+</code></pre>
+
+<p>Possible solutions:</p>
+
+<ol>
+<li><p>run the following command before hibernating the computer:</p>
+
+<pre><code>echo shutdown &gt;/sys/power/disk
+</code></pre></li>
+<li><p>disable ACPI completely by adding &#8220;acpi=off&#8221; to the kernel arguments.</p></li>
+</ol>
+
+<p>The computer will save its state to your swap partition and power down.
+This CD will remain in the drive.</p>
+
+<p>When you are ready to resume the build, boot this CD again and pass exactly
+the same &#8220;vga=&#8230;&#8221; and &#8220;resume=&#8230;&#8221; arguments that you used earlier.</p>
+
+<p>The computer will load its state from the swap partition and behave as if
+you did not power it off at all (except breaking all network connections).
+The build will automatically continue.</p>
+
+<p>The procedure is a bit more complicated if your swap is on an LVM volume
+or on software RAID. In this case, instead of passing the &#8216;resume=&#8230;&#8217; argument,
+you should boot the CD as usual and make actions needed for the kernel to see
+the swap device (for LVM, that is &#8220;vgchange -ay&#8221;). After doing that, note
+the major and minor device number for that device (assigning persistent numbers
+is highly recommended), and echo them to /sys/power/resume. E.g., for LVM:</p>
+
+<pre><code># ls -lL /dev/myvg/swap
+brw------- 1 root root 254, 3 2006-07-10 17:51 /dev/myvg/swap
+# echo 254:3 &gt;/sys/power/resume
+</code></pre>
+
+<p>In the case of the first boot, this will store the device numbers to be used
+for hibernation. On the second boot (i.e., after hibernating), this &#8220;echo&#8221;
+command will restore the computer state from the swap device.</p>
+
+<h2>AUTOMATING THE BUILD</h2>
+
+<p>This CD comes with the &#8220;jhalfs&#8221; tool that allows extracting commands from the
+XML version of the LFS or CLFS book into Makefiles and shell scripts. You can
+find the jhalfs installation in the home directory of the &#8220;jhalfs&#8221; user, and
+the XML LFS book is in /usr/share/LFS-BOOK-6.3-XML. In order to use jhalfs,
+you have to:</p>
+
+<ul>
+<li><p>create a directory for your future LFS system and mount a partition there</p></li>
+<li><p>change the ownership of that directory to the &#8220;jhalfs&#8221; user</p></li>
+<li><p>run &#8220;su - jhalfs&#8221; in order to become that user</p></li>
+<li><p>as user &#8220;jhalfs&#8221;, follow the instructions in the jhalfs README file</p></li>
+</ul>
+
+<p>This user already has the required root access (via &#8220;sudo&#8221;) to complete
+the build.</p>
+
+<h2>LOADING CD CONTENTS TO RAM</h2>
+
+<p>The CD works much faster if you load all its contents to RAM. As a bonus, you
+will be able to eject the CD immediately and use the CD-ROM drive for other
+purposes (e.g., for watching a DVD while compiling LFS).</p>
+
+<p>To load the CD contents to RAM, type &#8220;linux toram&#8221; at the boot prompt.</p>
+
+<p>The minimum required amount of RAM is 512 MB. If you have less than 768 MB of
+RAM, add swap when the CD boot finishes.</p>
+
+<p>[NOTE]
+In order to save RAM, sources and proprietary drivers are not loaded
+there. In order to access them, please mount this CD and look into
+/media/cdrom/sources and /media/cdrom/drivers.</p>
+
+<h2>BOOTING FROM ISO IMAGE</h2>
+
+<p>If you want to boot this CD on a computer without a CD-ROM drive, follow
+the steps below.</p>
+
+<p>Store the ISO image of this CD as a file on a partition formatted with
+one of the following filesystems:
+vfat, ntfs, ext2, ext3, ext4, jfs, reiserfs, reiser4, xfs</p>
+
+<p>Copy the boot/isolinux/{linux,initramfs_data.cpio.gz} files from the CD
+to your hard disk</p>
+
+<p>Configure the boot loader to load &#8220;linux&#8221; as a kernel image and
+&#8220;initramfs_data.cpio.gz&#8221; as an initrd. The following parameters have to
+be passed to the kernel:</p>
+
+<pre><code>rw root=iso:/dev/XXX:/path/to/lfslivecd.iso rootfstype=fs_type
+</code></pre>
+
+<p>where /dev/XXX is a partition where you stored the LiveCD image, and
+fs_type is the type of the filesystem on that partition. You may
+also want to add &#8220;rootflags=&#8230;&#8221; option if mounting this partition requires
+special flags.</p>
+
+<p>If there is only Windows on the target computer, please use grub4dos as a boot
+loader. It is available from <a href="http://sourceforge.net/projects/grub4dos">http://sourceforge.net/projects/grub4dos</a>.</p>
+
+<h2>MAKING A BOOTABLE USB DRIVE</h2>
+
+<p>Install GRUB on a flash drive, then follow instructions in the
+&#8220;BOOTING FROM ISO IMAGE&#8221; above, using a partition on your flash drive.
+The following tips will ensure that the flash drive is bootable in any
+computer:</p>
+
+<ul>
+<li><p>Use the persistent symlink such as &#8220;/dev/disk/by-uuid/890C-F46A&#8221; to identify
+the target partition.</p></li>
+<li><p>Add &#8220;rootdelay=20&#8221; to the kernel arguments.</p></li>
+</ul>
+
+<h2>BOOT OPTIONS</h2>
+
+<h3>AVAILABLE KERNELS</h3>
+
+<h4>linux</h4>
+
+<p>The default (32-bit on the x86 CD, 64-bit on the x86_64 CD) kernel.</p>
+
+<h4>linux64</h4>
+
+<p>On the x86 CD, this is the alternative (64-bit) kernel, for use with
+Cross-Compiled Linux From Scratch <a href="http://trac.cross-lfs.org/">http://trac.cross-lfs.org/</a>.</p>
+
+<p>Don&#8217;t use this kernel for building the regular version of LFS &#8212; it will fail,
+because the x86 CD does not contain a 64-bit capable compiler, and because
+the included book on the x86 CD does not support x86_64 yet.</p>
+
+<p>On the x86_64 CD, this is the same as the default kernel.</p>
+
+<p>After the kernel name, options may be specified, as in the following example:</p>
+
+<pre><code>linux LANG=ru_RU.UTF-8 TZ=Asia/Yekaterinburg UTC=1
+</code></pre>
+
+<p>See the list of available options below.</p>
+
+<h3>GRAPHICS AND SOUND</h3>
+
+<h4>vga=[resolution]</h4>
+
+<p>Examples:</p>
+
+<pre><code>vga=795 (1280x1024x24)   vga=792 (1024x768x24)   vga=789 (800x600x24)
+vga=794 (1280x1024x16)   vga=791 (1024x768x16)   vga=788 (800x600x16)
+</code></pre>
+
+<p>This parameter enables the framebuffer console.</p>
+
+<h4>volume=[volume]</h4>
+
+<p>Examples:</p>
+
+<pre><code>volume=50%
+volume=-15dB
+</code></pre>
+
+<p>Ths parameter sets the Master, Front and Headphone volume controls on all sound
+cards to the specified value. The default is 74%. PCM and similar controls are
+always set to 0dB, or, if the driver doesn&#8217;t know about dB, to 74%.</p>
+
+<h3>DATE AND TIME</h3>
+
+<h4>TZ=[timezone]</h4>
+
+<p>Examples:</p>
+
+<pre><code>TZ=EDT-4    TZ=America/New_York
+</code></pre>
+
+<p>The first example means that the timezone is named &#8220;EDT&#8221;
+and is 4 hours behind (west) of UTC.</p>
+
+<h4>UTC=[0,1]</h4>
+
+<p>Example:</p>
+
+<pre><code>UTC=1
+</code></pre>
+
+<p>Use UTC=1 if the hardware clock is set to UTC or
+use UTC=0 (default) if the hardware clock is set to local time.</p>
+
+<p>If no TZ parameter is passed at the kernel command line, the CD asks
+for the above settings during boot.</p>
+
+<h3>LOCALIZATION BASICS</h3>
+
+<h4>LANG=[locale]</h4>
+
+<p>Example:</p>
+
+<pre><code>LANG=fr_FR.UTF-8
+</code></pre>
+
+<p>If you don&#8217;t specify your locale at the boot prompt, a configuration dialog
+will appear later during boot.</p>
+
+<p>The CD attempts to guess the keymap and the screen font based on the LANG
+variable. If the default guess is wrong, you can override it, as described
+in the &#8220;FINE-TUNING LOCALIZATION&#8221; section below.</p>
+
+<p>UTF-8 locales don&#8217;t work well on Linux text console. Copying and pasting
+non-ASCII characters is impossible, as well as using dead keys for entering
+characters outside of the Latin-1 range of Unicode.</p>
+
+<p>UTF-8 locales don&#8217;t work at all with accessibility software (brltty and
+speakup) due to the same kernel limitation.</p>
+
+<h3>FINE-TUNING LOCALIZATION</h3>
+
+<h4>KEYMAP=[keymap]</h4>
+
+<p>Example:</p>
+
+<pre><code>KEYMAP=es+euro1
+</code></pre>
+
+<p>Specifies the console keymap(s) to load, separated by the &#8220;+&#8221; sign.</p>
+
+<h4>LEGACY_CHARSET=[charset]</h4>
+
+<p>Example:</p>
+
+<pre><code>LEGACY_CHARSET=iso-8859-15
+</code></pre>
+
+<p>Instructs the CD to convert an existing keymap from this charset to UTF-8
+with the &#8220;dumpkeys&#8221; program.</p>
+
+<h4>FONT=[screen_font]</h4>
+
+<p>Example:</p>
+
+<pre><code>FONT=LatArCyrHeb-16+-m+8859-15
+</code></pre>
+
+<p>Specifies the screen font to set (actually, the arguments to the &#8220;setfont&#8221;
+program, separated by the &#8220;+&#8221; sign).</p>
+
+<h3>ACCESSIBILITY: BRLTTY</h3>
+
+<h4>brltty=drv[,dev[,tbl]]</h4>
+
+<p>Example:</p>
+
+<pre><code>brltty=bm,usb:
+</code></pre>
+
+<p>Enables a refreshable Braille display supported by driver drv, connected to
+device dev, with a translation table tbl. The example specifies a BAUM
+SuperVario 40 Braille display connected viw USB with default Braille table.</p>
+
+<p>Available drivers:</p>
+
+<pre><code>al, at, bd, bl, bm, bn, cb, ec, eu, fs, ht, il,
+lt, mb, md, mn, pm, tn, ts, vd, vo, vr, vs.
+</code></pre>
+
+<p>Available tables:</p>
+
+<pre><code>brf, cz, da-1252, da-lt, da, de, en_UK, en_US, es,
+fi1, fi2, fr-2007, fr_CA, fr-cbifs, fr_FR, it, nabcc,
+no-h, no-p, pl, pt, ru, se-old, simple, visiob.
+</code></pre>
+
+<p>The charset of the selected locale must match the charset of the Braille table.</p>
+
+<p>BRLTTY is not compatible with UTF-8 locales.</p>
+
+<h3>ACCESSIBILITY: SPEAKUP</h3>
+
+<h4>speakup.synth=[syn]</h4>
+
+<p>Example:</p>
+
+<pre><code>speakup.synth=soft
+</code></pre>
+
+<p>Enables a speech synthesis engine syn. Available drivers: acntpc, acntsa,
+appolo, audptr, bns, decext, dectlk, dtlk, keypc, ltlk, soft, spkout, txprt.
+The &#8220;soft&#8221; driver uses Espeak to output sound through the first sound card.</p>
+
+<p>The GIT snapshot of speakup used on this CD has a known bug: copying and
+pasting text produces garbage and even can crash the computer. For copying
+and pasting text between programs, please use the &#8220;screen&#8221; terminal emulator
+instead of this buggy built-in feature of speakup.</p>
+
+<h4>speakup.ser=[index]</h4>
+
+<p>Example:</p>
+
+<pre><code>speakup.ser=2
+</code></pre>
+
+<p>One-based serial port index to use with a hardware synth. The example above
+means that /dev/ttyS1 will be used.</p>
+
+<h4>speakup.port=[port]</h4>
+
+<p>A port address to use with speakup.</p>
+
+<h3>MODULE HANDLING</h3>
+
+<h4>load=module1,module2,&#8230;</h4>
+
+<p>Example:</p>
+
+<pre><code>load=ide-generic
+</code></pre>
+
+<p>Loads the specified modules unconditionally from initramfs. Use if your SCSI
+or IDE controller is not autodetected. If you don&#8217;t specify this parameter
+and the CD doesn&#8217;t detect your SCSI or IDE controller, you will be dropped
+into a debugging shell where you can load the needed module manually.</p>
+
+<h4>blacklist=module1,module2,&#8230;</h4>
+
+<p>Example:</p>
+
+<pre><code>blacklist=yenta-socket
+</code></pre>
+
+<p>Prevents the specified modules from being autoloaded. Use if udev autoloads
+a module that causes your computer to misbehave (e.g., crash or freeze).</p>
+
+<h4>module.option=value</h4>
+
+<p>Example:</p>
+
+<pre><code>psmouse.proto=bare
+</code></pre>
+
+<p>Sets arbitrary module options.</p>
+
+<h3>ALTERNATIVE DRIVERS</h3>
+
+<p>Options in this section do not take parameters. Example:</p>
+
+<pre><code>pata new_firewire
+</code></pre>
+
+<h4>pata</h4>
+
+<p>Causes the CD to use new libata-based drivers for IDE controllers. This option
+may be required for controller detection or recommended for optimal performance
+on computers manufactured in year 2006 and later.</p>
+
+<p>Caution: new drivers are safe to use only with IDE chipsets from AMD, Intel,
+ITE, JMicron, Marvell, Netcell, NVIDIA, Serverworks, Promise, Silicon Image,
+VIA, or Winbond. Drivers for other chipsets are likely to contain bugs that
+lead to data loss.</p>
+
+<h4>new_firewire</h4>
+
+<p>Uses the new (experimental) Juju FireWire stack.</p>
+
+<h4>all_generic_ide</h4>
+
+<p>Attempts to support unknown PCI IDE and SATA controllers (slow).
+For SATA support to work with this option, the SATA controller
+must be put into &#8220;Legacy&#8221; (as opposed to &#8220;Native&#8221;) mode in the BIOS.</p>
+
+<h3>TROUBLESHOOTING</h3>
+
+<h4>debug</h4>
+
+<p>Displays kernel messages during the boot process.</p>
+
+<h4>rootdelay=X</h4>
+
+<p>Example:</p>
+
+<pre><code>rootdelay=20
+</code></pre>
+
+<p>Waits X seconds before attempting to find the CD. Required (with X=20)
+for booting from USB or FireWire CD-ROMs.</p>
+
+<h4>nodhcp</h4>
+
+<p>Prevents the CD from attempting to obtain an IP address automatically.
+May be required for wireless networking, because the WEP or WPA key
+needs to be set up first.</p>
+
+<h4>Options for buggy motherboards</h4>
+
+<p>Example:</p>
+
+<pre><code>nomsi noapic nolapic pci=noacpi acpi=off clock=pit ide=nodma
+</code></pre>
+
+<p>These options work around various chipset bugs. Try them one-by-one in the
+order given above and in various combinations if the CD does not boot, or if
+a device does not work correctly or fails after hibernating and resuming.
+If this helps, the bug is in the hardware or the BIOS, not in this CD.</p>
+
+<h2>THANKS</h2>
+
+<p>Many thanks to all whose suggestions, support and hard work have helped create
+this CD.</p>
 
 <!--#include virtual="/common/footer.html" -->
 

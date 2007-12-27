@@ -5,37 +5,26 @@
       <h1>LiveCD News</h1>
          <p>|&nbsp;<a href="/livecd/feed.rss">RSS Feed</a>&nbsp;|</p>
          <dl class="newsItem">
-           <dt>LiveCD Version x86-6.2-3 Released</dt>
-           <dd><em>Alexander E. Patrakov - 2006/09/09</em>
-             <p>The LFS LiveCD Team is proud to announce the release of the x86-6.2-3
-                version of the LFS LiveCD. This version is built using LFS 6.2 and many
-                BLFS packages from the SVN branch. Source packages for LFS 6.2, and the
-                LFS book itself, are included on the LiveCD. The CD is also suitable as 
-                a host for building x86 and x86_64 CLFS systems. Other features and bugfixes:</p>
-             <p>* The CD supports hibernation, AKA software suspend, or suspend-to-disk.
-                  This allows to save the system state to a swap partition and turn the
-                  computer off. The saved state can be completely restored later.</p>
-             <p>* The CD filesystem can be written to. The changes actually go to RAM
-                  and don't survive a reboot (but do survive hibernation).</p>
-             <p>* The CD contains a visually pleasing and easy to use window manager,
-                  Xfce.</p>
-             <p>* jhalfs-1.0, a system for autobuilding LFS according to the book, is
-                  included.</p>
-             <p>* Added Italian locals on the language configuration screen</p>
-             <p>* Now it is possible to boot even if a different CD is inserted in another drive.</p>
-             <p>* The CD no longer prints a warning about the network configuration when hibernating.</p>
-             <p>* Irssi now in understands the "/charset" command as an alias of "/recode add". So,
-                only GAIM doesn't understand this command now on the CD.</p>
-             <p>* Lilo has been upgraded to a version that has the device mapper patch integrated.</p>
-             <p>* Keymap configuration: fixed English (GB), added Dutch (Belgium).</p>
-             <p>* Xfsprogs now works.</p>
-             <p>* The cpqarray driver is now functional (the official fix is scheduled for 2.6.16.29).</p>
-             <p>* Reiser4 filesystem support in GRUB.</p>
-             <p>* The loop-AES driver is included in the kernel.</p>
-             <p>Please mail any comments to the LFS LiveCD mailing list.</p>
+           <dt>LiveCD Version 6.3-r2145 Released</dt>
+           <dd><em>Alexander E. Patrakov - 2007/11/30</em>
+             <p>The LFS LiveCD Team is proud to announce the release of the 6.3-r2145
+                version of the LFS LiveCD for x86 and x86_64 architectures.
+		The CD contains the LFS book (version 6.3 for x86 CD, and its unofficial
+		x86_64 equivalent for x86_64), and a lot of software that you need to
+		build your own LFS system, ask for support and perform various
+		recovery tasks. For each architecture, the CD is available in
+		-min, -nosrc and full variants.
+		The -min CD contains only a text-mode environment, -nosrc adds the
+		X window system and the Xfce desktop, while the full CD also contains
+		all LFS source tarballs.
+		All of the above variants are suitable as hosts for building x86
+		and x86_64 LFS and CLFS systems.</p>
+	     <p>More information about this CD is available at the
+	        <a href="/livecd/documentation.html">documentation</a> page.</p>
              <p>To download the new LiveCD, visit the LFS LiveCD
                 <a href="/livecd/download.html">download page</a>
                 for a list of mirrors.</p>
+             <p>Please mail any comments to the LFS LiveCD mailing list.</p>
            </dd>
          </dl>
       <h2>Latest SVN Changes</h2>
