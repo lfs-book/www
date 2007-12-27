@@ -10,6 +10,8 @@
 <p>Available packages on this CD for your use:</p>
 
 <ul>
+<li><p>Xorg (X Window System Environment)</p></li>
+<li><p>Xfce desktop environment</p></li>
 <li><p>Web Tools</p>
 
 <ul>
@@ -18,6 +20,9 @@
 <li>lynx (text web browser)</li>
 <li>w3m (text web browser)</li>
 <li>irssi (console irc client)</li>
+<li>seamonkey (graphical web browser, mail and news reader and irc client)</li>
+<li>xchat (x-based irc client)</li>
+<li>pidgin (multiprotocol x-based chat client)</li>
 <li>finch (multiprotocol console chat client &#8212; works in UTF-8 locales only)</li>
 <li>msmtp (SMTP client for use with mutt and tin)</li>
 <li>mutt (console email client)</li>
@@ -80,6 +85,7 @@
 <li>kpartx</li>
 <li>hdparm</li>
 <li>parted</li>
+<li>xlockmore</li>
 </ul></li>
 </ul>
 
@@ -118,6 +124,91 @@ in your location, or if you want to use dialup or GPRS connection, run the
 <p>If you don&#8217;t want the CD to start dhcpcd on the detected network cards,
 type &#8220;linux nodhcp&#8221; at the boot loader prompt. This may be required for
 wireless connections that utilize WEP or WPA encryption.</p>
+
+<h2>CONFIGURING X</h2>
+
+<p>The LiveCD attempts to configure X for your video card automatically. The
+process may fail if you have more than one video card, if your video card
+does not support 24-bit color depth, or if your monitor is not Plug-n-Play
+compatible (in other words, does not tell its characteristics to Xorg via DDC).
+In such cases, you have to edit the /etc/X11/xorg.conf file manually, using
+vim, joe or nano, as described below.</p>
+
+<p>In Section &#8220;Device&#8221;, specify the driver for your video card, e.g.:</p>
+
+<pre><code>Section "Device"
+    Identifier      "Generic Video Card"
+    Driver          "vesa"
+EndSection
+</code></pre>
+
+<p>In Section &#8220;Monitor&#8221;, specify the allowed frequency ranges for your
+monitor. If unsure, consult the manual that came with your monitor. If
+such information is not there, but you know a working resolution and refresh
+rate, run the &#8220;gtf&#8221; command. E.g., if your monitor can handle 1280x1024@85Hz:</p>
+
+<pre><code>$ gtf 1280 1024 85
+</code></pre>
+
+<p>[NOTE]
+You must specify the refresh rate of 60 Hz for VGA-connected LCD monitors.</p>
+
+<p>Then look at the output:</p>
+
+<pre><code># 1280x1024 @ 85.00 Hz (GTF) hsync: 91.38 kHz; pclk: 159.36 MHz
+Modeline "1280x1024_85.00"  159.36  1280 1376 1512 1744  1024 1025 1028 1075 -HSync +Vsync
+</code></pre>
+
+<p>Put the synchronization ranges that contain the printed values. For the above
+example, this means that the following information should be added in the
+&#8220;Monitor&#8221; section:</p>
+
+<pre><code>Section "Monitor"
+    Identifier  "Generic Monitor"
+    Option      "DPMS"
+    # Option    "NoDDC" # for broken monitors that
+                # report max dot clock = 0 MHz
+    HorizSync   30-92   # because gtf said "hsync: 91.38 kHz"
+    VertRefresh 56-86   # because an 85 Hz mode has been requested
+    # the Modeline may also be pasted here
+    Option "PreferredMode" "1280x1024_85.00" # only for the "intel" driver
+EndSection
+</code></pre>
+
+<p>In the Section &#8220;Screen&#8221;, change the DefaultDepth and add the &#8220;Modes&#8221;
+line to SubSection &#8220;Display&#8221; with the proper color depth. If you added custom
+Modelines, you have to specify them exactly as defined, i.e. &#8220;1280x1024_85.00&#8221;
+in the example above. The built-in Modelines have names similar to &#8220;1024x768&#8221;,
+without explicit specification of the refresh rate.</p>
+
+<p>When you are finished editing /etc/X11/xorg.conf, run &#8220;startx&#8221;.</p>
+
+<h2>PROPRIETARY VIDEO DRIVERS</h2>
+
+<p>The CD contains pre-built proprietary video drivers in the /drivers directory
+(if you loaded the CD contents to RAM, you have to mount the CD and look into
+/media/cdrom/drivers instead). They are never selected by default by the
+autoconfiguration process. Here is how to enable them.</p>
+
+<h3>NVIDIA</h3>
+
+<pre><code>cd /drivers
+tar -C / -xf NVIDIA-Linux-[userspace_arch]-[version]-glx.tgz
+tar -C / -xf NVIDIA-Linux-[kernel_arch]-[version]-kernel-[kernel_version].tgz
+depmod -ae
+ldconfig
+vim /etc/X11/xorg.conf   # use the "nvidia" driver instead of "vesa" or "nv"
+</code></pre>
+
+<h3>FGLRX</h3>
+
+<pre><code>cd /drivers
+tar -C / -xf fglrx-x710-[version]-[userspace_arch]-1.tgz
+tar -C / -xf fglrx-module-[version]-[kernel_arch]-1_kernel_[kernel_version].tgz
+depmod -ae
+ldconfig
+vim /etc/X11/xorg.conf   # use the "fglrx" driver instead of "vesa" or "ati"
+</code></pre>
 
 <h2>CUSTOMIZING THE CD CONTENTS</h2>
 
@@ -203,14 +294,32 @@ you have to customize the CD. Create the following files:</p>
 </code></pre>
 
 <p>For some locales (e.g. lv_LV.ISO-8859-13) there is no valid console keymap,
-but there is a keymap for X. In this case, the only solution is to use a CD
-with X.</p>
+but there is a keymap for X. In this case, the only solution is to use X.</p>
 
 <p>While this CD configures the &#8220;LANG&#8221; environment variable, console font and
 keymap for you, it is your responsibility to configure other locale-dependent
 parameters manually. You have to explicitly specify the &#8220;iocharset&#8221; and
 &#8220;codepage&#8221; options when mounting filesystems with Windows origin
 (e.g., vfat and isofs).</p>
+
+<p>The CD contains TrueType fonts that cover the orthography of most of European
+and some Asian languages. No additional configuration is required in order to
+use these fonts.</p>
+
+<p>Use of this LiveCD with Chinese, Japanese or Korean language requires that
+your monitor has at least 80 pixels per inch in order for hieroglyphs to
+be recognizable (i.e., at least 12 pixels high). This means the following
+minimum resolution:</p>
+
+<pre><code>15"  =&gt;    1024x768
+17"  =&gt;    1024x768
+19"  =&gt;   1280x1024
+20"  =&gt;   1280x1024
+</code></pre>
+
+<p>If your monitor cannot handle such resolution, edit the
+/etc/X11/xinit/xserverrc file with vim, nano or joe, and add the &#8220;-dpi 94&#8221;
+parameter to the X server command line there.</p>
 
 <h2>ACCESSIBILITY</h2>
 
@@ -257,7 +366,7 @@ wrong result in the ru_RU.CP1251 locale.</p>
 <li><p>All CP1251-based locales (no CP1251 Braille table in &#8220;brltty&#8221;)</p></li>
 <li><p>All UTF-8 locales (kernel deficiency)</p></li>
 <li><p>zh_TW (configuration instructions available in Chinese only). If you use
-this locale, please send mail to <a href="&#109;&#97;&#105;&#x6C;&#116;&#x6F;:&#108;&#105;&#x76;&#x65;&#99;&#x64;&#64;&#108;&#x69;&#x6E;&#x75;&#x78;&#102;&#114;&#x6F;&#109;&#x73;&#99;&#x72;&#x61;&#116;&#x63;&#104;&#x2E;&#x6F;&#x72;&#x67;">&#108;&#105;&#x76;&#x65;&#99;&#x64;&#64;&#108;&#x69;&#x6E;&#x75;&#x78;&#102;&#114;&#x6F;&#109;&#x73;&#99;&#x72;&#x61;&#116;&#x63;&#104;&#x2E;&#x6F;&#x72;&#x67;</a>
+this locale, please send mail to <a href="&#x6D;&#97;&#x69;&#x6C;&#x74;&#111;:&#108;&#105;v&#x65;&#99;&#x64;&#64;li&#x6E;&#x75;x&#102;&#114;&#111;&#x6D;s&#99;&#114;&#x61;&#x74;c&#x68;&#x2E;&#111;&#x72;g">&#108;&#105;v&#x65;&#99;&#x64;&#64;li&#x6E;&#x75;x&#102;&#114;&#111;&#x6D;s&#99;&#114;&#x61;&#x74;c&#x68;&#x2E;&#111;&#x72;g</a>
 and help us add support for it.</p></li>
 <li><p>All other Chinese, Japanese and Korean locales (no support in &#8216;brltty&#8217;)</p></li>
 </ul>
@@ -265,7 +374,7 @@ and help us add support for it.</p></li>
 <p>If &#8216;brltty&#8217; displays incorrect Braille patterns in your locale, please revert
 to the en_US locale, thus avoiding the use of non-ASCII characters. If you
 know how to fix this problem for your locale, mail this information to
-<a href="&#x6D;&#x61;&#105;&#x6C;&#x74;&#111;:&#x6C;&#x69;v&#101;&#x63;&#100;&#64;&#x6C;&#105;&#110;&#x75;&#x78;&#x66;&#114;&#111;m&#x73;&#99;&#114;&#x61;&#x74;&#x63;h&#x2E;&#111;&#x72;&#103;">&#x6C;&#x69;v&#101;&#x63;&#100;&#64;&#x6C;&#105;&#110;&#x75;&#x78;&#x66;&#114;&#111;m&#x73;&#99;&#114;&#x61;&#x74;&#x63;h&#x2E;&#111;&#x72;&#103;</a>.</p>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;:&#108;iv&#101;&#x63;&#x64;&#64;&#x6C;&#105;&#x6E;&#x75;&#120;&#x66;&#x72;&#x6F;&#x6D;&#115;&#99;&#114;&#97;&#x74;&#x63;&#x68;&#46;&#x6F;&#114;g">&#108;iv&#101;&#x63;&#x64;&#64;&#x6C;&#105;&#x6E;&#x75;&#120;&#x66;&#x72;&#x6F;&#x6D;&#115;&#99;&#114;&#97;&#x74;&#x63;&#x68;&#46;&#x6F;&#114;g</a>.</p>
 
 <h3>SPEECH OUTPUT WITH SPEAKUP</h3>
 
@@ -350,6 +459,14 @@ brw-rw---- 1 root disk 3, 2 2006-07-10 17:51 /dev/hda2
 <p>At this point, the system is up and running. If you do not already have a
 swap partition, or wish to create a new one, chapter 2 of the LFS book will
 show you how to create, format, and activate one.</p>
+
+<p>If you use the X window system, take the following into account:</p>
+
+<ul>
+<li><p>Users of old S3 video cards should uncomment the &#8220;EnableVbetool&#8221; line
+ in the /etc/hibernate/common.conf file.</p></li>
+<li><p>Hibernation is incompatible with the proprietary &#8220;nvidia&#8221; driver.</p></li>
+</ul>
 
 <p>Follow the book as your time permits.</p>
 
@@ -518,6 +635,12 @@ vga=794 (1280x1024x16)   vga=791 (1024x768x16)   vga=788 (800x600x16)
 
 <p>This parameter enables the framebuffer console.</p>
 
+<p>It has nothing to do with X server resolution (to set it, edit
+/etc/X11/xorg.conf manually after booting). Also, it causes some X video
+drivers (e.g., &#8220;s3virge&#8221;) to malfunction.</p>
+
+<p>X server bug reports will be ignored if you use this option.</p>
+
 <h4>volume=[volume]</h4>
 
 <p>Examples:</p>
@@ -608,6 +731,15 @@ with the &#8220;dumpkeys&#8221; program.</p>
 
 <p>Specifies the screen font to set (actually, the arguments to the &#8220;setfont&#8221;
 program, separated by the &#8220;+&#8221; sign).</p>
+
+<h4>XKEYMAP=[keymap1,keymap2]</h4>
+
+<p>Example:</p>
+
+<pre><code>XKEYMAP=us,ru(winkeys)
+</code></pre>
+
+<p>Keymap(s) for X window system. To switch between them, press Alt+Shift.</p>
 
 <h3>ACCESSIBILITY: BRLTTY</h3>
 
