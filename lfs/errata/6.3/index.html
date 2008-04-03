@@ -19,28 +19,17 @@
 
      END TEMPLATE -->
 
-       <p>There are no current errata items for LFS 6.3</p>
-<!--
        <h2>Miscellaneous Errata</h2>
          <ul>
-           <li><p>A new version of Shadow has been released, changing the
-           location of the tarball used in LFS-6.2. The 4.0.15
-           version can be downloaded from <a
-           href="ftp://ftp.pld.org.pl/software/shadow/old/">
-           ftp://ftp.pld.org.pl/software/shadow/old/</a>.
-           </p></li>
-           <li><p>Glibc-2.3.6 expects that /bin/sh is `bash' and uses some
-           `bash' specific syntax in the Makefiles. On some hosts, such as
-           Ubuntu, this is not the case and the Chapter 5 glibc build can
-           fail. To work around the problem, add SHELL=/bin/bash to all the
-           `make' commands. For instance, `make install' would become
-           `make install SHELL=/bin/bash'. This is not a problem in Chapter
-           6 where /bin/sh is `bash'.
-           </p></li>
-           <li><p>Bison is missing from the Host Requirements. This is needed
-           for Bash in section 5.14. Version 1.875 is the minimum required
-           version of Bison.
+           <li><p>Beginning with E2fsprogs-1.40.5, the command mke2fs can now
+	   produce filesystems with 256-byte inodes. Grub cannot read such
+	   filesystems by default, so if you create such a file system with
+	   the host machine's newer E2fsprogs, you will see an error when
+	   running Grub. The following patch for Grub addresses this issue:<a
+           href="http://www.linuxfromscratch.org/patches/downloads/grub/grub-0.97-256byte_inode-1.patch">
+           http://www.linuxfromscratch.org/patches/downloads/grub/grub-0.97-256byte_inode-1.patch</a>.
+	   For more information see: <a href="http://wiki.linuxfromscratch.org/lfs/ticket/2161">
+	   this ticket</a>.
            </p></li>
          </ul>
--->
 <!--#include virtual="/common/footer.html" -->
