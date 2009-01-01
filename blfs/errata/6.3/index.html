@@ -49,6 +49,15 @@
              <code>gunzip /usr/share/pci.ids.gz</code>
             
            </li>
+
+           <li>
+             <p>When building SANE, make sure that non-scanner USB devices 
+             (e.g., hubs) in /dev/bus/usb have 0664 permissions (i.e., are 
+             readable), because otherwise scanner access will fail. This
+             requires modification of the 25-lfs.rules file in 
+             /etc/udev/rules.d installed bu LFS 6.3.</p>
+           </li>
+
          </ul>
 
 <!--     END TEMPLATE -->
