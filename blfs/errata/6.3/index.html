@@ -53,9 +53,10 @@
            <li>
              <p>When building SANE, make sure that non-scanner USB devices 
              (e.g., hubs) in /dev/bus/usb have 0664 permissions (i.e., are 
-             readable), because otherwise scanner access will fail. This
+             readable), otherwise scanner access will fail. This
              requires modification of the 25-lfs.rules file in 
-             /etc/udev/rules.d installed bu LFS 6.3.</p>
+             /etc/udev/rules.d installed by LFS 6.3.  To do this, 
+             add a MODE="0664" to the line that starts with SUBSYSTEM=="usb".</p>
            </li>
 
          </ul>
