@@ -24,7 +24,7 @@
 
          <!-- <li>There are no current errata items for LFS 6.4.</li> -->
 
-           <li><b>SECURITY UPDATE.</b> 
+           <li><p><b>SECURITY UPDATE.</b> 
            Two vulnerabilities in udev-130 have recently come to light, labelled
            as CVE-2009-118{5,6}.  The first applies to ALL previous versions of
            udev, and allows a local user to gain root privileges by passing
@@ -33,6 +33,12 @@
            overflow.  The patch for udev-130 is found at:
 
            <a href="http://www.linuxfromscratch.org/patches/downloads/udev/udev-130-security_fixes-1.patch">http://www.linuxfromscratch.org/patches/downloads/udev/udev-130-security_fixes-1.patch</a>
+           </p>
+
+           <p>Apply the patch after extracting the udev tarball with:<br/>
+           patch -Np1 -i ../udev-130-security_fixes-1.patch<br/>
+           and continue with the instructions in the book.
+           </p>
 
            </li>
 
