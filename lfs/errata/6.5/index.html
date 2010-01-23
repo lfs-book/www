@@ -29,5 +29,14 @@
          of a future version of <em>Ncurses</em>, but it is not currently
          installed.</p> </li>
 
+         <li><p>At the end of section 6.31.1, Installation of Inetutils, there are
+         several additional programs that should be moved to their FHS
+         compliant location.  The fragment should read as follows.</p>
+
+         <p>Move some programs to their FHS-compliant place:</p>
+
+         <pre><kbd>mv -v /usr/bin/{hostname,ping,ping6} /bin
+         mv -v /usr/bin/traceroute /sbin</kbd></pre></li>
+
          </ul>
 <!--#include virtual="/common/footer.html" -->
