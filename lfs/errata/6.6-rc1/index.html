@@ -1,0 +1,81 @@
+<!--#set var="pageTitle" value="LFS Errata" -->
+<!--#include virtual="/lfs/header.html" -->
+<!--#include virtual="/lfs/menu.html" -->
+    <div class="main">
+     <h1>Errata for the 6.5-rc1 Version of the LFS Book</h1>
+
+<!-- TEMPLATE
+       <h2>Known Security Vulnerabilities</h2>
+         <ul>
+            <li><p>Item 1</p></li>
+            <li><p>Item 2</p></li>
+         </ul>
+
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+           <li><p>Item 1</p></li>
+           <li><p>Item 2</p></li>
+         </ul>
+
+     END TEMPLATE -->
+
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+
+           <li>There are no current errata items for LFS 6.5-rc1.</li> 
+<!--
+           <li><p><b>SECURITY UPDATE.</b> 
+           Two vulnerabilities in udev-130 have recently come to light, labelled
+           as CVE-2009-118{5,6}.  The first applies to ALL previous versions of
+           udev, and allows a local user to gain root privileges by passing
+           unicast messages to udev.  The second only applies to more-recent
+           versions of udev, and is a potential denial of service from a buffer
+           overflow.  The patch for udev-130 is found at:
+
+           <a href="http://www.linuxfromscratch.org/patches/downloads/udev/udev-130-security_fixes-1.patch">http://www.linuxfromscratch.org/patches/downloads/udev/udev-130-security_fixes-1.patch</a>
+           </p>
+
+           <p>Apply the patch after extracting the udev tarball with:<p/>
+          
+           <p style="margin-left:2em"><b>patch -Np1 -i ../udev-130-security_fixes-1.patch</b></p>
+           
+           <p>and continue with the instructions in the book. </p>
+
+           </li>
+
+
+           <li>
+         
+             <p>In section 3.2, All Packages, the location of the Glibc snapshot
+             is no longer available at the location specified in the book.
+             The specified version can be found at 
+             <a href="ftp://ftp.lfs-matrix.net/pub/lfs/lfs-packages/development/glibc-2.8-20080929.tar.bz2">
+             ftp://ftp.lfs-matrix.net/pub/lfs/lfs-packages/development/glibc-2.8-20080929.tar.bz2</a>.</p>
+           
+             <p>In section 3.2, All Packages, the location of MPFR
+             is no longer available at the location specified in the book.
+             The specified version can be found at <a href=" 
+             http://www.mpfr.org/mpfr-2.3.2/mpfr-2.3.2.tar.bz2">
+             http://www.mpfr.org/mpfr-2.3.2/mpfr-2.3.2.tar.bz2.</a></p>
+           
+           </li> 
+
+           <li>
+         
+             <p>In section 5.21, Gawk-3.1.6, the paragraph starting 
+             "Compilation is now complete." should be after the make command.</p>
+
+             <p>In the same section the sentence that reads "The is necessary..."
+             should read :This is necessary...".</p>
+         
+           </li> 
+
+           <li>
+         
+             <p>In section 6.20, M4-1.4.12, the -enable-threads switch should be 
+             removed.  The tests in 'make check' are properly skipped.</p>
+
+           </li> 
+-->
+         </ul>
+<!--#include virtual="/common/footer.html" -->
