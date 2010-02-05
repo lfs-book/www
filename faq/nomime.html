@@ -1,0 +1,2546 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<!-- base href="http://expita.com.wstub.archive.org/nomime.html" -->
+
+
+  <meta name="MSSmartTagsPreventParsing" content="TRUE">
+  <meta name="robots" content="index,follow,all">
+  <meta name="keywords" content="e-mail, email">
+  <meta name="DISTRIBUTION" content="global">
+  <meta name="rating" content="General">
+  <meta name="revisit-after" content="30 days">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <meta name="Description" content="Configure e-mail programs to send plain ASCII text"><title>Configuring Mail Clients to Send Plain ASCII Text</title><!-- Copyright (c) 1998-2004 G.E.Boyd --></head><body alink="#ff0000" bgcolor="#ffffff" link="#0000ff" text="#000000" vlink="#ff0000">
+
+<blockquote>
+  <hr>
+  <h1>Configuring Mail Clients to Send Plain ASCII Text</h1>
+
+  <h2><a name="Index">Index (5 topics)</a></h2>
+
+  <ul>
+   <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#intro">Introduction</a>   </li>
+    <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#programs">E-mail client programs</a>   </li>
+    <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#suggest">Suggestions for HTML users</a>   </li>
+    <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#examples">Examples of HTML/MIME messages</a>   </li>
+    <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#refer">References</a>   </li>
+  </ul>
+
+  <hr title="Introduction">
+  <h2><a name="intro"></a>What is wrong with sending HTML or MIME messages?</h2>
+
+  <p>There are now <b>six</b> main reasons for <b>NOT</b>
+doing  this: </p>
+
+  <ol>
+ <li>Many E-mail and Usenet News reader programs, usually
+  the mail and news reader programs that come with browser packages,  allow
+users to include binary attachments (MIME or other encoding)  or HTML (normally
+found on web pages) within their E-mail messages.    This makes
+URLs into clickable links and it means   that graphic images, formatting,
+and even color coded    text can also be included in E-mail messages.
+While   this makes your E-mail interesting and pretty to look
+      at, it can cause problems for other people who   receive
+your E-mail because they may use different E-mail   programs, different
+computer systems, and different   application programs whose files
+are often not fully   compatible with each other. Any of these
+can cause   trouble with in-line HTML (or encoded attachments).
+  Most of the time all they see is the actual HTML code
+     behind the message. And if someone replies to the   HTML formatted
+message, the quoting can render the   message even more unreadable.
+In some cases, the   message is nothing but strange looking text.
+For this    reason, many mailing lists especially those that
+     provide a digest version, explicitly forbid the use
+ of HTML formatted  e-mail. See <a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#examples"> examples</a>
+   section.
+ <p>When you send an attachment, like a word   processor file,
+  to have it appear on the other end as   the exact same type of
+ file the recipient must have   hardware and software that can
+read  that file. For   example, if you attach a Microsoft Word
+file, and the   recipient of your message is using a word processor
+  that can't open MS Word files, that person isn't
+going  to be able to open your attachment and they are   less than
+likely   to be very happy about it.</p>
+ </li>
+ <li>HTML or MIME messages are larger and more wasteful
+than  simple text messages. Using HTML or MIME in E-mail   messages
+makes  the messages larger in size by a   mimimum of two thirds
+to more  than twenty times.   These will take longer to download
+and they  take up   more storage space than standard plain text
+E-mail   messages.
+ <p>E-mail storage is important because many   people retain
+  copies of messages they receive and in   the case of mailing
+list    <a href="http://web.archive.org/web/20080822071927/http://www.faqs.org/rfcs/rfc1153.html">digests</a>
+  ,   the individual messages are combined in one large
+     message and sent to the user at the end of the day.   Some
+ mailing list programs fail to format the digest   correctly if
+HTML messages appear. In addition, many   mailing lists archive
+the messages for periods of 6   months or more to enable users
+to search for    particular past postings.</p>
+ </li>
+ <li>HTML or MIME messages leave or include unwanted files
+   (attachments) on the machines of the recipients of   these messages.
+     </li>
+ <li>Embedded HTML or MIME attachments are the number one
+  method of spreading virus, worm or Trojan programs.
+
+ <p>For   instance, the <a href="http://web.archive.org/web/20080822071927/http://www.symantec.com/avcenter/venc/data/vbs.forgotten.a.html"><i>
+   Forgotten</i></a>      worm was written in Visual Basic Script
+and spread   without any attachment. Instead, the worm code was
+  embedded  into the HTML formatted message body. </p>
+
+ <p>The<a href="http://web.archive.org/web/20080822071927/http://www.cert.org/advisories/CA-2000-04.html"><em>
+  I Love You</em></a>    worm program exploited an   ActiveX vulnerability
+and was executed  just by   viewing or previewing the e-mail message
+without   opening any attachment.</p>
+
+ <p>Likewise, embedded code could exploit some MS   Office
+  vulnerability as with <a href="http://web.archive.org/web/20080822071927/http://www.microsoft.com/technet/treeview/default.asp?url=/technet/security/bulletin/ms99-030.asp">
+   Office   ODBC Vulnerabilites</a>    and <a href="http://web.archive.org/web/20080822071927/http://www.microsoft.com/technet/treeview/default.asp?url=/technet/security/bulletin/MS01-057.asp">
+   Specially   Formed Script in HTML Mail can Execute in Exchange
+  5.5</a>  </p>
+
+ <p>HTML messages can trigger dialups to the Internet   if
+  they contain links to specific images called   "web bugs" that
+ are used to track message   and advertiser viewing. See <a href="http://web.archive.org/web/20080822071927/http://www.eff.org/Privacy/Marketing/web_bug.html"> Web
+  Bug FAQ</a>  </p>
+
+ <p>MIME encoded attachments with file extensions (BAT,
+COM, DOC, EML, EXE, HTA, JS, PPT, SHS, VBE, VBS, WSH,   XL#) have
+been the most common method of sending   viruses, worms and Trojan
+programs because their code   will be executed by Windows and associated
+  viewers or   other MS programs when the attachment is opened.
+  Windows uses the extension to determine what the
+default  action on a file will be. For instance, a <em>.txt   </em>
+file will open in Notepad and a <em>.html</em>   file will open
+in Internet  Explorer. </p>
+
+ <p>Uncommon, but no less dangerous are file   extensions
+(386, ACM, ACV, ADT, AX, BIN, BTM, CLA,   CPL, CSC, CSH, DEV, DLL,
+DOT, DRV, HLP, HTM, HTT,   INF, INI, JSE, JTD, MDB, MP#, MPP, MPT,
+MSO, OBD,   OBT, OCX, OLE, OV#, PIF, PL, PM, POT, PP#, PPS, PRC,
+   RAR, RTF, SCR, SH, SHB, SMM, SYS, VSD, VSS, VST, VXD,
+ WSF, XL#, XLB, XTP).</p>
+ </li>
+ <li>HTML quickly fills the memory of PDAs (Personal   Digital
+ Assistants like the Palm Pilot). In addition,   many HTML messages
+ are also completely unreadable on   most PDAs.</li>
+ <li>Some e-mail recipients may have set their background to something
+  other   than white, may have chosen a typeface which they find
+ most   readable and adjusted its size in accordance with their
+visual acuity,   normal viewing distance, monitor size and screen
+resolution.  All this   fine tuning is completely erased by HTML
+e-mail.</li>
+
+  </ol>
+
+  <p>Plain text is how your messages should be formatted when     sending
+  E-mail to mailing lists and Usenet newsgroups or to     any other recipient.
+  Though this rule is not yet cast in <a href="http://web.archive.org/web/20080822071927/http://www.fau.edu/netiquette/netiquette.html">   "Netiquette"</a>
+   stone, it is a good policy to follow if you want quick and     informative
+  responses to your questions and wish to avoid     being "flamed" as a clueless
+  newbie. </p>
+
+  <p>HTML is meant for the WWW; not for mailing lists, Usenet     newsgroups
+  postings, proper business E-mail correspondence     and preferably not
+for   personal E-mail unless the recipient     is expecting it. </p>
+
+  <p>MIME encoded mail is generally used to send attachments     that consist
+  of pictures, sound files, spreadsheets, word-processing     documents,
+zip   files, or other binary files to recipients     that have and use the
+same   operating system, the same word     processing program and a common
+E-mail   program such as     Eudora, Pegasus, Netscape, or Outlook. </p>
+
+  <p>MIME attachments are not wanted on mailing lists, Usenet     newsgroups
+  postings, business E-mail correspondence, and     preferably not for personal
+  E-mail unless the recipient is     expecting it. </p>
+
+  <p>If you must send an attachment, then before you send the     message
+  with the attachment, ALWAYS send the recipient a     message telling them
+  you are about to send them an attachment.     This will, at least, let
+them   know to expect a message with     an attachment from you. </p>
+
+  <p>An exception to the "no MIME attachments rule"     can be made for PGP
+  (Pretty Good Privacy), GPG (Gnu Privacy     Guard), or other "Digital ID"
+  signed e-mail. In     this case, individuals, mailing lists, and Usenet
+newsgroups that use signed e-mail are probably expecting it. See <a href="http://web.archive.org/web/20080822071927/http://www.faqs.org/rfcs/rfc2015.html">   MIME Security     with Pretty
+Good Privacy (PGP)</a>   .</p>
+
+  <p>For more background information see <a href="http://web.archive.org/web/20080822071927/http://www.faqs.org/rfcs/rfc1855.html">   Netiquette     Guidelines
+(RFC1855)</a>   </p>
+
+  <p><a>To see what actual HTML/MIME mail looks like in UNIX     Pine, see
+    </a>   <a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#examples">examples</a>    section. </p>
+
+  <hr title="turn off">
+  <h2><a name="programs"></a>Turning Off HTML or MIME</h2>
+
+  <p>There are now a variety of HTML/MIME programs, including     but not
+  limited to: </p>
+
+  <ul>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#agent">Agent/Free Agent</a>     </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aol">AOL 5.0 and earlier</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aol6">AOL 6.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aol7">AOL 7.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aol8">AOL 8.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aol9">AOL 9.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aolcd">AOL 6.0, 7.0, 8.0 Alternate</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#compuserve">CompuServe 2, 3 and 4</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#compuserve2000">CompuServe 2000</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#earthlink5">Earthlink 5.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#entourage">Entourage 2001 (MacIntosh)</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#entourageX">Entourage X (MacIntosh)</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#eudora3">Eudora Light v3.0.5 and earlier</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#eudora36">Eudora Light v3.0.6</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#eudora4">Eudora Pro v4.0.2 and earlier</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#eudora42">Eudora Pro v4.2 and later</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#eudora5">Eudora v5.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#hotmail">Hotmail</a></li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#incredimail">IncrediMail Xe</a> REVISED</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#juno5">Juno v5.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#lotus">Lotus Notes R5</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#macx">Mac OS X Mail</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#msie">MS Internet Explorer 4.0, 5.0, 5.50 and 6.0</a></li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#explorer6">MSN Explorer 6.0</a></li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#explorer7">MSN Explorer 7.0</a></li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#msn8">MSN 8.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#exchange">MS Exchange 4.0 and other MS problems</a>
+
+ <ul>
+     <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#winmail">WINMAIL.DAT (TNEF) attachments</a> </li>
+     <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#equalsign">Equal signs at end of
+    lines</a>    </li>
+     <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#iso8859">ISO 8859-1 or other
+character  sets</a>    </li>
+
+ </ul>
+ </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#exchange5">MS Exchange Server 5.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#mozilla11">Mozilla 1.1</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#mozilla05">Mozilla Thunderbird 0.5</a> NEW</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#comm3">Netscape Communicator 3.xx</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#comm4">Netscape Communicator 4.0x - 4.4x</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#comm45">Netscape Communicator 4.5, 4.6, 4.7</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#comm6">Netscape Communicator 6.0 - 6.1</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#comm62">Netscape Communicator 6.2</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#comm7">Netscape Communicator 7.0 (PR1 &amp; Final)</a> REVISED</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#comm71">Netscape Communicator 7.1</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#groupwise">Novell Groupwise</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#out2000">Outlook 2000</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#out2002">Outlook 2002</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#outlook4">Outlook Express 4.0</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#outlook5">Outlook Express 5.0, 5.50 and 6.00</a>
+     </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#out97wo">Outlook 97 (without Service Release
+  1 SR1)</a>     </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#out97w">Outlook 97 (with Service Release 1
+  SR1)</a>     </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#out98w">Outlook 98 (Work group version)</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#out98i">Outlook 98 (Internet version)</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#peg3">Pegasus Mail 3.x</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#peg4">Pegasus Mail 4.x</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#pine">Pine 4.x (Unix)</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#pinew">Pine 4.x (Windows)</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#poco">Poco 2.xx</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#thebat">TheBat! v1.18</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#webtv">WebTV</a> </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#yahoo">Yahoo Mail</a> </li>
+
+  </ul>
+
+  <hr title="for mime">
+  <h2><a name="suggest"></a>For creators of HTML and MIME messages, here
+are some suggestions</h2>
+
+  <ul>
+ <li>Know how your attachments are going to be sent. Bear
+  in mind that what's reasonable for another recipient   isn't
+necessarily  reasonable for the rest of the   world. For example,
+sending a Microsoft Word document   as an attachment might not
+work out as well as you   think it should.
+
+ <p>If options are available for   turning off attachments,
+  do so, except perhaps for   specific correspondents known to
+have   the ability to   view the attachments. This is particularly
+relevant     to users of mail systems in <i>Microsoft operating
+  environments</i>. </p>
+
+ <p>Microsoft TNEF data (WINMAIL.DAT attachments), for   example,
+  which was very common during 1996 and 1997,   is not something
+ that most Internet correspondents   can presently handle. In addition
+  to attachments,   TNEF data may include links to OLE objects,
+fonts,    colors, and other information that doesn't have the
+      same form or meaning outside a <i>Microsoft operating
+    environment</i>  . </p>
+ </li>
+ <li>Be somewhat conservative about Content-Types when   sending
+ to mailing lists or other public forums.   Watch out for multipart/alternative.
+     </li>
+ <li>Watch character set selections and Content-Transfer
+ encodings.  For example, some commonly used character   sets in
+PCs use 8 bits,  not the standard 7 bits. </li>
+
+  </ul>
+
+  <hr title="agent">
+  <h3><a name="agent"></a>   Agent/Free Agent</h3>
+
+  <p>Agent currently does MIME quoted printable. Free Agent     does not.
+    </p>
+
+  <p>The MIME quoted printable option can be configured     separately for
+  each language you have configured in Agent. </p>
+
+  <ul>
+ <li>Select Options </li>
+ <li>Select General Preferences </li>
+ <li>Select Languages </li>
+ <li>Under Usenet Text and E-mail Text, make sure MIME is
+  off.     </li>
+
+  </ul>
+
+  <hr title="aol">
+  <h3><a name="aol"></a>   AOL 5.0 and earlier</h3>
+
+  <p>AOL automatically converts all attachments to MIME when     you click
+  on the "Attach" button. So don't use this     button. </p>
+
+  <hr title="aol6">
+  <h3><a name="aol6"></a>   AOL 6.0</h3>
+
+  <p>AOL now supports Multipart/Alternative formatted messages     which
+means that a single message sent from a user now     contains a plain-text
+version and a formatted version. Users     who use e-mail programs that do
+NOT support HTML will be able     to read the plain-text version of the message
+without any of     the cryptic HTML codes. </p>
+
+  <p>Likewise, if the e-mail client supports the HTML format,     then the
+  user will read that version. </p>
+
+  <p>The headers will show the Content-Type line similar to: </p>
+
+  <pre>        Mime-Version: 1.0<br>        Content-Type: multipart/alternative; boundary=blah...blah...<br>        Content-Disposition: Inline<br>        X-Mailer: 6.0 sub 171</pre>
+
+  <p>AOL recommends this method to send plain text: </p>
+
+  <ul>
+ <li>Make sure your font is set to Arial (which should be
+  the default).</li>
+ <li>Type your message (in Arial) and then highlight it.
+ Then,  right mouse click, select text, then select   normal.</li>
+ <li>Send your plain text message, making sure the text is
+   still highlighted when you send it.</li>
+
+  </ul>
+
+  <p>The headers may show the Content-Type line similar to: </p>
+
+  <pre>        Mime-Version: 1.0<br>        Content-Type: text/plain; charset="US-ASCII"<br>        Content-Transfer-Encoding: 7bit<br>        X-Mailer: 6.0 sub 336</pre>
+
+  <p>The "Customer Care" folks at AOL also offer the     following solution:
+  Use <a href="http://web.archive.org/web/20080822071927/http://www.aol.com/aolmail/">AOL     Mail on the Web</a>
+  to send mail to Internet addresses that     don't allow formatting - AOL
+  Mail on the Web sends mail as     plain text only. </p>
+
+  <p><b>NOTE:</b> To use AOL Mail on the Web you will need to signoff
+    AOL. </p>
+
+  <p>The <a href="http://web.archive.org/web/20080822071927/http://members.aol.com/adamkb/aol/mailfaq/">Unofficial
+   AOL E-mail FAQ</a>    recommends that an AOL 6.0 user can turn     off
+the HTML using the following  steps:</p>
+
+  <ul>
+ <li>Change global e-mail preferences (needs to be done
+only  once):
+ <ul>
+     <li>Go to Keyword: Preferences (or choose <b>Preferences</b>
+   from the <b>Settings</b> menu on the AOL 6.0
+    toolbar). </li>
+     <li>Click on <b>Font, Text, &amp; Graphics
+     Preferences</b>  . </li>
+     <li>Click on the Reset button at the bottom of
+    the resulting window. <b>Do not make any      changes
+ in the </b><b><b>Font      Preferences</b></b><b>
+   area of the      window.</b></li>
+     <li>Click on the <b>Save</b> button. </li>
+
+ </ul>
+ </li>
+ <li>Change a specific e-mail to plain text (must be done
+  for every e-mail):
+ <ul>
+     <li>Compose and address the e-mail as desired. </li>
+     <li>Choose <b>Select All</b> from the <b>Edit</b>
+ menu to highlight the entire message. </li>
+     <li>With the mouse arrow somewhere over the
+ highlighted  text, click the <b>Right</b>
+mouse button, revealing a contextual menu. </li>
+     <li>Choose <b>Normal</b> from the <b>Text</b>
+  menu. </li>
+     <li>Taking care not to make any further changes
+     to the message, send it. </li>
+
+ </ul>
+ </li>
+
+  </ul>
+
+  <p>Note that changing the text to normal will eliminate the     "blue bar"
+  quoted text indicator, but <b>will     not</b> remove some HTML
+  elements of the quoted text.     The entire quoted section <b>must
+be  deleted</b> (or     simply not quoted in the first place), followed
+ by the re-entry     of the text and manually quoted, prior to changing the
+ text to     normal. Changing the text to normal will <em>also</em>     eliminate
+  any styled text that would have been seen by AOL     recipients of the
+message,   which cannot be re-added. Testing     also suggests that messages
+with hyperlinks   cannot be     converted to normal text, requiring the prior
+removal of the  link.</p>
+
+  <hr title="aol7">
+  <h3><a name="aol7"></a>   AOL 7.0</h3>
+
+  <p>If you upgrade from AOL 6.0 to AOL 7.0 and up have     customized your
+  fonts/colors, the changes carry over during     the upgrade and so you
+still   need to go into Settings and switch back to the defaults as described
+  above for <a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aol6">AOL 6.0</a>   </p>
+
+  <p>To turn off HTML, use the following steps:</p>
+
+  <ul>
+ <li>Change global e-mail preferences (needs to be done
+only  once):
+ <ul>
+     <li>Go to Keyword: Preferences (or choose <b>Preferences</b>
+   from the <b>Settings</b> menu on the AOL 7.0
+    toolbar). </li>
+     <li>Click on <b>Font, Text, &amp; Graphics
+     Preferences</b>  . </li>
+     <li>Click on the Reset button at the bottom of
+    the resulting window. <b>Do not make any      changes
+ in the </b><b><b>Font      Preferences</b></b><b>
+   area of the      window.</b></li>
+     <li>Click on the <b>Save</b> button. </li>
+
+ </ul>
+ </li>
+
+  </ul>
+
+  <p>WARNING: Any attempt to change the font face, size, style, or color
+ within the body of an e-mail message will change the message format  to
+HTML, as will any attempt to use a different default font face,  size, style,
+or color.</p>
+
+  <p>Lastly, you must remove your e-mail signature if it contains any  styled
+  text, as that will also change the message format back to HTML.</p>
+
+  <p>Like AOL 6, AOL 7 will use HTML when quoting a message  (displaying
+the quoted portion with a blue line in the left margin).  And like AOL 6,
+choosing Text - Normal will eliminate any indication  that the text was quoted.
+However, unlike AOL 6, the message will now  be sent in plain text. However,
+the quoted portion will need to be  manually quoted.</p>
+
+  <p></p>
+
+  <hr title="aol8">
+  <h3><a name="aol8"></a> AOL 8.0</h3>
+
+  <p>This version appears to be incapable of sending plain text e-mail.</p>
+  <p>See <a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aolcd">AOL 6.0 7.0, 8.0 Alternative.</a></p>
+
+  <hr title="aolcd">
+  <h3><a name="aolcd"></a> AOL 6.0, 7.0, 8.0 Alternate</h3>
+
+  <p>Simply install the 'safe' version of AOL, version 5.0, on your computer
+  and    use it for your plain text mailing lists.  Create or use one
+ of your 8 allowed AOL screen    names to subscribe to; and to read,
+send, and reply to the list's mail.  AOL    5.0 will not send HTML or
+RTF encoded e-mail unless <b>YOU</b> add it    (stationery/background;
+colored, bold, or italicized text; insert an image; etc.).</p>
+
+  <p>Place one of the ubiquitous free AOL 6.0, 7.0, or 8.0 CDs (available
+     everywhere!) in your CD-ROM drive, hold down the shift key and
+close   the tray to stop    the autoplay feature. If that doesn't work,
+close   the install window when it    comes up.  Then, using "Windows
+Explorer"   or "My Computer",    navigate to the AOL 5.0 folder (resident
+on all   these CDs) and double-click on    the 'setup' program file.
+ Don't let  the install program overwrite any other AOL    version if
+prompted or  asked during the AOL 5.0 install.</p>
+
+  <p>After the install, whenever you want to send plain text e-mail to any
+  Internet Mailing     list, simply close any later version of AOL,
+click   on  the AOL 5.0 version, sign on     with your list-dedicated
+screen   name and send your own list e-mails without     worry of offending
+others  with HTML or RTF encoded e-mail.</p>
+
+<p><b>NOTE:</b> An alternative if you are using AOL 6.0,
+7.0 or 8.0 is to log on to AOL and select either Netscape or
+Internet Explorer as your browser. <b>WARNING: Do not use AOL's web
+browser.</b> Start either browser and type "www.aol.com" in the URL
+field. Sign on with your ScreenName and Password. Click on "AOL
+Mail". You will then be able to submit messages using AOL's
+<a href="http://web.archive.org/web/20080822071927/http://www.aol.com/aolmail/home.adp">AOL
+Mail on the Web</a> service.
+
+</p><p> Starting with <a href="http://web.archive.org/web/20080822071927/file:///C:/Expita/Webdocs/nomime.html#comm62">Netscape
+ Communicator 6.2</a>
+AOL members can read and send AOL e-mail via the browser.  The browser fully
+supports both HTML  and plain text messages and even allows you to set specific
+domain names (e.g., mailing lists) to always send plain text.</p>
+<p></p>
+
+  <hr title="aol9">
+  <h3><a name="aol9"></a> AOL 9.0</h3>
+
+    <p>Copied directly from
+    <a href="http://web.archive.org/web/20080822071927/http://channelevents.aol.com/flash/com_mentor/guide.pdf/">AOL
+     Communicator Help</a> manual page 66</p>
+    <p><b>Changing Plain Text Settings</b></p>
+
+    <p>By default, AOL Communicator Mail sends messages in HTML format.
+    Messages sent in this format allow you to use different fonts and
+    font sizes; underline, boldface, or italicize text; easily create
+    bulleted or numbered lists and links to web sites; and attach files.</p>
+
+    <p>Not all mail programs support HTML, and not all users prefer to
+    receive HTML-formatted messages. Some programs display messages in
+    HTML format as if they were in plain text, including HTML tags and
+    other format coding that can make the original message difficult to
+    read.</p>
+
+    <p>If you are sending a message to someone who can&#8217;t read
+    HTML-formatted messages (also called 'rich text'), you can switch to
+    plain text. You can also specify plain text only for messages sent
+    to a specific address or domain.</p>
+
+    <p>Messages sent in plain text lose all formatting and attachments.
+    Replies to (and forwarded) plain text messages are also sent in
+    plain text.</p>
+
+    <p>To change the plain text setting while you are composing a
+    message:
+    </p><ol>
+    <li>Click in the message area of the Write Mail window.</li>
+    <li>Change the plain text setting:</li>
+    <li>Click the T icon just below the Subject label to toggle the
+    message between plain text and rich text formatting; or</li>
+    <li>Open the Format menu and choose Rich Text or Plain Text.</li>
+    </ol><p></p>
+
+    <p>When the T icon is red, the message uses rich text. When the T
+    icon is black, the message uses plain text.</p>
+
+    <p>When you change the plain text setting from a Write Mail window,
+    the setting 'sticks' for all subsequent messages you write. For
+    example, if you switch from rich text to plain text for one message
+    and then open a new Write Mail window, that window will also be set
+    to use plain text. To change the plain text setting for all messages
+    you send to an address or domain:
+    </p><ol>
+    <li>Open the Edit menu and choose Preferences.</li>
+    <li>Click Advanced Options.</li>
+    <li>Click Add.</li>
+    <li>Type the email address or domain for which you want all messages
+    to be sent in plain text. If you specify a domain (such as
+    example.net), you&#8217;ll have an opportunity to switch to plain text
+    whenever you address a message to an email address that includes
+    that domain.</li>
+    <li>Click OK.</li>
+    </ol><p></p>
+
+  <hr title="compuserve">
+  <h3><a name="compuserve"></a>   CompuServe 2, 3 and 4</h3>
+
+  <p>NOT COMPLETE</p>
+
+  <p>CompuServe's main e-mail service is ASCII text based, and     is not
+  MIME compliant. However, CompuServe provides Base-64     MIME compliant
+transport  of attached binary files. </p>
+
+  <p>CompuServe versions prior to 4.02 allowed one binary     attachment
+per e-mail message. Beginning with version 4.02     users are allowed two
+binary attachments per e-mail message.</p>
+
+  <hr title="cmpuserve2000">
+  <h3><a name="compuserve2000"></a>   CompuServe 2000</h3>
+
+  <p>Compuserve 2000 only supports Windows 95/98 and closely     resembles
+  AOL because it uses an identical installation     routine, the same e-mail
+  client, and a similar interface.     CompuServe 2000 also shares the same
+  V.90 network as AOL.</p>
+
+  <p>So to send plain text e-mail using CompuServe 2000, see     the instructions
+  for <a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#aol">AOL 5.0 and earlier</a>   . </p>
+
+  <hr title="entourage">
+  <h3><a name="entourage"></a>   Entourage 2001 (MacIntosh)</h3>
+
+  <p>Microsoft Entourage is a new e-mail and personal     information manager
+  that makes it easy to communicate with     others and organize your personal
+  information. </p>
+
+  <p>Entourage comes bundled with Office:Mac 2001. It is only     available
+  for Macintosh. Since it was built from the     foundation provided by Outlook
+  Express for Mac, the     instructions are somewhat similar to that program.
+    </p>
+
+  <ul>
+ <li>Select "Preferences" from the Edit menu   then "Mail
+and  News" </li>
+ <li>Click on "Compose" tab </li>
+ <li>Under Messages, set the pull-down menus for "Mail   Format"
+ and "News Format" to plain   text </li>
+ <li>Click the "Reply &amp; Forward" tab,   uncheck "Reply
+to  messages using the format in   which they sent" </li>
+ <li>Click on OK </li>
+
+  </ul>
+
+  <hr title="earthlink5">
+  <h3><a name="earthlink5"></a>Earthlink 5.0</h3>
+
+  <ul>
+ <li>From the <b>Tools</b> menu, choose <b>Configure</b></li>
+  <li>Click the <b>Mail</b> button</li>
+ <li>Click on the <b>Send</b> tab</li>
+  <li>Click the down arrow on the Send message format drop-down list
+and choose <b>Plain Text</b></li>
+ <li>Click on OK </li>
+
+  </ul>
+
+  <p>The text of your e-mail will now be sent as Plain Text.</p>
+
+  <hr title="entourageX">
+  <h3><a name="entourageX"></a>   Entourage X (MacIntosh)</h3>
+
+  <p>Microsoft Entourage X complete e-mail and personal     information management
+  program designed specifically for Mac     OS X. </p>
+
+  <p>Entourage comes bundled with Office v.X. It is only     available for
+  Macintosh. Since it was built from the     foundation provided by Outlook
+  Express for Mac, the     instructions are somewhat similar to that program.
+    </p>
+
+  <ul>
+ <li>Select "Mail &amp; News Preferences" from   the Entourage
+  tab </li>
+ <li>Click on "Compose" tab </li>
+ <li>Under Messages, set the pull-down menus for "Mail   Format"
+ and "News Format" to plain   text </li>
+ <li>Click the "Reply &amp; Forward" tab,   uncheck "Reply
+to  messages using the format in   which they sent" </li>
+ <li>Click on OK </li>
+
+  </ul>
+
+  <hr title="eudora v3">
+  <h3><a name="eudora3"></a>   Eudora Light v3.0.5 and earlier</h3>
+
+  <p>You can have Eudora warn you before sending messages that     contain
+  styled text or HTML. </p>
+
+  <ul>
+ <li>Click on Tools: Options </li>
+ <li>Select the Extra Warnings category </li>
+ <li>Check the box for Warn me when I "Queue a   message with
+ Styled Text". </li>
+
+  </ul>
+
+  <p>If you want to make sure that you never accidentally send     a message
+  with styled or HTML text, you can have Eudora     automatically discard
+the  styles before sending any message. </p>
+
+  <ul>
+ <li>Click on Tools: Options </li>
+ <li>Select the Styled Text tab </li>
+ <li>Check the box for "Discard styles before sending   messages"
+     </li>
+ <li>Click on Tools: Options </li>
+ <li>Select the Sending Mail category </li>
+ <li>Uncheck the check box for "May use quoted-printable"    </li>
+
+  </ul>
+
+  <p>This means that even if your message is filled with bold     and italics,
+  colors, and font changes, the message will be     sent out without any
+of   this formatting; instead it will be     stripped down to the basic plain
+ text before Eudora sends it.     Also, the quoted-printable method of character
+  encoding (used     by non-US versions for foreign character recognition)
+ can     cause some formatting problems for some mail readers. If you
+ do not need to type these foreign characters, you should turn     off the
+quoted- printable option. </p>
+
+  <hr title="eudora v36">
+  <h3><a name="eudora36"></a>   Eudora Light v3.0.6</h3>
+
+  <p>If you want to make sure that you never accidentally send     a message
+  with styled or HTML text, you can have Eudora     automatically discard
+the  styles before sending any message. </p>
+
+  <ul>
+ <li>Click on Tools: Options </li>
+ <li>Select the Sending Mail category </li>
+ <li>Uncheck the check box for "May use quoted-printable"    </li>
+
+  </ul>
+
+  <p>This means that even if your message is filled with bold     and italics,
+  colors, and font changes, the message will be     sent out without any
+of   this formatting; instead it will be     stripped down to the basic plain
+ text before Eudora sends it.     Also, the quoted-printable method of character
+  encoding (used     by non-US versions for foreign character recognition)
+ can     cause some formatting problems for some mail readers. If you
+ do not need to type these foreign characters, you should turn     off the
+quoted- printable option. </p>
+
+  <hr title="eudora4">
+  <h3><a name="eudora4"></a>   Eudora Pro v4.0.2 and earlier</h3>
+
+  <p>Eudora Pro has a "Styled Text" option, which     makes messages available
+  in RTF. Currently Eudora Pro doesn't     support HTML within the body of
+ a message. When posting a     message to a mailing list, you can click on
+ the button on the     far right of each individual message's tool bar to
+"Clear     Formatting." You can also set up the options to either     warn
+you of outgoing messages that contain styled text or to     discard the styles
+before sending the messages: </p>
+
+  <ul>
+ <li>Click on Tools: Options </li>
+ <li>Highlight (Select) Styled Text </li>
+ <li>Check either or both of these boxes:
+
+ <ul>
+     <li>Warn me when I queue a message with styled
+    text. </li>
+     <li>Discard styles before sending messages. </li>
+
+ </ul>
+ </li>
+
+  </ul>
+
+  <p>You can have Eudora turn off MIME encoding when sending     messages
+  that contain special characters. </p>
+
+  <p>Eudora automatically uses quoted-printable (MIME) encoding     if your
+  mail contains special characters. Eudora also uses     quoted-printable
+encoding  for attached plain text files. If     your recipients don't have
+MIME, then  just turn off the QP     button in the message icon bar when
+you are sending  text     files to those recipients. </p>
+
+  <hr title="eudora42">
+  <h3><a name="eudora42"></a>   Eudora Pro v4.2 and later</h3>
+
+  <p>Eudora Pro has a "Styled Text" option, which     makes messages available
+  in HTML format within the body of a     message. When posting a message
+to  a mailing list, you can     click on the button on the far right of each
+ individual     message's tool bar to "Clear Formatting." You can     also
+ set up the options to either send plain text or styled     text or both.
+  </p>
+
+  <ul>
+ <li>Click on Tools: Options </li>
+ <li>Scroll down to and click on Styled Text Category</li>
+ <li>Check these 3 boxes:
+ <ul>
+     <li>Show formatting toolbar - If this is on, the
+ formatting toolbar displays by default in new      message
+ windows. If this is off, the      formatting toolbar is hidden
+ by default in      new message windows. This toolbar lets
+you      easily format text styles in new messages. </li>
+     <li>Send plain text only </li>
+     <li>Ask me each time - If this is on, you are
+   warned when you try to send or queue a      message with
+text styles. And you are given      the option to send a plain
+text version, an      HTML version, or both in a single message.
+    </li>
+
+ </ul>
+ </li>
+
+  </ul>
+
+  <p>You can have Eudora turn off MIME encoding when sending     messages
+  that contain special characters. </p>
+
+  <p>Eudora automatically uses quoted-printable (MIME) encoding     if your
+  mail contains special characters. Eudora also uses     quoted-printable
+encoding  for attached plain text files. If     your recipients don't have
+MIME, then  just turn off the QP     button in the message icon bar when
+you are sending  text     files to those recipients. </p>
+
+  <hr title="eudora5">
+  <h3><a name="eudora5"></a>   Eudora v5.0</h3>
+
+  <p>Eudora has a "Styled Text" option, which makes     messages available
+  in HTML format within the body of a     message. When posting a message
+to  a mailing list, you can     click on the button on the far right of each
+ individual     message's tool bar to "Clear Formatting." You can     also
+ set up the options to either send plain text or styled     text or both.
+  </p>
+
+  <ul>
+ <li>Click on Tools: Options </li>
+ <li>Scroll down to and click on Styled Text Category</li>
+ <li>Check these 3 boxes:
+ <ul>
+     <li>Show formatting toolbar - If this is on, the
+ formatting toolbar displays by default in new      message
+ windows. If this is off, the      formatting toolbar is hidden
+ by default in      new message windows. This toolbar lets
+you      easily format text styles in new messages. </li>
+     <li>Send plain text only </li>
+     <li>Ask me each time - If this is on, you are
+   warned when you try to send or queue a      message with
+text styles. And you are given      the option to send a plain
+text version, an      HTML version, or both in a single message.
+    </li>
+
+ </ul>
+ </li>
+
+  </ul>
+
+  <p>You can have Eudora turn off MIME encoding when sending     messages
+  that contain special characters. </p>
+
+  <p>Eudora automatically uses quoted-printable (MIME) encoding     if your
+  mail contains special characters. Eudora also uses     quoted-printable
+encoding  for attached plain text files. If     your recipients don't have
+MIME, then  just turn off the QP     button in the message icon bar when
+you are sending  text     files to those recipients. </p>
+
+  <hr title="hotmail">
+  <h3><a name="hotmail"></a>   Hotmail</h3>
+
+  <ul>
+ <li>Click on "Compose tab", address the message   and fill
+in the "Subject" line</li>
+ <li>Before composing the message, click on "Tools"   (next
+ to "Copy message to sent folder")</li>
+ <li>Click on "Rich-text editor OFF" to set off</li>
+ <li><b>NOTE:</b> The toggle is actually counter-intuitive.
+That  is, if the drop menu choice says "Rich -Text   Editor OFF"
+RTF formatting is on. When the   toggle shows "Rich -Text Editor
+ON" RTF   formatting is off.</li>
+ <li>If you receive a pop up message "Are you sure   you want
+ to do this?" Click "OK" and   wait for text formatting tools to
+ disappear</li>
+ <li><b>NOTE:</b> If you are using Netscape, then you will
+NOT be   given the the choice to turn ON/OFF RTF formatting.
+Messages   will be sent in plain text format.</li>
+ <li>Compose your plain text message</li>
+ <li>Send your plain text message</li>
+
+  </ul>
+
+  <hr title="incredimail">
+  <h3><a name="incredimail"></a>   IncrediMail Xe</h3>
+
+  <p>IncrediMail is an advanced e-mail client that offers     interactive
+  features. You can choose from an assortment of e-mail     backgrounds,
+animations,   sounds, 3D effects, e-cards,     emoticons, dancing letters,
+and random notifier  selections.     Also has support for MSN e-mail and
+Windows XP.</p>
+
+  <p>To change a single e-mail message to plain text: </p>
+  <ul>
+ <li>From within the "New Mail" window, open the "Message" menu and select "Plain Text".</li>
+ <li>At this point, a dialog window will appear. Click "Yes" to confirm changing your e-mail to plain text format.</li>
+  </ul>
+
+  <p>To change the default e-mail message format to plain text: </p>
+  <ul>
+ <li>From the IncrediMail main window, open the "Tools" menu and select "Options".</li>
+ <li>From the Options window, select the "Advanced" tab.</li>
+ <li>In the Message section, check the "Enable 'Plain Text' in Style Box" checkbox.</li>
+ <li>Click OK.</li>
+  </ul>
+
+  <p>When sending mail, always select "Plain Text". </p>
+  <ul>
+ <li>Create a new message by selecting the "New Mail" button 
+ from the Toolbar.</li>
+ <li>Select the "Letters" category in the "Style Box".</li>
+ <li>Make sure "Plain Text" is selected.</li>
+  </ul>
+  <b>NOTE:</b> The first item in any collection is "Plain Text".
+
+  <p>If using a Signature, make sure you only use the text section titled
+  "Add signature text below:"<br>
+  <b>NOTE:</b> Do Not create a handwritten signature.</p>
+
+  <p>If you have a customized handwritten signature, then make sure you
+  don't include it. </p>
+
+  <ul>
+ <li>On the Main menu, select Tools then Options, and   click
+ on the Compose tab.</li>
+ <li>Uncheck the "Automatically insert signature to   outgoing
+  messages" box.</li>
+
+  </ul>
+
+  <hr title="juno5">
+  <h3><a name="juno5"></a>   Juno v5.0</h3>
+
+  <p>With Juno you can now send HTML e-mail as well as plain     text messages.
+  The default format for new messages you     compose in the Write screen
+is  plain text. As you write your     message and add any kind of formatting
+ (color, images, font),     the format automatically changes to HTML. If
+you  know that     the person you are sending the message to uses an e-mail
+    program that is not HTML compatible, make sure to change the     message
+ format to plain text (otherwise, the person might not     be able to read
+ your message).   </p>
+
+  <p>To change the e-mail message format to plain text: </p>
+
+  <ul>
+ <li>On the Edit menu, point to E-mail Message Format,   point
+ to View as and click Plain Text.</li>
+ <li>In the Remove Formatting dialog box, click Yes to   change
+ the format.</li>
+
+  </ul>
+
+  <hr title="outlook2000">
+  <h3><a name="out2000"></a>   Outlook 2000</h3>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Mail Format" tab </li>
+ <li>In the "Message Format" section, the pull-down   menu
+in  "Send in this message format" list   offers three choices: Plain
+ Text, Microsoft Rich   Text, and HTML. Select Plain Text.
+  <br>
+       <b>NOTE:</b> there is a "Send e-mail using plain
+text   only" checkbox on the properties sheet of an   address book
+entry,  but it doesn't do anything if you   have the HTML mail
+format selected  here. </li>
+ <li>Make sure the check box is unchecked (empty) in front
+   of "Use Microsoft Word to edit e-mail messages".   <br>
+       NOTE: Outlook Help states that you can switch message
+     formats after starting an e-mail message, but this
+doesn't   work if you use Word as your e-mail editor,   only if
+you use the  internal Outlook mail editor (and   then only switch
+between plain  text and HTML formats).    </li>
+ <li>Click OK </li>
+
+  </ul>
+
+  <p><b>WARNING</b>: Outlook 2000 uses what Microsoft     calls
+  Auto Format Reply. Due to the variety of message     formats supported
+by   different e-mail clients, Outlook 2000     ensures that e-mail recipients
+  receive replies they can read     easily. When users reply to a message,
+ Outlook automatically     uses the format of the original message. This
+is  especially     frustrating if you receive HTML e-mail and wish to send
+Plain  Text e-mail.</p>
+
+  <p>To override the default for any individual message, click     on the
+  "Format" menu within the message and choose     the desired format. Outlook
+  2000 lets you select the e-mail     format for a mail message in what they
+  call <em>one-off     editor switching.</em> You can start a new message
+in  a     different format than the standard one by selecting New Mail
+  Message  Using from the Actions menu. </p>
+
+  <p>Outlook doesn't have any way to select the mail format to     use when
+  sending mail to a particular recipient when you use     the drop-down list
+  on a Contact item or an Address list entry.     </p>
+
+  <p><b>NOTE</b>: A problem you may encounter when     you open
+  an incoming e-mail message, you may see a blank     message or three less
+  than symbols (&lt;&lt;&lt;) displayed     instead of the message text.</p>
+
+  <p>In some cases, depending on the Internet e-mail software     used, the
+  message may contain other random, unrelated     characters or the message
+  body may be blank. </p>
+
+  <p>Microsoft describes this behavior in the Knowledge Base     article
+  <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/support/kb/articles/Q240/3/33.ASP">
+(OL2000:     Message Received from Outlook Express 5 May Contain Unrelated
+ Characters)</a>   </p>
+
+  <p><b>NOTE</b>: You may notice that plain text     messages do
+  not word wrap properly when you print the     message, or view it in print
+  preview. To resolve this problem     you may need to obtain <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/support/kb/articles/Q245/0/25.ASP">
+Microsoft     Office 2000 Service Release 1/1a (SR-1/SR-1a)</a>   . </p>
+
+  <p>Microsoft describes this behavior in the Knowledge Base     article
+  <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/support/kb/articles/Q242/3/88.ASP">
+(OL2000:     Plain Text Messages Word Wrap Incorrectly When Printed)</a>
+   </p>
+
+  <p><b>WARNING</b>: If you are using a version of     Outlook
+2000 that has been installed with the corporate     workgroup installation
+you may discover that when you set e-mail     to send "Plain Text" that it
+has been changed to     "Quoted-Printable" instead of 7-bit or ASCII.</p>
+    Microsoft describes this behavior in the Knowledge Base     article
+    <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=KB;en-us;q269186">
+  (Q269186 The Message Received by the Recipient Is Different)</a>
+
+  <p><b>WARNING</b>: If you send messages with     multiple file
+  attachments to America Online (AOL) users, they     do not receive the
+messages   in a readable format. AOL     combines the text of the message
+and the attachments   into a     single MIME (.mim) file.</p>
+
+  <p>AOL users who receive messages as MIME files can open them     using
+    <a href="http://web.archive.org/web/20080822071927/http://www.winzip.com/">WinZip</a>    in Classic     mode. The
+message text and all of the attachments are     displayed intact.</p>
+
+  <p>Microsoft describes this behavior in the Knowledge Base     article
+  <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/support/kb/articles/Q223/9/11.ASP">
+(OL2000:     Messages with Multiple Attachments Sent to AOL Users Do Not
+    Display Correctly)</a>   </p>
+
+  <hr title="outlook2002">
+  <h3><a name="out2002"></a>   Outlook 2002</h3>
+
+  <p>Outlook 2002 eliminates the distinction between Corporate/Workgroup
+   and Internet Mail Only modes that made supporting Outlook 98     and Outlook
+2000 so difficult. You can now change the format     of a message you already
+received or created to make the     message either easier for you to view
+or to send to someone     else. </p>
+
+  <ul>
+ <li>With the message open, on the menu bar: select "Format"
+     </li>
+ <li>On the "Format" menu Select the format you   want to
+change  the message to: The menu list offers   three choices: Plain
+Text,  Microsoft Rich Text, and   HTML. Select Plain Text.</li>
+ <li>If Microsoft Word is your e-mail editor, these   options
+  may not be available. <br>
+       <b>NOTE:</b> Outlook Help states that you can
+switch message     formats after starting an e-mail message, but this
+  doesn't   work if you use Word as your e-mail editor,
+     only if you use the  internal Outlook mail editor (and   then
+only switch between plain  text and HTML formats).    </li>
+
+  </ul>
+
+  <p>Outlook 2002 supports better reading and printing of plain     text
+mail messages by allowing the user to remove extra     paragraph marks. They
+are easily restored if you need them,     for example to format tabular data.
+  To turn this feature on     or off, </p>
+
+  <ul>
+ <li>Choose "Tools"</li>
+ <li>Select "Options"</li>
+ <li>Select "Email Options"</li>
+ <li>Select "Remove extra line breaks in plain text   messages."</li>
+
+  </ul>
+
+  <p><b>WARNING</b>: There are known problem with     this feature.
+  See:</p>
+
+  <ul>
+ <li><a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=kb;EN-US;q295014">
+  OL2002   AutoClean Feature Removes Unwanted Line Breaks</a>
+   </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=kb;EN-US;q287816">
+  OL2002   Posts Do Not Honor Line Breaks in Plain Text Format</a>
+     </li>
+
+  </ul>
+
+  <p><b>NOTE</b>: If your POP/SMTP account requires     you to
+authenticate via the POP account before sending via     the SMTP address
+(like Yahoo mail), Outlook 2002 can handle     this: <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=kb;EN-US;q289945">
+  OL2002:     Unable to Send Mail By Using Yahoo After Upgrading to Outlook
+ 2002 (Q289945)</a>   </p>
+
+  <p><b>WARNING</b>: In earlier versions of Microsoft     Outlook,
+  you had the ability to break apart messages that     were larger than a
+specified  size ranging from a value     between 16 KB (kilobytes) and 8000
+KB. This  capability has     been removed from the product in Outlook 2002.
+See this Knowledge Base article: <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=kb;EN-US;q287766">
+  OL2002:     The Option to Break Apart Large Messages Is Missing (Q287766)</a>
+   </p>
+
+  <p><b>NOTE</b>: The setting to adjust the line     length of
+plain text messages no longer works. Even if you     change it from the default
+  of 76 characters, Outlook 2002     appears to always use 72 characters
+as   the line length.</p>
+
+  <p><b>WARNING</b>: You cannot set the default     format for
+Internet plain text messages to quoted-printable (which     puts in soft
+returns, not hard returns at the end of each     line). This makes long URLs
+in plain text messages unusable.     A Microsoft Knowledgebase article describes
+how to modify the     registry to set the default encoding format for plain
+text     messages to quoted-printable. See <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=kb;EN-US;q278134">
+  OL2002:     How Outlook Applies Encoding to Plain Text Messages (Q278134).</a>
+   </p>
+
+  <p>However, this setting may not work. As stated in the     article, "Whether
+  or not Outlook honors this registry     setting depends on what software
+ creates MIME on the user's     behalf; when Outlook uses Exchange to send
+ the message,     Outlook does not honor this registry setting." While it
+    does set the Content-Transfer-Encoding to quoted-printable,     Outlook
+ performs only partial Base64 or MIME encoding --     handling 8-bit characters,
+ but not soft line feeds.</p>
+
+  <p><b>NEW FEATURE</b>: Outlook 2002 SR-1 ( <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=kb;EN-US;q300551">
+  OL2002:     Overview of the Outlook 2002 Public Update: October 4, 2001
+ (Q300551)</a>   (also part of MS Office XP Service Pack 1 (SP-1) <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=kb;en-us;Q307841">
+  OFFXP:     How to Obtain the Latest Office XP Service Pack (Q307841)</a>
+   )     has a feature that converts all incoming HTML mail to plain
+text.   See <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=kb;en-us;Q307594">
+  OL2002:     Users Can Read Nonsecure E-mail As Plain Text (Q307594)</a>
+  for details and possible side affects.</p>
+
+  <hr title="msie">
+  <h3><a name="msie"></a>   MS Internet Explorer 4.0, 5.0, 5.50     and 6.0</h3>
+
+  <p>Unfortunately Microsoft Internet Explorer versions 4, 5, 5.50,     and
+  6 come packaged with the program Outlook Express as its     mail client
+whose  default configuration is to send HTML     formatted mail. </p>
+
+  <p>To configure Outlook Express to send text only messages     see appropriate
+  Outlook Express sections below:</p>
+
+  <hr title="outlook4">
+  <h3><a name="outlook4"></a>   Outlook Express 4.0</h3>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Send" tab </li>
+ <li>In the "Mail Sending Format" and "News   Sending Format"
+  sections, click on "Plain   Text" bullet in both places </li>
+ <li>In the "Mail Sending Format" section, click   on "Plain
+  Text Settings..." button. </li>
+ <li>In the "Plain Text Settings" window and the   Message
+format  section
+ <ul>
+     <li>Click MIME bullet </li>
+     <li>Set "Encode text using:" to None. </li>
+     <li>Uncheck the "Allow 8-bit characters in
+headers"     </li>
+     <li>Set Automatically wrap text at 72 </li>
+     <li>Check the box in front of "Indent      original
+ text with &gt; when replying or      forwarding"
+  </li>
+     <li>Click OK </li>
+
+ </ul>
+ </li>
+ <li>In the "News Sending Format" section, click   on "Plain
+  Text Settings..." button. </li>
+ <li>In the "Plain Text Settings" window and the   Message
+format  section
+ <ul>
+     <li>Click MIME bullet </li>
+     <li>Set "Encode text using:" to None. </li>
+     <li>Uncheck the "Allow 8-bit characters in
+headers"     </li>
+     <li>Set Automatically wrap text at 72 </li>
+     <li>Check the box in front of "Indent      original
+ text with &gt; when replying or      forwarding"
+  </li>
+     <li>Click OK </li>
+
+ </ul>
+ </li>
+ <li>While still in the "Send" tab, Uncheck   "Reply to messages
+ using the format in which   they were sent" </li>
+ <li>Click on "OK" and on "OK" again. </li>
+
+  </ul>
+
+  <p>All of your messages will now be sent as plain text.     Outlook Express
+  4.x can also be configured to send Business     Cards (also referred to
+as  vCards) with your e-mail. These     are attachments, which show up as
+strings  of unreadable code     on most mailing lists. To turn these off:
+  </p>
+
+  <ul>
+ <li>Select "Tools" then click on "Stationery..."    </li>
+ <li>In the "Signature" area, click on the   "Signature" button.
+     </li>
+ <li>In the "Personal Business Card" area,   uncheck the check
+ box in front of "Attach card   to all outgoing messages"     </li>
+ <li>Click on "OK" and on "OK" again. </li>
+
+  </ul>
+
+  <h3><a name="outlook5"></a>   Outlook Express 5.0, 5.50, and 6.00</h3>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Send" tab </li>
+ <li>In the "Mail Sending Format" and "News   Sending Format"
+  sections, click on "Plain   Text" bullet in both places </li>
+ <li>In the "Mail Sending Format" section, click   on "Plain
+  Text Settings..." button. </li>
+ <li>In the "Plain Text Settings" window and the   Message
+format  section
+ <ul>
+     <li>Click MIME bullet </li>
+     <li>Set "Encode text using:" to None. </li>
+     <li>Uncheck the "Allow 8-bit characters in
+headers"     </li>
+     <li>Set Automatically wrap text at 72 </li>
+     <li>Check the box in front of "Indent the      original
+ text with &gt; when replying or      forwarding"
+  </li>
+     <li>Click OK </li>
+
+ </ul>
+ </li>
+ <li>In the "News Sending Format" section, click   on "Plain
+  Text Settings..." button. </li>
+ <li>In the "Plain Text Settings" window and the   Message
+format  section
+ <ul>
+     <li>Click MIME bullet </li>
+     <li>Set "Encode text using:" to None. </li>
+     <li>Uncheck the "Allow 8-bit characters in
+headers"     </li>
+     <li>Set Automatically wrap text at 72 </li>
+     <li>Check the box in front of "Indent the      original
+ text with &gt; when replying or      forwarding"
+  </li>
+     <li>Click OK </li>
+
+ </ul>
+ </li>
+ <li>While still in the "Send" tab, Uncheck   "Reply to messages
+ using the format in which   they were sent" </li>
+ <li>Click on "Apply" and then on "OK".    </li>
+
+  </ul>
+
+  <p><b>NOTE:</b> It has been brought to my attention that Outlook
+    Express occasionally  breaks all lines at the set margin after     you
+send an e-mail message on  a reply or forward. So the     lines Outlook Express
+marks with "&gt; " get wrapped after the "&gt; " mark and the recipeient
+    gets something   awful to look at and entirely different than     what
+it looked like before   you sent it.<br>
+    <br>
+    To prevent this from happening, you may want to set the     margin
+ at 132 (maximum possible value) and break the lines at     72 to 75 characters
+  manually.</p>
+
+  <p><br>
+    All of your messages will now be sent as plain text. Outlook
+ Express  can also be configured to send Business Cards (also     referred
+to as vCards)  with your e-mail. These are     attachments, which show up
+as strings of unreadable code on     most mailing lists. To turn these off:
+  </p>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Compose" tab </li>
+ <li>In the "Business Cards" area, uncheck the   check boxes
+ in front of Mail and News for "Include   my business card when
+creating new messages." </li>
+ <li>Click on "Apply" and then on "OK".    </li>
+
+  </ul>
+
+  <hr title="mozilla v1.1">
+  <h3><a name="mozilla11"></a>   Mozilla 1.1</h3>
+
+  <ul>
+ <li>Select "Edit" then click on "Preferences..."    </li>
+ <li>Click on the plus sign before "Mail &amp;   Newsgroups"
+ </li>
+ <li>Click on "Message Composition" in left pane    </li>
+ <li>In the "Forwarding and Replying to Messages"   section,
+  change the "Forward messages:" to   Inline. </li>
+ <li>In the "Composing Messages" section,   unckeck the box
+in front of "For messages that   contain 8-bit characters..."</li>
+ <li>Click on "Send Format" in left pane </li>
+ <li>In the section "When sending message in HTML   format...",
+  click on the bullet in front of    "Ask me what to do..."
+     </li>
+ <li>Click on "OK". </li>
+
+  </ul>
+
+  <p>Note the section titled "Plain Text and HTML Domains".   You should
+  add your mailing list domains under the "Plain    Text Domains" to
+ensure  that all e-mail sent to a mailing    list is always in plain
+text.</p>
+
+  <p>When in a new message screen (Compose)</p>
+
+  <ul>
+ <li>Select "Options" in the taskbar</li>
+ <li>Select "Format"</li>
+ <li>Click on "Plain text only". The default is   probably
+shown  as "Auto-Detect"</li>
+ <li>Send the message</li>
+  </ul>
+
+  <hr title="mozilla thunderbird v0.5">
+  <h3><a name="mozilla05"></a> Mozilla Thunderbird 0.5</h3>
+
+  <ul>
+<li>Select "Tools" then click on "Account Settings..."</li> 
+<li>Under an account, select "Addressing &amp; Composition" in the left pane</li> 
+<li>In the "Composition" section, uncheck "Compose messages in HTML format"</li> 
+<li>Repeat the above 2 steps for each account you have set up in Thunderbird</li>
+<li>Click on "OK"</li>
+<li>Select "Tools" then click on "Options"</li> 
+<li>Click on "Composition" in left pane</li> 
+<li>In the "Forwarding Messages" section, change the "Forward messages:" to Inline</li> 
+<li>In the "Composing Messages" section, uncheck the box in front of "For messages that contain 8-bit characters..."</li> 
+<li>In the "Send Options" section, click "Send Options"</li> 
+<li>In the "Text Options" section, select "Ask me what to do..." from the dropdown</li> 
+<li>Click on "OK"</li>
+  </ul>
+
+  <p>If you have followed the instruction above, your e-mail
+  should now always be sent as "Plain Text". If you would
+  like to send a message in HTML format, then hold down the
+  Shift key while clicking on the Compose or Reply button
+  and the current e-mail message will be in HTML edit
+  format.</p>
+
+  <hr title="netscape v7.1">
+  <h3><a name="comm71"></a>Netscape Communicator 7.1</h3>
+
+  <ul>
+ <li>Start Mail &amp; Newsgroups</li>
+ <li>Click "Edit"</li>
+ <li>Select "Mail &amp; Newsgroups Account Settings"</li>
+ <li>Uncheck the box in front of "Compose Messages in HTML Format"</li>
+ <p>As an alternative, you can select "View Settings for this
+ Account" under "Accounts" after starting "Mail
+ &amp; Newsgroups".</p>
+ <li>Click OK</li>
+  </ul>
+
+  <hr title="netscape v7.0">
+  <h3><a name="comm7"></a> Netscape Communicator 7.0 (PR1 &amp; Final)</h3>
+
+  <ul>
+ <li>Select "Edit" while in "Mail"</li>
+ <li>Click on the arrow symbol before "Mail &amp; Newsgroups"
+ </li>
+ <li>Uncheck the box in front of "Compose Messages in HTML Format"</li>
+ <li>Click OK</li>
+  </ul>
+
+  <hr title="netscape v6.2">
+  <h3><a name="comm62"></a>   Netscape Communicator 6.2</h3>
+
+  <ul>
+ <li>Select "Edit" then click on "Preferences..."    </li>
+ <li>Click on the arrow symbol before "Mail &amp;   Newsgroups"
+ </li>
+ <li>Click on "Message Composition" in left pane    </li>
+ <li>In the "Forwarding and Replying to Messages"   section,
+  change the "Forward messages:" to   Inline. </li>
+ <li>In the "Composing Messages" section,   unckeck the box
+in front of "For messages that   contain 8-bit characters..."</li>
+ <li>Click on "Send Format" in left pane </li>
+ <li>In the section "When sending message in HTML   format...",
+  click on the bullet in front of    "Ask me what to do..."
+     </li>
+ <li>Click on "OK". </li>
+  </ul>
+
+  <p>Note the section titled "Plain Text and HTML Domains".   You should
+  add your mailing list domains under the "Plain Text    Domains" to
+ensure  that all e-mail sent to a mailing list is    always in plain
+text.</p>
+
+  <p>When in a new message screen (Compose)</p>
+
+  <ul>
+ <li>Select "Options" in the taskbar</li>
+ <li>Select "Format"</li>
+ <li>Click on "Plain text only". The default is   probably
+shown  as "Auto-Detect"</li>
+ <li>Send the message</li>
+  </ul>
+
+  <hr title="netscape v6.0">
+  <h3><a name="comm6"></a>   Netscape Communicator 6.0 - 6.1</h3>
+
+  <ul>
+ <li>Select "Edit" then click on "Preferences..."    </li>
+ <li>Click on the arrow symbol before "Mail &amp;   Newsgroups"
+ </li>
+ <li>Click on "Message Composition" in left pane    </li>
+ <li>In the "Forwarding and Replying to Messages"   section,
+  change the "Forward messages:" to   Inline. </li>
+ <li>In the "Composing Messages" section,   unckeck the box
+in front of "For messages that   contain 8-bit characters..."</li>
+ <li>Click on "Send Formatting" in left pane </li>
+ <li>In the section "When sending message in HTML   format...",
+  click on "Ask me what to do..."    </li>
+ <li>Click on "OK". </li>
+
+  </ul>
+
+  <p>When in a new message screen (Compose)</p>
+
+  <ul>
+ <li>Select "Options" in the taskbar</li>
+ <li>Select "Format"</li>
+ <li>Click on "Plain text only". The default is   probably
+shown  as "auto detect"</li>
+ <li>Send the message</li>
+
+  </ul>
+
+  <hr title="netscape v4.5">
+  <h3><a name="comm45"></a>   Netscape Communicator 4.5, 4.6, 4.7</h3>
+
+  <p>Unfortunately, Netscape Communicator 4.5, 4.6, 4.7 also     come packaged
+  with mail programs whose default configuration     is to send HTML formatted
+  mail. </p>
+
+  <ul>
+ <li>Select "Edit" then click on "Preferences..."    </li>
+ <li>Click on the plus sign "+" before "Mail   &amp; Newsgroups"
+ </li>
+ <li>Click on "Messages" in left pane </li>
+ <li>In the "Forward and Replying to Messages",   change the
+ "By default, forward messages:"   to Inline. </li>
+ <li>In the "Send messages that use 8-bit characters",   click
+ on "As is". </li>
+ <li>Click on "Formatting" in left pane </li>
+ <li>In the section "Message formatting", click   on "Use
+the  plain text editor to compose   messages" </li>
+ <li>In the section "When sending HTML mail messages...",
+  click on "Ask me what to do..." </li>
+ <li>Click on "OK". </li>
+
+  </ul>
+
+  <p>Netscape Messenger can also be configured to send Address     Book Cards
+  (also referred to as vCards) with your e-mail.     These are attachments,
+  which show up as strings of unreadable     code on most mailing lists.
+To   turn these off: </p>
+
+  <ul>
+ <li>Select "Edit" then click on "Preferences..."    </li>
+ <li>Click on the plus sign "+" before "Mail   &amp; Newsgroups"
+ </li>
+ <li>Click on "Identity" in the left pane </li>
+ <li>Uncheck the check box that says "Attach my   personal
+card..." </li>
+ <li>Click on "OK" </li>
+
+  </ul>
+
+  <hr title="netscape v4.x">
+  <h3><a name="comm4"></a>   Netscape Communicator 4.0x - 4.4x</h3>
+
+  <p>Unfortunately, Netscape Communicator 4 also comes packaged     with
+mail programs whose default configuration is to send     HTML formatted mail.
+  </p>
+
+  <ul>
+ <li>Select "Edit" then click on "Preferences..."    </li>
+ <li>Click on the plus sign "+" before "Mail   and Groups
+&amp;  Messages" </li>
+ <li>Click on "Messages" </li>
+ <li>Uncheck the check box that says "By default,   send HTML
+ messages". </li>
+ <li>Click on "More Options..." </li>
+ <li>In the section "When sending HTML messages to   recipients
+  who are not listed as being able to   receive HTML", click "Always
+  convert the   message into plain text (may lose some formatting)"
+     </li>
+ <li>Click on "OK" and on "OK" again. </li>
+
+  </ul>
+
+  <p>Netscape Messenger can also be configured to send Address     Book Cards
+  (also referred to as vCards) with your e-mail.     These are attachments,
+  which show up as strings of unreadable     code on most mailing lists.
+To   turn these off: </p>
+
+  <ul>
+ <li>Select "Edit" then click on "Preferences..."    </li>
+ <li>Click on the plus sign "+" before "Mail   and Groups
+&amp;  Messages" </li>
+ <li>Click on "Identity" </li>
+ <li>Uncheck the check box that says "Always send   Address
+ Book Cards" </li>
+ <li>Click on "OK" </li>
+
+  </ul>
+
+  <hr title="netscape v3.x">
+  <h3><a name="comm3"></a>   Netscape Communicator 3.xx</h3>
+
+  <p>Unfortunately, Netscape Communicator 3 also comes packaged     with
+mail programs whose default configuration is to send     HTML formatted mail.
+  </p>
+
+  <ul>
+ <li>Click "Tools" then click on "Mail   Options" </li>
+ <li>Click on the "Send" tab. </li>
+ <li>In the "Mail Sending Format" area, click   the check
+box  next to "Plain Text" </li>
+ <li>Click on "Settings..." </li>
+ <li>In the section "Message Format", click   "MIME". In the
+ check box next to "Encode   text using", select "None". </li>
+ <li>Uncheck the check box next to "Allow 8-bit   characters
+  in headers" </li>
+ <li>Click on "OK" </li>
+
+  </ul>
+
+  <hr title="outlook 97">
+  <h3><a name="out97wo"></a>   Outlook 97 (without Service Release     1 SR1)</h3>
+
+  <p>The original version of Outlook 97 (the one without the     Office 97
+  Service Release 1 (SR1) installed) automatically     formats all messages
+  you send when you hit the "Reply"     button in <i>Rich Text Format</i>,
+ which then shows as an     attachment on a mailing list (or in any e-mail
+ program other     than Microsoft Exchange or Outlook). This "Reply bug"
+    can be fixed in any of the following four ways: </p>
+
+  <ol>
+ <li>Download and install the <a href="http://web.archive.org/web/20080822071927/http://officeupdate.microsoft.com/downloadDetails/sr1off97detail.htm">
+   Office   97 Service Release 1 (SR1)</a>     </li>
+ <li>Download and install <a href="http://web.archive.org/web/20080822071927/ftp://ftp.win.net/pub/usa/inetmail.exe">   inetmail.exe</a>
+   which updates Outlook 97. </li>
+ <li>In the E-mail box, double-click the e-mail address.
+ Clear  the "Always send to this recipient in   Windows Messaging
+Rich Text Format" check box. (Note:   This must be done *each* time
+a message is sent via   the Reply button.) </li>
+ <li>Download and install <a href="http://web.archive.org/web/20080822071927/http://www.darkweb.com/%7Ebeng/exchange/rtfguard.htm">   "RTFGuard"</a>
+      written by Ben Goetter This will alert you when a
+     message is about to be sent with RTF formatting,   giving
+you   the option to discard the formatting   before sending.</li>
+
+  </ol>
+
+  <p>If you are using your Outlook 97 address book to send     messages to
+  the mail list, make certain you do not have Rich     Text Format selected
+  for that address book entry: </p>
+
+  <ul>
+ <li>Open the "Personal Address Book" </li>
+ <li>Double Click on the recipients name </li>
+ <li>Uncheck the check box " Always send to this   recipient
+  in Windows Messaging Rich Text Format"    </li>
+ <li>Close Options window </li>
+
+  </ul>
+
+  <hr title="outlook 97w/pak">
+  <h3><a name="out97w"></a>   Outlook 97 (with Service Release 1     SR1)</h3>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Internet E-mail" tab </li>
+ <li>Click the circle next to "MIME" and not   "UUENCODE"
+    </li>
+ <li>Uncheck the check box "Allow 8-bit characters in   headers"
+     </li>
+ <li>Check the "Line wrap" box and set to 80 or   less. Preferably
+ 72 </li>
+ <li>Make sure to use "US ASCII" character set </li>
+ <li>Click "OK" </li>
+
+  </ul>
+
+  <p>If you are using your Outlook 97 address book to send     messages to
+  the mail list, make certain you do not have Rich     Text Format selected
+  for that address book entry: </p>
+
+  <ul>
+ <li>Open the "Personal Address Book" </li>
+ <li>Double Click on the recipients name </li>
+ <li>Uncheck the check box " Always send to this   recipient
+  in Windows Messaging Rich Text Format"    </li>
+ <li>Close Options window </li>
+
+  </ul>
+
+  <hr title="outlook 98">
+  <h3><a name="out98w"></a>   Outlook 98 (Work group version)</h3>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Mail Format" tab </li>
+ <li>In "Send in this message format" area,   select "Plain
+ Text" from the drop- down box.    </li>
+ <li>Click on "Internet E-mail" tab </li>
+ <li>In "Internet E-mail Sending Format" area,   click the
+circle  next to "MIME". </li>
+ <li>Uncheck the check box "Allow 8-bit characters in   headers"
+     </li>
+ <li>In the drop down box "Encode text using:",   select "none"
+     </li>
+ <li>Click "OK" </li>
+
+  </ul>
+
+  <hr title="outlook 98 intenet">
+  <h3><a name="out98i"></a>   Outlook 98 (Internet version)</h3>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Mail Format" tab </li>
+ <li>In "Mail Formatting" area, select "Plain   Text" from
+the  drop- down box. </li>
+ <li>Click on "Settings..." button </li>
+ <li>Select "MIME" </li>
+ <li>In the drop down box "Encode text using:",   select "none"
+     </li>
+ <li>Click "OK" </li>
+
+  </ul>
+
+  <hr title="explorer6">
+  <h3><a name="explorer6"></a>   MSN Explorer 6.0</h3>
+
+  <p>MSN Explorer Tech support states "<i>that MSN     Explorer and MSN.com
+  send web-based HTML e-mail ONLY and     cannot be configured to send plain
+  text.</i>" </p>
+
+  <p>However, if you use MSN as your mail service (i.e.,     username@msn.com)
+  you can simply go to Hotmail.com and send e-mail     from there in plain
+ text (via their so-called PASSPORT system).     Same inbox, address book,
+ etc.   </p>
+
+  <p>You just have to remember to send or reply to POP3 and     plain text
+  e-mail from Hotmail and not from MSN. A real     nuisance but at least
+an   option. </p>
+
+  <p>Unfortunately the transfer to Hotmail from MSN e-mail     takes you
+through 3 screens and requires you to reenter your     password even if you
+checked the "remember my password"     box. </p>
+
+  <p>See <a href="http://web.archive.org/web/20080822071927/http://expita.com/nomime.html#hotmail">Hotmail</a>    above for details on     how to
+send plain text e-mail.</p>
+
+  <hr title="explorer7">
+  <h3><a name="explorer7"></a>MSN Explorer 7.0</h3>
+
+  <p>MSN Explorer Tech support states "<i>that MSN     Explorer and MSN.com
+  send web-based HTML e-mail ONLY and     cannot be configured to send plain
+  text.</i>" </p>
+
+  <p>With version 7.0 of MSN you are now automatically     connected to MSN
+  Hotmail.com, MSN Messenger Service and MSN     calendar so that you no
+longer   have to retype passwords.</p>
+
+  <p>If you use your MSN Hotmail sign-in name as your MSN     Messenger sign-in,
+  you can simply click on the Hotmail.com     link to logon directly to send
+  plain text e-mail from Hotmail.</p>
+
+  <p>You just have to remember to send or reply to POP3 and plain text  e-mail
+from Hotmail and not from MSN.</p>
+
+  <hr title="msn8">
+  <h3><a name="msn8"></a>MSN 8.0</h3>
+
+  <ul>
+   <li>Go to your MSN mail Inbox</li>
+   <li>Click on "E-mail settings" which is on the left side of the screen</li>
+   <li>Click on "Writing E-mail Settings" second on the list</li>
+   <li>Click on 4th item down, "Test Formatting"</li>
+   <li>At the "How Do You Want To Format Your Messages" box, click on
+  second button down "Use Plain Text for Compatibility..." In addition,
+choose the default encoding "Western European ISO" when sending e-mails</li>
+   <li>Save changes at the bottom of the screen</li>
+   <li>Click on "Mail and more" on the top toolbar to return you to
+your MSN Inbox</li>
+
+  </ul>
+
+  <hr title="exchange">
+  <h3><a name="exchange"></a> MS Exchange v4.0 (Win 3.x, 95/98,     and NT)</h3>
+
+  <ul>
+ <li>From the Microsoft Exchange toolbar select "Tools"    </li>
+ <li>Select the "Services" tab. </li>
+ <li>Highlight "Internet Mail" </li>
+ <li>Click on "Properties..." An "Internet   Mail, General"
+ window will appear. </li>
+ <li>Select "Message Format..." then make sure   "Use MIME
+when  sending messages" is   unchecked. If you turn off MIME here,
+it  will send   attachments UUEncoded. </li>
+ <li>Next, select "Character Set..." in the   "Message Format"
+ window
+ <ul>
+     <li>In the "UUENCODE Character Set"      window
+   </li>
+     <li>Click the down arrow that shows next to the
+     rectangular "window" below where it      says "specify
+a character set for      message" text. A set of options will
+      appear, including both "ISO 8859-1"
+   and "US ASCII". </li>
+     <li>Check "US ASCII", then click "OK".      This
+will  remove equal signs and "=3D"      codes in messages.
+   </li>
+     <li>Then click "OK" on the "Options"      menu.
+   </li>
+
+ </ul>
+ </li>
+
+  </ul>
+
+  <p><b>NOTE:</b> As you close the various windows on the way back
+a     message  will appear, advising that "configuration     changes will
+not take effect   until the next time you log onto     Internet Mail". </p>
+
+  <hr title="exchange5">
+  <h3><a name="exchange5"></a> MS Exchange Server 5.0</h3>
+
+  <p>It is possible to set up "Internet Mail service" to not send HTML.
+This is really more server related but some people have found the information
+useful.</p>
+ <a href="http://web.archive.org/web/20080822071927/http://www.microsoft.com/exchange/en/55/help/documents/server/xog05005.htm?id=415">
+Microsoft Exchange Server 5.5 Documentation</a>
+  <p><b>NOTE:</b> If using these instruction to set up your server
+to send plain text e-mail, then you should set all options for HTML/MIME
+to "never" or "disable".</p>
+
+  <hr title="winmail">
+  <h3><a name="winmail"></a>   WINMAIL.DAT</h3>
+
+  <p>When I send mail to an Internet mailing list, its members     complain
+  that my messages contain big binary attachments     called WINMAIL.DAT.
+What's  happening? How can I get rid of     these? </p>
+
+  <p>Either intentionally or accidentally, you have been     sending messages
+  in Microsoft rich text format to recipients     using mail programs that
+ cannot decipher this format. </p>
+
+  <p>When Exchange thinks that it is sending mail to another     Exchange
+  user on the Internet, Exchange (more properly, the     Internet Mail message
+  service provider) encodes the message,     along with attached files, embedded
+  OLE objects, and their     associated icons, into a special data block
+called   the TNEF (pronounced     tee-neff) block. This block can be seen
+in the mail  header     and looks similar to: </p>
+
+  <pre>        ------ =_NextPart_000_01BB9403.FCDBDA20<br>        Content-Type: application/ms-tnef<br>        Content-Transfer-Encoding: base64</pre>
+
+  <p>This block encapsulates the complete original content of     the Exchange
+  message, so that the message arrives at its     destination with all proper
+  formatting intact, including     boldface, underlining, fonts, and colors.
+  Otherwise, Exchange     formats the message in an Internet standard fashion,
+ discarding all rich text attributes and ensuring that all     attached
+  files appear as standard attachments. </p>
+
+  <p>The problem arises when people not using Exchange or     Outlook receive
+  a message in the TNEF format instead of     seeing a formatted message,
+they  see a big chunk of UUENCODEd     data if the sender used UUENCODE format,
+  or a MIME body part     application/ms-tnef if the sender used MIME. Depending
+  upon     which mail program they use, they may either see a long     sequence
+  of hexadecimal digits, or they may see an attached     binary file named
+ WINMAIL.DAT.   </p>
+
+  <p>Exchange specifies whether it emits TNEF or not as a     property of
+  the recipient, appearing as a field on the     property page of the underlined
+  recipient object within an     Exchange To or Cc field. (The underline
+in   the To field means     that Exchange has recognized the name, and associated
+  an     address and other information with it.) To see this recipient
+  property page, double click the underlined recipient: when     using either
+ the Internet Mail provider or Microsoft Exchange     Server, the popup that
+ appears should include a check box     labeled Send to this recipient in
+Microsoft rich text format.     If this check box is set, Exchange/Internet
+Mail will use a     TNEF block when sending messages to that user; otherwise,
+it     will strip the rich information and send plain text. The     sender
+can also set and clear this flag on entries in the     Personal Address Book.
+ Should the sender address a message     using an entry from the Address
+Book,  Exchange will use the     setting of this flag from that entry. </p>
+
+  <p>Never set this check box if you suspect that your     recipient isn't
+  using Exchange or Outlook, or if you are     sending mail to an Internet
+ mailing list. Otherwise, your     mail will include binary garbage. </p>
+
+  <p>Here's how to turn it off: </p>
+
+  <p>Step #1: </p>
+
+  <ul>
+ <li>Double click on the Mail and Fax icon in Control   Panel.
+     </li>
+ <li>Click on the Services tab, and select Internet Mail
+ from  the list. If Internet Mail is not listed, click   Add -
+add this  service. </li>
+ <li>Click Properties, and then Message Format. </li>
+ <li>Turn off the option that reads Use MIME when sending
+  messages.     </li>
+ <li>Click OK and then OK again. </li>
+
+  </ul>
+
+  <p>Step #2: </p>
+
+  <ul>
+ <li>Double click on the name of each recipient in your
+Address  Book. </li>
+ <li>Turn off the option that reads Always send to this
+recipient  in Microsoft rich text format. </li>
+ <li>This option needs to be set for each recipient of a
+ message  - if even one has this turned on, all   recipients will
+still get  the attachment. </li>
+
+  </ul>
+
+  <p><b>NOTE:</b> Either of these methods should work for most
+users,     but sometimes  nothing seems to work - yet another brilliant
+   design strategy by Microsoft.   If you plan to be sending lots     of
+internet e-mail, you should seriously   consider using a     mail program
+more suited to the task, such as Pegasus   or     Eudora. </p>
+
+  <p><b>NOTE:</b> A bug ("feature"?) in Exchange may cause
+line feeds to be replaced with equal signs when rich text     mail is disabled.
+  </p>
+
+  <p>Unfortunately, there are several ways to send Internet     mail messages
+  in TNEF format by accident. </p>
+
+  <ul>
+ <li>If you address the message by typing a literal   name@domain.xxx
+  SMTP address, or by entering the   address in Exchange's explicit
+  one off format - i.e.,   by typing [SMTP:name@domain.xxx] - and
+  you use the   version of Microsoft Exchange released with retail
+    Windows 95 (as opposed to Windows Messaging, or the
+    version released as the client of Microsoft Exchange   Server),
+  the entry will have its Send to this   recipient in Microsoft
+rich  text format check box set   by default. </li>
+ <li>If you address the message by typing a name and   letting
+ the system pick an entry from your Personal   Address Book, and
+ that address book entry specifies   Send to this recipient in Microsoft
+ rich text format,   then the recipient in the message will, too.
+     </li>
+ <li>If you address the message by giving the reply   command
+  in Exchange, and the message to which you   were replying had
+an  explicit RFC822 Reply-To header   (such as is the case on many
+ messages arriving via   Internet mailing lists), and you use a
+version of the   Internet Mail provider prior to the Internet Mail
+   Enhancement Patch (IMEP), the resulting entry in the
+     To field will have its Send to this recipient in   Microsoft
+rich text format check box set by default.   Note that a reply
+will never reference an entry in   your Personal Address Book unless
+  you replace the   contents of the reply note's To field yourself.
+ </li>
+
+  </ul>
+
+  <p>Some workarounds: </p>
+
+  <ul>
+ <li>If you are using the original version of retail   Windows
+ 95 Microsoft Exchange, update to a more   recent version, such
+as the Windows Messaging update.    </li>
+ <li>Know the contents of your Personal Address Book, and
+  ensure that you have not erroneously set the rich   text flag
+on any entries therein. </li>
+ <li>Use the most recent version of the Internet Mail   message
+ service provider. (Note: Microsoft Exchange   Server users do not
+ use this component, since they   send mail to the Internet through
+ a component of   Exchange Server.) </li>
+ <li>On replies to Internet mailing lists, manually clear
+  the rich text flag, or else replace the reply address   with
+a known entry from your Personal Address Book. </li>
+ <li>Use <a href="http://web.archive.org/web/20080822071927/http://www.darkweb.com/%7Ebeng/exchange/rtfguard.htm">   "RTFGuard"</a>
+      or Rich Text Sentry widget, which watches for
+ outgoing  Internet messages in rich text format, or   install
+a recent version  of Internet Idioms and   configure it to do likewise.</li>
+
+  </ul>
+
+  <p>Microsoft has their own explanation of this phenomenon in     the Knowledge
+  Base article <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/support/kb/articles/q136/2/04.asp">
+Q136204     (XCLN: Sending Messages In Rich-Text Format)</a>   </p>
+
+  <p>Microsoft also has an article on how to prevent WINMAIL.DAT     from
+  being sent in the Knowledge Base article <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/support/kb/articles/Q138/0/53.ASP">
+Q138053     (XFOR: How to Prevent the Winmail.dat File from Being Sent to
+     Internet Users)</a>   </p>
+
+  <p>Two other Knowledge Base articles also provide futher information
+  <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=KB;en-us;q280332">
+  Q280332     (OL2000 Outlook Sends HTML Messages to the Internet When You
+  Use an Exchange 2000 Mailbox)</a>    and     <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/default.aspx?scid=KB;en-us;q241538">
+  Q241538 (OL2000: How Message Formats Affect Internet Mail).</a>
+  </p>
+
+  <p>The entire preceding discussion assumes that you are using     either
+  the Internet Mail (SMTP/POP3) or Microsoft Exchange     Server messaging
+ service. If instead you are using the     Microsoft Mail messaging service,
+ and depending on a     Microsoft Mail gateway to carry your message onto
+the     Internet, you are out of luck, unless you have a gateway     clever
+enough to strip WINMAIL.DAT.</p>
+
+  <hr title="equalsign">
+  <h3><a name="equalsign"></a>   Equal signs at end of lines</h3>
+
+  <p>When I send mail to Internet users, they complain that my     text has
+  equals signs at the end of each line. What is this?     How can I make
+it   stop? </p>
+
+  <p>You are sending your messages in the MIME message format.     The Microsoft
+  Internet Mail program sends plain text messages     in a MIME format called
+  Content-Transfer-Encoding: Quoted-Printable.     The mail header usually
+ shows something similar to: </p>
+
+  <pre>        Mime-Version: 1.0<br>        Content-Type: text/plain; charset=iso-8859-1<br>        Content-Transfer-Encoding: quoted-printable</pre>
+
+  <p>If you find this bothersome, you have several options. You     can keep
+  all of your lines less than 76 characters long, in     which case the Internet
+  Mail service provider will not have     to insert these soft line break
+sequences.  You can send your     mail in a format other than MIME, via the
+Message Format setting. If your correspondent is using Exchange, you
+can     specify  that Exchange send rich text along with the message.
+ Or your correspondent  can use a MIME mail reader, which     presumably
+will know how to handle this encoding correctly. </p>
+
+  <p>Some e-mail programs, most notably those from Microsoft     that use
+    <em>quoted-printable</em> encoding can encode high     order ASCII characters
+  using a scheme where the equal sign     ("=") indicates a character to
+be   decoded followed     by the hexadecimal string value of the character
+to  be     encoded. This system of course assumes that the client e-mail
+    program can decode these characters (which most can). Things     that
+trigger automatic   <em>quoted-printable</em> encoding:</p>
+
+  <ol>
+ <li>High order characters - characters with the following
+   ordinal values 0..31,61,128..255 </li>
+ <li>Long lines in a message body (you can turn wordwrap
+ on  to fix this)</li>
+
+  </ol>
+
+  <p>If your message contains extended characters coded in q<em>uoted-printable</em>
+   format your e-mail client may append the following preamble     to
+ your message: </p>
+
+  <p><i>Sender composed mail containing characters not in the     US-ASCII
+  set</i><br>
+    <i>These characters have been transformed into a printable     form.</i></p>
+
+  <p>This is identified in the mail header under the Content-Type     line
+  similar to: </p>
+
+  <pre>        Mime-Version: 1.0<br>        Content-Type: text/plain; charset=iso-8859-1<br>        Content-Transfer-Encoding: quoted-printable</pre>
+
+  <p>To correct this, change your default character set from     ISO 8859-1
+  to US ASCII, or else take any of the precautions     listed above. For
+more   information, see the Knowledge Base     articles <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/support/kb/articles/q146/6/29.asp">
+Q146629     (Microsoft Exchange Internet Mail Lines End with a     "=")</a>
+    and <a href="http://web.archive.org/web/20080822071927/http://support.microsoft.com/support/kb/articles/q168/7/79.asp">
+Q168779     OLEXP: No Quote Characters When Using Quoted Printable Format</a>
+   .     The mail headers should then show: </p>
+
+  <pre>        Content-Type: text/plain; charset=us-ascii</pre>
+
+  <p>Note that the Exchange Server Internet Mail Connector (IMC)     only
+  encodes content this way on multipart MIME messages.     When the IMC processes
+  a message lacking extended characters     or attachments, it instead hard
+  wraps the plain text. </p>
+
+  <hr title="iso8859">
+  <h3><a name="iso8859"></a>   ISO 8859-1 or other character set</h3>
+
+  <p>This is identified in the mail header under the Content-Type     line
+  similar to: </p>
+
+  <pre>        Content-Type: text/plain; charset=iso-8859-1</pre>
+
+  <p>To correct this, change your default character set from     ISO 8859-1
+  to US ASCII. </p>
+
+  <p>For Windows 95 do the following: </p>
+
+  <ul>
+ <li>In Control Panel, double-click Mail And Fax. </li>
+ <li>Click Internet Mail, and then click Properties </li>
+ <li>On the General tab, click Message Format, and then
+click  Character Set. </li>
+ <li>Change the option from ISO 8859-1 to US ASCII, or   click
+ the "Use MIME when sending messages"   check box to clear it.
+   </li>
+
+  </ul>
+
+  <p>For Windows 98 this is controlled in Outlook and Outlook     Express.
+    </p>
+
+  <hr title="lotusnotes">
+  <h3><a name="lotus"></a>   Lotus Notes R5</h3>
+
+  <p>By default all mail in Lotus Notes is in the Notes Rich     Text Format
+  but may be set to MIME. </p>
+
+  <ul>
+ <li>Choose File/Mobile/Edit Current Location</li>
+ <li>Select the mail tab</li>
+ <li>In the field, "Format for messages addressed to   Internet
+ addresses", select MIME Format instead   of Rich Text Format.</li>
+
+  </ul>
+
+  <p>To send mail or news postings in plain text or HTML or     both: </p>
+
+  <ul>
+ <li>Choose File/Preferences/User Preferences</li>
+ <li>Click the Mail and News Icon</li>
+ <li>Under "Internet message format" (or   Internet News Format),
+ choose an option:</li>
+ <li>Plain text</li>
+ <li>HTML format</li>
+ <li>HTML and Plain Text.</li>
+
+  </ul>
+
+  <hr title="macx">
+  <h3><a name="macx"></a> Mac OS X Mail</h3>
+
+  <p>MIME and HTML are enabled by the mail program's default rich text
+format (RTF) but can easily be turned off on a message-by-message basis.
+Simply opening a new message window and then go to the "Format" menu  and
+select "Make Plain Text". </p>
+
+  <p>You can turn off RTF permanently by going to the "Mail Menu" and select
+"Preferences" then choose "Composing".  At the top of the new window select
+"Format: Plain Text". Now all outgoing messages are plain text by default.</p>
+
+  <p><b>NOTE:</b> AOL 10.2.1 for Mac OS X appears  incapable of
+sending plain text e-mail.</p>
+
+  <hr title="groupwise">
+  <h3><a name="groupwise"></a>   Novell Groupwise</h3>
+
+  <p>Generally it is assumed that the e-mail server does not     alter the
+  message at all, and that the sender and their     client software is entirely
+  in control of the message which     is sent. In some systems, such as Lotus
+  ccMail, Lotus Notes,     Microsoft Exchange or Novell Groupwise, the client
+  and server     do not follow this model, do not use Internet standards
+and  do not necessarily follow the conventions and standards of
+Internet   e-mail. In those cases compatibility with Internet     standards
+may be handled  by a third item of software - a     gateway. Thus there can
+be problems of  a significant     difference between what the sender sees
+when they write   the e-mail     (which is probably similar to how it appears
+to recipients   in     their office), and what is actually sent to Internet
+    recipients.     </p>
+
+  <p>Users of Internet compliant software sometimes disparage     the continued
+  use of proprietary systems such as Novell     Groupwise or Lotus Notes,
+based  on the awkward or hard-to-read     e-mails they sometimes receive
+from these  systems. However     their continued use is inevitable since
+within their  own     system they provide additional powerful "groupware"
+    functionality  which is valuable to larger organizations and     which
+cannot currently be provided with standard Internet     protocols. All these
+systems can be configured to respect     Internet technical standards and
+conventions (although perhaps not in a way which the sender can see
+or control) -     the problem  is that they are sometimes mis-configured
+by     default, creating difficulties  for all their users. </p>
+
+  <p>Some e-mail client programs can be configured (or are     configured
+  by default) to send each paragraph as one long     line. Some e-mail systems
+  such as Groupwise (and apparently     Lotus Notes), have a single setting
+  in the server (the     Message Transfer Agent, which may include a SMTP
+gateway) which either wraps all outgoing e-mails of all users to a
+   particular  line length, or sends all e-mails of all users     with each
+paragraph as  an arbitrarily long line (unless the     user manually sets
+the line length  by pressing "enter").     In neither case does the user
+control this single,  system-wide,     setting. Nor may the server's wrapping
+correspond to what they see on screen when writing. </p>
+
+  <p>Arbitrarily long lines can be sent within SMTP standards     using the
+  "quoted-printable" MIME type. </p>
+
+  <p>If such arbitrarily long lines are sent as plain text,     then the
+1,000 character limit of SMTP may be reached and the     sending client or
+system may wrap the line arbitrarily there,     or may send it out longer
+than 1,000 characters. If this     happens, a recipient SMTP server may reject
+it, or break the     line. In one instance a plain text e-mail from Groupwise
+4.2     exceeded the 1,000 character per line limit. That paragraph,
+of 1,253 characters was broken in mid word by a SMTP server     just before
+the 1,000th character. This and later versions of     Groupwise are used
+in a significant number of VET institutes,     where the system is valued
+for many functions apart from its     Internet e-mail capabilities. </p>
+
+  <p>Quoting styles. The established approach to quoting a line     of text:
+  "&gt; " or "&gt;" is no longer     the only approach. Other methods, which
+  are the default in     Groupwise and perhaps other clients or e-mail systems,
+  are     much harder to understand, at least in some circumstances,
+since   they mark only the start of the paragraph as a comment,     rather
+than the  start of each line. A plethora of     incompatible quoting styles
+is a source  of error and     frustration for novices and experienced users
+alike - so  an     operational guideline standardise on "&gt; " or     "&gt;"
+was decided  upon, with the matter to be     reviewed within 12 months or
+so. </p>
+
+  <p>I have been informed that the issue regarding line wrapping is
+indeed set at the gateway - in Groupwise 5.2 and up, this is known as
+the "GWIA".  There are additional settings controlling the type of MIME
+encoding, etc.</p>
+
+  <p>Additionally, in GW5.5 EP (for Enhancement Pack) and higher on
+Windows, HTML first became available for reading and authoring mail
+(provided Internet Explorer is installed).</p>
+
+  <p>In Groupwise 5.5EP, the message format is controlled from the Groupwise
+  client. When composing mail:     </p>
+
+  <ul>
+ <li>Click on "View"</li>
+ <li>Then select either "Plain Text" or "HTML"</li>
+
+  </ul>
+      The client then remembers that setting.
+  <p><b>WARNING:</b> The GW client will turn the HTML setting back
+on all  by  itself if the user receives or reads e-mail that has been MIME
+encoded   with  HTML.</p>
+
+  <hr title="peg3">
+  <h3><a name="peg3"></a>   Pegasus Mail 3.x</h3>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Sending Mail" tab </li>
+ <li>In "When sending messages containing rich (formatted)
+   text" section </li>
+ <li>Check the radio button "Always remove formatting."    </li>
+ <li>In "Advanced settings" section, uncheck all   four options
+ Make sure "Allow 8-bit MIME message   is unchecked" </li>
+ <li>Click on "OK" </li>
+
+  </ul>
+
+  <hr title="peg4">
+  <h3><a name="peg4"></a>   Pegasus Mail 4.x</h3>
+
+  <ul>
+ <li>Select "Tools" then click on "Options..."    </li>
+ <li>Click on "Sending Mail" tab </li>
+ <li>In "Message Formatting, Formatting and use of   styling
+  in messages" section:
+ <ul>
+     <li>Disable all text styling options (never send
+ styled mail) -- should be checked. This is      the
+key  item to set for sending plain text</li>
+     <li>Do not display the editor 'styles' toolbar --
+  unimportant to what's actually sent but if      you
+check  it you will not get the false sense      that you are
+sending  formatted mail as the      visible formatting options
+will  be removed      from the editor screen.</li>
+     <li>Always paste plain text in preference to
+  styled text -- Should be checked though it is      implied
+if "Disable all text styling      options" is set as noted
+above.</li>
+
+ </ul>
+ </li>
+ <li>In "Sending Mail, Rich Text (formatted) Message   Handling"
+ section:
+ <ul>
+     <li>Generate multipart/alternative versions of
+    richtext messages -- should be unchecked.</li>
+     <li>For mail sent to local addresses, use MS-RTF
+ formatting -- should be unchecked but does      not
+affect  Internet mail.</li>
+
+ </ul>
+ </li>
+ <li>In "Advanced settings" section:
+ <ul>
+     <li>Send enclosures instead of attachments --
+   normally checked, unrelated to plain text      versus formatted
+ message issues.</li>
+     <li>Make sure "Allow 8-bit MIME message is
+unchecked"     </li>
+     <li>Don't add "attachment information"      sections
+ to Multipart messages -- should be      checked    </li>
+     <li>Suppress BCC field listings in outgoing mail
+ -- not important to plain text issues but is      normally
+ checked for other reasons.</li>
+
+ </ul>
+ </li>
+ <li>Click on "OK" </li>
+
+  </ul>
+
+  <hr title="pine">
+  <h3><a name="pine"></a>   Pine 4.x (Unix)</h3>
+
+  <ul>
+ <li>Start Pine from UNIX prompt, i.e., pine</li>
+ <li>From Main Menu, select "S" (SETUP-   Configure Pine Options)
+     </li>
+ <li>Select or type "C" (Config) </li>
+ <li>Type "w" (Word to find:) and enter "character-"   to
+find  Character-Set. Leave as &lt;No Value Set&gt;.   It defaults
+to US-ASCII or set it explicity to "US-ASCII"    </li>
+ <li>Type "w" (Word to find:) again and enter   "include-"
+to  find Include-attachments-in-reply.   Leave or set the box to
+unchecked </li>
+ <li>This feature controls an aspect of Pine's Reply   command.
+ If set, any MIME attachments that were part   of the original message
+ will automatically be   included in the Reply. </li>
+ <li>Select or type "E" (Exit) and type "Y"   to commit changes</li>
+ <li>Select or type "Q" (Quit), type "Y"</li>
+
+  </ul>
+
+  <h3><a name="pinew"></a>   Pine 4.x (Windows)</h3>
+
+  <ul>
+ <li>Start Pine and Login</li>
+ <li>From Main Menu, select "S" (SETUP-   Configure Pine Options)
+     </li>
+ <li>Select or type "C" (Config) </li>
+ <li>Type "w" (Word to find:) and enter "character-"   to
+find  Character-Set. Leave as &lt;No Value Set&gt;.   It defaults
+to US-ASCII or set it explicity to "US-ASCII"    </li>
+ <li>Type "w" (Word to find:) again and enter   "include-"
+to  find Include-attachments-in-reply.   Leave or set the box to
+unchecked </li>
+ <li>This feature controls an aspect of Pine's Reply   command.
+ If set, any MIME attachments that were part   of the original message
+ will automatically be   included in the Reply. </li>
+ <li>Select or type "E" (Exit) and type "Y"   to commit changes</li>
+ <li>Select or type "Q" (Quit), type "Y"</li>
+
+  </ul>
+
+  <hr title="poco">
+  <h3><a name="poco"></a>   Poco v2.xx</h3>
+
+  <p>Poco supports receiving and sending of both Styled mail (also     known
+  as HTML mail) and plain text mail. </p>
+
+  <ul>
+ <li>Make sure the Style toolbar is showing (View, Show
+Style  Toolbar menu) </li>
+ <li>To send a plain message, depress the Styled button.
+ The  state of Styled button and the menu can be saved   to default
+to  your preferred state, in Program   Options (F7), Defaults section.
+ </li>
+
+  </ul>
+
+  <hr title="thebat">
+  <h3><a name="thebat"></a>   TheBat! v1.18</h3>
+
+  <ul>
+ <li>Select "Account" from the main menu </li>
+ <li>Click on the "Transport" icon </li>
+ <li>In the section "8-bit characters are treated",   click
+ on "Without changes"
+ <p><br>
+       NOTE: 8-bit characters are treated - this radio group
+     allows you to set the method used to handle 8-bit (non-ASCII)
+      characters. If you are using only the English   alphabet,
+  this feature is not very significant to you   because all English
+  characters are ASCII characters   and will go through the net
+without  any problems.   However, if you are using accented characters
+or    character sets other than English, you should choose
+   the method carefully because there still are some   mail
+servers  which do not allow appearance of 8-bit   characters in
+e-mail messages.  If you are not sure   that such servers are functioning
+ in the way you   write your messages, it is better to choose either
+   Base64 or Quoted-printable encoding. The difference
+    between these two encoding methods is that Base64   produces
+totally unreadable text. Quoted-printable   encoding still can
+be read if your alphabet is almost   Latin, only accented characters
+are encoded. If your   recipient's are using The Bat! or another
+program    which can recognise Base64 and quoted-printable
+   encoding automatically, you may choose either of   these
+two methods.  </p>
+ </li>
+ <li>Click on the "Options" icon </li>
+ <li>Uncheck the check box in front of "Allow 8-bit   characters
+  in message header" </li>
+ <li>Click OK </li>
+ <li>Select "View" from the main menu </li>
+ <li>Click on "Encoding" then select "None"    </li>
+ <li>Select "Options" from the main menu </li>
+ <li>Select on "Language" then click on "English"    </li>
+
+  </ul>
+
+  <hr title="yahoo">
+  <h3><a name="yahoo"></a>   Yahoo Mail</h3>
+
+  <p><b>NOTE:</b> Some features are only available to IE users.
+     Netscape and other browsers will not show these options.</p>
+
+  <p>After signing in to Yahoo Mail, some general setup items shoukd be done.</p>
+
+  <ul>
+ <li>Click "Check Email" under "Message Center" on left side of screen</li>
+ <li>Select "Mail Options" from right-hand side of main toolbar</li>
+ <li>From " Mail Options Screen " select "General Preferences" (see
+   Personalization)</li>
+ <li>Under "Forwarding Messages" (Message Actions) select
+  "forward as in-line text"</li>
+ <li>Under "Replying" (Message Actions) select "include full  original
+message"</li>
+ <li>Click Save button</li>
+
+  </ul>
+
+  <p>Make sure you set plain text signature as the default.</p>
+
+  <ul>
+ <li>Select "Mail Options" from right-hand side of main toolbar</li>
+ <li>From " Mail Options Screen " select "Signature" (see
+      Personalization)</li>
+ <li>If using IE, then next to "Editor" select "Plain"</li>
+ <li>If using Netscape or other browser, next to "This signature is:
+" select the "plain text" bullet</li>
+ <li>Click Save button</li>
+
+  </ul>
+
+  <p>When Replying or Forwarding, edit the previous text and remove all
+footer material before adding your new text.</p>
+
+  <p>If using IE (not available in Netscape and other browsers) when in the
+"Compose" window, make sure "Plain" is selected rather   than "Color
+and Graphics". These two choices are a toggle switch. Clicking on one activates
+it and turns off the other.</p>
+
+  <p>In any browser, also make sure the "Allow HTML tags"   checkbox
+at the bottom is NOT checked.</p>
+
+  <p>If you want to add a signature, check the "Add signature" checkbox.</p>
+
+  <hr title="webtv">
+  <h3><a name="webtv"></a>   WebTV</h3>
+
+  <p>There are some sites on the 'net like <a href="http://web.archive.org/web/20080822071927/http://www.geocities.com/ResearchTriangle/8795/howto.webtv.html">
+  HTML     for WebTV E-Mail</a>    and <a href="http://web.archive.org/web/20080822071927/http://members.tripod.com/%7EStarfish9/index-2.html">How     To Use
+HTML In WebTV E-Mail</a>    that inform users to add HTML     coding to their
+WebTV signature, <b> PLEASE  IGNORE THIS BAD     ADVICE!</b></p>
+
+  <p>WebTV users should NEVER leave an HTML signature "added"     when posting
+  anywhere outside of the <i>WebTV Community</i>     OR e-mailing to a <i>
+ non-WebTV  user</i>. Unless you remove     it, they will probably receive
+ your message  as an attachment     and will be less than happy with you.
+Attachments are  the     number one purveyor of viruses. See <a href="http://web.archive.org/web/20080822071927/http://www.f-secure.com/v-descs/webtv.shtml">   WebTV     Flood virus</a>
+    for example. </p>
+
+  <p>How to Set Up a Signature and Remove HTML coding </p>
+
+  <ul>
+ <li>Click on Setup on the sidebar </li>
+ <li>Click on Signature </li>
+ <li>Remove the HTML codes (if any) from the text entry
+box </li>
+ <li>Add a simple maximum 4-line signature in the text   entry
+ box </li>
+ <li>Click Done </li>
+ <li>Click Done again </li>
+
+  </ul>
+
+  <p>If you using an HTML signature, then you MUST make sure to     remove
+  it before posting to non-WebTV users. Your mail should     be compatible
+ with other user's systems by using only plain     text and no HTML. </p>
+
+  <ul>
+ <li>On the WebTV e-mail "Write Page"</li>
+ <li>Click on "Remove Signature" at left of   "Send" button</li>
+ <li>Send e-mail</li>
+
+  </ul>
+
+  <p><b>NOTE:</b> The default in the WebTV e-mail <i>Write page</i>
+is     set to  include the signature. </p>
+
+  <hr title="examples">
+  <h3><a name="examples"></a>   Examples of actual HTML/MIME     encoded mail</h3>
+
+  <p>The examples seen below were actually received by me in my     UNIX
+Pine mail program. These show what I actually see when I     open the message
+in Pine. The only thing I have changed is     the users identity. </p>
+
+  <pre>Received: from engine2.hyperia.com ([208.198.156.11])<br>   by no2.superb.net (8.11.1/8.11.1) with ESMTP id f3MA0eC18408<br>   for &lt;gboyd@expita.com&gt;; Sun, 22 Apr 2001 06:00:41 -0400 (EDT)<br>Received: from c2 ([208.198.157.163]) by engine2.hyperia.com<br>     (Post.Office MTA Undefined release Undefined<br>     ID# 589-65135U6000L100S0) with SMTP id AAA24823<br>     for &lt;gboyd@expita.com&gt;; Sun, 22 Apr 2001 10:57:57 +0100<br>Message-ID: &lt;002d01c0cb1b$62570700$a39dc6d0@c2&gt;<br>From: xxxxxxxx@hyperia.com (Cxxxxx Txxxxxxxxxxxxxx)<br>To: &lt;gboyd@expita.com&gt;<br>Subject: Firewalls<br>Date: Sun, 22 Apr 2001 11:00:02 -0000<br>MIME-Version: 1.0<br>Content-Type: multipart/alternative;<br>   boundary="----=_NextPart_000_002A_01C0CB1B.61521A20"<br>X-Priority: 3<br>X-MSMail-Priority: Normal<br>X-Mailer: Microsoft Outlook Express 5.00.2314.1300<br>X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2314.1300<br>Parts/Attachments:<br>   1   OK    ~25 lines  Text (charset: ISO-8859-1)<br>   2 Show
+n   ~49 lines  Text (charset: ISO-8859-1)<br>----------------------------------------<br><br><br>    [ Part 1, Text/PLAIN (charset: ISO-8859-1 "Latin 1")  25 lines. ]<br>    [ Not Shown. Use the "V" command to view or save this part. ]<br><br>    [ The following text is in the "iso-8859-1" character set. ]<br>    [ Your display is set for the "US-ASCII" character set.  ]<br>    [ Some characters may be displayed incorrectly. ]<br><br>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;<br>&lt;HTML&gt;&lt;HEAD&gt;<br>&lt;META content="text/html; charset=iso-8859-1" http-equiv=Content-Type&gt;<br>&lt;META content="MSHTML 5.00.2314.1000" name=GENERATOR&gt;<br>&lt;STYLE&gt;&lt;/STYLE&gt;<br>&lt;/HEAD&gt;<br>&lt;BODY bgColor=#ffffff&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;I work for a company with 20 or so networked<br>computers and no connection to the outside world. Our e-mail is currently<br>received through standalone dialup PC's which ar
+e not connected to the<br>Network.&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&amp;nbsp;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;What we now wish to do is have continuous access<br>to<br>an e-mail server on the Internet for all our LAN PCs. We do not intend to allow<br>any Internet browsing or any other Internet Services whatsoever.&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&amp;nbsp;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;We are using Windows NT as the operating system<br>for<br>our LAN network and may in the future upgrade to win 2000.&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&amp;nbsp;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;My Question is: If only EMAIL will be used is a<br>Firewall really necessary. i.e. does the operating system itself ( be it NT or<br>the newer 2000) allow for blocking all services BUT e-mail? If yes, having<br>people<br>use all Internet services via e-mail, will it present a security<br>risk?&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&amp;nbsp;
+&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;It is not really the additional expense of the<br>firewall that I am concerned about, rather it is the additional complexity and<br>knowledge involved with a firewall that concerns me.&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&amp;nbsp;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;I will be grateful for your reply&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&amp;nbsp;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;Regards,&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&amp;nbsp;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;Cxxxxx Txxx&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;/FONT&gt;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;<br><br></pre>
+
+  <hr>
+  <pre>Date: Mon, 2 Apr 2001 20:51:57 -0400<br>From: Envision &lt;nvision@envisionfirst.com&gt;<br>To: friend &lt;eoe@envisionfirst.com&gt;<br>Subject: equipment<br>Parts/Attachments:<br>   1.1   OK     ~71 lines  Text (charset: ISO-8859-1)<br>   1.2 Shown   ~183 lines  Text (charset: ISO-8859-1)<br>   2   13 KB     Image<br>   3  2.7 KB     Image<br>   4  2.3 KB     Image<br>   5  5.4 KB     Image<br>----------------------------------------<br><br><br>    [ Part 1.1, Text/PLAIN (charset: ISO-8859-1 "Latin 1")  71 lines. ]<br>    [ Not Shown. Use the "V" command to view or save this part. ]<br><br>    [ The following text is in the "iso-8859-1" character set. ]<br>    [ Your display is set for the "US-ASCII" character set.  ]<br>    [ Some characters may be displayed incorrectly. ]<br><br>[IMAGE]<br><br>www.envisionfirst.com<br><br>Envision Ophthalmic Equipment is Buying and Selling Ophthalmic<br>Instruments<br><br>[IMAGE]<br><br>[IMAGE]<br><br>Envision is looking to purchase used ophthalmic equipment.&amp;nb
+sp;  Age and<br>condition does not matter, so take a look in your closets, backrooms,<br>garages, storage, or just an extra lane your not using and make a list<br>and e-mail it to: selling@envisionfirst.com or fax it to: 734.354.8693<br><br> *  B&amp;L Refractors<br><br> *  AO RX Masters<br><br> *  AO 590<br>[snip]<br>[IMAGE]<br><br>    [ Part 2, Image/JPEG  18KB. ]<br>    [ Cannot display this part. Press "V" then "S" to save in a file. ]<br><br><br>    [ Part 3, Image/JPEG  3.6KB. ]<br>    [ Cannot display this part. Press "V" then "S" to save in a file. ]<br><br><br>    [ Part 4, Image/JPEG  3.1KB. ]<br>    [ Cannot display this part. Press "V" then "S" to save in a file. ]<br><br><br>    [ Part 5, Image/JPEG  7.2KB. ]<br>    [ Cannot display this part. Press "V" then "S" to save in a file. ]<br><br></pre>
+
+  <hr>
+  <pre>Received: from mclean.mail.mindspring.net (mclean.mail.mindspring.net
+  <br>    [207.69.200.57])
+  <br>   by no2.superb.net (8.11.1/8.11.1) with ESMTP id f3MJHeo17266<br>   for &lt;gboyd@expita.com&gt;; Sun, 22 Apr 2001 15:17:41 -0400 (EDT)<br>Received: from JASON (user-vcauipu.dsl.mindspring.com [216.175.75.62])<br>   by mclean.mail.mindspring.net (8.9.3/8.8.5) with SMTP id PAA17437<br>   for &lt;gboyd@expita.com&gt;; Sun, 22 Apr 2001 15:17:41 -0400 (EDT)<br>From: "Jxxxx Fxxxxx" &lt;xxxxxxx@earthlink.net&gt;<br>To: &lt;gboyd@expita.com&gt;<br>Subject: Setting Up Earthlink DSL on Two machines<br>Date: Sun, 22 Apr 2001 15:26:10 -0400<br>Message-ID: &lt;CIEPLOKFNPMNMPOHOHCEGEDGCAAA.xxxxxxx@earthlink.net&gt;<br>MIME-Version: 1.0<br>Content-Type: multipart/alternative;<br>   boundary="----=_NextPart_000_0000_01C0CB40.8F202D50"<br>X-Priority: 3 (Normal)<br>X-MSMail-Priority: Normal<br>X-Mailer: Microsoft Outlook IMO, Build 9.0.2416 (9.0.2911.0)
+  <br>Importance: Normal<br>X-MimeOLE: Produced By Microsoft MimeOLE
+ V5.50.4133.2400
+ <br>Parts/Attachments:
+ <br>   1   OK     10 lines  Text (charset: ISO-8859-1)
+ <br>   2 Shown   ~23 lines  Text (charset: ISO-8859-1)<br>----------------------------------------<br><br><br>    [ Part 1, Text/PLAIN (charset: ISO-8859-1 "Latin 1")  10 lines. ]<br>    [ Not Shown. Use the "V" command to view or save this part. ]<br><br>    [ The following text is in the "iso-8859-1" character set. ]<br>    [ Your display is set for the "US-ASCII" character set.  ]<br>    [ Some characters may be displayed incorrectly. ]<br><br>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;<br>&lt;HTML&gt;&lt;HEAD&gt;<br>&lt;META http-equiv=Content-Type content="text/html; charset=iso-8859-1"&gt;<br>&lt;META content="MSHTML 5.50.4611.1300" name=GENERATOR&gt;&lt;/HEAD&gt;<br>&lt;BODY&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;&lt;SPAN class=187582319-22042001&gt;I read your article<br>of how you set up Earthlink DSL on all your machines.&amp;nbsp; I am running two<br>machines both window
+s 2000. I have two network cards in one and one<br>network card in the other.&amp;nbsp; I enable Internet Connection Sharing on the<br>DSL<br>connection and can't get the second machine to connect.&amp;nbsp; File sharing is<br>working perfectly so the computers and connected correctly.&amp;nbsp; Any<br>Ideas.&lt;/SPAN&gt;&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;&lt;SPAN<br>class=187582319-22042001&gt;&lt;/SPAN&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;Jxxxx Fxxxxx&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&lt;FONT face=Arial size=2&gt;xxxxxxx@earthlink.net&lt;/FONT&gt;&lt;/DIV&gt;<br>&lt;DIV&gt;&amp;nbsp;&lt;/DIV&gt;&lt;/BODY&gt;&lt;/HTML&gt;<br></pre>
+
+  <hr>
+  <pre>Date: Wed, 15 Aug 2001 01:01:32
+       From: htwkh@21cn.net
+       To: gbp2@one.net
+       Subject: ñ²ðï¡¢¹ÇÑ×·çÊª¡¢Ö×Áö¡·²¡»¼ÕßµÄ¸£Òô<br><br>[ The following text is in the "DEFAULT_CHARSET" character set. ]<br>[ Your display is set for the "US-ASCII" character set. ]<br>[ Some characters may be displayed incorrectly. ]<br><br>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;<br>&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;<br>&lt;META content="text/html; charset=gb2312" http-equiv=Content-Type&gt;<br>&lt;META content="MSHTML 5.00.2614.3500" name=GENERATOR&gt;&lt;/HEAD&gt;<br>&lt;BODY&gt;&lt;B&gt;ÊÕ¼þÈË:&lt;/B&gt; htwkh@21cn.net&lt;BR&gt;&lt;B&gt;Ö÷Ìâ:&lt;/B&gt;<br>¡¶ñ²ðï¡¢¹&amp;Cce
+dil;Ñ×·çÊª¡¢Ö×Áö¡·²¡»¼ÕßµÄ¸£Òô&lt;BR&gt;<br>&lt;P&gt;&lt;FONT size=2&gt;ÏÈÉú/Å®Ê¿£ºÄúºÃ£¿&lt;BR&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;<br>´ËÐÅÊÇ¡¶ñ²ðï¡¢¹ÇÑ×·çÊª¡¢Ö×Áö¡·²¡»¼ÕßµÄ¸£Òô£¬Ö»·¢Ò»´Î£¬¾ø·ÇÀ¬»ø¡£Èç¸óÏÂ»òÇ×ÓÑÖÐ²¢<br>ÎÞ´Ë²¡£¬ÎÒ&amp;Atil
+de;ÇÎª´ËÐÅ±íÊ¾µÀÇ¸£¬Çë¼´É¾³ý¡£¡¶³þÌìñ²ðï¡¢¹ÇÑ×·çÊª¡¢Ö×Áö²¡ÖÎÁÆ¿µ¸´ÖÐÐÄ¡·<br>£¬ÊÇÒ»¼ÒÃæÏòÈ«¹ú¼°¸Û¡¢°Ä¡¢Ì¨£¬¾­Óª20¶àÄê£¬ÒÔÖÎÁÆñ²ðï¡¢¹ÇÑ×·çÊª¡¢Ö×Áö²¡ÎªÖ÷µÄ¿µ¸´
+<br>
+ÖÐÐÄ¡£±¾ÖÐÐÄÔÚÖÐÒ½ÁùÊÀµ¥´«ÃØ·½µÄ»ù´¡ÉÏ£¬²ÉÓÃÖÐÒ©ÌáÈ¡ÎïÑÐÖÆÁË×îÐÂ1£­4ºÅÒ©Îï£¬Ò»¸Ä<br>ÏÈÇ°µÄ´ó°üÐ¡´üÒ©£¬ÌÀ¹øÀï¼åµÄ·½Ê½£¬ÖÎÁÆ²»Í¬ÀàÐÍ&lt;&lt;ñ²ðï¡¢¹ÇÑ×·çÊª¡¢Ö×Áö&gt;&gt;²¡&amp;p
+ound;¬¸±×÷ÓÃ
+<br>ÉÙ£¬ÁÆÐ§ºÃ£¬×ÜÓÐÐ§ÖÎÓúÂÊ´ï96.5%ÒÔÉÏ¡£&lt;BR&gt;ÈçÓÐÒâÔÚÎÒÖÐÐÄÖÎÁÆ»òÖªµÀÏêÏ¸Çëµ½&lt;A<br>href="http://htwkh.51.net"<br>target=_blank&gt;http://htwkh.51.net&lt;/A&gt;ÎÒÃÇÁªÏµ¡£&lt;BR&gt;&lt;/FONT&gt;&lt;FONT<br>size=2&gt;µç»°£º0728¡ª5336186&amp;nbsp;&amp;nbsp;&lt;BR&gt;ÏêÏ¸µØÖ·£ººþ±±Ê¡ÌìÃÅÊÐ»ÆÌ¶ÐÂ½Ö8&#8744;
+dm;Å5&lt;BR&gt;
+<br>ÓÊÕþ±àºÅ£º431708&lt;BR&gt;Ö÷ÖÎÒ½Ê¦£ºÍõ·½ÁÖ&lt;BR&gt;¿µ¸´ÖÐÐÄÐÅÏä£º&lt;A<br>href="mailto:htwkh@21cn.net"&gt;htwkh@21cn.net&lt;/A&gt;.&lt;BR&gt;´ËÖÂ&lt;BR&gt;¾´Àñ&lt;/FONT&gt;<br>&lt;/P&gt;&lt;/BODY&gt;&lt;/HTML&gt;<br></pre>
+
+  <p>Nasty looking, aren't they? No wonder I dislike HTML e-mail.     The
+  worse<br>
+    of them is the next sample, a base64 (MIME) encoded message.<br>
+    </p>
+
+  <pre>Received: from city.cityedu.com ([211.37.94.194])<br>     by listserv.aol.com (8.8.8/8.8.8)<br>     with SMTP id MAA11272 for &lt;accmail@listserv.aol.com&gt;;<br>     Sun, 22 Apr 2001 12:29:33 -0400 (EDT)<br>From: i284497472@hotmail.com<br>Received: from 211.37.94.194 (unverified [163.30.52.134]) by city.cityedu.com<br> (EMWAC SMTPRS 0.83) with SMTP id &lt;B0000006866@city.cityedu.com&gt;;<br> Mon, 23 Apr 2001 01:22:42 +0900<br>Date: Mon, 23 Apr 2001 01:22:42 +0900<br>Message-ID: &lt;B0000006866@city.cityedu.com&gt;<br>Reply-To: i284497472@hotmail.com<br>To: i284497472@hotmail.com<br>Subject: ¡¾¡¾¡¾Flying Shose!!¡¾¡¾¡¾¡¾Flying Shose!!¡¾¡¾¡¾<br>MIME-Version: 1.0<br>Content-Type: text/html; charset=big5<br>Content-Transfer-Encoding: base64<br><br>PGh0bWw+DQoNCjxoZWFkPg0KPG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250<br>ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9YmlnNSI+DQo8dGl0bGU
++Zmx5c2hvc2U8L3RpdGxl<br>Pg0KPC9oZWFkPg0KDQo8Ym9keSBiZ2NvbG9yPSIjRkZGRkZGIiB0ZXh0PSIjMDAwMDAwIj4N<br>CjxkaXYgYWxpZ249ImNlbnRlciI+DQoNCjxwPg0KPG9iamVjdCBjbGFzc2lkPSJjbHNpZDpE<br>MjdDREI2RS1BRTZELTExY2YtOTZCOC00NDQ1NTM1NDAwMDAiDQpjb2RlYmFzZT0iaHR0cDov<br>L2Rvd25sb2FkLm1hY3JvbWVkaWEuY29tL3B1Yi9zaG9ja3dhdmUvY2Ficy9mbGFzaC9zd2Zs<br>YXNoLmNhYiN2ZXJzaW9uPTUsMCwwLDAiDQp3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCI+DQog<br>IDxwYXJhbSBuYW1lPSJtb3ZpZSINCiAgdmFsdWU9Imh0dHA6Ly9ob21lLnBjaG9tZS5jb20u<br>dHcvbmV0L2VuZ19zaG9lczEwL2VuZy9pbnRyby1lLnN3ZiI+DQogIDxwYXJhbSBuYW1lPSJx<br>dWFsaXR5IiB2YWx1ZT0iaGlnaCI+PGVtYmVkIHNyYz0iaHR0cDovL2hvbWUucGNob21lLmNv<br>bS50dy9uZXQvZW5nX3Nob2VzMTAvZW5nL2ludHJvLWUuc3dmIgpxdWFsaXR5PSJoaWdoIgpw<br>bHVnaW5zcGFnZT0iaHR0cDovL3d3dy5tYWNyb21lZGlhLmNvbS9zaG9ja3dhdmUvZG93bmxv<br>YWQvaW5kZXguY2dpP1AxX1Byb2RfVmVyc2lvbj1TaG9ja3dhdmVGbGFzaCIKdHlwZT0iYXBw<br>bGljYXRpb24veC1zaG9ja3dhdmUtZmxhc2giIHdpZHRoPSI2MDAiIGhlaWdodD0iMzAwIj4N<br>Cjwvb2JqZWN0Pg0KPC9wPg0KDQo8cCBhbGlnbj0iY2VudGVyIj48Zm9udCBzaXplPSIzIj6h<br>RUlmIHl
+vdSBjYW4ndCBzZWUgKGFuZCBoZWFyKSB0aGUgYWJvdmUgYW5pbWF0aW9uLCB5b3Ug<br>DQpzaG91bGQgPGENCmhyZWY9Imh0dHA6Ly93d3cubWFjcm9tZWRpYS5jb20vc2hvY2t3YXZl<br>L2Rvd25sb2FkL2Rvd25sb2FkLmNnaT9QMV9Qcm9kX1ZlcnNpb249U2hvY2t3YXZlRmxhc2gi<br>Pmluc3RhbGwgDQpTaG9ja3dhdmUgRmxhc2g8L2E+PC9mb250PjwvcD4NCg0KPHAgYWxpZ249<br>ImNlbnRlciI+PGEgaHJlZj0iaHR0cDovL2hvbWUucGNob21lLmNvbS50dy9uZXQvZW5nX3No<br>b2VzMTAvY2hpbi9pbmRleC5odG0iPkNISU5FU0U8L2E+IA0KJm5ic3A7IDxhIGhyZWY9Imh0<br>dHA6Ly9ob21lLnBjaG9tZS5jb20udHcvbmV0L2VuZ19zaG9lczEwL2luZGV4Lmh0bSI+Tk9U<br>RTwvYT48L3A+DQo8L2Rpdj4NCjwvYm9keT4NCjwvaHRtbD4NPEhUTUw+DQo8QSBuYW1lPSIN<br>CnRlc3QNCqRXpMggMTI6MjQ6MTINCjIwMDEvNC8yMw0KdGVzdA0KIj48L2E+DQo8L0hUTUw+<br>DQo=<br><br></pre>
+
+  <hr title="References">
+  <h3><a name="refer"></a>References:</h3>
+
+  <ul>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.eudora.com/techsupport/kb/908hq.html">How
+  to turn off HTML being sent out (Windows)</a> Eudora</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.incredimail.com/english/faq/plaintext.html">How
+  do I write a "plain text" email? </a> IncrediMail</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://helpdesk.rootsweb.com/help/html-off.html">How
+  to turn off HTML in Various E-mail Programs</a>
+  Rootsweb</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.uark.edu/campus/compserv/internet/email/emailsoftchart.html">
+   How to Turn OFF HTML or RTF in Various E-mail Software
+    Programs</a> University of Arkansas</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://channelevents.aol.com/flash/com_mentor/guide.pdf/">AOL
+     Communicator Help</a> see Page 66</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://service4.symantec.com/SUPPORT/ent-security.nsf/d94e5761249762e885256885005de964/ee9d0bde5374414c88256a930048df99?OpenDocument">
+   Attacks by Attactments</a> Norton AntiVirus</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.deftone.com/blogzilla/archives/configuring_mozilla_thunderbird_to_send_plain_ascii_text.html">
+ Configuring Mozilla Thunderbird to Send Plain ASCII Text</a> Blogzilla - a weblog about Mozilla</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://scifi.squawk.com/demime.html">Demime</a>
+    a tool to scrub MIME from mailing lists</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.faqs.org/faqs/off-line-readers/usenet/forte-agent/index.html">
+   Forte-agent FAQ v1.5 (modified 9/14/97)</a>
+     </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://help.juno.com/">Juno search</a>    http://www.expressresponse.com/cgi-bin/progsnp/juno/srchjnnp
+  ?search_type=vdocument&amp;search_input=5074.htm&amp;
+    session_id=981056986.1809.2&amp;submit.x=69&amp;submit.y=7
+    </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.infosec.rochester.edu/virus.html">List
+   of banned file extensions</a> University of Rochester</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.lsoft.com/">LISTSERV</a>    mailing
+     list program</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.greatcircle.com/majordomo/">Majordomo</a>
+    mailing list program</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.microsoft.com/mac/products/office/2001/entourage/default.asp">
+   Microsoft Entourage 2001 for Mac</a>     </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.washington.edu/pine/tech-notes/low-level.html#char-set">
+   Pine</a> International Character Sets</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.pocomail.com/poco/help/sending.html">Poco
+  mail</a>    the tiny mailer</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://members.aol.com/adamkb/aol/mailfaq/">Unofficial
+   AOL E-mail FAQ</a>     </li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.techtv.com/callforhelp/features/jump/0,24331,3015162,00.html">
+   Unsafe File Extensions</a> TechTV</li>
+ <li>(http://www.transport.com/asciimail.html) Turning off
+   HTML Mail (defunct as of 24Oct00)</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.gnu.org/philosophy/no-word-attachments.html">   We
+  Can Put an End to Word Attachments</a> GNU article Jan 2002</li>
+ <li><a href="http://web.archive.org/web/20080822071927/http://www.faqs.org/faqs/windows/win95/faq/part10/">Win95
+   FAQ</a> Part 10: Messaging/Exchange</li>
+
+  </ul>
+  <!-- FOOTING -->
+  <hr title="Footer">
+  <p><font size="1">Last Revised: March 24, 2004</font><br>
+    Please let me know if you have any questions, comments, or suggestions
+  concerning these web pages.<br>
+    <a href="mailto:gboyd@expita.com"><img src="nomime_files/email.gif" alt="Send email to: " border="0" height="26" width="89">
+    gboyd@expita.com</a> <!-- COPYRIGHT
+========================================================================
+
+     Copyright (c) 1998-2004, Gerald E. Boyd
+       gboyd@expita.com
+
+ All rights reserved. Permission is granted to duplicate and
+ distribute copies of this document provided the copyright
+ notice and this permission notice are preserved on all copies.
+========================================================================
+--></p>
+    </blockquote>
+    <br>
+ <br>
+<script language="Javascript">
+<!--
+
+// FILE ARCHIVED ON 20080822071927 AND RETRIEVED FROM THE
+// INTERNET ARCHIVE ON 20100205185833.
+// JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+// ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+// SECTION 108(a)(3)).
+
+   var sWayBackCGI = "http://web.archive.org/web/20080822071927/";
+
+   function xResolveUrl(url) {
+      var image = new Image();
+      image.src = url;
+      return image.src;
+   }
+   function xLateUrl(aCollection, sProp) {
+      var i = 0;
+      for(i = 0; i < aCollection.length; i++) {
+         var url = aCollection[i][sProp];         if (typeof(url) == "string") { 
+          if (url.indexOf("mailto:") == -1 &&
+             url.indexOf("javascript:") == -1
+             && url.length > 0) {
+            if(url.indexOf("http") != 0) {
+                url = xResolveUrl(url);
+            }
+            url = url.replace('.wstub.archive.org','');
+            aCollection[i][sProp] = sWayBackCGI + url;
+         }
+         }
+      }
+   }
+
+   xLateUrl(document.getElementsByTagName("IMG"),"src");
+   xLateUrl(document.getElementsByTagName("A"),"href");
+   xLateUrl(document.getElementsByTagName("AREA"),"href");
+   xLateUrl(document.getElementsByTagName("OBJECT"),"codebase");
+   xLateUrl(document.getElementsByTagName("OBJECT"),"data");
+   xLateUrl(document.getElementsByTagName("APPLET"),"codebase");
+   xLateUrl(document.getElementsByTagName("APPLET"),"archive");
+   xLateUrl(document.getElementsByTagName("EMBED"),"src");
+   xLateUrl(document.getElementsByTagName("BODY"),"background");
+   xLateUrl(document.getElementsByTagName("TD"),"background");
+   xLateUrl(document.getElementsByTagName("INPUT"),"src");
+   var forms = document.getElementsByTagName("FORM");
+   if (forms) {
+       var j = 0;
+       for (j = 0; j < forms.length; j++) {
+              f = forms[j];
+              if (typeof(f.action)  == "string") {
+                 if(typeof(f.method)  == "string") {
+                     if(typeof(f.method) != "post") {
+                        f.action = sWayBackCGI + f.action;
+                     }
+                  }
+              }
+        }
+    }
+
+
+//-->
+</script>
+
+
+</body></html>
