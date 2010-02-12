@@ -38,7 +38,15 @@
          <div><pre><kbd>mv -v /usr/bin/{hostname,ping,ping6} /bin
 mv -v /usr/bin/traceroute /sbin</kbd></pre><div></li>
 
-         <li><p>There are additional fixes for Bash-4.0 available at <a href="http://www.linuxfromscratch.org/patches/downloads/bash/bash-4.0-fixes-6.patch">bash-4.0-fixes-6.patch</a>.</p></li>
+         <li><p>There are additional fixes for Bash-4.0 available at <a
+         href="http://www.linuxfromscratch.org/patches/downloads/bash/bash-4.0-fixes-6.patch">bash-4.0-fixes-6.patch</a>.</p>
+         
+         <p><b>Important:</b>This patch cannot be added as a part of the normal
+         LFS build sequence because is changes a file that requires programs that
+         are built later in the normal build sequence.  The best way to apply these
+         patches is to rebuild Bash-4.0 at the end of Chapter 6.<p>
+         
+         </li>
 
          </ul>
 <!--#include virtual="/common/footer.html" -->
