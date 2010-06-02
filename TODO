@@ -11,7 +11,7 @@
 - Sort out how to make best use of mirrors. RR-DNS would be the best solution,
   but requires more work/research. Another option is to display the mirrors'
   list when the user visits http://www.linuxfromscratch.org/, but the "normal"
-  content when accessing http://www.linuxfromscratch.org/index.html explicitely.
+  content when accessing http://www.linuxfromscratch.org/index.html explicitly.
   For now, a link to the mirror page was placed on each submenu until we figure
   out which way to go.
 
