@@ -22,7 +22,17 @@
        <h2>Miscellaneous Errata</h2>
          <ul>
  
-           <li>There are no current errata items for LFS 7.0.</li>
+           <li>In section 7.7.1, the text refers to <em>/etc/sysconfig/init_params</em>.
+           This should read <em>/etc/sysconfig/rc.site</em>.</li>
+
+           <li>In the bootscripts /etc/init.d/functions file, the following lines
+           should be deleted:<br/><br/>
+
+           <code>
+           # Set any needed environment variables e.g. HEADLESS<br/>
+           . /lib/lsb/init_params
+           </code>
          
+           </li>
          </ul>
 <!--#include virtual="/common/footer.html" -->
