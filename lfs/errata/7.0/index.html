@@ -28,6 +28,18 @@
        <h2>Miscellaneous Errata</h2>
          <ul>
  
+           <li>Glibc doesn't install some RPC or NIS headers that are required
+           by some BLFS packages (notably NFS).  The following commands should
+           be run following the 'make install' in chapter 6's Glibc
+           section:<br/><br/>
+
+           <code>
+           cp -v ../glibc-2.14.1/sunrpc/rpc/*.h /usr/include/rpc
+           cp -v ../glibc-2.14.1/sunrpc/rpcsvc/*.h /usr/include/rpcsvc
+           cp -v ../glibc-2.14.1/nis/rpcsvc/*.h /usr/include/rpcsvc
+           </code>
+           </li>
+
            <li>In section 7.7.1, the text refers to <em>/etc/sysconfig/init_params</em>.
            This should read <em>/etc/sysconfig/rc.site</em>.</li>
 
