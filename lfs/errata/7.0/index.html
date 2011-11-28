@@ -38,7 +38,7 @@
            cp -v ../glibc-2.14.1/sunrpc/rpcsvc/*.h /usr/include/rpcsvc<br/>
            cp -v ../glibc-2.14.1/nis/rpcsvc/*.h /usr/include/rpcsvc<br/>
            </code>
-           </li>
+           </li> &nbsp;
 
            <li>In section 7.7.1, the text refers to <em>/etc/sysconfig/init_params</em>.
            This should read <em>/etc/sysconfig/rc.site</em>.</li>
@@ -51,6 +51,10 @@
            . /lib/lsb/init_params
            </code>
          
-           </li>
+           </li> &nbsp;
+
+           <li>One of the coreutils tests can fail because of a bug in how the
+           gnulib testsuite handles daylight saving time changes.  This can be
+           fixed by applying the <a hrep="http://www.linuxfromscratch.org/patches/lfs/development/coreutils-8.14-test_fix-1.patch">test fix patch</a>.</p></li>
          </ul>
 <!--#include virtual="/common/footer.html" -->
