@@ -4,34 +4,49 @@
     <div class="main">
      <h1>How to Contribute</h1>
        <h2 id="becomemirror">Become a mirror</h2>
-       <p>You can assist the LFS project by providing an HTTP or FTP mirror. The HTTP mirrors
-          provide the LFS website, books, patches and hints.  The FTP mirrors can provide a number of
-          services including LFS packages, BLFS packages and LiveCD mirrors.  The requirements for the various
-          mirrors are listed below.  If you would like to become a mirror for HTTP, please send an email
-          to the <a href="mailto:&#119;&#101;&#98;&#115;&#105;&#116;&#101;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">website list</a>.
-          To become an FTP mirror, please email the FTP mirror maintainer, <a href="mailto:bdubbs@linuxfromscratch.org">bdubbs@linuxfromscratch.org</a>.  Thank you.
-       </p>
+
+       <p>You can assist the LFS project by providing an HTTP or FTP mirror.
+       The HTTP mirrors provide the LFS website, books, patches and hints.  The
+       FTP mirrors can provide a number of services including LFS packages,
+       BLFS packages and LiveCD mirrors.  The requirements for the various
+       mirrors are listed below.  If you would like to become a mirror for
+       HTTP, please send an email to the <a
+       href="mailto:&#119;&#101;&#98;&#115;&#105;&#116;&#101;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">website
+       list</a>.  To become an FTP mirror, please email the FTP mirror
+       maintainer, <a
+       href="mailto:bdubbs@linuxfromscratch.org">bdubbs@linuxfromscratch.org</a>.
+       Thank you.  </p>
+       
        <h3 id="requirements">Requirements</h3>
-	  <p>Here is a list of requirements for the various mirrors.  All mirrors require that you use 
-            <a href="/blfs/view/stable/server/rsync.html">rsync</a> to sync your mirrors with our main servers, and
-            a <a href="/blfs/view/stable/general/fcron.html">cron</a> program to schedule it for you.</p>
+     
+       <p>Here is a list of requirements for the various mirrors.  All mirrors
+       require that you use <a
+       href="/blfs/view/stable/server/rsync.html">rsync</a> to sync your
+       mirrors with our main servers, and a <a
+       href="/blfs/view/stable/general/fcron.html">cron</a> program to schedule
+       it for you.</p>
 
-	  <p>You can find cheap <a href="http://www.webhostingsearch.com/linux-web-hosting.php"
+       <p>You can find cheap <a
+       href="http://www.webhostingsearch.com/linux-web-hosting.php"
        onclick="window.open(this.href); return false;"
-       onkeypress="window.open(this.href); return false;">linux web hosting</a> or an entire
-	  <a href="http://www.webhostingsearch.com/dedicated-server.php"
+       onkeypress="window.open(this.href); return false;">linux web hosting</a>
+       or an entire <a
+       href="http://www.webhostingsearch.com/dedicated-server.php"
        onclick="window.open(this.href); return false;"
-       onkeypress="window.open(this.href); return false;">dedicated server</a> for your 
-       mirror at our partner
-	  <a href="http://www.webhostingsearch.com" 
+       onkeypress="window.open(this.href); return false;">dedicated server</a>
+       for your mirror at our partner <a href="http://www.webhostingsearch.com"
        onclick="window.open(this.href); return false;"
-       onkeypress="window.open(this.href); return false;">Web Hosting Search</a>.</p>
+       onkeypress="window.open(this.href); return false;">Web Hosting
+       Search</a>.</p>
 
-          <h4>HTTP Mirror</h4>
+       <h4>HTTP Mirror</h4>
           <ul>
              <li>At least 200MB of disk space.</li>
-             <li><a href="/blfs/view/stable/server/majorservers.html#apache">Apache Webserver</a> or equivalent with the
-                following options enabled:
+             
+             <li><a
+             href="/blfs/view/stable/server/majorservers.html#apache">Apache
+             Webserver</a> or equivalent with the following options enabled:
+                
                 <ul>
                    <li>Indexes</li>
                    <li>FollowSymlinks</li>
@@ -40,57 +55,102 @@
                 </ul>
              </li>
           </ul>
-	  <div class="note">
-		<p><strong>Note:</strong> Mirror Admins who don't have access to the httpd config file on the server can
-		   still mirror using .htaccess files.  A short description is available here:
-                   <a href="http://linuxfromscratch.org/pipermail/website/2005-November/005760.html">http://linuxfromscratch.org/pipermail/website/2005-November/005760.html</a>.
-		</p>
-	  </div>
-          <h4>LFS FTP Mirror</h4>
-          <ul>
-             <li>At least 2.5GB of disk space.</li>
-             <li>The path to the mirror being &quot;/pub/lfs/&quot;, if possible.</li>
-          </ul>
 
-	  <h4>LiveCD FTP Mirror</h4>
-	  <ul>
-             <li>At least 4.0GB of disk space.</li>
-             <li>The path to the mirror being &quot;/pub/lfs-livecd/&quot;, if possible.</li>
-          </ul>
+        <p>To set up the mirror, use the following rsync instruction in a cron script:</p>
 
-          <h4>Still interested?</h4>
-          <p>If you are still interested in becoming a mirror, please email the following information to the
-             appropriate list or person listed above.  We will provide you with an rsync script and other
-             information to help setup your mirror.
-          </p>
+        <code>/usr/bin/rsync -lprt --delete www.linuxfromscratch.org::lfs-website \<br/>
+        /srv/www/lfs</code>
+
+<!--
+       <div class="note">
+       
+       <p><strong>Note:</strong> Mirror Admins who don't have access to the
+       httpd config file on the server can still mirror using .htaccess files.
+       A short description is available here: <a
+       href="http://linuxfromscratch.org/pipermail/website/2005-November/005760.html">http://linuxfromscratch.org/pipermail/website/2005-November/005760.html</a>.
+       </p>
+
+     </div>
+-->
+     
+     <h4>LFS and BLFS FTP Mirrors</h4>
+        <ul>
+           <li>At least 2.5GB of disk space.</li>
+           <li>The path to the mirror being &quot;/pub/lfs/&quot; and 
+           &quot;/pub/blfs/&quot; if possible.</li>
+        </ul>
+
+        <p>To set up the iftp mirrors, use the rsync instructions in a cron script:</p>
+
+        <code>/usr/bin/rsync -lprt --delete rsync.osuosl.org::lfs  /srv/ftp/LFS</br>
+        /usr/bin/rsync -lprt --delete rsync.osuosl.org::blfs /srv/ftp/BLFS</code>
+
+<!--
+     <h4>LiveCD FTP Mirror</h4>
+        <ul>
+           <li>At least 4.0GB of disk space.</li>
+           <li>The path to the mirror being &quot;/pub/lfs-livecd/&quot;, if possible.</li>
+        </ul>
+-->
+
+     <h4>Still interested?</h4>
+     
+     <p>If you are still interested in becoming a mirror, please email the
+     following information to the appropriate list or person listed above.  We
+     will provide you with an rsync script and other information to help setup
+     your mirror.  </p>
+
           <ul>
              <li>Location (City and Country)</li>
              <li>Hostname and IP Address</li>
              <li>Bandwidth</li>
              <li>Contact Name and Valid E-mail Address</li>
           </ul>
-
-       <h2>Buy the LFS 6.0 Hard Copy</h2>
-
-	<p>Unfortunately the hard copy version of LFS 6.0 is no longer in print
-or available for purchase.</p>
-
 <!--
-       <p>The LFS team is proud to announce the second edition of a printed Linux From Scratch book. The book contains the LFS 6.0 version on 292 pages and an accompanying CD. The books are available for $19.99 from <a href="http://cart.cheapbytes.com/cgi-bin/cart/0970010004.html">CheapBytes</a>.</p>
-       <h3 id="lfsbook">Book Description</h3>
-       <p>Tired of using Linux systems that don't perform the way you need them to work? Searching for an alternative to cookie-cutter distributions that dont meet your specific needs?</p>
-       <p>Linux From Scratch allows users to build custom Linux systems from the ground up, customizing each aspect of the system to the users specifications. Users can dictate all aspects of their system, including directory layout, script setup, and security. you can specify where, why and how programs are installed. It is all about choice - yours.</p>
-       <p>Linux From Scratch also provides an ideal learning environment for programmers and system administrators who want to enhance their existing Linux skills. Linux From Scratch is a world-recognized project with a community of thousands.</p>
-       <p>With several support web sites, mailing lists, and real-time help services to its credit, the possibilities are endless. This book contains everything you will need to know to embark on your own LFS adventure and design the custom Linux system you've been looking for!</p>
+      <h2>Buy the LFS 6.0 Hard Copy</h2>
+
+      <p>Unfortunately the hard copy version of LFS 6.0 is no longer in print
+      or available for purchase.</p>
+-->
+
+<!-- 
+      <p>The LFS team is proud to announce the second edition of a printed
+      Linux From Scratch book. The book contains the LFS 6.0 version on 292
+      pages and an accompanying CD. The books are available for $19.99 from <a
+      href="http://cart.cheapbytes.com/cgi-bin/cart/0970010004.html">CheapBytes</a>.</p>
+       
+      <h3 id="lfsbook">Book Description</h3>
+       
+      <p>Tired of using Linux systems that don't perform the way you need them
+      to work? Searching for an alternative to cookie-cutter distributions that
+      dont meet your specific needs?</p>
+       
+      <p>Linux From Scratch allows users to build custom Linux systems from the
+      ground up, customizing each aspect of the system to the users
+      specifications. Users can dictate all aspects of their system, including
+      directory layout, script setup, and security. you can specify where, why
+      and how programs are installed. It is all about choice - yours.</p>
+       
+      <p>Linux From Scratch also provides an ideal learning environment for
+      programmers and system administrators who want to enhance their existing
+      Linux skills. Linux From Scratch is a world-recognized project with a
+      community of thousands.</p>
+       
+      <p>With several support web sites, mailing lists, and real-time help
+      services to its credit, the possibilities are endless. This book contains
+      everything you will need to know to embark on your own LFS adventure and
+      design the custom Linux system you've been looking for!</p> 
 -->
 
        <h2 id="donation">Make a donation</h2>
-       <p>One of the ways to help the Linux From Scratch project is by
-          making donations. Financial donations can be made through
-          <a href="http://www.paypal.com">PayPal</a>
-          using a major credit card.
-       </p>
-       <form action="https://www.paypal.com/cgi-bin/webscr" enctype="application/x-www-form-urlencoded" method="post">
+       
+       <p>One of the ways to help the Linux From Scratch project is by making
+       donations. Financial donations can be made through <a
+       href="http://www.paypal.com">PayPal</a> using a major credit card.</p>
+       
+       <form action="https://www.paypal.com/cgi-bin/webscr"
+       enctype="application/x-www-form-urlencoded" method="post">
+
          <p>
             <input type="hidden" name="cmd" value="_xclick" />
             <input type="hidden" name="business" value="gerard&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;" />
@@ -100,14 +160,16 @@ or available for purchase.</p>
             <input type="submit" value="Submit" />
          </p>
        </form>
-       <p>If you want to donate but can't use PayPal, please contact
-          <a href="mailto:&#103;&#101;&#114;&#97;&#114;&#100;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Gerard Beekmans</a>.
-       </p>
-       <p>The majority of donations will be used to pay the monthly server colocation bill.
-          Anything left over will be put back into the project such as sending people cdroms
-          who don't have a high-speed Internet connection to download all the required
-          packages, upgrade the server hardware when necessary, or whatever else needs done
-          to keep the LFS project running smoothly.
-       </p>
+
+       <p>If you want to donate but can't use PayPal, please contact <a
+       href="mailto:&#103;&#101;&#114;&#97;&#114;&#100;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Gerard
+       Beekmans</a>.  </p>
+       
+       <p>The majority of donations will be used to pay the monthly server
+       colocation bill.  Anything left over will be put back into the project
+       such as sending people cdroms who don't have a high-speed Internet
+       connection to download all the required packages, upgrade the server
+       hardware when necessary, or whatever else needs done to keep the LFS
+       project running smoothly.  </p>
 
 <!--#include virtual="/common/footer.html" -->
