@@ -1,6 +1,7 @@
 <!--#set var="pageTitle" value="How to Contribute" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
+
     <div class="main">
      <h1>How to Contribute</h1>
        <h2 id="becomemirror">Become a mirror</h2>
@@ -9,11 +10,8 @@
        The HTTP mirrors provide the LFS website, books, patches and hints.  The
        FTP mirrors can provide a number of services including LFS packages and
        BLFS packages.  The requirements for the various mirrors are listed
-       below.  If you would like to become a mirror, please set it up 
-       and send an email with the data requested below to the <a
-       href="mailto:&#119;&#101;&#98;&#115;&#105;&#116;&#101;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">website
-       list</a>.  To become an FTP mirror, please email the FTP mirror
-       maintainer, <a
+       below.  If you would like to become a mirror, please set it up and send
+       an email with the data requested below to the website maintainer, <a
        href="mailto:bdubbs@linuxfromscratch.org">bdubbs@linuxfromscratch.org</a>.
        Thank you.  </p>
        
@@ -40,26 +38,25 @@
        Search</a>.</p>
 
        <h4>HTTP Mirror</h4>
-          <ul>
-             <li>At least 200MB of disk space.</li>
+       <ul>
+          <li>At least 200MB of disk space.</li>
+          
+          <li><a
+          href="/blfs/view/stable/server/majorservers.html#apache">Apache
+          Webserver</a> or equivalent with the following options enabled:
              
-             <li><a
-             href="/blfs/view/stable/server/majorservers.html#apache">Apache
-             Webserver</a> or equivalent with the following options enabled:
-                
-                <ul>
-                   <li>Indexes</li>
-                   <li>FollowSymlinks</li>
-                   <li>IncludesNOEXEC</li>
-                   <li>XBitHack on</li>
-                </ul>
-             </li>
-          </ul>
+             <ul>
+                <li>Indexes</li>
+                <li>FollowSymlinks</li>
+                <li>IncludesNOEXEC</li>
+                <li>XBitHack on</li>
+             </ul>
+          </li>
+       </ul>
 
-        <p>To set up the mirror, use the following rsync instruction in a cron script:</p>
+       <p>To set up the mirror, use the following rsync instruction in a cron script:</p>
 
-        <code>/usr/bin/rsync -lprt --delete www.linuxfromscratch.org::lfs-website \<br/>
-        /srv/www/lfs</code>
+       <code>/usr/bin/rsync -lprt --delete www.linuxfromscratch.org::lfs-website /srv/www/lfs</code>
 
 <!--
        <div class="note">
@@ -67,23 +64,24 @@
        <p><strong>Note:</strong> Mirror Admins who don't have access to the
        httpd config file on the server can still mirror using .htaccess files.
        A short description is available here: <a
-       href="http://linuxfromscratch.org/pipermail/website/2005-November/005760.html">http://linuxfromscratch.org/pipermail/website/2005-November/005760.html</a>.
+       href="http://linuxfromscratch.org/pipermail/website/2005-November/005760.html">
+       http://linuxfromscratch.org/pipermail/website/2005-November/005760.html</a>.
        </p>
 
      </div>
 -->
      
      <h4>LFS and BLFS FTP Mirrors</h4>
-        <ul>
-           <li>At least 2.5GB of disk space.</li>
-           <li>The path to the mirror being &quot;/pub/lfs/&quot; and 
-           &quot;/pub/blfs/&quot; if possible.</li>
-        </ul>
+     <ul>
+        <li>At least 2.5GB of disk space.</li>
+        <li>The path to the mirror being &quot;/pub/lfs/&quot; and 
+        &quot;/pub/blfs/&quot; if possible.</li>
+     </ul>
 
-        <p>To set up the ftp mirrors, use the rsync instructions in a cron script:</p>
+     <p>To set up the ftp mirrors, use the rsync instructions in a cron script:</p>
 
-        <code>/usr/bin/rsync -lprt --delete rsync.osuosl.org::lfs  /srv/ftp/LFS<br/>
-        /usr/bin/rsync -lprt --delete rsync.osuosl.org::blfs /srv/ftp/BLFS</code>
+     <code>/usr/bin/rsync -lprt --delete rsync.osuosl.org::lfs  /srv/ftp/LFS<br/>
+     /usr/bin/rsync -lprt --delete rsync.osuosl.org::blfs /srv/ftp/BLFS</code>
 
 <!--
      <h4>LiveCD FTP Mirror</h4>
@@ -96,16 +94,14 @@
      <h4>Still interested?</h4>
      
      <p>If you are still interested in becoming a mirror, please email the
-     following information to the appropriate list or person listed above.  We
-     will provide you with an rsync script and other information to help setup
-     your mirror.  </p>
+     following information to the appropriate list or person listed above.</p>
 
-          <ul>
-             <li>Location (City and Country)</li>
-             <li>Hostname and IP Address</li>
-             <li>Bandwidth</li>
-             <li>Contact Name and Valid E-mail Address</li>
-          </ul>
+     <ul>
+        <li>Location (City and Country)</li>
+        <li>Hostname and IP Address</li>
+        <li>Bandwidth</li>
+        <li>Contact Name and Valid E-mail Address</li>
+     </ul>
 <!--
       <h2>Buy the LFS 6.0 Hard Copy</h2>
 
@@ -142,34 +138,33 @@
       design the custom Linux system you've been looking for!</p> 
 -->
 
-       <h2 id="donation">Make a donation</h2>
-       
-       <p>One of the ways to help the Linux From Scratch project is by making
-       donations. Financial donations can be made through <a
-       href="http://www.paypal.com">PayPal</a> using a major credit card.</p>
-       
-       <form action="https://www.paypal.com/cgi-bin/webscr"
-       enctype="application/x-www-form-urlencoded" method="post">
+      <h2 id="donation">Make a donation</h2>
+      
+      <p>One of the ways to help the Linux From Scratch project is by making
+      donations. Financial donations can be made through <a
+      href="http://www.paypal.com">PayPal</a> using a major credit card.</p>
+      
+      <form action="https://www.paypal.com/cgi-bin/webscr"
+      enctype="application/x-www-form-urlencoded" method="post">
 
-         <p>
-            <input type="hidden" name="cmd" value="_xclick" />
-            <input type="hidden" name="business" value="gerard&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;" />
-            <input type="hidden" name="undefined_quantity" value="1" />
-            <input type="hidden" name="item_name" value="LFS Donation" />USD $
-            <input type="text" size="5" name="amount" value="25" />
-            <input type="submit" value="Submit" />
-         </p>
-       </form>
+      <p><input type="hidden" name="cmd" value="_xclick" />
+         <input type="hidden" name="business" value="gerard&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;" />
+         <input type="hidden" name="undefined_quantity" value="1" />
+         <input type="hidden" name="item_name" value="LFS Donation" />USD $
+         <input type="text" size="5" name="amount" value="25" />
+         <input type="submit" value="Submit" />
+      </p>
+      </form>
 
-       <p>If you want to donate but can't use PayPal, please contact <a
-       href="mailto:&#103;&#101;&#114;&#97;&#114;&#100;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Gerard
-       Beekmans</a>.  </p>
-       
-       <p>The majority of donations will be used to pay the monthly server
-       colocation bill.  Anything left over will be put back into the project
-       such as sending people cdroms who don't have a high-speed Internet
-       connection to download all the required packages, upgrade the server
-       hardware when necessary, or whatever else needs done to keep the LFS
-       project running smoothly.  </p>
+      <p>If you want to donate but can't use PayPal, please contact <a
+      href="mailto:&#103;&#101;&#114;&#97;&#114;&#100;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Gerard
+      Beekmans</a>.</p>
+      
+      <p>The majority of donations will be used to pay the monthly server
+      colocation bill.  Anything left over will be put back into the project
+      such as sending people cdroms who don't have a high-speed Internet
+      connection to download all the required packages, upgrade the server
+      hardware when necessary, or whatever else needs done to keep the LFS
+      project running smoothly.</p>
 
 <!--#include virtual="/common/footer.html" -->
