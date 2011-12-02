@@ -10,7 +10,8 @@
        FTP mirrors can provide a number of services including LFS packages,
        BLFS packages and LiveCD mirrors.  The requirements for the various
        mirrors are listed below.  If you would like to become a mirror for
-       HTTP, please send an email to the <a
+       HTTP, please set it up with the instructions below and send an email to
+       the <a
        href="mailto:&#119;&#101;&#98;&#115;&#105;&#116;&#101;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">website
        list</a>.  To become an FTP mirror, please email the FTP mirror
        maintainer, <a
@@ -80,7 +81,7 @@
            &quot;/pub/blfs/&quot; if possible.</li>
         </ul>
 
-        <p>To set up the iftp mirrors, use the rsync instructions in a cron script:</p>
+        <p>To set up the ftp mirrors, use the rsync instructions in a cron script:</p>
 
         <code>/usr/bin/rsync -lprt --delete rsync.osuosl.org::lfs  /srv/ftp/LFS<br/>
         /usr/bin/rsync -lprt --delete rsync.osuosl.org::blfs /srv/ftp/BLFS</code>
