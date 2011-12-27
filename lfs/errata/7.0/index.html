@@ -57,6 +57,16 @@
            <li>One of the coreutils tests can fail because of a bug in how the
            gnulib testsuite handles daylight saving time changes.  This can be
            fixed by applying the 
-<a href="http://www.linuxfromscratch.org/patches/downloads/coreutils/coreutils-8.14-test_fix-1.patch">test fix patch</a>.</p></li>
+<a href="http://www.linuxfromscratch.org/patches/downloads/coreutils/coreutils-8.14-test_fix-1.patch">test fix patch</a>.</p></li> &nbsp;
+
+           <li>The permissions of /run/shm will prevent ordinary users creating
+           files.  This affects a few BLFS packages such as PulseAudio.  The
+           following commands should be run as the <emphasis>root</emphasis>
+           user in a completed system if you experience this problem:<br/><br/>
+
+           <code>
+           sed -i.bak '/mkdir.*shm/a\ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chmod 1777 /run/shm' /etc/rc.d/init.d/mountvirtfs
+           </code>
+           </li> &nbsp;
          </ul>
 <!--#include virtual="/common/footer.html" -->
