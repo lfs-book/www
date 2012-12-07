@@ -45,7 +45,6 @@
       <h3><a href="#packerrors">Package-specific errors</a></h3>
       <ul>
         <li><a href="#unknown-pseudo-op-hidden">GCC: Error: Unknown pseudo-op: `.hidden'</a></li>
-        <li><a href="#no-linuxthreads">Glibc: &quot;... it is normal to compile GNU libc with the `linuxthreads' add-on...&quot;</a></li>
         <li><a href="#glibc-awk-fail">Glibc fails and mentions BEGIN and END.</a></li>
         <li><a href="#glibc-nss">Glibc compilation errors out due to a missing nss.h header file</a></li>
         <li><a href="#cpp-fails-sanity-check">Ncurses: C++ preprocessor &quot;/lib/cpp&quot; fails sanity check</a></li>
@@ -278,9 +277,9 @@
             <p>/usr/bin/env: /tools/bin/bash: No such file or directory<br />
                gcc: No such file or directory</p>
           </div>
-          <p>With the new Ch 5 build procedure, the most common cause of this problem is forgetting to apply the specs patch.</p>
+          <p>This usually indicates a typo in the GCC Pass 2 installation. For older LFS versions, the most common cause of this problem would be forgetting to apply the specs patch.</p>
           <p>What happens is that the path to the dynamic linker embedded inside the executable is still pointing at /lib/ld-linux.so.2 and when one goes to run the binary inside the chroot where /lib/ld-linux.so.2 does not exist yet, the very unhelpful <code>No such file or directory</code> error message is shown.</p>
-          <p>You can test this with <code>readelf -l {binary} | grep interpreter</code>. It's output should be: <code>Requesting program interpreter: /tools/lib/ld-linux.so.2</code>.</p>
+          <p>You can test this with <code>readelf -l {binary} | grep interpreter</code>. Its output should be: <code>Requesting program interpreter: /tools/lib/ld-linux.so.2</code>.</p>
         </dd>
         <dt id="configure-no-such-file">bash: ./configure: No such file or directory</dt>
         <dd>
@@ -307,7 +306,7 @@
           </div>
           <p>The problem is usually that the script can't run the compiler. Usually it's just a missing /usr/bin/cc symlink. You can fix it like this:</p>
           <code>cd /usr/bin &amp;&amp; ln -s gcc cc</code>
-          <p>If that doesn't do it, check the file config.log created by configure. Errors go there and may indicate the problem.</p>
+          <p>If that doesn't do it, check the file config.log created by configure. Errors are recorded there and may indicate the problem.</p>
         </dd>
         <dt id="config-not-gnu-c">checking whether we are using GNU C... no</dt>
         <dd>
@@ -374,18 +373,6 @@
           <code>Error: Unknown pseudo-op: `.hidden'</code>
           <p>Try the solution given in <a href="http://linuxfromscratch.org/pipermail/lfs-support/2002-September/009562.html">the lfs-support archives</a>  and replies.</p>
         </dd>
-        <dt id="no-linuxthreads">Glibc: &quot;... it is normal to compile GNU libc with the `linuxthreads' add-on...&quot;</dt>
-        <dd>
-          <p>The exact error looks like this:</p>
-          <div class="cmd">
-            <p>*** On GNU/Linux systems it is normal to compile GNU libc with the<br />
-               *** `linuxthreads' add-on.  Without that, the library will be<br />
-               *** incompatible with normal GNU/Linux systems.<br />
-               *** If you really mean to not use this add-on, run configure again<br />
-               *** using the extra parameter `--disable-sanity-checks'.</p>
-          </div>
-          <p>You did not pass the --enable-add-ons parameter to configure, which enables the NPTL threading add-on. Glibc will not ask for linuxthreads with this parameter.</p>
-        </dd>
         <dt id="glibc-awk-fail">Glibc fails and mentions BEGIN and END.</dt>
         <dd>
           <p>If glibc fails to build with an error like this:</p>
@@ -405,7 +392,7 @@
                ^[^-] { subdirs = subdirs " " $0 }; ^- { inhibit =<br />
                inhibit " " substr($0, 2) }; END</p>
           </div>
-          <p>then gawk is failing. The key is the BEGIN and END in the output. The probable reason is that it's not statically linked which you can fix by going back to Chapter 5 and recompiling it.</p>
+          <p>then gawk is failing. The key is the BEGIN and END in the output. The probable reason is that it is linked incorrectly. This can be fixed by recompiling it as the lfs user, according to the direction in Chapter 5.</p>
         </dd>
         <dt id="glibc-nss">Glibc compilation errors out due to a missing nss.h header file</dt>
         <dd>
