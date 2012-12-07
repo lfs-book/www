@@ -29,6 +29,7 @@
 	<li><a href="#new-version">There's a new version of package Foo.</a></li>
 	<li><a href="#delete_key_not_work">The Delete key doesn't work.</a></li>
 	<li><a href="#shutdown-on-fsck-error">The system shuts down when fsck errors out!</a></li>
+	<li><a href="#where-lfs-packages">Where are the lfs-packages tarballs or wget scripts?</a></li>
 	<li><a href="#how-to-find">How do I find a package or command?</a></li>
 	<li><a href="#how-to-upgrade">How do I upgrade my LFS/BLFS system?</a></li>
       </ul>
@@ -233,6 +234,10 @@
 	<dd>
 	  <p>Unix systems normally run sulogin if the normal bootup fsck run errors out so that root can log in and fix it. Because sulogin will accept any password if /etc/passwd is corrupt, the LFS developers decided this was a security risk. Therefore, the LFS bootscripts shut the machine down if fsck errors, and it must be booted with the "init=/bin/bash" kernel parameter to get a root shell. Whether this is wise is beyond the scope of the FAQ, but if it doesn't work for you you'll want to change that boot script before it's too late.</p>
 	</dd>
+	<dt id="where-lfs-packages"><a href="#where-lfs-packages">Where are the lfs-packages tarballs or wget scripts?</a></dt>
+	<dd>
+	  <p>Package tarballs are available at <a href="http://anduin.linuxfromscratch.org/sources/LFS/lfs-packages/">the LFS file repository</a>. There is also a wget-list linked in the book, near the bottom of the <a href="/lfs/view/stable/chapter03/introduction.html">Packages and Patches Introduction page</a>.</p>
+        </dd>
 	<dt id="how-to-find">How do I find a package or command?</dt>
 	<dd>
 	  <p>Please refer to the <a href="/lfs/download.html">download LFS</a> webpage.</p>
@@ -250,10 +255,6 @@
       <p><a href="#generalfaq">Back to the top.</a></p>
       <h3 id="oldfaq">Old and expired FAQ's</h3>
       <dl>
-	<dt id="where-lfs-packages"><a href="#where-lfs-packages">Where are the lfs-packages tarballs or wget scripts?</a></dt>
-	<dd>
-	  <p>Obsolete on account of the <a href="/lfs/download.html">download LFS</a> webpage.</p>
-        </dd>
 	<dt id="version-not-in-book"><a href="#version-not-in-book">I'm using a version not in the book. Is that a problem?</a></dt>
 	<dd>
 	  <p>There's already a <a href="#why-not-version">FAQ entry</a> which describes this. Since hardly anyone refers to this entry it's now obsolete.</p>
@@ -269,10 +270,6 @@
 	<dt id="lfs-logos"><a href="#lfs-logos">Where can I get LFS Logos?</a></dt>
 	<dd>
 	  <p>Obsolete on account of the <a href="/blfs/artwork/">BLFS artwork</a> webpage.</p>
-	</dd>
-	<dt id="xfree-png-lz"><a href="#xfree-png-lz">undefined reference to `deflate'</a></dt>
-	<dd>
-	  <p>Duplicate of <a href="/blfs/faq.html#undefined-deflate">undefined reference to `deflate'</a>.</p>
 	</dd>
 	<dt id="optimized-glibc-fail"><a href="#optimized-glibc-fail">My optimized build of glibc is failing in spinlock.c</a></dt>
 	<dd>
