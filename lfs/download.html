@@ -9,27 +9,33 @@
      <p>This is the latest released LFS book, well tested and mature enough for everyday use.</p>
      <p>You may download the stable book in various formats from the 
         <a href="/lfs/downloads/stable/">stable book</a> directory.</p>
-<!--     <p><em>Note: This version of the book requires an existing 32-bit version
-        of Linux.  Adding capabilty for x86_64 hosts is a major objective of
-        the upcoming LFS 7.0 currently under development.</em></p> -->
+<!--
+      <p><em>Note: This version of the book requires an existing 32-bit version
+      of Linux.  Adding capabilty for x86_64 hosts is a major objective of
+      the upcoming LFS 7.0 currently under development.</em></p> 
+-->
 
+<!--
      <h2>Current Release Candidate Version &mdash; LFS-7.3-rc1</h2>
      <p>This is a soon-to-be-released LFS book undergoing the last 
-     stages of testing.</p>
+     stages of testing.</p> 
      
      <p>You may download the book from the
         <a href="/lfs/downloads/7.3-rc1/">LFS-7.3-rc1</a> directory. 
-        <!--  Known 
-        outstanding issues include out of date MD5SUMS for the
-        bootscripts and udev configuration packages. --> </p>
+-->
+<!--  Known outstanding issues include out of date MD5SUMS for the
+      bootscripts and udev configuration packages. 
+-->
+</p>
 
-     <h2>Current Development</h2>	   
+     <h2>Current Development</h2>
      <p>This is the LFS Book in its current development state. Changes can
-happen that break the build temporarily.<br />
-     <em>Not recommended for inexperienced LFS'ers.</em>
+        happen that break the build temporarily.<br />
+        <em>Not recommended for inexperienced LFS'ers.</em>
      </p>
-     <p>Daily rendered <a href="downloads/development/">snapshots</a> may be downloaded. Or check
-	out the book's XML source from our Subversion repository and render it yourself:</p>
+     <p>Daily rendered <a href="downloads/development/">snapshots</a> may be 
+     downloaded. Or check out the book's XML source from our Subversion 
+     repository and render it yourself:</p>
      <div class="cmd">
       <p>svn co svn://svn.linuxfromscratch.org/LFS/trunk/BOOK/</p>
      </div>
@@ -40,43 +46,40 @@ happen that break the build temporarily.<br />
      XML source.</p>
 
      <h2>LFS Museum</h2>
-     <p>Old and crusty. But still useful as an educational experience, or to see how LFS has grown
-	over the years. <a href="http://archive.linuxfromscratch.org/lfs-museum/">http://archive.linuxfromscratch.org/lfs-museum/</a>
+     <p>Old and crusty. But still useful as an educational experience, or to 
+     see how LFS has grown	over the years. 
+     <a href="http://archive.linuxfromscratch.org/lfs-museum/">http://archive.linuxfromscratch.org/lfs-museum/</a>
      </p>
 
-<!-- name breaks validation, but needed for LFS book -->
+     <!-- name breaks validation, but needed for LFS book -->
      <h2 id="packages"><a href="#" name="packages" ></a>Packages for LFS</h2>
      <p>LFS has a list of packages and patches which you should download.
      Please use the versions which are listed in the book (see
      <a href="/faq/#why-not-version">the FAQ</a>); these are tested versions
      which are known to work with each other. There are several ways to
      download the packages.</p>
-	<h3>Hunt and Peck/Freshmeat.net</h3>
-        <p>When a package is not available from the location listed in the book, some other places
-           to try are:</p>
+
+     <h3>Hunt and Peck/Freshmeat.net</h3>
+        <p>When a package is not available from the location listed 
+        in the book, some other places to try are:</p>
         <ul>
-           <li>A search for the full package name in <a href="http://www.google.com/">google</a> or your 
+           <li>A search for the full package name in 
+               <a href="http://www.google.com/">google</a> or your 
            favorite search engine</li>
            <li><a href="http://www.debian.org/distrib/packages">Debian Package Search Page</a></li>
            <li><a href="http://www.filemirrors.com/">filemirrors.com</a></li>
            <li><a href="http://freshmeat.net/">freshmeat.net</a></li>
            <li>Sources from your linux distro</li>
         </ul>
-<!--	<h3>Wget Scripts</h3>
-        <p>Another method is a <a href="http://www.gnu.org/software/wget/wget.html">wget</a> script.
-           We provide <a href="../lfs/wget/">multiple wget scripts</a>,
-           one for each release.  Send your updated version to the 
-           <a href="http://linuxfromscratch.org/mailman/listinfo/website/">website mailing list</a>.
-           To use a wget script, enter:
-        </p>
-        <div class="cmd">
-           <p>wget -i lfs-stable.wget</p>
-        </div>-->
+        
 <!--
         <h3>Peer-2-peer Networks</h3>
-        <p>P2P Networks are another good source for packages or the LFS LiveCD, depending on how many
-           people have it available for download in their shared directory. If you have some bandwidth to
-           spare, please consider adding the packages to your shared directory. Here are our P2P links:</p>
+        <p>P2P Networks are another good source for packages or the 
+           LFS LiveCD, depending on how many
+           people have it available for download in their shared 
+           directory. If you have some bandwidth to
+           spare, please consider adding the packages to your 
+           shared directory. Here are our P2P links:</p>
         <ul>
            <li><a href="http://www.bittorrent.com/">BitTorrent</a>:&nbsp;
                <a href="http://www.nelug.org.uk/torrents/lfs-6.1.1-packages.torrent">6.1.1</a>&nbsp;
@@ -89,18 +92,26 @@ happen that break the build temporarily.<br />
         </ul>
         <p>For instructions on how to use the ed2k: links above, take a look at the 
            <a href="../hints/downloads/files/p2p.txt">P2P Hint</a>.  A couple of good
-           eDonkey clients are <a href="http://savannah.nongnu.org/projects/mldonkey/">mlDonkey</a> (console) and
+           eDonkey clients are 
+           <a href="http://savannah.nongnu.org/projects/mldonkey/">mlDonkey</a> (console) and
            <a href="http://www.xmule.ws/">xMule</a> (GUI).
         </p>
 -->
-	<h3 id="ftp">LFS HTTP/FTP Sites</h3>
+
+        <h3 id="ftp">LFS HTTP/FTP Sites</h3>
         <p>If the above methods are not available to you, the packages are also 
            available in a tarball and individually on the following ftp and http mirrors.
            HLFS package tarballs and individual packages are also available on these mirrors.
         </p>
         <!--#include virtual="/common/lfsftp.html" -->
 
-<!--	<h3>LiveCD</h3>
-        <p>The download locations for the official <a href="/livecd/">LFS LiveCD</a> are available on the <a href="/livecd/download.html">LFS LiveCD download page</a>.  The packages for the stable book are included in the LiveCD and therefore don't need to be downloaded separately.</p> -->
+<!-- 
+        <h3>LiveCD</h3>
+        <p>The download locations for the official 
+           <a href="/livecd/">LFS LiveCD</a> are available on 
+           the <a href="/livecd/download.html">LFS LiveCD download page</a>.  
+           The packages for the stable book are included in the LiveCD 
+           and therefore don't need to be downloaded separately.</p> 
+-->
 
 <!--#include virtual="/common/footer.html" -->
