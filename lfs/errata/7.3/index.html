@@ -3,35 +3,25 @@
 <!--#include virtual="/lfs/menu.html" -->
     <div class="main">
      <h1>Errata for the 7.3 Version of the LFS Book</h1>
-     <p>There are No known errata at this time.</p>
-<!-- TEMPLATE
-       <h2>Known Security Vulnerabilities</h2>
-         <ul>
-            <li><p>Item 1</p></li>
-            <li><p>Item 2</p></li>
-         </ul>
-
        <h2>Miscellaneous Errata</h2>
          <ul>
-           <li><p>Item 1</p></li>
-           <li><p>Item 2</p></li>
+           <li><p>Changes to some distros case the build
+           of <b>check-0.9.9</b> to fail in Chapter 5.  The 
+           proper fix is to add --with-sysroot to the end
+           of the configure line in <b>Binutils-2.23.1 - Pass 2</b>.
+           </p>
+           
+           <p>An alternative fix is to change the build instructions of
+           <b>check</b> to be:</p>
+           
+           <blockquote>
+           <code>
+           CFLAGS="-L/tools/lib -lpthread" ./configure --prefix=/tools
+           CFLAGS="-L/tools/lib -lpthread" make
+           </code>
+           </blockquote>
+           
+           </li>
          </ul>
-
-     END TEMPLATE -->
-
-
-<!--
-       <h2>Known Security Vulnerabilities</h2>
-         <ul>
-            <li> </li>
-         </ul>
-       <h2>Miscellaneous Errata</h2>
-         <ul>
-           <li>In section 6.51, Kbd-1.15.5, the trailing ampersands (&amp;&amp;)
-           at the end of the second and third <b>sed</b> commands are
-           unneeded and should be removed,</li>
-         </ul>
-
--->
 
 <!--#include virtual="/common/footer.html" -->
