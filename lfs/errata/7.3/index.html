@@ -7,19 +7,19 @@
          <ul>
            <li><p>Changes to some distros cause the build
            of <b>check-0.9.9</b> to fail in Chapter 5.  The 
-           proper fix is to add --with-sysroot to the end
+           proper fix is to add <br/>--with-sysroot to the end
            of the configure line in <b>Binutils-2.23.1 - Pass 2</b>.
            </p>
            
            <p>An alternative fix is to change the build instructions of
            <b>check</b> to be:</p>
            
-           <blockquote>
+           <pre>
            <code>
            CFLAGS="-L/tools/lib -lpthread" ./configure --prefix=/tools
            CFLAGS="-L/tools/lib -lpthread" make
            </code>
-           </blockquote>
+           </pre>
            
            </li>
          </ul>
