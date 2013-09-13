@@ -1,0 +1,66 @@
+<!--#set var="pageTitle" value="BLFS Errata" -->
+<!--#include virtual="/blfs/header.html" -->
+<!--#include virtual="/blfs/menu.html" -->
+    <div class="main">
+
+     <h1>Errata for BLFS Version 7.4</h1>
+
+       <p>This version of BLFS has no errata discovered yet</p> 
+
+<!-- TEMPLATE
+       <h2>Known Security Vulnerabilities</h2>
+         <ul>
+            <li><p>Item 1</p></li>
+            <li><p>Item 2</p></li>
+         </ul>
+-->
+<!--
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+           <li>
+             <p>It has been reported that the Berkeley DB backend engine in the
+             MySQL package is now obsolete, and has been completely removed
+             from later versions of MySQL. As the Berkeley DB backend isn't
+             required (there are newer, more robust engines), you can feel free
+             to remove the - -with-berkeley-db parameter from the MySQL
+             configure command.</p>
+           </li>
+
+           <li>
+             <p>For Firefox and possibly Seamonkey, there has been at least one 
+             report that libcURL is a required runtime dependency for the Adobe 10 
+             flash plugin.
+             </p>
+           </li>
+           
+           <li>
+             <p>There is a critial security bug in imlib2-1.4.0.  It is important 
+             that all users update to imlib2-1.4.2.  Instructions for that package
+             are in the development book, 
+             http://www.linuxfromscratch.org/blfs/view/cvs/general/imlib2.html.
+             </p>
+           
+           <li>
+             <p>When building HAL-0.5.9.1, an uncompressed /usr/share/pci.ids file
+             is required.  The default instructions for PCI Utilities-2.2.3 
+             create a compressed /usr/share/pci.ids.gz file.  Before building 
+             HAL-0.5.9.1, uncompress /usr/share/pci.ids.gz as the root user: </p>
+
+             <code>gunzip /usr/share/pci.ids.gz</code>
+            
+           </li>
+
+           <li>
+             <p>When building SANE, make sure that non-scanner USB devices 
+             (e.g., hubs) in /dev/bus/usb have 0664 permissions (i.e., are 
+             readable), otherwise scanner access will fail. This
+             requires modification of the 25-lfs.rules file in 
+             /etc/udev/rules.d installed by LFS 6.3.  To do this, 
+             add a MODE="0664" to the line that starts with SUBSYSTEM=="usb".</p>
+           </li>
+
+         </ul>
+-->
+<!--     END TEMPLATE -->
+     
+<!--#include virtual="/common/footer.html" -->
