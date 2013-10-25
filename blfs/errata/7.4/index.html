@@ -23,43 +23,18 @@
              <a href='http://directory.fsf.org/wiki/Libungif'>
              http://directory.fsf.org/wiki/Libungif</a>.</p>
            </li>
-         </ul>
-<!--
+
            <li>
-             <p>For Firefox and possibly Seamonkey, there has been at least one 
-             report that libcURL is a required runtime dependency for the Adobe 10 
-             flash plugin.
+             <p>The target of the url to the BLFS bootscripts is not correct.
+             It should be <a 
+             href="http://www.linuxfromscratch.org/blfs/downloads/7.4/blfs-bootscripts-20130908.tar.bz2"> 
+             http://www.linuxfromscratch.org/blfs/downloads/7.4/blfs-bootscripts-20130908.tar.bz2</a>.
+             However, the newer version of the boot scripts that is specified 
+             should work without problems.
              </p>
            </li>
-           
-           <li>
-             <p>There is a critial security bug in imlib2-1.4.0.  It is important 
-             that all users update to imlib2-1.4.2.  Instructions for that package
-             are in the development book, 
-             http://www.linuxfromscratch.org/blfs/view/cvs/general/imlib2.html.
-             </p>
-           
-           <li>
-             <p>When building HAL-0.5.9.1, an uncompressed /usr/share/pci.ids file
-             is required.  The default instructions for PCI Utilities-2.2.3 
-             create a compressed /usr/share/pci.ids.gz file.  Before building 
-             HAL-0.5.9.1, uncompress /usr/share/pci.ids.gz as the root user: </p>
-
-             <code>gunzip /usr/share/pci.ids.gz</code>
-            
-           </li>
-
-           <li>
-             <p>When building SANE, make sure that non-scanner USB devices 
-             (e.g., hubs) in /dev/bus/usb have 0664 permissions (i.e., are 
-             readable), otherwise scanner access will fail. This
-             requires modification of the 25-lfs.rules file in 
-             /etc/udev/rules.d installed by LFS 6.3.  To do this, 
-             add a MODE="0664" to the line that starts with SUBSYSTEM=="usb".</p>
-           </li>
-
          </ul>
--->
+
 <!--     END TEMPLATE -->
      
 <!--#include virtual="/common/footer.html" -->
