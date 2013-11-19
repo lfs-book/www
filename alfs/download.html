@@ -3,8 +3,9 @@
 <!--#include virtual="menu.html" -->
     <div class="main">
      <h1>Download ALFS</h1>
-     <h2>Download Modules and Profiles</h2>
-     <h3>nALFS</h3>
+<!--     <h2>Download Modules and Profiles</h2> -->
+     <h2>jhalfs</h2>
+<!--     <h3>nALFS</h3>
 	<ul>
 	   <li><a href="downloads/stable/">Current Stable</a></li>
 	   <li><a href="downloads/test/">Test Version</a></li>
@@ -14,12 +15,18 @@
         <ul>
 	   <li><a href="downloads/profiles/">Profiles</a></li>
 	</ul>
-     <h3>jhalfs</h3>
-	<ul>
+     <h3>jhalfs</h3> -->
+	<p>
+           There is a tarball of the <a href="downloads/jhalfs/stable/">most
+           recent stable version</a>. The development version is maintained
+           as a subversion repository:</p>
+           <div class="cmd"><p>svn co
+             svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk
+             jhalfs-trunk</p></div>
 	   <li><a href="downloads/jhalfs/stable/">Current Stable</a></li>
-	   <li><a href="downloads/jhalfs/svn/">Current SVN (Development)</a></li>
+<!--   <li><a href="downloads/jhalfs/svn/">Current SVN (Development)</a></li>-->
 	</ul>
-     <h3>Packages required for nALFS</h3>	   
+<!--     <h3>Packages required for nALFS</h3>	   
      <p>For actual parsing of XML profiles, nALFS uses the 
         <a href="http://xmlsoft.org/">libxml2</a> (a.k.a. gnome-xml) library. There are
         <a href="/blfs/view/stable/general/libxml2.html">build instructions</a> in BLFS.
@@ -35,7 +42,7 @@
         <a href="http://curl.haxx.se/">curl libraries</a> that are included in the curl distribution.
         There are
         <a href="/blfs/view/stable/basicnet/netlibs.html#curl">build instructions</a> in BLFS.
-     </p>
+     </p>-->
      <h3>Packages required for jhalfs</h3>
      <p>Before it can parse the LFS book for commands, jhalfs needs to have a local copy of the book's XML source.
 	Currently, jhalfs relies on <a href="http://subversion.tigris.org">Subversion</a> to ensure that it has the
