@@ -43,6 +43,18 @@
              http://www.linuxfromscratch.org/blfs/downloads/7.4/patches/</a>
              </p>
            </li>
+
+           <li>
+             <p>On the subversion page, the instructions for Python bindings
+             should be corrected. Replace:
+               <pre>make swig-py</pre>
+             with:
+               <pre>make swig-py \
+    swig_pydir=/usr/lib/python2.7/site-packages/libsvn \
+    swig_pydir_extra=/usr/lib/python2.7/site-packages/svn</pre>
+             and same for make install-swig-py.
+             </p>
+
          </ul>
 
 <!--     END TEMPLATE -->
