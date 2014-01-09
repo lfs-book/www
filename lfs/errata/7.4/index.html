@@ -28,7 +28,15 @@
 -->
        <h2>Miscellaneous Errata</h2>
          <ul>
-           <li>There are no current errata items for LFS 7.4.</li> 
+           <!-- <li>There are no current errata items for LFS 7.4.</li> -->
+           <li><p>If your host system has <em>make-4.0</em> or later installed, glibc in 
+           Chapter 5 will need the following modification maed to 
+           <b>configure</b>.</p>
+           
+           <kbd>sed -r -i 's/(3..89..)/\1 | 4.*/' configure</kbd>
+           </p>
+
+           </li> 
          </ul>
 
 
