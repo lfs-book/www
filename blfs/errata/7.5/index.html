@@ -20,6 +20,9 @@
        running...", the line "rm -rf $packagedir" may exit with error and
        stop the build, if not executed as root. One fix is to add "as_root" at
        the beginning of the line.</li>
+
+       <li>In the Qt5 dependencies, ruby should be added as an optional
+       dependency.  It is required to build QtWebkit</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
