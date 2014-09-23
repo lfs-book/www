@@ -1,0 +1,42 @@
+<!--#set var="pageTitle" value="BLFS Errata" -->
+<!--#include virtual="/blfs/header.html" -->
+<!--#include virtual="/blfs/menu.html" -->
+    <div class="main">
+
+     <h1>Errata for BLFS systemd Version 7.6</h1>
+
+     <ul>
+       <li>There are no current known errata for BLFS systemd 7.6.</li>
+     <!--
+       <li>There are several references throughout the book to $QTDIR.
+       This reference should be $QT4DIR.  Packages that are affected
+       include Grantlee, Libdbusmenu-qt, Qca, Qjson, Polkit-Qt,
+       Automoc4, Phonon, and Akonadi.  The reference at the end of the page 
+       'Starting KDE' should also be $QT4DIR. </li>
+
+       <li>A few dependencies have been overlooked for OpenJDK. Attr and gtk+2
+       (instead of gtk+3) are required. And with the written instructions, nss
+       is recommended.</li>
+
+       <li>In the Xorg Fonts instructions "Install all of the packages by
+       running...", the line "rm -rf $packagedir" may exit with error and
+       stop the build, if not executed as root. One fix is to add "as_root" at
+       the beginning of the line.</li>
+
+       <li>In the Qt5 dependencies, ruby should be added as an optional
+       dependency.  It is required to build QtWebkit</li>
+     -->
+     </ul>
+
+     <h2>Known Security Vulnerabilities</h2>
+     <ul>
+       <li>There are no current known security vulnerabilities for BLFS systemd 7.6.</li>
+     <!--
+       <li><b>Important.</b> There is a critical security flaw in 
+       openssl versions 1.0.1 to 1.0.1f.  Use the most current
+       instructions for openssl in the BLFS development book.
+       http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html</li>
+     -->
+     </ul>
+     
+<!--#include virtual="/common/footer.html" -->
