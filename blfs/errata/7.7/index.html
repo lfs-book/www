@@ -6,7 +6,7 @@
      <h1>Errata for BLFS Version 7.7</h1>
 
      <ul>
-       <li>There are no current known errata for BLFS 7.7.</li>
+     <!--  <li>There are no current known errata for BLFS 7.7.</li> -->
      <!--
        <li>There are several references throughout the book to $QTDIR.
        This reference should be $QT4DIR.  Packages that are affected
@@ -28,19 +28,16 @@
      -->
      </ul>
 
-     <!--
      <h2>Known Security Vulnerabilities</h2>
      <ul>
-      <li><p>There here are several security fixes available to WebKitGTK+2.4.x.
-             All users should update their current version according to the instructions
-            at:<br/><br/>
+      <li><p>There is a security patch available for curl to fix CVE_2015_3153.  
+      Apply the patch below immediately after unpacking the curl source or 
+      update to curl-7.42.1 or later.
+            <br/><br/>
 
-            <a href="http://www.linuxfromscratch.org/blfs/view/svn/x/webkitgtk2.html">
-                     http://www.linuxfromscratch.org/blfs/view/svn/x/webkitgtk2.html</a></p>
+            <a href="http://www.linuxfromscratch.org/patches/downloads/curl/curl-before-7.42.1-CVE_2015_3153-1.patch">
+             http://www.linuxfromscratch.org/patches/downloads/curl/curl-before-7.42.1-CVE_2015_3153-1.patch</a></p>
       </li>
-      -->
-
-
 
      <!--
        <li><b>Important.</b> There is a critical security flaw in 
