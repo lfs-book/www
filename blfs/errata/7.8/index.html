@@ -7,8 +7,12 @@
 
      <ul>
        <li>In firefox, the new GConf dependency was omitted. To build without
-       that package, add the following line to the mozconfig: <br> <br>
-       ac_add_options --disable-gconf </li> 
+       that package, add the following line to the mozconfig: <br>
+       ac_add_options --disable-gconf</li> 
+
+       <li>If you have installed yelp, but in gnome applications 'help' cannot
+       find the contents (e.g. using the F1 key), run 'update-desktop-database'.
+       </li>
      <!--
        <li>There are no current known errata for BLFS 7.8.</li> 
        <li>There are several references throughout the book to $QTDIR.
