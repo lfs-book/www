@@ -13,6 +13,11 @@
        <li>If you have installed yelp, but in gnome applications 'help' cannot
        find the contents (e.g. using the F1 key), run 'update-desktop-database'.
        </li>
+
+       <li>For anybody building the biblatex-biber perl module dependencies by
+       hand, List::MoreUtils (and therefore Mozilla::CA) and LWP::Protocol::https
+       were omitted from the dependencies in error, although they are all
+       mentioned on the perl modules page.</li>
      <!--
        <li>There are no current known errata for BLFS 7.8.</li> 
        <li>There are several references throughout the book to $QTDIR.
