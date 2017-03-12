@@ -23,30 +23,39 @@ software you want for your systems.</p>
      <h2>How is ALFS implemented?</h2>
      <p>
 	The official implementation of ALFS is called <em>jhalfs</em>.
-	Originally created by Jeremy Huntwork, but since developed and
-	maintained by Manuel Canales Esparcia, George Boudreau, and Thomas
-	Pegg, jhalfs has become a light-weight, practical method of automating
-	an LFS build. jhalfs is a Bash shell script that makes use of
-	Subversion and xsltproc to first download the XML sources of the
-	Linux From Scratch book and then extract any necessary commands,
+	It was originally created by Jeremy Huntwork, then developed and
+	maintained by Manuel Canales Esparcia, George Boudreau, Thomas
+	Pegg, and Pierre Labastie. It has become a light-weight, practical
+        method of automating an LFS build. It is a Bash shell script that
+        makes use of Subversion and xsltproc to first download the XML sources
+        of the Linux From Scratch book and then extract any necessary commands,
 	placing them into executable shell scripts. If you do not already
 	have the necessary source packages in place on your system, jhalfs
 	can fetch them. Finally, jhalfs generates a Makefile which will
 	control the execution of the shell scripts, allowing for recovery
-	if the build should encounter an error. A way to use package
+	if the build should encounter an error. A framework to use package
 	management has been added by Pierre Labastie. 
      </p>
      <p>The most current jhalfs stable release can been downloaded from
 	<a href="http://www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/">
 	http://www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/</a>.</p>
+     <p>A release candidate for the next stable version can be found at <a
+        href="http://www.linuxfromscratch.org/alfs/downloads/jhalfs/2.4-rc1/">
+        http://www.linuxfromscratch.org/alfs/downloads/jhalfs/2.4-rc1/</a>.</p>
      <p>jhalfs is maintained as a subversion repository. To fetch the latest
 	development version, you can use this command:</p>
-     <pre>svn co svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk jhalfs</pre>
-     <p>To know what book versions are supported by each jhalfs version, please see
-         <a href="http://wiki.linuxfromscratch.org/alfs/wiki/SupportedBooks">
+     <div class="cmd"><p>svn co
+       svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk jhalfs</p></div>
+     <p>To know what book versions are supported by each jhalfs version,
+        please see
+        <a href="http://wiki.linuxfromscratch.org/alfs/wiki/SupportedBooks">
          http://wiki.linuxfromscratch.org/alfs/wiki/SupportedBooks</a>.</p>
      <p>An extension of ALFS aimed at automating the building
-	of packages in the BLFS book is now included in jhalfs.</p>
+	of packages in the BLFS book is now included in jhalfs. It is
+        still a work in progress, but the dependency chain code works, and
+        most of the packages can be built automatically. Still 10% or so
+        of the pages lead to non functional scripts, because of the book
+        layout, or of unavoidable circular dependencies.</p>
 
   <h2>History</h2>
      <p>Before jhalfs, an implementation named nALFS was developed. A more
@@ -70,10 +79,10 @@ software you want for your systems.</p>
 
      <h2>Who's who:</h2>
      <ul>
-        <li>Project Leader: Thomas Pegg</li>
-	<li>Developer(jhalfs): George Boudreau</li>
-        <li>Developer(jhalfs): Manuel Canales Esparcia</li>
-        <li>Developer(jhalfs, ablfs): Pierre Labastie</li>
+        <li>Project Leader and Developper/Maintainer: Pierre Labastie</li>
+        <li>Former Maintainer: Thomas Pegg</li>
+	<li>Former Developers(jhalfs): Jeremy Huntwork, George Boudreau</li>
+        <li>Former Developer(jhalfs, blfs tools): Manuel Canales Esparcia</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->

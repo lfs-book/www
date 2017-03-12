@@ -2,77 +2,48 @@
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
     <div class="main">
-     <h1>Download ALFS</h1>
-<!--     <h2>Download Modules and Profiles</h2> -->
-     <h2>jhalfs</h2>
-<!--     <h3>nALFS</h3>
-	<ul>
-	   <li><a href="downloads/stable/">Current Stable</a></li>
-	   <li><a href="downloads/test/">Test Version</a></li>
-	   <li><a href="downloads/svn/">Current SVN (Development)</a></li>
-           <li><a href="http://archive.linuxfromscratch.org/alfs-museum/">Previous Releases</a></li>
-        </ul>
-        <ul>
-	   <li><a href="downloads/profiles/">Profiles</a></li>
-	</ul>
-     <h3>jhalfs</h3> -->
-	<p>
-           There is a tarball of the <a href="downloads/jhalfs/stable/">most
-           recent stable version</a>, though due to its age it won't work
-           well with recent versions of LFS. To build current LFS, you should
-           use the development version of jhalfs, which is maintained as a
-           subversion repository:</p>
-           <div class="cmd"><p>svn co
-             svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk
-             jhalfs-trunk</p></div>
-<!--   <li><a href="downloads/jhalfs/svn/">Current SVN (Development)</a></li>-->
-<!--     <h3>Packages required for nALFS</h3>	   
-     <p>For actual parsing of XML profiles, nALFS uses the 
-        <a href="http://xmlsoft.org/">libxml2</a> (a.k.a. gnome-xml) library. There are
-        <a href="/blfs/view/stable/general/libxml2.html">build instructions</a> in BLFS.
-     </p>
-     <p>If you use <em>&lt;download&gt;</em> and/or <em>&lt;unpack&gt;</em> elements in your profiles,
-        and wish to have the source file contents verified by computing digests, you can use MD5 digests
-        without requiring any additional libraries while building nALFS. If you wish to use digests other
-        than MD5 (i.e. SHA-1), nALFS can be built using the 
-        <a href="http://www.openssl.org/">OpenSSL</a> library. There are 
-        <a href="/blfs/view/stable/postlfs/security.html#openssl">build instructions</a> in BLFS.  Also
-        if you wish to get better download performance (and more reliability) than using wget for the 
-        download processes, nALFS can be built using the
-        <a href="http://curl.haxx.se/">curl libraries</a> that are included in the curl distribution.
-        There are
-        <a href="/blfs/view/stable/basicnet/netlibs.html#curl">build instructions</a> in BLFS.
-     </p>-->
-     <h3>Packages required for jhalfs</h3>
-     <p>Before it can parse the LFS book for commands, jhalfs needs to have a local copy of the book's XML source.
-	Currently, jhalfs relies on <a href="http://subversion.apache.org">Subversion</a> to ensure that it has the
-	most up-to-date version of the LFS Book. There are
-	<a href="/blfs/view/stable/general/subversion.html">build instructions</a> in BLFS.
-     </p>
-     <p>To extract the commands from the LFS book, jhalfs relies on xsltproc from the
-	<a href="http://xmlsoft.org/XSLT/">libxslt</a> package. There are
-	<a href="/blfs/view/stable/general/libxslt.html">build instructions</a> in BLFS.
-     </p>
-     <p>If you want jhalfs to automatically download the source packages LFS uses, you'll need to have
-	either <a href="http://www.gnu.org/software/wget/wget.html">wget</a>
-	or <a href="http://curl.haxx.se/">curl</a> installed. There are
-	<a href="/blfs/view/stable/basicnet/basicnet.html">build instructions</a> in BLFS.
-     </p>
-     <h2>Getting nALFS from SVN</h2>
-     <p>You have two options to access the SVN archive of the ALFS modules. If you have the <code>svn</code> program
-        installed, you can checkout a copy of the current ALFS modules and work with the files yourself.
-        There are many choices presented here.
-     </p>
-     <p>To get the current nALFS sources:</p>
-     <div class="cmd"><p>svn co svn://svn.linuxfromscratch.org/ALFS/archive/nALFS/nALFS/trunk/</p></div>
-     <p>To get the current LFS development profile for nALFS:</p>
-     <div class="cmd"><p>svn co svn://svn.linuxfromscratch.org/ALFS/archive/profiles/LFS/trunk/</p></div>
-     <p>To get all available ALFS DTDs:</p>
-     <div class="cmd"><p>svn co svn://svn.linuxfromscratch.org/ALFS/archive/DTD/trunk/</p></div>
-     <p>To get the current development version of jhalfs:</p>
-     <div class="cmd"><p>svn co svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk jhalfs-trunk</p></div>
-     <p>An alternative is to view the ALFS source tree online on the
-        <a href="http://wiki.linuxfromscratch.org/alfs/browser">SVN Web Interface</a>.
-     </p>
+      <h1>Download ALFS</h1>
+      <p>The only maintained project is jhalfs. It is available for download in
+         two formats:</p>
+      <h2>Stable jhalfs</h2>
+      <p>This is the lastest released jhalfs building framework. A tarball of
+         the most recent version is available from the <a
+         href="downloads/jhalfs/stable/">stable jhalfs</a> directory. It can
+         also be checked out from the subversion repository:</p>
+      <div class="cmd"><p>svn co
+         svn://svn.linuxfromscratch.org/ALFS/jhalfs/tags/2.3.2
+         jhalfs-2.3.2</p></div>
+      <p>That version is very old and does not work with recent (7.x and 8.x)
+         versions of the LFS book.</p>
+      <h2>Release Candidate Version &mdash; jhalfs-2.4-rc1</h2>
+      <p>After almost eight years without a stable version, this is a
+         soon-to-be-released version undergoing the last stages of
+         testing. It may be downloaded from the <a
+         href="/alfs/downloads/jhalfs/2.4-rc1"</a>jhalfs-2.4-rc1</a> directory,
+         or checked out from the subversion repository:</p>
+      <div class="cmd"><p>svn co
+         svn://svn.linuxfromscratch.org/ALFS/jhalfs/tags/2.4-rc1
+         jhalfs-2.4-rc1</p></div>
+      <h2>Current Development</h2>
+      <p>The current development version can only be obtained from the
+         subversion repository:</p>
+      <div class="cmd"><p>svn co
+         svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk jhalfs-dev</p></div>
+      <h2>Packages required for jhalfs</h2>
+      <p>Before it can parse the LFS book for commands, jhalfs needs to have a
+         local copy of the book's XML source. Currently, jhalfs relies on <a
+         href="http://subversion.apache.org">Subversion</a> to ensure that it
+         has the most up-to-date version of the LFS Book. There are <a
+         href="/blfs/view/stable/general/subversion.html">build
+         instructions</a> in BLFS.</p>
+      <p>To extract the commands from the LFS book, jhalfs relies on xsltproc
+         from the <a href="http://xmlsoft.org/XSLT/">libxslt</a> package.
+         There are <a href="/blfs/view/stable/general/libxslt.html">build
+         instructions</a> in BLFS.</p>
+      <p>If you want jhalfs to automatically download the source packages LFS
+         uses, you'll need to have <a
+         href="http://www.gnu.org/software/wget/wget.html">wget</a> installed.
+         There are <a href="/blfs/view/stable/basicnet/wget.html">build
+         instructions</a> in BLFS.</p>
 
 <!--#include virtual="/common/footer.html" -->
