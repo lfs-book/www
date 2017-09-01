@@ -1,0 +1,43 @@
+<!--#set var="pageTitle" value="BLFS Errata" -->
+<!--#include virtual="/blfs/header.html" -->
+<!--#include virtual="/blfs/menu.html" -->
+    <div class="main">
+
+     <h1>Errata for BLFS Version 8.1</h1>
+
+     <ul>
+       <li>There are no current known errata for BLFS 8.1-sysv.</li>
+       <!--<li>On the libpng page there is a misspelled library name.  The
+       construct should be <b>LIBS=-lpthread ...</b>.-->
+       </li>
+
+     </ul>
+
+     <h2>Known Security Vulnerabilities</h2>
+     
+     <p>A few packages, such as openssl, are good at reporting that a new
+     release fixes a vulnerability. For some others, such as firefox,
+     virtually every new release includes security fixes. But in many cases
+     the fixes are not documented as security issues.</p>
+     
+     <p>Updates to the packages in the book may be available
+     in the 
+     <a href="../../view/svn/">development version of the book.</a>
+     </p>
+
+     <!--
+     <p>For texlive, see the "Now, or if returning here because you were advised,
+     fix a new vulnerability." command at the end of the texlive source page. This
+     also applies to the binary if you have installed it before early December 2016
+     and not run tlupdate.</p>
+     -->
+     <!--
+     <ul>
+       <li>firefox-41.0.2 fixes what is apparently CVE-2015-7184: the fetch() API
+       did not correctly implement the Cross-Origin Resource Sharing (CORS)
+       specification, allowing a malicious page to access private data from other
+        origins.</li>
+     </ul>
+     -->
+     
+<!--#include virtual="/common/footer.html" -->
