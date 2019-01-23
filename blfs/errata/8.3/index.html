@@ -17,6 +17,12 @@
 
        <li>In Samba, the Recommended dependency of perl module Parse::Yapp
        was mistakenly commented out.</li>
+
+       <li>On the rustc page, the caution about running tests on AMD Ryzens
+       is overstated, and the "mitigation" actually does nothing. The invalid
+       opcodes when running the tests on Ryzens are real, but the reboots were
+       almost-certainly caused by a triple-fault in the kernel - probably an
+       -rc kernel, and no doubt triggered by the invalid opcode.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
