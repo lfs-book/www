@@ -6,26 +6,15 @@
      <h1>Errata for BLFS systemd Version 8.4</h1>
 
      <ul>
+       <li>After release, a problem was discovered with LXDE/LXPanel where
+       right clicking on the taskbar to close a program would sometimes cause
+       LXPanel to crash with a General Protection Fault. To fix this, upgrade
+       to the latest version: 
+         <a href="../../view/svn/lxde/lxpanel.html">
+         http://www.linuxfromscratch.org/blfs/view/svn/lxde/lxpanel.html</a>.
+       </li>
+<!--       
        <li>There are no current known errata for BLFS 8.4-systemd.</li>
-<!--
-        <li>In the instructions for frei0r-plugins, the first instruction should be:
-       "sed -i 's/CV_RGB/cv::Scalar/' src/filter/facebl0r/facebl0r.cpp" to
-       fix a build problem with the current opencv dependency.</li>
-       
-       <li>In firefox, the command to build it was truncated to './mach'
-       instead of './mach build' - the command explanation was correct.</li>
-
-       <li>In Samba, the Recommended dependency of perl module Parse::Yapp
-       was mistakenly commented out.</li>
--->
-<!--
-       <li>The details of microcode updates, particularly for late loading,
-       reflected how things used to be several kernel versions ago. This
-       has been updated for the 4.9 kernel in the development version of the
-       book.</li>
-
-       <li>In 'Tuning Fontconfig' the example under 'Hinting and Anti-aliasing
-       has a spurious fonts.conf in the initial mkdir.</li>
 -->
      </ul>
 
