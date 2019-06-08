@@ -82,6 +82,13 @@
      CPUs. In order to fix this, apply the microcode using the instructions in
      ../../view/svn/postlfs/firmware.html.</p>
 
+     <p>Post-release, critical vulnerabilities were discovered in Samba, with all
+     versions from 4.0.x to 4.10.3 impacted. These allow for arbitrary file overwrite,
+     authentication bypass, password hash leaks, unauthorized modification/reading
+     of files, and symlink traversal. The BLFS team recommends upgrading to the 4.10.4
+     release of Samba as soon as possible, using the instructions in
+     ../../view/svn/basicnet/samba.html.</p>
+
 <!--
      <p>A vulnerability with available exploits in all recent versions of
      ghostscript has been fixed in the development book by patching gs-9.25.

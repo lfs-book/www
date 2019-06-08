@@ -81,4 +81,12 @@
      CPUs. To fix this, apply the patched microcode using the instructions in
      ../../view/systemd/postlfs/firmware.html.</p>
 
+     <p>Post-release, critical vulnerabilities were discovered in Samba, with all
+     versions from 4.0.x to 4.10.3 impacted. These allow for arbitrary file overwrite,
+     authentication bypass, password hash leaks, unauthorized modification/reading
+     of files, and symlink traversal. The BLFS team recommends upgrading to the 4.10.4
+     release of Samba as soon as possible, using the instructions in
+     ../../view/systemd/basicnet/samba.html.</p>
+
+
 <!--#include virtual="/common/footer.html" -->
