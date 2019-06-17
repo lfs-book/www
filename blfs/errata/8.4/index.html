@@ -42,8 +42,10 @@
        prevented the version of WebKitGTK+ shipped with BLFS 8.4 from downloading.
        The BLFS team recommends using the latest 2.24.x versions because they are
        API and ABI compatible, and require no modifications to the instructions.</li>
+
+
 <!--       
-       <li>There are no current known errata for BLFS 8.4-systemd.</li>
+       <li>There are no current known errata for BLFS 8.4.</li>
 -->
      </ul>
 
@@ -100,6 +102,12 @@
      for authentication bypass through an open D-Bus socket. To fix this,
      upgrade to version 1.12.16 or later using the instructions at
      ../../view/svn/general/dbus.xml.</p>
+
+     <p>In June,, a security problem with vim was discovered: Remote attackers can
+     execute arbitrary OS commands via the :source! command in a modeline. This has
+     been fixed in version 8.1.1365, see the instructions in
+     ../../view/svn/postlfs/editors/vim html.</p>
+
 <!--
      <p>A vulnerability with available exploits in all recent versions of
      ghostscript has been fixed in the development book by patching gs-9.25.
