@@ -104,9 +104,9 @@
      ../../view/svn/general/dbus.xml.</p>
 
      <p>In June,, a security problem with vim was discovered: Remote attackers can
-     execute arbitrary OS commands via the :source! command in a modeline. This has
-     been fixed in version 8.1.1365, see the instructions in
-     ../../view/svn/postlfs/editors/vim html.</p>
+     execute arbitrary OS commands via the :source! command in a modeline. 
+     This has been fixed in version 8.1.1365, see the instructions in
+     ../../view/svn/postlfs/editors/vim.html.</p>
 
      <p>In June, 23 security vulnerabilities that allow for arbitrary code execution,
      sandbox escape, URL forging, denial of service, and remote modification of
@@ -118,7 +118,16 @@
      execution, unauthorized modification of data, and information disclosure
      were discovered in WebKitGTK+ before 2.24.2. The BLFS team recommends
      upgrading to WebKitGTK+-2.24.2 using the instructions in
-     ../../view/svn/x/webkitgtk.xml.</p>
+     ../../view/svn/x/webkitgtk.html.</p>
+
+     <p>In June, more 0-days were discovered in Thunderbird and Firefox. The ones
+     in Thunderbird allow for a repeatable crash and subsequent profile corruption
+     simply by receiving a .ics file because of the way that Thunderbird processes
+     mails while it downloads them (indexing attachments and contents). The ones
+     in Firefox allow for Arbitrary Code Execution through the JavaScript and
+     IPC layers. The BLFS team recommends upgrading to Thunderbird-60.7.2 and
+     Firefox-67.0.4 immediately, using the instructions in
+     ../../view/svn/xsoft/thunderbird.html and ../../view/svn/xsoft/firefox.html.
 
 <!--
      <p>A vulnerability with available exploits in all recent versions of
