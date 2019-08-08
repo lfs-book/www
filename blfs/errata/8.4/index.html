@@ -127,7 +127,16 @@
      in Firefox allow for Arbitrary Code Execution through the JavaScript and
      IPC layers. The BLFS team recommends upgrading to Thunderbird-60.7.2 and
      Firefox-67.0.4 immediately, using the instructions in
-     ../../view/svn/xsoft/thunderbird.html and ../../view/svn/xsoft/firefox.html.
+     ../../view/svn/xsoft/thunderbird.html and ../../view/svn/xsoft/firefox.html.</p>
+
+     <p>In August, a 0-day vulnerability was released to the public without prior
+     contact with the KDE developers. This bug has been dubbed CVE-2019-14744, and
+     allows for arbitrary code execution through any .desktop or .directory file
+     that may exist on the system (at least that Baloo can index). In addition,
+     it can be triggered through Ark or a file manager under a Plasma environment.
+     To fix this, apply the following patch to your KConfig sources and rebuild
+     (It has been tested against 5.53.0 as well as 5.60.0):
+     http://linuxfromscratch.org/patches/downloads/kconfig/kconfig-5.60.0-cve_2019_14744-1.patch</p>
 
 <!--
      <p>A vulnerability with available exploits in all recent versions of
