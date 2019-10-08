@@ -81,6 +81,22 @@
      <a href="../../view/systemd/gnome/evolution-data-server.html">evolution-data-server-3.34.0</a> and
      <a href="../../view/systemd/gnome/evolution.html">evolution-3.34.0</a> respectively.</p>
 
+     <p>After release, several vulnerabilites were discovered in the rdoc implementation of
+     Ruby. The BLFS team recommends updating to the latest version of Ruby ASAP using the
+     instrunctions in
+     <a href="../../view/systemd/general/ruby.html">Ruby-2.6.5</a>.</p>
+
+     <p>After release, a vulnerability was discovered in Unbound that allows remote attackers
+     to crash the process. To fix this, update to the latest version of Unbound using the
+     instructions in
+     <a href="../../view/systemd/server/unbound.html">Unbound-1.9.4</a>.</p>
+
+     <p>After release, an access control bypass vulnerability was discovered in systemd-241.
+     The BLFS team recommends applying the patch listed below immediately
+     and rebuilding systemd, followed by a reboot:
+     <a href="http://linuxfromscratch.org/patches/downloads/systemd/systemd-241-security_patch-1.patch">
+     systemd-241-security_patch-1.patch</a>.</p>
+
      <h2>Known Security Vulnerabilities</h2>
      
      <p>A few packages are good at reporting that a new
