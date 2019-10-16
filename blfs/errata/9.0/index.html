@@ -6,7 +6,11 @@
      <h1>Errata for BLFS Version 9.0</h1>
      
      <ul>
-       <li>There are no current known errata for BLFS 9.0.</li>
+       <li>After release, a problem was discovered in BIND where the instructions
+       used in the book would result in a nonexistent rndc.conf file. To fix this,
+       run "rndc-confgen -a -b 512 -t /srv/named" instead of
+       "rndc-confgen -r /dev/urandom -b 512 &gt; /etc/rndc.conf". Also, 
+       please modify the files to reference /etc/named instead of /etc/namedb.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
