@@ -32,8 +32,8 @@
 
      <p>After release, several vulnerabilities were identified in Firefox. 
      Several of them are rated High or Moderate. To fix them, upgrade to
-     Firefox-69.0 using the instructions in
-     <a href="../../view/svn/xsoft/firefox.html">Firefox-69.0</a>.</p>
+     Firefox-68.3.0 using the instructions in
+     <a href="../../view/svn/xsoft/firefox.html">Firefox-68.3.0</a>.</p>
 
      <p>After release, a vulnerability was discovered in the version of PHP
      shipped with BLFS 9.0. The BLFS team recommends updating to the latest version
@@ -70,10 +70,10 @@
 
      <p>After release, several high and critical vulnerabilities were discovered in
      QtWebEngine (Chromium-based). The BLFS team recommends upgrading immediately to
-     version 5.13.1 or later. To upgrade, upgrade to Qt-5.13.1 first and then to
-     QtWebEngine-5.13.1 using the instructions in
-     <a href="../../view/svn/x/qt5.html">Qt-5.13.1</a> and
-     <a href="../../view/svn/x/qtwebengine.html">QtWebEngine-5.13.1</a> respectively.</p>
+     version 5.13.2 or later. To upgrade, upgrade to Qt-5.13.2 first and then to
+     QtWebEngine-5.13.2 using the instructions in
+     <a href="../../view/svn/x/qt5.html">Qt-5.13.2</a> and
+     <a href="../../view/svn/x/qtwebengine.html">QtWebEngine-5.13.2</a> respectively.</p>
 
      <p>After release, two vulnerabilities were discovered in cURL. These are
      double-free and heap-buffer-overflow vulnerabilities in TFTP and FTP (with KRB)
@@ -106,12 +106,12 @@
      instructions in
      <a href="../../view/svn/server/unbound.html">Unbound-1.9.4</a>.</p>
 
-     <p>After release, four new sandbox/-dSAFER escape vulnerabilities were
+     <p>After release, many new sandbox/-dSAFER escape vulnerabilities were
      discovered in Ghostscript. Unless these vulnerabilities are patched,
      PDF documents can access the filesystem outside of restricted areas
-     and execute arbitrary commands. To fix these vulnerabilities, apply
-     the updated "-2" patch found in
-     <a href="../../view/svn/pst/ghostscript.html">ghostscript-9.27</a>.</p>
+     and execute arbitrary commands. To fix these vulnerabilities, update
+     to
+     <a href="../../view/svn/pst/ghostscript.html">ghostscript-9.50</a>.</p>
 
      <p>After release, a potential restriction bypass vulnerability was
      discovered in Sudo prior to version 1.8.28. To fix this, update to
@@ -131,8 +131,8 @@
      <p>After release, several vulnerabilities were discovered in Thunderbird.
      These include memory safety bugs, restriction bypasses, and a
      remote code execution bug in the iCal parser. To fix these, update to
-     Thunderbird-68.2.0 or later using the instructions in
-     <a href="../../view/svn/xsoft/thunderbird.html">Thunderbird-68.2.0</a>.</p>
+     Thunderbird-68.2.2 using the instructions in
+     <a href="../../view/svn/xsoft/thunderbird.html">Thunderbird-68.2.2</a>.</p>
 
      <p>After release, a security flaw was found in NSS, CVE-2019-11745.
      To fix this security flaw, update to the latest version of NSS using
@@ -145,6 +145,11 @@
      instructions in
      <a href="../../view/svn/postlfs/gnupg.html">GnuPG-2.2.18</a> if you
      wish to still continue using GnuPG if you have a SHA-1 signature.</p>
+
+     <p>After release it was discovered that many security fixes for
+     unzip-6.0 were present in distros but had not been applied to BLFS.
+     To fix these, rebuild unzip using the patch in
+     <a href="../..//view/svn/general/unzip.html">unzip-6.0</a>.</p>
 
 <!--
      <p>A vulnerability with available exploits in all recent versions of
