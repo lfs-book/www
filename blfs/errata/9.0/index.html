@@ -161,7 +161,16 @@
      of git were disclosed. These allow an attacker to overwrite arbitrary
      paths, remotely execute code, or overwrite files in the .git/ directory.
      To fix these, please update to git-2.24.1 using the instructions in
-     <a href="../../view/svn/general/prog/git.html">git-2.24.1</a>.</p>
+     <a href="../../view/svn/general/git.html">git-2.24.1</a>.</p>
+
+     <p>After release, a security flaw was discovered in npm, shipped with
+     node.js, that leads to files being overwrited when installing packages.
+     These files get overwritten in whatever prefix you are installing node in,
+     and can include files in /usr/bin and /usr/sbin. This can lead to file
+     deletion of files installed by other packages and other damage. Please
+     update to node.js-12.13.0 as soon as possible using the instructions in
+     <a href"../../view/svn/general/node.html">Node.JS-12.13.0</a>.</p>
+
 <!--
      <p>A vulnerability with available exploits in all recent versions of
      ghostscript has been fixed in the development book by patching gs-9.25.
