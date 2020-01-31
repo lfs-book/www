@@ -59,11 +59,12 @@
      <a href="../../view/systemd/x/at-spi2-core.html">at-spi2-core-2.34.0</a>.</p>
 
      <p>After release, several high and critical vulnerabilities were discovered in
-     QtWebEngine (Chromium-based). The BLFS team recommends upgrading immediately to
-     version 5.13.1 or later. To upgrade, upgrade to Qt-5.13.2 first and then to
-     QtWebEngine-5.13.2 using the instructions in
-     <a href="../../view/systemd/x/qt5.html">Qt-5.13.2</a> and
-     <a href="../../view/systemd/x/qtwebengine.html">QtWebEngine-5.13.2</a> respectively.</p>
+     QtWebEngine (Chromium-based). Additional vulnerabilities were discovered in
+     the Qt plugin loader and QSQLite. The BLFS team recommends upgrading
+     to version 5.14.1 or later immediately. To upgrade, 
+     upgrade to Qt-5.14,1 first and then to QtWebEngine-5.14,1 using the
+     instructions in <a href="../../view/systemd/x/qt5.html">Qt-5.14.1</a> and
+     <a href="../../view/systemd/x/qtwebengine.html">QtWebEngine-5.14.1</a> respectively.</p>
 
      <p>After release, two vulnerabilities were discovered in cURL. These are
      double-free and heap-buffer-overflow vulnerabilities in TFTP and FTP (with KRB)
@@ -110,9 +111,10 @@
      <a href="../../view/systemd/pst/gs.html">ghostscript-9.50</a>.</p>
 
      <p>After release, a potential restriction bypass vulnerability was
-     discovered in Sudo prior to version 1.8.28. To fix this, update to
-     Sudo-1.8.28 ASAP using the instructions in
-     <a href="../../view/systemd/postlfs/sudo.html">sudo-1.8.28</a>.</p>
+     discovered in Sudo prior to version 1.8.28. Another security flaw 
+     was found in the pwfeedback option in 1.8.30. To fix these, update to
+     Sudo-1.8.31 ASAP using the instructions in
+     <a href="../../view/systemd/postlfs/sudo.html">sudo-1.8.31</a>.</p>
 
      <p>After release, five vulnerabilities were discovered in Python-2.7.16
      as shipped with BLFS 9.0. To fix these vulnerabilities, update to
