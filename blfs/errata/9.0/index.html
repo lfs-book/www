@@ -173,9 +173,10 @@
      node.js, that leads to files being overwrited when installing packages.
      These files get overwritten in whatever prefix you are installing node in,
      and can include files in /usr/bin and /usr/sbin. This can lead to file
-     deletion of files installed by other packages and other damage. Please
-     update to node.js-12.14.0 as soon as possible using the instructions in
-     <a href="../../view/svn/general/nodejs.html">Node.JS-12.14.0</a>.</p>
+     deletion of files installed by other packages and other damage. Additional
+     flaws in the HTTP parser were also found. Please
+     update to node.js-12.15.0 as soon as possible using the instructions in
+     <a href="../../view/svn/general/nodejs.html">Node.JS-12.15.0</a>.</p>
 
      <p>After release, a series of security flaws was discovered in libarchive.
      These include security fixes in the RAR5 reader, wide string processing,
@@ -183,6 +184,12 @@
      these vulnerabilities, update to libarchive-3.4.1 or later using the
      instructions in
      <a href="../../view/svn/general/libarchive.html">libarchive-3.4.1</a>.</p>
+
+     <p>After release, two security problems were found in GNU Screen. These
+     are primarily use-after-free and out-of-bounds access vulnerabilities.
+     To fix these, please update to Screen-4.8.0 or later using the
+     instructions in
+     <a href="../../view/svn/general/screen.html">Screen-4.8.0</a>.</p>
 
 <!--
      <p>A vulnerability with available exploits in all recent versions of
