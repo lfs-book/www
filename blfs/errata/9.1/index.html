@@ -6,8 +6,16 @@
      <h1>Errata for BLFS Version 9.1</h1>
      
      <!-- Editors: Do not remove this entry, just comment it out. -->
-     <ul>
+     <!--<ul>
        <li>There are no current errata for blfs-9.1.</li>
+     </ul>-->
+     <ul>
+      <li>In kdenlive, a problem was discovered where Kdenlive would
+      crash with a segmentation fault anytime that it was closed, which would
+      corrupt any project files that were open as well as the source media.
+      To fix this, please apply the patch in
+      <a href="http://linuxfromscratch.org/patches/downloads/kdenlive/kdenlive-19.12.2-segfault_fix-1.patch">
+      kdenlive-19.12.2 segmentation fault patch</a> to your source tree.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
@@ -22,8 +30,13 @@
      </p>
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
-     <ul>
+     <!--<ul>
        <li>There are no current known security vulnerabilities for blfs-9.1.</li>
+     </ul>-->
+     <ul>
+      <li>After release, a security vulnerability was discovered in Avahi-0.7.
+      To fix this, update to avahi-0.8 using the instructions in
+      <a href="../../view/svn/basicnet/avahi.html">avahi-0.8</a>.</p></li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
