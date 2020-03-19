@@ -17,14 +17,26 @@
 
        <li>The md5sum for the package  cairo-1.17.2+f93fc72c03e.tar.xz is
            incorrect.  It should be 23a9420780f74ad0ca1e9885e53ee022.</li>
-       <li>There are no current errata for blfs-9.1-systemd.</li>
+       <!--<li>There are no current errata for blfs-9.1-systemd.</li>-->
 
-      <li>In kdenlive, a problem was discovered where Kdenlive would
-      crash with a segmentation fault anytime that it was closed, which would
-      corrupt any project files that were open as well as the source media.
-      To fix this, please apply the patch in
-      <a href="http://linuxfromscratch.org/patches/downloads/kdenlive/kdenlive-19.12.2-segfault_fix-1.patch">
-      kdenlive-19.12.2 segmentation fault patch</a> to your source tree.</li>
+       <li>In kdenlive, a problem was discovered where Kdenlive would
+           crash with a segmentation fault anytime that it was closed, which would
+           corrupt any project files that were open as well as the source media.
+           To fix this, please apply the patch in
+           <a href="http://linuxfromscratch.org/patches/downloads/kdenlive/kdenlive-19.12.2-segfault_fix-1.patch">
+           kdenlive-19.12.2 segmentation fault patch</a> to your source tree.</li>
+
+       <li>In the seamonkey page, it was discovered that the symlink to place
+           the seamonkey.png icon in /usr/share/pixmaps was incorrect. Use the
+           following command to fix it:
+           ln -sfv /usr/lib/seamonker-2.53.1/chrome/icons/default/default128.png \
+                   /usr/share/pixmaps/seamonkey.png</li>
+      
+       <li>In the Plasma page, it was discovered that the filename for
+           "plasmawayland.desktop" was incorrect. In the instructions for when
+           $KF5_PREFIX isn't /usr, change plasma.desktop to plasmawayland.desktop
+           when creating the symbolic link in /usr/share/wayland-sessions.</li>
+      
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
@@ -47,6 +59,30 @@
       <li>After release, a security vulnerability was discovered in Avahi-0.7.
       To fix this, update to avahi-0.8 using the instructions in
       <a href="../../view/systemd/basicnet/avahi.html">avahi-0.8</a>.</p></li>
+      <li>After release, security vulnerabilities were discovered in Wireshark
+          that could cause Wireshark to crash. To fix these, update to
+          Wireshark-3.2.2 or later using the instructions in
+          <a href="../../view/systemd/basicnet/wireshark.html">Wireshark-3.2.2</a>.</li>
+      <li>After release, several security vulnerabilities were discovered in
+          PHP. These included access violations, heap buffer overflows, and
+          null pointer dereference vulnerabilities. To fix these, update to
+          PHP-7.4.3 or later using the instructions in
+          <a href="../../view/systemd/general/php.html">PHP-7.4.3</a>.</li>
+      <li>After release, three security vulnerabilities were discovered in
+          NTP. These include uninitialized memory readings, forged packet
+          DoS attacks, and unauthenticated time source attacks. To fix these,
+          update to NTP-4.2.8p14 or later using the instructions in
+          <a href="../../view/systemd/basicnet/ntp.html">NTP-4.2.8p14</a>.</li>
+      <li>After release, a security vulnerability was discovered in
+          WebkitGTK+ that allows for arbitrary code execution. It's recommended
+          by the developers of WebKitGTK+ that you update as soon as possible
+          to WebKitGTK+-2.28.0 or later. To do this, follow the instructions in
+          <a href="../../view/systemd/x/webkitgtk.html">WebKitGTK+-2.28.0</a>.</li>
+      <li>After release, several security vulnerabilities were discovered in
+          Firefox. To fix these, update to Firefox-68.6.0 or later using the
+          insructions in
+          <a href="../../view/systemd/xsoft/firefox.html">Firefox-68.6.0</a>.</li>
+
      </ul>
 
 
