@@ -36,7 +36,13 @@
            "plasmawayland.desktop" was incorrect. In the instructions for when
            $KF5_PREFIX isn't /usr, change plasma.desktop to plasmawayland.desktop
            when creating the symbolic link in /usr/share/wayland-sessions.</li>
-      
+
+       <li>In the Rustc page, the grep command to report the total number of
+           tests was incorrect because where a suite only runs 1 test if reports
+           it is running 1 test and the grep looked for tests. That is why the
+           number of tests has not added up ever since the rustc tests were added
+           to BLFS. Now fixed, using an egrep command.</li>
+
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
