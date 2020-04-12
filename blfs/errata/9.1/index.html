@@ -41,6 +41,12 @@
            number of tests has not added up ever since the rustc tests were added
            to BLFS. Now fixed, using an egrep command.</li>
 
+       <li>It was discovered that after BLFS 9.1 was released, the version of
+           PDFBox and FontBox used in fop was no longer available. Please use 
+           the 2.0.19 version of these packages instead. The md5sum for
+           pdfbox-2.0.19.jar is 1c085389e055c957b07c25c8443de728. The md5sum
+           for fontbox-2.0.19.jar is 74b3b8ee7eef40b0aff5ca5aa07d96f7.</li>
+
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
@@ -64,8 +70,8 @@
           <a href="../../view/svn/basicnet/avahi.html">avahi-0.8</a>.</li>
       <li>After release, security vulnerabilities were discovered in Wireshark
           that could cause Wireshark to crash. To fix these, update to
-          Wireshark-3.2.2 or later using the instructions in
-          <a href="../../view/svn/basicnet/wireshark.html">Wireshark-3.2.2</a>.</li>
+          Wireshark-3.2.3 or later using the instructions in
+          <a href="../../view/svn/basicnet/wireshark.html">Wireshark-3.2.3</a>.</li>
       <li>After release, several security vulnerabilities were discovered in
           PHP. These included access violations, heap buffer overflows, and
           null pointer dereference vulnerabilities. To fix these, update to
@@ -85,10 +91,10 @@
           Firefox. Two of these vulnerabilities are 0days that are being used
           in the wild. Please update immediately using the instructions in 
           <a href="../../view/svn/xsoft/firefox.html">Firefox-68.7.0</a>.</li>
-      <li>After release, several security vulnerabilities were discovered in
-          Thunderbird. To fix these, update to Thunderbird-68.6.0 or later using
-          the instructions in
-          <a href="../../view/svn/xsoft/thunderbird.html">Thunderbird-68.6.0</a>.</li>
+      <li>After release, several critical security vulnerabilities were 
+          discovered in Thunderbird. To fix these, update to Thunderbird-68.7.0 
+          or later using the instructions in
+          <a href="../../view/svn/xsoft/thunderbird.html">Thunderbird-68.7.0</a>.</li>
       <li>After release, a privilege escalation vulnerability was discovered in
           Bubblewrap. To fix this vulnerability, update to Bubblewrap-0.4.1 or
           later using the instructions in
