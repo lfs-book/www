@@ -33,10 +33,18 @@
                <a href="../../view/systemd/chapter06/openssl.html">OpenSSL-1.1.1f</a>.</li>
          </ul>
 
+       <!--
        <h2>Miscellaneous Errata</h2>
          <ul>
            <li>There are no current errata items for LFS 9.1-systemd.</li> 
          </ul>
+       -->
 
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+           <li>The man pages aren't installed with systemd like they are
+               supposed to be. To install the manual pages, add
+               -Dman=true to the meson line.</li>
+         </ul>
 
 <!--#include virtual="/common/footer.html" -->
