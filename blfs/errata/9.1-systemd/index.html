@@ -180,6 +180,21 @@
           were discovered in the urllib module. To fix these, update to
           Python-3.8.3 using the instructions in
           <a href="../../view/systemd/general/python3.html">Python-3.8.3</a>.</li>
+      <li>After release, multiple high severity vulnerabilities were disclosed
+          in the ISC BIND DNS Server. These vulnerabilities were fixed in
+          BIND-9.16.3. To fix these vulnerabilities, update to BIND-9.16.3
+          or later using the instructions in
+          <a href="../../view/systemd/server/bind.html">BIND-9.16.3</a>.</li>
+      <li>After release, multiple security vulnerabilities were discovered in
+          the Unbound DNS Server. To fix these, update to Unbound-1.10.1 or
+          later using the instructions in
+          <a href="../../view/systemd/server/unbound.html">Unbound-1.10.1</a>.</li>
+      <li>While adapting Sharutils to GCC-10, it was discovered that there was
+          a security issue that was missed in Sharutils. To fix this security
+          issue, use the following sed and then rebuild sharutils:
+          sed -i 's/BUFSIZ/rw_base_size/' src/unshar.c</li>
+
+
      </ul>
 
 
