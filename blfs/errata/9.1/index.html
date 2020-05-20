@@ -191,6 +191,10 @@
           a security issue that was missed in Sharutils. To fix this security
           issue, use the following sed and then rebuild sharutils:
           sed -i 's/BUFSIZ/rw_base_size/' src/unshar.c</li>
+      <li>After release, a security vulnerability was discovered in Mozilla
+          Network Security Services (NSS). To fix this vulnerability, update to
+          NSS-3.52.1 using the instructions in 
+          <a href="../../view/svn/postlfs/nss.html">NSS-3.52.1</a>.</li>
 
      </ul>
 
