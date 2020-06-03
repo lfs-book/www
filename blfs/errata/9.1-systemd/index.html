@@ -114,10 +114,14 @@
           Bubblewrap. To fix this vulnerability, update to Bubblewrap-0.4.1 or
           later using the instructions in
           <a href="../../view/systemd/general/bubblewrap.html">Bubblewrap-0.4.1</a>.</li>
-      <li>After release, a serious security flaw was found in the DTLS
-          implementation in GnuTLS. To fix this vulnerability, update to
-          GnuTLS-3.6.13 or later using the instructions in
-          <a href="../../view/systemd/postlfs/gnutls.html">GnuTLS-3.6.13</a>.</li>
+       <li>After release, a serious security flaw was found in the DTLS
+          implementation in GnuTLS. Another security flaw was found in 
+          the way that GnuTLS processed session tickets. A root certificate
+          expired on 5/30/2020 that also broke several websites because GnuTLS
+          didn't have the logic available to switch to an alternate certificate
+          with an identical private key. To fix these vulnerabilities, update 
+          to GnuTLS-3.6.14 or later using the instructions in
+          <a href="../../view/systemd/postlfs/gnutls.html">GnuTLS-3.6.14</a>.</li>
       <li>After release, multiple low-severity security flaws were found in
           Apache HTTPD. To fix these vulnerabilities, update to
           httpd-2.4.43 or later using the instructions in
