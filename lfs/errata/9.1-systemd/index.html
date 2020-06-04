@@ -40,6 +40,25 @@
                prevents "catastrophic backtracking".
                To patch it, upgrade to Python-3.8.3 using the instructions in
                <a href="../../view/systemd/chapter06/python.html">Python-3.8.3</a>.</li>
+           <li>CVE-2020-10543: Buffer overflow caused by a crafted regular
+               expression in Perl. To patch it, upgrade to Perl-5.30.3 using
+               the instructions in
+               <a href="../../view/systemd/chapter06/perl.html">Perl-5.30.3</a>.</li>
+           <li>CVE-2020-10878: Integer overflow via malformed bytecode produced
+               by a crafted regular expression. To patch it, upgrade to
+               Perl-5.30.3 using the instructions in
+               <a href="../../view/systemd/chapter06/perl.html">Perl-5.30.3</a>.</li>
+           <li>CVE-2020-12723: Buffer overflow caused by a crafed regular
+               expression. To patch it, upgrade to Perl-5.30.3 using the
+               instructions in
+               <a href="../../view/systemd/chapter06/perl.html">Perl-5.30.3</a>.</li>
+           <li>CVE-2020-12049: Denial of service problem caused by overloading
+               file descriptors in D-Bus. A local attacker could cause the
+               system D-Bus daemon to run out of file descriptors by repeatedly
+               connecting to the server and sending FDs that would get leaked.
+               To patch this vulnerability, upgrade ot D-Bus-1.12.18 using the
+               instructions in
+               <a href="../../view/systemd/chapter06/dbus.html">D-Bus-1.12.18</a>.</li>
          </ul>
 
        <!--

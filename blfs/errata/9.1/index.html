@@ -233,7 +233,13 @@
           <a href="../../view/svn/basicnet/nghttp2.html">nghttp2-1.41.0</a>
           and <a href="../../view/svn/general/nodejs.html">Node.js-12.18.0</a>,
           respectively.</li>
-
+      <li>After release, a security vulnerability was identified in D-Bus that
+          could allow for a local attacker to run the D-Bus Daemon out of file
+          descriptors by repeatedly connecting to the system-wide D-Bus Daemon
+          and sending file descriptors that would get leaked. To fix this
+          vulnerability, update to dbus-1.12.18 or higher using the
+          instructions in
+          <a href="../../view/svn/general/dbus.html">dbus-1.12.18</a>.</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
