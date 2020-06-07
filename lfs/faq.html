@@ -172,7 +172,8 @@
             installation.</li>
             <li>There are several implementations of symlink style package management:
             <ul>
-              <li>Epkg is available from <a href="http://www.encap.org/epkg/">http://www.encap.org/epkg/</a>.</li>
+<!-- site unavailable
+              <li>Epkg is available from <a href="http://www.encap.org/epkg/">http://www.encap.org/epkg/</a>.</li>-->
               <li>Graft is available from <a href="http://peters.gormand.com.au/Home/tools"  >http://peters.gormand.com.au/Home/tools</a>.</li>
               <li>GNU Stow is available from <a href="http://www.gnu.org/software/stow/">http://www.gnu.org/software/stow/</a>.</li>
               <li>And several more are listed in the Graft documentation at <a
@@ -193,7 +194,7 @@
             It is available from <a
             href="http://asic-linux.com.mx/%7Eizto/checkinstall/">http://asic-linux.com.mx/~izto/checkinstall/</a>.</li>
             <li>pkgutils, used by the CRUX distribution, is available from <a
-            href="http://www.fukt.bsnet.se/%7Eper/pkgutils/">http://www.fukt.bsnet.se/~per/pkgutils/</a>.</li>
+            href="https://crux.nu/Wiki/FaqPkgUtils">https://crux.nu/Wiki/FaqPkgUtils</a>.</li>
             <li>There are some <a href="../hints/downloads/files/">hints</a> available for package managers.</li>
           </ul>
           <p>If you have an addition to the list, please do email its id, URL,
@@ -227,14 +228,13 @@
       <dl>
         <dt id="what-dist">What distribution should I use to start from?</dt>
         <dd>
-          <p>Most relatively recent distributions should be fine. Do not use
-          Fedora Core 4 as its version of GCC does not work with the current
-          stable version of LFS. Make sure you have installed and/or updated
-          the development packages. (Look for ones starting in "gcc", "glibc",
-          or "libstdc++" or ending in "-dev".). If you want to use LFS as your
+          <p>Most relatively recent distributions should be fine.
+          Make sure you have installed and/or updated the development
+          packages. (Look for ones starting in "gcc", "glibc", or "libstdc++"
+          or ending in "-dev" or "-devel".). If you want to use LFS as your
           main system and you wish to install it without first installing a
-          distribution, try <a
-          href="http://www.knopper.net/knoppix/index-en.html">Knoppix</a>.</p>
+          distribution, It is also possible to use a live image on dvd or
+          usb stick. All major distributions provide one.
         </dd>
         <dt id="kernel-modules">How do I compile a kernel or set up modules?</dt>
         <dd>
@@ -287,11 +287,12 @@
         <dd>
           <p>For information about building LFS for a wide array of systems,
           take a look at the <a
-          href="http://trac.clfs.org/wiki/read">Cross-LFS branch</a> of
+          href="https://trac.clfs.org/wiki/read">Cross-LFS branch</a> of
           LFS.</p>
+<!--
           <p>For Alpha systems, Kelledin maintains a list of fixes for building
           on the Alpha platform at <a
-          href="http://skarpsey.dyndns.org/alpha-lfs/alpha.html">http://skarpsey.dyndns.org/alpha-lfs/alpha.html</a>.</p>
+          href="http://skarpsey.dyndns.org/alpha-lfs/alpha.html">http://skarpsey.dyndns.org/alpha-lfs/alpha.html</a>.</p>-->
         </dd>
         <dt id="cross-compile">How do I cross compile LFS?</dt>
         <dd>
@@ -692,7 +693,7 @@
           masking its interrupts before servicing, this would be the suspect if
           the IRQ7's were happening in bursts, or more often than 'several' per
           day. (<a
-          href="http://groups.google.com/groups?q=spurious+interrupt+8259&amp;hl=de&amp;scoring=d&amp;selm=3C174EDD.9090306%40hotmail.com&amp;rnum=10">Source
+          href="https://groups.google.com/groups?q=spurious+interrupt+8259&amp;hl=de&amp;scoring=d&amp;selm=3C174EDD.9090306%40hotmail.com&amp;rnum=10">Source
           and additional information</a>)</p>
           <p>Since the message itself is harmless, it's enough to adjust the
           default loglevel outplut of klogd (the -c opion) in the syslogd
