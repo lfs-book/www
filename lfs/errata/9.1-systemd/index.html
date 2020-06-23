@@ -30,24 +30,24 @@
          <ul>
            <li>CVE-2020-1967: Crash in OpenSSL during or after a TLS 1.3 handshake.
                To patch it, upgrade to OpenSSL-1.1.1g using the instructions in
-               <a href="../../view/systemd/chapter06/openssl.html">OpenSSL-1.1.1g</a>.</li>
+               <a href="../../view/systemd/chapter08/openssl.html">OpenSSL-1.1.1g</a>.</li>
            <li>CVE-2019-18348: potential for malicious HTTP header injection if the
                attacker controls the url parameter followed by an HTTP header.
                To patch it, upgrade to Python-3.8.3 using the instructions in
-               <a href="../../view/systemd/chapter06/python.html">Python-3.8.3</a>.</li>
+               <a href="../../view/systemd/chapter08/python.html">Python-3.8.3</a>.</li>
            <li>CVE-2020-8492: Inefficient regular expression in urllib can be exploited
                to cause a denial of service. The regex was fixed in Python-3.8.3 and
                prevents "catastrophic backtracking".
                To patch it, upgrade to Python-3.8.3 using the instructions in
-               <a href="../../view/systemd/chapter06/python.html">Python-3.8.3</a>.</li>
+               <a href="../../view/systemd/chapter08/python.html">Python-3.8.3</a>.</li>
            <li>CVE-2020-10543: Buffer overflow caused by a crafted regular
                expression in Perl. To patch it, upgrade to Perl-5.30.3 using
                the instructions in
-               <a href="../../view/systemd/chapter06/perl.html">Perl-5.30.3</a>.</li>
+               <a href="../../view/systemd/chapter08/perl.html">Perl-5.30.3</a>.</li>
            <li>CVE-2020-10878: Integer overflow via malformed bytecode produced
                by a crafted regular expression. To patch it, upgrade to
                Perl-5.30.3 using the instructions in
-               <a href="../../view/systemd/chapter06/perl.html">Perl-5.30.3</a>.</li>
+               <a href="../../view/systemd/chapter08/perl.html">Perl-5.30.3</a>.</li>
            <li>CVE-2020-12723: Buffer overflow caused by a crafed regular
                expression. To patch it, upgrade to Perl-5.30.3 using the
                instructions in
@@ -58,7 +58,7 @@
                connecting to the server and sending FDs that would get leaked.
                To patch this vulnerability, upgrade ot D-Bus-1.12.18 using the
                instructions in
-               <a href="../../view/systemd/chapter06/dbus.html">D-Bus-1.12.18</a>.</li>
+               <a href="../../view/systemd/chapter08/dbus.html">D-Bus-1.12.18</a>.</li>
          </ul>
 
        <!--
@@ -73,6 +73,7 @@
            <li>The man pages aren't installed with systemd like they are
                supposed to be. To install the manual pages, add
                -Dman=true to the meson line.</li>
+           <li>The correct number of tests for gmp-6.2.0 is 197, not 190.</li>
          </ul>
 
 <!--#include virtual="/common/footer.html" -->
