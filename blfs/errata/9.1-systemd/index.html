@@ -297,6 +297,15 @@
           JavaScript interpreter when debugging scripts. To fix this issue,
           update to js68-68.11.0 or higher using the instructions in
           <a href="../../view/systemd/general/js68.html">js68-68.11.0</a>.</li>
+      <li>After release, a security vulnerability was identified in libX11.
+          This vulnerability was assigned CVE-2020-14344, and is identified
+          as a heap corruption vulnerability. To fix this issue, update to
+          libX11-1.6.11 or higher using the instructions for libX11 in the
+          <a href="../../view/systemd/x/x7lib.html">Xorg Libraries</a> page.</li>
+      <li>After release, a security vulnerability was identified in
+          xorg-server that leads to uninitialized memory disclosure. To
+          fix this vulnerability, apply the following sed to your build:
+          "sed -i 's/malloc(pScreen/calloc(1, pScreen/' dix/pixmap.c".</li>
      </ul>
 
 
