@@ -305,6 +305,11 @@
           xorg-server that leads to uninitialized memory disclosure. To
           fix this vulnerability, apply the following sed to your build:
           "sed -i 's/malloc(pScreen/calloc(1, pScreen/' dix/pixmap.c".</li>
+      <li>After release, two security vulnerabilities were discovered in the
+          PostgreSQL database server. These two vulnerabilities have to do with
+          uncontrolled search path elements. To fix these vulnerabilities,
+          update to PostgreSQL-12.4 or later using the instructions in
+          <a href="../../view/svn/server/postgresql.html">PostgreSQL-12.4</a>.</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
