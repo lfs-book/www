@@ -32,15 +32,23 @@
      </p>
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
+     <!--
      <ul>
        <li>There are no current known security vulnerabilities for blfs-10.0-systemd.</li>
      </ul>
-<!--
+     -->
+     
      <ul>
-      <li>After release, a security vulnerability was discovered in Avahi-0.7.
-      To fix this, update to avahi-0.8 using the instructions in
-      <a href="../../view/systemd/basicnet/avahi.html">avahi-0.8</a>.</li>
+       <li>After release, a security vulnerability was identified in libX11
+           that can lead to a double free and integer overflow in the way
+           that libX11 handles locales. To fix this vulnerability, update to
+           libX11-1.6.12 using the instructions in
+           <a href="../../view/systemd/x/x7lib.html">Xorg Libraries</a>.</li>
+       <li>After release, several security vulnerabilities were identified in
+           xorg-server that can lead to privilege escalation (to root) due to
+           input validation failures. To fix these vulnerabilities, update to
+           Xorg-Server-1.20.9 using the instructions in
+           <a href="../../view/systemd/x/xorg-server.html">Xorg-Server-1.20.9</a>.</li>
      </ul>
--->
 
 <!--#include virtual="/common/footer.html" -->
