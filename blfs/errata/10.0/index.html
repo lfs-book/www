@@ -61,6 +61,22 @@
            remotely and without authentication. To fix these vulnerabilities, 
            update to BIND-9.16.6 or later using the instructions in
            <a href="../../view/svn/server/bind.html">BIND-9.16.6</a>.</li>
+       <li>After release, an integer overflow vulnerability was discovered in
+           Brotli. This hapens when an input chunk is larger than 2GIB in size.
+           To fix this vulnerability, update to Brotli-v1.0.9 or later using
+           the instructions in
+           <a href="../../view/svn/general/brotli.html">brotli-1.0.9</a>.</li>
+       <li>After release, a critical security bug was dicovered in GnuPG
+           2.2.21 as shipped in BLFS 10.0. This vulnerability will trigger
+           whenever a key with preference lists for AEAD algoritms is loaded.
+           To fix this vulnerability, update to GnuPG-2.2.23 or later using
+           the instructions in
+           <a href="../../view/svn/postlfs/gnupg.html">GnuPG-2.2.23</a>.</li>
+       <li>After release, an out of bounds memory write was discovered in
+           Cryptsetup. Note that this only affects 32-bit builds of cryptsetup.
+           To fix this vulnerability, update to cryptsetup-2.3.4 or later using
+           the instructions in
+           <a href="../../view/svn/postlfs/cryptsetup.html">cryptsetup-2.3.4</a></li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
