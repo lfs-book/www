@@ -18,6 +18,9 @@
        <li>In the Perl Module Dependencies, the md5sum for
        IPC-System-Simple-1.30.tar.gz is incorrect, it should be
        e68341fd958fd013b3521d909904f675.</li>
+       <li>In firefox, the dependency on clang from LLVM was missed.
+       The bindgen processing for rust to C++ needs this even if gcc
+       and g++ are used for the non-rust compilation.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
