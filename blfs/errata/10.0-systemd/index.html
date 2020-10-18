@@ -23,6 +23,13 @@
        and g++ are used for the non-rust compilation.</li>
        <li>In xinit, the sed in the note should have a -i argument 
        instead of the -e argument.</li>
+       <li>In evince, DVI support was inadvertently broken. To enable DVI
+       support, add the following lines prior to the meson line:
+       CFLAGS="$CFLAGS -I/opt/texlive/2020/include" \
+       CXXFLAGS="$CXXFLAGS -I/opt/texlive/2020/include" \
+       LDFLAGS="$LDFLAGS -L/opt/texlive/2020/lib" and then proceed
+       with the rest of the procedure as documented.</li>
+
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
