@@ -212,6 +212,12 @@
            <a href="http://www.linuxfromscratch.org/patches/blfs/svn/libexif-0.6.22-security_fixes-1.patch">
            libexif-0.6.22-security_fixes-1.patch</a> to your build and rebuild
            libexif.</li>
+       <li>After release, a vulnerability in mutt's error handling when initially
+           connecting to an IMAP server was discovered, which could result in an
+           attempt to authenticate without TLS. If using mutt to connect to an
+           IMAP server, fix this by upgrading to mutt-2.0.2 or later using the
+           instructions in
+           <a href="../../view/svn/basicnet/mutt.html">mutt-2.0.2</a>.</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
