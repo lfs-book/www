@@ -93,9 +93,9 @@
            <a href="../../view/systemd/postlfs/cryptsetup.html">cryptsetup-2.3.4</a></li>
        <li>After release, many security vulnerabilities were discovered in
            Qt5 and QtWebEngine. To fix these vulnerabilities, it's recommended
-           that you update to Qt-5.15.1 and QtWebEngine-5.15.1 using the instructions in
-           <a href="../../view/systemd/x/qt5.html">Qt-5.15.1</a> and
-           <a href="../../view/systemd/x/qtwebengine.html">QtWebEngine-5.15.1</a>
+           that you update to Qt-5.15.2 and QtWebEngine-5.15.2 using the instructions in
+           <a href="../../view/systemd/x/qt5.html">Qt-5.15.2</a> and
+           <a href="../../view/systemd/x/qtwebengine.html">QtWebEngine-5.15.2</a>
            as soon as possible.</li>
        <li>After release, a critical security vulnerability in Samba was
            discovered, dubbed "NetLogon". This vulnerability classifies as an
@@ -198,6 +198,22 @@
            client configuration. To fix this vulnerability, update to
            krb5-5.18.3 or later using the instructions in
            <a href="../../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5-1.18.3</a>.</li>
+       <li>After release, several vulnerabilities were discovered in WebKitGTK+.
+           These vulnerabilities include type confusion issues, use-after-free
+           issues, cross-site scripting issues, and arbitrary code execution.
+           To fix these vulnerabilities, update to
+           WebKitGTK+-2.30.3 or later using the instructions in
+           <a href="../../view/systemd/x/webkitgtk.html">WebKitGTK+-2.30.3</a>.</li>
+       <li>After release, several vulnerabilities were discovered in libxml2.
+           To fix these, apply the patch from
+           <a href="http://www.linuxfromscratch.org/patches/blfs/svn/libxml2-2.9.10-security_fixes-1.patch">
+           libxml2-2.9.10-security_fixes-1.patch</a> to your build and rebuild
+           libxml2.</li>
+       <li>After release, several vulnerabilities were discovered in libexif.
+           To fix these vulnerabilities, apply the patch from
+           <a href="http://www.linuxfromscratch.org/patches/blfs/svn/libexif-0.6.22-security_fixes-1.patch">
+           libexif-0.6.22-security_fixes-1.patch</a> to your build and rebuild
+           libexif.</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
