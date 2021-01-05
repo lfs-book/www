@@ -102,10 +102,10 @@
            have it installed and configured. Use the instructions in
            <a href="../../view/svn/basicnet/samba.html">Samba-4.13.1</a>.</li>
        <li>After release, multiple security vulnerabilities were discovered in
-           Node.js. Two of these are marked as High, and another as Medium.
-           It's suggested that you update to Node.js-14.15.1 or later using the
+           Node.js. Four of these are marked as High, and another as Medium.
+           It's suggested that you update to Node.js-14.15.4 or later using the
            instructions in
-           <a href="../../view/svn/general/nodejs.html">Node.js-14.15.1</a>.</li>
+           <a href="../../view/svn/general/nodejs.html">Node.js-14.15.4</a>.</li>
        <li>After release, several vulnerabilities were discovered in
            Thunderbird, one of which is rated high. In addition, a critical
            0day security vulnerability was discovered in Thunderbird that needs
@@ -248,6 +248,12 @@
            To fix these two vulnerabilities, update to Dovecot-2.3.13 or later
            using the instructions in
            <a href="../../view/svn/server/dovecot.html">Dovecot-2.3.13</a>.</li>
+       <li>After release, a use-after-free security vulnerability was
+           discovered in Poppler as shipped with BLFS 10.0. This vulnerability
+           can lead to arbitrary code execution via a malicious PDF file. To fix
+           this vulnerability, update to poppler-21.01.0 or higher using the
+           instructions in
+           <a href="../../view/svn/general/poppler.html">poppler-21.01.0</a>.</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
