@@ -281,6 +281,12 @@
            To fix these vulnerabilities, update to vorbis-tools-1.4.2
            or later using the instructions in
            <a href="../../view/systemd/multimedia/vorbistools.html">vorbis-tools-1.4.2</a>.</li>
+       <li>After release, a medium-severity security vulnerability was discovered
+           in gptfdisk as shipped with BLFS 10.0. In rare cases, an improperly
+           formatted MBR partition table could lead to arbitrary code execution
+           when running gdisk or cgdisk. To fix this vulnerability, update to
+           gptfdisk-1.0.6 or later using the instructions in
+           <a href="../../view/systemd/postlfs/gptfdisk.html">gptfdisk-1.0.6</a>.</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
