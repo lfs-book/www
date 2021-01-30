@@ -16,7 +16,7 @@
      here.</p>
 
      <!-- to link to this from the end of the Errata, add
-+     <p><a href="../../advisories/index.html#BLFS10.0">Advisories for BLFS-10.0</a></p>
++     <p><a href="../advisories/index.html#BLFS10.0">Advisories for BLFS-10.0</a></p>
      -->
      <a id="BLFS10.0">
      <h2>BLFS-10.0 was released on 2020/09/01</h2></a>
@@ -25,7 +25,7 @@
       books, and add a header for the release, then point to the
       development books for new advisories. -->
 
-     <!-- Editors: Do not remove this entry, just comment it out. -->
+     <!-- Editors: Commented entry to copy, and reminder about patches -->
 <!--
      <h3>SA yyyymmNN Package</h3>
      <p>Explain the problem, perhaps offering a workaround, and linking to
@@ -35,9 +35,14 @@
      .</p>
      <p>To fix this, update to at least Package-VERSION using the instructions
      from the development book for
-     <a href="../../view/svn/path/something.html">Package (sysv)</a> or
-     <a href="../../view/systemd/path/something.html">Package (systemd)</a>.</p>
+     <a href="../view/svn/path/something.html">Package (sysv)</a> or
+     <a href="../view/systemd/path/something.html">Package (systemd)</a>.</p>
 -->
+
+     <!-- where a fix used a patch, maybe link to it. e.g.
+     <a href="http://www.linuxfromscratch.org/patches/blfs/svn/libxml2-2.9.10-security_fixes-1.patch">
+     for clarity.
+     -->
 
      <h3>SA 20200901 LibX11</h3>
      <p>In libX11 before version 1.6.12 an integer overflow and double-free
@@ -46,8 +51,8 @@
      .</p>
      <p>To fix this, update to at least libX11-1.6.12 using the instructions
      from the development book for
-     <a href="../../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a> or
-     <a href="../../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
+     <a href="../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a> or
+     <a href="../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
 
      <h3>BLFS SA 20200902 Xorg-Server</h3>
      <p>In Xorg-Server before version 1.20.9 several input validation failures
@@ -61,8 +66,8 @@
      .</p>
      <p>To fix this, update to at least Xorg-Server-1.20.9 using the instructions
      from the development book for
-     <a href="../../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
-     <a href="../../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+     <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+     <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
 
      <h3>LFS SA 2020-09-03 GnuTLS</h3>
      <p>A null-pointer dereference causing a remotely-triggerd crash in the
@@ -73,8 +78,8 @@
      .</p>
      <p>To fix this, update to at least Gnu-TLS-3.6.15 using the instructions
      from the development book for
-     <a href="../../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
-     <a href="../../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+     <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+     <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
      <h3>SA 2020-09-04 CIFS-utils</h3>
      <p>The mount.cifs program was invoking a shell when requesting the Samba
@@ -88,8 +93,8 @@
      .</p>
      <p>To fix this, update to cifs-utils-6.11 or later using the instructions
      from the development book for
-     <a href="../../view/svn/basicnet/cifsutils.html">CIFS-utils (sysv)</a> or
-     <a href="../../view/systemd/basicnet/cifsutils.html">CIFS-utils (systemd)</a>.</p>
+     <a href="../view/svn/basicnet/cifsutils.html">CIFS-utils (sysv)</a> or
+     <a href="../view/systemd/basicnet/cifsutils.html">CIFS-utils (systemd)</a>.</p>
 
      <h3>BLFS SA 2020-09-05 BIND</h3>
      <p>A variety of vulnerabilities were found in BIND. Most could cause a crash
@@ -106,8 +111,8 @@
      .</p>
      <p>To fix this, update to BIND-9.6.16 or later using the instructions
      from the development book for
-     <a href="../../view/svn/server/bind.html">BIND (sysv)</a> or
-     <a href="../../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+     <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+     <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
 
      <h3>SA 2020-09-06 Brotli</h3>
      <p>An integer oveflow in brotli before version 1.0.9 can lead to a crash.
@@ -115,8 +120,8 @@
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8927">CVE-2020-8927</a>.</p>
      <p>To fix this, update to brotli-1.0.9 or later using the instructions
      from the development book for
-     <a href="../../view/svn/general/brotli.html">Brotli (sysv)</a> or
-     <a href="../../view/systemd/general/brotli.html">Brotli (systemd)</a>.</p>
+     <a href="../view/svn/general/brotli.html">Brotli (sysv)</a> or
+     <a href="../view/systemd/general/brotli.html">Brotli (systemd)</a>.</p>
 
      <h3>20200907 GnuPG</h3>
      <p>A critical security bug was dicovered in GnuPG 2.2.21 and 2.2.22 as
@@ -126,8 +131,8 @@
      has been assigned.</p>
      <p>To fix this, update to GnuPG-2.2.23 or later using the instructions
      from the development book for
-     <a href="../../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
-     <a href="../../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+     <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+     <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
 
      <h3>SA 20200908 Cryptsetup</h3>
      <p>An out of bounds memory write was discovered in Cryptsetup. Note that
@@ -137,8 +142,8 @@
      has been assigned.</p>
      <p>To fix this, update to at least cryptsetup-2.3.4 using the instructions
      from the development book for
-     <a href="../../view/svn/postlfs/cryptsetup.html">Cryptsetup (sysv)</a> or
-     <a href="../../view/systemd/postlfs/cryptsetup.html">Cryptsetup (systemd)</a>.</p>
+     <a href="../view/svn/postlfs/cryptsetup.html">Cryptsetup (sysv)</a> or
+     <a href="../view/systemd/postlfs/cryptsetup.html">Cryptsetup (systemd)</a>.</p>
 
      <h3>BLFS SA 2020909 Qt5 and QtWebEngine</h3>
      <p>Many security vulnerabilities were discovered in Qt5-5.15.0 and QtWebEngine.
@@ -148,10 +153,10 @@
      .</p>
      <p>To fix this, update to at least Qt-5.15.1 and QtWebEngine-5.15.1 using the
      instructions from the development book for
-     <a href="../../view/svn/x/qt5.html">Qt5 (sysv)</a> and
-     <a href="../../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
-     <a href="../../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
-     <a href="../../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+     <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> and
+     <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+     <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
+     <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
      <h3>LFS SA 20200910 Node.js</h3>
      <p>Multiple security vulnerabilities were discovered in Node.js, including two
@@ -160,8 +165,8 @@
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8252">CVE-2020-8252</a>.</p>
      <p>To fix this, update to Node.js-12.18.4 or later using the instructions
      from the development book for
-     <a href="../../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-     <a href="../../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
 
      <h3>BLFS SA 2020-0911 Samba</h3>
      <p>A critical security vulnerability in Samba was discovered, dubbed
@@ -171,8 +176,8 @@
      has been assigned.</p>
      <p>To fix this, update to Samba-4.12.7 or later using the instructions
      from the development book for
-     <a href="../../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-     <a href="../../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+     <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+     <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
      <h3>SA 2020-0912 Firefox</h3>
      <p>Four vulnerabilities with CVE numbers were fixed in firefox-78.3.0
@@ -180,8 +185,8 @@
      <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-43/">mfsa2020-43</a>.</p>
      <p>To fix these, update to firefox-78.3.0 or later using the instructions
      from the development book for
-     <a href="../../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-     <a href="../../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
      <h3>2020-0913 Seamonkey</h3>
      <p>Security fixes from firefox-60.6 up to firefox ESR-78.1 were included in
@@ -189,8 +194,8 @@
      <a href="https://www.seamonkey-project.org/releases/seamonkey2.53.4/">The Release Notes</a>.</p>
      <p>To fix these, update to Seamonkey-2.53.4 or later using the instructions
      from the development book for
-     <a href="../../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-     <a href="../../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+     <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+     <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
      <h3>2020-0914 Thunderbird</h3>
      <p>Five vulnerabilities with CVE numbers were fixed in thunderbird-78.3.0
@@ -200,8 +205,8 @@
      To fix the vulnerabilities and the crashes update to thunderbird-78.3.1 or
      later using the instructions
      from the development book for
-     <a href="../../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-     <a href="../../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
      <h3>2020-0915 Wireshark</h3>
      <p>Five Security Advisories (wnpa-sec-2020-11,12,13) were fixed in
@@ -209,67 +214,67 @@
      <a href="https://www.wireshark.org/security/">Wireshark Security</a>.</p>
      <p>To fix these, update to wireshark-3.2.7 or later using the instructions
      from the development book for
-     <a href="../../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-     <a href="../../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+     <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
 <!--
-           <a href="../../view/svn/general/nodejs.html">Node.js-14.15.4</a>.</li>
+           <a href="../view/svn/general/nodejs.html">Node.js-14.15.4</a>.</li>
        <li>After release, a critical security vulnerability in Samba was
            discovered, dubbed "NetLogon". This vulnerability classifies as an
            authentication bypass, and is rated a 10.0 on the CVSSv3 scale.
            It's suggested that you upgrade to Samba-4.13.1 immediately if you
            have it installed and configured. Use the instructions in
-           <a href="../../view/svn/basicnet/samba.html">Samba-4.13.1</a>.</li>
+           <a href="../view/svn/basicnet/samba.html">Samba-4.13.1</a>.</li>
        <li>After release, several vulnerabilities were discovered in
            Thunderbird, one of which is rated high. In addition, a critical
            0day security vulnerability was discovered in Thunderbird that needs
            to be patched immediately. It is suggested to update
            to thunderbird-78.6.1 or later using the instructions in
-           <a href="../../view/svn/xsoft/thunderbird.html">thunderbird-78.6.1</a></li>
+           <a href="../view/svn/xsoft/thunderbird.html">thunderbird-78.6.1</a></li>
        <li>After release, several vulnerabilities in Wireshark that can cause
            the application to crash were discovered. These can be remotely
            exploited to cause Wireshark to crash. To fix these vulnerabilities,
            update to Wireshark-3.4.2 or higher using the instructions in
-           <a href="../../view/svn/basicnet/wireshark.html">Wireshark-3.4.2</a>.</li>
+           <a href="../view/svn/basicnet/wireshark.html">Wireshark-3.4.2</a>.</li>
        <li>After release, several dozen vulnerabilities were discovered in
            Seamonkey. To fix these vulnerabilities, update to Seamonkey-2.53.6
            or higher. In addition, an urgent 0day vulnerability was discovered
            in the JavaScript engine that is used in Seamonkey. Another urgent
            0day was discovered in the way Seamonkey handles SMTP requests.
            Update to Seamonkey-2.53.6 using the instructions in
-           <a href="../../view/svn/xsoft/seamonkey.html">Seamonkey-2.53.6</a>.</li>
+           <a href="../view/svn/xsoft/seamonkey.html">Seamonkey-2.53.6</a>.</li>
        <li>After release, several vulnerabilities were discovered in PHP. To fix
            these vulnerabilities, update to PHP-8.0.1 or later using the
            instructions in
-           <a href="../../view/svn/general/php.html">PHP-8.0.1</a>.</li>
+           <a href="../view/svn/general/php.html">PHP-8.0.1</a>.</li>
        <li>After release, a high severity security vulnerability was discovered
            in Ruby. To fix this vulnerability, update to ruby-2.7.2 or later
            using the instructions in
-           <a href="../../view/svn/general/ruby.html">Ruby-2.7.2</a>.</li>
+           <a href="../view/svn/general/ruby.html">Ruby-2.7.2</a>.</li>
        <li>After release, a security vulnerability was discovered in the way
            that GLib handles URIs. To fix this vulnerability, update to
            GLib-2.66.1 or later using the instructions in
-           <a href="../../view/svn/general/glib2.html">GLib-2.66.1</a>.</li>
+           <a href="../view/svn/general/glib2.html">GLib-2.66.1</a>.</li>
        <li>After release, a security vulnerability was discovered in NSS.
            This was fixed by tighetning CCS handling when the client doesn't
            indicate middlebox compatibilty. To fix this vulnerability, update to
            NSS-3.58 or higher using the instructions in
-           <a href="../../view/svn/postlfs/nss.html">NSS-3.58</a>.</li>
+           <a href="../view/svn/postlfs/nss.html">NSS-3.58</a>.</li>
        <li>After release, a minor security issue was addressed in stunnel.
            This issue had to do with the 'redirect' option. To fix this issue,
            update to stunnel-5.57 or later using the instructions in
-           <a href="../../view/svn/postlfs/stunnel.html">stunnel-5.57</a>.</li>
+           <a href="../view/svn/postlfs/stunnel.html">stunnel-5.57</a>.</li>
        <li>After release, two security issues were discovered in lxml that allowed
            it to process JavaScript code. This could potentially lead to
            arbitrary code execution. To fix this vulnerability, update to
            lxml-4.6.2 or later using the instructions in
-           <a href="../../view/svn/general/python-modules.html#lxml">lxml-4.6.2</a>.</li>
+           <a href="../view/svn/general/python-modules.html#lxml">lxml-4.6.2</a>.</li>
        <li>After release, a security vulnerability was discovered in freetype
            (all versions since 2.6), a buffer overflow when processing TTF files
            which include PNG glyphs - this is being actively used in the wild.
            To fix this vulnerability, update to freetype-2.10.4 or later using
            the instructions in
-           <a href="../../view/svn/general/freetype2.html">freetype-2.10.4</a>.</li>
+           <a href="../view/svn/general/freetype2.html">freetype-2.10.4</a>.</li>
        <li>After release, several vulnerabilities were discovered in the Gstreamer
            Multimedia Stack. To fix these vulnerabilities, update to gstreamer
            and gst-plugins-* 1.16.3 using the same instructions in the book, but
@@ -280,48 +285,48 @@
            in libass. This vulnerability has been assigned CVE-2020-26682. To
            fix this vulnerability, update to libass-0.15.0 using the
            instructions in
-           <a href="../../view/svn/multimedia/libass.html">libass-0.15.0</a>.</li>
+           <a href="../view/svn/multimedia/libass.html">libass-0.15.0</a>.</li>
        <li>After release, several security vulnerabilities were discovered in
            the MariaDB database server. These vulnerabilities could lead to
            information disclosure or a repeatable server crash. To fix these
            vulnerabilities, update to MariaDB-10.5.7 or later using the
            instructions in
-           <a href="../../view/svn/server/mariadb.html">MariaDB-10.5.7</a>.</li>
+           <a href="../view/svn/server/mariadb.html">MariaDB-10.5.7</a>.</li>
        <li>After release, several security vulnerabilities were identified in  # out of order?  
            xorg-server that can lead to privilege escalation (to root) due to
            input validation failures. To fix these vulnerabilities, update to
            Xorg-Server-1.20.10 using the instructions in
-           <a href="../../view/svn/x/xorg-server.html">Xorg-Server-1.20.10</a>.</li>
+           <a href="../view/svn/x/xorg-server.html">Xorg-Server-1.20.10</a>.</li>
        <li>After release, several security vulnerabilities were disclosed in
            the Mozilla Firefox web browser. Several of these are rated as High
            or Critical. One of them was an urgent 0day that needed to be dealt
            with urgently (fixed in 78.4.1). Update to Firefox-78.7.0 or later using the
            instructions in
-           <a href="../../view/svn/xsoft/firefox.html">Firefox-78.7.0</a>.</li>
+           <a href="../view/svn/xsoft/firefox.html">Firefox-78.7.0</a>.</li>
        <li>After release, three high severity vulnerabilities were disclosed in
            the PostgreSQL databse server. These vulnerabilities could lead to
            arbitrary execution of SQL commands as the superuser or
            information disclosure. To fix these vulnerabilities, update to
            PostgreSQL-13.1 or later using the instructions in
-           <a href="../../view/svn/server/postgresql.html">PostgreSQL-13.1</a>.</li>
+           <a href="../view/svn/server/postgresql.html">PostgreSQL-13.1</a>.</li>
        <li>After release, four high severity security vulnerabilities were
            disclosed in the version of c-ares shipped with BLFS 10.0. To fix
            these vulnerabilities, update to c-ares-1.17.1 or higher using the
            instructions in
-           <a href="../../view/svn/basicnet/c-ares.html">c-ares-1.17.1</a>.
+           <a href="../view/svn/basicnet/c-ares.html">c-ares-1.17.1</a>.
            You should also update Node.js to 14.15.1 after updating c-ares if
            you have it installed.</li>
        <li>After release, a denial of service vulnerability was discovered in
            MIT Kerberos V5. This only affects the server configuration, not the
            client configuration. To fix this vulnerability, update to
            krb5-5.18.3 or later using the instructions in
-           <a href="../../view/svn/postlfs/mitkrb.html">MIT Kerberos V5-1.18.3</a>.</li>
+           <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5-1.18.3</a>.</li>
        <li>After release, several vulnerabilities were discovered in WebKitGTK+.
            These vulnerabilities include type confusion issues, use-after-free
            issues, cross-site scripting issues, and arbitrary code execution.
            To fix these vulnerabilities, update to
            WebKitGTK+-2.30.3 or later using the instructions in
-           <a href="../../view/svn/x/webkitgtk.html">WebKitGTK+-2.30.3</a>.</li>
+           <a href="../view/svn/x/webkitgtk.html">WebKitGTK+-2.30.3</a>.</li>
        <li>After release, several vulnerabilities were discovered in libxml2.
            To fix these, apply the patch from
            <a href="http://www.linuxfromscratch.org/patches/blfs/svn/libxml2-2.9.10-security_fixes-1.patch">
@@ -337,59 +342,59 @@
            The fix is in the newer version
            unbound-1.13.0 (and higher). You can install it by following
            the instructions for
-           <a href="../../view/svn/server/unbound.html">unbound</a> in
+           <a href="../view/svn/server/unbound.html">unbound</a> in
            the development book.</li>
        <li>After release, three security vulnerabilities were discovered in
            cURL as shipped in BLFS. To fix these vulnerabilities, update to
            cURL-7.74.0 or later using the instructions in
-           <a href="../../view/svn/basicnet/curl.html">curl-7.74.0</a>.</li>
+           <a href="../view/svn/basicnet/curl.html">curl-7.74.0</a>.</li>
        <li>After release, a security vulnerability in the PNG loader was
            discovered in gdk-pixbuf. To fix this vulnerability, update to
            gdk-pixbuf-2.42.2 or higher using the instructions in
-           <a href="../../view/svn/x/gdk-pixbuf.html">gdk-pixbuf-2.42.2</a>.</li>
+           <a href="../view/svn/x/gdk-pixbuf.html">gdk-pixbuf-2.42.2</a>.</li>
        <li>After release, three security vulnerabilities in the RPC subsystem
            were identified in p11-kit as shipped in BLFS 10.0. To fix these
            vulnerabilities, update to p11-kit-0.23.22 or later using the
            instructions in
-           <a href="../../view/svn/postlfs/p11-kit.html">p11-kit-0.23.22</a>.</li>
+           <a href="../view/svn/postlfs/p11-kit.html">p11-kit-0.23.22</a>.</li>
        <li>After release, over a dozen security vulnerabilities were discovered
            in OpenJPEG as shipped in BLFS 10.0. Several of these vulnerabilities
            are rated as High. To fix these vulnerabilities, update to
            OpenJPEG-2.4.0 or later using the instructions in
-           <a href="../../view/svn/general/openjpeg2.html">OpenJPEG-2.4.0</a>.</li>
+           <a href="../view/svn/general/openjpeg2.html">OpenJPEG-2.4.0</a>.</li>
        <li>After release, several security vulnerabilities were discovered in
            libpcap as shipped with BLFS 10.0. To fix these vulnerabilities,
            update to libpcap-1.10.0 or later using the instructions in
-           <a href="../../view/svn/basicnet/libpcap.html">libpcap-1.10.0</a>.</li>
+           <a href="../view/svn/basicnet/libpcap.html">libpcap-1.10.0</a>.</li>
        <li>After release, two security vulnerabilities were discovered in the
            Dovecot mail server as shipped with BLFS 10.0. One of these
            vulnerabilities may allow a user to read another users' mail or the
            server's filesystem depending on the configuration on the server.
            To fix these two vulnerabilities, update to Dovecot-2.3.13 or later
            using the instructions in
-           <a href="../../view/svn/server/dovecot.html">Dovecot-2.3.13</a>.</li>
+           <a href="../view/svn/server/dovecot.html">Dovecot-2.3.13</a>.</li>
        <li>After release, a use-after-free security vulnerability was
            discovered in Poppler as shipped with BLFS 10.0. This vulnerability
            can lead to arbitrary code execution via a malicious PDF file. To fix
            this vulnerability, update to poppler-21.01.0 or higher using the
            instructions in
-           <a href="../../view/svn/general/poppler.html">poppler-21.01.0</a>.</li>
+           <a href="../view/svn/general/poppler.html">poppler-21.01.0</a>.</li>
        <li>After release, multiple security vulnerabilities were discovered in
            Sudo before 1.9.5p1. To fix these vulnerabilities, update to
            Sudo-1.9.5p1 or later using the instructions in
-           <a href="../../view/svn/postlfs/sudo.html">sudo-1.9.5p1</a>.</li>
+           <a href="../view/svn/postlfs/sudo.html">sudo-1.9.5p1</a>.</li>
        <li>Various vulnerabilities in ImageMagick were found, including various
            things leading to a Denial of Service (crash), and also the
            possibility to inject additional shell commands when accessing a
            password-protected PDF file. To fix these vulnerabilities update to
            ImageMagick-7.0.10-57 or higher using the instructions in
-           <a href="../../view/svn/general/imagemagick.html">ImageMagick-7.0.10-57</a>.</li>
+           <a href="../view/svn/general/imagemagick.html">ImageMagick-7.0.10-57</a>.</li>
        <li>After release, several vulnerabilities were discovered in vorbis-tools
            as shipped in BLFS 10.0. These vulnerabilities range from memory leaks
            to potentially arbitrary code execution via malicious OGG files.
            To fix these vulnerabilities, update to vorbis-tools-1.4.2
            or later using the instructions in
-           <a href="../../view/svn/multimedia/vorbistools.html">vorbis-tools-1.4.2</a>.</li>
+           <a href="../view/svn/multimedia/vorbistools.html">vorbis-tools-1.4.2</a>.</li>
      </ul>-->
 
      <a id="BLFS10.1">
