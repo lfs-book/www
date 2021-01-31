@@ -1,0 +1,266 @@
+<!--#set var="pageTitle" value="BLFS Errata" -->
+<!--#include virtual="/blfs/header.html" -->
+<!--#include virtual="/blfs/menu.html" -->
+    <div class="main">
+
+     <h1>BLFS Security Advisories from September 2020 onwards</h1>
+
+     <p>BLFS used to keep details of Security Vulnerabilities in the Errata,
+     mostly updating them to point to the latest version in the development book
+     and updating the brief text if a subsequent vulnerability was reported.</p>
+
+     <p>Now they are being shown individually with more details. Please note
+     that vulnerabilities to package versions before those in the our release
+     are not noted, so if you are running a version of BLFS before 10.0 you
+     should check the Errata for past releases as well as monitoring the items
+     here.</p>
+
+     <p><i>This page is ordered like the Changelog of the book, with newest
+     items first.</i></p>
+
+     <!-- Editors: Commented entry to copy, and reminder about patches -->
+<!--
+     <h3>SA yyyymmNN Package</h3>
+     <p>Explain the problem, perhaps offering a workaround, and linking to
+     relevant CVEs or package advisory notes.
+     These have been assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12345">CVE-2020-12345</a>
+     .</p>
+     <p>To fix this, update to at least Package-VERSION using the instructions
+     from the development book for
+     <a href="../view/svn/path/something.html">Package (sysv)</a> or
+     <a href="../view/systemd/path/something.html">Package (systemd)</a>.</p>
+-->
+
+     <!-- where a fix used a patch, maybe link to it. e.g.
+     <a href="http://www.linuxfromscratch.org/patches/blfs/svn/libxml2-2.9.10-security_fixes-1.patch">
+     for clarity.
+     -->
+     <!-- BLFS10.1 will come here -->
+
+     <a id="BLFS10.0"> <!-- maybe doesn't need to be linked -->
+     <h2>BLFS-10.0 was released on 2020/09/01</h2></a>
+
+     <p>For some of these, the effective dates may be slightly adrift.</p>
+
+     <a id="10.0-999">
+     <h3>10.0 999 (LFS)</h3>
+     <p>Effective 2020-12-15</p>
+     <p><b>This is an LFS advisory, to examine the possibility of using this
+     page to cover both LFS and BLFS.</b> It is experimental.</p>
+     <p>The EDIPARTYNAME NULL pointer de-reference allows an attacker who can
+     trick a client or server into checking a malicious X509 certificate could
+     trigger a crash. This is rated High.
+     relevant CVEs or package advisory notes.It has been assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1971">CVE-2020-1971</a>
+     with fuller details at
+     <a href="https://www.openssl.org/news/secadv/20201208.txt">OpenSSL</a>.</p>
+     <p>To fix this, update to at least OpenSSL-1.1.1i using the instructions
+     from the LFS development book for
+     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
+     <p>- * - * -<p> <!-- separate the experimental item -->
+
+     <a id="10.0-015">
+     <h3>10.0 015 Wireshark</h3>
+     <p>Effective 2020-09-23</p>
+     <p>Five Security Advisories (wnpa-sec-2020-11,12,13) were fixed in
+     Wireshark-3.2.7, detailed at
+     <a href="https://www.wireshark.org/security/">Wireshark Security</a>.</p>
+     <p>To fix these, update to wireshark-3.2.7 or later using the instructions
+     from the development book for
+     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+     <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+     <a id="10.0-014">
+     <h3>10.0 014 Thunderbird</h3>
+     <p>Effective 2020-09-25, revised 2020-09-26</p>
+     <p>Five vulnerabilities with CVE numbers were fixed in thunderbird-78.3.0
+     including a memory safety bug rated as High. Details are at
+     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-44/">mfsa2020-44</a>.</p>
+     <p>But users of that version of thuinderbird reported numerous crashes.
+     To fix the vulnerabilities and the crashes update to thunderbird-78.3.1 or
+     later using the instructions
+     from the development book for
+     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+     <a id="10.0-013">
+     <h3>10.0 013 Seamonkey</h3>
+     <p>Effective 2020-09-23</p>
+     <p>Security fixes from firefox-60.6 up to firefox ESR-78.1 were included in
+     Seamonkey-2.53.4. Please see
+     <a href="https://www.seamonkey-project.org/releases/seamonkey2.53.4/">The Release Notes</a>.</p>
+     <p>To fix these, update to Seamonkey-2.53.4 or later using the instructions
+     from the development book for
+     <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+     <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+     <a id="10.0-012">
+     <h3>10.0 012 Firefox</h3>
+     <p>Effective 2020-09-21</p>
+     <p>Four vulnerabilities with CVE numbers were fixed in firefox-78.3.0
+     including a memory safety bug rated as High. Details are at
+     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-43/">mfsa2020-43</a>.</p>
+     <p>To fix these, update to firefox-78.3.0 or later using the instructions
+     from the development book for
+     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+     <a id="10.0-011">
+     <h3>10.0 011 Samba</h3>
+     <p>Effective 2020-09-20</p>
+     <p>A critical security vulnerability in Samba was discovered, dubbed
+     "NetLogon". This vulnerability classifies as an authentication bypass, and is
+     rated a 10.0 on the CVSSv3 scale.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a>
+     has been assigned.</p>
+     <p>To fix this, update to Samba-4.12.7 or later using the instructions
+     from the development book for
+     <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+     <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
+     <a id="10.0-010">
+     <h3>10.0 010 Node.js</h3>
+     <p>Effective 2020-09-17</p>
+     <p>Multiple security vulnerabilities were discovered in Node.js, including two
+     marked as High. These have been assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8201">CVE-2020-8201</a> and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8252">CVE-2020-8252</a>.</p>
+     <p>To fix this, update to Node.js-12.18.4 or later using the instructions
+     from the development book for
+     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+
+     <a id="10.0-009">
+     <h3>10.0 009 Qt5 and QtWebEngine</h3>
+     <p>Effective 2020-09-10</p>
+     <p>Many security vulnerabilities were discovered in Qt5-5.15.0 and QtWebEngine.
+     For an overview, including the approximately 50 security fixes from Chrome
+     which had CVEs assigned at the time of the update, see
+     <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14026">BLFS ticket #14026</a>.</p>
+     To fix this, update to at least Qt-5.15.1 and QtWebEngine-5.15.1 using the
+     instructions from the development book for
+     <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> and
+     <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+     <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
+     <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+     <a id="10.0-008">
+     <h3>10.0 008 Cryptsetup</h3>
+     <p>Effective 2020-09-06</p>
+     <p>An out of bounds memory write was discovered in Cryptsetup. Note that
+     this only affects 32-bit builds of cryptsetup.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14382">CVE-2020-14382</a>
+     has been assigned.</p>
+     <p>To fix this, update to at least cryptsetup-2.3.4 using the instructions
+     from the development book for
+     <a href="../view/svn/postlfs/cryptsetup.html">Cryptsetup (sysv)</a> or
+     <a href="../view/systemd/postlfs/cryptsetup.html">Cryptsetup (systemd)</a>.</p>
+
+     <a id="10.0-007">
+     <h3>10.0 007 GnuPG</h3>
+     <p>Effective 2020-09-06</p>
+     <p>A critical security bug was dicovered in GnuPG 2.2.21 as shipped in BLFS
+     10.0, and in 2.2.22. This vulnerability will trigger whenever a key with
+     preference lists for the AEAD algorithms is loaded, and can be exploited.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25125">CVE-2020-25125</a>
+     has been assigned.</p>
+     <p>To fix this, update to GnuPG-2.2.23 or later using the instructions
+     from the development book for
+     <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+     <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+
+     <a id="10.0-006">
+     <h3>10.0 006 Brotli</h3>
+     <p>Effective 2020-09-06</p>
+     <p>An integer oveflow in brotli before version 1.0.9 can lead to a crash.
+     This was assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8927">CVE-2020-8927</a>.</p>
+     <p>To fix this, update to brotli-1.0.9 or later using the instructions
+     from the development book for
+     <a href="../view/svn/general/brotli.html">Brotli (sysv)</a> or
+     <a href="../view/systemd/general/brotli.html">Brotli (systemd)</a>.</p>
+
+     <a id="10.0-005">
+     <h3>10.0 005 BIND</h3>
+     <p>Effective 2020-09-05</p>
+     <p>A variety of vulnerabilities were found in BIND. Most could cause a crash
+     but one allows privilege escalation by someone with authority to change a subset
+     of the zone's content.
+     These were assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8620">CVE-2020-8620</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8621">CVE-2020-8621</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8622">CVE-2020-8622</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8623">CVE-2020-8623</a> and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8624">CVE-2020-8624</a>.
+     See also
+     <a href="https://kb.isc.org/docs/aa-00913">BIND 9 Security Vulnerabilty Matrix #114-8</a>
+     .</p>
+     <p>To fix this, update to BIND-9.6.16 or later using the instructions
+     from the development book for
+     <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+     <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+     <a id="10.0-004">
+     <h3>10.0 004 CIFS-utils</h3>
+     <p>Effective 2020-09-05</p>
+     <p>The mount.cifs program was invoking a shell when requesting the Samba
+     password, which could be used to inject arbitrary commands. An attacker
+     able to invoke mount.cifs with special permission, such as via sudo rules,
+     could use this flaw to escalate their privileges.
+     This was assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14342">CVE-2020-14342</a>,
+     more details at
+     <a href="https://lists.samba.org/archive/samba-technical/2020-September/135747.html">samba-technical</a>
+     .</p>
+     <p>To fix this, update to cifs-utils-6.11 or later using the instructions
+     from the development book for
+     <a href="../view/svn/basicnet/cifsutils.html">CIFS-utils (sysv)</a> or
+     <a href="../view/systemd/basicnet/cifsutils.html">CIFS-utils (systemd)</a>.</p>
+
+     <a id="10.0-003">
+     <h3>10.0 003 GnuTLS</h3>
+     <p>Effective 2020-09-05</p>
+     <p>A null-pointer dereference causing a remotely-triggered crash in the
+     client application was found and assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24659">CVE-2020-24659</a>,
+     see also
+     <a href="https://www.gnutls.org/security-new.html#GNUTLS-SA-2020-09-04">GNUTLS-SA-2020-09-04</a>
+     .</p>
+     <p>To fix this, update to at least Gnu-TLS-3.6.15 using the instructions
+     from the development book for
+     <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+     <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
+     <a id="10.0-002">
+     <h3>10.0 002 Xorg-Server</h3>
+     <p>Effective 2020-09-03</p>
+     <p>In Xorg-Server before version 1.20.9 several input validation failures
+     in X server extensions were found. These can lead to local privilege
+     escalations (to root) <b>if the X server is running privileged</b>.
+     These have been assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14345">CVE-2020-14345</a>
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14346">CVE-2020-14346</a>
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14361</a>
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14362</a>
+     .</p>
+     <p>To fix this, update to at least Xorg-Server-1.20.9 using the instructions
+     from the development book for
+     <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+     <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+
+     <a id="10.0-001">
+     <h3>10.0 001 LibX11</h3>
+     <p>Effective 2020-09-03</p>
+     <p>In libX11 before version 1.6.12 an integer overflow and double-free
+     was found. This has been assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14363">CVE-2020-14363</a>
+     .</p>
+     <p>To fix this, update to at least libX11-1.6.12 using the instructions
+     from the development book for
+     <a href="../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a> or
+     <a href="../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
+
+<!--#include virtual="/common/footer.html" -->
