@@ -18,9 +18,14 @@
      <p><i>This page is ordered like the Changelog of the book, with newest
      items first.</i></p>
 
+     <p>The severity ratings are best estimates unless upstream has assigned
+     a rating. Where a stand-alone application will crash, that will typically
+     be assigned a Moderate rating unless it is a security application. If in
+     doubt, read the links.</p>
+
      <!-- Editors: Commented entry to copy, and reminder about patches -->
 <!--
-     <h3>SA yyyymmNN Package</h3>
+     <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Moderate/Uncertain</h4>
      <p>Explain the problem, perhaps offering a workaround, and linking to
      relevant CVEs or package advisory notes.
      These have been assigned
@@ -44,14 +49,13 @@
      <p>For some of these, the effective dates may be slightly adrift.</p>
 
      <a id="10.0-999">
-     <h3>10.0 999 (LFS)</h3>
-     <p>Effective 2020-12-15</p>
+     <h4>10.0 999 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
      <p><b>This is an LFS advisory, to examine the possibility of using this
      page to cover both LFS and BLFS.</b> It is experimental.</p>
      <p>The EDIPARTYNAME NULL pointer de-reference allows an attacker who can
      trick a client or server into checking a malicious X509 certificate could
      trigger a crash. This is rated High.
-     relevant CVEs or package advisory notes.It has been assigned
+     It has been assigned
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1971">CVE-2020-1971</a>
      with fuller details at
      <a href="https://www.openssl.org/news/secadv/20201208.txt">OpenSSL</a>.</p>
@@ -63,10 +67,9 @@
      <p>- * - * -<p> <!-- separate the experimental item -->
 
      <a id="10.0-015">
-     <h3>10.0 015 Wireshark</h3>
-     <p>Effective 2020-09-23</p>
-     <p>Five Security Advisories (wnpa-sec-2020-11,12,13) were fixed in
-     Wireshark-3.2.7, detailed at
+     <h4>10.0 015 Wireshark  Date: 2020-09-23  Severity: High</h4>
+     <p>Five Security Advisories (wnpa-sec-2020-11,12,13) which could cause
+     Wireshark to crash were fixed in Wireshark-3.2.7, detailed at
      <a href="https://www.wireshark.org/security/">Wireshark Security</a>.</p>
      <p>To fix these, update to wireshark-3.2.7 or later using the instructions
      from the development book for
@@ -74,8 +77,8 @@
      <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
      <a id="10.0-014">
-     <h3>10.0 014 Thunderbird</h3>
-     <p>Effective 2020-09-25, revised 2020-09-26</p>
+     <h4>10.0 014 Thunderbird  Updated: 2020-09-25  Severity: High</h4>
+     <p>Revised 2020-09-26</p>
      <p>Five vulnerabilities with CVE numbers were fixed in thunderbird-78.3.0
      including a memory safety bug rated as High. Details are at
      <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-44/">mfsa2020-44</a>.</p>
@@ -87,8 +90,8 @@
      <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
      <a id="10.0-013">
-     <h3>10.0 013 Seamonkey</h3>
-     <p>Effective 2020-09-23</p>
+     <h4>10.0 013 Seamonkey  Date: 2020-09-23  Severity: Critical</h4>
+     <!-- some of the early ff60 releases had fixes rated as critical -->
      <p>Security fixes from firefox-60.6 up to firefox ESR-78.1 were included in
      Seamonkey-2.53.4. Please see
      <a href="https://www.seamonkey-project.org/releases/seamonkey2.53.4/">The Release Notes</a>.</p>
@@ -98,8 +101,7 @@
      <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
      <a id="10.0-012">
-     <h3>10.0 012 Firefox</h3>
-     <p>Effective 2020-09-21</p>
+     <h4>10.0 012 Firefox  Date: 2020-09-21  Severity: High</h4>
      <p>Four vulnerabilities with CVE numbers were fixed in firefox-78.3.0
      including a memory safety bug rated as High. Details are at
      <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-43/">mfsa2020-43</a>.</p>
@@ -109,8 +111,7 @@
      <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
      <a id="10.0-011">
-     <h3>10.0 011 Samba</h3>
-     <p>Effective 2020-09-20</p>
+     <h4>10.0 011 Samba  Date: 2020-09-26  Severity: Critical</h4>
      <p>A critical security vulnerability in Samba was discovered, dubbed
      "NetLogon". This vulnerability classifies as an authentication bypass, and is
      rated a 10.0 on the CVSSv3 scale.
@@ -122,8 +123,7 @@
      <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
      <a id="10.0-010">
-     <h3>10.0 010 Node.js</h3>
-     <p>Effective 2020-09-17</p>
+     <h4>10.0 010 Node.js  Date: 2020-09-17  Severity: High</h4>
      <p>Multiple security vulnerabilities were discovered in Node.js, including two
      marked as High. These have been assigned
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8201">CVE-2020-8201</a> and
@@ -134,8 +134,8 @@
      <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
 
      <a id="10.0-009">
-     <h3>10.0 009 Qt5 and QtWebEngine</h3>
-     <p>Effective 2020-09-10</p>
+     <h4>10.0 009 Qt5 and QtWebEngine  Date: 2020-09-10  Severity: Critical</h4>
+     <!-- CVE-2020-6471 is rated as critical (sandbox escape) -->
      <p>Many security vulnerabilities were discovered in Qt5-5.15.0 and QtWebEngine.
      For an overview, including the approximately 50 security fixes from Chrome
      which had CVEs assigned at the time of the update, see
@@ -148,8 +148,7 @@
      <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
      <a id="10.0-008">
-     <h3>10.0 008 Cryptsetup</h3>
-     <p>Effective 2020-09-06</p>
+     <h4>10.0 008 Cryptsetup  Date: 2020-09-06  Severity: High</h4>
      <p>An out of bounds memory write was discovered in Cryptsetup. Note that
      this only affects 32-bit builds of cryptsetup.
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14382">CVE-2020-14382</a>
@@ -160,8 +159,7 @@
      <a href="../view/systemd/postlfs/cryptsetup.html">Cryptsetup (systemd)</a>.</p>
 
      <a id="10.0-007">
-     <h3>10.0 007 GnuPG</h3>
-     <p>Effective 2020-09-06</p>
+     <h4>10.0 007 GnuPG  Date: 2020-09-06  Severity: Critical</h4>
      <p>A critical security bug was dicovered in GnuPG 2.2.21 as shipped in BLFS
      10.0, and in 2.2.22. This vulnerability will trigger whenever a key with
      preference lists for the AEAD algorithms is loaded, and can be exploited.
@@ -173,8 +171,7 @@
      <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
 
      <a id="10.0-006">
-     <h3>10.0 006 Brotli</h3>
-     <p>Effective 2020-09-06</p>
+     <h4>10.0 006 Brotli  Date: 2020-09-06  Severity: Moderate</h4>
      <p>An integer oveflow in brotli before version 1.0.9 can lead to a crash.
      This was assigned
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8927">CVE-2020-8927</a>.</p>
@@ -184,8 +181,7 @@
      <a href="../view/systemd/general/brotli.html">Brotli (systemd)</a>.</p>
 
      <a id="10.0-005">
-     <h3>10.0 005 BIND</h3>
-     <p>Effective 2020-09-05</p>
+     <h4>10.0 005 BIND  Date: 2020-09-05  Severity: High</h4>
      <p>A variety of vulnerabilities were found in BIND. Most could cause a crash
      but one allows privilege escalation by someone with authority to change a subset
      of the zone's content.
@@ -204,8 +200,7 @@
      <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
 
      <a id="10.0-004">
-     <h3>10.0 004 CIFS-utils</h3>
-     <p>Effective 2020-09-05</p>
+     <h4>10.0 004 CIFS-utils  Date: 2020-09-05  Severity: High</h4>
      <p>The mount.cifs program was invoking a shell when requesting the Samba
      password, which could be used to inject arbitrary commands. An attacker
      able to invoke mount.cifs with special permission, such as via sudo rules,
@@ -221,8 +216,7 @@
      <a href="../view/systemd/basicnet/cifsutils.html">CIFS-utils (systemd)</a>.</p>
 
      <a id="10.0-003">
-     <h3>10.0 003 GnuTLS</h3>
-     <p>Effective 2020-09-05</p>
+     <h4>10.0 003 GnuTLS  Date: 2020-09-03  Severity: High</h4>
      <p>A null-pointer dereference causing a remotely-triggered crash in the
      client application was found and assigned
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24659">CVE-2020-24659</a>,
@@ -235,8 +229,7 @@
      <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
      <a id="10.0-002">
-     <h3>10.0 002 Xorg-Server</h3>
-     <p>Effective 2020-09-03</p>
+     <h4>10.0 002 Xorg-Server  Date 2020-09-03  Severity: High</h4>
      <p>In Xorg-Server before version 1.20.9 several input validation failures
      in X server extensions were found. These can lead to local privilege
      escalations (to root) <b>if the X server is running privileged</b>.
@@ -252,10 +245,10 @@
      <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
 
      <a id="10.0-001">
-     <h3>10.0 001 LibX11</h3>
+     <h4>10.0 001 LibX11  Date: 2020-09-03  Severity: High</h4>
      <p>Effective 2020-09-03</p>
      <p>In libX11 before version 1.6.12 an integer overflow and double-free
-     was found. This has been assigned
+     was found, which could lead to provilege escalation. This has been assigned
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14363">CVE-2020-14363</a>
      .</p>
      <p>To fix this, update to at least libX11-1.6.12 using the instructions
