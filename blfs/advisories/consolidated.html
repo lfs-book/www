@@ -25,28 +25,35 @@
 
      <p>The severity ratings are best estimates unless upstream has assigned
      a rating. Where a stand-alone application will crash, that will typically
-     be assigned a Moderate rating unless it is a security application. If in
+     be assigned a Medium rating unless it is a security application. If in
      doubt, read the links.</p>
 
-     <!-- Editors: Commented entry to copy, and reminder about patches -->
-<!--
-     <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Moderate/Uncertain</h4>
+     <!-- Editors: Commented entry to copy, and reminder about patches
+
+     If there is a CVE, https://nvd.nist.gov/vuln/detail/CVE-YYYY-NNNN
+     shows severities.
+
+     <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low/Uncertain</h4>
+      or
+     <h4>VV.V NNN (LFS) Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low/Uncertain</h4>
      <p>Explain the problem, perhaps offering a workaround, and linking to
      relevant CVEs or package advisory notes.
      These have been assigned
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12345">CVE-2020-12345</a>
      .</p>
+      BLFS
      <p>To fix this, update to at least Package-VERSION using the instructions
      from the development book for
+      BLFS
      <a href="../view/svn/path/something.html">Package (sysv)</a> or
      <a href="../view/systemd/path/something.html">Package (systemd)</a>.</p>
--->
+      LFS: - usually chapter08
+     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
 
      <!-- where a fix used a patch, maybe link to it. e.g.
      <a href="http://www.linuxfromscratch.org/patches/blfs/svn/libxml2-2.9.10-security_fixes-1.patch">
-     for clarity.
-     -->
-     <!-- BLFS10.1 will come here -->
+     for clarity. -->
 
      <a id="BLFS10.0"> <!-- maybe doesn't need to be linked -->
      <h2>BLFS-10.0 was released on 2020/09/01</h2></a>
@@ -70,6 +77,144 @@
      <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
      <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
 
+     <a id="10.0-028">
+     <h4>10.0 028 Samba  Date: 2020-10-30  Severity: Medium</h4>
+     <p>Three CVE vulnerabilities were identified in Samba before version 4.13.1,
+     see <a href="https://www.samba.org/samba/history/">Samba History</a> and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14318">CVE-2020-14318</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14323">CVE-2020-14323</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14383">CVE-2020-14383</a>.</p>
+     <p>To fix this, update to at least samba-4.13.1 using the instructions
+     from the development book for
+     <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+     <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
+     <a id="10.0-027">
+     <h4>10.0 027 Libass  Date: 2020-10-30  Severity: High</h4>
+     <p>There was a signed integer overflow in libass-0.14.0. See
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26682">CVE-2020-26682</a>.</p>
+     <p>To fix this, update to at least libass-0.15.0 using the instructions
+     from the development book for
+     <a href="../view/svn/multimedia/libass.html">Libass (sysv)</a> or
+     <a href="../view/systemd/multimedia/libass.html">Libass (systemd)</a>.</p>
+
+     <a id="10.0-026">
+     <h4>10.0 026 The Gstreamer stack  Date: 2020-10-27  Severity: High</h4>
+     <p>Upstream made an emergency release of gstreamer-1.18.1 and its stack containing
+     important security fixes. At the same time the gstreamer-1.16.3 stack was released with
+     similar fixes. Limited details are available at
+     <a href="https://gstreamer.freedesktop.org/releases/1.18/#1.18.1">1.18.1 Release Notes</a>
+     and
+     <a href="https://gstreamer.freedesktop.org/releases/1.16/#1.16.3">1.16.3 Release Notes</a>
+     .</p>
+     <p>On systems running Gstreamer 1.16 versions, such as BLFS-10.0, update to the
+     gstreamer-1.16.3 packages (gstreamer, -libav, -plugins, -vaapi) using the instructions
+     from the BLFS-10.0 book:
+     <a href="../view/10.0/multimedia/gstreamer10.html">Gstreamer 1.16 (sysv)</a>
+     <i>et seq.</i> or
+     <a href="../view/10.0-systemd/multimedia/gstreamer10.html">Gstreamer 1.16 (systemd)</a>
+     <i> et seq.</i></p>
+     <p>On systems running Gstreamer 1.18 versions, update to the
+     gstreamer-1.18.1 or later packages (gstreamer, -libav, -plugins, -vaapi
+     using the instructions from the development book for
+     <a href="../view/svn/multimedia/gstreamer10.html">Gstreamer 1.18 (sysv)</a>i
+     <i>et seq.</i> or
+     <a href="../view/systemd/multimedia/gstreamer10.html">Gstreamer 1.18 (systemd)</a>
+     <i> et seq.</i></p>
+
+     <a id="10.0-025">
+     <h4>10.0 025 Thunderbird  Date: 2020-10-23  Severity: High</h4>
+     <p>Three vulnerabilities rated as High were fixed in thunderbird-78.4.0.
+     Details are at
+     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-47/">mfsa2020-47</a>.</p>
+     <p>To fix this, update to Thunderbird-78.4.0 or later using the instructions
+     from the development book for
+     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+     <a id="10.0-024">
+     <h4>10.0 024 FreeType  Date: 2020-10-20  Severity: High</h4>
+     <!-- CVE originally for chrome, but emergency release of FT because
+       it was being actively exploited -->
+     <p>There was an emergency release fixing a vulnerability in embedded PNG
+     bitmap handling (since FreeType-2.6) which was being actively exploited.
+     The original CVE was raised against Chrome OS and only rated as Medium.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-15999">CVE-2020-15999</a>
+     and
+     <a href="https://sourceforge.net/projects/freetype/files/freetype2/2.10.4/">Sourceforge - Changes in 2.10.4</a>
+     .</p>
+     <p>To fix this, update to freetype-2.10.4 or later using the instructions
+     from the development book for
+     <a href="../view/svn/general/freetype2.html">FreeType (sysv)</a> or
+     <a href="../view/systemd/general/freetype2.html">FreeType (systemd)</a>.</p>
+
+     <a id="10.0-023">
+     <h4>10.0 023 LXML  Date: 2020-10-17  Severity: Medium</h4>
+     <p>A remote attacker can trick the victim to follow a specially crafted
+     link and execute arbitrary HTML and script code in the user's browser in
+     the context of a vulnerable website.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27783">CVE-2020-27783</a>
+     and
+     <a href="https://www.cybersecurity-help.cz/vdb/SB2020120602">cybersecurity-help.cz</a>
+     .</p>
+     <p>To fix this, update to LXML-4.6.1 or later using the instructions
+     from the development book for
+     <a href="../view/svn/general/python-modules.html#lxml">LXML (sysv)</a> or
+     <a href="../view/systemd/general/python-modules.html#lxml">LXML (systemd)</a>.</p>
+
+     <a id="10.0-022">
+     <h4>10.0 022 NSS  Date: 2020-10-17  Severity: High</h4>
+     <p>A flaw was found in the CCS handling, allowing a remote attacker to
+     cause a denial of service for servers linked against NSS.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25613">CVE-2020-25613</a>
+     .</p>
+     <p>To fix this, update to at least NSS-3.58 using the instructions
+     from the development book for
+     <a href="../view/svn/postlfs/nss.html">NSS (sysv)</a> or
+     <a href="../view/systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
+
+     <a id="10.0-021">
+     <h4>10.0 021 Stunnel  Date: 2020-10-16  Severity: High</h4>
+     <p>In Stunnel-5.57 the "redirect" option was fixed to properly handle
+     "verifyChain = yes". See
+     <a href="https://www.stunnel.org/NEWS.html">Stunnel NEWS</a>
+     .</p>
+     <p>To fix this, update to at least stunnel-5.57 using the instructions
+     from the development book for
+     <a href="../view/svn/postlfs/stunnel.html">Stunnel (sysv)</a> or
+     <a href="../view/systemd/postlfs/stunnel.html">Stunnel (systemd)</a>.</p>
+
+     <a id="10.0-020">
+     <h4>10.0 020 Ruby  Date: 2020-10-06  Severity: High</h4>
+     <p>Ruby before 2.7.2 had a vulnerability in its WEBrick HTTP server.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25613">CVE-2020-25613</a>
+     .</p>
+     <p>To fix this, update to at least Ruby-2.7.2 using the instructions
+     from the development book for
+     <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+     <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
+     <a id="10.0-019">
+     <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
+     <p>PHP before 7.4.11 had two CVE vulnerabilities,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a> and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a>.</p>
+     <p>To fix this, update to at least PHP-7.4.11 using the instructions
+     from the development book for
+     <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+     <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+     <a id="10.0-018">
+     <h4>10.0 018 Glib  Date: 2020-10-05  Severity: Medium</h4>
+     <!-- this came from oss fuzzing, debian rated urgency as medium -->
+     <p>Glib before 2.66.1 had incorrect scope/zone ID parsing of URIs. See
+     <a href="https://gitlab.gnome.org/GNOME/glib/-/releases/2.66.1">Release Notes</a>
+     .</p>
+     <p>To fix this, update to at least Glib-2.66.1 using the instructions
+     from the development book for
+     <a href="../view/svn/general/glib2.html">Glib (sysv)</a> or
+     <a href="../view/systemd/general/glib2.html">Glib (systemd)</a>.</p>
+
      <a id="10.0-017">
      <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>
      <p>Five Security Advisories (wnpa-sec-2020-11,12,13) which could cause
@@ -86,7 +231,7 @@
      <p>Five vulnerabilities with CVE numbers were fixed in thunderbird-78.3.0
      including a memory safety bug rated as High. Details are at
      <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-44/">mfsa2020-44</a>.</p>
-     <p>But users of that version of thuinderbird reported numerous crashes.
+     <p>But users of that version of thunderbird reported numerous crashes.
      To fix the vulnerabilities and the crashes update to thunderbird-78.3.1 or
      later using the instructions
      from the development book for
@@ -163,7 +308,7 @@
      <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
 
      <a id="10.0-009">
-     <h4>10.0 009 Bison (LFS)  Date: 2020-09-15  Severity: Moderate</h4>
+     <h4>10.0 009 Bison (LFS)  Date: 2020-09-15  Severity: Low</h4>
      <p>Bison-3.7.2 fixed all known CVE vulnerabilities in bison itself, the
      generated code should not be affected. See
      <a href="https://lists.gnu.org/archive/html/info-gnu/2020-09/msg00003.html">The Release Announcement</a>
@@ -197,7 +342,7 @@
      <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
 
      <a id="10.0-006">
-     <h4>10.0 006 Brotli  Date: 2020-09-06  Severity: Moderate</h4>
+     <h4>10.0 006 Brotli  Date: 2020-09-06  Severity: Medium</h4>
      <p>An integer oveflow in brotli before version 1.0.9 can lead to a crash.
      This was assigned
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8927">CVE-2020-8927</a>.</p>
