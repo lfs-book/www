@@ -3,19 +3,24 @@
 <!--#include virtual="/blfs/menu.html" -->
     <div class="main">
 
-     <h1>BLFS Security Advisories from September 2020 onwards</h1>
+     <h1>LFS and BLFS Security Advisories from September 2020 onwards</h1>
+
+     <p>LFS has not reported Security Vulnerabilities in the Errata, at least
+     recently, but tickets for some new versions have had details.</p>
 
      <p>BLFS used to keep details of Security Vulnerabilities in the Errata,
      mostly updating them to point to the latest version in the development book
      and updating the brief text if a subsequent vulnerability was reported.</p>
 
-     <p>Now they are being shown individually with more details. Please note
-     that vulnerabilities to package versions before those in the our release
-     are not noted, so if you are running a version of BLFS before 10.0 you
-     should check the Errata for past releases as well as monitoring the items
-     here.</p>
+     <p><b>This page is a consolidated list for both LFS and BLFS.</b></p>
 
-     <p><i>This page is ordered like the Changelog of the book, with newest
+     <p>This list contains summary details and links to upstreams or CVEs where
+     available. Please note that vulnerabilities to package versions before those
+     in our 10.0 releases are not noted, so if you are running a version of BLFS
+     before 10.0 you should check the Errata for past releases as well as
+     monitoring the items here.</p>
+
+     <p><i>This page is ordered like the Changelog of the books, with newest
      items first.</i></p>
 
      <p>The severity ratings are best estimates unless upstream has assigned
@@ -48,6 +53,7 @@
 
      <p>For some of these, the effective dates may be slightly adrift.</p>
 
+<!-- commented until I get to December 
      <a id="10.0-999">
      <h4>10.0 999 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
      <p><b>This is an LFS advisory, to examine the possibility of using this
@@ -62,9 +68,7 @@
      <p>To fix this, update to at least OpenSSL-1.1.1i using the instructions
      from the LFS development book for
      <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
-
-     <p>- * - * -<p> <!-- separate the experimental item -->
+     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
 
      <a id="10.0-017">
      <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>
@@ -146,6 +150,28 @@
      <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
      <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
      <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+     <a id="10.0-010">
+     <h4>10.0 010 Linux Kernel (LFS)  Date: 2020-09-15  Severity: High</h4>
+     <p>In Linux Kernels before 5.8.8 there is a potential privilege escalation.
+     See
+     <a href="https://www.openwall.com/lists/oss-security/2020/09/08/4">oss-security</a>
+     .</p>
+     <p>To fix this, update to linux-5.8.9 or later using the instructions
+     from the LFS development book for
+     <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+     <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
+     <a id="10.0-009">
+     <h4>10.0 009 Bison (LFS)  Date: 2020-09-15  Severity: Moderate</h4>
+     <p>Bison-3.7.2 fixed all known CVE vulnerabilities in bison itself, the
+     generated code should not be affected. See
+     <a href="https://lists.gnu.org/archive/html/info-gnu/2020-09/msg00003.html">The Release Announcement</a>
+     .</p>
+     <p>To fix this, update to bison-3.7.2 or later using the instructions
+     from the LFS development book for
+     <a href="../../lfs/view/development/chapter08/bison.html">Bison (sysv)</a> or
+     <a href="../../lfs/view/systemd/chapter08/bison.html">Bison (systemd)</a>.</p>
 
      <a id="10.0-008">
      <h4>10.0 008 Cryptsetup  Date: 2020-09-06  Severity: High</h4>
