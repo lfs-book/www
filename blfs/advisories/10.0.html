@@ -29,8 +29,7 @@
      version(s) fixed in case other relevant changes are noted.</p>
 
      <!-- After a release, copy for next book version, leave just template stuff
-      in that, then change these links to point to the released books and note
-      that later advisories will be in the [next release] version -->
+      ad initially say "There are no known vulnerabilities." -->
 
 <!-- start of list: Order is Alphabetic by package name (create multiple entries
      if more than one package is involved, e.g. for those firefox updates which
@@ -57,6 +56,17 @@
 
 <!-- end of Brotli -->
 
+     <h3>C-Ares</h3>
+
+     <h4>10.0 039 C-Ares  Date: 2020-11-19  Severity: High</h4>
+     <p>An application using C-Ares versions from 1.16.0 to 1.17.1 allows an
+     attacker to trigger a Denial of service by getting the
+     application to resolve a DNS record with an unexpectedly larger number
+     of responses.
+     <a href=consolidated.html#10.0-039>10.0-039</a></p>
+
+<!-- end of C-Ares -->
+
      <h3>CIFS-utils</h3>
 
      <h4>10.0 008 Cryptsetup  Date: 2020-09-06  Severity: High</h4>
@@ -80,6 +90,16 @@
 <!-- end of Crypt-setup -->
 
      <h3>Firefox</h3>
+
+     <h4>10.0 036 Firefox  Date: 2020-11-16  Severity: High</h4>
+     <p>Several vulnerabilities were fond in firefox before 78.5.0, of which two
+     were rated as high. Update to firefox-78.5.0 or later.
+     <a href=consolidated.html#10.0-036>10.0-036</a></p>
+
+     <h4>10.0 030 Firefox  Date: 2020-11-09  Severity: Critical</h4>
+     <p>An exploitable use-after-free was found in firefox before 78.4.1.
+     Update to firefox-78.4.1 or later.
+     <a href=consolidated.html#10.0-030>10.0-030</a></p>
 
      <h4>10.0 014 Firefox  Date: 2020-09-21  Severity: High</h4>
      <p>Four vulnerabilities including a memory safety bug rated as High were
@@ -135,13 +155,48 @@
 
 <!-- end of Gstreamer -->
 
+     <h3>JS78</h3>
+
+     <h4>10.0 037 JS78  Date: 2020-11-16  Severity: High</h4>
+     <p>Several vulnerabilities were found in firefox before 78.5.0, of which one
+     was in the javascript (js/src) code. To fix this, update to JS-78.5.0
+     or later.
+     <a href=consolidated.html#10.0-037>10.0-037</a></p>
+
+     <h4>10.0 031 JS78  Date: 2020-11-09  Severity: Critical</h4>
+     <p>An exploitable use-after-free was found in JS78 before 78.4.1.
+     Update to JS-78.4.1 or later.
+     <a href=consolidated.html#10.0-031>10.0-031</a></p>
+
+<!-- end of JS78 -->
+
+     <h3>Kerberos</h3>
+
+     <h4>10.0 040 Kerberos 5  Date: 2020-11-19  Severity: High</h4>
+     <p>A vulnerability in Kerberos 5 before krb-5.18.3 allowed a Denial of
+     Service to be triggered when decoding Kerberos protocol messages.
+     <a href=consolidated.html#10.0-040>10.0-040</a></p>
+
+<!-- end of Kerberos -->
+
       <h3>Libass</h3>
 
      <h4>10.0 027 Libass  Date: 2020-10-30  Severity: High</h4>
-     <p>In Libasss-0.14.0 there was a vulnerability from a signed integer overflow.
+     <p>In Libass-0.14.0 there was a vulnerability from a signed integer overflow.
+     To fix this, update to Libass-0.15.0 or later.
      <a href=consolidated.html#10.0-027>10.0-027</a></p>
 
 <!-- end of Libass -->
+
+     <h3>LibEXIF</h3>
+
+     <h4>10.0 045 LibEXIF Date: 2020-11-21 Severity: Critical</h4>
+     <p>Three vulnerabilities were found in LibEXIF-0.6.22.
+     To fix this, apply the libexif-0.6.22-security_fixes-1.patch
+     until a later release is available.
+     <a href=consolidated.html#10.0-045>10.0-045</a></p>
+
+<!-- end of LibEXIF -->
 
      <h3>LibX11</h3>
 
@@ -152,18 +207,51 @@
 
 <!-- end of LibX11 -->
 
+     <h3>LibXML2</h3>
+
+     <h4>10.0 044 LibXML2 Date: 2020-11-21 Severity: High</h4>
+     <p>Three vulnerabilities leading to Denial of Service were found in
+     LibXML2-2.9.10.
+     <a href=consolidated.html#10.0-044>10.0-044</a></p>
+
+<!-- end of LibXML2 -->
+
      <h3>LXML</h3>
 
      <a id="10.0-023">
      <h4>10.0 023 LXML  Date: 2020-10-17  Severity: Medium</h4>
      <p>A remote attacker can trick the victim to follow a specially crafted
      link and execute arbitrary HTML and script code in the user's browser in
-     the context of a vulnerable website.
+     the context of a vulnerable website. Update to LXML-4.6.2 or later.
      <a href=consolidated.html#10.0-023>10.0-023</a></p>
 
 <!-- end of LXML -->
 
+     <h3>MariaDB</h3>
+     <h4>10.0 029 MariaDB  Date: 2020-11-04  Severity: Medium</h4>
+     <p>Four CVE vulnerabilities were identified in MariaDB before version
+     10.5.7, update to mariadb-10.5.7 or later.
+     <a href=consolidated.html#10.0-029>10.0-029</a></p>
+
+<!-- end of MariaDB -->
+
+     <h3>Mutt</h3>
+
+     <h4>10.0 046 Mutt Date: 2020-11-26 Severity: Medium</h4>
+     <p>Mutt before version 2.0.2 had incorrect error handling when initially connecting
+     to an IMAP server, which could result in an attempt to authenticate without enabling
+     TLS. To fix this, update to mutt-2.0.2 or later.
+     <a href=consolidated.html#10.0-046>10.0-046</a></p>
+
+<!-- end of Mutt -->
+
      <h3>Node.js</h3>
+
+     <h4>10.0 038 Node.js  Date: 2020-11-19  Severity: High</h4>
+     <p>An attacker could cause a Denial of Service via a DNS request for a
+     host of their choice which resulted in an unexpectedly large number of
+     responses.
+     <a href=consolidated.html#10.0-038>10.0-038</a></p>
 
      <h4>10.0 012 Node.js  Date: 2020-09-17  Severity: High</h4>
      <p>Multiple security vulnerabilities were discovered in Node.js, including two
@@ -176,11 +264,64 @@
 
      <h4>10.0 022 NSS  Date: 2020-10-17  Severity: High</h4>
      <p>A vulnerability in CSS handling, which could allow a remote attacker to
-     cause a denial of service fore servers linked against NSS, was discovered.
+     cause a denial of service for servers linked against NSS, was discovered.
      Update to NSS-3.58 or later.
      <a href=consolidated.html#10.0-022>10.0-022</a></p>
 
 <!-- end of NSS -->
+
+     <h3>PHP</h3>
+
+     <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
+     <p>PHP before 7.4.11 had two CVE vulnerabilities. To fix these, update
+     to PHP-7.4.11 or later.
+     <a href=consolidated.html#10.0-019>10.0-019</a></p>
+
+<!-- end of PHP -->
+
+      <h3>PostgreSQL</h3>
+
+     <h4>10.0 034 PostgreSQL  Date: 2020-11-12 Severity: High</h4>
+     <p>A number of vulnerabilities were fixed in PostgreSQL-13.1. Update
+     to postgresql-13.1 or later.
+     <a href=consolidated.html#10.0-034>10.0-034</a></p>
+
+<!-- end of PostgreSQL -->
+
+     <h3>Qt5 and QtWebEngine</h3>
+
+     <h4>10.0 042 Qt5 and QtWebEngine  Date: 2020-11-20  Severity: Critical</h4>
+     <p>The release of QtWebEngine-5.15.2 pulled in many more CVE fixes from Chrome,
+     of which four were 0day fixes. The rest of Qt5 includes many bug fixes, some of
+     which include heap buffer overflows. Update to at least Qt-5.15.2 and
+     QtWebEngine-5.15.2.
+     <a href=consolidated.html#10.0-042>10.0-042</a></p>
+
+     <h4>10.0 011 Qt5 and QtWebEngine  Date: 2020-09-10  Severity: Critical</h4>
+     <p>Many security vulnerabilities were discovered in Qt5-5.15.0 and QtWebEngine.
+     Update to at least Qt-5.15.1 and QtWebEngine-5.15.1.
+     <a href=consolidated.html#10.0-011>10.0-011</a></p>
+
+<!-- end of Qt5 and QtWebEngine -->
+
+     <h3>Raptor</h3>
+     <h4>10.0 035 Raptor  Date: 2020-11-13 Severity: High</h4>
+     <p>A heap overflow vulnerability in Raptor can lead to an out-of-boundsi
+     write. Patch raptor-2.0.15 with the security_fiexs-1.patch since upstream
+     is inactive.
+     <a href=consolidated.html#10.0-035>10.0-035</a></p>
+
+<!-- end of Raptor -->
+
+     <h3>Ruby</h3>
+
+     <h4>10.0 020 Ruby  Date: 2020-10-06  Severity: High</h4>
+     <p>The bundled WEBrick HTTP server in ruby before 2.7.2 had a vulnerability
+     which could lead to an HTTP Request Smuggling attack. Update to ruby-2.7.2
+     or later.
+     <a href=consolidated.html#10.0-020>10.0-020</a></p>
+
+<!-- end of Ruby -->
 
      <h3>Samba</h3>
 
@@ -197,25 +338,12 @@
 
 <!-- end of Samba -->
 
-     <h3>PHP</h3>
-
-     <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
-     <p>PHP before 7.4.11 had two CVE vulnerabilities. To fix these, update
-     to PHP-7.4.11 or later.
-     <a href=consolidated.html#10.0-019>10.0-019</a></p>
-
-<!-- end of PHP -->
-
-     <h3>Ruby</h3>
-
-     <h4>10.0 020 Ruby  Date: 2020-10-06  Severity: High</h4>
-     <p>The bundled WEBrick HTTP server in ruby before 2.7.2 had a vulnerability
-     which could lead to an HTTP Request Smuggling attack.
-     <a href=consolidated.html#10.0-020>10.0-020</a></p>
-
-<!-- end of Ruby -->
-
      <h3>Seamonkey</h3>
+
+     <h4>10.0 032 Seamonkey  Updated: 2020-11-15  Severity: Critical</h4>
+     <p>The javascript vulnerability in JS-78-4.1 and firefox-78.4.1 also
+     applies to seamonkey-2.53.4. Update to seamonkey-2.53.5 or later.
+     <a href=consolidated.html#10.0-032>10.0-032</a></p>
 
      <h4>10.0 015 Seamonkey  Date: 2020-09-23  Severity: Critical</h4>
      <p>Security fixes from firefox-60.6 up to firefox ESR-78.1 were included in
@@ -235,6 +363,17 @@
 
      <h3>Thunderbird</h3>
 
+     <h4>10.0 041 Thunderbird  Date: 2020-11-19 Severity: High</h4>
+     <p>Several vulnerabilities were fixed in Thunderbird-78.5.0, two were rated
+     High. To fix these update to thunderbird-78.5.0 or later.
+     <a href=consolidated.html#10.0-041>10.0-041</a></p>
+
+     <a id="10.0-033">
+     <h4>10.0 033 Thunderbird  Date: 2020-11-10  Severity: Critical</h4>
+     <p>The javascript vulnerability fixed in firefox-78.4.1 also applies to
+     thunderbird. To fix this update to thunderbird-78.4.2 or later.
+     <a href=consolidated.html#10.0-033>10.0-033</a></p>
+
      <h4>10.0 025 Thunderbird  Date: 2020-10-23  Severity: High</h4>
      <p>Three vulnerabilities rated as High were fixed in thunderbird-78.4.0.
      To fix these update to thunderbird-78.4.0 or later.
@@ -249,14 +388,13 @@
 
 <!-- end of Thunderbird -->
 
-     <h3>Qt5 and QtWebEngine</h3>
+      <h3>WebKitGTK</h3>
+     <h4>10.0 043 WebKitGTK Date: 2020-11-25 Severity: High</h4>
+     <p>Five vulnerabilities rated as High were found in WebKitGTK.
+     To fix these upgrade to webkitgtk-2.30.3 or later.
+     <a href=consolidated.html#10.0-043>10.0-043</a></p>
 
-     <h4>10.0 011 Qt5 and QtWebEngine  Date: 2020-09-10  Severity: Critical</h4>
-     <p>Many security vulnerabilities were discovered in Qt5-5.15.0 and QtWebEngine.
-     Update to at least Qt-5.15.1 and QtWebEngine-5.15.1.
-     <a href=consolidated.html#10.0-011>10.0-011</a></p>
-
-<!-- end of Qt5 and QtWebEngine -->
+<!-- end of WebKitGTK -->
 
      <h3>Wireshark</h3>
 
