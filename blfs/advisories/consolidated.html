@@ -73,11 +73,8 @@
       replaced or archived). See the gstreamer links re 1.16 for an example of
       linking to a released book (old 10.0) -->
 
-<!-- commented until I get to December 
-     <a id="10.0-999">
-     <h4>10.0 999 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
-     <p><b>This is an LFS advisory, to examine the possibility of using this
-     page to cover both LFS and BLFS.</b> It is experimental.</p>
+     <a id="10.0-052">
+     <h4>10.0 052 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
      <p>The EDIPARTYNAME NULL pointer de-reference allows an attacker who can
      trick a client or server into checking a malicious X509 certificate could
      trigger a crash. This is rated High.
@@ -88,7 +85,69 @@
      <p>To fix this, update to at least OpenSSL-1.1.1i using the instructions
      from the LFS development book for
      <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
+     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
+     <a id="10.0-051">
+     <h4>10.0 051 Python (LFS and BLFS) Date: 2020-12-15 Severity: High</h4>
+     <p>Python-3.9.1 includes three security fixes. See
+     <a href="https://bugs.python.org/issue40791">bpo-40791</a>,
+     <a href="https://bugs.python.org/issue42051">bpo-42051</a>,
+     <a href="https://bugs.python.org/issue42103">bpo-42103</a>.</p>
+     <p>To fix this, update to at least Python-3.9.1 using the instructions
+     from the <b>BLFS</b> development book for
+     <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+     <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
+     <a id="10.0-050">
+     <h4>10.0 050 cURL Date: 2020-12-11 Severity: High</h4>
+     <p>cURL before version 7.74.0 has two vulnerabilities rated as High, an
+     uncontrolled recursion and an improper check for certificate revocation, as
+     well as one rated as Low. See
+     <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14363"/>BLFS #14363</a> and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8284">CVE-2020-8284</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8285">CVE-2020-8285</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8286">CVE-2020-8286</a>.</p>
+     <p>To fix these, update to cURL-7.74.0 or later following the instructions
+     from the development book for
+     <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+     <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+     <a id="10.0-049">
+     <h4>10.0 049 Gdk-Pixbuf Date: 2020-12-08 Severity: Medium</h4>
+     <p>Gdk-Pixbuf before version 2.42.2 is vulnerable to a Denial of Service
+     (infinite loop) which can, for example, be triggered using a crafted GIF
+     image with LZW compression.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29385">CVE-2020-29385</a>.</p>
+     <p>To fix this, update to Gdk-Pixbuf-2.42.2 or later following the instructions
+     from the development book for
+     <a href="../view/svn/x/gdk-pixbuf.html">Gdk-Pixbuf (sysv)</a> or
+     <a href="../view/systemd/x/gdk-pixbuf.html">Gdk-Pixbuf (systemd)</a>.</p>
+
+     <a id="10.0-048">
+     <h4>10.0 048 Xorg-Server  Date 2020-12-05  Severity: High</h4>
+     <p>In Xorg-Server before version 1.20.10 two input validation failures
+     in X server extensions were found. These can lead to local privilege
+     escalations (to root) <b>if the X server is running privileged</b>.
+     These have been assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14360">CVE-2020-14360</a>
+     and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25712">CVE-2020-25712</a>
+     .</p>
+     <p>To fix this, update to at least Xorg-Server-1.20.10 using the instructions
+     from the development book for
+     <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+     <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+
+     <a id="10.0-047">
+     <h4>10.0 047 Unbound Updated: 2020-12-05 Severity: Medium</h4>
+     <p>Unbound up to and including version 1.12.0 contains a local vulnerability
+     that would allow for a local symlink attack. Severity downgraded following
+     availability of analysis.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28935">CVE-2020-28935</a>.</p>
+     <p>To fix this, update to Unbound-1.13.0 or later following the instructions
+     from the development book for
+     <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+     <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
 
      <a id="10.0-046">
      <h4>10.0 046 Mutt Date: 2020-11-26 Severity: Medium</h4>
@@ -371,7 +430,7 @@
      <a href="../view/10.0-systemd/multimedia/gstreamer10.html">Gstreamer 1.16 (systemd)</a>
      <i> et seq.</i></p>
      <p>On systems running Gstreamer 1.18 versions, update to the
-     gstreamer-1.18.1 or later packages (gstreamer, -libav, -plugins, -vaapi
+     gstreamer-1.18.1 or later packages (gstreamer, -libav, -plugins, -vaapi)
      using the instructions from the development book for
      <a href="../view/svn/multimedia/gstreamer10.html">Gstreamer 1.18 (sysv)</a>i
      <i>et seq.</i> or
@@ -662,7 +721,7 @@
      in X server extensions were found. These can lead to local privilege
      escalations (to root) <b>if the X server is running privileged</b>.
      These have been assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14345">CVE-2020-14345</a>
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14360">CVE-2020-14360</a>
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14346">CVE-2020-14346</a>
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14361</a>
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14362</a>
@@ -671,6 +730,7 @@
      from the development book for
      <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
      <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+
 
      <a id="10.0-001">
      <h4>10.0 001 LibX11  Date: 2020-09-03  Severity: High</h4>

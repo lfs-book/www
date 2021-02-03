@@ -19,23 +19,24 @@
      after a release -->
      books.</i></p>
 
-<!-- comment OpenSSL until I get to mid December
-     <h3>OpenSSL (LFS)</h3>
-
-     <h4>10.0 999 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
-     <p>A vulnerability in OpenSSL could be exploited to cause a crash.
-     To fix this, update to OpenSSL-1.1.1i or later.
-     <a href=../../consolidated.html#10.0-999>10.0-999</a></p>-->
-
      <!-- After a release, copy for next book version, leave just template stuff
       in that, then change these links to point to the released books and note
       that later advisories will be in the [next release] version -->
 
      <!-- Editors - do the consolidated page first, to get the next advisory number -->
 
+
+     <h3>Bison</h3>
+
+     <h4>10.0 009 Bison (LFS)  Date: 2020-09-15  Severity: Low</h4>
+     <p>Bison-3.7.2 fixed all known CVE vulnerabilities in bison itself, the
+     generated code should not be affected. See
+     <a href=../../blfs/advisories/consolidated.html#10.0-009>10.0-009</a></p>
+
+     <!-- End of Bison -->
+
      <h3>Linux Kernel</h3>
 
-     <a id="10.0-010">
      <h4>10.0 010 Linux Kernel (LFS)  Date: 2020-09-15  Severity: High</h4>
      <p>In Linux kernels before 5.8.8 there is a potential privilege escalation
      in 64-bit kernels.
@@ -43,15 +44,22 @@
 
      <!-- End of Linux Kernel -->
 
-     <h3>Bison</h3>
+     <h3>OpenSSL (LFS)</h3>
 
-     <a id="10.0-009">
-     <h4>10.0 009 Bison (LFS)  Date: 2020-09-15  Severity: Low</h4>
-     <p>Bison-3.7.2 fixed all known CVE vulnerabilities in bison itself, the
-     generated code should not be affected. See
-     <a href=../../blfs/advisories/consolidated.html#10.0-009>10.0-009</a></p>
+     <h4>10.0 053 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
+     <p>A vulnerability in OpenSSL could be exploited to cause a crash.
+     To fix this, update to OpenSSL-1.1.1i or later.
+     <a href=../../consolidated.html#10.0-999>10.0-053</a></p>
 
-     <!-- End of Linux Kernel -->
+     <!-- end of OpenSSL -->
 
+     <h3>Python</h3>
+
+     <h4>10.0 051 Python (LFS and BLFS) Date: 2020-12-15 Severity: High</h4>
+     <p>Python-3.9.1 includes three security fixes. Update to Python-3.9.1
+     or later <i>using the BLFS instructions</i>.
+     <a href=consolidated.html#10.0-051>10.0-051</a></p>
+
+     <!-- End of Python -->
 
 <!--#include virtual="/common/footer.html" -->
