@@ -73,6 +73,94 @@
       replaced or archived). See the gstreamer links re 1.16 for an example of
       linking to a released book (old 10.0) -->
 
+     <a id="10.0-058">
+     <h4>10.0 058 OpenJPEG  Date: 2020-12-15  Severity: High</h4>
+     <p>In OpenJPEG before 2.4.0 there are two vulnerabilities rated as high, and
+     another two rated as medium. See
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-6988">CVE-2019-6988</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-12973">CVE-2019-12793</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-6851">CVE-2020-6851</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8112">CVE-2020-8112</a>.</p>
+     <p>To fix these, update to OpenJPEG-2.4.0 or later using the instructions
+     from the development book for
+     <a href="../view/svn/general/openjpeg2.html">OpenJPEG2 (sysv)</a> or
+     <a href="../view/systemd/general/openjpeg2.html">OpenJPEG2 (systemd)</a>.</p>
+
+     <a id="10.0-057">
+     <h4>10.0 057 Wireshark  Updated: 2021-02-04  Severity: Invalid</h4>
+     <p>A Medium Security Advisory for a crash in Wireshark 3.4.0 and 3.4.1
+     was raised and allocated
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26422">CVE-2020-26422</a>,
+     but it was later determined that the bug was not present in any released
+     version of Wireshark:
+     <a href="https://www.wireshark.org/security/wnpa-sec-2020-20.html">wnpa-sec-2020-20</a>
+     so no action is necessary.</p>
+
+     <a id="10.0-056">
+     <h4>10.0 056 Thunderbird  Date: 2020-11-19 Severity: Critical</h4>
+     <p>Several vulnerabilities were fixed in Thunderbird-78.6.0, one was rated
+     as Critical. Details are at
+     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-56/">mfsa2020-56</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-16042">CVE-2020-16042</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26971">CVE-2020-26971</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26973">CVE-2020-26973</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26974">CVE-2020-26974</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26978">CVE-2020-26978</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
+     <p>To fix this, update to Thunderbird-78.6.0 or later using the instructions
+     from the development book for
+     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+     <a id="10.0-055">
+     <h4>10.0 055 Wireshark  Date: 2020-09-23  Severity: High</h4>
+     <p>Four Medium Security Advisories for items which could cause Wireshark
+     to crash were fixed in Wireshark-3.4.1, detailed at
+     <a href="https://www.wireshark.org/security/">Wireshark Security</a>,
+     but in addition the editors had overlooked a High severity item fixed in
+     Wireshark-3.4.0.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26418">CVE-2020-26418</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26419">CVE-2020-26419</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26420">CVE-2020-26420</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26421">CVE-2020-26421</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26575">CVE-2020-26575</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28030">CVE-2020-28030</a>.</p>
+     <p>To fix these, update to wireshark-3.4.1 or later using the instructions
+     from the development book for
+     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+     <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+     <a id="10.0-054">
+     <h4>10.0 054 P11-Kit  Date: 2020-12-15  Severity: High</h4>
+     <p>In P11-Kit up to 0.23.21 there are two vulnerabilities rated as high, and
+     another rated as medium. See
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29361">CVE-2020-29361</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29362">CVE-2020-29362</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29363">CVE-2020-29363</a>.</p>
+     <p>To fix this, update to p11-kit-0.23.22 or later using the instructions
+     from the development book for
+     <a href="../view/svn/postlfs/p11-kit.html">P11-Kit (sysv)</a> or
+     <a href="../view/systemd/postlfs/p11-kit.html">P11-Kit (systemd)</a>.</p>
+
+     <a id="10.0-053">
+     <h4>10.0 053 Firefox  Date: 2020-12-15  Severity: Critical</h4>
+     <p>Several vulnerabilities were found in firefox before 78.6.0, of which one
+     was rated as critical and four as high by upstream, as well as one rated low
+     (but ratedas Medium by NVD) where internal network hosts and services on the
+     user's machine could have been probed by a malicious webpage. Details are at
+     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-55/">mfsa2020-55</a>
+     and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-16042">CVE-2020-16042</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26971">CVE-2020-26971</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26973">CVE-2020-26973</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26974">CVE-2020-26974</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26978">CVE-2020-26978</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
+     <p>To fix this, update to firefox-78.5.0 or later using the instructions
+     from the development book for
+     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
      <a id="10.0-052">
      <h4>10.0 052 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
      <p>The EDIPARTYNAME NULL pointer de-reference allows an attacker who can
@@ -230,8 +318,7 @@
      <p>Several vulnerabilities were fixed in Thunderbird-78.5.0, two were rated
      High. Details are at
      <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-52/">mfsa2020-52</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26951">CVE-2020-26951</a>.
-     and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26951">CVE-2020-26951</a>,
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26968">CVE-2020-26968</a>.<p>
      <p>To fix this, update to Thunderbird-78.5.0 or later using the instructions
      from the development book for
@@ -287,7 +374,7 @@
 
      <a id="10.0-036">
      <h4>10.0 036 Firefox  Date: 2020-11-16  Severity: High</h4>
-     <p>Several vulnerabilities were fond in firefox before 78.5.0, of which two
+     <p>Several vulnerabilities were found in firefox before 78.5.0, of which two
      were rated as high by upstream. Details are at
      <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-51/">mfsa2020-51</a>
      and
@@ -533,9 +620,12 @@
 
      <a id="10.0-017">
      <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>
-     <p>Five Security Advisories (wnpa-sec-2020-11,12,13) which could cause
+     <p>Three Security Advisories (wnpa-sec-2020-11,12,13) which could cause
      Wireshark to crash were fixed in Wireshark-3.2.7, detailed at
-     <a href="https://www.wireshark.org/security/">Wireshark Security</a>.</p>
+     <a href="https://www.wireshark.org/security/">Wireshark Security</a> and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25862">CVE-2020-25862</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25863">CVE-2020-25863</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25863">CVE-2020-25866</a>.</p>
      <p>To fix these, update to wireshark-3.2.7 or later using the instructions
      from the development book for
      <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or

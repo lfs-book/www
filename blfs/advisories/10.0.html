@@ -24,9 +24,10 @@
      after a release -->
      books.</i></p>
 
-     <p>You may also wish to look for the entries in the Change Log of the
-     relevant book and follow the links to the ticket(s) which the later
-     version(s) fixed in case other relevant changes are noted.</p>
+     <p>In general, the severity is taken from upstream, if supplied, or from
+     NVD (https://nvd.nist.gov/vuln/detail/) if an analysis is available there,
+     but individual severity ratings at NVD can change over time. If no other
+     information is available, 'High' will normally be assumed.</p>
 
      <!-- After a release, copy for next book version, leave just template stuff
       ad initially say "There are no known vulnerabilities." -->
@@ -94,12 +95,17 @@
      <h4>10.0 050 cURL Date: 2020-12-11 Severity: High</h4>
      <p>cURL before version 7.74.0 has two vulnerabilities rated as High, an
      uncontrolled recursion and an improper check for certificate revocation, as
-     well as one rated as Low. To fix these, upgrade to curl-7.74.0 or later.
+     well as one rated as Low. To fix these, update to curl-7.74.0 or later.
      <a href=consolidated.html#10.0-050>10.0-050</a></p>
 
 <!-- end of cURL -->
 
      <h3>Firefox</h3>
+
+     <h4>10.0 053 Firefox  Date: 2020-12-15  Severity: Critical</h4>
+     <p>Several vulnerabilities were found in firefox before 78.6.0, of which one
+     was rated as critical. Update to firefox-78.6.1 or later.
+     <a href=consolidated.html#10.0-053>10.0-053</a></p>
 
      <h4>10.0 036 Firefox  Date: 2020-11-16  Severity: High</h4>
      <p>Several vulnerabilities were fond in firefox before 78.5.0, of which two
@@ -291,6 +297,26 @@
 
 <!-- end of NSS -->
 
+     <h3>OpenJPEG</h3>
+
+     <h4>10.0 058 OpenJPEG  Date: 2020-12-15  Severity: High</h4>
+     <p>In OpenJPEG before 2.4.0 there are two vulnerabilities rated as high
+     (heap-based buffer overflows) and two rated as Medium (crashes on crafted
+     files) as well as several other security fixes.
+     <a href=consolidated.html#10.0-058>10.0-058</a></p>
+
+<!-- end of OpenJPEG -->
+
+     <h3>P11-Kit</h3>
+
+     <h4>10.0 054 P11-Kit  Date: 2020-12-15  Severity: High</h4>
+     <p>In P11-Kit up to 0.23.21 there are multiple integer overflows in the
+     array allocatons, and a heap-based buffer overflow.  Update to
+     p11-kit-0.23.22 or later.
+     <a href=consolidated.html#10.0-054>10.0-054</a></p>
+
+<!-- end of P11-Kit -->
+
      <h3>PHP</h3>
 
      <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
@@ -393,6 +419,17 @@
 
      <h3>Thunderbird</h3>
 
+     <!-- to save putting this in each thunderbird advisory: -->
+     <p><i>In general, flaws in Mozilla advisories for Thunderbird cannot be
+     exploited through email in the Thunderbird product because scripting is
+     disabled when reading mail, but are potentially risks in browser or
+     browser-like contexts.</i></p>
+
+     <h4>10.0 056 Thunderbird  Date: 2020-11-19 Severity: Critical</h4>
+     <p>Several vulnerabilities were fixed in Thunderbird-78.6.0, one was rated
+     as Critical. To fix hese update to Thunderbird-78.6.0 or later.
+     <a href=consolidated.html#10.0-056>10.0-056</a></p>
+
      <h4>10.0 041 Thunderbird  Date: 2020-11-19 Severity: High</h4>
      <p>Several vulnerabilities were fixed in Thunderbird-78.5.0, two were rated
      High. To fix these update to thunderbird-78.5.0 or later.
@@ -437,8 +474,22 @@
 
      <h3>Wireshark</h3>
 
+     <h4>10.0 057 Wireshark  Updated: 2021-02-04  Severity: Invalid</h4>
+     <p>A Medium Security Advisory for a crash in Wireshark 3.4.0 and 3.4.1
+     was raised and allocated a CVE, but it was later determined that the
+     bug was not present in any released version of Wireshark. No action is
+     necessary.
+     <a href=consolidated.html#10.0-057>10.0-057</a></p>
+
+     <h4>10.0 055 Wireshark  Date: 2020-09-23  Severity: High</h4>
+     <p>Four Medium Security Advisories which could cause Wireshark to crash were
+     fixed in Wireshark-3.4.1, but in addition the editors had overlooked a High
+     severity item fixed in Wireshark-3.4.0. To fix all of these, update to
+     Wireshark-3.4.1.
+     <a href=consolidated.html#10.0-055>10.0-055</a></p>
+
      <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>
-     <p>Five Security Advisories (wnpa-sec-2020-11,12,13) were fixed in
+     <p>Three Security Advisories (wnpa-sec-2020-11,12,13) were fixed in
      Wireshark-3.2.7, detailed at
      <a href="https://www.wireshark.org/security/">Wireshark Security</a>.
      To fix these, update to wireshark-3.2.7 or later.
