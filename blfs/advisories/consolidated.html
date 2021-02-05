@@ -25,39 +25,37 @@
      <p><i>This page is ordered like the Changelog of the books, with newest
      items first.</i></p>
 
-     <p>The severity ratings are best estimates unless upstream has assigned
-     a rating. Where a stand-alone application will crash, that will typically
-     be assigned a Medium rating unless it is a security application. If in
-     doubt, read the links.</p>
+     <p>The severity ratings are best estimates unlessi either upstream
+     or NVD has assigned a rating. If no other analysis is available,
+     High will usually be assumed. If in doubt, read the links.</p>
 
      <!-- Editors: Commented entry to copy, and reminder about patches
 
      If there is a CVE, https://nvd.nist.gov/vuln/detail/CVE-YYYY-NNNN
      shows severities.  If not, cve.mitre.org may show some details.
-     But if upstream assigns a severity (often higher than nvd go with that.
+     However, for fresh releases the number will probably be marked as
+     'Reserved'. If upstream assigns a severity (often higher than nvd)
+     go with that. If in doubt, usually default to High.
 
-     <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low/Uncertain</h4>
+     <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
       or
-     <h4>VV.V NNN (LFS) Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low/Uncertain</h4>
-       'Uncertain' items would need to be reviewed quickly!
-       If in doubt default to High.
+     <h4>VV.V NNN (LFS) Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
      <p>Explain the problem, perhaps offering a workaround, and linking to
      relevant CVEs or package advisory notes.
      These have been assigned
      <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12345">CVE-2020-12345</a>
      .</p>
-      BLFS
      <p>To fix this, update to at least Package-VERSION using the instructions
      from the development book for
-      BLFS
+      (BLFS links:)
      <a href="../view/svn/path/something.html">Package (sysv)</a> or
      <a href="../view/systemd/path/something.html">Package (systemd)</a>.</p>
-      LFS: - usually chapter08
+      (LFS links:) - usually chapter08
      <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
      <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
 
      <!-- where a fix used a patch, maybe link to it. e.g.
-     <a href="http://www.linuxfromscratch.org/patches/blfs/svn/libxml2-2.9.10-security_fixes-1.patch">
+     <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
      for clarity. -->
 
      <h2>Items between the releases of the 10.0 and 10.1 books</h2></a>
@@ -72,6 +70,136 @@
       the longer term who knows what will happen to packages (e.g. getting
       replaced or archived). See the gstreamer links re 1.16 for an example of
       linking to a released book (old 10.0) -->
+
+     <a id="10.0-068">
+     <h4>10.0 068 Mutt  Updated: 2021-01-25 Severity: Medium</h4>
+     <p>In mutt through version 2.0.4 it was possible to cause a Denial of
+     Service (the specific mailbox became unreadable) by sending a message with
+     sequences of semicolons in RFC822 fields, causing large memory consumption.
+     See
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3181">CVE-2021-3181</a>.</p>
+     <p>This was initially fixed with a minimal upstream patch,
+     <a href="http://www.linuxfromscratch.org/patches/downloads/mutt/mutt-2.0.4-memleak-1.patch">mutt-2.0.4-memleak-1.patch</a>,
+     but the 2.05 release followed a few days later with slightly more fixes.
+     To fix this update to mutt-2.0.5 or later using the instructions
+     from the development book for
+     <a href="../view/svn/basicnet/mutt.html">Mutt (sysv)</a> or
+     <a href="../view/systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
+
+     <a id="10.0-067">
+     <h4>10.0 067 ImageMagick  Date: 2021-01-14 Severity: High</h4>
+     <!-- unusual wording because we skip most versions, fixes in -35 and -40,
+       some later items looked like they might also be ssecurity-related. -->
+     <p>BLFS updated to ImageMagick-7.0.10-57 from 7.0.10-27 to fix two
+     security vulnerabilities, a division by zero causing Denial of Service,
+     and the -authenticate option to set a password for password-protected PDF
+     files was not properly sanitized, allowing users to inject additional shell
+     commands. For the division by zero,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27560">CVE-2020-27560</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29599">CVE-2020-29599</a>.</p>
+     <p>To fix this, update to ImageMagick-7.0.10-57 or later using the instructions
+     from the development book for
+     <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
+     <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+
+     <a id="10.0-066">
+     <h4>10.0 066 Thunderbird  Date: 2021-01-12 Severity: Critical</h4>
+     <p>In thunderbird before 78.6.1 a malicious peer could have modified a
+     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
+     use-after-free. See
+     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-02/">mfsa2021-02</a>
+     This has been allocated CVE-2020-16044 but for the moment no details are
+     available.</p>
+     <p>To fix this, update to Thunderbird-78.6.1 or later using the instructions
+     from the development book for
+     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+     <a id="10.0-065">
+     <h4>10.0 065 Sudo  Updated: 2021-02-04  Severity: High</h4>
+     <p>In Sudo before 1.9.5 there are two privilege escalation
+     vulnerabilities, one marked as High. See
+     <a href="https://www.openwall.com/lists/oss-security/2021/01/11/2">oss-security</a>
+     and
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23239">CVE-2021-20239</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23240">CVE-2021-23240</a>,.</p>
+     <p>To fix this, update to Sudo-1.9.5p1 or later using the instructions
+     from the development book for
+     <a href="../view/svn/postlfs/sudo.html">Sudo (sysv)</a> or
+     <a href="../view/systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
+
+     <a id="10.0-064">
+     <h4>10.0 064 PHP  Updated: 2021-02-04  Severity: Medium</h4>
+     <p>In PHP before 7.4.14, 8.0.1 FILTER_VALIDATE_URL accepts URLs with
+     invalid userinfo. CVE-2020-7071 has been allocated but for the moment
+     that is "reserved". See
+     <a href="https://security.archlinux.org/ASA-202101-9">ASA-202101-9</a>
+     (Arch linux).</p>
+     <p>To fix this, update to PHP-8.0.1 or later using the instructions
+     from the development book for
+     <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+     <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+     <a id="10.0-063">
+     <h4>10.0 063 Firefox  Date: 2021-01-06  Severity: Critical</h4>
+     <p>In firefox before 78.6.1 a malicious peer could have modified a
+     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
+     use-after-free. See
+     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-01/">mfsa2021-01</a>
+     This has been allocated CVE-2020-16044 but for the moment no details are
+     available.</p>
+     <p>To fix this, update to firefox-78.6.1 or later using the instructions
+     from the development book for
+     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+     <a id="10.0-062">
+     <h4>10.0 062 Node.js  Date: 2021-01-05  Severity: High</h4>
+     <p>In Node.js before 12.20.1, 14.15.4 a high security vulnerability (use
+     after free, leading to Denial of Service or other exploits) as well as
+     two medium security vulnerabilities were found (one is in OpenSSL but
+     could be exploited through Node.js).
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8265">CVE-2020-8265</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8287">CVE-2020-8287</a>,
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1971">CVE-2020-1971</a>.</p>
+     <p>To fix these, update to Node.js-14.15.4 or later using the instructions
+     from the development book for
+     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
+     Alternatively, if you are still using the v12 series, you may prefer to
+     update to v12.20.1 or later.</p>
+
+     <a id="10.0-061">
+     <h4>10.0 061 Poppler  Updated: 2021-02-04  Severity: Disputed</h4>
+     <p>A high severity heap-based buffer overflow via a crafted PDF was reported
+     against Poppler-20.12.1 and assigned
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35702">CVE-2020-35702</a>,
+     but later reports indicate that this only applies to Poppler git clones in
+     late December 2020 (which might be used by third-party projects). For BLFS
+     no action is now necessary.</p>
+
+     <a id="10.0-060">
+     <h4>10.0 060 Dovecot  Date: 2021-01-04  Severity: Medium</h4>
+     <p>In Dovecot before version 2.3.13, if the IMAP hibernation has been
+     enabled (it is off by default) an attacker can access other user's emails
+     and filesystem information.
+     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24386">CVE-2020-24386</a>,
+     <p>A workaround is to disable imap hibernation by ensuring
+     imap_hibernate_timeout is either set to 0 or unset.</p>
+     <p>To fix this, update to dovecot-2.3.13 or later using the instructions
+     from the development book for
+     <a href="../view/svn/server/dovecot.html">Dovecot (sysv)</a> or
+     <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
+
+     <a id="10.0-059">
+     <h4>10.0 059 Libpcap  Date: 2021-01-04  Severity: High</h4>
+     <p>The changes file for Libpcap-1.10.1 at
+     <a href="https://www.tcpdump.org/libpcap-changes.txt">tcpdump.org</a>
+     mentions various security fixes.</p>
+     <p>To fix these, update to Libpcap-1.10.1 or later using the instructions
+     from the development book for
+     <a href="../view/svn/basicnet/libpcap.html">Libpcap (sysv)</a> or
+     <a href="../view/systemd/basicnet/libpcap.html">Libpcap (systemd)</a>.</p>
 
      <a id="10.0-058">
      <h4>10.0 058 OpenJPEG  Date: 2020-12-15  Severity: High</h4>
@@ -357,7 +485,7 @@
      <p>To fix this, update to Node.js-14.15.1 or later using the instructions
      from the development book for
      <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>
+     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
      Alternatively, if you are still using the v12 series, you may prefer to
      update to v12.19.1 or later.</p>
 

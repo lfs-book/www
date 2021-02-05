@@ -100,7 +100,25 @@
 
 <!-- end of cURL -->
 
+     <h3>Dovecot</h3>
+
+     <h4>10.0 060 Dovecot  Date: 2021-01-04  Severity: Medium</h4>
+     <p>In Dovecot before version 2.3.13, if the IMAP hibernation has been
+     enabled (it is off by default) an attacker can access other user's emails
+     and filesystem information. Fix this by updating to dovecot-2.3.13 or later.
+     A workaround is to disable imap hibernation: To do that ensure
+     imap_hibernate_timeout is either set to 0 or unset.
+     <a href=consolidated.html#10.0-060>10.0-060</a></p>
+
+<!-- end of Dovecot -->
+
      <h3>Firefox</h3>
+
+     <h4>10.0 063 Firefox  Date: 2021-01-06  Severity: Critical</h4>
+     <p>In firefox before 78.6.1 a malicious peer could have modified a
+     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
+     use-after-free.
+     <a href=consolidated.html#10.0-063>10.0-063</a></p>
 
      <h4>10.0 053 Firefox  Date: 2020-12-15  Severity: Critical</h4>
      <p>Several vulnerabilities were found in firefox before 78.6.0, of which one
@@ -182,6 +200,17 @@
 
 <!-- end of Gstreamer -->
 
+     <h3>ImageMagick</h3>
+
+     <h4>10.0 067 ImageMagick  Date: 2021-01-14 Severity: High</h4>
+     <p>Two vulnerabilities were fond in ImageMagick, a division by zero causing
+     Denial of Service, and the -authenticate option to set a password for
+     password-protected PDF files was not properly sanitized, allowing users to
+     inject additional shell commands.
+     <a href=consolidated.html#10.0-067>10.0-067</a></p>
+
+<!-- end of ImageMagick -->
+
      <h3>JS78</h3>
 
      <h4>10.0 037 JS78  Date: 2020-11-16  Severity: High</h4>
@@ -225,6 +254,15 @@
 
 <!-- end of LibEXIF -->
 
+     <h3>Libpcap</h3>
+
+     <h4>10.0 059 Libpcap  Date: 2021-01-04  Severity: High</h4>
+     <p>The changes file for Libpcap-1.10.1 mentions several security
+     fixes. To apply these, update to Libpcap-1.10.1 or later.
+     <a href=consolidated.html#10.0-059>10.0-059</a></p>
+
+<!--- end of libpcap -->
+
      <h3>LibX11</h3>
 
      <h4>10.0 001 LibX11  Date: 2020-09-03  Severity: High</h4>
@@ -264,6 +302,13 @@
 
      <h3>Mutt</h3>
 
+     <h4>10.0 068 Mutt  Updated: 2021-01-25 Severity: Medium</h4>
+     <p>In mutt through version 2.0.4 it was possible to cause a Denial of
+     Service (the specific mailbox became unreadable) by sending a message with
+     sequences of semicolons in RFC822 fields, causing large memory consumption.
+     To fix this, update to mutt-2.0.5 or later.
+     <a href=consolidated.html#10.0-068>10.0-068</a></p>
+
      <h4>10.0 046 Mutt Date: 2020-11-26 Severity: Medium</h4>
      <p>Mutt before version 2.0.2 had incorrect error handling when initially connecting
      to an IMAP server, which could result in an attempt to authenticate without enabling
@@ -274,10 +319,19 @@
 
      <h3>Node.js</h3>
 
+     <h4>10.0 062 Node.js  Date: 2021-01-05  Severity: High</h4>
+     <p>In Node.js before 12.20.1, 14.15.4 a high security vulnerability (use
+     after free, leading to Denial of Service or other exploits) as well as
+     two medium security vulnerabilities were found. Update to v14.15.4 or later,
+     or alternatively if remaining with the v12 series update to v12.20.1 or
+     later.
+     <a href=consolidated.html#10.0-062>10.0-062</a></p>
+
      <h4>10.0 038 Node.js  Date: 2020-11-19  Severity: High</h4>
      <p>An attacker could cause a Denial of Service via a DNS request for a
      host of their choice which resulted in an unexpectedly large number of
-     responses.
+     responses. Update to v14.15.1 or later, or if remaining with the v12
+     series update to v12.19.1 or later.
      <a href=consolidated.html#10.0-038>10.0-038</a></p>
 
      <h4>10.0 012 Node.js  Date: 2020-09-17  Severity: High</h4>
@@ -319,12 +373,29 @@
 
      <h3>PHP</h3>
 
+     <h4>10.0 064 PHP  Upated: 2021-02-04  Severity: Medium</h4>
+     <p>In PHP before 7.4.14, 8.0.1 FILTER_VALIDATE_URL accepts URLs with
+     invalid userinfo. To fix this, update to PHP-8.0.1 or later (or
+     7.4.14 if later if using the old series).
+     <a href=consolidated.html#10.0-064>10.0-064</a></p>
+
      <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
      <p>PHP before 7.4.11 had two CVE vulnerabilities. To fix these, update
      to PHP-7.4.11 or later.
      <a href=consolidated.html#10.0-019>10.0-019</a></p>
 
 <!-- end of PHP -->
+
+     <h3>Poppler</h3>
+
+     <h4>10.0 061 Poppler  Updated: 2021-02-04  Severity: Disputed</h4>
+     <p>A high severity heap-based buffer overflow via a crafted PDF was reported
+     against Poppler-20.12.1, but later reports indicate that this only applies to
+     Poppler git clones in late December 2020 (which might be used by third-party
+     projects). For BLFS no action is now necessary.
+     <a href=consolidated.html#10.0-061>10.0-061</a></p>
+
+<!-- end of Poppler -->
 
       <h3>PostgreSQL</h3>
 
@@ -417,6 +488,15 @@
 
 <!-- end of stunnel -->
 
+     <h3>Sudo</h3>
+
+     <h4>10.0 065 Sudo  Updated: 2021-02-04  Severity: High</h4>
+     <p>In Sudo before 1.9.5 there are two privilege escalation
+     vulnerabilities, one marked as High.
+     <a href=consolidated.html#10.0-065>10.0-065</a></p>
+
+<!-- end of Sudo -->
+
      <h3>Thunderbird</h3>
 
      <!-- to save putting this in each thunderbird advisory: -->
@@ -425,9 +505,15 @@
      disabled when reading mail, but are potentially risks in browser or
      browser-like contexts.</i></p>
 
+     <h4>10.0 066 Thunderbird  Date: 2021-01-12 Severity: Critical</h4>
+     <p>In thunderbird before 78.6.1 a malicious peer could have modified a
+     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
+     use-after-free. To fix this update to Thunderbird-78.6.1 or later.
+     <a href=consolidated.html#10.0-066>10.0-066</a></p>
+
      <h4>10.0 056 Thunderbird  Date: 2020-11-19 Severity: Critical</h4>
      <p>Several vulnerabilities were fixed in Thunderbird-78.6.0, one was rated
-     as Critical. To fix hese update to Thunderbird-78.6.0 or later.
+     as Critical. To fix these update to Thunderbird-78.6.0 or later.
      <a href=consolidated.html#10.0-056>10.0-056</a></p>
 
      <h4>10.0 041 Thunderbird  Date: 2020-11-19 Severity: High</h4>
