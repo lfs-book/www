@@ -135,9 +135,11 @@
            using the instructions in
            <a href="../../view/systemd/general/ruby.html">Ruby-2.7.2</a>.</li>
        <li>After release, a security vulnerability was discovered in the way
-           that GLib handles URIs. To fix this vulnerability, update to
-           GLib-2.66.1 or later using the instructions in
-           <a href="../../view/systemd/general/glib2.html">GLib-2.66.1</a>.</li>
+           that GLib handles URIs. Additionally, a critical zero-day security
+           vulnerability was discovered in the way that GLib handles memory
+           duplication. To fix these vulnerabilities, update to
+           GLib-2.66.6 or later using the instructions in
+           <a href="../../view/systemd/general/glib2.html">GLib-2.66.6</a>.</li>
        <li>After release, a security vulnerability was discovered in NSS.
            This was fixed by tighetning CCS handling when the client doesn't
            indicate middlebox compatibilty. To fix this vulnerability, update to
@@ -299,6 +301,11 @@
            is used to provide the urllist. See <a
            href="http://lists.linuxfromscratch.org/pipermail/blfs-support/2021-January/082465.html">lists.linuxfromscratch.org</a>
            for the recommended way to do this.</li>
+       <li>After release, 25 security vulnerabilities were fixed in JasPer.
+           It can be assumed that some of these vulnerabilities are high or
+           critical severity. To fix these vulnerabilities, update to
+           <a href="../../view/systemd/general/jasper.html">JasPer-2.0.24</a>
+           as soon as possible.</li>
      </ul>
 
 <!--#include virtual="/common/footer.html" -->
