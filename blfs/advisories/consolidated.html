@@ -71,6 +71,75 @@
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
 
+    <a id="10.0-073">
+    <h4>10.0 073 Sudo  Date: 2021-01-26  Severity: Critical</h4>
+    <p>In Sudo before 1.9.5p2 the 'Baron Samedi' exploit allows privilege
+    escalation, see
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3156">CVE-2021-3156</a>.</p>
+    <p>To fix this, update to Sudo-1.9.5p2 or later using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/sudo.html">Sudo (sysv)</a> or
+    <a href="../view/systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
+
+    <a id="10.0-072">
+    <h4>10.0 072 JS78  Date: 2021-01-26  Severity: High</h4>
+    <p>In the javascript code of firefox-78.7.0 there is a fix for
+    a 'Use-after-poison' vulnerability leading to a potentially exploitable
+    crash. CVE-2021-23960 has been assigned but details are not yet public.
+    Summary details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-04/">mfsa2021-04</a>.</p>
+    <p>To fix this, update to JS-78.7.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
+    <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
+
+    <a id="10.0-071">
+    <h4>10.0 071 Firefox  Date: 2021-01-26  Severity: High</h4>
+    <p>In firefox 78.7.0 several vulnerabilities were fixed, the following
+    are rated as High. See
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-04/">mfsa2021-04</a>.
+<!--<a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23953">CVE-2021-23953</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23954">CVE-2021-23954</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23960">CVE-2021-23960</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23964">CVE-2021-23964</a>.</p>-->
+    CVEs have been assigned (CVE-2021-23953, CVE-2021-23954, CVE-20201-23960,
+    CVE-2021-23964) but details are not yet public.</p>
+    <p>To fix these, update to firefox-78.7.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="10.0-070">
+    <h4>10.0 070 Vorbis Tools  Updated: 2021-01-26  Severity: High</h4>
+    <p>Three vulnerabilities in Vorbis Tools 1.4.0 could cause crashes.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2014-9638">CVE-2014-9638</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2014-9639">CVE-2014-9639</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-11331">CVE-2017-11331</a>.</p>
+    <p>To fix these, update to Vorbis Tools 1.4.2 or later using the instructions
+    from the development book for
+    <a href="../view/svn/multimedia/vorbistools.html">Vorbis Tools (sysv)</a> or
+    <a href="../view/systemd/multimedia/vorbistools.html">Vorbis Tools (systemd)</a>.</p>
+
+    <a id="10.0-069">
+    <h4>10.0 069 Seamonkey  Updated: 2021-01-26  Severity: Critical</h4>
+    <p>Fixes from firefox-78.4.1 to 78.6.0, and from thunderbird-78.6.0
+    were included in seamonkey-2.53.6. See
+    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14548"/>BLFS #14548</a>.
+    The following are rated as Critical or High:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-16042">CVE-2020-16042</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26951">CVE-2020-26951</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26968">CVE-2020-26968</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26970">CVE-2020-26970</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26973">CVE-2020-26973</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26974">CVE-2020-26974</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26978">CVE-2020-26978</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
+    <p>To fix these, update to Seamonkey-2.53.6 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
     <a id="10.0-068">
     <h4>10.0 068 Mutt  Updated: 2021-01-25 Severity: Medium</h4>
     <p>In mutt through version 2.0.4 it was possible to cause a Denial of
@@ -230,6 +299,7 @@
     as Critical. Details are at
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-56/">mfsa2020-56</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-16042">CVE-2020-16042</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26970">CVE-2020-26970</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26971">CVE-2020-26971</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26973">CVE-2020-26973</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26974">CVE-2020-26974</a>,
