@@ -71,6 +71,30 @@
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
 
+    <a id="10.0-075">
+    <h4>10.0 075 VLC Media Player  Date: 2021-01-30  Severity: High</h4>
+    <p>In VLC Media Player up to and including version 3.0.11 a remote user
+    could create a speciaaly crafted file or stream that would lead to crashes
+    and potential information leakage, or perhaps arbitrary code execution.
+    <a href="https://www.videolan.org/security/sb-vlc3012.html">VideoLAN-SB-VLC-3012
+</a>.</p>
+    <p>To fix this, update to VLC-3.0.12 or later using the instructions
+    from the development book for
+    <a href="../view/svn/multimedia/vlc.html">VLC (sysv)</a> or
+    <a href="../view/systemd/multimedia/vlc.html">VLC (systemd)</a>.</p>
+
+    <a id="10.0-074">
+    <h4>10.0 074 GPTfdisk  Date: 2021-01-26  Severity: Moderate</h4>
+    <p>In GPTfdisk before version 1.0.6 a possible out-of-bounds write in
+    ReadLogicalParts of basicmbr.cc could be triggered by running gdisk or
+    cgdisk on an improperly formatted MBR partition, leading to arbitrary code
+    execution.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0308">CVE-2021-0308</a>.</p>
+    <p>To fix this, update to GPTfdisk-1.0.6 or later using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/gptfdisk.html">GPTfdisk (sysv)</a> or
+    <a href="../view/systemd/postlfs/gptfdisk.html">GPTfdisk (systemd)</a>.</p>
+
     <a id="10.0-073">
     <h4>10.0 073 Sudo  Date: 2021-01-26  Severity: Critical</h4>
     <p>In Sudo before 1.9.5p2 the 'Baron Samedi' exploit allows privilege
