@@ -5,961 +5,948 @@
     for this page which covers both ? -->
     <div class="main">
 
-     <h1>LFS and BLFS Security Advisories from September 2020 onwards</h1>
+    <h1>LFS and BLFS Security Advisories from September 2020 onwards</h1>
 
-     <p>LFS has not reported Security Vulnerabilities in the Errata, at least
-     recently, but tickets for some new versions have had details.</p>
+    <p>LFS has not reported Security Vulnerabilities in the Errata, at least
+    recently, but tickets for some new versions have had details.</p>
 
-     <p>BLFS used to keep details of Security Vulnerabilities in the Errata,
-     mostly updating them to point to the latest version in the development book
-     and updating the brief text if a subsequent vulnerability was reported.</p>
+    <p>BLFS used to keep details of Security Vulnerabilities in the Errata,
+    mostly updating them to point to the latest version in the development book
+    and updating the brief text if a subsequent vulnerability was reported.</p>
 
-     <p><b>This page is a consolidated list for both LFS and BLFS.</b></p>
+    <p><b>This page is a consolidated list for both LFS and BLFS.</b></p>
 
-     <p>This list contains summary details and links to upstreams or CVEs where
-     available. Please note that vulnerabilities to package versions before those
-     in our 10.0 releases are not noted, so if you are running a version of BLFS
-     before 10.0 you should check the Errata for past releases as well as
-     monitoring the items here.</p>
+    <p>This list contains summary details and links to upstreams or CVEs where
+    available. Please note that vulnerabilities to package versions before those
+    in our 10.0 releases are not noted, so if you are running a version of BLFS
+    before 10.0 you should check the Errata for past releases as well as
+    monitoring the items here.</p>
 
-     <p><i>This page is ordered like the Changelog of the books, with newest
-     items first.</i></p>
+    <p><i>This page is ordered like the Changelog of the books, with newest
+    items first.</i></p>
 
-     <p>The severity ratings are best estimates unlessi either upstream
-     or NVD has assigned a rating. If no other analysis is available,
-     High will usually be assumed. If in doubt, read the links.</p>
+    <p>The severity ratings are best estimates unlessi either upstream
+    or NVD has assigned a rating. If no other analysis is available,
+    High will usually be assumed. If in doubt, read the links.</p>
 
-     <!-- Editors: Commented entry to copy, and reminder about patches
+    <!-- Editors: Commented entry to copy, and reminder about patches
 
-     If there is a CVE, https://nvd.nist.gov/vuln/detail/CVE-YYYY-NNNN
-     shows severities.  If not, cve.mitre.org may show some details.
-     However, for fresh releases the number will probably be marked as
-     'Reserved'. If upstream assigns a severity (often higher than nvd)
-     go with that. If in doubt, usually default to High.
+    If there is a CVE, https://nvd.nist.gov/vuln/detail/CVE-YYYY-NNNN
+    shows severities.  If not, cve.mitre.org may show some details.
+    However, for fresh releases the number will probably be marked as
+    'Reserved'. If upstream assigns a severity (often higher than nvd)
+    go with that. If in doubt, usually default to High.
 
-     <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
+    <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
       or
-     <h4>VV.V NNN (LFS) Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
-     <p>Explain the problem, perhaps offering a workaround, and linking to
-     relevant CVEs or package advisory notes.
-     These have been assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12345">CVE-2020-12345</a>
-     .</p>
-     <p>To fix this, update to at least Package-VERSION using the instructions
-     from the development book for
-      (BLFS links:)
-     <a href="../view/svn/path/something.html">Package (sysv)</a> or
-     <a href="../view/systemd/path/something.html">Package (systemd)</a>.</p>
-      (LFS links:) - usually chapter08
-     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
+    <h4>VV.V NNN (LFS) Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
+    <p>Explain the problem, perhaps offering a workaround, and linking to
+    relevant CVEs or package advisory notes.
+    These have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12345">CVE-2020-12345</a>.</p>
+    <p>To fix this, update to at least Package-VERSION using the instructions
+    from the development book for
+     (BLFS links:)
+    <a href="../view/svn/path/something.html">Package (sysv)</a> or
+    <a href="../view/systemd/path/something.html">Package (systemd)</a>.</p>
+     (LFS links:) - usually chapter08
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
 
-     <!-- where a fix used a patch, maybe link to it. e.g.
-     <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
+    <!-- where a fix used a patch, maybe link to it. e.g.
+    <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
      for clarity. -->
 
-     <h2>Items between the releases of the 10.0 and 10.1 books</h2></a>
+    <h2>Items between the releases of the 10.0 and 10.1 books</h2></a>
 
-     <!-- Editors: This batch of advisories for the 10.0 books point to the
-      development books until we make a release. After a release, new advisories
-      for 10.1 need to point to the development books, but the existing 10.0
-      advisories need to be changed to point to 10.1 (sic), not 'stable' which
-      is a symlink and can change over time. That might sound odd, but the 10.0
-      advisories wre developed during the build up to 10.1, so in normal
-      circumstances the 'or later' will be valid for the 10.1 release, but over
-      the longer term who knows what will happen to packages (e.g. getting
-      replaced or archived). See the gstreamer links re 1.16 for an example of
-      linking to a released book (old 10.0) -->
+    <!-- Editors: This batch of advisories for the 10.0 books point to the
+    development books until we make a release. After a release, new advisories
+    for 10.1 need to point to the development books, but the existing 10.0
+    advisories need to be changed to point to 10.1 (sic), not 'stable' which
+    is a symlink and can change over time. That might sound odd, but the 10.0
+    advisories wre developed during the build up to 10.1, so in normal
+    circumstances the 'or later' will be valid for the 10.1 release, but over
+    the longer term who knows what will happen to packages (e.g. getting
+    replaced or archived). See the gstreamer links re 1.16 for an example of
+    linking to a released book (old 10.0) -->
 
-     <a id="10.0-068">
-     <h4>10.0 068 Mutt  Updated: 2021-01-25 Severity: Medium</h4>
-     <p>In mutt through version 2.0.4 it was possible to cause a Denial of
-     Service (the specific mailbox became unreadable) by sending a message with
-     sequences of semicolons in RFC822 fields, causing large memory consumption.
-     See
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3181">CVE-2021-3181</a>.</p>
-     <p>This was initially fixed with a minimal upstream patch,
-     <a href="http://www.linuxfromscratch.org/patches/downloads/mutt/mutt-2.0.4-memleak-1.patch">mutt-2.0.4-memleak-1.patch</a>,
-     but the 2.05 release followed a few days later with slightly more fixes.
-     To fix this update to mutt-2.0.5 or later using the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/mutt.html">Mutt (sysv)</a> or
-     <a href="../view/systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
+    <a id="10.0-068">
+    <h4>10.0 068 Mutt  Updated: 2021-01-25 Severity: Medium</h4>
+    <p>In mutt through version 2.0.4 it was possible to cause a Denial of
+    Service (the specific mailbox became unreadable) by sending a message with
+    sequences of semicolons in RFC822 fields, causing large memory consumption.
+    See
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3181">CVE-2021-3181</a>.</p>
+    <p>This was initially fixed with a minimal upstream patch,
+    <a href="http://www.linuxfromscratch.org/patches/downloads/mutt/mutt-2.0.4-memleak-1.patch">mutt-2.0.4-memleak-1.patch</a>,
+    but the 2.05 release followed a few days later with slightly more fixes.
+    To fix this update to mutt-2.0.5 or later using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/mutt.html">Mutt (sysv)</a> or
+    <a href="../view/systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
 
-     <a id="10.0-067">
-     <h4>10.0 067 ImageMagick  Date: 2021-01-14 Severity: High</h4>
-     <!-- unusual wording because we skip most versions, fixes in -35 and -40,
-       some later items looked like they might also be ssecurity-related. -->
-     <p>BLFS updated to ImageMagick-7.0.10-57 from 7.0.10-27 to fix two
-     security vulnerabilities, a division by zero causing Denial of Service,
-     and the -authenticate option to set a password for password-protected PDF
-     files was not properly sanitized, allowing users to inject additional shell
-     commands. For the division by zero,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27560">CVE-2020-27560</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29599">CVE-2020-29599</a>.</p>
-     <p>To fix this, update to ImageMagick-7.0.10-57 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
-     <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+    <a id="10.0-067">
+    <h4>10.0 067 ImageMagick  Date: 2021-01-14 Severity: High</h4>
+    <!-- unusual wording because we skip most versions, fixes in -35 and -40,
+      some later items looked like they might also be ssecurity-related. -->
+    <p>BLFS updated to ImageMagick-7.0.10-57 from 7.0.10-27 to fix two
+    security vulnerabilities, a division by zero causing Denial of Service,
+    and the -authenticate option to set a password for password-protected PDF
+    files was not properly sanitized, allowing users to inject additional shell
+    commands. For the division by zero,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27560">CVE-2020-27560</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29599">CVE-2020-29599</a>.</p>
+    <p>To fix this, update to ImageMagick-7.0.10-57 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
 
-     <a id="10.0-066">
-     <h4>10.0 066 Thunderbird  Date: 2021-01-12 Severity: Critical</h4>
-     <p>In thunderbird before 78.6.1 a malicious peer could have modified a
-     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
-     use-after-free. See
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-02/">mfsa2021-02</a>
-     This has been allocated CVE-2020-16044 but for the moment no details are
-     available.</p>
-     <p>To fix this, update to Thunderbird-78.6.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a id="10.0-066">
+    <h4>10.0 066 Thunderbird  Date: 2021-01-12 Severity: Critical</h4>
+    <p>In thunderbird before 78.6.1 a malicious peer could have modified a
+    COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
+    use-after-free. See
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-02/">mfsa2021-02</a>
+    This has been allocated CVE-2020-16044 but for the moment no details are
+    available.</p>
+    <p>To fix this, update to Thunderbird-78.6.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
-     <a id="10.0-065">
-     <h4>10.0 065 Sudo  Updated: 2021-02-04  Severity: High</h4>
-     <p>In Sudo before 1.9.5 there are two privilege escalation
-     vulnerabilities, one marked as High. See
-     <a href="https://www.openwall.com/lists/oss-security/2021/01/11/2">oss-security</a>
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23239">CVE-2021-20239</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23240">CVE-2021-23240</a>,.</p>
-     <p>To fix this, update to Sudo-1.9.5p1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/postlfs/sudo.html">Sudo (sysv)</a> or
-     <a href="../view/systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
+    <a id="10.0-065">
+    <h4>10.0 065 Sudo  Updated: 2021-02-04  Severity: High</h4>
+    <p>In Sudo before 1.9.5 there are two privilege escalation
+    vulnerabilities, one marked as High. See
+    <a href="https://www.openwall.com/lists/oss-security/2021/01/11/2">oss-security</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23239">CVE-2021-20239</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23240">CVE-2021-23240</a>,.</p>
+    <p>To fix this, update to Sudo-1.9.5p1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/sudo.html">Sudo (sysv)</a> or
+    <a href="../view/systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
 
-     <a id="10.0-064">
-     <h4>10.0 064 PHP  Updated: 2021-02-04  Severity: Medium</h4>
-     <p>In PHP before 7.4.14, 8.0.1 FILTER_VALIDATE_URL accepts URLs with
-     invalid userinfo. CVE-2020-7071 has been allocated but for the moment
-     that is "reserved". See
-     <a href="https://security.archlinux.org/ASA-202101-9">ASA-202101-9</a>
-     (Arch linux).</p>
-     <p>To fix this, update to PHP-8.0.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-     <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a id="10.0-064">
+    <h4>10.0 064 PHP  Updated: 2021-02-04  Severity: Medium</h4>
+    <p>In PHP before 7.4.14, 8.0.1 FILTER_VALIDATE_URL accepts URLs with
+    invalid userinfo. CVE-2020-7071 has been allocated but for the moment
+    that is "reserved". See
+    <a href="https://security.archlinux.org/ASA-202101-9">ASA-202101-9</a>
+    (Arch linux).</p>
+    <p>To fix this, update to PHP-8.0.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
 
-     <a id="10.0-063">
-     <h4>10.0 063 Firefox  Date: 2021-01-06  Severity: Critical</h4>
-     <p>In firefox before 78.6.1 a malicious peer could have modified a
-     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
-     use-after-free. See
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-01/">mfsa2021-01</a>
-     This has been allocated CVE-2020-16044 but for the moment no details are
-     available.</p>
-     <p>To fix this, update to firefox-78.6.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a id="10.0-063">
+    <h4>10.0 063 Firefox  Date: 2021-01-06  Severity: Critical</h4>
+    <p>In firefox before 78.6.1 a malicious peer could have modified a
+    COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
+    use-after-free. See
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-01/">mfsa2021-01</a>
+    This has been allocated CVE-2020-16044 but for the moment no details are
+    available.</p>
+    <p>To fix this, update to firefox-78.6.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
-     <a id="10.0-062">
-     <h4>10.0 062 Node.js  Date: 2021-01-05  Severity: High</h4>
-     <p>In Node.js before 12.20.1, 14.15.4 a high security vulnerability (use
-     after free, leading to Denial of Service or other exploits) as well as
-     two medium security vulnerabilities were found (one is in OpenSSL but
-     could be exploited through Node.js).
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8265">CVE-2020-8265</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8287">CVE-2020-8287</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1971">CVE-2020-1971</a>.</p>
-     <p>To fix these, update to Node.js-14.15.4 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
-     Alternatively, if you are still using the v12 series, you may prefer to
-     update to v12.20.1 or later.</p>
+    <a id="10.0-062">
+    <h4>10.0 062 Node.js  Date: 2021-01-05  Severity: High</h4>
+    <p>In Node.js before 12.20.1, 14.15.4 a high security vulnerability (use
+    after free, leading to Denial of Service or other exploits) as well as
+    two medium security vulnerabilities were found (one is in OpenSSL but
+    could be exploited through Node.js).
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8265">CVE-2020-8265</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8287">CVE-2020-8287</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1971">CVE-2020-1971</a>.</p>
+    <p>To fix these, update to Node.js-14.15.4 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
+    Alternatively, if you are still using the v12 series, you may prefer to
+    update to v12.20.1 or later.</p>
 
-     <a id="10.0-061">
-     <h4>10.0 061 Poppler  Updated: 2021-02-04  Severity: Disputed</h4>
-     <p>A high severity heap-based buffer overflow via a crafted PDF was reported
-     against Poppler-20.12.1 and assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35702">CVE-2020-35702</a>,
-     but later reports indicate that this only applies to Poppler git clones in
-     late December 2020 (which might be used by third-party projects). For BLFS
-     no action is now necessary.</p>
+    <a id="10.0-061">
+    <h4>10.0 061 Poppler  Updated: 2021-02-04  Severity: Disputed</h4>
+    <p>A high severity heap-based buffer overflow via a crafted PDF was reported
+    against Poppler-20.12.1 and assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35702">CVE-2020-35702</a>,
+    but later reports indicate that this only applies to Poppler git clones in
+    late December 2020 (which might be used by third-party projects). For BLFS
+    no action is now necessary.</p>
 
-     <a id="10.0-060">
-     <h4>10.0 060 Dovecot  Date: 2021-01-04  Severity: Medium</h4>
-     <p>In Dovecot before version 2.3.13, if the IMAP hibernation has been
-     enabled (it is off by default) an attacker can access other user's emails
-     and filesystem information.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24386">CVE-2020-24386</a>,
-     <p>A workaround is to disable imap hibernation by ensuring
-     imap_hibernate_timeout is either set to 0 or unset.</p>
-     <p>To fix this, update to dovecot-2.3.13 or later using the instructions
-     from the development book for
-     <a href="../view/svn/server/dovecot.html">Dovecot (sysv)</a> or
-     <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
+    <a id="10.0-060">
+    <h4>10.0 060 Dovecot  Date: 2021-01-04  Severity: Medium</h4>
+    <p>In Dovecot before version 2.3.13, if the IMAP hibernation has been
+    enabled (it is off by default) an attacker can access other user's emails
+    and filesystem information.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24386">CVE-2020-24386</a>,
+    <p>A workaround is to disable imap hibernation by ensuring
+    imap_hibernate_timeout is either set to 0 or unset.</p>
+    <p>To fix this, update to dovecot-2.3.13 or later using the instructions
+    from the development book for
+    <a href="../view/svn/server/dovecot.html">Dovecot (sysv)</a> or
+    <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
 
-     <a id="10.0-059">
-     <h4>10.0 059 Libpcap  Date: 2021-01-04  Severity: High</h4>
-     <p>The changes file for Libpcap-1.10.1 at
-     <a href="https://www.tcpdump.org/libpcap-changes.txt">tcpdump.org</a>
-     mentions various security fixes.</p>
-     <p>To fix these, update to Libpcap-1.10.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/libpcap.html">Libpcap (sysv)</a> or
-     <a href="../view/systemd/basicnet/libpcap.html">Libpcap (systemd)</a>.</p>
+    <a id="10.0-059">
+    <h4>10.0 059 Libpcap  Date: 2021-01-04  Severity: High</h4>
+    <p>The changes file for Libpcap-1.10.1 at
+    <a href="https://www.tcpdump.org/libpcap-changes.txt">tcpdump.org</a>
+    mentions various security fixes.</p>
+    <p>To fix these, update to Libpcap-1.10.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/libpcap.html">Libpcap (sysv)</a> or
+    <a href="../view/systemd/basicnet/libpcap.html">Libpcap (systemd)</a>.</p>
 
-     <a id="10.0-058">
-     <h4>10.0 058 OpenJPEG  Date: 2020-12-15  Severity: High</h4>
-     <p>In OpenJPEG before 2.4.0 there are two vulnerabilities rated as high, and
-     another two rated as medium. See
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-6988">CVE-2019-6988</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-12973">CVE-2019-12793</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-6851">CVE-2020-6851</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8112">CVE-2020-8112</a>.</p>
-     <p>To fix these, update to OpenJPEG-2.4.0 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/openjpeg2.html">OpenJPEG2 (sysv)</a> or
-     <a href="../view/systemd/general/openjpeg2.html">OpenJPEG2 (systemd)</a>.</p>
+    <a id="10.0-058">
+    <h4>10.0 058 OpenJPEG  Date: 2020-12-15  Severity: High</h4>
+    <p>In OpenJPEG before 2.4.0 there are two vulnerabilities rated as high, and
+    another two rated as medium. See
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-6988">CVE-2019-6988</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-12973">CVE-2019-12793</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-6851">CVE-2020-6851</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8112">CVE-2020-8112</a>.</p>
+    <p>To fix these, update to OpenJPEG-2.4.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/openjpeg2.html">OpenJPEG2 (sysv)</a> or
+    <a href="../view/systemd/general/openjpeg2.html">OpenJPEG2 (systemd)</a>.</p>
 
-     <a id="10.0-057">
-     <h4>10.0 057 Wireshark  Updated: 2021-02-04  Severity: Invalid</h4>
-     <p>A Medium Security Advisory for a crash in Wireshark 3.4.0 and 3.4.1
-     was raised and allocated
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26422">CVE-2020-26422</a>,
-     but it was later determined that the bug was not present in any released
-     version of Wireshark:
-     <a href="https://www.wireshark.org/security/wnpa-sec-2020-20.html">wnpa-sec-2020-20</a>
-     so no action is necessary.</p>
+    <a id="10.0-057">
+    <h4>10.0 057 Wireshark  Updated: 2021-02-04  Severity: Invalid</h4>
+    <p>A Medium Security Advisory for a crash in Wireshark 3.4.0 and 3.4.1
+    was raised and allocated
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26422">CVE-2020-26422</a>,
+    but it was later determined that the bug was not present in any released
+    version of Wireshark:
+    <a href="https://www.wireshark.org/security/wnpa-sec-2020-20.html">wnpa-sec-2020-20</a>
+    so no action is necessary.</p>
 
-     <a id="10.0-056">
-     <h4>10.0 056 Thunderbird  Date: 2020-11-19 Severity: Critical</h4>
-     <p>Several vulnerabilities were fixed in Thunderbird-78.6.0, one was rated
-     as Critical. Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-56/">mfsa2020-56</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-16042">CVE-2020-16042</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26971">CVE-2020-26971</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26973">CVE-2020-26973</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26974">CVE-2020-26974</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26978">CVE-2020-26978</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
-     <p>To fix this, update to Thunderbird-78.6.0 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a id="10.0-056">
+    <h4>10.0 056 Thunderbird  Date: 2020-11-19 Severity: Critical</h4>
+    <p>Several vulnerabilities were fixed in Thunderbird-78.6.0, one was rated
+    as Critical. Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-56/">mfsa2020-56</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-16042">CVE-2020-16042</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26971">CVE-2020-26971</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26973">CVE-2020-26973</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26974">CVE-2020-26974</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26978">CVE-2020-26978</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
+    <p>To fix this, update to Thunderbird-78.6.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
-     <a id="10.0-055">
-     <h4>10.0 055 Wireshark  Date: 2020-09-23  Severity: High</h4>
-     <p>Four Medium Security Advisories for items which could cause Wireshark
-     to crash were fixed in Wireshark-3.4.1, detailed at
-     <a href="https://www.wireshark.org/security/">Wireshark Security</a>,
-     but in addition the editors had overlooked a High severity item fixed in
-     Wireshark-3.4.0.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26418">CVE-2020-26418</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26419">CVE-2020-26419</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26420">CVE-2020-26420</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26421">CVE-2020-26421</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26575">CVE-2020-26575</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28030">CVE-2020-28030</a>.</p>
-     <p>To fix these, update to wireshark-3.4.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-     <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a id="10.0-055">
+    <h4>10.0 055 Wireshark  Date: 2020-09-23  Severity: High</h4>
+    <p>Four Medium Security Advisories for items which could cause Wireshark
+    to crash were fixed in Wireshark-3.4.1, detailed at
+    <a href="https://www.wireshark.org/security/">Wireshark Security</a>,
+    but in addition the editors had overlooked a High severity item fixed in
+    Wireshark-3.4.0.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26418">CVE-2020-26418</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26419">CVE-2020-26419</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26420">CVE-2020-26420</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26421">CVE-2020-26421</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26575">CVE-2020-26575</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28030">CVE-2020-28030</a>.</p>
+    <p>To fix these, update to wireshark-3.4.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
-     <a id="10.0-054">
-     <h4>10.0 054 P11-Kit  Date: 2020-12-15  Severity: High</h4>
-     <p>In P11-Kit up to 0.23.21 there are two vulnerabilities rated as high, and
-     another rated as medium. See
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29361">CVE-2020-29361</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29362">CVE-2020-29362</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29363">CVE-2020-29363</a>.</p>
-     <p>To fix this, update to p11-kit-0.23.22 or later using the instructions
-     from the development book for
-     <a href="../view/svn/postlfs/p11-kit.html">P11-Kit (sysv)</a> or
-     <a href="../view/systemd/postlfs/p11-kit.html">P11-Kit (systemd)</a>.</p>
+    <a id="10.0-054">
+    <h4>10.0 054 P11-Kit  Date: 2020-12-15  Severity: High</h4>
+    <p>In P11-Kit up to 0.23.21 there are two vulnerabilities rated as high, and
+    another rated as medium. See
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29361">CVE-2020-29361</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29362">CVE-2020-29362</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29363">CVE-2020-29363</a>.</p>
+    <p>To fix this, update to p11-kit-0.23.22 or later using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/p11-kit.html">P11-Kit (sysv)</a> or
+    <a href="../view/systemd/postlfs/p11-kit.html">P11-Kit (systemd)</a>.</p>
 
-     <a id="10.0-053">
-     <h4>10.0 053 Firefox  Date: 2020-12-15  Severity: Critical</h4>
-     <p>Several vulnerabilities were found in firefox before 78.6.0, of which one
-     was rated as critical and four as high by upstream, as well as one rated low
-     (but ratedas Medium by NVD) where internal network hosts and services on the
-     user's machine could have been probed by a malicious webpage. Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-55/">mfsa2020-55</a>
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-16042">CVE-2020-16042</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26971">CVE-2020-26971</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26973">CVE-2020-26973</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26974">CVE-2020-26974</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26978">CVE-2020-26978</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
-     <p>To fix this, update to firefox-78.5.0 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a id="10.0-053">
+    <h4>10.0 053 Firefox  Date: 2020-12-15  Severity: Critical</h4>
+    <p>Several vulnerabilities were found in firefox before 78.6.0, of which one
+    was rated as critical and four as high by upstream, as well as one rated low
+    (but ratedas Medium by NVD) where internal network hosts and services on the
+    user's machine could have been probed by a malicious webpage. Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-55/">mfsa2020-55</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-16042">CVE-2020-16042</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26971">CVE-2020-26971</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26973">CVE-2020-26973</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26974">CVE-2020-26974</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26978">CVE-2020-26978</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
+    <p>To fix these, update to firefox-78.5.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
-     <a id="10.0-052">
-     <h4>10.0 052 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
-     <p>The EDIPARTYNAME NULL pointer de-reference allows an attacker who can
-     trick a client or server into checking a malicious X509 certificate could
-     trigger a crash. This is rated High.
-     It has been assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1971">CVE-2020-1971</a>
-     with fuller details at
-     <a href="https://www.openssl.org/news/secadv/20201208.txt">OpenSSL</a>.</p>
-     <p>To fix this, update to at least OpenSSL-1.1.1i using the instructions
-     from the LFS development book for
-     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <a id="10.0-052">
+    <h4>10.0 052 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
+    <p>The EDIPARTYNAME NULL pointer de-reference allows an attacker who can
+    trick a client or server into checking a malicious X509 certificate could
+    trigger a crash. This is rated High.
+    It has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1971">CVE-2020-1971</a>
+    with fuller details at
+    <a href="https://www.openssl.org/news/secadv/20201208.txt">OpenSSL</a>.</p>
+    <p>To fix this, update to at least OpenSSL-1.1.1i using the instructions
+    from the LFS development book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
 
-     <a id="10.0-051">
-     <h4>10.0 051 Python (LFS and BLFS) Date: 2020-12-15 Severity: High</h4>
-     <p>Python-3.9.1 includes three security fixes. See
-     <a href="https://bugs.python.org/issue40791">bpo-40791</a>,
-     <a href="https://bugs.python.org/issue42051">bpo-42051</a>,
-     <a href="https://bugs.python.org/issue42103">bpo-42103</a>.</p>
-     <p>To fix this, update to at least Python-3.9.1 using the instructions
-     from the <b>BLFS</b> development book for
-     <a href="../view/svn/general/python3.html">Python (sysv)</a> or
-     <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <a id="10.0-051">
+    <h4>10.0 051 Python (LFS and BLFS) Date: 2020-12-15 Severity: High</h4>
+    <p>Python-3.9.1 includes three security fixes. See
+    <a href="https://bugs.python.org/issue40791">bpo-40791</a>,
+    <a href="https://bugs.python.org/issue42051">bpo-42051</a>,
+    <a href="https://bugs.python.org/issue42103">bpo-42103</a>.</p>
+    <p>To fix this, update to at least Python-3.9.1 using the instructions
+    from the <b>BLFS</b> development book for
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
 
-     <a id="10.0-050">
-     <h4>10.0 050 cURL Date: 2020-12-11 Severity: High</h4>
-     <p>cURL before version 7.74.0 has two vulnerabilities rated as High, an
-     uncontrolled recursion and an improper check for certificate revocation, as
-     well as one rated as Low. See
-     <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14363"/>BLFS #14363</a> and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8284">CVE-2020-8284</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8285">CVE-2020-8285</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8286">CVE-2020-8286</a>.</p>
-     <p>To fix these, update to cURL-7.74.0 or later following the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
-     <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+    <a id="10.0-050">
+    <h4>10.0 050 cURL Date: 2020-12-11 Severity: High</h4>
+    <p>cURL before version 7.74.0 has two vulnerabilities rated as High, an
+    uncontrolled recursion and an improper check for certificate revocation, as
+    well as one rated as Low. See
+    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14363"/>BLFS #14363</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8284">CVE-2020-8284</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8285">CVE-2020-8285</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8286">CVE-2020-8286</a>.</p>
+    <p>To fix these, update to cURL-7.74.0 or later following the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
 
-     <a id="10.0-049">
-     <h4>10.0 049 Gdk-Pixbuf Date: 2020-12-08 Severity: Medium</h4>
-     <p>Gdk-Pixbuf before version 2.42.2 is vulnerable to a Denial of Service
-     (infinite loop) which can, for example, be triggered using a crafted GIF
-     image with LZW compression.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29385">CVE-2020-29385</a>.</p>
-     <p>To fix this, update to Gdk-Pixbuf-2.42.2 or later following the instructions
-     from the development book for
-     <a href="../view/svn/x/gdk-pixbuf.html">Gdk-Pixbuf (sysv)</a> or
-     <a href="../view/systemd/x/gdk-pixbuf.html">Gdk-Pixbuf (systemd)</a>.</p>
+    <a id="10.0-049">
+    <h4>10.0 049 Gdk-Pixbuf Date: 2020-12-08 Severity: Medium</h4>
+    <p>Gdk-Pixbuf before version 2.42.2 is vulnerable to a Denial of Service
+    (infinite loop) which can, for example, be triggered using a crafted GIF
+    image with LZW compression.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29385">CVE-2020-29385</a>.</p>
+    <p>To fix this, update to Gdk-Pixbuf-2.42.2 or later following the instructions
+    from the development book for
+    <a href="../view/svn/x/gdk-pixbuf.html">Gdk-Pixbuf (sysv)</a> or
+    <a href="../view/systemd/x/gdk-pixbuf.html">Gdk-Pixbuf (systemd)</a>.</p>
 
-     <a id="10.0-048">
-     <h4>10.0 048 Xorg-Server  Date 2020-12-05  Severity: High</h4>
-     <p>In Xorg-Server before version 1.20.10 two input validation failures
-     in X server extensions were found. These can lead to local privilege
-     escalations (to root) <b>if the X server is running privileged</b>.
-     These have been assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14360">CVE-2020-14360</a>
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25712">CVE-2020-25712</a>
-     .</p>
-     <p>To fix this, update to at least Xorg-Server-1.20.10 using the instructions
-     from the development book for
-     <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
-     <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <a id="10.0-048">
+    <h4>10.0 048 Xorg-Server  Date 2020-12-05  Severity: High</h4>
+    <p>In Xorg-Server before version 1.20.10 two input validation failures
+    in X server extensions were found. These can lead to local privilege
+    escalations (to root) <b>if the X server is running privileged</b>.
+    These have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14360">CVE-2020-14360</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25712">CVE-2020-25712</a>
+    .</p>
+    <p>To fix this, update to at least Xorg-Server-1.20.10 using the instructions
+    from the development book for
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
 
-     <a id="10.0-047">
-     <h4>10.0 047 Unbound Updated: 2020-12-05 Severity: Medium</h4>
-     <p>Unbound up to and including version 1.12.0 contains a local vulnerability
-     that would allow for a local symlink attack. Severity downgraded following
-     availability of analysis.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28935">CVE-2020-28935</a>.</p>
-     <p>To fix this, update to Unbound-1.13.0 or later following the instructions
-     from the development book for
-     <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
-     <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+    <a id="10.0-047">
+    <h4>10.0 047 Unbound Updated: 2020-12-05 Severity: Medium</h4>
+    <p>Unbound up to and including version 1.12.0 contains a local vulnerability
+    that would allow for a local symlink attack. Severity downgraded following
+    availability of analysis.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28935">CVE-2020-28935</a>.</p>
+    <p>To fix this, update to Unbound-1.13.0 or later following the instructions
+    from the development book for
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
 
-     <a id="10.0-046">
-     <h4>10.0 046 Mutt Date: 2020-11-26 Severity: Medium</h4>
-     <p>Mutt before version 2.0.2 had incorrect error handling when initially connecting
-     to an IMAP server, which could result in an attempt to authenticate without enabling
-     TLS.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28896">CVE-2020-28896</a>.</p>
-     <p>To fix this, update to mutt-2.0.2 or later following the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/mutt.html">Mutt (sysv)</a> or
-     <a href="../view/systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
+    <a id="10.0-046">
+    <h4>10.0 046 Mutt Date: 2020-11-26 Severity: Medium</h4>
+    <p>Mutt before version 2.0.2 had incorrect error handling when initially connecting
+    to an IMAP server, which could result in an attempt to authenticate without enabling
+    TLS.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28896">CVE-2020-28896</a>.</p>
+    <p>To fix this, update to mutt-2.0.2 or later following the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/mutt.html">Mutt (sysv)</a> or
+    <a href="../view/systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
 
-     <a id="10.0-045">
-     <h4>10.0 045 LibEXIF Date: 2020-11-21 Severity: Critical</h4>
-     <p>Three vulnerabilities were found in LibEXIF-0.6.22, two are rated as High
-     and one as Critical. See
-     <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14272"/>BLFS #14272</a> and
-     the following CVEs:
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0181">CVE-2020-0181</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0198">CVE-2020-0198</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0452">CVE-2020-0452</a>.</p>
-     <p>To fix these, update to a version of LibEXIF after version 0.6.22 if one is
-      released, or apply the patch
-     <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
-     following the instructions
-     from the development book for
-     <a href="../view/svn/general/libexif.html">LibEXIF (sysv)</a> or
-     <a href="../view/systemd/general/libexif.html">LibEXIF (systemd)</a>.</p>
+    <a id="10.0-045">
+    <h4>10.0 045 LibEXIF Date: 2020-11-21 Severity: Critical</h4>
+    <p>Three vulnerabilities were found in LibEXIF-0.6.22, two are rated as High
+    and one as Critical. See
+    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14272"/>BLFS #14272</a> and
+    the following CVEs:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0181">CVE-2020-0181</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0198">CVE-2020-0198</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0452">CVE-2020-0452</a>.</p>
+    <p>To fix these, update to a version of LibEXIF after version 0.6.22 if one is
+    released, or apply the patch
+    <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
+    following the instructions
+    from the development book for
+    <a href="../view/svn/general/libexif.html">LibEXIF (sysv)</a> or
+    <a href="../view/systemd/general/libexif.html">LibEXIF (systemd)</a>.</p>
 
-     <a id="10.0-044">
-     <h4>10.0 044 LibXML2 Date: 2020-11-21 Severity: High</h4>
-     <p>Three vulnerabilities leading to Denial of Service were found in LibXML2-2.9.10,
-     two of these are rated as High. See
-     <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14271"/>BLFS #14271</a> and
-     the following CVEs:
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-20388">CVE-2019-20388</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-7595">CVE-2020-7595</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24977">CVE-2020-24977</a>.</p>
-     <p>To fix these, apply the patch
-     <a href="http://www.linuxfromscratch.org/patches/downloads/libxml2/libxml2-2.9.10-security_fixes-1.patch">libxml2-2.9.10-security_fixes-1.patch</a>
-     following the instructions
-     from the development book for
-     <a href="../view/svn/general/libxml2.html">LibXML2 (sysv)</a> or
-     <a href="../view/systemd/general/libxml2.html">LibXML2 (systemd)</a>,
-     or update to a later version if one is released.</p>
+    <a id="10.0-044">
+    <h4>10.0 044 LibXML2 Date: 2020-11-21 Severity: High</h4>
+    <p>Three vulnerabilities leading to Denial of Service were found in LibXML2-2.9.10,
+    two of these are rated as High. See
+    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14271"/>BLFS #14271</a> and
+    the following CVEs:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-20388">CVE-2019-20388</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-7595">CVE-2020-7595</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24977">CVE-2020-24977</a>.</p>
+    <p>To fix these, apply the patch
+    <a href="http://www.linuxfromscratch.org/patches/downloads/libxml2/libxml2-2.9.10-security_fixes-1.patch">libxml2-2.9.10-security_fixes-1.patch</a>
+    following the instructions
+    from the development book for
+    <a href="../view/svn/general/libxml2.html">LibXML2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">LibXML2 (systemd)</a>,
+    or update to a later version if one is released.</p>
 
-     <a id="10.0-043">
-     <h4>10.0 043 WebKitGTK Date: 2020-11-25 Severity: High</h4>
-     <p>Five vulnerabilities rated as High were found in WebKitGTK. See
-     <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14281"/>BLFS #14281</a> and
-     the following CVEs (most were filed against Safari, which uses WebKit):
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9948">CVE-2020-9948</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9951">CVE-2020-9951</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9952">CVE-2020-9952</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9983">CVE-2020-9983</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-13584">CVE-2020-13584</a>.</p>
-     <p>To fix this, update to at least webkitgtk-2.30.3 using the instructions
-     from the development book for
-     <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
-     <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+    <a id="10.0-043">
+    <h4>10.0 043 WebKitGTK Date: 2020-11-25 Severity: High</h4>
+    <p>Five vulnerabilities rated as High were found in WebKitGTK. See
+    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14281"/>BLFS #14281</a> and
+    the following CVEs (most were filed against Safari, which uses WebKit):
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9948">CVE-2020-9948</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9951">CVE-2020-9951</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9952">CVE-2020-9952</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9983">CVE-2020-9983</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-13584">CVE-2020-13584</a>.</p>
+    <p>To fix this, update to at least webkitgtk-2.30.3 using the instructions
+    from the development book for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
 
-     <a id="10.0-042">
-     <h4>10.0 042 Qt5 and QtWebEngine  Date: 2020-11-20  Severity: Critical</h4>
-     <p>The release of QtWebEngine-5.15.2 pulled in many more CVE fixes from Chrome,
-     of which four were 0day fixes. The rest of Qt5 includes many bug fixes, some of
-     which include heap buffer overflows.
-     For QtWebEngine see
-     <a href="https://code.qt.io/cgit/qt/qtwebengine.git/tree/dist/changes-5.15.2/?h=v5.15.2">QtWebEngine 5.15.2 changes</a>,
-     For the other parts of Qt5 see
-     <a href="https://wiki.qt.io/Qt_5.15.2_Change_Files">Qt-5.15.2 Changes</a>.</p>
-     To fix these, update to at least Qt-5.15.2 and QtWebEngine-5.15.1 using the
-     instructions from the development book for
-     <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> and
-     <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
-     <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
-     <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a id="10.0-042">
+    <h4>10.0 042 Qt5 and QtWebEngine  Date: 2020-11-20  Severity: Critical</h4>
+    <p>The release of QtWebEngine-5.15.2 pulled in many more CVE fixes from Chrome,
+    of which four were 0day fixes. The rest of Qt5 includes many bug fixes, some of
+    which include heap buffer overflows.
+    For QtWebEngine see
+    <a href="https://code.qt.io/cgit/qt/qtwebengine.git/tree/dist/changes-5.15.2/?h=v5.15.2">QtWebEngine 5.15.2 changes</a>,
+    For the other parts of Qt5 see
+    <a href="https://wiki.qt.io/Qt_5.15.2_Change_Files">Qt-5.15.2 Changes</a>.</p>
+    To fix these, update to at least Qt-5.15.2 and QtWebEngine-5.15.1 using the
+    instructions from the development book for
+    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> and
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
-     <a id="10.0-041">
-     <h4>10.0 041 Thunderbird  Date: 2020-11-19 Severity: High</h4>
-     <p>Several vulnerabilities were fixed in Thunderbird-78.5.0, two were rated
-     High. Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-52/">mfsa2020-52</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26951">CVE-2020-26951</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26968">CVE-2020-26968</a>.<p>
-     <p>To fix this, update to Thunderbird-78.5.0 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a id="10.0-041">
+    <h4>10.0 041 Thunderbird  Date: 2020-11-19 Severity: High</h4>
+    <p>Several vulnerabilities were fixed in Thunderbird-78.5.0, two were rated
+    High. Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-52/">mfsa2020-52</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26951">CVE-2020-26951</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26968">CVE-2020-26968</a>.<p>
+    <p>To fix this, update to Thunderbird-78.5.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
-     <a id="10.0-040">
-     <h4>10.0 040 Kerberos 5  Date: 2020-11-19  Severity: High</h4>
-     <p>A vulnerability in Kerberos 5 before krb-5.18.3 allowed a Denial of
-     Service to be triggered when decoding Kerberos protocol messages. See
-     <a href="https://web.mit.edu/kerberos/krb5-1.18/">Release Notes</a>.</p>
-     <p>To fix this, update to krb-5.18.3 or later using the instructions
-     from the development book for
-     <a href="../view/svn/postlfs/mitkrb.html">Kerberos (sysv)</a> or
-     <a href="../view/systemd/postlfs/mitkrb.html">Kerberos (systemd)</a>.</p>
+    <a id="10.0-040">
+    <h4>10.0 040 Kerberos 5  Date: 2020-11-19  Severity: High</h4>
+    <p>A vulnerability in Kerberos 5 before krb-5.18.3 allowed a Denial of
+    Service to be triggered when decoding Kerberos protocol messages. See
+    <a href="https://web.mit.edu/kerberos/krb5-1.18/">Release Notes</a>.</p>
+    <p>To fix this, update to krb-5.18.3 or later using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/mitkrb.html">Kerberos (sysv)</a> or
+    <a href="../view/systemd/postlfs/mitkrb.html">Kerberos (systemd)</a>.</p>
 
-     <a id="10.0-039">
-     <h4>10.0 039 C-Ares  Date: 2020-11-19  Severity: High</h4>
-     <p>An application using C-Ares versions from 1.16.0 to 1.17.1 allows an
-     attacker to trigger a Denial of service by getting the
-     application to resolve a DNS record with a larger number of responses. See
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8277">CVE-2020-8277</a>
-     which was initially raised against Node.js.</p>
-     <p>To fix this, update to C-Ares-1.17.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/c-ares.html">C-Ares (sysv)</a> or
-     <a href="../view/systemd/basicnet/c-ares.html">C-Ares (systemd)</a>.</p>
+    <a id="10.0-039">
+    <h4>10.0 039 C-Ares  Date: 2020-11-19  Severity: High</h4>
+    <p>An application using C-Ares versions from 1.16.0 to 1.17.1 allows an
+    attacker to trigger a Denial of service by getting the
+    application to resolve a DNS record with a larger number of responses. See
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8277">CVE-2020-8277</a>
+    which was initially raised against Node.js.</p>
+    <p>To fix this, update to C-Ares-1.17.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/c-ares.html">C-Ares (sysv)</a> or
+    <a href="../view/systemd/basicnet/c-ares.html">C-Ares (systemd)</a>.</p>
 
-     <a id="10.0-038">
-     <h4>10.0 038 Node.js  Date: 2020-11-19  Severity: High</h4>
-     <p>A Node.js application that allows an attacker to trigger a DNS request
-     for a host of their choice could trigger a Denial of service by getting the
-     application to resolve a DNS record with a larger number of responses.
-     This also applies to C-Ares, which is shipped with Node.js.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8277">CVE-2020-8277</a>.</p>
-     <p>To fix this, update to Node.js-14.15.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
-     Alternatively, if you are still using the v12 series, you may prefer to
-     update to v12.19.1 or later.</p>
+    <a id="10.0-038">
+    <h4>10.0 038 Node.js  Date: 2020-11-19  Severity: High</h4>
+    <p>A Node.js application that allows an attacker to trigger a DNS request
+    for a host of their choice could trigger a Denial of service by getting the
+    application to resolve a DNS record with a larger number of responses.
+    This also applies to C-Ares, which is shipped with Node.js.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8277">CVE-2020-8277</a>.</p>
+    <p>To fix this, update to Node.js-14.15.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
+    Alternatively, if you are still using the v12 series, you may prefer to
+    update to v12.19.1 or later.</p>
 
-     <a id="10.0-037">
-     <h4>10.0 037 JS78  Date: 2020-11-16  Severity: High</h4>
-     <p>Several vulnerabilities were found in firefox before 78.5.0, of which one
-     was in the javascript (js/src) code. Summary details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-51/">mfsa2020-51</a>
-     .</p>
-     <p>To fix this, update to JS-78.5.0 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
+    <a id="10.0-037">
+    <h4>10.0 037 JS78  Date: 2020-11-16  Severity: High</h4>
+    <p>Several vulnerabilities were found in firefox before 78.5.0, of which one
+    was in the javascript (js/src) code. Summary details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-51/">mfsa2020-51</a>
+    .</p>
+    <p>To fix this, update to JS-78.5.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
+    <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
+
+    <a id="10.0-036">
+    <h4>10.0 036 Firefox  Date: 2020-11-16  Severity: High</h4>
+    <p>Several vulnerabilities were found in firefox before 78.5.0, of which two
+    were rated as high by upstream. Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-51/">mfsa2020-51</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26951">CVE-2020-26951</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26968">CVE-2020-26968</a>.</p>
+    <p>To fix this, update to firefox-78.5.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="10.0-035">
+    <h4>10.0 035 Raptor  Date: 2020-11-13 Severity: High</h4>
+    <p>A heap overflow vulnerability in Raptor can lead to an out-of-bounds write.
+    Details are at
+    <a href="https://www.openwall.com/lists/oss-security/2017/06/07/1">oss-security</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-18926">CVE-2017-18926</a>.</p>
+    <p>To fix this, patch raptor-2.0.15 using
+    <a href="http://www.linuxfromscratch.org/patches/downloads/raptor/raptor-2.0.15-security_fixes-1.patch">raptor-2.0.15-security_fixes-1.patch</a>
+    and the instructions
+    from the development book for
+    <a href="../view/svn/general/raptor.html">Raptor (sysv)</a> or
+    <a href="../view/systemd/general/raptor.html">Raptor (systemd)</a>.</p>
+
+    <a id="10.0-034">
+    <h4>10.0 034 PostgreSQL  Date: 2020-11-12 Severity: High</h4>
+    <p>Three vulnerabilities rated as High were found in PostgreSQL before 13.1.
+    Details are at
+    <a href="https://www.postgresql.org/about/news/postgresql-131-125-1110-1015-9620-and-9524-released-2111/">PostgreSQL</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25694">CVE-2020-25694</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25695">CVE-2020-25695</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25696">CVE-2020-25696</a>.</p>
+    <p>To fix this, update to PostgreSQL-13.1 or later, using the instructions
+    from the development book for
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgrSQL (systemd)</a>.</p>
+
+    <a id="10.0-033">
+    <h4>10.0 033 Thunderbird  Date: 2020-11-10  Severity: Critical</h4>
+    <p>The javascript vulnerability fixed in firefox-78.4.1 also applies to
+    thunderbird. Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-49/">mfsa2020-49</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
+    <p>To fix this, update to Thunderbird-78.4.2 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="10.0-032">
+    <h4>10.0 032 Seamonkey  Updated: 2020-11-21  Severity: Critical</h4>
+    <p>The javascript vulnerability in JS-78-4.1 and firefox-78.4.1 also
+    applies to seamonkey-2.53.4. In BLFS this was initially partly fixed
+    by patching Seamonkey-2.53.4 using
+    <a href="http://www.linuxfromscratch.org/patches/downloads/seamonkey/seamonkey-2.53.4-security_fixes-1.patch">seamonkey-2.53.4-security_fixes-1.patch</a>
+    but was later revised to use Seamonkey-2.53.5 when that became available.
+    And then Seamonkey-2.53.5.1 had further fixes for this.
+    <p>To fix these, update to Seamonkey-2.53.5.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+    <a id="10.0-031">
+    <h4>10.0 031 JS78  Date: 2020-11-09  Severity: Critical</h4>
+    <p>An exploitable use-after-free was found in JS78 before 78.4.1.
+    Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-49/">mfsa2020-49</a>
+    <!-- NB on 2021-02-02 mozilla bug 1675905 is still not viewable -->
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
+    <p>To fix this, update to JS-78.4.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
      <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
 
-     <a id="10.0-036">
-     <h4>10.0 036 Firefox  Date: 2020-11-16  Severity: High</h4>
-     <p>Several vulnerabilities were found in firefox before 78.5.0, of which two
-     were rated as high by upstream. Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-51/">mfsa2020-51</a>
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26951">CVE-2020-26951</a> and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26968">CVE-2020-26968</a>.</p>
-     <p>To fix this, update to firefox-78.5.0 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a id="10.0-030">
+    <h4>10.0 030 Firefox  Date: 2020-11-09  Severity: Critical</h4>
+    <p>An exploitable use-after-free was found in firefox before 78.4.1.
+    Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-49/">mfsa2020-49</a>
+    <!-- NB on 2021-02-02 mozilla bug 1675905 is still not viewable -->
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
+    <p>To fix this, update to firefox-78.4.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
-     <a id="10.0-035">
-     <h4>10.0 035 Raptor  Date: 2020-11-13 Severity: High</h4>
-     <p>A heap overflow vulnerability in Raptor can lead to an out-of-bounds write.
-     Details are at
-     <a href="https://www.openwall.com/lists/oss-security/2017/06/07/1">oss-security</a>
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-18926">CVE-2017-18926</a>.</p>
-     <p>To fix this, patch raptor-2.0.15 using
-     <a href="http://www.linuxfromscratch.org/patches/downloads/raptor/raptor-2.0.15-security_fixes-1.patch">raptor-2.0.15-security_fixes-1.patch</a>
-     and the instructions
-     from the development book for
-     <a href="../view/svn/general/raptor.html">Raptor (sysv)</a> or
-     <a href="../view/systemd/general/raptor.html">Raptor (systemd)</a>.</p>
+    <a id="10.0-029">
+    <h4>10.0 029 MariaDB  Date: 2020-11-04  Severity: Medium</h4>
+    <p>Four CVE vulnerabilities were identified in MariaDB before version 10.5.7,
+    as well as a high security vulnerability only applicable to windows.
+    See <a href="https://mariadb.com/kb/en/mariadb-1057-release-notes/">Release Notes</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14812">CVE-2020-14812</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14765">CVE-2020-14765</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14776">CVE-2020-14776</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14789">CVE-2020-14789</a>.</p>
+    <p>To fix this, update to at least mariadb-10.5.7 using the instructions
+    from the development book for
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
 
-     <a id="10.0-034">
-     <h4>10.0 034 PostgreSQL  Date: 2020-11-12 Severity: High</h4>
-     <p>Three vulnerabilities rated as High were found in PostgreSQL before 13.1.
-     Details are at
-     <a href="https://www.postgresql.org/about/news/postgresql-131-125-1110-1015-9620-and-9524-released-2111/">PostgreSQL</a>
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25694">CVE-2020-25694</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25695">CVE-2020-25695</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25696">CVE-2020-25696</a>.</p>
-     <p>To fix this, update to PostgreSQL-13.1 or later, using the instructions
-     from the development book for
-     <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
-     <a href="../view/systemd/server/postgresql.html">PostgrSQL (systemd)</a>.</p>
+    <a id="10.0-028">
+    <h4>10.0 028 Samba  Date: 2020-10-30  Severity: Medium</h4>
+    <p>Three CVE vulnerabilities were identified in Samba before version 4.13.1,
+    see <a href="https://www.samba.org/samba/history/">Samba History</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14318">CVE-2020-14318</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14323">CVE-2020-14323</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14383">CVE-2020-14383</a>.</p>
+    <p>To fix this, update to at least samba-4.13.1 using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
-     <a id="10.0-033">
-     <h4>10.0 033 Thunderbird  Date: 2020-11-10  Severity: Critical</h4>
-     <p>The javascript vulnerability fixed in firefox-78.4.1 also applies to
-     thunderbird. Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-49/">mfsa2020-49</a>
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
-     <p>To fix this, update to Thunderbird-78.4.2 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a id="10.0-027">
+    <h4>10.0 027 Libass  Date: 2020-10-30  Severity: High</h4>
+    <p>There was a signed integer overflow in libass-0.14.0. See
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26682">CVE-2020-26682</a>.</p>
+    <p>To fix this, update to at least libass-0.15.0 using the instructions
+    from the development book for
+    <a href="../view/svn/multimedia/libass.html">Libass (sysv)</a> or
+    <a href="../view/systemd/multimedia/libass.html">Libass (systemd)</a>.</p>
 
-     <a id="10.0-032">
-     <h4>10.0 032 Seamonkey  Updated: 2020-11-21  Severity: Critical</h4>
-     <p>The javascript vulnerability in JS-78-4.1 and firefox-78.4.1 also
-     applies to seamonkey-2.53.4. In BLFS this was initially partly fixed
-     by patching Seamonkey-2.53.4 using
-     <a href="http://www.linuxfromscratch.org/patches/downloads/seamonkey/seamonkey-2.53.4-security_fixes-1.patch">seamonkey-2.53.4-security_fixes-1.patch</a>
-     but was later revised to use Seamonkey-2.53.5 when that became available.
-     And then Seamonkey-2.53.5.1 had further fixes for this.
-     <p>To fix these, update to Seamonkey-2.53.5.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-     <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a id="10.0-026">
+    <h4>10.0 026 The Gstreamer stack  Date: 2020-10-27  Severity: High</h4>
+    <p>Upstream made an emergency release of gstreamer-1.18.1 and its stack containing
+    important security fixes. At the same time the gstreamer-1.16.3 stack was released with
+    similar fixes. Limited details are available at
+    <a href="https://gstreamer.freedesktop.org/releases/1.18/#1.18.1">1.18.1 Release Notes</a>
+    and
+    <a href="https://gstreamer.freedesktop.org/releases/1.16/#1.16.3">1.16.3 Release Notes</a>
+    .</p>
+    <p>On systems running Gstreamer 1.16 versions, such as BLFS-10.0, update to the
+    gstreamer-1.16.3 packages (gstreamer, -libav, -plugins, -vaapi) using the instructions
+    from the BLFS-10.0 book:
+    <a href="../view/10.0/multimedia/gstreamer10.html">Gstreamer 1.16 (sysv)</a>
+    <i>et seq.</i> or
+    <a href="../view/10.0-systemd/multimedia/gstreamer10.html">Gstreamer 1.16 (systemd)</a>
+    <i> et seq.</i></p>
+    <p>On systems running Gstreamer 1.18 versions, update to the
+    gstreamer-1.18.1 or later packages (gstreamer, -libav, -plugins, -vaapi)
+    using the instructions from the development book for
+    <a href="../view/svn/multimedia/gstreamer10.html">Gstreamer 1.18 (sysv)</a>i
+    <i>et seq.</i> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">Gstreamer 1.18 (systemd)</a>
+    <i> et seq.</i></p>
 
-     <a id="10.0-031">
-     <h4>10.0 031 JS78  Date: 2020-11-09  Severity: Critical</h4>
-     <p>An exploitable use-after-free was found in JS78 before 78.4.1.
-     Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-49/">mfsa2020-49</a>
-     <!-- NB on 2021-02-02 mozilla bug 1675905 is still not viewable -->
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
-     <p>To fix this, update to JS-78.4.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
-     <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
+    <a id="10.0-025">
+    <h4>10.0 025 Thunderbird  Date: 2020-10-23  Severity: High</h4>
+    <p>Three vulnerabilities rated as High were fixed in thunderbird-78.4.0.
+    Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-47/">mfsa2020-47</a>.</p>
+    <p>To fix this, update to Thunderbird-78.4.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
-     <a id="10.0-030">
-     <h4>10.0 030 Firefox  Date: 2020-11-09  Severity: Critical</h4>
-     <p>An exploitable use-after-free was found in firefox before 78.4.1.
-     Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-49/">mfsa2020-49</a>
-     <!-- NB on 2021-02-02 mozilla bug 1675905 is still not viewable -->
-     and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
-     <p>To fix this, update to firefox-78.4.1 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a id="10.0-024">
+    <h4>10.0 024 FreeType  Date: 2020-10-20  Severity: High</h4>
+    <!-- CVE originally for chrome, but emergency release of FT because
+      it was being actively exploited -->
+    <p>There was an emergency release fixing a vulnerability in embedded PNG
+    bitmap handling (since FreeType-2.6) which was being actively exploited.
+    The original CVE was raised against Chrome OS and only rated as Medium.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-15999">CVE-2020-15999</a>
+    and
+    <a href="https://sourceforge.net/projects/freetype/files/freetype2/2.10.4/">Sourceforge - Changes in 2.10.4</a>
+    .</p>
+    <p>To fix this, update to freetype-2.10.4 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/freetype2.html">FreeType (sysv)</a> or
+    <a href="../view/systemd/general/freetype2.html">FreeType (systemd)</a>.</p>
 
-     <a id="10.0-029">
-     <h4>10.0 029 MariaDB  Date: 2020-11-04  Severity: Medium</h4>
-     <p>Four CVE vulnerabilities were identified in MariaDB before version 10.5.7,
-     as well as a high security vulnerability only applicable to windows.
-     See <a href="https://mariadb.com/kb/en/mariadb-1057-release-notes/">Release Notes</a> and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14812">CVE-2020-14812</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14765">CVE-2020-14765</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14776">CVE-2020-14776</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14789">CVE-2020-14789</a>.</p>
-     <p>To fix this, update to at least mariadb-10.5.7 using the instructions
-     from the development book for
-     <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
-     <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <a id="10.0-023">
+    <h4>10.0 023 LXML  Updated: 2020-11-28  Severity: Medium</h4>
+    <p>A remote attacker can trick the victim to follow a specially crafted
+    link and execute arbitrary HTML and script code in the user's browser in
+    the context of a vulnerable website.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27783">CVE-2020-27783</a>
+    and
+    <a href="https://www.cybersecurity-help.cz/vdb/SB2020120602">cybersecurity-help.cz</a>.</p>
+    <p>This was thought to be fixed in LXML-4.6.1, but that fix was inadequate.
+    To fix this, update to LXML-4.6.2 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/python-modules.html#lxml">LXML (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#lxml">LXML (systemd)</a>.</p>
 
-     <a id="10.0-027">
-     <a id="10.0-028">
-     <h4>10.0 028 Samba  Date: 2020-10-30  Severity: Medium</h4>
-     <p>Three CVE vulnerabilities were identified in Samba before version 4.13.1,
-     see <a href="https://www.samba.org/samba/history/">Samba History</a> and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14318">CVE-2020-14318</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14323">CVE-2020-14323</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14383">CVE-2020-14383</a>.</p>
-     <p>To fix this, update to at least samba-4.13.1 using the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-     <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+    <a id="10.0-022">
+    <h4>10.0 022 NSS  Date: 2020-10-17  Severity: High</h4>
+    <p>A flaw was found in the CCS handling, allowing a remote attacker to
+    cause a denial of service for servers linked against NSS.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25613">CVE-2020-25613</a>
+    .</p>
+    <p>To fix this, update to at least NSS-3.58 using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/nss.html">NSS (sysv)</a> or
+    <a href="../view/systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
 
-     <a id="10.0-027">
-     <h4>10.0 027 Libass  Date: 2020-10-30  Severity: High</h4>
-     <p>There was a signed integer overflow in libass-0.14.0. See
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26682">CVE-2020-26682</a>.</p>
-     <p>To fix this, update to at least libass-0.15.0 using the instructions
-     from the development book for
-     <a href="../view/svn/multimedia/libass.html">Libass (sysv)</a> or
-     <a href="../view/systemd/multimedia/libass.html">Libass (systemd)</a>.</p>
+    <a id="10.0-021">
+    <h4>10.0 021 Stunnel  Date: 2020-10-16  Severity: High</h4>
+    <p>In Stunnel-5.57 the "redirect" option was fixed to properly handle
+    "verifyChain = yes". See
+    <a href="https://www.stunnel.org/NEWS.html">Stunnel NEWS</a>.</p>
+    <p>To fix this, update to at least stunnel-5.57 using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/stunnel.html">Stunnel (sysv)</a> or
+    <a href="../view/systemd/postlfs/stunnel.html">Stunnel (systemd)</a>.</p>
 
-     <a id="10.0-026">
-     <h4>10.0 026 The Gstreamer stack  Date: 2020-10-27  Severity: High</h4>
-     <p>Upstream made an emergency release of gstreamer-1.18.1 and its stack containing
-     important security fixes. At the same time the gstreamer-1.16.3 stack was released with
-     similar fixes. Limited details are available at
-     <a href="https://gstreamer.freedesktop.org/releases/1.18/#1.18.1">1.18.1 Release Notes</a>
-     and
-     <a href="https://gstreamer.freedesktop.org/releases/1.16/#1.16.3">1.16.3 Release Notes</a>
-     .</p>
-     <p>On systems running Gstreamer 1.16 versions, such as BLFS-10.0, update to the
-     gstreamer-1.16.3 packages (gstreamer, -libav, -plugins, -vaapi) using the instructions
-     from the BLFS-10.0 book:
-     <a href="../view/10.0/multimedia/gstreamer10.html">Gstreamer 1.16 (sysv)</a>
-     <i>et seq.</i> or
-     <a href="../view/10.0-systemd/multimedia/gstreamer10.html">Gstreamer 1.16 (systemd)</a>
-     <i> et seq.</i></p>
-     <p>On systems running Gstreamer 1.18 versions, update to the
-     gstreamer-1.18.1 or later packages (gstreamer, -libav, -plugins, -vaapi)
-     using the instructions from the development book for
-     <a href="../view/svn/multimedia/gstreamer10.html">Gstreamer 1.18 (sysv)</a>i
-     <i>et seq.</i> or
-     <a href="../view/systemd/multimedia/gstreamer10.html">Gstreamer 1.18 (systemd)</a>
-     <i> et seq.</i></p>
+    <a id="10.0-020">
+    <h4>10.0 020 Ruby  Date: 2020-10-06  Severity: High</h4>
+    <p>Ruby before 2.7.2 had a vulnerability in its WEBrick HTTP server.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25613">CVE-2020-25613</a>.</p>
+    <p>To fix this, update to at least Ruby-2.7.2 using the instructions
+    from the development book for
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
 
-     <a id="10.0-025">
-     <h4>10.0 025 Thunderbird  Date: 2020-10-23  Severity: High</h4>
-     <p>Three vulnerabilities rated as High were fixed in thunderbird-78.4.0.
-     Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-47/">mfsa2020-47</a>.</p>
-     <p>To fix this, update to Thunderbird-78.4.0 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a id="10.0-019">
+    <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
+    <p>PHP before 7.4.11 had two CVE vulnerabilities,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a>.</p>
+    <p>To fix this, update to at least PHP-7.4.11 using the instructions
+    from the development book for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
 
-     <a id="10.0-024">
-     <h4>10.0 024 FreeType  Date: 2020-10-20  Severity: High</h4>
-     <!-- CVE originally for chrome, but emergency release of FT because
-       it was being actively exploited -->
-     <p>There was an emergency release fixing a vulnerability in embedded PNG
-     bitmap handling (since FreeType-2.6) which was being actively exploited.
-     The original CVE was raised against Chrome OS and only rated as Medium.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-15999">CVE-2020-15999</a>
-     and
-     <a href="https://sourceforge.net/projects/freetype/files/freetype2/2.10.4/">Sourceforge - Changes in 2.10.4</a>
-     .</p>
-     <p>To fix this, update to freetype-2.10.4 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/freetype2.html">FreeType (sysv)</a> or
-     <a href="../view/systemd/general/freetype2.html">FreeType (systemd)</a>.</p>
+    <a id="10.0-018">
+    <h4>10.0 018 Glib  Date: 2020-10-05  Severity: Medium</h4>
+    <!-- this came from oss fuzzing, debian rated urgency as medium -->
+    <p>Glib before 2.66.1 had incorrect scope/zone ID parsing of URIs. See
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/releases/2.66.1">Release Notes</a>
+    .</p>
+    <p>To fix this, update to at least Glib-2.66.1 using the instructions
+    from the development book for
+    <a href="../view/svn/general/glib2.html">Glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">Glib (systemd)</a>.</p>
 
-     <a id="10.0-023">
-     <h4>10.0 023 LXML  Updated: 2020-11-28  Severity: Medium</h4>
-     <p>A remote attacker can trick the victim to follow a specially crafted
-     link and execute arbitrary HTML and script code in the user's browser in
-     the context of a vulnerable website.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27783">CVE-2020-27783</a>
-     and
-     <a href="https://www.cybersecurity-help.cz/vdb/SB2020120602">cybersecurity-help.cz</a>
-     .</p>
-     <p>This was thought to be fixed in LXML-4.6.1, but that fix was inadequate.
-     To fix this, update to LXML-4.6.2 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/python-modules.html#lxml">LXML (sysv)</a> or
-     <a href="../view/systemd/general/python-modules.html#lxml">LXML (systemd)</a>.</p>
+    <a id="10.0-017">
+    <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>
+    <p>Three Security Advisories (wnpa-sec-2020-11,12,13) which could cause
+    Wireshark to crash were fixed in Wireshark-3.2.7, detailed at
+    <a href="https://www.wireshark.org/security/">Wireshark Security</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25862">CVE-2020-25862</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25863">CVE-2020-25863</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25863">CVE-2020-25866</a>.</p>
+    <p>To fix these, update to wireshark-3.2.7 or later using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
-     <a id="10.0-022">
-     <h4>10.0 022 NSS  Date: 2020-10-17  Severity: High</h4>
-     <p>A flaw was found in the CCS handling, allowing a remote attacker to
-     cause a denial of service for servers linked against NSS.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25613">CVE-2020-25613</a>
-     .</p>
-     <p>To fix this, update to at least NSS-3.58 using the instructions
-     from the development book for
-     <a href="../view/svn/postlfs/nss.html">NSS (sysv)</a> or
-     <a href="../view/systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
+    <a id="10.0-016">
+    <h4>10.0 016 Thunderbird  Updated: 2020-09-25  Severity: High</h4>
+    <p>Revised 2020-09-26</p>
+    <p>Five vulnerabilities with CVE numbers were fixed in thunderbird-78.3.0
+    including a memory safety bug rated as High. Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-44/">mfsa2020-44</a>.</p>
+    <p>But users of that version of thunderbird reported numerous crashes.
+    To fix the vulnerabilities and the crashes update to thunderbird-78.3.1 or
+    later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
-     <a id="10.0-021">
-     <h4>10.0 021 Stunnel  Date: 2020-10-16  Severity: High</h4>
-     <p>In Stunnel-5.57 the "redirect" option was fixed to properly handle
-     "verifyChain = yes". See
-     <a href="https://www.stunnel.org/NEWS.html">Stunnel NEWS</a>
-     .</p>
-     <p>To fix this, update to at least stunnel-5.57 using the instructions
-     from the development book for
-     <a href="../view/svn/postlfs/stunnel.html">Stunnel (sysv)</a> or
-     <a href="../view/systemd/postlfs/stunnel.html">Stunnel (systemd)</a>.</p>
+    <a id="10.0-015">
+    <h4>10.0 015 Seamonkey  Date: 2020-09-23  Severity: Critical</h4>
+    <!-- some of the early ff60 releases had fixes rated as critical -->
+    <p>Security fixes from firefox-60.6 up to firefox ESR-78.1 were included in
+    Seamonkey-2.53.4. Please see
+    <a href="https://www.seamonkey-project.org/releases/seamonkey2.53.4/">The Release Notes</a>.</p>
+    <p>To fix these, update to Seamonkey-2.53.4 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
-     <a id="10.0-020">
-     <h4>10.0 020 Ruby  Date: 2020-10-06  Severity: High</h4>
-     <p>Ruby before 2.7.2 had a vulnerability in its WEBrick HTTP server.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25613">CVE-2020-25613</a>
-     .</p>
-     <p>To fix this, update to at least Ruby-2.7.2 using the instructions
-     from the development book for
-     <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
-     <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+    <a id="10.0-014">
+    <h4>10.0 014 Firefox  Date: 2020-09-21  Severity: High</h4>
+    <p>Four vulnerabilities with CVE numbers were fixed in firefox-78.3.0
+    including a memory safety bug rated as High. Details are at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-43/">mfsa2020-43</a>.</p>
+    <p>To fix these, update to firefox-78.3.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
-     <a id="10.0-019">
-     <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
-     <p>PHP before 7.4.11 had two CVE vulnerabilities,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a> and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a>.</p>
-     <p>To fix this, update to at least PHP-7.4.11 using the instructions
-     from the development book for
-     <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-     <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a id="10.0-013">
+    <h4>10.0 013 Samba  Date: 2020-09-26  Severity: Critical</h4>
+    <p>A critical security vulnerability in Samba was discovered, dubbed
+    "NetLogon". This vulnerability classifies as an authentication bypass, and is
+    rated a 10.0 on the CVSSv3 scale.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a>
+    has been assigned.</p>
+    <p>To fix this, update to Samba-4.12.7 or later using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
-     <a id="10.0-018">
-     <h4>10.0 018 Glib  Date: 2020-10-05  Severity: Medium</h4>
-     <!-- this came from oss fuzzing, debian rated urgency as medium -->
-     <p>Glib before 2.66.1 had incorrect scope/zone ID parsing of URIs. See
-     <a href="https://gitlab.gnome.org/GNOME/glib/-/releases/2.66.1">Release Notes</a>
-     .</p>
-     <p>To fix this, update to at least Glib-2.66.1 using the instructions
-     from the development book for
-     <a href="../view/svn/general/glib2.html">Glib (sysv)</a> or
-     <a href="../view/systemd/general/glib2.html">Glib (systemd)</a>.</p>
+    <a id="10.0-012">
+    <h4>10.0 012 Node.js  Date: 2020-09-17  Severity: High</h4>
+    <p>Multiple security vulnerabilities were discovered in Node.js, including two
+    marked as High. These have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8201">CVE-2020-8201</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8252">CVE-2020-8252</a>.</p>
+    <p>To fix this, update to Node.js-12.18.4 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
 
-     <a id="10.0-017">
-     <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>
-     <p>Three Security Advisories (wnpa-sec-2020-11,12,13) which could cause
-     Wireshark to crash were fixed in Wireshark-3.2.7, detailed at
-     <a href="https://www.wireshark.org/security/">Wireshark Security</a> and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25862">CVE-2020-25862</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25863">CVE-2020-25863</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25863">CVE-2020-25866</a>.</p>
-     <p>To fix these, update to wireshark-3.2.7 or later using the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-     <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a id="10.0-011">
+    <h4>10.0 011 Qt5 and QtWebEngine  Date: 2020-09-10  Severity: Critical</h4>
+    <!-- CVE-2020-6471 is rated as critical (sandbox escape) -->
+    <p>Many security vulnerabilities were discovered in Qt5-5.15.0 and QtWebEngine.
+    For an overview, including the approximately 50 security fixes from Chrome
+    which had CVEs assigned at the time of the update, see
+    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14026">BLFS ticket #14026</a>.</p>
+    To fix this, update to at least Qt-5.15.1 and QtWebEngine-5.15.1 using the
+    instructions from the development book for
+    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> and
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
-     <a id="10.0-016">
-     <h4>10.0 016 Thunderbird  Updated: 2020-09-25  Severity: High</h4>
-     <p>Revised 2020-09-26</p>
-     <p>Five vulnerabilities with CVE numbers were fixed in thunderbird-78.3.0
-     including a memory safety bug rated as High. Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-44/">mfsa2020-44</a>.</p>
-     <p>But users of that version of thunderbird reported numerous crashes.
-     To fix the vulnerabilities and the crashes update to thunderbird-78.3.1 or
-     later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a id="10.0-010">
+    <h4>10.0 010 Linux Kernel (LFS)  Date: 2020-09-15  Severity: High</h4>
+    <p>In Linux Kernels before 5.8.8 there is a potential privilege escalation.
+    See
+    <a href="https://www.openwall.com/lists/oss-security/2020/09/08/4">oss-security</a>.</p>
+    <p>To fix this, update to linux-5.8.9 or later using the instructions
+    from the LFS development book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
 
-     <a id="10.0-015">
-     <h4>10.0 015 Seamonkey  Date: 2020-09-23  Severity: Critical</h4>
-     <!-- some of the early ff60 releases had fixes rated as critical -->
-     <p>Security fixes from firefox-60.6 up to firefox ESR-78.1 were included in
-     Seamonkey-2.53.4. Please see
-     <a href="https://www.seamonkey-project.org/releases/seamonkey2.53.4/">The Release Notes</a>.</p>
-     <p>To fix these, update to Seamonkey-2.53.4 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-     <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a id="10.0-009">
+    <h4>10.0 009 Bison (LFS)  Date: 2020-09-15  Severity: Low</h4>
+    <p>Bison-3.7.2 fixed all known CVE vulnerabilities in bison itself, the
+    generated code should not be affected. See
+    <a href="https://lists.gnu.org/archive/html/info-gnu/2020-09/msg00003.html">The Release Announcement</a>.</p>
+    <p>To fix this, update to bison-3.7.2 or later using the instructions
+    from the LFS development book for
+    <a href="../../lfs/view/development/chapter08/bison.html">Bison (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/bison.html">Bison (systemd)</a>.</p>
 
-     <a id="10.0-014">
-     <h4>10.0 014 Firefox  Date: 2020-09-21  Severity: High</h4>
-     <p>Four vulnerabilities with CVE numbers were fixed in firefox-78.3.0
-     including a memory safety bug rated as High. Details are at
-     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-43/">mfsa2020-43</a>.</p>
-     <p>To fix these, update to firefox-78.3.0 or later using the instructions
-     from the development book for
-     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a id="10.0-008">
+    <h4>10.0 008 Cryptsetup  Date: 2020-09-06  Severity: High</h4>
+    <p>An out of bounds memory write was discovered in Cryptsetup. Note that
+    this only affects 32-bit builds of cryptsetup.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14382">CVE-2020-14382</a>
+    has been assigned.</p>
+    <p>To fix this, update to at least cryptsetup-2.3.4 using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/cryptsetup.html">Cryptsetup (sysv)</a> or
+    <a href="../view/systemd/postlfs/cryptsetup.html">Cryptsetup (systemd)</a>.</p>
 
-     <a id="10.0-013">
-     <h4>10.0 013 Samba  Date: 2020-09-26  Severity: Critical</h4>
-     <p>A critical security vulnerability in Samba was discovered, dubbed
-     "NetLogon". This vulnerability classifies as an authentication bypass, and is
-     rated a 10.0 on the CVSSv3 scale.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a>
-     has been assigned.</p>
-     <p>To fix this, update to Samba-4.12.7 or later using the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-     <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+    <a id="10.0-007">
+    <h4>10.0 007 GnuPG  Date: 2020-09-06  Severity: Critical</h4>
+    <p>A critical security bug was dicovered in GnuPG 2.2.21 as shipped in BLFS
+    10.0, and in 2.2.22. This vulnerability will trigger whenever a key with
+    preference lists for the AEAD algorithms is loaded, and can be exploited.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25125">CVE-2020-25125</a>
+    has been assigned.</p>
+    <p>To fix this, update to GnuPG-2.2.23 or later using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
 
-     <a id="10.0-012">
-     <h4>10.0 012 Node.js  Date: 2020-09-17  Severity: High</h4>
-     <p>Multiple security vulnerabilities were discovered in Node.js, including two
-     marked as High. These have been assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8201">CVE-2020-8201</a> and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8252">CVE-2020-8252</a>.</p>
-     <p>To fix this, update to Node.js-12.18.4 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+    <a id="10.0-006">
+    <h4>10.0 006 Brotli  Date: 2020-09-06  Severity: Medium</h4>
+    <p>An integer oveflow in brotli before version 1.0.9 can lead to a crash.
+    This was assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8927">CVE-2020-8927</a>.</p>
+    <p>To fix this, update to brotli-1.0.9 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/brotli.html">Brotli (sysv)</a> or
+    <a href="../view/systemd/general/brotli.html">Brotli (systemd)</a>.</p>
 
-     <a id="10.0-011">
-     <h4>10.0 011 Qt5 and QtWebEngine  Date: 2020-09-10  Severity: Critical</h4>
-     <!-- CVE-2020-6471 is rated as critical (sandbox escape) -->
-     <p>Many security vulnerabilities were discovered in Qt5-5.15.0 and QtWebEngine.
-     For an overview, including the approximately 50 security fixes from Chrome
-     which had CVEs assigned at the time of the update, see
-     <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14026">BLFS ticket #14026</a>.</p>
-     To fix this, update to at least Qt-5.15.1 and QtWebEngine-5.15.1 using the
-     instructions from the development book for
-     <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> and
-     <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
-     <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
-     <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a id="10.0-005">
+    <h4>10.0 005 BIND  Date: 2020-09-05  Severity: High</h4>
+    <p>A variety of vulnerabilities were found in BIND. Most could cause a crash
+    but one allows privilege escalation by someone with authority to change a subset
+    of the zone's content.
+    These were assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8620">CVE-2020-8620</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8621">CVE-2020-8621</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8622">CVE-2020-8622</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8623">CVE-2020-8623</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8624">CVE-2020-8624</a>.
+    See also
+    <a href="https://kb.isc.org/docs/aa-00913">BIND 9 Security Vulnerabilty Matrix #114-8</a>.</p>
+    <p>To fix this, update to BIND-9.6.16 or later using the instructions
+    from the development book for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
 
-     <a id="10.0-010">
-     <h4>10.0 010 Linux Kernel (LFS)  Date: 2020-09-15  Severity: High</h4>
-     <p>In Linux Kernels before 5.8.8 there is a potential privilege escalation.
-     See
-     <a href="https://www.openwall.com/lists/oss-security/2020/09/08/4">oss-security</a>
-     .</p>
-     <p>To fix this, update to linux-5.8.9 or later using the instructions
-     from the LFS development book for
-     <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
-     <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <a id="10.0-004">
+    <h4>10.0 004 CIFS-utils  Date: 2020-09-05  Severity: High</h4>
+    <p>The mount.cifs program was invoking a shell when requesting the Samba
+    password, which could be used to inject arbitrary commands. An attacker
+    able to invoke mount.cifs with special permission, such as via sudo rules,
+    could use this flaw to escalate their privileges.
+    This was assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14342">CVE-2020-14342</a>,
+    more details at
+    <a href="https://lists.samba.org/archive/samba-technical/2020-September/135747.html">samba-technical</a>.</p>
+    <p>To fix this, update to cifs-utils-6.11 or later using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/cifsutils.html">CIFS-utils (sysv)</a> or
+    <a href="../view/systemd/basicnet/cifsutils.html">CIFS-utils (systemd)</a>.</p>
 
-     <a id="10.0-009">
-     <h4>10.0 009 Bison (LFS)  Date: 2020-09-15  Severity: Low</h4>
-     <p>Bison-3.7.2 fixed all known CVE vulnerabilities in bison itself, the
-     generated code should not be affected. See
-     <a href="https://lists.gnu.org/archive/html/info-gnu/2020-09/msg00003.html">The Release Announcement</a>
-     .</p>
-     <p>To fix this, update to bison-3.7.2 or later using the instructions
-     from the LFS development book for
-     <a href="../../lfs/view/development/chapter08/bison.html">Bison (sysv)</a> or
-     <a href="../../lfs/view/systemd/chapter08/bison.html">Bison (systemd)</a>.</p>
+    <a id="10.0-003">
+    <h4>10.0 003 GnuTLS  Date: 2020-09-03  Severity: High</h4>
+    <p>A null-pointer dereference causing a remotely-triggered crash in the
+    client application was found and assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24659">CVE-2020-24659</a>,
+    see also
+    <a href="https://www.gnutls.org/security-new.html#GNUTLS-SA-2020-09-04">GNUTLS-SA-2020-09-04</a>.</p>
+    <p>To fix this, update to at least Gnu-TLS-3.6.15 using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
-     <a id="10.0-008">
-     <h4>10.0 008 Cryptsetup  Date: 2020-09-06  Severity: High</h4>
-     <p>An out of bounds memory write was discovered in Cryptsetup. Note that
-     this only affects 32-bit builds of cryptsetup.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14382">CVE-2020-14382</a>
-     has been assigned.</p>
-     <p>To fix this, update to at least cryptsetup-2.3.4 using the instructions
-     from the development book for
-     <a href="../view/svn/postlfs/cryptsetup.html">Cryptsetup (sysv)</a> or
-     <a href="../view/systemd/postlfs/cryptsetup.html">Cryptsetup (systemd)</a>.</p>
+    <a id="10.0-002">
+    <h4>10.0 002 Xorg-Server  Date 2020-09-03  Severity: High</h4>
+    <p>In Xorg-Server before version 1.20.9 several input validation failures
+    in X server extensions were found. These can lead to local privilege
+    escalations (to root) <b>if the X server is running privileged</b>.
+    These have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14360">CVE-2020-14360</a>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14346">CVE-2020-14346</a>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14361</a>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14362</a>.</p>
+    <p>To fix this, update to at least Xorg-Server-1.20.9 using the instructions
+    from the development book for
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
 
-     <a id="10.0-007">
-     <h4>10.0 007 GnuPG  Date: 2020-09-06  Severity: Critical</h4>
-     <p>A critical security bug was dicovered in GnuPG 2.2.21 as shipped in BLFS
-     10.0, and in 2.2.22. This vulnerability will trigger whenever a key with
-     preference lists for the AEAD algorithms is loaded, and can be exploited.
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25125">CVE-2020-25125</a>
-     has been assigned.</p>
-     <p>To fix this, update to GnuPG-2.2.23 or later using the instructions
-     from the development book for
-     <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
-     <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
-
-     <a id="10.0-006">
-     <h4>10.0 006 Brotli  Date: 2020-09-06  Severity: Medium</h4>
-     <p>An integer oveflow in brotli before version 1.0.9 can lead to a crash.
-     This was assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8927">CVE-2020-8927</a>.</p>
-     <p>To fix this, update to brotli-1.0.9 or later using the instructions
-     from the development book for
-     <a href="../view/svn/general/brotli.html">Brotli (sysv)</a> or
-     <a href="../view/systemd/general/brotli.html">Brotli (systemd)</a>.</p>
-
-     <a id="10.0-005">
-     <h4>10.0 005 BIND  Date: 2020-09-05  Severity: High</h4>
-     <p>A variety of vulnerabilities were found in BIND. Most could cause a crash
-     but one allows privilege escalation by someone with authority to change a subset
-     of the zone's content.
-     These were assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8620">CVE-2020-8620</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8621">CVE-2020-8621</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8622">CVE-2020-8622</a>,
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8623">CVE-2020-8623</a> and
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8624">CVE-2020-8624</a>.
-     See also
-     <a href="https://kb.isc.org/docs/aa-00913">BIND 9 Security Vulnerabilty Matrix #114-8</a>
-     .</p>
-     <p>To fix this, update to BIND-9.6.16 or later using the instructions
-     from the development book for
-     <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
-     <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
-
-     <a id="10.0-004">
-     <h4>10.0 004 CIFS-utils  Date: 2020-09-05  Severity: High</h4>
-     <p>The mount.cifs program was invoking a shell when requesting the Samba
-     password, which could be used to inject arbitrary commands. An attacker
-     able to invoke mount.cifs with special permission, such as via sudo rules,
-     could use this flaw to escalate their privileges.
-     This was assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14342">CVE-2020-14342</a>,
-     more details at
-     <a href="https://lists.samba.org/archive/samba-technical/2020-September/135747.html">samba-technical</a>
-     .</p>
-     <p>To fix this, update to cifs-utils-6.11 or later using the instructions
-     from the development book for
-     <a href="../view/svn/basicnet/cifsutils.html">CIFS-utils (sysv)</a> or
-     <a href="../view/systemd/basicnet/cifsutils.html">CIFS-utils (systemd)</a>.</p>
-
-     <a id="10.0-003">
-     <h4>10.0 003 GnuTLS  Date: 2020-09-03  Severity: High</h4>
-     <p>A null-pointer dereference causing a remotely-triggered crash in the
-     client application was found and assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24659">CVE-2020-24659</a>,
-     see also
-     <a href="https://www.gnutls.org/security-new.html#GNUTLS-SA-2020-09-04">GNUTLS-SA-2020-09-04</a>
-     .</p>
-     <p>To fix this, update to at least Gnu-TLS-3.6.15 using the instructions
-     from the development book for
-     <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
-     <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
-
-     <a id="10.0-002">
-     <h4>10.0 002 Xorg-Server  Date 2020-09-03  Severity: High</h4>
-     <p>In Xorg-Server before version 1.20.9 several input validation failures
-     in X server extensions were found. These can lead to local privilege
-     escalations (to root) <b>if the X server is running privileged</b>.
-     These have been assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14360">CVE-2020-14360</a>
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14346">CVE-2020-14346</a>
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14361</a>
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14362</a>
-     .</p>
-     <p>To fix this, update to at least Xorg-Server-1.20.9 using the instructions
-     from the development book for
-     <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
-     <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
-
-
-     <a id="10.0-001">
-     <h4>10.0 001 LibX11  Date: 2020-09-03  Severity: High</h4>
-     <p>Effective 2020-09-03</p>
-     <p>In libX11 before version 1.6.12 an integer overflow and double-free
-     was found, which could lead to provilege escalation. This has been assigned
-     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14363">CVE-2020-14363</a>
-     .</p>
-     <p>To fix this, update to at least libX11-1.6.12 using the instructions
-     from the development book for
-     <a href="../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a> or
-     <a href="../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
+    <a id="10.0-001">
+    <h4>10.0 001 LibX11  Date: 2020-09-03  Severity: High</h4>
+    <p>Effective 2020-09-03</p>
+    <p>In libX11 before version 1.6.12 an integer overflow and double-free
+    was found, which could lead to provilege escalation. This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14363">CVE-2020-14363</a>.</p>
+    <p>To fix this, update to at least libX11-1.6.12 using the instructions
+    from the development book for
+    <a href="../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a> or
+    <a href="../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
 
 <!--#include virtual="/common/footer.html" -->
