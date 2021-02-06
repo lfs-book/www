@@ -110,6 +110,12 @@
 
     <h3>Firefox</h3>
 
+    <a id="10.0-081">
+    <h4>10.0 081 Firefox  UpDated: 2021-02-07  Severity: None</h4>
+    <p>In firefox before 78.7.1 a vulnerability in the Angle graphics library
+    was rated as Critical and a CVE was requested. It has now been clarified
+    that this only affected Windows operating systems.</p>
+
     <h4>10.0 071 Firefox  Date: 2021-01-26  Severity: High</h4>
     <p>In firefox 78.7.0 several vulnerabilities rated as High were fixed.
     Update to firefox-78.7.0 or later.
@@ -164,6 +170,13 @@
 <!-- end of Gdk-Pixbuf -->
 
     <h3>Glib</h3>
+
+    <h4>10.0 079 Glib  Date: 2021-02-04  Severity: High</h4>
+    <p>Glib before 2.66.6 was vulnerable to integer truncation leading to
+    potentially exploitable heap-overflow vulnerabilities. The issue was
+    raised in a <i>public</i> report, so this is now classed as a zero-day
+    vulnerability requiring urgent update to Glib-2.66.1 or later.
+    <a href=consolidated.html#10.0-079>10.0-079</a></p>
 
     <h4>10.0 018 Glib  Date: 2020-10-05  Severity: Medium</h4>
     <p>Glib before 2.66.1 had incorrect scope/zone ID parsing of URIs.
@@ -221,6 +234,17 @@
     <a href=consolidated.html#10.0-067>10.0-067</a></p>
 
 <!-- end of ImageMagick -->
+
+    <h3>Jasper</h3>
+
+    <h4>10.0 080 JasPer  Date: 2021-02-04  Severity: High</h4>
+    <p>BLFS had been using JasPer-2.0.14, not aware that the upsteam location had
+    moved. In versions before Jasper-2.0.24 more than 25 vulnerabilities were
+    present, mostly either causing a crash or otherwise rated as high. To fix
+    these, update to JasPer-2.0.24 or later.
+    <a href=consolidated.html#10.0-080>10.0-080</a></p>
+
+<!-- end of JasPer -->
 
     <h3>JS78</h3>
 
@@ -389,6 +413,17 @@
 
 <!-- end of P11-Kit -->
 
+    <h3>Perl</h3>
+
+    <h4>10.0 077 Perl (using cpan)  Date: 2021-01-30  Severity: High</h4>
+    <p>If you use the 'cpan' command to build perl modules, the perl.com domain
+    was stolen and is currently hosted at an address associated with malware.
+    Anyone who uses the 'cpan' command should ensure that www.cpan.org is used
+    to provide the urllist.
+    <a href=consolidated.html#10.0-077>10.0-077</a></p>
+
+<!-- end of Perl -->
+
     <h3>PHP</h3>
 
     <h4>10.0 064 PHP  Upated: 2021-02-04  Severity: Medium</h4>
@@ -534,6 +569,11 @@
     disabled when reading mail, but are potentially risks in browser or
     browser-like contexts.</i></p>
 
+    <h4>10.0 078 Thunderbird  Date: 2021-01-31 Severity: High</h4>
+    <p>In thunderbird before 78.7.0 there were various vulnerabilities rated
+    as High. To fix these update to Thunderbird-78.7.0 or later.
+    <a href=consolidated.html#10.0-078>10.0-078</a></p>
+
     <h4>10.0 066 Thunderbird  Date: 2021-01-12 Severity: Critical</h4>
     <p>In thunderbird before 78.6.1 a malicious peer could have modified a
     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
@@ -608,6 +648,11 @@
 
     <h3>Wireshark</h3>
 
+    <h4>10.0 076 Wireshark  Date: 2021-01-30  Severity: High</h4>
+    <p>Wireshark up to 3.4.2 had vulnerabilities for a memory leak and a crash.
+    To fix these update to Wireshard-3.4.3 or later.
+    <a href=consolidated.html#10.0-076>10.0-076</a></p>
+
     <h4>10.0 057 Wireshark  Updated: 2021-02-04  Severity: Invalid</h4>
     <p>A Medium Security Advisory for a crash in Wireshark 3.4.0 and 3.4.1
     was raised and allocated a CVE, but it was later determined that the
@@ -619,7 +664,7 @@
     <p>Four Medium Security Advisories which could cause Wireshark to crash were
     fixed in Wireshark-3.4.1, but in addition the editors had overlooked a High
     severity item fixed in Wireshark-3.4.0. To fix all of these, update to
-    Wireshark-3.4.1.
+    Wireshark-3.4.1 or later.
     <a href=consolidated.html#10.0-055>10.0-055</a></p>
 
     <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>

@@ -28,7 +28,8 @@
 
     <p>The severity ratings are best estimates unlessi either upstream
     or NVD has assigned a rating. If no other analysis is available,
-    High will usually be assumed. If in doubt, read the links.</p>
+    High will usually be assumed and similarly if a crash can be triggered
+    LFS and BLFS will normallt rate that as High. If in doubt, read the links.</p>
 
     <!-- Editors: Commented entry to copy, and reminder about patches
 
@@ -38,6 +39,10 @@
     'Reserved'. If upstream assigns a severity (often higher than nvd)
     go with that. If in doubt, usually default to High.
 
+    Start the id with the latest book version, then next number - reset number
+    to 1 after we release.
+
+    <a id="10.0-NNN">
     <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
       or
     <h4>VV.V NNN (LFS) Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
@@ -70,6 +75,75 @@
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
+
+    <a id="10.0-081">
+    <h4>10.0 081 Firefox  UpDated: 2021-02-07  Severity: None</h4>
+    <p>In firefox before 78.7.1 a vulnerability in the Angle graphics library
+    was rated as Critical and a CVE was requested. It has now been clarified
+    that this only affected Windows operating systems.</p>
+
+    <a id="10.0-080">
+    <h4>10.0 080 JasPer  Date: 2021-02-04  Severity: High</h4>
+    <p>BLFS had been using JasPer-2.0.14, not aware that the upsteam location had
+    moved. In versions before Jasper-2.0.24 more than 25 vulnerabilities were
+    present, mostly either causing a remotely triggered crash (Denial of Service)
+    or otherwise rated as high. For an overview of these see
+    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14599"/>BLFS #14599</a>.
+    The most-recent included
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-9055">CVE-2018-9055</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-9252">CVE-2018-9252</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-19540">CVE-2018-19540</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-19541">CVE-2018-19541</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-19543">CVE-2018-19543</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27828">CVE-2020-27828</a>.</p>
+    <p>To fix this, update to at least JasPer-2.0.24 using the instructions
+    from the development book for
+    <a href="../view/svn/general/jasper.html">JasPer (sysv)</a> or
+    <a href="../view/systemd/general/jasper.html">JasPer (systemd)</a>.</p>
+
+    <a id="10.0-079">
+    <h4>10.0 079 Glib  Date: 2021-02-04  Severity: High</h4>
+    <p>Glib before 2.66.6 was vulnerable to integer truncation leading to
+    potentially exploitable heap-overflow vulnerabilities. The issue was
+    raised in a <i>public</i> report, so this is now classed as a zero-day
+    vulnerability requiring urgent update.
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/2319">GHSL-2021-045</a>
+    .</p>
+    <p>To fix this, update to at least Glib-2.66.6 using the instructions
+    from the development book for
+    <a href="../view/svn/general/glib2.html">Glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">Glib (systemd)</a>.</p>
+
+    <a id="10.0-078">
+    <h4>10.0 078 Thunderbird  Date: 2021-01-31 Severity: High</h4>
+    <p>In thunderbird before 78.7.0 there were various vulnerabilities rated as High. See
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-05/">mfsa2021-05</a>
+    CVEs have been assigned (CVE-2021-23953, CVE-2021-23954, CVE-20201-23960,
+    CVE-2021-23964) but details are not yet public.</p>
+    <p>To fix this, update to Thunderbird-78.7.0 or later using the instructions
+    from the development book for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="10.0-077">
+    <h4>10.0 077 Perl (using cpan)  Date: 2021-01-30  Severity: High</h4>
+    <p>If you use the 'cpan'i command to build perl modules, the perl.com domain
+    was stolen and is currently hosted at an address associated with malware.
+    Anyone who uses the 'cpan' command should ensure that www.cpan.org is used
+    to provide the urllist, see the details at
+    <a href="http://lists.linuxfromscratch.org/pipermail/blfs-support/2021-January/082465.html">blfs-support archive</a>.</p>
+
+    <a id="10.0-076">
+    <h4>10.0 076 Wireshark  Date: 2021-01-30  Severity: High</h4>
+    <p>Wireshark up to 3.4.2 had vulnerabilities for a memory leak and a crash,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2021-01.html">wnpa-sec-2020-20</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2021-02.html">wnpa-sec-2020-20</a>.
+    According to Redhat these have been allocated CVE-2021-22173 and CVE-2021-22174
+    but these are currently 'Reserved'.</p>
+    <p>To fix these, update to wireshark-3.4.3 or later using the instructions
+    from the development book for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="10.0-075">
     <h4>10.0 075 VLC Media Player  Date: 2021-01-30  Severity: High</h4>
