@@ -76,6 +76,51 @@
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
 
+    <a id="10.0-083">
+    <h4>10.0 083 PHP  Updated: 2021-02-07  Severity: Medium</h4>
+    <p>In PHP before versions 7.4.15, 8.0.2, according to Arch PHP will crash
+    with a SIGSEGV via null-pointer dereference whenever an XML is provided to
+    the SoapClient query() function without an existing field. CVE-2020-7071 has
+    been allocated but for the moment that is "reserved". See
+    <a href="https://security.archlinux.org/CVE-2021-21702">Arch CVE-2021-21702</a>
+    where the severity is rated as Medium.</p>
+    <p>To fix this, update to PHP-8.0.2 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+    <a id="10.0-082">
+    <h4>10.0 082 (LFS) GLIBC  Date: 2021-02-07  Severity: High</h4>
+
+    <p>In Glibc before 2.33 there are four vulnerabilities in iconv which can lead
+    to a crash when processing less-common character encodings.<p>
+    <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2019-25013">CVE-2019-25013</a>:
+    According to Red Hat this can be worked around by not processing untrusted input
+    in the (uncommon) EUC-KR character set
+    <a href="https://access.redhat.com/security/cve/cve-2019-25013">Red Hat</a>.</p>
+    <p>CVE-2020-27618 is currently marked as 'Reserved'. According to Red Hat an
+    infinite loop can be encountered when processing data in certain IBM character
+    sets containing redundant shift sequences. They rate the severity as Low because
+    an attacker would need either local privileges, or to depend on an application
+    feeding untrusted encoding input to iconv.
+    <a href="https://access.redhat.com/security/cve/cve-2020-27618">Red Hat</a>.</p>
+    <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29562">CVE-2020-29562</a>:
+    When processing UCS4 text containing an irreversible character, iconv fails an
+    assertion and aborts, resulting in a denial of service. A workaround appears to
+    be to avoid processing UCS4 input (constant 32-bit width characters) in iconv.
+    For most users of LFS aand BLFS it is expected that UCS4 input is uncommon.</p>
+    <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3326">CVE-2021-3326</a>:
+    When processing invalid input sequences in the ISO-2022-JP-3 encoding, iconv
+    fails an assertion and aborts, resulting in a denial of service. According to
+    Red Hat this can be worked around by not processing untrusted input in this
+    encoding:
+    <a href="https://access.redhat.com/security/cve/cve-2021-3326">Red Hat</a>.</p>
+    <p>To fix these, build a new version of LFS. <i>If you have usable backups and
+    have tested a way to restore them via a rescue stick or similar, it might be
+    possible to build glibc-2.33 in place and then immediately make an unclean
+    shutdown, e.g. using MagicSysRQ if that is enabled in your kernel. <b>Such a
+    procedure is not recommended, nor has it been tested.</b><i></p>
+
     <a id="10.0-081">
     <h4>10.0 081 Firefox  UpDated: 2021-02-07  Severity: None</h4>
     <p>In firefox before 78.7.1 a vulnerability in the Angle graphics library
