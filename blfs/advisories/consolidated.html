@@ -70,11 +70,24 @@
     for 10.1 need to point to the development books, but the existing 10.0
     advisories need to be changed to point to 10.1 (sic), not 'stable' which
     is a symlink and can change over time. That might sound odd, but the 10.0
-    advisories wre developed during the build up to 10.1, so in normal
+    advisories were developed during the build up to 10.1, so in normal
     circumstances the 'or later' will be valid for the 10.1 release, but over
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
+
+    <a id="10.0-084">
+    <h4>10.0 084 Jasper  Updated: 2021-02-09  Severity: High</h4>
+    <p>In Jasper 2.0.24, jp2_decode in jp2/jp2_dec.c in libjasper has a
+    heap-based buffer over-read when there is an invalid relationship between
+    the number of channels and the number of image components.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3272">CVE-2021-3272</a>.</p>
+    <p>To fix this, update to at least jasper-2.0.25 using the instructions
+    from the development book for
+     (BLFS links:)
+    <a href="../view/svn/gneral/jasper.html">Jasper (sysv)</a> or
+    <a href="../view/systemd/gneral/jasper.html">Jasper (systemd)</a>.</p>
 
     <a id="10.0-083">
     <h4>10.0 083 PHP  Updated: 2021-02-07  Severity: Medium</h4>
