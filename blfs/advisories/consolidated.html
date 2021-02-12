@@ -75,6 +75,56 @@
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
+    <a id="10.0-090">
+    <h4>10.0 090 PostgreSQL   Date: 2021-02-12 Severity: Medium</h4>
+    <p>In PostgreSQL-13.2, two vulnerabilities were fixed that could lead to
+    unauthorized users leaking information from a database. One of them 
+    relates to users with the UPDATE privilege but without the SELECT privilege,
+    and the other relates to users who have SELECT privileges for only a single
+    column being able to read all columns of the table.
+    These have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-3393">CVE-2021-3393</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2021-20229">CVE-2021-20229</a>.</p>
+    <p>To fix this, update to at least postgresql-13.2 using the instructions in
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
+    <a id="10.0-089">
+    <h4>10.0 089 gnome-autoar Date: 2021-02-12 Severity: Medium</h4>
+    <p>In gnome-autoar-0.2.4, a security vulnerability was found that
+    allows for directory traversal during extraction of an archive due to
+    a lack of proper checks for whether a file's parent is a symlink to a
+    directory outside of the intended extraction location. 
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-36241">CVE-2020-36241</a>.</p>
+    <p>To fix this, update to at least gnome-autoar-0.3.0 using the instructions in
+    <a href="../view/svn/gnome/gnome-autoar.html">gnome-autoar (sysv)</a> or
+    <a href="../view/systemd/gnome/gnome-autoar.html">gnome-autoar (systemd)</a>.</p>
+
+    <a id="10.0-088">
+    <h4>10.0 088 xterm      Date: 2021-02-12  Severity: Medium</h4>
+    <p>In xterm-366, a security vulnerability was fixed that allows for a
+    crash via usage of certain UTF-8 characters. The vulnerability was
+    originally discovered in 'Screen', but was found to affect xterm as well.
+    The vulnerability was originally found exploited via Minecraft servers,
+    so as a result of it's exploitation in the wild, BLFS has decided to
+    apply a severity of Medium to this vulnerability. 
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-26937">CVE-2021-26937</a>.</p>
+    <p>To fix this, update to at least xterm-366 using the instructions in
+    <a href="../view/svn/x/xterm.html">xterm (sysv)</a> or
+    <a href="../view/systemd/x/xterm.html">xterm (systemd)</a>.</p>
+
+    <a id="10.0-087">
+    <h4>10.0 087 Jinja2     Date: 2021-02-12  Severity: Medium</h4>
+    <p>In Jinja2-2.11.2, a security vulnerability was found that allows for a
+    repeatable denial-of-service attack via malformed regex.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28493">CVE-2020-28493</a>.</p>
+    <p>To fix this, update to at least Jinja2-2.11.3 using the instructions
+    from the development book for
+    <a href="../view/svn/general/python-modules.html#Jinja2">Jinja2 (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#Jinja2">Jinja2 (systemd)</a>.</p>
 
     <a id="10.0-086">
     <h4>10.0 086 Subversion Date: 2021-02-10  Severity: Medium</h4>
