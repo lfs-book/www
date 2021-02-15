@@ -75,6 +75,21 @@
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
+    <a id="10.0-091">
+    <h4>10.0 091 WebKitGTK    Date: 2021-02-15 Severity: High</h4>
+    <p>In WebKitGTK-2.30.5, a security vulnerability was fixed that allows for
+    arbitrary code execution when crafting maliciously crafted web content.
+    This web content appears to be Audio, and the issue is a use-after-free
+    in the AudioSourceProviderGstreamer class. It was fixed with improved
+    memory management.
+    This has been assigned
+    <a href="https://security.archlinux.org/CVE-2020-13558">CVE-2020-13558</a>,
+    and additional information may be found at
+    <a href="https://webkitgtk.org/security/WSA-2021-0001.html">WSA-2021-0001</a>.</p>
+    <p>To fix this, update to at least WebKitGTK+-2.30.5 using the instructions in
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or 
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="10.0-090">
     <h4>10.0 090 PostgreSQL   Date: 2021-02-12 Severity: Medium</h4>
     <p>In PostgreSQL-13.2, two vulnerabilities were fixed that could lead to
