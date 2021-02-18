@@ -75,6 +75,18 @@
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
+    <a id="10.0-093">
+    <h4>10.0 093 BIND         Date: 2021-02-18 Severity: High</h4>
+    <p>In bind-9.16.12, a security vulnerability was fixed that could allow
+    remote unauthenticated users to crash the named process if the server
+    is configured to use SPNEGO/GSSAPI. This is classified as a buffer
+    overflow vulnerability.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8625">CVE-2020-8625</a>.</p>
+    <p>To fix this, update to at least BIND-9.16.12 using the instructions in
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="10.0-092">
     <h4>10.0 092 Taglib       Date: 2021-02-15 Severity: Medium</h4>
     <p>In taglib-1.11.1, a security vulnerability was found that may lead to
