@@ -75,6 +75,20 @@
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
+    <a id="10.0-094">
+    <h4>10.0 094 Intel Microcode  Date: 2021-02-19  Severity: Medium</h4>
+    <p>On Intel Skylake Xeon and Cascade Lake Xeon processors, an authenticated
+    user can potentially enable information disclosure via local access via two
+    vulnerabilites. These have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8696">CVE-2020-8696</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8698">CVE-2020-8698</a>.
+    See also
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00381.html">Intel-SA-00381.</a></p>
+    <p>To fix this, update to at least microcode-20210216 using the instructions
+    from the development book for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
     <a id="10.0-093">
     <h4>10.0 093 BIND         Date: 2021-02-18 Severity: High</h4>
     <p>In bind-9.16.12, a security vulnerability was fixed that could allow
