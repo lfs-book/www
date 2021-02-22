@@ -75,6 +75,21 @@
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
+    <a id="10.0-097">
+    <h4>10.0 097 Python (LFS and BLFS) Date: 2021-02-22 Severity: Critical</h4>
+    <p>Python-3.9.2 contained two security fixes, one rated as 9.8 CRITICAL, 
+    and the other marked as Medium. The critical vulnerability can result in
+    remote code execution in some Python-based programs, and the Medium-level
+    vulnerability can result in web cache poisoning.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23336">CVE-2021-23336</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3177">CVE-2021-3177</a>.</p>
+    To fix this, update to Python-3.9.2 or later using the instructions from
+    the <b>BLFS</b> development book for
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
+
     <a id="10.0-096">
     <h4>10.0 096 Screen       Date: 2021-02-19 Severity: Critical</h4>
     <p>In Screen-4.8.0, a security vulnerability was fixed that allows for a
@@ -119,14 +134,14 @@
     <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
 
     <a id="10.0-093">
-    <h4>10.0 093 BIND         Date: 2021-02-18 Severity: High</h4>
+    <h4>10.0 093 BIND         Date: 2021-02-18 Updated: 2021-02-22 Severity: High</h4>
     <p>In bind-9.16.12, a security vulnerability was fixed that could allow
     remote unauthenticated users to crash the named process if the server
     is configured to use SPNEGO/GSSAPI. This is classified as a buffer
     overflow vulnerability.
     This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8625">CVE-2020-8625</a>.</p>
-    <p>To fix this, update to at least BIND-9.16.12 using the instructions in
+    <p>To fix this, apply the sed found in the page below and rebuild BIND.
     <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
     <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
 

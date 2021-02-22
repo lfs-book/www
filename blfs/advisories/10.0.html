@@ -42,10 +42,10 @@
 
     <h3>BIND</h3>
 
-    <h4>10.0 093 BIND  Date: 2021-02-18  Severity: High</h4>
+    <h4>10.0 093 BIND  Date: 2021-02-18  Updated: 2021-02-22 Severity: High</h4>
     <p>A security vulnerability was found in BIND that could result in a crash
     or potentially remote code execution if the server uses GSSAPI/SPNEGO.
-    Update to BIND-9.16.12 or later.
+    Apply the sed in the page linked in the advisory and rebuild BIND.
     <a href="consolidated.html#10.0-093">10.0-093</a></p>
 
     <h4>10.0 005 BIND  Date: 2020-09-05  Severity: High</h4>
@@ -527,6 +527,12 @@
 <!-- end of PostgreSQL -->
 
     <h3>Python</h3>
+
+    <h4>10.0 097 Python (LFS and BLFS) Date: 2021-02-22 Severity: Critical</h4>
+    <p>Python-3.9.2 fixes two security vulnerabilities, one marked as critical
+    and the other as medium. The critical vulnerability can result in remote
+    code execution. Update to Python-3.9.2 or later.
+    <a href=consolidated.html#10.0-097>10.0-097</a></p>
 
     <h4>10.0 051 Python (LFS and BLFS) Date: 2020-12-15 Severity: High</h4>
     <p>Python-3.9.1 includes three security fixes. Update to Python-3.9.1
