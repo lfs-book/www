@@ -75,6 +75,19 @@
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). See the gstreamer links re 1.16 for an example of
     linking to a released book (old 10.0) -->
+
+    <a id="10.0-098">
+    <h4>10.0 098 ffmpeg        Date: 2021-02-23 Severity: Medium</h4>
+    <p>ffmpeg-4.3.2 fixed two medium-severity arbitary code execution
+    vulnerabilities. These could be exploited via crafted files using
+    the EXR and VIVIDAS codecs.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35965">CVE-2020-35965</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35964">CVE-2020-34964</a>.</p>
+    <p> To fix this, update to ffmpeg-4.3.2 or later using the instructions in
+    <a href="../view/svn/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
+    <a href="../view/systemd/multimedia/ffmpeg.html">ffmpeg(systemd)</a>.</p>
+
     <a id="10.0-097">
     <h4>10.0 097 Python (LFS and BLFS) Date: 2021-02-22 Severity: Critical</h4>
     <p>Python-3.9.2 contained two security fixes, one rated as 9.8 CRITICAL, 
@@ -84,7 +97,7 @@
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23336">CVE-2021-23336</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3177">CVE-2021-3177</a>.</p>
-    To fix this, update to Python-3.9.2 or later using the instructions from
+    <p>To fix this, update to Python-3.9.2 or later using the instructions from
     the <b>BLFS</b> development book for
     <a href="../view/svn/general/python3.html">Python (sysv)</a> or
     <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
