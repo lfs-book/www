@@ -344,7 +344,7 @@
     When processing UCS4 text containing an irreversible character, iconv fails an
     assertion and aborts, resulting in a denial of service. A workaround appears to
     be to avoid processing UCS4 input (constant 32-bit width characters) in iconv.
-    For most users of LFS aand BLFS it is expected that UCS4 input is uncommon.</p>
+    For most users of LFS and BLFS it is expected that UCS4 input is uncommon.</p>
     <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3326">CVE-2021-3326</a>:
     When processing invalid input sequences in the ISO-2022-JP-3 encoding, iconv
     fails an assertion and aborts, resulting in a denial of service. According to
@@ -429,7 +429,7 @@
     <a id="10.0-075">
     <h4>10.0 075 VLC Media Player  Date: 2021-01-30  Severity: High</h4>
     <p>In VLC Media Player up to and including version 3.0.11 a remote user
-    could create a speciaaly crafted file or stream that would lead to crashes
+    could create a specialy crafted file or stream that would lead to crashes
     and potential information leakage, or perhaps arbitrary code execution.
     <a href="https://www.videolan.org/security/sb-vlc3012.html">VideoLAN-SB-VLC-3012
 </a>.</p>
@@ -641,10 +641,10 @@
 
     <a id="10.0-059">
     <h4>10.0 059 Libpcap  Date: 2021-01-04  Severity: High</h4>
-    <p>The changes file for Libpcap-1.10.1 at
+    <p>The changes file for Libpcap-1.10.0 at
     <a href="https://www.tcpdump.org/libpcap-changes.txt">tcpdump.org</a>
     mentions various security fixes.</p>
-    <p>To fix these, update to Libpcap-1.10.1 or later using the instructions
+    <p>To fix these, update to Libpcap-1.10.0 or later using the instructions
     for
     <a href="../view/10.1/basicnet/libpcap.html">Libpcap (sysv)</a> or
     <a href="../view/10.1-systemd/basicnet/libpcap.html">Libpcap (systemd)</a>.</p>
@@ -907,14 +907,14 @@
     <p>A vulnerability in Kerberos 5 before krb-5.18.3 allowed a Denial of
     Service to be triggered when decoding Kerberos protocol messages. See
     <a href="https://web.mit.edu/kerberos/krb5-1.18/">Release Notes</a>.</p>
-    <p>To fix this, update to krb-5.18.3 or later using the instructions
+    <p>To fix this, update to krb5-1.18.3 or later using the instructions
     for
     <a href="../view/10.1/postlfs/mitkrb.html">Kerberos (sysv)</a> or
     <a href="../view/10.1-systemd/postlfs/mitkrb.html">Kerberos (systemd)</a>.</p>
 
     <a id="10.0-039">
     <h4>10.0 039 C-Ares  Date: 2020-11-19  Severity: High</h4>
-    <p>An application using C-Ares versions from 1.16.0 to 1.17.1 allows an
+    <p>An application using C-Ares versions from 1.16.0 to 1.17.0 allows an
     attacker to trigger a Denial of service by getting the
     application to resolve a DNS record with a larger number of responses. See
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8277">CVE-2020-8277</a>
