@@ -46,6 +46,12 @@ In BLFS,
     These links will need to be checked after committing because the
     releases are not in the same repository.
 
+4.5 Change all 'using the instructions from the development book for' to
+    'using the instructions for'. After that, check for all uncommented
+    'developmet' references and remove: Python advisories have slightly
+    different wording emphasising people should look at the BLFS book,
+    any other LFS advisories should now mention 'the LFS book'.
+
 Review all except item 4.4, add new page, commit, review item 4.4 and fix
 if defective.
 
