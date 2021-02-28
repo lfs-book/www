@@ -1,0 +1,54 @@
+Updating after a new release of the books:
+
+First do LFS, see the notes there.
+
+In BLFS,
+
+1. update index.html -
+
+1.1 Copy the top parts to create a link for the version just released, up until
+    the next version and increment the version in what will be the new link,
+    also the version it links to.
+
+1.2 For the previous link, change 'is released' to 'was released'.
+
+2. Copy the current NN.N.html for the new version then edit the new one:
+
+2.1 Increment the id (index.html links to this).
+
+2.2 Change the first line to LFS-NN.N was released on CCYY-MM-DD with correct
+    version and date.
+
+2.3 Remove most of the entries - keep one commented as a reminder of what to put
+    here.
+
+2.4 Uncomment the 'There are currently no known security vulnerabilities for
+    lfs-NN.N.' paragraph.
+
+3. In what has until now been the current NN.N html change the text in the first
+   non-italic paragraph to 'which have links to the released books'
+
+4. consolidated.html:
+
+4.1 Copy the current <h2> line to below the commented notes, then change the
+    <h2> line *above* it to refer to the versions of the new release and the
+    next release.
+
+4.2 Uncomment "There are currently no known security vulnerabilities..."
+
+4.3 Update the versions in the 'Editors:' comment about pointing to the
+    development books until after the release.
+
+4.4 For each update in what is now the previous release, change the links
+    to point to the absolute version which we have just released.
+    For BLFS : svn -> NN.N, systemd -> NN.NN-systemd.
+    For LFS : development -> NN.N, systemd -> NN.NN-systemd.
+    These links will need to be checked after committing because the
+    releases are not in the same repository.
+
+Review all except item 4.4, add new page, commit, review item 4.4 and fix
+if defective.
+
+
+
+

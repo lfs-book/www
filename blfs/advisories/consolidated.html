@@ -1,6 +1,6 @@
 <!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advisories" -->
 <!--#include virtual="/blfs/header.html" -->
-<!-- try an LFS *and* BLFS menu at hte side -->
+<!-- try an LFS *and* BLFS menu at the side -->
 <!--#include virtual="/blfs/menuboth.html" -->
 <!-- perhaps review lfs/menu.html and blfs/menu.html to provide a custom menu
     for this page which covers both ? -->
@@ -42,7 +42,6 @@
     Start the id with the latest book version, then next number - reset number
     to 1 after we release.
 
-    <a id="10.0-NNN">
     <h4>VV.V NNN Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
       or
     <h4>VV.V NNN (LFS) Package  Date: ccyy-mm-dd  Severity: Critical/High/Medium/Low</h4>
@@ -63,18 +62,26 @@
     <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
      for clarity. -->
 
+    <h2>Items between the releases of the 10.1 and 10.2 books</h2></a>
+
+    <!-- Editors: This batch of advisories for the 10.1 books point to the
+    development books until we make a release. After a release, new advisories
+    for 10.2 need to point to the development books, but the existing 10.1
+    advisories need to be changed to point to 10.2 (sic), not 'stable' which
+    is a symlink and can change over time. That might sound odd, but the 10.1
+    advisories were developed during the build up to 10.2, so in normal
+    circumstances the 'or later' will be valid for the 10.2 release, but over
+    the longer term who knows what will happen to packages (e.g. getting
+    replaced or archived). -->
+
+    <!-- when we do have advisories, comment this for next time -->
+
+    <p>There are currently no known security vulnerabilities for the latest
+    releases of the books.</p>
+
+
     <h2>Items between the releases of the 10.0 and 10.1 books</h2></a>
 
-    <!-- Editors: This batch of advisories for the 10.0 books point to the
-    development books until we make a release. After a release, new advisories
-    for 10.1 need to point to the development books, but the existing 10.0
-    advisories need to be changed to point to 10.1 (sic), not 'stable' which
-    is a symlink and can change over time. That might sound odd, but the 10.0
-    advisories were developed during the build up to 10.1, so in normal
-    circumstances the 'or later' will be valid for the 10.1 release, but over
-    the longer term who knows what will happen to packages (e.g. getting
-    replaced or archived). See the gstreamer links re 1.16 for an example of
-    linking to a released book (old 10.0) -->
     <a id="10.0-101">
     <h4>10.0 101 node.js Date: 2021-02-26 Severity: High</h4>
     <p>Node.JS-14.16.0 fixed three security vulnerabilities. One of them is a 
@@ -86,8 +93,8 @@
     <a href="https://nodejs.org/en/blog/vulnerability/february-2021-security-releases/">
     February 2021 Security Releases</a>.</p>
     <p>To fix these, update to Node.JS-14.16.0 or later using the instructions in
-    <a href="../view/svn/general/nodejs.html">Node.JS (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">Node.JS (systemd)</a>.</p>
+    <a href="../view/10.1/general/nodejs.html">Node.JS (sysv)</a> or
+    <a href="../view/10.1-systemd/general/nodejs.html">Node.JS (systemd)</a>.</p>
 
     <a id="10.0-100">
     <h4>10.0 100 Thunderbird  Date: 2021-02-24  Severity: High</h4>
@@ -98,8 +105,8 @@
     but details are not yet public.</p>
     <p>To fix these, update to thunderbird-78.8.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="10.0-099">
     <h4>10.0 099 Firefox  Date: 2021-02-24  Severity: High</h4>
@@ -109,8 +116,8 @@
     but details are not yet public.</p>
     <p>To fix these, update to firefox-78.8.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="10.0-098">
     <h4>10.0 098 ffmpeg        Date: 2021-02-23 Severity: Medium</h4>
@@ -121,8 +128,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35965">CVE-2020-35965</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35964">CVE-2020-34964</a>.</p>
     <p> To fix this, update to ffmpeg-4.3.2 or later using the instructions in
-    <a href="../view/svn/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
-    <a href="../view/systemd/multimedia/ffmpeg.html">ffmpeg(systemd)</a>.</p>
+    <a href="../view/10.1/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
+    <a href="../view/10.1-systemd/multimedia/ffmpeg.html">ffmpeg(systemd)</a>.</p>
 
     <a id="10.0-097">
     <h4>10.0 097 Python (LFS and BLFS) Date: 2021-02-22 Severity: Critical</h4>
@@ -135,8 +142,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3177">CVE-2021-3177</a>.</p>
     <p>To fix this, update to Python-3.9.2 or later using the instructions from
     the <b>BLFS</b> development book for
-    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
-    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <a href="../view/10.1/general/python3.html">Python (sysv)</a> or
+    <a href="../view/10.1-systemd/general/python3.html">Python (systemd)</a>.</p>
 
 
     <a id="10.0-096">
@@ -151,8 +158,8 @@
     <p>To fix this, apply the patch in
     <a href="http://www.linuxfromscratch.org/patches/downloads/screen/screen-4.8.0-upstream_fixes-1.patch">screen-4.8.0-upstream_fixes-1.patch</a>
     to your build and recompile Screen using the instructions in
-    <a href="../view/svn/general/screen.html">Screen (sysv)</a> or
-    <a href="../view/systemd/general/screen.html">Screen (systemd)</a>.</p>
+    <a href="../view/10.1/general/screen.html">Screen (sysv)</a> or
+    <a href="../view/10.1-systemd/general/screen.html">Screen (systemd)</a>.</p>
 
     <a id="10.0-095">
     <h4>10.0 095 OpenSSL (LFS) Date: 2021-02-19 Severity: High</h4>
@@ -165,8 +172,8 @@
     Additional details can be found in
     <a href="https://www.openssl.org/news/secadv/20210216.txt">OpenSSL</a>.</p>
     <p>To fix this, update to at least OpenSSL-1.1.1j using the instructions in
-    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <a href="../../lfs/view/10.1/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/10.1-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
 
     <a id="10.0-094">
     <h4>10.0 094 Intel Microcode  Date: 2021-02-19  Severity: Medium</h4>
@@ -179,8 +186,8 @@
     <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00381.html">Intel-SA-00381.</a></p>
     <p>To fix this, update to at least microcode-20210216 using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
-    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
 
     <a id="10.0-093">
     <h4>10.0 093 BIND         Date: 2021-02-18 Updated: 2021-02-22 Severity: High</h4>
@@ -191,8 +198,8 @@
     This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8625">CVE-2020-8625</a>.</p>
     <p>To fix this, apply the sed found in the page below and rebuild BIND.
-    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
-    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+    <a href="../view/10.1/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/10.1-systemd/server/bind.html">BIND (systemd)</a>.</p>
 
     <a id="10.0-092">
     <h4>10.0 092 Taglib       Date: 2021-02-15 Severity: Medium</h4>
@@ -202,8 +209,8 @@
     This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-11439">CVE-2018-11439</a>.</p>
     <p>To fix this, update to at least taglib-1.12 using the instructions in
-    <a href="../view/svn/multimedia/taglib.html">taglib (sysv)</a> or
-    <a href="../view/systemd/multimedia/taglib.html">taglib (systemd)</a>.</p>
+    <a href="../view/10.1/multimedia/taglib.html">taglib (sysv)</a> or
+    <a href="../view/10.1-systemd/multimedia/taglib.html">taglib (systemd)</a>.</p>
 
     <a id="10.0-091">
     <h4>10.0 091 WebKitGTK    Date: 2021-02-15 Severity: High</h4>
@@ -217,8 +224,8 @@
     and additional information may be found at
     <a href="https://webkitgtk.org/security/WSA-2021-0001.html">WSA-2021-0001</a>.</p>
     <p>To fix this, update to at least WebKitGTK+-2.30.5 using the instructions in
-    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or 
-    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <a href="../view/10.1/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or 
+    <a href="../view/10.1-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
 
     <a id="10.0-090">
     <h4>10.0 090 PostgreSQL   Date: 2021-02-12 Severity: Medium</h4>
@@ -231,8 +238,8 @@
     <a href="https://access.redhat.com/security/cve/cve-2021-3393">CVE-2021-3393</a> and
     <a href="https://access.redhat.com/security/cve/cve-2021-20229">CVE-2021-20229</a>.</p>
     <p>To fix this, update to at least postgresql-13.2 using the instructions in
-    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
-    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+    <a href="../view/10.1/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/10.1-systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
 
     <a id="10.0-089">
     <h4>10.0 089 gnome-autoar Date: 2021-02-12 Severity: Medium</h4>
@@ -243,8 +250,8 @@
     This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-36241">CVE-2020-36241</a>.</p>
     <p>To fix this, update to at least gnome-autoar-0.3.0 using the instructions in
-    <a href="../view/svn/gnome/gnome-autoar.html">gnome-autoar (sysv)</a> or
-    <a href="../view/systemd/gnome/gnome-autoar.html">gnome-autoar (systemd)</a>.</p>
+    <a href="../view/10.1/gnome/gnome-autoar.html">gnome-autoar (sysv)</a> or
+    <a href="../view/10.1-systemd/gnome/gnome-autoar.html">gnome-autoar (systemd)</a>.</p>
 
     <a id="10.0-088">
     <h4>10.0 088 xterm      Date: 2021-02-12  Severity: Medium</h4>
@@ -257,8 +264,8 @@
     This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-26937">CVE-2021-26937</a>.</p>
     <p>To fix this, update to at least xterm-366 using the instructions in
-    <a href="../view/svn/x/xterm.html">xterm (sysv)</a> or
-    <a href="../view/systemd/x/xterm.html">xterm (systemd)</a>.</p>
+    <a href="../view/10.1/x/xterm.html">xterm (sysv)</a> or
+    <a href="../view/10.1-systemd/x/xterm.html">xterm (systemd)</a>.</p>
 
     <a id="10.0-087">
     <h4>10.0 087 Jinja2     Date: 2021-02-12  Severity: Medium</h4>
@@ -268,8 +275,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28493">CVE-2020-28493</a>.</p>
     <p>To fix this, update to at least Jinja2-2.11.3 using the instructions
     from the development book for
-    <a href="../view/svn/general/python-modules.html#Jinja2">Jinja2 (sysv)</a> or
-    <a href="../view/systemd/general/python-modules.html#Jinja2">Jinja2 (systemd)</a>.</p>
+    <a href="../view/10.1/general/python-modules.html#Jinja2">Jinja2 (sysv)</a> or
+    <a href="../view/10.1-systemd/general/python-modules.html#Jinja2">Jinja2 (systemd)</a>.</p>
 
     <a id="10.0-086">
     <h4>10.0 086 Subversion Date: 2021-02-10  Severity: Medium</h4>
@@ -281,8 +288,8 @@
     <a href="https://security.archlinux.org/CVE-2020-17525">CVE-2020-17525</a>.</p>
     <p>To fix this, update to at least Subversion-1.14.1 using the instructions
     from the development book for
-    <a href="../view/svn/general/subversion.html">Subversion (sysv)</a> or
-    <a href="../view/systemd/general/subversion.html">Subversion (systemd)</a>.</p>
+    <a href="../view/10.1/general/subversion.html">Subversion (sysv)</a> or
+    <a href="../view/10.1-systemd/general/subversion.html">Subversion (systemd)</a>.</p>
 
     <a id="10.0-085">
     <h4>10.0 085 Libgcrypt  Date: 2021-02-10  Severity: High</h4>
@@ -290,8 +297,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3345">CVE-2021-3345</a>.</p>
     <p>To fix this, update to at least Libgcrypt-1.9.1 using the instructions
     from the development book for
-    <a href="../view/svn/general/libgcrypt.html">Libgcrypt (sysv)</a> or
-    <a href="../view/systemd/general/libgcrypt.html">Libgcrypt (systemd)</a>.</p>
+    <a href="../view/10.1/general/libgcrypt.html">Libgcrypt (sysv)</a> or
+    <a href="../view/10.1-systemd/general/libgcrypt.html">Libgcrypt (systemd)</a>.</p>
 
     <a id="10.0-084">
     <h4>10.0 084 Jasper  Updated: 2021-02-09  Severity: High</h4>
@@ -302,8 +309,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3272">CVE-2021-3272</a>.</p>
     <p>To fix this, update to at least jasper-2.0.25 using the instructions
     from the development book for
-    <a href="../view/svn/general/jasper.html">Jasper (sysv)</a> or
-    <a href="../view/systemd/general/jasper.html">Jasper (systemd)</a>.</p>
+    <a href="../view/10.1/general/jasper.html">Jasper (sysv)</a> or
+    <a href="../view/10.1-systemd/general/jasper.html">Jasper (systemd)</a>.</p>
 
     <a id="10.0-083">
     <h4>10.0 083 PHP  Updated: 2021-02-07  Severity: Medium</h4>
@@ -315,8 +322,8 @@
     where the severity is rated as Medium.</p>
     <p>To fix this, update to PHP-8.0.2 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a href="../view/10.1/general/php.html">PHP (sysv)</a> or
+    <a href="../view/10.1-systemd/general/php.html">PHP (systemd)</a>.</p>
 
     <a id="10.0-082">
     <h4>10.0 082 (LFS) GLIBC  Date: 2021-02-07  Severity: High</h4>
@@ -372,8 +379,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27828">CVE-2020-27828</a>.</p>
     <p>To fix this, update to at least JasPer-2.0.24 using the instructions
     from the development book for
-    <a href="../view/svn/general/jasper.html">JasPer (sysv)</a> or
-    <a href="../view/systemd/general/jasper.html">JasPer (systemd)</a>.</p>
+    <a href="../view/10.1/general/jasper.html">JasPer (sysv)</a> or
+    <a href="../view/10.1-systemd/general/jasper.html">JasPer (systemd)</a>.</p>
 
     <a id="10.0-079">
     <h4>10.0 079 Glib  Date: 2021-02-04  Severity: High</h4>
@@ -385,8 +392,8 @@
     .</p>
     <p>To fix this, update to at least Glib-2.66.6 using the instructions
     from the development book for
-    <a href="../view/svn/general/glib2.html">Glib (sysv)</a> or
-    <a href="../view/systemd/general/glib2.html">Glib (systemd)</a>.</p>
+    <a href="../view/10.1/general/glib2.html">Glib (sysv)</a> or
+    <a href="../view/10.1-systemd/general/glib2.html">Glib (systemd)</a>.</p>
 
     <a id="10.0-078">
     <h4>10.0 078 Thunderbird  Date: 2021-01-31 Severity: High</h4>
@@ -396,8 +403,8 @@
     CVE-2021-23964) but details are not yet public.</p>
     <p>To fix this, update to Thunderbird-78.7.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="10.0-077">
     <h4>10.0 077 Perl (using cpan)  Date: 2021-01-30  Severity: High</h4>
@@ -416,8 +423,8 @@
     but these are currently 'Reserved'.</p>
     <p>To fix these, update to wireshark-3.4.3 or later using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="10.0-075">
     <h4>10.0 075 VLC Media Player  Date: 2021-01-30  Severity: High</h4>
@@ -428,8 +435,8 @@
 </a>.</p>
     <p>To fix this, update to VLC-3.0.12 or later using the instructions
     from the development book for
-    <a href="../view/svn/multimedia/vlc.html">VLC (sysv)</a> or
-    <a href="../view/systemd/multimedia/vlc.html">VLC (systemd)</a>.</p>
+    <a href="../view/10.1/multimedia/vlc.html">VLC (sysv)</a> or
+    <a href="../view/10.1-systemd/multimedia/vlc.html">VLC (systemd)</a>.</p>
 
     <a id="10.0-074">
     <h4>10.0 074 GPTfdisk  Date: 2021-01-26  Severity: Moderate</h4>
@@ -440,8 +447,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0308">CVE-2021-0308</a>.</p>
     <p>To fix this, update to GPTfdisk-1.0.6 or later using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/gptfdisk.html">GPTfdisk (sysv)</a> or
-    <a href="../view/systemd/postlfs/gptfdisk.html">GPTfdisk (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/gptfdisk.html">GPTfdisk (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/gptfdisk.html">GPTfdisk (systemd)</a>.</p>
 
     <a id="10.0-073">
     <h4>10.0 073 Sudo  Date: 2021-01-26  Severity: Critical</h4>
@@ -450,8 +457,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3156">CVE-2021-3156</a>.</p>
     <p>To fix this, update to Sudo-1.9.5p2 or later using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/sudo.html">Sudo (sysv)</a> or
-    <a href="../view/systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/sudo.html">Sudo (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
 
     <a id="10.0-072">
     <h4>10.0 072 JS78  Date: 2021-01-26  Severity: High</h4>
@@ -462,8 +469,8 @@
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-04/">mfsa2021-04</a>.</p>
     <p>To fix this, update to JS-78.7.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
-    <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
+    <a href="../view/10.1/general/js78.html">JS78 (sysv)</a> or
+    <a href="../view/10.1-systemd/general/js78.html">JS78 (systemd)</a>.</p>
 
     <a id="10.0-071">
     <h4>10.0 071 Firefox  Date: 2021-01-26  Severity: High</h4>
@@ -478,8 +485,8 @@
     CVE-2021-23964) but details are not yet public.</p>
     <p>To fix these, update to firefox-78.7.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="10.0-070">
     <h4>10.0 070 Vorbis Tools  Updated: 2021-01-26  Severity: High</h4>
@@ -489,8 +496,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-11331">CVE-2017-11331</a>.</p>
     <p>To fix these, update to Vorbis Tools 1.4.2 or later using the instructions
     from the development book for
-    <a href="../view/svn/multimedia/vorbistools.html">Vorbis Tools (sysv)</a> or
-    <a href="../view/systemd/multimedia/vorbistools.html">Vorbis Tools (systemd)</a>.</p>
+    <a href="../view/10.1/multimedia/vorbistools.html">Vorbis Tools (sysv)</a> or
+    <a href="../view/10.1-systemd/multimedia/vorbistools.html">Vorbis Tools (systemd)</a>.</p>
 
     <a id="10.0-069">
     <h4>10.0 069 Seamonkey  Updated: 2021-01-26  Severity: Critical</h4>
@@ -509,8 +516,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
     <p>To fix these, update to Seamonkey-2.53.6 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
     <a id="10.0-068">
     <h4>10.0 068 Mutt  Updated: 2021-01-25 Severity: Medium</h4>
@@ -524,8 +531,8 @@
     but the 2.05 release followed a few days later with slightly more fixes.
     To fix this update to mutt-2.0.5 or later using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/mutt.html">Mutt (sysv)</a> or
-    <a href="../view/systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/mutt.html">Mutt (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
 
     <a id="10.0-067">
     <h4>10.0 067 ImageMagick  Date: 2021-01-14 Severity: High</h4>
@@ -540,8 +547,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29599">CVE-2020-29599</a>.</p>
     <p>To fix this, update to ImageMagick-7.0.10-57 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
-    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+    <a href="../view/10.1/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/10.1-systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
 
     <a id="10.0-066">
     <h4>10.0 066 Thunderbird  Date: 2021-01-12 Severity: Critical</h4>
@@ -553,8 +560,8 @@
     available.</p>
     <p>To fix this, update to Thunderbird-78.6.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="10.0-065">
     <h4>10.0 065 Sudo  Updated: 2021-02-04  Severity: High</h4>
@@ -566,8 +573,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23240">CVE-2021-23240</a>,.</p>
     <p>To fix this, update to Sudo-1.9.5p1 or later using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/sudo.html">Sudo (sysv)</a> or
-    <a href="../view/systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/sudo.html">Sudo (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
 
     <a id="10.0-064">
     <h4>10.0 064 PHP  Updated: 2021-02-04  Severity: Medium</h4>
@@ -578,8 +585,8 @@
     (Arch linux).</p>
     <p>To fix this, update to PHP-8.0.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a href="../view/10.1/general/php.html">PHP (sysv)</a> or
+    <a href="../view/10.1-systemd/general/php.html">PHP (systemd)</a>.</p>
 
     <a id="10.0-063">
     <h4>10.0 063 Firefox  Date: 2021-01-06  Severity: Critical</h4>
@@ -591,8 +598,8 @@
     available.</p>
     <p>To fix this, update to firefox-78.6.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="10.0-062">
     <h4>10.0 062 Node.js  Date: 2021-01-05  Severity: High</h4>
@@ -605,8 +612,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1971">CVE-2020-1971</a>.</p>
     <p>To fix these, update to Node.js-14.15.4 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
+    <a href="../view/10.1/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/10.1-systemd/general/nodejs.html">Node.js (systemd)</a>.
     Alternatively, if you are still using the v12 series, you may prefer to
     update to v12.20.1 or later.</p>
 
@@ -629,8 +636,8 @@
     imap_hibernate_timeout is either set to 0 or unset.</p>
     <p>To fix this, update to dovecot-2.3.13 or later using the instructions
     from the development book for
-    <a href="../view/svn/server/dovecot.html">Dovecot (sysv)</a> or
-    <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
+    <a href="../view/10.1/server/dovecot.html">Dovecot (sysv)</a> or
+    <a href="../view/10.1-systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
 
     <a id="10.0-059">
     <h4>10.0 059 Libpcap  Date: 2021-01-04  Severity: High</h4>
@@ -639,8 +646,8 @@
     mentions various security fixes.</p>
     <p>To fix these, update to Libpcap-1.10.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/libpcap.html">Libpcap (sysv)</a> or
-    <a href="../view/systemd/basicnet/libpcap.html">Libpcap (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/libpcap.html">Libpcap (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/libpcap.html">Libpcap (systemd)</a>.</p>
 
     <a id="10.0-058">
     <h4>10.0 058 OpenJPEG  Date: 2020-12-15  Severity: High</h4>
@@ -652,8 +659,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8112">CVE-2020-8112</a>.</p>
     <p>To fix these, update to OpenJPEG-2.4.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/openjpeg2.html">OpenJPEG2 (sysv)</a> or
-    <a href="../view/systemd/general/openjpeg2.html">OpenJPEG2 (systemd)</a>.</p>
+    <a href="../view/10.1/general/openjpeg2.html">OpenJPEG2 (sysv)</a> or
+    <a href="../view/10.1-systemd/general/openjpeg2.html">OpenJPEG2 (systemd)</a>.</p>
 
     <a id="10.0-057">
     <h4>10.0 057 Wireshark  Updated: 2021-02-04  Severity: Invalid</h4>
@@ -679,8 +686,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
     <p>To fix this, update to Thunderbird-78.6.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="10.0-055">
     <h4>10.0 055 Wireshark  Date: 2020-09-23  Severity: High</h4>
@@ -697,8 +704,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28030">CVE-2020-28030</a>.</p>
     <p>To fix these, update to wireshark-3.4.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="10.0-054">
     <h4>10.0 054 P11-Kit  Date: 2020-12-15  Severity: High</h4>
@@ -709,8 +716,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29363">CVE-2020-29363</a>.</p>
     <p>To fix this, update to p11-kit-0.23.22 or later using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/p11-kit.html">P11-Kit (sysv)</a> or
-    <a href="../view/systemd/postlfs/p11-kit.html">P11-Kit (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/p11-kit.html">P11-Kit (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/p11-kit.html">P11-Kit (systemd)</a>.</p>
 
     <a id="10.0-053">
     <h4>10.0 053 Firefox  Date: 2020-12-15  Severity: Critical</h4>
@@ -728,8 +735,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-35113">CVE-2020-35113</a>.</p>
     <p>To fix these, update to firefox-78.5.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="10.0-052">
     <h4>10.0 052 OpenSSL (LFS) Date: 2020-12-15 Severity: High</h4>
@@ -742,8 +749,8 @@
     <a href="https://www.openssl.org/news/secadv/20201208.txt">OpenSSL</a>.</p>
     <p>To fix this, update to at least OpenSSL-1.1.1i using the instructions
     from the LFS development book for
-    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <a href="../../lfs/view/10.1/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/10.1-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
 
     <a id="10.0-051">
     <h4>10.0 051 Python (LFS and BLFS) Date: 2020-12-15 Severity: High</h4>
@@ -753,8 +760,8 @@
     <a href="https://bugs.python.org/issue42103">bpo-42103</a>.</p>
     <p>To fix this, update to at least Python-3.9.1 using the instructions
     from the <b>BLFS</b> development book for
-    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
-    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <a href="../view/10.1/general/python3.html">Python (sysv)</a> or
+    <a href="../view/10.1-systemd/general/python3.html">Python (systemd)</a>.</p>
 
     <a id="10.0-050">
     <h4>10.0 050 cURL Date: 2020-12-11 Severity: High</h4>
@@ -767,8 +774,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8286">CVE-2020-8286</a>.</p>
     <p>To fix these, update to cURL-7.74.0 or later following the instructions
     from the development book for
-    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
-    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
 
     <a id="10.0-049">
     <h4>10.0 049 Gdk-Pixbuf Date: 2020-12-08 Severity: Medium</h4>
@@ -778,8 +785,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29385">CVE-2020-29385</a>.</p>
     <p>To fix this, update to Gdk-Pixbuf-2.42.2 or later following the instructions
     from the development book for
-    <a href="../view/svn/x/gdk-pixbuf.html">Gdk-Pixbuf (sysv)</a> or
-    <a href="../view/systemd/x/gdk-pixbuf.html">Gdk-Pixbuf (systemd)</a>.</p>
+    <a href="../view/10.1/x/gdk-pixbuf.html">Gdk-Pixbuf (sysv)</a> or
+    <a href="../view/10.1-systemd/x/gdk-pixbuf.html">Gdk-Pixbuf (systemd)</a>.</p>
 
     <a id="10.0-048">
     <h4>10.0 048 Xorg-Server  Date 2020-12-05  Severity: High</h4>
@@ -793,8 +800,8 @@
     .</p>
     <p>To fix this, update to at least Xorg-Server-1.20.10 using the instructions
     from the development book for
-    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
-    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <a href="../view/10.1/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/10.1-systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
 
     <a id="10.0-047">
     <h4>10.0 047 Unbound Updated: 2020-12-05 Severity: Medium</h4>
@@ -804,8 +811,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28935">CVE-2020-28935</a>.</p>
     <p>To fix this, update to Unbound-1.13.0 or later following the instructions
     from the development book for
-    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
-    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+    <a href="../view/10.1/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/10.1-systemd/server/unbound.html">Unbound (systemd)</a>.</p>
 
     <a id="10.0-046">
     <h4>10.0 046 Mutt Date: 2020-11-26 Severity: Medium</h4>
@@ -815,8 +822,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28896">CVE-2020-28896</a>.</p>
     <p>To fix this, update to mutt-2.0.2 or later following the instructions
     from the development book for
-    <a href="../view/svn/basicnet/mutt.html">Mutt (sysv)</a> or
-    <a href="../view/systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/mutt.html">Mutt (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
 
     <a id="10.0-045">
     <h4>10.0 045 LibEXIF Date: 2020-11-21 Severity: Critical</h4>
@@ -832,8 +839,8 @@
     <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
     following the instructions
     from the development book for
-    <a href="../view/svn/general/libexif.html">LibEXIF (sysv)</a> or
-    <a href="../view/systemd/general/libexif.html">LibEXIF (systemd)</a>.</p>
+    <a href="../view/10.1/general/libexif.html">LibEXIF (sysv)</a> or
+    <a href="../view/10.1-systemd/general/libexif.html">LibEXIF (systemd)</a>.</p>
 
     <a id="10.0-044">
     <h4>10.0 044 LibXML2 Date: 2020-11-21 Severity: High</h4>
@@ -848,8 +855,8 @@
     <a href="http://www.linuxfromscratch.org/patches/downloads/libxml2/libxml2-2.9.10-security_fixes-1.patch">libxml2-2.9.10-security_fixes-1.patch</a>
     following the instructions
     from the development book for
-    <a href="../view/svn/general/libxml2.html">LibXML2 (sysv)</a> or
-    <a href="../view/systemd/general/libxml2.html">LibXML2 (systemd)</a>,
+    <a href="../view/10.1/general/libxml2.html">LibXML2 (sysv)</a> or
+    <a href="../view/10.1-systemd/general/libxml2.html">LibXML2 (systemd)</a>,
     or update to a later version if one is released.</p>
 
     <a id="10.0-043">
@@ -864,8 +871,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-13584">CVE-2020-13584</a>.</p>
     <p>To fix this, update to at least webkitgtk-2.30.3 using the instructions
     from the development book for
-    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
-    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+    <a href="../view/10.1/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/10.1-systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
 
     <a id="10.0-042">
     <h4>10.0 042 Qt5 and QtWebEngine  Date: 2020-11-20  Severity: Critical</h4>
@@ -878,10 +885,10 @@
     <a href="https://wiki.qt.io/Qt_5.15.2_Change_Files">Qt-5.15.2 Changes</a>.</p>
     To fix these, update to at least Qt-5.15.2 and QtWebEngine-5.15.1 using the
     instructions from the development book for
-    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> and
-    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
-    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
-    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a href="../view/10.1/x/qt5.html">Qt5 (sysv)</a> and
+    <a href="../view/10.1/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/10.1-systemd/x/qt5.html">Qt5 (systemd)</a> and
+    <a href="../view/10.1-systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
     <a id="10.0-041">
     <h4>10.0 041 Thunderbird  Date: 2020-11-19 Severity: High</h4>
@@ -892,8 +899,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26968">CVE-2020-26968</a>.<p>
     <p>To fix this, update to Thunderbird-78.5.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="10.0-040">
     <h4>10.0 040 Kerberos 5  Date: 2020-11-19  Severity: High</h4>
@@ -902,8 +909,8 @@
     <a href="https://web.mit.edu/kerberos/krb5-1.18/">Release Notes</a>.</p>
     <p>To fix this, update to krb-5.18.3 or later using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/mitkrb.html">Kerberos (sysv)</a> or
-    <a href="../view/systemd/postlfs/mitkrb.html">Kerberos (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/mitkrb.html">Kerberos (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/mitkrb.html">Kerberos (systemd)</a>.</p>
 
     <a id="10.0-039">
     <h4>10.0 039 C-Ares  Date: 2020-11-19  Severity: High</h4>
@@ -914,8 +921,8 @@
     which was initially raised against Node.js.</p>
     <p>To fix this, update to C-Ares-1.17.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/c-ares.html">C-Ares (sysv)</a> or
-    <a href="../view/systemd/basicnet/c-ares.html">C-Ares (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/c-ares.html">C-Ares (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/c-ares.html">C-Ares (systemd)</a>.</p>
 
     <a id="10.0-038">
     <h4>10.0 038 Node.js  Date: 2020-11-19  Severity: High</h4>
@@ -926,8 +933,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8277">CVE-2020-8277</a>.</p>
     <p>To fix this, update to Node.js-14.15.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
+    <a href="../view/10.1/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/10.1-systemd/general/nodejs.html">Node.js (systemd)</a>.
     Alternatively, if you are still using the v12 series, you may prefer to
     update to v12.19.1 or later.</p>
 
@@ -939,8 +946,8 @@
     .</p>
     <p>To fix this, update to JS-78.5.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
-    <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
+    <a href="../view/10.1/general/js78.html">JS78 (sysv)</a> or
+    <a href="../view/10.1-systemd/general/js78.html">JS78 (systemd)</a>.</p>
 
     <a id="10.0-036">
     <h4>10.0 036 Firefox  Date: 2020-11-16  Severity: High</h4>
@@ -952,8 +959,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26968">CVE-2020-26968</a>.</p>
     <p>To fix this, update to firefox-78.5.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="10.0-035">
     <h4>10.0 035 Raptor  Date: 2020-11-13 Severity: High</h4>
@@ -966,8 +973,8 @@
     <a href="http://www.linuxfromscratch.org/patches/downloads/raptor/raptor-2.0.15-security_fixes-1.patch">raptor-2.0.15-security_fixes-1.patch</a>
     and the instructions
     from the development book for
-    <a href="../view/svn/general/raptor.html">Raptor (sysv)</a> or
-    <a href="../view/systemd/general/raptor.html">Raptor (systemd)</a>.</p>
+    <a href="../view/10.1/general/raptor.html">Raptor (sysv)</a> or
+    <a href="../view/10.1-systemd/general/raptor.html">Raptor (systemd)</a>.</p>
 
     <a id="10.0-034">
     <h4>10.0 034 PostgreSQL  Date: 2020-11-12 Severity: High</h4>
@@ -980,8 +987,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25696">CVE-2020-25696</a>.</p>
     <p>To fix this, update to PostgreSQL-13.1 or later, using the instructions
     from the development book for
-    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
-    <a href="../view/systemd/server/postgresql.html">PostgrSQL (systemd)</a>.</p>
+    <a href="../view/10.1/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/10.1-systemd/server/postgresql.html">PostgrSQL (systemd)</a>.</p>
 
     <a id="10.0-033">
     <h4>10.0 033 Thunderbird  Date: 2020-11-10  Severity: Critical</h4>
@@ -992,8 +999,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
     <p>To fix this, update to Thunderbird-78.4.2 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="10.0-032">
     <h4>10.0 032 Seamonkey  Updated: 2020-11-21  Severity: Critical</h4>
@@ -1005,8 +1012,8 @@
     And then Seamonkey-2.53.5.1 had further fixes for this.
     <p>To fix these, update to Seamonkey-2.53.5.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
     <a id="10.0-031">
     <h4>10.0 031 JS78  Date: 2020-11-09  Severity: Critical</h4>
@@ -1018,8 +1025,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
     <p>To fix this, update to JS-78.4.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
-    <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
+    <a href="../view/10.1/general/js78.html">JS78 (sysv)</a> or
+    <a href="../view/10.1-systemd/general/js78.html">JS78 (systemd)</a>.</p>
 
     <a id="10.0-030">
     <h4>10.0 030 Firefox  Date: 2020-11-09  Severity: Critical</h4>
@@ -1031,8 +1038,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26950">CVE-2020-26950</a>.
     <p>To fix this, update to firefox-78.4.1 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="10.0-029">
     <h4>10.0 029 MariaDB  Date: 2020-11-04  Severity: Medium</h4>
@@ -1045,8 +1052,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14789">CVE-2020-14789</a>.</p>
     <p>To fix this, update to at least mariadb-10.5.7 using the instructions
     from the development book for
-    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
-    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <a href="../view/10.1/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/10.1-systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
 
     <a id="10.0-028">
     <h4>10.0 028 Samba  Date: 2020-10-30  Severity: Medium</h4>
@@ -1057,8 +1064,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14383">CVE-2020-14383</a>.</p>
     <p>To fix this, update to at least samba-4.13.1 using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
     <a id="10.0-027">
     <h4>10.0 027 Libass  Date: 2020-10-30  Severity: High</h4>
@@ -1066,8 +1073,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26682">CVE-2020-26682</a>.</p>
     <p>To fix this, update to at least libass-0.15.0 using the instructions
     from the development book for
-    <a href="../view/svn/multimedia/libass.html">Libass (sysv)</a> or
-    <a href="../view/systemd/multimedia/libass.html">Libass (systemd)</a>.</p>
+    <a href="../view/10.1/multimedia/libass.html">Libass (sysv)</a> or
+    <a href="../view/10.1-systemd/multimedia/libass.html">Libass (systemd)</a>.</p>
 
     <a id="10.0-026">
     <h4>10.0 026 The Gstreamer stack  Date: 2020-10-27  Severity: High</h4>
@@ -1088,9 +1095,9 @@
     <p>On systems running Gstreamer 1.18 versions, update to the
     gstreamer-1.18.1 or later packages (gstreamer, -libav, -plugins, -vaapi)
     using the instructions from the development book for
-    <a href="../view/svn/multimedia/gstreamer10.html">Gstreamer 1.18 (sysv)</a>i
+    <a href="../view/10.1/multimedia/gstreamer10.html">Gstreamer 1.18 (sysv)</a>i
     <i>et seq.</i> or
-    <a href="../view/systemd/multimedia/gstreamer10.html">Gstreamer 1.18 (systemd)</a>
+    <a href="../view/10.1-systemd/multimedia/gstreamer10.html">Gstreamer 1.18 (systemd)</a>
     <i> et seq.</i></p>
 
     <a id="10.0-025">
@@ -1100,8 +1107,8 @@
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-47/">mfsa2020-47</a>.</p>
     <p>To fix this, update to Thunderbird-78.4.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="10.0-024">
     <h4>10.0 024 FreeType  Date: 2020-10-20  Severity: High</h4>
@@ -1116,8 +1123,8 @@
     .</p>
     <p>To fix this, update to freetype-2.10.4 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/freetype2.html">FreeType (sysv)</a> or
-    <a href="../view/systemd/general/freetype2.html">FreeType (systemd)</a>.</p>
+    <a href="../view/10.1/general/freetype2.html">FreeType (sysv)</a> or
+    <a href="../view/10.1-systemd/general/freetype2.html">FreeType (systemd)</a>.</p>
 
     <a id="10.0-023">
     <h4>10.0 023 LXML  Updated: 2020-11-28  Severity: Medium</h4>
@@ -1130,8 +1137,8 @@
     <p>This was thought to be fixed in LXML-4.6.1, but that fix was inadequate.
     To fix this, update to LXML-4.6.2 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/python-modules.html#lxml">LXML (sysv)</a> or
-    <a href="../view/systemd/general/python-modules.html#lxml">LXML (systemd)</a>.</p>
+    <a href="../view/10.1/general/python-modules.html#lxml">LXML (sysv)</a> or
+    <a href="../view/10.1-systemd/general/python-modules.html#lxml">LXML (systemd)</a>.</p>
 
     <a id="10.0-022">
     <h4>10.0 022 NSS  Date: 2020-10-17  Severity: High</h4>
@@ -1141,8 +1148,8 @@
     .</p>
     <p>To fix this, update to at least NSS-3.58 using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/nss.html">NSS (sysv)</a> or
-    <a href="../view/systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/nss.html">NSS (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
 
     <a id="10.0-021">
     <h4>10.0 021 Stunnel  Date: 2020-10-16  Severity: High</h4>
@@ -1151,8 +1158,8 @@
     <a href="https://www.stunnel.org/NEWS.html">Stunnel NEWS</a>.</p>
     <p>To fix this, update to at least stunnel-5.57 using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/stunnel.html">Stunnel (sysv)</a> or
-    <a href="../view/systemd/postlfs/stunnel.html">Stunnel (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/stunnel.html">Stunnel (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/stunnel.html">Stunnel (systemd)</a>.</p>
 
     <a id="10.0-020">
     <h4>10.0 020 Ruby  Date: 2020-10-06  Severity: High</h4>
@@ -1160,8 +1167,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25613">CVE-2020-25613</a>.</p>
     <p>To fix this, update to at least Ruby-2.7.2 using the instructions
     from the development book for
-    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
-    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+    <a href="../view/10.1/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/10.1-systemd/general/ruby.html">Ruby (systemd)</a>.</p>
 
     <a id="10.0-019">
     <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
@@ -1170,8 +1177,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1472">CVE-2020-1472</a>.</p>
     <p>To fix this, update to at least PHP-7.4.11 using the instructions
     from the development book for
-    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a href="../view/10.1/general/php.html">PHP (sysv)</a> or
+    <a href="../view/10.1-systemd/general/php.html">PHP (systemd)</a>.</p>
 
     <a id="10.0-018">
     <h4>10.0 018 Glib  Date: 2020-10-05  Severity: Medium</h4>
@@ -1181,8 +1188,8 @@
     .</p>
     <p>To fix this, update to at least Glib-2.66.1 using the instructions
     from the development book for
-    <a href="../view/svn/general/glib2.html">Glib (sysv)</a> or
-    <a href="../view/systemd/general/glib2.html">Glib (systemd)</a>.</p>
+    <a href="../view/10.1/general/glib2.html">Glib (sysv)</a> or
+    <a href="../view/10.1-systemd/general/glib2.html">Glib (systemd)</a>.</p>
 
     <a id="10.0-017">
     <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>
@@ -1194,8 +1201,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-25863">CVE-2020-25866</a>.</p>
     <p>To fix these, update to wireshark-3.2.7 or later using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="10.0-016">
     <h4>10.0 016 Thunderbird  Updated: 2020-09-25  Severity: High</h4>
@@ -1206,8 +1213,8 @@
     <p>But users of that version of thunderbird reported numerous crashes.
     To fix the vulnerabilities and the crashes update to thunderbird-78.3.1 or
     later using the instructions from the development book for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="10.0-015">
     <h4>10.0 015 Seamonkey  Date: 2020-09-23  Severity: Critical</h4>
@@ -1217,8 +1224,8 @@
     <a href="https://www.seamonkey-project.org/releases/seamonkey2.53.4/">The Release Notes</a>.</p>
     <p>To fix these, update to Seamonkey-2.53.4 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
     <a id="10.0-014">
     <h4>10.0 014 Firefox  Date: 2020-09-21  Severity: High</h4>
@@ -1227,8 +1234,8 @@
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2020-43/">mfsa2020-43</a>.</p>
     <p>To fix these, update to firefox-78.3.0 or later using the instructions
     from the development book for
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/10.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/10.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="10.0-013">
     <h4>10.0 013 Samba  Date: 2020-09-26  Severity: Critical</h4>
@@ -1239,8 +1246,8 @@
     has been assigned.</p>
     <p>To fix this, update to Samba-4.12.7 or later using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
     <a id="10.0-012">
     <h4>10.0 012 Node.js  Date: 2020-09-17  Severity: High</h4>
@@ -1250,8 +1257,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8252">CVE-2020-8252</a>.</p>
     <p>To fix this, update to Node.js-12.18.4 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+    <a href="../view/10.1/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/10.1-systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
 
     <a id="10.0-011">
     <h4>10.0 011 Qt5 and QtWebEngine  Date: 2020-09-10  Severity: Critical</h4>
@@ -1262,10 +1269,10 @@
     <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14026">BLFS ticket #14026</a>.</p>
     To fix this, update to at least Qt-5.15.1 and QtWebEngine-5.15.1 using the
     instructions from the development book for
-    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> and
-    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
-    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a> and
-    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a href="../view/10.1/x/qt5.html">Qt5 (sysv)</a> and
+    <a href="../view/10.1/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/10.1-systemd/x/qt5.html">Qt5 (systemd)</a> and
+    <a href="../view/10.1-systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
     <a id="10.0-010">
     <h4>10.0 010 Linux Kernel (LFS)  Date: 2020-09-15  Severity: High</h4>
@@ -1274,8 +1281,8 @@
     <a href="https://www.openwall.com/lists/oss-security/2020/09/08/4">oss-security</a>.</p>
     <p>To fix this, update to linux-5.8.9 or later using the instructions
     from the LFS development book for
-    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <a href="../../lfs/view/10.1/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/10.1-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
 
     <a id="10.0-009">
     <h4>10.0 009 Bison (LFS)  Date: 2020-09-15  Severity: Low</h4>
@@ -1284,8 +1291,8 @@
     <a href="https://lists.gnu.org/archive/html/info-gnu/2020-09/msg00003.html">The Release Announcement</a>.</p>
     <p>To fix this, update to bison-3.7.2 or later using the instructions
     from the LFS development book for
-    <a href="../../lfs/view/development/chapter08/bison.html">Bison (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/bison.html">Bison (systemd)</a>.</p>
+    <a href="../../lfs/view/10.1/chapter08/bison.html">Bison (sysv)</a> or
+    <a href="../../lfs/view/10.1-systemd/chapter08/bison.html">Bison (systemd)</a>.</p>
 
     <a id="10.0-008">
     <h4>10.0 008 Cryptsetup  Date: 2020-09-06  Severity: High</h4>
@@ -1295,8 +1302,8 @@
     has been assigned.</p>
     <p>To fix this, update to at least cryptsetup-2.3.4 using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/cryptsetup.html">Cryptsetup (sysv)</a> or
-    <a href="../view/systemd/postlfs/cryptsetup.html">Cryptsetup (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/cryptsetup.html">Cryptsetup (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/cryptsetup.html">Cryptsetup (systemd)</a>.</p>
 
     <a id="10.0-007">
     <h4>10.0 007 GnuPG  Date: 2020-09-06  Severity: Critical</h4>
@@ -1307,8 +1314,8 @@
     has been assigned.</p>
     <p>To fix this, update to GnuPG-2.2.23 or later using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
-    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
 
     <a id="10.0-006">
     <h4>10.0 006 Brotli  Date: 2020-09-06  Severity: Medium</h4>
@@ -1317,8 +1324,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8927">CVE-2020-8927</a>.</p>
     <p>To fix this, update to brotli-1.0.9 or later using the instructions
     from the development book for
-    <a href="../view/svn/general/brotli.html">Brotli (sysv)</a> or
-    <a href="../view/systemd/general/brotli.html">Brotli (systemd)</a>.</p>
+    <a href="../view/10.1/general/brotli.html">Brotli (sysv)</a> or
+    <a href="../view/10.1-systemd/general/brotli.html">Brotli (systemd)</a>.</p>
 
     <a id="10.0-005">
     <h4>10.0 005 BIND  Date: 2020-09-05  Severity: High</h4>
@@ -1335,8 +1342,8 @@
     <a href="https://kb.isc.org/docs/aa-00913">BIND 9 Security Vulnerabilty Matrix #114-8</a>.</p>
     <p>To fix this, update to BIND-9.6.16 or later using the instructions
     from the development book for
-    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
-    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+    <a href="../view/10.1/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/10.1-systemd/server/bind.html">BIND (systemd)</a>.</p>
 
     <a id="10.0-004">
     <h4>10.0 004 CIFS-utils  Date: 2020-09-05  Severity: High</h4>
@@ -1350,8 +1357,8 @@
     <a href="https://lists.samba.org/archive/samba-technical/2020-September/135747.html">samba-technical</a>.</p>
     <p>To fix this, update to cifs-utils-6.11 or later using the instructions
     from the development book for
-    <a href="../view/svn/basicnet/cifsutils.html">CIFS-utils (sysv)</a> or
-    <a href="../view/systemd/basicnet/cifsutils.html">CIFS-utils (systemd)</a>.</p>
+    <a href="../view/10.1/basicnet/cifsutils.html">CIFS-utils (sysv)</a> or
+    <a href="../view/10.1-systemd/basicnet/cifsutils.html">CIFS-utils (systemd)</a>.</p>
 
     <a id="10.0-003">
     <h4>10.0 003 GnuTLS  Date: 2020-09-03  Severity: High</h4>
@@ -1362,8 +1369,8 @@
     <a href="https://www.gnutls.org/security-new.html#GNUTLS-SA-2020-09-04">GNUTLS-SA-2020-09-04</a>.</p>
     <p>To fix this, update to at least GnuTLS-3.6.15 using the instructions
     from the development book for
-    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
-    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+    <a href="../view/10.1/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/10.1-systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
     <a id="10.0-002">
     <h4>10.0 002 Xorg-Server  Date 2020-09-03  Severity: High</h4>
@@ -1377,8 +1384,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14361">CVE-2020-14362</a>.</p>
     <p>To fix this, update to at least Xorg-Server-1.20.9 using the instructions
     from the development book for
-    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
-    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <a href="../view/10.1/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/10.1-systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
 
     <a id="10.0-001">
     <h4>10.0 001 LibX11  Date: 2020-09-03  Severity: High</h4>
@@ -1388,7 +1395,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14363">CVE-2020-14363</a>.</p>
     <p>To fix this, update to at least libX11-1.6.12 using the instructions
     from the development book for
-    <a href="../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a> or
-    <a href="../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
+    <a href="../view/10.1/x/x7lib.html">Xorg Libraries (sysv)</a> or
+    <a href="../view/10.1-systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
 
 <!--#include virtual="/common/footer.html" -->
