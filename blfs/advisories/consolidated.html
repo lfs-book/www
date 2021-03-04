@@ -76,9 +76,26 @@
 
     <!-- when we do have advisories, comment this for next time -->
 
+    <!--
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
+    -->
 
+    <a id="10.1-001">
+    <h4>10.0 001 OpenSSH Date: 2021-03-03 Severity: Medium</h4>
+    <p>OpenSSH-8.2p1 through OpenSSH-8.4p1 included a security vulnerability
+    (double free) in the 'ssh-agent' program. This could lead to memory
+    corruption and is potentially exploitable, and may lead to potential
+    privilege escalation. This bug is only reachable by those with access
+    to the agent socket, which is why the BLFS team has decided to rate this
+    vulnerability as Medium severity. There is no CVE assigned for this
+    vulnerability.
+    Additional information can be found at
+    <a href="https://seclists.org/oss-sec/2021/q1/190">
+    OpenSSH 8.5 release announcement</a>.</p>
+    <p>To fix this, update to OpenSSH-8.5p1 or later using the instructions in
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
 
     <h2>Items between the releases of the 10.0 and 10.1 books</h2></a>
 
