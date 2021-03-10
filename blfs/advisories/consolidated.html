@@ -81,6 +81,18 @@
     releases of the books.</p>
     -->
 
+    <a id="10.1-003">
+    <h4>10.1 003 MuPDF  Date: 2021-03-10  Severity: Medium</h4>
+    <p>A double free may lead to memory corruption and other potential
+    consequences. This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3407">CVE-2021-3407</a>.</p>
+    <p>To fix this, apply the patch
+    <a href="http://www.linuxfromscratch.org/patches/downloads/mupdf/mupdf-1.18.0-security_fix-1.patch">mupdf-1.18.0-security_fix-1.patch</a>
+    using the instructions
+    from the development book for
+    <a href="../view/svn/pst/mupdf.html">MuPDF (sysv)</a> or
+    <a href="../view/systemd/pst/mupdf.html">MuPDF (systemd)</a>.</p>
+
     <a id="10.1-002">
     <h4>10.1 002 QtWebEngine  Date: 2021-03-10  Severity: High</h4>
     <p>In QtWebEngine before 5.15.3 there were many vulnerabilities originating
