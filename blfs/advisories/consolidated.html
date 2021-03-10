@@ -81,6 +81,18 @@
     releases of the books.</p>
     -->
 
+    <a id="10.1-002">
+    <h4>10.1 002 QtWebEngine  Date: 2021-03-10  Severity: High</h4>
+    <p>In QtWebEngine before 5.15.3 there were many vulnerabilities originating
+    in Chromium. Unfortunately, Qt-5.15.3 is currently only available to commercial
+    customers. Although the git source for QtWebEngine and its submodules remains
+    available, packaging that to a state where it can build on BLFS-10.1 has not been
+    achieved. Until that happens, QtWebEngine and browsers using it (in the book,
+    Falkon but there are others) should not be used on any untrusted pages. For the
+    more than 20 CVE vulnerabilites see
+    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14729"/>BLFS #14729</a>.</p>
+    <!-- if we are able to get it to build, update this and add the usual links -->
+
     <a id="10.1-001">
     <h4>10.0 001 OpenSSH Date: 2021-03-03 Severity: Medium</h4>
     <p>OpenSSH-8.2p1 through OpenSSH-8.4p1 included a security vulnerability
