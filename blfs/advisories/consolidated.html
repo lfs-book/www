@@ -81,6 +81,20 @@
     releases of the books.</p>
     -->
 
+    <a id="10.1-004">
+    <h4>10.1 004 GnuTLS  Date: 2021-03-12  Severity: Low</h4>
+    <p>The client sending a "key_share" or "pre_share_key" extension may
+    result in dereferencing a pointer no longer valid after realloc().
+    These has been assigned 
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20231">CVE-2021-20231</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20232">CVE-2021-20232</a>.
+    The details can be found at
+    <a href="https://gitlab.com/gnutls/gnutls/-/issues/1151">GnuTLS issue
+    tracker</a>.</p>
+    <p>To fix these, update to GnuTLS-3.7.1 or later using the instructions in
+    <a href="../view/svn/general/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/general/gnutls.html">GnuTLS (systemd)</a>.</p>
+
     <a id="10.1-003">
     <h4>10.1 003 MuPDF  Date: 2021-03-10  Severity: Medium</h4>
     <p>A double free may lead to memory corruption and other potential
