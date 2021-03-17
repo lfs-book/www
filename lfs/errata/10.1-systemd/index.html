@@ -28,7 +28,11 @@
 -->
        <h2>Miscellaneous Errata</h2>
          <ul>
-           <li>There are no current errata items for LFS 10.1-systemd.</li> 
+           <!--li>There are no current errata items for LFS 10.1-systemd.</li--> 
+           <li>An issue in Binutils may cause "make install" to fail if
+           "-j N" is set in MAKEFLAGS.  To workaround it, append "-j1" into
+           Binutils (pass1, pass2, and final) "make install" command
+           (Reported by Hans Meier).</li>
          </ul>
 
 
