@@ -151,16 +151,18 @@
     <a href="../view/systemd/pst/mupdf.html">MuPDF (systemd)</a>.</p>
 
     <a id="10.1-002">
-    <h4>10.1 002 QtWebEngine  Date: 2021-03-10  Severity: High</h4>
-    <p>In QtWebEngine before 5.15.3 there were many vulnerabilities originating
-    in Chromium. Unfortunately, Qt-5.15.3 is currently only available to commercial
-    customers. Although the git source for QtWebEngine and its submodules remains
-    available, packaging that to a state where it can build on BLFS-10.1 has not been
-    achieved. Until that happens, QtWebEngine and browsers using it (in the book,
-    Falkon but there are others) should not be used on any untrusted pages. For the
-    more than 20 CVE vulnerabilites see
-    <a href="http://wiki.linuxfromscratch.org/blfs/ticket/14729"/>BLFS #14729</a>.</p>
-    <!-- if we are able to get it to build, update this and add the usual links -->
+    <h4>10.1 002 QtWebEngine  Updated: 2021-03-19  Severity: High</h4>
+    <p>Many CVEs in QtWebEngine-5.15.2 have been fixed in version 5.15.3,
+    but the release tarball and the rest of 5.15.3 is not yet available
+    to non-commercial customers. Before they decided to not produce a file
+    of changes, the details were recorded at <a
+    href="https://codereview.qt-project.org/c/qt/qtwebengine/+/335435/6/dist/changes-5.15.3">A Qt code review</a>. For the most recent of those, see <a
+    href="https://chromereleases.googleblog.com/2021/02/stable-channel-update-for-desktop_16.html">Upstream Chrome, dated 2021-02-16</a>.
+    To fix these, update to the BLFS 5.15.3 git tarball with instructions
+    for installing that as 5.15.2 to match Qt5 (or update to a later version)
+    using the instructions at
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/svn-systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
     <a id="10.1-001">
     <h4>10.1 001 OpenSSH Date: 2021-03-03 Severity: Medium</h4>
@@ -453,7 +455,7 @@
     have tested a way to restore them via a rescue stick or similar, it might be
     possible to build glibc-2.33 in place and then immediately make an unclean
     shutdown, e.g. using MagicSysRQ if that is enabled in your kernel. <b>Such a
-    procedure is not recommended, nor has it been tested.</b><i></p>
+    procedure is not recommended, nor has it been tested.</b></i></p>
 
     <a id="10.0-081">
     <h4>10.0 081 Firefox  UpDated: 2021-02-07  Severity: None</h4>
