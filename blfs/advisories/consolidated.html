@@ -81,7 +81,7 @@
     releases of the books.</p>
     -->
     <a id="10.1-007">
-    <h4>10.1 007 Gstreamer Date: 2021-03-17 Severity: High</h4>
+    <h4>10.1 007 Gstreamer Upated: 2021-03-17 Severity: High</h4>
     <p>In gstreamer-1.18.4 (including plugins), five high severity security
     vulnerabilities were fixed. Two of them were in gst-plugins-good, one in
     gst-plugins-ugly, one in gst-libav, and one in gst-plugins-base. Upon 
@@ -93,6 +93,11 @@
     using the instructions in the gstreamer pages, starting at
     <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
     <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+    <p>If you are maintaining a system which is still using gstreamer-1.16.3
+    you should go to the Gstreamer Security Center link above, take the five
+    patches for items SA-2021-001 to 005 and apply them to plugins-base (001),
+    plugins-good (002, 003), plugins-ugly (004) and libav (005) and recompile
+    everything except gstreamer (because a library from -base is affected).</p>
 
     <a id="10.1-006">
     <h4>10.1 006 Wireshark Date: 2021-03-16 Severity: High</h4>
