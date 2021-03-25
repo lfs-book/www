@@ -80,6 +80,21 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="10.1-010">
+    <h4>10.1 010 PDFBox (FOP) Date: 2021-03-25 Severity: Medium</h4>
+    <p>In Apache PDFBox-2.0.23, two security vulnerabilities were fixed. One of
+    the vulnerabilities could lead to infinite loops when loading input files,
+    and the other one may result in an OutOfMemory exception while loading an
+    input file. Both of these issues are classified as Denial-of-Service 
+    vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27906">CVE-2021-27906</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27807">CVE-2021-27807</a>.</p>
+    To fix these, update the supplemental JAR files in fop to 2.0.23 using the 
+    instructions in
+    <a href="../view/svn/pst/fop.html">fop (sysv)</a> or 
+    <a href="../view/systemd/pst/fop.html">fop (systemd)</a>.</p>
+
     <a id="10.1-009">
     <h4>10.1 009 JS78  Date: 2021-03-23  Severity: Medium</h4>
     <p>In the javascript code of firefox-78.9.0 there are hardening fixes
