@@ -80,6 +80,31 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="10.1-014">
+    <h4>10.1 014 lxml         Date: 2021-03-27  Severity: Medium</h4>
+    <p>In lxml-4.6.3, a security vulnerability was fixed in the HTML Cleaner
+    that could lead to JavaScript code being passed into the output. This
+    vulnerability is classified as "Cross Site Scripting". It does not properly
+    sanitize the input from the HTML5 formaction attribute, leading to
+    JavaScript code being inserted into the output. This vulnerability
+    has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28957">CVE-2021-28957</a>.</p>
+    <p>To fix this, update to lxml-4.6.3 using the instructions for
+    <a href="../view/svn/general/python-modules.html#lxml">lxml (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#lxml">lxml (systemd)</a>.</p>
+
+    <a id="10.1-013">
+    <h4>10.1 013 Nettle       Date: 2021-03-27  Severity: High</h4>
+    <p>In Nettle-3.7.2, a security vulnerability was fixed that could allow for
+    improper results or crashes with assertion failures when processing some
+    ECDSA signatures. This has to do with the secp224r1 and secp521r1 curves,
+    and the maintainer suggests upgrading immediately because of the severity
+    of the bug. More information can be found here:
+    <a href="http://lists.lysator.liu.se/pipermail/nettle-bugs/2021/009457.html">ANNOUNCE: Serious bug in Nettle's ecdsa_verify</a>.</p>
+    <p>To fix this, update to Nettle-3.7.2 or later using the instructions for
+    <a href="../view/svn/postlfs/nettle.html">Nettle (sysv)</a> or
+    <a href="../view/systemd/postlfs/nettle.html">Nettle (systemd)</a>.</p>
+
     <a id="10.1-012">
     <h4>10.1 012 Thunderbird  Date: 2021-02-26  Severity: High</h4>
     <p>In Thunderbird before 78.9.0 there were two vulnerabilities rated as
