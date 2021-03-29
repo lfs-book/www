@@ -7,8 +7,18 @@
      
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
+     <!--
      <ul>
        <li>There are no current errata for blfs-10.1.</li>
+     </ul>
+     -->
+
+     <ul>
+       <li>In OpenSSH, there was a bug that could lead to sshd rejecting
+           connections on some non-x86_64 platforms, such as i686.
+           This problem is due to the seccomp syscall filtering functionality
+           added to OpenSSH-8.4p1. To fix this, run the command in this
+           <a href="http://lists.linuxfromscratch.org/pipermail/lfs-support/2021-March/054201.html">Mailing List Post</a>.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
