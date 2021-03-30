@@ -80,6 +80,23 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="10.1-017">
+    <h4>10.1 017 glib2   Date: 2021-03-29  Severity: Medium</h4>
+    <p>In glib-2.66.8, a medium-severity security vulnerability was fixed
+    that allowed a malicious archive to create files elsewhere in the filesystem
+    via a symlink attack. The malicious archive may also be able to overwrite
+    existing files when extracted with file-roller.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28153">CVE-2021-28153</a>,
+    and additional information can be found at
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/2325">file-roller symlink attack (#2325)</a>.</p>
+    <p>To fix this vulnerability, update to glib-2.66.8 or later using the
+    instructions for
+    <a href="../view/svn/general/glib2.html">glib (sysv)</a> or 
+    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+    <!-- When glib-2.68.0 goes in, we should probably adjust that to pull
+         from 10.1. -->
+
     <a id="10.1-016">
     <h4>10.1 016 Samba   Date: 2021-03-28  Severity: High</h4>
     <p>In Samba-4.14.2, two security vulnerabilities were fixed that could
