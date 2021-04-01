@@ -949,8 +949,8 @@
     <h4>10.0 060 Dovecot  Date: 2021-01-04  Severity: Medium</h4>
     <p>In Dovecot before version 2.3.13, if the IMAP hibernation has been
     enabled (it is off by default) an attacker can access other user's emails
-    and filesystem information.
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24386">CVE-2020-24386</a>,
+    and filesystem information. It has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24386">CVE-2020-24386</a>.</p>
     <p>A workaround is to disable imap hibernation by ensuring
     imap_hibernate_timeout is either set to 0 or unset.</p>
     <p>To fix this, update to dovecot-2.3.13 or later using the instructions
