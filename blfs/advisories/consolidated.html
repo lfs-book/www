@@ -80,6 +80,56 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="10.1-020">
+    <h4>10.1 020 cURL   Date: 2021-03-31  Severity: Medium</h4>
+    <p>In cURL-7.76.0, two vulnerabilities are fixed
+    that may lead to disclosure of sensitive information or authentication
+    bypass.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22876">CVE-2021-22876 (NOT PUBLIC YET)</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22890">CVE-2021-22890 (NOT PUBLIC YET)</a>.
+    Additional information can be found at
+    <a href="https://curl.se/docs/CVE-2021-22876.html">cURL</a>
+    <a href="https://curl.se/docs/CVE-2021-22890.html">website</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.76.0 or higher
+    using the instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="10.1-019">
+    <h4>10.1 019 Python 2   Date: 2021-03-31  Severity: Critical</h4>
+    <p>In Python 3 releases, multiple vulnerabilities are fixed
+    that may lead to denial of service, remote code execution, or web cache
+    poisoning. Python 2 is already EOL'ed and has not got the fixes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-20907">CVE-2019-20907</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8492">CVE-2020-8492</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26116">CVE-2020-26116</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27619">CVE-2020-27619</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3177">CVE-2021-3177</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23336">CVE-2021-23336</a>.</p>
+    <p>To fix these vulnerabilities, it's recommended to port everything
+    using Python 2 to use Python 3 insteadly.</p>
+    <p>If you decide to stick with Python 2 anyway, rebuild Python 2 with
+    a security patch using the instructions for
+    <a href="../view/svn/general/python2.html">Python 2 (sysv)</a> or
+    <a href="../view/systemd/general/python2.html">Python 2 (systemd)</a>.</p>
+
+    <a id="10.1-018">
+    <h4>10.1 018 WebKitGTK   Date: 2021-03-31  Severity: Critical</h4>
+    <p>In WebKitGTK 2.32.0, three security vulnerabilities were fixed
+    that could lead to arbitary code execution.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1788">CVE-2021-1788 (NOT PUBLIC YET)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1844">CVE-2021-1844 (NOT PUBLIC YET)</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1871">CVE-2021-1871 (NOT PUBLIC YET)</a>.
+    Additional information can be found at
+    <a href="https://webkitgtk.org/security/WSA-2021-0003.html">WSA-2021-0003</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.32.0 or higher
+    using the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
     <a id="10.1-017">
     <h4>10.1 017 glib2   Date: 2021-03-29  Severity: Medium</h4>
     <p>In glib-2.66.8, a medium-severity security vulnerability was fixed
@@ -114,8 +164,8 @@
     <a href="../view/10.1-systemd/basicnet/samba.html">Samba (10.1 systemd)</a>.</p>
 
     <a id="10.1-015">
-    <h4>10.1 015 WebKitGTK+   Date: 2021-03-28  Severity: Critical</h4>
-    <p>In WebKitGTK+-2.30.6, seven security vulnerabilities were fixed that
+    <h4>10.1 015 WebKitGTK   Date: 2021-03-28  Severity: Critical</h4>
+    <p>In WebKitGTK-2.30.6, seven security vulnerabilities were fixed that
     could lead to arbitrary code execution, improper data deletion, 
     sandbox escapes, and access to a ports on restricted servers. One of the
     vulnerabilities has an exploit in the wild and is being actively 
@@ -129,7 +179,7 @@
     and <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1870">CVE-2021-1870 (NOT PUBLIC YET)</a>.
     Additional information can be found at
     <a href="https://webkitgtk.org/security/WSA-2021-0002.html">WSA-2021-0002</a>.</p>
-    <p>To fix these vulnerabilities, update to WebKitGTK+-2.30.6 or higher
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.30.6 or higher
     using the instructions for
     <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
     <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
@@ -471,9 +521,9 @@
     <a href="https://security.archlinux.org/CVE-2020-13558">CVE-2020-13558</a>,
     and additional information may be found at
     <a href="https://webkitgtk.org/security/WSA-2021-0001.html">WSA-2021-0001</a>.</p>
-    <p>To fix this, update to at least WebKitGTK+-2.30.5 using the instructions in
-    <a href="../view/10.1/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or 
-    <a href="../view/10.1-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>To fix this, update to at least WebKitGTK-2.30.5 using the instructions in
+    <a href="../view/10.1/x/webkitgtk.html">WebKitGTK (sysv)</a> or 
+    <a href="../view/10.1-systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
 
     <a id="10.0-090">
     <h4>10.0 090 PostgreSQL   Date: 2021-02-12 Severity: Medium</h4>
