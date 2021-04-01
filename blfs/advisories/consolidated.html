@@ -15,7 +15,7 @@
     mostly updating them to point to the latest version in the development book
     and updating the brief text if a subsequent vulnerability was reported.</p>
 
-    <p><b>This page is a consolidated list for both LFS and BLFS.</b></p>
+    <p><em>This page is a consolidated list for both LFS and BLFS.</em></p>
 
     <p>This list contains summary details and links to upstreams or CVEs where
     available. Please note that vulnerabilities to package versions before those
@@ -23,8 +23,8 @@
     before 10.0 you should check the Errata for past releases as well as
     monitoring the items here.</p>
 
-    <p><i>This page is ordered like the Changelog of the books, with newest
-    items first.</i></p>
+    <p style="font-style: italic;">This page is ordered like the Changelog of the
+    books, with newest items first.</p>
 
     <p>The severity ratings are best estimates unless either upstream
     or NVD has assigned a rating. If no other analysis is available,
@@ -670,11 +670,11 @@
     Red Hat this can be worked around by not processing untrusted input in this
     encoding:
     <a href="https://access.redhat.com/security/cve/cve-2021-3326">Red Hat</a>.</p>
-    <p>To fix these, build a new version of LFS. <i>If you have usable backups and
+    <p>To fix these, build a new version of LFS. <em>If you have usable backups and
     have tested a way to restore them via a rescue stick or similar, it might be
     possible to build glibc-2.33 in place and then immediately make an unclean
-    shutdown, e.g. using MagicSysRQ if that is enabled in your kernel. <b>Such a
-    procedure is not recommended, nor has it been tested.</b></i></p>
+    shutdown, e.g. using MagicSysRQ if that is enabled in your kernel. Such a
+    procedure is not recommended, nor has it been tested.</em></p>
 
     <a id="sa-10.0-081"/>
     <h4>10.0 081 Firefox  UpDated: 2021-02-07  Severity: None</h4>
@@ -705,7 +705,7 @@
     <h4>10.0 079 Glib  Date: 2021-02-04  Severity: High</h4>
     <p>Glib before 2.66.6 was vulnerable to integer truncation leading to
     potentially exploitable heap-overflow vulnerabilities. The issue was
-    raised in a <i>public</i> report, so this is now classed as a zero-day
+    raised in a <em>public</em> report, so this is now classed as a zero-day
     vulnerability requiring urgent update.
     <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/2319">GHSL-2021-045</a>
     .</p>
@@ -1406,18 +1406,18 @@
     .</p>
     <p>On systems running Gstreamer 1.16 versions, such as BLFS-10.0, update to the
     gstreamer-1.16.3 packages (gstreamer, -libav, -plugins, -vaapi) using the instructions
-    from the BLFS-10.0 book:
+    from the BLFS-10.0 book for
     <a href="../view/10.0/multimedia/gstreamer10.html">Gstreamer 1.16 (sysv)</a>
-    <i>et seq.</i> or
+    and the rest of the stack, or
     <a href="../view/10.0-systemd/multimedia/gstreamer10.html">Gstreamer 1.16 (systemd)</a>
-    <i> et seq.</i></p>
+    and the rest of the stack.</p>
     <p>On systems running Gstreamer 1.18 versions, update to the
     gstreamer-1.18.1 or later packages (gstreamer, -libav, -plugins, -vaapi)
     using the instructions for
-    <a href="../view/10.1/multimedia/gstreamer10.html">Gstreamer 1.18 (sysv)</a>i
-    <i>et seq.</i> or
+    <a href="../view/10.1/multimedia/gstreamer10.html">Gstreamer 1.18 (sysv)</a>
+    and the rest of the stack, or
     <a href="../view/10.1-systemd/multimedia/gstreamer10.html">Gstreamer 1.18 (systemd)</a>
-    <i> et seq.</i></p>
+    and the rest of the stack.</p>
 
     <a id="sa-10.0-025"/>
     <h4>10.0 025 Thunderbird  Date: 2020-10-23  Severity: High</h4>
