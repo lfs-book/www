@@ -38,7 +38,7 @@
      if more than one package is involved, e.g. for those firefox updates which
      also require JS to be updated.  Within each package, latest update first
      and link to the consolidated page, e.g.
-     <a href=consolidated.html#10.0-001>10.0-001</a> -->
+     <a href=consolidated.html#sa-10.0-001>10.0-001</a> -->
 
     <h3>BIND</h3>
 
@@ -46,13 +46,13 @@
     <p>A security vulnerability was found in BIND that could result in a crash
     or potentially remote code execution if the server uses GSSAPI/SPNEGO.
     Apply the sed in the page linked in the advisory and rebuild BIND.
-    <a href="consolidated.html#10.0-093">10.0-093</a></p>
+    <a href="consolidated.html#sa-10.0-093">10.0-093</a></p>
 
     <h4>10.0 005 BIND  Date: 2020-09-05  Severity: High</h4>
     <p>A variety of vulnerabilities were found in BIND. Most could cause a crash
     but one allows privilege escalation by someone with authority to change a subset
     of the zone's content. Update to BIND-9.6.16 or later.
-    <a href=consolidated.html#10.0-005>10.0-005</a></p>
+    <a href=consolidated.html#sa-10.0-005>10.0-005</a></p>
 
 <!-- end of BIND -->
 
@@ -61,7 +61,7 @@
     <h4>10.0 006 Brotli  Date: 2020-09-06  Severity: Medium</h4>
     <p>An integer oveflow in brotli before version 1.0.9 can lead to a crash.
     Update to brotli-1.0.9 or later
-    <a href=consolidated.html#10.0-006>10.0-006</a></p>
+    <a href=consolidated.html#sa-10.0-006>10.0-006</a></p>
 
 <!-- end of Brotli -->
 
@@ -72,7 +72,7 @@
     attacker to trigger a Denial Of Service by getting the
     application to resolve a DNS record with an unexpectedly larger number
     of responses. Update to C-Ares-1.17.1 or later.
-    <a href=consolidated.html#10.0-039>10.0-039</a></p>
+    <a href=consolidated.html#sa-10.0-039>10.0-039</a></p>
 
 <!-- end of C-Ares -->
 
@@ -84,7 +84,7 @@
     able to invoke mount.cifs with special permission, such as via sudo rules,
     could use this flaw to escalate their privileges. Update to cifs-utils-6.11
     or later.
-    <a href=consolidated.html#10.0-004>10.0-004</a></p>
+    <a href=consolidated.html#sa-10.0-004>10.0-004</a></p>
 
 <!-- end of CIFS-Utils -->
 
@@ -94,7 +94,7 @@
     <p>An out of bounds memory write was discovered in Cryptsetup. Note that
     this only affects 32-bit builds of cryptsetup. To fix this, update to at
     least cryptsetup-2.3.4.
-    <a href=consolidated.html#10.0-008>10.0-008</a></p>
+    <a href=consolidated.html#sa-10.0-008>10.0-008</a></p>
 
 <!-- end of Crypt-setup -->
 
@@ -104,7 +104,7 @@
     <p>cURL before version 7.74.0 has two vulnerabilities rated as High, an
     uncontrolled recursion and an improper check for certificate revocation, as
     well as one rated as Low. To fix these, update to curl-7.74.0 or later.
-    <a href=consolidated.html#10.0-050>10.0-050</a></p>
+    <a href=consolidated.html#sa-10.0-050>10.0-050</a></p>
 
 <!-- end of cURL -->
 
@@ -116,7 +116,7 @@
     and filesystem information. Fix this by updating to dovecot-2.3.13 or later.
     A workaround is to disable imap hibernation: To do that ensure
     imap_hibernate_timeout is either set to 0 or unset.
-    <a href=consolidated.html#10.0-060>10.0-060</a></p>
+    <a href=consolidated.html#sa-10.0-060>10.0-060</a></p>
 
 <!-- end of Dovecot -->
 
@@ -126,7 +126,7 @@
     <p>ffmpeg-4.3.2 fixed two medium-severity arbitrary code execution
     vulnerabilities that could occur when processing crafted media files.
     Update to ffmpeg-4.3.2 or later.
-    <a href=consolidated.html#10.0-098">10.0-098</a></p>
+    <a href=consolidated.html#sa-10.0-098">10.0-098</a></p>
 
     <h3>Firefox</h3>
 
@@ -134,7 +134,7 @@
     <h4>10.0 099 Firefox  Date: 2021-02-24  Severity: High</h4>
     <p>In firefox 78.8.0 three vulnerabilities rated as High were fixed.
     Update to firefox-78.8.0 or later.
-    <a href=consolidated.html#10.0-099">10.0-099</a></p>
+    <a href=consolidated.html#sa-10.0-099">10.0-099</a></p>
 
     <a id="10.0-081">
     <h4>10.0 081 Firefox  UpDated: 2021-02-07  Severity: None</h4>
@@ -145,33 +145,33 @@
     <h4>10.0 071 Firefox  Date: 2021-01-26  Severity: High</h4>
     <p>In firefox 78.7.0 several vulnerabilities rated as High were fixed.
     Update to firefox-78.7.0 or later.
-    <a href=consolidated.html#10.0-071>10.0-071</a></p>
+    <a href=consolidated.html#sa-10.0-071>10.0-071</a></p>
 
     <h4>10.0 063 Firefox  Date: 2021-01-06  Severity: Critical</h4>
     <p>In firefox before 78.6.1 a malicious peer could have modified a
     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
     use-after-free. Update to firefox-78.6.1 or later.
-    <a href=consolidated.html#10.0-063>10.0-063</a></p>
+    <a href=consolidated.html#sa-10.0-063>10.0-063</a></p>
 
     <h4>10.0 053 Firefox  Date: 2020-12-15  Severity: Critical</h4>
     <p>Several vulnerabilities were found in firefox before 78.6.0, of which one
     was rated as critical. Update to firefox-78.6.0 or later.
-    <a href=consolidated.html#10.0-053>10.0-053</a></p>
+    <a href=consolidated.html#sa-10.0-053>10.0-053</a></p>
 
     <h4>10.0 036 Firefox  Date: 2020-11-16  Severity: High</h4>
     <p>Several vulnerabilities were found in firefox before 78.5.0, of which two
     were rated as high. Update to firefox-78.5.0 or later.
-    <a href=consolidated.html#10.0-036>10.0-036</a></p>
+    <a href=consolidated.html#sa-10.0-036>10.0-036</a></p>
 
     <h4>10.0 030 Firefox  Date: 2020-11-09  Severity: Critical</h4>
     <p>An exploitable use-after-free was found in firefox before 78.4.1.
     Update to firefox-78.4.1 or later.
-    <a href=consolidated.html#10.0-030>10.0-030</a></p>
+    <a href=consolidated.html#sa-10.0-030>10.0-030</a></p>
 
     <h4>10.0 014 Firefox  Date: 2020-09-21  Severity: High</h4>
     <p>Four vulnerabilities including a memory safety bug rated as High were
     fixed in firefox-78.3.0. Update to firefox-78.3.0 or later.
-    <a href=consolidated.html#10.0-014>10.0-014</a></p>
+    <a href=consolidated.html#sa-10.0-014>10.0-014</a></p>
 
 <!-- end of Firefox -->
 
@@ -180,7 +180,7 @@
     <h4>10.0 024 FreeType  Date: 2020-10-20  Severity: High</h4>
     <p>In FreeType from 2.6 to 2.10.3 there was a vulnerability in handling
     embedded PNG bitmaps which was being actively exploited.
-    <a href=consolidated.html#10.0-024>10.0-024</a></p>
+    <a href=consolidated.html#sa-10.0-024>10.0-024</a></p>
 
 <!-- end of FreeType -->
 
@@ -191,7 +191,7 @@
     (infinite loop) which can, for example, be triggered using a crafted GIF
     image with LZW compression. To fix this, update to gdk-pixbuf-2.42.2 or
     later.
-    <a href=consolidated.html#10.0-049>10.0-049</a></p>
+    <a href=consolidated.html#sa-10.0-049>10.0-049</a></p>
 
 <!-- end of Gdk-Pixbuf -->
 
@@ -202,12 +202,12 @@
     potentially exploitable heap-overflow vulnerabilities. The issue was
     raised in a <i>public</i> report, so this is now classed as a zero-day
     vulnerability requiring urgent update to Glib-2.66.1 or later.
-    <a href=consolidated.html#10.0-079>10.0-079</a></p>
+    <a href=consolidated.html#sa-10.0-079>10.0-079</a></p>
 
     <h4>10.0 018 Glib  Date: 2020-10-05  Severity: Medium</h4>
     <p>Glib before 2.66.1 had incorrect scope/zone ID parsing of URIs.
     Update to Glib-2.66.1 or later.
-    <a href=consolidated.html#10.0-018>10.0-018</a></p>
+    <a href=consolidated.html#sa-10.0-018>10.0-018</a></p>
 
 <!-- end of Glib -->
 
@@ -218,7 +218,7 @@
     10.0, and in 2.2.22. This vulnerability will trigger whenever a key with
     preference lists for the AEAD algorithms is loaded, and can be exploited.
     Update to GnuPG-2.2.23 or later.
-    <a href=consolidated.html#10.0-007>10.0-007</a></p>
+    <a href=consolidated.html#sa-10.0-007>10.0-007</a></p>
 
 <!-- end of GnuPG -->
 
@@ -228,7 +228,7 @@
     <p>gnome-autoar before 0.3.0 was vulnerable to a directory traversal
     vulnerability due to insufficent checks on symbolic links.
     Update to gnome-autoar-0.3.0 or later.
-    <a href=consolidated.html#10.0-089">10.0-089</a></p>
+    <a href=consolidated.html#sa-10.0-089">10.0-089</a></p>
 
 <!-- end of gnome-autoar -->
 
@@ -237,7 +237,7 @@
     <h4>10.0 003 GnuTLS  Date: 2020-09-03  Severity: High</h4>
     <p>A null-pointer dereference causing a remotely-triggered crash in the
     client application was found. Update to GnuTLS-3.6.15 or later.
-    <a href=consolidated.html#10.0-003>10.0-003</a></p>
+    <a href=consolidated.html#sa-10.0-003>10.0-003</a></p>
 
 <!-- end of GnuTLS -->
 
@@ -247,7 +247,7 @@
     <p>In GPTfdisk before version 1.0.6, in rare cases an improperly formatted
     MBR partition table could lead to arbitrary code execution when running
     gdisk or cgdisk. To fix this update to GPTfdisk-1.0.6 or later.
-    <a href=consolidated.html#10.0-074>10.0-074</a></p>
+    <a href=consolidated.html#sa-10.0-074>10.0-074</a></p>
 
 <!-- end of GPTfdisk -->
 
@@ -256,7 +256,7 @@
     <h4>10.0 026 The Gstreamer stack  Date: 2020-10-27  Severity: High</h4>
     <p>Emergency releases of Gstreamer-1.18.1 packages, and also of 1.16.3,
     were made to fix several vulnerabilities.
-    <a href=consolidated.html#10.0-026>10.0-026</a></p>
+    <a href=consolidated.html#sa-10.0-026>10.0-026</a></p>
 
 <!-- end of Gstreamer -->
 
@@ -267,7 +267,7 @@
     Denial of Service, and the -authenticate option to set a password for
     password-protected PDF files was not properly sanitized, allowing users to
     inject additional shell commands.
-    <a href=consolidated.html#10.0-067>10.0-067</a></p>
+    <a href=consolidated.html#sa-10.0-067>10.0-067</a></p>
 
 <!-- end of ImageMagick -->
 
@@ -278,7 +278,7 @@
     user can potentially enable information disclosure via local access via two
     vulnerabilites. To fix these, update affected machines to microcode-20210216
     or later.
-    <a href=consolidated.html#10.0-094>10.0-094</a></p>
+    <a href=consolidated.html#sa-10.0-094>10.0-094</a></p>
 
 <!-- end of Intel Microcode -->
 
@@ -287,14 +287,14 @@
     <h4>10.0 084 JasPer  Date: 2021-02-09  Severity: High</h4>
     <p>One vulnerability has been found in jasper-2.0.24. To fix
     it, update to JasPer-2.0.25 or later.
-    <a href=consolidated.html#10.0-084>10.0-084</a></p>
+    <a href=consolidated.html#sa-10.0-084>10.0-084</a></p>
 
     <h4>10.0 080 JasPer  Date: 2021-02-04  Severity: High</h4>
     <p>BLFS had been using JasPer-2.0.14, not aware that the upsteam location had
     moved. In versions before Jasper-2.0.24 more than 25 vulnerabilities were
     present, mostly either causing a crash or otherwise rated as high. To fix
     these, update to JasPer-2.0.24 or later.
-    <a href=consolidated.html#10.0-080>10.0-080</a></p>
+    <a href=consolidated.html#sa-10.0-080>10.0-080</a></p>
 
 <!-- end of JasPer -->
 
@@ -304,7 +304,7 @@
     <p>In Jinja2 before 2.11.3, a denial-of-service attack was possible via a
     malformed regex string. This vulnerability exists from 0.0.1 all the way
     to 2.11.3. Update to Jinja2-2.11.3 or later.
-    <a href=consolidated.html#10.0-087">10.0-087</a></p>
+    <a href=consolidated.html#sa-10.0-087">10.0-087</a></p>
 
 <!-- end of Jinja2 -->
 
@@ -314,18 +314,18 @@
     <p>In the javascript code of firefox-78.7.0 there is a fix for
     a 'Use-after-poison' vulnerability leading to a potentially exploitable
     crash. To fix this, update to JS-78.7.0.
-    <a href=consolidated.html#10.0-072>10.0-072</a></p>
+    <a href=consolidated.html#sa-10.0-072>10.0-072</a></p>
 
     <h4>10.0 037 JS78  Date: 2020-11-16  Severity: High</h4>
     <p>Several vulnerabilities were found in firefox before 78.5.0, of which one
     was in the javascript (js/src) code. To fix this, update to JS-78.5.0
     or later.
-    <a href=consolidated.html#10.0-037>10.0-037</a></p>
+    <a href=consolidated.html#sa-10.0-037>10.0-037</a></p>
 
     <h4>10.0 031 JS78  Date: 2020-11-09  Severity: Critical</h4>
     <p>An exploitable use-after-free was found in JS78 before 78.4.1.
     Update to JS-78.4.1 or later.
-    <a href=consolidated.html#10.0-031>10.0-031</a></p>
+    <a href=consolidated.html#sa-10.0-031>10.0-031</a></p>
 
 <!-- end of JS78 -->
 
@@ -334,7 +334,7 @@
     <h4>10.0 040 Kerberos 5  Date: 2020-11-19  Severity: High</h4>
     <p>A vulnerability in Kerberos 5 before krb5-1.18.3 allowed a Denial of
     Service to be triggered when decoding Kerberos protocol messages.
-    <a href=consolidated.html#10.0-040>10.0-040</a></p>
+    <a href=consolidated.html#sa-10.0-040>10.0-040</a></p>
 
 <!-- end of Kerberos -->
 
@@ -343,7 +343,7 @@
     <h4>10.0 027 Libass  Date: 2020-10-30  Severity: High</h4>
     <p>In Libass-0.14.0 there was a vulnerability from a signed integer overflow.
     To fix this, update to Libass-0.15.0 or later.
-    <a href=consolidated.html#10.0-027>10.0-027</a></p>
+    <a href=consolidated.html#sa-10.0-027>10.0-027</a></p>
 
 <!-- end of Libass -->
 
@@ -353,7 +353,7 @@
     <p>Three vulnerabilities were found in LibEXIF-0.6.22.
     To fix this, apply the libexif-0.6.22-security_fixes-1.patch
     until a later release is available.
-    <a href=consolidated.html#10.0-045>10.0-045</a></p>
+    <a href=consolidated.html#sa-10.0-045>10.0-045</a></p>
 
 <!-- end of LibEXIF -->
 
@@ -361,14 +361,14 @@
     <h4>10.0 085 Libgcrypt  Date: 2021-02-10  Severity: High</h4>
     <p>In Libgcrypt-1.9.0 there is a heap-based buffer overflow. To fix this,
     update to libgcrypt-1.9.1 or later.
-    <a href=consolidated.html#10.0-085>10.0-085</a></p>
+    <a href=consolidated.html#sa-10.0-085>10.0-085</a></p>
 
     <h3>Libpcap</h3>
 
     <h4>10.0 059 Libpcap  Date: 2021-01-04  Severity: High</h4>
     <p>The changes file for Libpcap-1.10.0 mentions several security
     fixes. To apply these, update to Libpcap-1.10.0 or later.
-    <a href=consolidated.html#10.0-059>10.0-059</a></p>
+    <a href=consolidated.html#sa-10.0-059>10.0-059</a></p>
 
 <!--- end of libpcap -->
 
@@ -377,7 +377,7 @@
     <h4>10.0 001 LibX11  Date: 2020-09-03  Severity: High</h4>
     <p>In libX11 an integer overflow and double-free was found. Update to
     libX11-1.6.12 or later.
-    <a href=consolidated.html#10.0-001>10.0-001</a></p>
+    <a href=consolidated.html#sa-10.0-001>10.0-001</a></p>
 
 <!-- end of LibX11 -->
 
@@ -386,7 +386,7 @@
     <h4>10.0 044 LibXML2 Date: 2020-11-21 Severity: High</h4>
     <p>Three vulnerabilities leading to Denial of Service were found in
     LibXML2-2.9.10.
-    <a href=consolidated.html#10.0-044>10.0-044</a></p>
+    <a href=consolidated.html#sa-10.0-044>10.0-044</a></p>
 
 <!-- end of LibXML2 -->
 
@@ -397,7 +397,7 @@
     <p>A remote attacker can trick the victim to follow a specially crafted
     link and execute arbitrary HTML and script code in the user's browser in
     the context of a vulnerable website. Update to LXML-4.6.2 or later.
-    <a href=consolidated.html#10.0-023>10.0-023</a></p>
+    <a href=consolidated.html#sa-10.0-023>10.0-023</a></p>
 
 <!-- end of LXML -->
 
@@ -406,7 +406,7 @@
     <h4>10.0 029 MariaDB  Date: 2020-11-04  Severity: Medium</h4>
     <p>Four CVE vulnerabilities were identified in MariaDB before version
     10.5.7, update to mariadb-10.5.7 or later.
-    <a href=consolidated.html#10.0-029>10.0-029</a></p>
+    <a href=consolidated.html#sa-10.0-029>10.0-029</a></p>
 
 <!-- end of MariaDB -->
 
@@ -417,13 +417,13 @@
     Service (the specific mailbox became unreadable) by sending a message with
     sequences of semicolons in RFC822 fields, causing large memory consumption.
     To fix this, update to mutt-2.0.5 or later.
-    <a href=consolidated.html#10.0-068>10.0-068</a></p>
+    <a href=consolidated.html#sa-10.0-068>10.0-068</a></p>
 
     <h4>10.0 046 Mutt Date: 2020-11-26 Severity: Medium</h4>
     <p>Mutt before version 2.0.2 had incorrect error handling when initially connecting
     to an IMAP server, which could result in an attempt to authenticate without enabling
     TLS. To fix this, update to mutt-2.0.2 or later.
-    <a href=consolidated.html#10.0-046>10.0-046</a></p>
+    <a href=consolidated.html#sa-10.0-046>10.0-046</a></p>
 
 <!-- end of Mutt -->
 
@@ -434,7 +434,7 @@
     were discovered. One of them can lead to resource exhaustion, another is
     an integer overflow, and the other is a DNS rebinding attack. Update to 
     v14.16.0 or later.
-    <a href=consolidated.html#10.0-101">10.0-101</a></p>
+    <a href=consolidated.html#sa-10.0-101">10.0-101</a></p>
 
     <h4>10.0 062 Node.js  Date: 2021-01-05  Severity: High</h4>
     <p>In Node.js before 12.20.1, 14.15.4 a high security vulnerability (use
@@ -442,19 +442,19 @@
     two medium security vulnerabilities were found. Update to v14.15.4 or later,
     or alternatively if remaining with the v12 series update to v12.20.1 or
     later.
-    <a href=consolidated.html#10.0-062>10.0-062</a></p>
+    <a href=consolidated.html#sa-10.0-062>10.0-062</a></p>
 
     <h4>10.0 038 Node.js  Date: 2020-11-19  Severity: High</h4>
     <p>An attacker could cause a Denial of Service via a DNS request for a
     host of their choice which resulted in an unexpectedly large number of
     responses. Update to v14.15.1 or later, or if remaining with the v12
     series update to v12.19.1 or later.
-    <a href=consolidated.html#10.0-038>10.0-038</a></p>
+    <a href=consolidated.html#sa-10.0-038>10.0-038</a></p>
 
     <h4>10.0 012 Node.js  Date: 2020-09-17  Severity: High</h4>
     <p>Multiple security vulnerabilities were discovered in Node.js, including two
     marked as High. Update to Node.js-12.18.4 or later.
-    <a href=consolidated.html#10.0-012>10.0-012</a></p>
+    <a href=consolidated.html#sa-10.0-012>10.0-012</a></p>
 
 <!-- end of Node.js -->
 
@@ -464,7 +464,7 @@
     <p>A vulnerability in CSS handling, which could allow a remote attacker to
     cause a denial of service for servers linked against NSS, was discovered.
     Update to NSS-3.58 or later.
-    <a href=consolidated.html#10.0-022>10.0-022</a></p>
+    <a href=consolidated.html#sa-10.0-022>10.0-022</a></p>
 
 <!-- end of NSS -->
 
@@ -474,7 +474,7 @@
     <p>In OpenJPEG before 2.4.0 there are two vulnerabilities rated as high
     (heap-based buffer overflows) and two rated as Medium (crashes on crafted
     files) as well as several other security fixes.
-    <a href=consolidated.html#10.0-058>10.0-058</a></p>
+    <a href=consolidated.html#sa-10.0-058>10.0-058</a></p>
 
 <!-- end of OpenJPEG -->
 
@@ -484,7 +484,7 @@
     <p>In P11-Kit up to 0.23.21 there are multiple integer overflows in the
     array allocatons, and a heap-based buffer overflow.  Update to
     p11-kit-0.23.22 or later.
-    <a href=consolidated.html#10.0-054>10.0-054</a></p>
+    <a href=consolidated.html#sa-10.0-054>10.0-054</a></p>
 
 <!-- end of P11-Kit -->
 
@@ -495,7 +495,7 @@
     was stolen and is currently hosted at an address associated with malware.
     Anyone who uses the 'cpan' command should ensure that www.cpan.org is used
     to provide the urllist.
-    <a href=consolidated.html#10.0-077>10.0-077</a></p>
+    <a href=consolidated.html#sa-10.0-077>10.0-077</a></p>
 
 <!-- end of Perl -->
 
@@ -506,18 +506,18 @@
     with a SIGSEGV via null-pointer dereference whenever an XML is provided to
     the SoapClient query() function without an existing field. To fix this,
     update to PHP-8.0.2 or later (or 7.4.15 or later if using the old series).
-    <a href=consolidated.html#10.0-083>10.0-083</a></p>
+    <a href=consolidated.html#sa-10.0-083>10.0-083</a></p>
 
     <h4>10.0 064 PHP  Upated: 2021-02-04  Severity: Medium</h4>
     <p>In PHP before 7.4.14, 8.0.1 FILTER_VALIDATE_URL accepts URLs with
     invalid userinfo. To fix this, update to PHP-8.0.1 or later (or
     7.4.14 if later if using the old series).
-    <a href=consolidated.html#10.0-064>10.0-064</a></p>
+    <a href=consolidated.html#sa-10.0-064>10.0-064</a></p>
 
     <h4>10.0 019 PHP  Date: 2020-10-05  Severity: Medium</h4>
     <p>PHP before 7.4.11 had two CVE vulnerabilities. To fix these, update
     to PHP-7.4.11 or later.
-    <a href=consolidated.html#10.0-019>10.0-019</a></p>
+    <a href=consolidated.html#sa-10.0-019>10.0-019</a></p>
 
 <!-- end of PHP -->
 
@@ -528,7 +528,7 @@
     against Poppler-20.12.1, but later reports indicate that this only applies to
     Poppler git clones in late December 2020 (which might be used by third-party
     projects). For BLFS no action is now necessary.
-    <a href=consolidated.html#10.0-061>10.0-061</a></p>
+    <a href=consolidated.html#sa-10.0-061>10.0-061</a></p>
 
 <!-- end of Poppler -->
 
@@ -537,13 +537,13 @@
     <h4>10.0 034 PostgreSQL  Date: 2020-11-12 Severity: High</h4>
     <p>A number of vulnerabilities were fixed in PostgreSQL-13.1. Update
     to postgresql-13.1 or later.
-    <a href=consolidated.html#10.0-034>10.0-034</a></p>
+    <a href=consolidated.html#sa-10.0-034>10.0-034</a></p>
 
     <h4>10.0 090 PostgreSQL  Date: 2021-02-12 Severity: Medium</h4>
     <p>Two vulnerabilities were fixed in PostgreSQL-13.2 that could lead to
     unauthorized users acquiring data from a database. Update to
     postresql-13.2 or later.
-    <a href=consolidated.html#10.0-090>10.0-090</a></p>
+    <a href=consolidated.html#sa-10.0-090>10.0-090</a></p>
 
 <!-- end of PostgreSQL -->
 
@@ -553,12 +553,12 @@
     <p>Python-3.9.2 fixes two security vulnerabilities, one marked as critical
     and the other as medium. The critical vulnerability can result in remote
     code execution. Update to Python-3.9.2 or later.
-    <a href=consolidated.html#10.0-097>10.0-097</a></p>
+    <a href=consolidated.html#sa-10.0-097>10.0-097</a></p>
 
     <h4>10.0 051 Python (LFS and BLFS) Date: 2020-12-15 Severity: High</h4>
     <p>Python-3.9.1 includes three security fixes. Update to Python-3.9.1
     or later.
-    <a href=consolidated.html#10.0-051>10.0-051</a></p>
+    <a href=consolidated.html#sa-10.0-051>10.0-051</a></p>
 
 <!-- end of Python -->
 
@@ -569,12 +569,12 @@
     of which four were 0day fixes. The rest of Qt5 includes many bug fixes, some of
     which include heap buffer overflows. Update to at least Qt-5.15.2 and
     QtWebEngine-5.15.2.
-    <a href=consolidated.html#10.0-042>10.0-042</a></p>
+    <a href=consolidated.html#sa-10.0-042>10.0-042</a></p>
 
     <h4>10.0 011 Qt5 and QtWebEngine  Date: 2020-09-10  Severity: Critical</h4>
     <p>Many security vulnerabilities were discovered in Qt5-5.15.0 and QtWebEngine.
     Update to at least Qt-5.15.1 and QtWebEngine-5.15.1.
-    <a href=consolidated.html#10.0-011>10.0-011</a></p>
+    <a href=consolidated.html#sa-10.0-011>10.0-011</a></p>
 
 <!-- end of Qt5 and QtWebEngine -->
 
@@ -584,7 +584,7 @@
     <p>A heap overflow vulnerability in Raptor can lead to an out-of-boundsi
     write. Patch raptor-2.0.15 with the security_fiexs-1.patch since upstream
     is inactive.
-    <a href=consolidated.html#10.0-035>10.0-035</a></p>
+    <a href=consolidated.html#sa-10.0-035>10.0-035</a></p>
 
 <!-- end of Raptor -->
 
@@ -594,7 +594,7 @@
     <p>The bundled WEBrick HTTP server in ruby before 2.7.2 had a vulnerability
     which could lead to an HTTP Request Smuggling attack. Update to ruby-2.7.2
     or later.
-    <a href=consolidated.html#10.0-020>10.0-020</a></p>
+    <a href=consolidated.html#sa-10.0-020>10.0-020</a></p>
 
 <!-- end of Ruby -->
 
@@ -603,13 +603,13 @@
     <h4>10.0 028 Samba  Date: 2020-10-30  Severity: Medium</h4>
     <p>Three CVE vulnerabilities were identified in Samba before version 4.13.1,
     Update to 4.13.1 or later.
-    <a href=consolidated.html#10.0-028>10.0-028</a></p>
+    <a href=consolidated.html#sa-10.0-028>10.0-028</a></p>
 
     <h4>10.0 013 Samba  Date: 2020-09-26  Severity: Critical</h4>
     <p>A critical security vulnerability in Samba was discovered, dubbed
     "ZeroLogon". This vulnerability classifies as an authentication bypass, and is
     rated a 10.0 on the CVSSv3 scale. Update to Samba-4.12.7 or later.
-    <a href=consolidated.html#10.0-013>10.0-013</a></p>
+    <a href=consolidated.html#sa-10.0-013>10.0-013</a></p>
 
 <!-- end of Samba -->
 
@@ -621,7 +621,7 @@
     UTF-8 character sequence. This was originally discovered being used to
     compromise Minecraft servers. Apply the patch in the advisory
     to Screen and recompile it.
-    <a href="consolidated.html#10.0-096">10.0-096</a></p>
+    <a href="consolidated.html#sa-10.0-096">10.0-096</a></p>
 
 <!-- end of Screen -->
 
@@ -630,17 +630,17 @@
     <h4>10.0 069 Seamonkey  Updated: 2021-01-26  Severity: Critical</h4>
     <p>Fixes from firefox-78.4.1 to 78.6.0, and from thunderbird-78.6.0
     were included in seamonkey-2.53.6. Update to seamonkey-2.53.6 or later.
-    <a href=consolidated.html#10.0-069>10.0-069</a></p>
+    <a href=consolidated.html#sa-10.0-069>10.0-069</a></p>
 
     <h4>10.0 032 Seamonkey  Updated: 2020-11-15  Severity: Critical</h4>
     <p>The javascript vulnerability in JS-78-4.1 and firefox-78.4.1 also
     applies to seamonkey-2.53.4. Update to seamonkey-2.53.5 or later.
-    <a href=consolidated.html#10.0-032>10.0-032</a></p>
+    <a href=consolidated.html#sa-10.0-032>10.0-032</a></p>
 
     <h4>10.0 015 Seamonkey  Date: 2020-09-23  Severity: Critical</h4>
     <p>Security fixes from firefox-60.6 up to firefox ESR-78.1 were included in
     Seamonkey-2.53.4. Update to Seamonkey-2.53.4 or later.
-    <a href=consolidated.html#10.0-015>10.0-015</a></p>
+    <a href=consolidated.html#sa-10.0-015>10.0-015</a></p>
 
 <!-- end of Seamonkey -->
 
@@ -649,7 +649,7 @@
     <h4>10.0 021 Stunnel  Date: 2020-10-16  Severity: High</h4>
     <p>In Stunnel-5.57 the "redirect" option was fixed to properly handle
     "verifyChain = yes". Update to stunnel-5.57 or later
-    <a href=consolidated.html#10.0-021>10.0-021</a></p>
+    <a href=consolidated.html#sa-10.0-021>10.0-021</a></p>
 
 <!-- end of stunnel -->
 
@@ -660,19 +660,19 @@
     denial-of-service vulnerability that does not require authentication.
     This vulnerability can also cause the HTTPD webserver to crash.
     Update to Subversion-1.14.1 or later.
-    <a href="consolidated.html#10.0-086">10.0-086</a></p>
+    <a href="consolidated.html#sa-10.0-086">10.0-086</a></p>
 
     <h3>Sudo</h3>
 
     <h4>10.0 073 Sudo  Date: 2021-01-26  Severity: Critical</h4>
     <p>In Sudo before 1.9.5p2 the 'Baron Samedi' exploit allows privilege
     escalation. Update to 1.9.5p2 or later.
-    <a href=consolidated.html#10.0-073>10.0-073</a></p>
+    <a href=consolidated.html#sa-10.0-073>10.0-073</a></p>
 
     <h4>10.0 065 Sudo  Updated: 2021-02-04  Severity: High</h4>
     <p>In Sudo before 1.9.5 there are two privilege escalation
     vulnerabilities, one marked as High.
-    <a href=consolidated.html#10.0-065>10.0-065</a></p>
+    <a href=consolidated.html#sa-10.0-065>10.0-065</a></p>
 
 <!-- end of Sudo -->
 
@@ -682,7 +682,7 @@
     <p>In taglib-1.11.1, a security vulnerability was found that
     could allow for information disclosure via a crafted OGG file.
     Update to taglib-1.12 or later. See
-    <a href="consolidated.html#10.0-092">10.0-092</a>.</p>
+    <a href="consolidated.html#sa-10.0-092">10.0-092</a>.</p>
 
 <!-- end of Taglib -->
 
@@ -698,46 +698,46 @@
     <h4>10.0 100 Thunderbird  Date: 2021-02-24  Severity: High</h4>
     <p>In thunderbird before 78.8.0 there were three vulnerabilities rated as
     High. To fix these update to Thunderbird-78.8.0 or later.
-    <a href=consolidated.html#10.0-100>10.0-100</a></p>
+    <a href=consolidated.html#sa-10.0-100>10.0-100</a></p>
 
     <h4>10.0 078 Thunderbird  Date: 2021-01-31 Severity: High</h4>
     <p>In thunderbird before 78.7.0 there were various vulnerabilities rated
     as High. To fix these update to Thunderbird-78.7.0 or later.
-    <a href=consolidated.html#10.0-078>10.0-078</a></p>
+    <a href=consolidated.html#sa-10.0-078>10.0-078</a></p>
 
     <h4>10.0 066 Thunderbird  Date: 2021-01-12 Severity: Critical</h4>
     <p>In thunderbird before 78.6.1 a malicious peer could have modified a
     COOKIE-ECHO chunk in a SCTP packet in a way that potentially resulted in a
     use-after-free. To fix this update to Thunderbird-78.6.1 or later.
-    <a href=consolidated.html#10.0-066>10.0-066</a></p>
+    <a href=consolidated.html#sa-10.0-066>10.0-066</a></p>
 
     <h4>10.0 056 Thunderbird  Date: 2020-11-19 Severity: Critical</h4>
     <p>Several vulnerabilities were fixed in Thunderbird-78.6.0, one was rated
     as Critical. To fix these update to Thunderbird-78.6.0 or later.
-    <a href=consolidated.html#10.0-056>10.0-056</a></p>
+    <a href=consolidated.html#sa-10.0-056>10.0-056</a></p>
 
     <h4>10.0 041 Thunderbird  Date: 2020-11-19 Severity: High</h4>
     <p>Several vulnerabilities were fixed in Thunderbird-78.5.0, two were rated
     High. To fix these update to thunderbird-78.5.0 or later.
-    <a href=consolidated.html#10.0-041>10.0-041</a></p>
+    <a href=consolidated.html#sa-10.0-041>10.0-041</a></p>
 
     <a id="10.0-033">
     <h4>10.0 033 Thunderbird  Date: 2020-11-10  Severity: Critical</h4>
     <p>The javascript vulnerability fixed in firefox-78.4.1 also applies to
     thunderbird. To fix this update to thunderbird-78.4.2 or later.
-    <a href=consolidated.html#10.0-033>10.0-033</a></p>
+    <a href=consolidated.html#sa-10.0-033>10.0-033</a></p>
 
     <h4>10.0 025 Thunderbird  Date: 2020-10-23  Severity: High</h4>
     <p>Three vulnerabilities rated as High were fixed in thunderbird-78.4.0.
     To fix these update to thunderbird-78.4.0 or later.
-    <a href=consolidated.html#10.0-025>10.0-025</a></p>
+    <a href=consolidated.html#sa-10.0-025>10.0-025</a></p>
 
     <h4>10.0 016 Thunderbird  Updated: 2020-09-25  Severity: High</h4>
     <p>Five vulnerabilities were fixed in thunderbird-78.3.0 including a memory
     safety bug rated as High. But users of that version of thunderbird reported
     numerous crashes. To fix the vulnerabilities and the crashes update to
     thunderbird-78.3.1 or later.
-    <a href=consolidated.html#10.0-016>10.0-016</a></p>
+    <a href=consolidated.html#sa-10.0-016>10.0-016</a></p>
 
 <!-- end of Thunderbird -->
 
@@ -746,7 +746,7 @@
     <h4>10.0 047 Unbound Updated: 2020-12-05 Severity: Medium</h4>
     <p>Unbound up to and including version 1.12.0 contains a local vulnerability
     that would allow for a local symlink attack.
-    <a href=consolidated.html#10.0-047>10.0-047</a></p>
+    <a href=consolidated.html#sa-10.0-047>10.0-047</a></p>
 
 <!-- end of Unbound -->
 
@@ -756,7 +756,7 @@
     <p>In VLC Media Player up to and including version 3.0.11 a remote user
     could create a speciaaly crafted file or stream that would lead to crashes
     and potential information leakage, or perhaps arbitrary code execution.
-    <a href=consolidated.html#10.0-075>10.0-075</a></p>
+    <a href=consolidated.html#sa-10.0-075>10.0-075</a></p>
 
 <!-- end of VLC -->
 
@@ -765,7 +765,7 @@
     <h4>10.0 070 Vorbis Tools  Updated: 2021-01-26  Severity: High</h4>
     <p>Three vulnerabilities in Vorbis Tools 1.4.0 could cause crashes.
     To fix these update to vorbis-tools-1.4.2 or later.
-    <a href=consolidated.html#10.0-070>10.0-070</a></p>
+    <a href=consolidated.html#sa-10.0-070>10.0-070</a></p>
 
 <!-- end of Vorbis Tools -->
 
@@ -775,12 +775,12 @@
     <p>A vulnerability that leads to arbitrary code execution
     when processing some forms of multimedia was found in 
     WebKitGTK. To fix this, upgrade to webkitgtk-2.30.5 or later.
-    <a href=consolidated.html#10.0-091">10.0-091</a></p>
+    <a href=consolidated.html#sa-10.0-091">10.0-091</a></p>
 
     <h4>10.0 043 WebKitGTK Date: 2020-11-25 Severity: High</h4>
     <p>Five vulnerabilities rated as High were found in WebKitGTK.
     To fix these upgrade to webkitgtk-2.30.3 or later.
-    <a href=consolidated.html#10.0-043>10.0-043</a></p>
+    <a href=consolidated.html#sa-10.0-043>10.0-043</a></p>
 
 <!-- end of WebKitGTK -->
 
@@ -789,28 +789,28 @@
     <h4>10.0 076 Wireshark  Date: 2021-01-30  Severity: High</h4>
     <p>Wireshark up to 3.4.2 had vulnerabilities for a memory leak and a crash.
     To fix these update to Wireshard-3.4.3 or later.
-    <a href=consolidated.html#10.0-076>10.0-076</a></p>
+    <a href=consolidated.html#sa-10.0-076>10.0-076</a></p>
 
     <h4>10.0 057 Wireshark  Updated: 2021-02-04  Severity: Invalid</h4>
     <p>A Medium Security Advisory for a crash in Wireshark 3.4.0 and 3.4.1
     was raised and allocated a CVE, but it was later determined that the
     bug was not present in any released version of Wireshark. No action is
     necessary.
-    <a href=consolidated.html#10.0-057>10.0-057</a></p>
+    <a href=consolidated.html#sa-10.0-057>10.0-057</a></p>
 
     <h4>10.0 055 Wireshark  Date: 2020-09-23  Severity: High</h4>
     <p>Four Medium Security Advisories which could cause Wireshark to crash were
     fixed in Wireshark-3.4.1, but in addition the editors had overlooked a High
     severity item fixed in Wireshark-3.4.0. To fix all of these, update to
     Wireshark-3.4.1 or later.
-    <a href=consolidated.html#10.0-055>10.0-055</a></p>
+    <a href=consolidated.html#sa-10.0-055>10.0-055</a></p>
 
     <h4>10.0 017 Wireshark  Date: 2020-09-23  Severity: High</h4>
     <p>Three Security Advisories (wnpa-sec-2020-11,12,13) were fixed in
     Wireshark-3.2.7, detailed at
     <a href="https://www.wireshark.org/security/">Wireshark Security</a>.
     To fix these, update to wireshark-3.2.7 or later.
-    <a href=consolidated.html#10.0-017>10.0-017</a></p>
+    <a href=consolidated.html#sa-10.0-017>10.0-017</a></p>
 
 <!-- end of Wireshark -->
 
@@ -821,14 +821,14 @@
     in X server extensions were found. These can lead to local privilege
     escalations (to root) <b>if the X server is running privileged</b>.
     Update to Xorg-Server-1.20.10 or later.
-    <a href=consolidated.html#10.0-048>10.0-048</a></p>
+    <a href=consolidated.html#sa-10.0-048>10.0-048</a></p>
 
     <h4>10.0 002 Xorg-Server  Date: 2020-09-03  Severity: High</h4>
     <p>In Xorg-Server before version 1.20.9 several input validation failures
     in X server extensions were found. These can lead to local privilege
     escalations (to root) <b>if the X server is running privileged</b>.
     Update to Xorg-Server-1.20.9 or later.
-    <a href=consolidated.html#10.0-002>10.0-002</a></p>
+    <a href=consolidated.html#sa-10.0-002>10.0-002</a></p>
 
 <!-- end of Xorg-Server -->
 
@@ -838,7 +838,7 @@
    <p>In xterm before 366, a denial of service vulnerability was found
    that could lead to a crash with certain UTF-8 characters.
    Update to xterm-366 or later.
-   <a href=consolidated.html#10.0-088">10.0-088</a></p>
+   <a href=consolidated.html#sa-10.0-088">10.0-088</a></p>
 
 <!-- end of xterm -->
 
