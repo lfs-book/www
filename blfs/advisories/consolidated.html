@@ -80,6 +80,55 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-10.1-024"/>
+    <h4>10.1 024 XDG-Utils Date: 2021-04-02 Severity: Medium</h4>
+    <p>In the xdg-email component of xdg-utils 1.1.0rc1 and newer, an attacker
+    could potentially send a victim a URI that automatically attaches a sensitive
+    file to a new email. If a victim user does not notice that an attachment was
+    added and sends the email, this could result in sensitive information
+    disclosure.<p>
+    <p>This has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2020-27748">CVE-2020-27748</a>
+    but the upstream issue
+    <a href="https://gitlab.freedesktop.org/xdg/xdg-utils/-/issues/177">at gitlab</a>
+    remains open.</p>
+    <p>In the meantime, to mitigate this flaw, either do not use mailto links at all,
+    or always double-check in the user interface that there are no unwanted
+    attachments before sending emails, especially when the email originates from
+    clicking on a mailto link.</p>
+
+    <a id="sa-10.1-023"/>
+    <h4>10.1 023 Libssh2 Date: 2021-04-02 Severity: High</h4>
+    <p>In libssh2 v1.9.0 and earlier versions, the SSH_MSG_DISCONNECT logic in
+    packet.c has an integer overflow in a bounds check, enabling an attacker to
+    specify an arbitrary (out-of-bounds) offset for a subsequent memory read. A
+    crafted SSH server may be able to disclose sensitive information or cause a
+    denial of service condition on the client system when a user connects to the
+    server. This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-17498">CVE-2019-17498</a>.</p>
+    <p>This has been fixed upstream, but no new version has been released.
+    To fix this, apply the patch
+    <a href="http://www.linuxfromscratch.org/patches/downloads/libssh2/libssh2-1.9.0-security_fix-1.patch">libssh2-1.9.0-security_fix-1.patch</a>
+    using the instructions from the development book for
+    <a href="../view/svn/general/libssh2.html">libssh2 (sysv)</a> or
+    <a href="../view/systemd/general/libssh2.html">libssh2 (systemd)</a>
+    or update to a later version of Libssh2 if one is released.</p>
+
+    <a id="sa-10.1-022"/>
+    <h4>10.1 022 Flac Date: 2021-04-02 Severity: Medium</h4>
+    <p>In Flac up to and including 1.3.3 a heap buffer overflow leading to a
+    possible out of bounds read has been discovered. This could lead to remote
+    information disclosure with no additional execution privileges needed and
+    has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0499">CVE-2020-0499</a>.</p>
+    <p>This has been fixed upstream, but no new version has been released.
+    To fix this, apply the patch
+    <a href="http://www.linuxfromscratch.org/patches/downloads/flac/flac-1.3.3-security_fix-1.patch">flac-1.3.3-security_fix-1.patch</a>
+    using the instructions from the development book for
+    <a href="../view/svn/multimedia/flac.html">Flac (sysv)</a> or
+    <a href="../view/systemd/multimedia/flac.html">Flac (systemd)</a>
+    or update to a later version of Flac if one is released.</p>
+
     <a id="sa-10.1-021"/>
     <h4>10.1 021 Seamonkey Date: 2021-03-31 Severity: Critical</h4>
     <p>Fixes from firefox-78.6.1 to 78.8.0, were included in seamonkey-2.53.7. See
