@@ -13,7 +13,6 @@
       <ul>
         <li><a href="#why-not-faq">Why not include the FAQ in the book?</a></li>
         <li><a href="#why-vim">Why is vim in the book?</a></li>
-        <li><a href="#hjl-binutils">Why is HJL's Binutils not in the book?</a></li>
         <li><a href="#why-not-package-management">Why isn't some package manager in the book?</a></li>
         <li><a href="#no-poweroff">How do I make my machine poweroff when shut down?</a></li>
       </ul>
@@ -78,63 +77,6 @@
         <dd>
           <p>This is fairly well discussed in the thread starting at <a
           href="http://linuxfromscratch.org/pipermail/lfs-dev/2002-February/023030.html">http://linuxfromscratch.org/pipermail/lfs-dev/2002-February/023030.html</a>.</p>
-        </dd>
-        <dt id="hjl-binutils">Why is HJL's Binutils not in the book?</dt>
-        <dd>
-          <p>The binutils release that you typically find on ftp.gnu.org is
-          commonly known as the &quot;FSF&quot; binutils. Noted hacker H.J. Lu
-          also makes releases out of the main CVS repository and these are
-          commonly known as the &quot;HJL&quot; binutils and can usually be
-          found on ftp.kernel.org. Debate often arises over which version to
-          use due to the fact that most mainstream distros tend to use the HJL
-          releases even though they are typically marked as
-          &quot;beta&quot;.</p>
-          <p>Here is our interpretation of the differences between the two:</p>
-          <h4>HJL:</h4>
-          <ul>
-            <li>For Linux OS only</li>
-            <li>Marked as &quot;beta&quot;</li>
-            <li>Closely follows the CVS HEAD</li>
-            <li>Usually contains the latest subtle bug fixes</li>
-            <li>Usually has latest bug fixes for non-x86 arch's</li>
-            <li>Usually a new release every time a significant bug that affects Linux gets fixed</li>
-            <li>Theoretically less stable due to newness of code</li>
-          </ul>
-          <h4>FSF:</h4>
-          <ul>
-            <li>Supports more OS's (not only Linux)</li>
-            <li>Latest code from the stable branch of CVS</li>
-            <li>Sometimes not up-to-date WRT to the latest bleeding edge kernel, gcc and glibc subtleties</li>
-            <li>Often includes features backported from the CVS HEAD after a period of testing</li>
-            <li>Theoretically more stable</li>
-          </ul>
-          <p>You'll notice in the above points words like &quot;usually&quot;
-          and &quot;sometimes&quot;. This demonstrates how the situation can be
-          different depending on which particular point in time you happen to
-          be referring to. For example, from time to time there will be a new
-          bleeding edge feature in gcc or glibc that requires support from
-          binutils. During these times you will often hear the developers say
-          &quot;you must be using the latest HJL binutils version
-          x.y.z.a.b&quot;.</p>
-          <p>The only way to correctly choose the most appropriate release to use is to:-</p>
-          <ul>
-            <li>Stay abreast of the issues on the project mailing lists of the core toolchain packages</li>
-            <li>Have a large dose of technical prowess and/or programming talent to understand all the issues</li>
-            <li>Test like crazy by running the test suites</li>
-            <li>Test like crazy by building full systems</li>
-          </ul>
-          <p>The facts of the matter are that the core toolchain packages are
-          all very tightly bound and must be tested to ensure they work
-          together. You basically have to build a full working distro and test
-          every aspect of it to be fully satisfied.</p>
-          <p>If you follow the project mailing lists of the core toolchain
-          packages for long enough, you'll soon realise that the developers do
-          not care much whether a particular release of &quot;Package A&quot;
-          works with a particular release of &quot;Package B&quot;. In other
-          words, release coordination between the projects is not a priority.
-          In reality, this means that Alan Cox is right when he says that you
-          cannot just go to ftp.gnu.org and grab the latest of everything and
-          always expect it to just work.</p>
         </dd>
         <dt id="why-not-package-management">Why isn't some package manager in the book?</dt>
         <dd>
