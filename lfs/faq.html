@@ -129,9 +129,10 @@
         <dt id="no-poweroff">How do I make my machine poweroff when shut down?</dt>
         <dd>
           <p>Power Management is a kernel function, you need to enable it in
-          the kernel. In the 2.4 kernel, you have to enable the options for
-          <code>Power Management Support</code> under <code>General
-          Setup</code>. For older machines, you'll probably want the APM
+          the kernel. In the 5.11 kernel, you have to enable the options for
+          <code>ACPI (Advanced Configuration and Power Interface</code>
+          under <code>Power managerment and ACPI options</code>.
+          For very old 32-bit x86 machines, you'll probably want the APM
           options, newer machines often require ACPI. Make sure that either APM
           or ACPI be enabled in the kernel, but definitely <strong>not</strong>
           both at the same time - this has been known to cause problems such as
