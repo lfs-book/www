@@ -362,20 +362,17 @@
         <dd>
           <p>Examples of this error are:</p>
           <div class="cmd">
-            <p>/usr/bin/env: /tools/bin/bash: No such file or directory<br />
+            <p>/usr/bin/env: /bin/bash: No such file or directory<br />
                gcc: No such file or directory</p>
           </div>
-          <p>This usually indicates a typo in the GCC Pass 2 installation. For
-          older LFS versions, the most common cause of this problem would be
-          forgetting to apply the specs patch.</p>
-          <p>What happens is that the path to the dynamic linker embedded
-          inside the executable is still pointing at /lib/ld-linux.so.2 and
+          <p>What happens is that the path to the dynamic linker path
+          embedded inside the executable is /lib64/ld-linux-x86-64.so.2
+          (/lib/ld-linux.so.2 for 32-bit), and
           when one goes to run the binary inside the chroot where
-          /lib/ld-linux.so.2 does not exist yet, the very unhelpful <code>No
-          such file or directory</code> error message is shown.</p>
-          <p>You can test this with <code>readelf -l {binary} | grep
-          interpreter</code>. Its output should be: <code>Requesting program
-          interpreter: /tools/lib/ld-linux.so.2</code>.</p>
+          /lib64/ld-linux-x86-64.so.2 does not exist yet, the very unhelpful
+          <code>No such file or directory</code> error message is shown.</p>
+          <p>Check if the symlink /lib64/ld-linux-x86-64.so.2 is broken.
+          For LFS 9.1 or older, it may indicate a typo in GCC Pass 2.</p>
         </dd>
         <dt id="configure-no-such-file">bash: ./configure: No such file or directory</dt>
         <dd>
