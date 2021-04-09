@@ -53,7 +53,7 @@
         <li><a href="#char-major-10-135">modprobe: Can't locate module char-major-10-135</a></li>
         <li><a href="#no-dev-rtc">modprobe: Can't locate module /dev/rtc</a></li>
         <li><a href="#eth0-unknown-interface">eth0:unknown interface</a></li>
-        <li><a href="#spurious-8259A-interrupt">spurious 8259A interrupt: IRQ14</a></li>
+        <li><a href="#irq-nobody-cared">IRQ 9: nobody cared (try booting with the "irqpoll" option)</a></li>
         <li><a href="#less-prints-ad">Why does less (and therefore man) print &lt;AD&gt; instead of hyphens?</a></li>
       </ul>
       <div class="newsItem"></div>
@@ -550,22 +550,23 @@
           command after booting the LFS system, and examine the output to
           know the name of your network devices.</p>
         </dd>
-        <dt id="spurious-8259A-interrupt">spurious 8259A interrupt: IRQ14 </dt>
+        <dt id="irq-nobody-cared">irq 9: nobody cared (try booting with the "irqpoll" option)</dt>
         <dd>
-          <p>Short summary: It's a hardware problem (usually). Transient
-          Line-noise/crosstalk persuades the PIC that something happened; this
-          can result in a 'dummy' interrupt being raised, which happens to be
-          IRQ7 with intel's 8259 design.The problem could possibly also be
-          caused by (or instead be caused by) a device driver not properly
-          masking its interrupts before servicing, this would be the suspect if
-          the IRQ7's were happening in bursts, or more often than 'several' per
-          day. (<a
-          href="https://groups.google.com/groups?q=spurious+interrupt+8259&amp;hl=de&amp;scoring=d&amp;selm=3C174EDD.9090306%40hotmail.com&amp;rnum=10">Source
-          and additional information</a>)</p>
-          <p>Since the message itself is harmless, it's enough to adjust the
-          default loglevel outplut of klogd (the -c opion) in the syslogd
-          bootscript. See <code>man klogd</code> for details. You can also try
-          recompiling the kernel and unset CONFIG_LOCAL_APIC.</p>
+          <p>It may be a bug in the firmware (BIOS) or the drivers in
+          kernel.  Some hardware vendors tend to use Windows-specific hacks
+          in their BIOS, which is misinterpreted by Linux kernel and causing
+          this kind of issue.</p>
+          <p>If you see message like this but your system functions
+          normally, you can ignore it.  If the system malfunctions, you can
+          try the combinations of several kernel options to workaround:
+          <code>irqpoll<code>, <code>noapic</code>, <code>pci=nocrs</code>,
+          and <code>i8042.nopnp=1</code>.</p>
+          <p>And, you can try <a href="https://wiki.debian.org/OverridingDSDT">ACPI DSDT override</a> if you
+          really understand it.</p>
+          <p>You can always report this kind of issue to
+          <a href="https://bugzilla.kernel.org">Kernel bug tracker</a>,
+          no matter if it's a BIOS bug.  The kernel developers want to make
+          Linux runable even if the BIOS has this kind of bug.</a>
         </dd>
         <dt id="less-prints-ad">Why does less (and therefore man) print &lt;AD&gt; instead of hyphens?</dt>
         <dd>
