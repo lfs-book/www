@@ -206,6 +206,8 @@
                sk ~/tmp $ ######## that failed ########<br />
                sk ~/tmp $</p>
           </div>
+          <p>If you can determine that some warning indicates a real bug in
+          the software, report to the maintainer of it.</p>
         </dd>
         <dt id="really-small">How do I make that really small install the book mentions?</dt>
         <dd>
@@ -222,10 +224,10 @@
           take a look at the <a
           href="https://trac.clfs.org/wiki/read">Cross-LFS branch</a> of
           LFS.</p>
-<!--
-          <p>For Alpha systems, Kelledin maintains a list of fixes for building
-          on the Alpha platform at <a
-          href="http://skarpsey.dyndns.org/alpha-lfs/alpha.html">http://skarpsey.dyndns.org/alpha-lfs/alpha.html</a>.</p>-->
+          <p>For 64-bit little-endian MIPS, Xi Ruoyao has done an experiment
+          building LFS on it.
+          <a href="https://bf.mengyan1223.wang/lfs/mipsmips64el">The modified LFS 10.1 book</a>
+          documented the instruction used in the experiment.</a></p>
         </dd>
         <dt id="cross-compile">How do I cross compile LFS?</dt>
         <dd>
@@ -239,6 +241,15 @@
           href="http://trac.clfs.org/wiki/read">Cross-LFS</a> book.
           Another source of information would be the <a
           href="/hints/downloads/files/">cross-compiling hint</a>.</p>
+          <p>The resources provided above are quite outdated.  You can
+          modify the LFS building process after LFS 10.0 (developed
+          by Pierre Labestie) to cross compile LFS: set
+          <span>$LFS_TGT</span> to the triplet of your target platform,
+          and build cross toolchain in Chapter 5 and temporary tools in
+          Chapter 6 as normal.  At the end of Chapter 6, build a kernel and
+          a bootloader for the target.
+          Then copy the temporary system to the target platform, boot it,
+          and continue the building from Chapter 7.</p>
         </dd>
         <dt id="dos-text">What's a DOS format text file?</dt>
         <dd>
@@ -259,9 +270,10 @@
             line. And that is why scripts don't work when written with
             Microsoft Notepad. The kernel looks for "/bin/sh^M" which doesn't
             exist. There's a "/bin/sh", but nothing with a "^M" appended.</li>
-            <li>MacOs: CR only. Printers probably print every line atop the
+            <li>Classic MacOS (before Mac OS X): CR only. Printers probably
+            print every line atop the
             first, and Unix tools think the whole file is one line with "^M"
-            all through it.</li>
+            all through it.  Mac OS X follows Unix convention (LF only).</li>
           </ul>
           <p>To change DOS to Unix, use</p>
           <div class="cmd">
@@ -276,8 +288,8 @@
         <dt id="wget">Is there a way to download all current files at one time?</dt>
         <dd>
           <p>Yes. You can download the file LFS-BOOK-x.y-wget-list <a href=
-          "http://www.linuxfromscratch.org/lfs/downloads/stable">
-          http://www.linuxfromscratch.org/lfs/downloads/stable</a>. To download all the files,
+          "http://www.linuxfromscratch.org/lfs/downloads/stable/wget-list">
+          http://www.linuxfromscratch.org/lfs/downloads/stable/wget-list</a>. To download all the files,
           use the version of <code>wget</code> on your host distribution to run:</p>
           
           <code>wget --input-file=LFS-BOOK-x.y-wget-list</code>
