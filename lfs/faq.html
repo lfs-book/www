@@ -420,16 +420,8 @@
           <p>It may be because egrep isn't working. Since egrep is a
           shell-script which calls grep, this actually means there's a problem
           with grep.</p>
-          <p>To test if grep is working <em>before</em> reinstalling the grep
-          package in Chapter 6, run the following command from <em>outside</em>
-          chroot:</p>
-          <code>file $LFS/bin/grep</code>
-          <p>If it doesn't say <code>statically linked</code> you have a
-          problem and need to reinstall the grep package according to the
-          instruction in chapter 5.</p>
-          <p>To test if egrep is working <em>after</em> reinstalling the grep
-          package in Chapter 6, run the following command from <em>inside</em>
-          chroot:</p>
+          <p>To test if egrep is working in the chroot environment,
+          run the following command from <em>inside</em> chroot:</p>
           <code>egrep root /etc/passwd</code>
           <p>If it doesn't print root's line from /etc/passwd, again, you have
           a problem. (This test also works if you encounter the problem after
