@@ -31,7 +31,6 @@
       </ul>
       <h3><a href="#generrors">General compilation errors</a></h3>
       <ul>
-        <li><a href="#gnu-patches">I used a patch from GNU to upgrade. Is that OK?</a></li>
         <li><a href="#optimizations">When using optimization flags (setting CFLAGS)</a></li>
         <li><a href="#config-hang-size_t">Why does configure hang at &quot;checking for signed size_t type...&quot;?</a></li>
         <li><a href="#dirty-sources">I didn't delete the source tree after my last attempt. Do I need to?</a></li>
@@ -300,19 +299,6 @@
 
       <h3 id="generrors">General compilation errors</h3>
       <dl>
-        <dt id="gnu-patches">I used a patch from GNU to upgrade. Is that OK?</dt>
-        <dd>
-          <p>Patches from GNU don't usually work. You can either download the
-          full archive and try again or try the solution given by Gerard
-          Beekmans:</p>
-          <p>The problem is that executable marked scripts are patched too and
-          they then lose the executable bit, so you can't execute those scripts
-          anymore until you run a "chmod +x" on them (or something similar,
-          like chmod 755) before installing Glibc. Try chmod +x
-          glibc-2.2.5/scripts/* (not 100% sure about the directory paths but it
-          should be obvious where to do it when running an 'ls' on the
-          glibc-2.2.5 directory). </p>
-        </dd>
         <dt id="optimizations">When using optimization flags (setting CFLAGS)</dt>
         <dd>
           <p>If you're getting errors and you're setting CFLAGS or otherwise
