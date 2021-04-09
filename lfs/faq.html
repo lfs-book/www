@@ -45,10 +45,6 @@
       </ul>
       <h3><a href="#packerrors">Package-specific errors</a></h3>
       <ul>
-        <li><a href="#unknown-pseudo-op-hidden">GCC: Error: Unknown pseudo-op: `.hidden'</a></li>
-        <li><a href="#glibc-awk-fail">Glibc fails and mentions BEGIN and END.</a></li>
-        <li><a href="#glibc-nss">Glibc compilation errors out due to a missing nss.h header file</a></li>
-        <li><a href="#cpp-fails-sanity-check">Ncurses: C++ preprocessor &quot;/lib/cpp&quot; fails sanity check</a></li>
       </ul>
       <h3><a href="#confboot">Configuration and booting issues</a></h3>
       <ul>
@@ -483,60 +479,6 @@
 
       <h3 id="packerrors">Package-specific errors</h3>
       <dl>
-        <dt id="unknown-pseudo-op-hidden">GCC: Error: Unknown pseudo-op: `.hidden'</dt>
-        <dd>
-          <p>If compiling GCC in Chapter 5 errors out with</p>
-          <code>Error: Unknown pseudo-op: `.hidden'</code>
-          <p>Try the solution given in <a
-          href="http://lists.linuxfromscratch.org/pipermail/lfs-support/2002-September/009562.html">the
-          lfs-support archives</a>  and replies.</p>
-        </dd>
-        <dt id="glibc-awk-fail">Glibc fails and mentions BEGIN and END.</dt>
-        <dd>
-          <p>If glibc fails to build with an error like this:</p>
-          <div class="cmd">
-            <p>'BEGIN { subdirs = ""; inhibit = "" };  \<br />
-               ^# { next };  \<br />
-               ^[^-] { subdirs = subdirs " " $0 };  \<br />
-               ^- { inhibit = inhibit " " substr($0, 2) };  \<br />
-               END { printf "sysdep-subdirs =%s\n", subdirs;  \<br />
-               printf "sysdep-inhibit-subdirs =%s\n", inhibit;  \<br />
-               print "sysd-dirs-done = t" }'  \<br />
-               /dev/null linuxthreads/sysdeps/pthread/Subdirs<br />
-               sysdeps/unix/inet/Subdirs sysdeps/unix/Subdirs &gt;<br />
-               /usr/src/glibc-build/sysd-dirs-tmp<br />
-               /bin/sh: line 1: BEGIN { subdirs = ""; inhibit = "" };<br />
-               ^# { next };<br />
-               ^[^-] { subdirs = subdirs " " $0 }; ^- { inhibit =<br />
-               inhibit " " substr($0, 2) }; END</p>
-          </div>
-          <p>then gawk is failing. The key is the BEGIN and END in the output.
-          The probable reason is that it is linked incorrectly. This can be
-          fixed by recompiling it as the lfs user, according to the directions
-          in Chapter 5.</p>
-        </dd>
-        <dt id="glibc-nss">Glibc compilation errors out due to a missing nss.h header file</dt>
-        <dd>
-          <p>This usually indicates that you are compiling LFS onto a Reiser4
-          partition. Unfortunately, there is currently no known solution, other
-          than to use a different type of filesystem. </p>
-        </dd>
-        <dt id="cpp-fails-sanity-check">NCurses: C++ preprocessor &quot;/lib/cpp&quot; fails sanity check</dt>
-        <dd>
-          <p>Ncurses in chapter six ends with:</p>
-          <div class="cmd">
-            <p>checking how to run the C++ preprocessor... /lib/cpp<br />
-               configure: error: C++ preprocessor "/lib/cpp" fails sanity check</p>
-          </div>
-          <p>The problem is that you have no c++ compiler. In chapter five, gcc
-          is first built without the C++ compiler. Before building ncurses, gcc
-          is rebuilt with the C++ compiler. Most probably, you forgot to
-          extract the g++ tarball, or did not specify "c++" in the
-          --enable-languages configure switch, on the 2nd gcc build. There are
-          more details in <a
-          href="http://archives.linuxfromscratch.org/mail-archives/lfs-support/2003-July/018757.html">the
-          mail archive</a>.</p>
-        </dd>
       </dl>
       <p><a href="#lfsfaq">Back to the top.</a></p>
 
