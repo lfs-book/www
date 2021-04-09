@@ -80,6 +80,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-10.1-025"/>
+    <h4>10.1 025 Node.js Date: 2021-04-09 Severity: High</h4>
+    <p>Node.JS-14.16.1 fixed three security vulnerabilities.  Two are in OpenSSL
+    but can be exploited through Node.js if you have not updated that package to
+    Openssl-1.1.1k or later, see <a href="consolidated.html#sa-10.1-011">10.1-011</a></p>
+    <p>The third vulnerability is 'Prototype Pollution' in the y18n JS
+    package used in npm. Information can be found at
+    <a href="https://nodejs.org/en/blog/vulnerability/april-2021-security-releases/">April 2021 Security Releases</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-7774/">CVE-2020-7774</a>
+    and for an explanaton of 'Prototype Pollution' see
+    <a href="https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1038306/">SNYK-JAVA-ORGWEBJARSNPM-1038306</a>.</p>
+    <p>To fix these, update to Node.JS-14.16.1 or later using the instructions
+    from the development book for
+    <a href="../view/svn/general/nodejs.html">Node.JS (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.JS (systemd)</a>.</p>
+
     <a id="sa-10.1-024"/>
     <h4>10.1 024 XDG-Utils Date: 2021-04-02 Severity: Medium</h4>
     <p>In the xdg-email component of xdg-utils 1.1.0rc1 and newer, an attacker
