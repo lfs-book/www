@@ -16,6 +16,8 @@
         <li><a href="#why-vim">Why is vim in the book?</a></li>
         <li><a href="#why-not-package-management">Why isn't some package manager in the book?</a></li>
         <li><a href="#no-poweroff">How do I make my machine poweroff when shut down?</a></li>
+        <li><a href="#uefi">How do I boot LFS with UEFI?</a></li>
+        <li><a href="#rebuild-ch8">Can I skip packages in Chapter 8 since it's already built in Chapter 7 and functioning properly?</a></li>
       </ul>
       <h3><a href="#resources">When reading and building LFS</a></h3>
       <ul>
@@ -147,6 +149,34 @@
           sure they are loaded before you try to power off.  Some machines
           require that APM or ACPI is compiled into the kernel because it needs
           to be initialised at boottime. </p>
+        </dd>
+
+        <dt id="#uefi">How do I boot LFS with UEFI?</dt>
+        <dd>
+          <p>GRUB can be built for UEFI, but doing so needs several packages
+          beyond the scope of LFS.  You can consult
+          <a href="/blfs/view/svn/postlfs/grub-efi.html">the BLFS page for it</a>.</p>
+        </dd>
+
+        <dt id="#rebuild-ch8">Can I skip a package in Chapter 8 since it's already built in Chapter 6 or 7, and it's functioning properly?</dt>
+        <dd>
+          <p>Short answer: no.</p>
+          <p>Long answer: we want LFS to be "settled down": if some package
+          is rebuilt in the LFS system, the result (libraries and binaries)
+          should be same as the result at the end of the LFS book.  In
+          Chapter 6 the tools are cross compiled, where many tests in
+          the <code>configure</code> script can't be done.  The "guessed"
+          result will be used, unnecessary workarounds are enabled, or
+          optional features are disabled.  The tools in Chapter 7 are built
+          for resolving circular dependencies: many of their optional
+          features depend on packages not built yet and have to be
+          disabled.  So rebuilding them in Chapter 8 is necessary.</p>
+          <p>On the other hand, if you are building Linux for some really
+          tiny platform where you can't build packages in a reasonable time
+          (for example, a 16 MHz ARM), you can cross compile everything in
+          Chapter 6 since Chapter 7 and 8 are not applicable.  Or, you can
+          do Chapter 7 and 8 with an emulator like
+          <a href="/blfs/view/stable/postlfs/qemu.html">QEMU</a>.</p>
         </dd>
       </dl>
       <p><a href="#lfsfaq">Back to the top.</a></p>
