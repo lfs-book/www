@@ -54,7 +54,6 @@
         <li><a href="#no-dev-rtc">modprobe: Can't locate module /dev/rtc</a></li>
         <li><a href="#eth0-unknown-interface">eth0:unknown interface</a></li>
         <li><a href="#irq-nobody-cared">IRQ 9: nobody cared (try booting with the "irqpoll" option)</a></li>
-        <li><a href="#less-prints-ad">Why does less (and therefore man) print &lt;AD&gt; instead of hyphens?</a></li>
       </ul>
       <div class="newsItem"></div>
 
@@ -559,7 +558,7 @@
           <p>If you see message like this but your system functions
           normally, you can ignore it.  If the system malfunctions, you can
           try the combinations of several kernel options to workaround:
-          <code>irqpoll<code>, <code>noapic</code>, <code>pci=nocrs</code>,
+          <code>irqpoll</code>, <code>noapic</code>, <code>pci=nocrs</code>,
           and <code>i8042.nopnp=1</code>.</p>
           <p>And, you can try <a href="https://wiki.debian.org/OverridingDSDT">ACPI DSDT override</a> if you
           really understand it.</p>
@@ -567,20 +566,6 @@
           <a href="https://bugzilla.kernel.org">Kernel bug tracker</a>,
           no matter if it's a BIOS bug.  The kernel developers want to make
           Linux runable even if the BIOS has this kind of bug.</a>
-        </dd>
-        <dt id="less-prints-ad">Why does less (and therefore man) print &lt;AD&gt; instead of hyphens?</dt>
-        <dd>
-          <p>Because the LANG and LC_ALL environment variables aren't set. To
-          fix that, set them in both the ~/.bash_profile and ~/.bashrc files
-          for each user or in /etc/profile, which will take care of all users,
-          by adding lines like this:</p>
-          <div class="cmd">
-            <p>export LANG=en_US<br />
-               export LC_ALL=POSIX</p>
-          </div>
-          <p>Those lines can be added to /etc/profile with the following command:</p>
-          <code>echo -e 'export LANG=en_US\nexport LC_ALL=POSIX' &gt;&gt; /etc/profile</code>
-          <p>If you don't use US English you'll have to change the "en_US" part and possibly the values of various LC_* variables as well. Running the locale command lists many (all?) of the LC_* variables.</p>
         </dd>
       </dl>
 
