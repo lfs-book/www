@@ -49,6 +49,28 @@
 -->
 <!-- end of PackageName -->
 
+    <h3>Avahi</h3>
+    <a id="sa-10.1-028"/>
+    <h4>10.1 028 Avahi Date: 2021-04-14  Severity: Medium</h4>
+    <p>A security vulnerability was discovered in Avahi that could allow a
+    local attacker to trigger an infinite loop by writing long lines to
+    /run/avahi-daemon/socket. To fix this, apply a sed in the Avahi page.
+    For more details, see the advisory linked here:
+    <a href="conslidated.html#sa-10.1-028">10.1-028</a></p>
+
+<!-- end of Avahi -->
+
+    <h3>cifs-utils</h3>
+    <a id="sa-10.1-030"/>
+    <h4>10.1 030 cifs-utils Date: 2021-04-13 Severity: Medium</h4>
+    <p>In cifs-utils-6.13, a security vulnerability was fixed that could lead
+    to privilege escalation or authentication credential leaks when running
+    the "cifs.upcall" command when Kerberos support is enabled. Update to
+    cifs-utils-6.13 or later.
+    <a href="consolidated.html#sa-10.1-030">10.1-030</a></p>
+
+<!-- end of cifs-utils -->
+
     <h3>cURL</h3>
     <a id="sa-10.1-020"/>
     <h4>10.1 020 cURL  Date: 2021-03-31  Severity: Medium</h4>
@@ -118,6 +140,16 @@
 
 <!-- end of JS78 -->
 
+    <h3>librsvg</h3>
+    <h4>10.1 031 librsvg Date: 2021-04-14  Severity: Medium</h4>
+    <p>In librsvg-2.50.4, a security vulnerability in a bundled rust crate
+    was fixed that could lead to variables lasting for longer than originally
+    expected, leading to memory corruption scenarios. Update to librsvg-2.50.4
+    or later.
+    <a href="conslidated.html#sa-10.1-031">10.1-031</a>.</p>
+
+<!-- end of librsvg -->
+
     <h3>Libssh2</h3>
     <h4>10.1 023 Libssh2 Date: 2021-04-02  Severity: High</h4>
     <p>In Libssh2-1.9.0 and earlier, a crafted SSH server may be able to disclose
@@ -156,6 +188,16 @@
     <a href="consolidated.html#sa-10.1-013">10.1-013</a>.</p>
 
 <!-- end of Nettle -->
+
+    <h3>NetworkManager</h3>
+    <h4>10.1 029 NetworkManager Date: 2021-04-14 Severity: Low</h4>
+    <p>In NetworkManager-1.30.2, a security vulnerability was discovered that
+    could result in an attacker crashing NetworkManager by setting a
+    'match.path' value in a Network file. To fix this, apply the sed in BLFS
+    linked in the advisory.
+    <a href="consolidated.html#sa-10.1-029">10.1-029</a></p>
+
+<!-- end of NetworkManager -->
 
     <h3>Node.js</h3>			
     <h4>10.1 025 node.js Date: 2021-04-09 Severity: High</h4>

@@ -80,8 +80,62 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-10.1-031"/>
+    <h4>10.1 031 librsvg    Date: 2021-04-14 Severity: Medium</h4>
+    <p>A security vulnerability was fixed in librsvg-2.50.4 that applied to one
+    of the rust crates involved with building the librsvg library. This 
+    vulnerability existed within the generic-array crate, and allowed for 
+    variables to stick around for longer than their expected lifetime. This 
+    could lead to memory corruption scenarios.
+    This vulnerability has been assigned
+    <a href="https://rustsec.org/advisories/RUSTSEC-2020-0146.html">RUSTSEC-2020-0146</a>.</p>
+    <p>To fix this, update to librsvg-2.50.4 or later using the instructions in
+    <a href="../view/svn/general/librsvg.html">librsvg (sysv)</a>, or
+    <a href="../view/systemd/general/librsvg.html">librsvg (systemd)</a>.</p>
+
+    <a id="sa-10.1-030"/>
+    <h4>10.1 030 cifs-utils Date: 2021-04-14 Severity: Medium</h4>
+    <p>A security vulnerability was discovered in cifs-utils before 6.13.
+    When using kerberos authentication, it is possible for a leak of
+    authentication credentials when running the cifs.upcall command.
+    This same vulnerability can also permit privilege escalation
+    of a local user.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20208">CVE-2021-20208</a>.</p>
+    <p>To fix this, update to cifs-utils-6.13 or later using the instructions in
+    <a href="../view/svn/basicnet/cifsutils.html">cifs-utils (sysv)</a>, or
+    <a href="../view/systemd/basicnet/cifsutils.html">cifs-utils (systemd)</a>.</p>
+
+    <a id="sa-10.1-029"/>
+    <h4>10.1 029 NetworkManager Date: 2021-04-14 Severity: Low</h4>
+    <p>A security vulnerability was found in NetworkManager where a local or 
+    remote attacker could set a "match.path" statement in a Network file, which
+    would cause NetworkManager to crash. The root cause of this vulnerability
+    is improper input validation.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-20297">CVE-2021-20297</a>.</p>
+    <p>To fix this, apply a sed to NetworkManager using the instructions in
+    <a href="../view/svn/basicnet/networkmanager.html">NetworkManager (sysv)</a>, or
+    <a href="../view/systemd/basicnet/networkmanager.html">NetworkManager (systemd)</a>.</p>
+    <!-- Pulling the CVE from RedHat because it is "Reserved" at MITRE and
+         unavailable at NVD. -->
+
+    <a id="sa-10.1-028"/>
+    <h4>10.1 028 Avahi Date: 2021-04-14 Severity: Medium</h4>
+    <p>A security vulnerability was found in Avahi that could allow an infinite
+    loop to be triggered when an attacker writes a long line to
+    /run/avahi-daemon/socket. The event used to signal the termination of a
+    client connection was not correctly handled. 
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-3468">CVE-2021-3468</a>.</p>
+    <p>To fix this, apply a sed to Avahi using the instructions in
+    <a href="../view/svn/basicnet/avahi.html">Avahi (sysv)</a>, or
+    <a href="../view/systemd/basicnet/avahi.html">Avahi (systemd)</a>.</p>
+    <!-- Pulling the CVE from RedHat because it is "Reserved" at MITRE and
+         unavailable at NVD. -->
+
     <a id="sa-10.1-027"/>
-    <h4>10.1 027 Thunderbird  Updated: 2021-04-11  Severity: Moderate</h4>
+    <h4>10.1 027 Thunderbird  Updated: 2021-04-11  Severity: Medium</h4>
     <p>Three security vulnerabilities were fixed in Thunderbird-78.9.1. All 
     three of them affect systems that have OpenPGP keys configured for 
     encrypted email. These vulnerabilities have been rated Moderate, and have
