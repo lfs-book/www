@@ -52,7 +52,7 @@
       </ul>
       <h3><a href="#confboot">Configuration and booting issues</a></h3>
       <ul>
-        <li><a href="#unable-to-mount-root">Kernel panic: VFS: unable to mount root fs</a></li>
+        <li><a href="#unable-to-mount-root">Kernel panic - not syncing: VFS: Unable to mount root fs on ...</a></li>
         <li><a href="#respawning-too-fast">init: Id &quot;1&quot; respawning too fast: disabled for 5 minutes</a></li>
         <li><a href="#char-major-10-135">modprobe: Can't locate module char-major-10-135</a></li>
         <li><a href="#no-dev-rtc">modprobe: Can't locate module /dev/rtc</a></li>
@@ -537,12 +537,12 @@
 
       <h3 id="confboot">Configuration and booting issues</h3>
       <dl>
-        <dt id="unable-to-mount-root">Kernel panic: VFS: unable to mount root fs</dt>
+        <dt id="unable-to-mount-root">Kernel panic - not syncing: VFS: Unable to mount root fs on ...</dt>
         <dd>
           <p>There are several reasons why the kernel might be unable to mount the root filesystem.</p>
           <ul>
             <li>Did you specify the correct partition in
-            <code>/boot/grub/menu.lst</code>?</li>
+            <code>/boot/grub/grub.cfg</code>?</li>
             <li>Is support for the hard drive enabled in the kernel. For SCSI
             this means support for the specific SCSI adapter.</li>
             <li>Is support for the hard drive compiled into the kernel, not
@@ -550,8 +550,8 @@
             driver needed to access the filesystem is stored as a module on
             that filesystem, well ... you know ... ;)</li>
             <li>Is support for the filesystem compiled into the kernel. Again,
-            not a module. Support for ext2 is enabled by default, but others
-            like ext3, reiser, jfs, and xfs are not.</li>
+            not a module. Support for ext4 is enabled by default, but others
+            like reiser, jfs, and xfs are not.</li>
           </ul>
         </dd>
         <dt id="respawning-too-fast">init: Id "1" respawning too fast: disabled for 5 minutes</dt>
