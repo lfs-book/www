@@ -1,9 +1,9 @@
-AUTHOR: Hints Author <hints at linuxfromscratch dot org>
-AUTHOR: Hints Owner <hints-owner at linuxfromscratch dot org>
+AUTHOR: Hints Author <author@example.org>
+AUTHOR: Hints Owner <owner@example.org>
 
-DATE: 2003-08-15
+DATE: 2021-08-15
 
-LICENSE: GNU Free Documentation License Version 1.2
+LICENSE: GNU Free Documentation License Version 1.3
 
 SYNOPSIS: Sample Hint Format.
 
@@ -18,8 +18,8 @@ ATTACHMENTS:
 
 PREREQUISITES:
 This hint requires that you have sufficient knowledge of LinuxFromScratch.
-This hint is applicable only for users that follow the LFS-CVS as of the 
-submission date above.
+This hint is applicable only for users that follow the LFS developemnt book
+as of the submission date above.
 
 HINT:
 This is where all the meat of the hint goes. It is good to restrict the line
