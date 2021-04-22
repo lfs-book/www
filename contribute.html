@@ -12,44 +12,44 @@
        BLFS packages.  The requirements for the various mirrors are listed
        below.  If you would like to become a mirror, please set it up and send
        an email with the data requested below to the website maintainer, <a
-       href="mailto:bdubbs@linuxfromscratch.org">bdubbs@linuxfromscratch.org</a>.
+       href="mailto:webmaster@linuxfromscratch.org">webmaster@linuxfromscratch.org</a>.
        Thank you.  </p>
        
        <h3 id="requirements">Requirements</h3>
      
        <p>Here is a list of requirements for the various mirrors.  All mirrors
        require that you use <a
-       href="/blfs/view/stable/server/rsync.html">rsync</a> to sync your
+       href="/blfs/view/stable/basicnet/rsync.html">rsync</a> to sync your
        mirrors with our main servers, and a <a
        href="/blfs/view/stable/general/fcron.html">cron</a> program to schedule
        it for you.</p>
 
-       <p>You can find cheap <a
-       href="http://www.webhostingsearch.com/linux-web-hosting.php"
+       <p>You can find inexpensive 
+       <a  href="http://www.webhostingsearch.com/linux-web-hosting.php"
        onclick="window.open(this.href); return false;"
        onkeypress="window.open(this.href); return false;">linux web hosting</a>
-       or an entire <a
-       href="http://www.webhostingsearch.com/dedicated-server.php"
+       or an entire 
+       <a href="http://www.webhostingsearch.com/dedicated-server.php"
        onclick="window.open(this.href); return false;"
        onkeypress="window.open(this.href); return false;">dedicated server</a>
-       for your mirror at our partner <a href="http://www.webhostingsearch.com"
+       for your mirror at 
+       <a href="http://www.webhostingsearch.com"
        onclick="window.open(this.href); return false;"
        onkeypress="window.open(this.href); return false;">Web Hosting
        Search</a>.</p>
 
        <h4>HTTP Mirror</h4>
        <ul>
-          <li>At least 1 GB of disk space.</li>
+          <li>At least 5 GB of disk space.</li>
           
-          <li><a
-          href="/blfs/view/stable/server/majorservers.html#apache">Apache
+          <li>
+          <a href="/blfs/view/stable/server/majorservers.html#apache">Apache
           Webserver</a> or equivalent with the following options enabled:
              
              <ul>
                 <li>Indexes</li>
                 <li>FollowSymlinks</li>
                 <li>IncludesNOEXEC</li>
-                <li>XBitHack on</li>
              </ul>
           </li>
        </ul>
@@ -58,22 +58,9 @@
 
        <code>/usr/bin/rsync -lprt --delete www.linuxfromscratch.org::lfs-website /srv/www/lfs</code>
 
-<!--
-       <div class="note">
-       
-       <p><strong>Note:</strong> Mirror Admins who don't have access to the
-       httpd config file on the server can still mirror using .htaccess files.
-       A short description is available here: <a
-       href="http://linuxfromscratch.org/pipermail/website/2005-November/005760.html">
-       http://linuxfromscratch.org/pipermail/website/2005-November/005760.html</a>.
-       </p>
-
-     </div>
--->
-     
      <h4>LFS and BLFS FTP Mirrors</h4>
      <ul>
-        <li>At least 40 GB of disk space.</li>
+        <li>At least 300 GB of disk space.</li>
         <li>The path to the mirror being &quot;/pub/lfs/&quot; and 
         &quot;/pub/blfs/&quot; if possible.</li>
      </ul>
@@ -83,18 +70,10 @@
      <code>/usr/bin/rsync -lprt --delete rsync.osuosl.org::lfs  /srv/ftp/LFS<br/>
      /usr/bin/rsync -lprt --delete rsync.osuosl.org::blfs /srv/ftp/BLFS</code>
 
-<!--
-     <h4>LiveCD FTP Mirror</h4>
-        <ul>
-           <li>At least 4.0GB of disk space.</li>
-           <li>The path to the mirror being &quot;/pub/lfs-livecd/&quot;, if possible.</li>
-        </ul>
--->
-
      <h4>Still interested?</h4>
      
      <p>If you are still interested in becoming a mirror, please email the
-     following information to the appropriate list or person listed above.</p>
+     following information to the appropriate list or the webmaster.</p>
 
      <ul>
         <li>Location (City and Country)</li>
@@ -102,54 +81,19 @@
         <li>Bandwidth</li>
         <li>Contact Name and Valid E-mail Address</li>
      </ul>
-<!--
-      <h2>Buy the LFS 6.0 Hard Copy</h2>
-
-      <p>Unfortunately the hard copy version of LFS 6.0 is no longer in print
-      or available for purchase.</p>
--->
-
-<!-- 
-      <p>The LFS team is proud to announce the second edition of a printed
-      Linux From Scratch book. The book contains the LFS 6.0 version on 292
-      pages and an accompanying CD. The books are available for $19.99 from <a
-      href="http://cart.cheapbytes.com/cgi-bin/cart/0970010004.html">CheapBytes</a>.</p>
-       
-      <h3 id="lfsbook">Book Description</h3>
-       
-      <p>Tired of using Linux systems that don't perform the way you need them
-      to work? Searching for an alternative to cookie-cutter distributions that
-      dont meet your specific needs?</p>
-       
-      <p>Linux From Scratch allows users to build custom Linux systems from the
-      ground up, customizing each aspect of the system to the users
-      specifications. Users can dictate all aspects of their system, including
-      directory layout, script setup, and security. you can specify where, why
-      and how programs are installed. It is all about choice - yours.</p>
-       
-      <p>Linux From Scratch also provides an ideal learning environment for
-      programmers and system administrators who want to enhance their existing
-      Linux skills. Linux From Scratch is a world-recognized project with a
-      community of thousands.</p>
-       
-      <p>With several support web sites, mailing lists, and real-time help
-      services to its credit, the possibilities are endless. This book contains
-      everything you will need to know to embark on your own LFS adventure and
-      design the custom Linux system you've been looking for!</p> 
--->
 
       <h2 id="donation">Make a donation</h2>
       
       <p>One of the ways to help the Linux From Scratch project is by making
       donations.<br>
-	Financial donations can be made through <a
+      Financial donations can be made through <a
       href="http://www.paypal.com">PayPal</a> using a major credit card.</p>
       
       <form action="https://www.paypal.com/cgi-bin/webscr"
       enctype="application/x-www-form-urlencoded" method="post">
 
       <p><input type="hidden" name="cmd" value="_xclick" />
-         <input type="hidden" name="business" value="gerard&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;" />
+         <input type="hidden" name="business" value="gerard@linuxfromscratch.org" />
          <input type="hidden" name="undefined_quantity" value="1" />
          <input type="hidden" name="item_name" value="LFS Donation" />USD $
          <input type="text" size="5" name="amount" value="25" />
@@ -158,47 +102,8 @@
       </form>
 
       <p>If you'd like to donate but can't use PayPal, please contact <a
-      href="mailto:&#103;&#101;&#114;&#97;&#114;&#100;&#64;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">Gerard
-      Beekmans</a>.</p>
+      href="mailto:gerard@linuxfromscratch.org">Gerard Beekmans</a>.</p>
       
       <p>All proceeds of donations will be used to pay the monthly server hosting bills.</p>
-
-	<h3>Accounting of Donations</h3>
-
-	<p><i>Current as of April 7, 2014.</i></p>
-
-	<p>The following is a summary of incoming and outgoing funds.</p>
-
-	<table>
-		<tr>
-			<th></th>
-			<th>2013</th>
-			<th>2014</th>
-		</tr>		
-		<tr>
-			<td>Donations Received</td>
-			<td align="right">$1,606.14 CAD</td>
-			<td align="right">$386.00 CAD</td>
-		</tr>
-		<tr>
-			<td>USD to CAD Currency Conversion</td>
-			<td align="right">$16.93 CAD</td>
-			<td align="right">$31.92 CAD</td>
-		<tr>
-			<td>Server Hosting Bills</td>
-			<td align="right"><font color="red">-$4,565.74 CAD</font></td>
-			<td align="right"><font color="red">-$1,843.16 CAD</font></td>
-		</tr>
-		<tr>
-			<td>PayPal Fees</td>
-			<td align="right"><font color="red">-$73.09 CAD</font></td>
-			<td align="right"><font color="red">-$21.15 CAD</font></td>
-		</tr>
-		<tr>
-			<td>Surplus/Deficit</td>
-			<td align="right"><font color="red"><b>-$3,015.76 CAD</b></td>
-			<td align="right"><font color="red"><b>-$1,446.39 CAD</b></td>
-		</tr>
-	</table>
 
 <!--#include virtual="/common/footer.html" -->
