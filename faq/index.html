@@ -25,6 +25,7 @@
       <h3><a href="#frb">Frequently Reported Bugs</a></h3>
       <ul>
 	<li><a href="#wrong-ln-s-command">The "ln -s" commands in the Book are wrong.</a></li>
+	<li><a href="#bash-missing-right-bracket">bash: [: missing `]'</a></li>
 	<li><a href="#its-hardlink-not-copy">/bin/foo is a copy of /bin/bar.</a></li>
 	<li><a href="#why-not-version">Can I use a version newer than the one in the Book?</a></li>
 	<li><a href="#new-version">There's a new version of package Foo.</a></li>
@@ -342,6 +343,13 @@
      relative to the link, not the working directory when the link is created.
      Try it and see. More information in <code>man ln</code>.</p>
 	</dd>
+    <dt id="bash-missing-right-bracket">bash: [: missing `]'</dt>
+    <dd>
+      <p>You should understand how &quot;conditions&quot; like [ ... ] work
+      in bash: &quot;[&quot; is a command and &quot;]&quot; should be its
+      last parameter.  So there must be a whitespace before &quot;]&quot;,
+      or the execution of &quot;[&quot; will fail.</p>
+    </dd>
 	<dt id="its-hardlink-not-copy">/bin/foo is a copy of /bin/bar.</dt>
 	<dd>
      <p>Try &quot;ls -i /bin/foo /bin/bar&quot;. Are the inode numbers the
