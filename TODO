@@ -1,8 +1,3 @@
-- Mailman customization
-
-- Move templates to the repository and enable post-commit actions for them (done
-  for swish-e and error pages; lfscounter and bugzilla are missing).
-
 - Create cronjob to check for broken links and HTML/CSS validity errors
   (post-commit is not an option here, because these tasks take too much time to
   finish). Maybe create a "quick-check" rule (using xmllint) to be run on
@@ -15,9 +10,3 @@
   For now, a link to the mirror page was placed on each submenu until we figure
   out which way to go.
 
-- Avoid data duplication on lfscounter.cgi (currently, for a new book release,
-  one has to add the new version both on the cgi script itself and on the
-  template).
-
-- Avoid duplication of news items on "general" and project-specific news.html
-  pages, possibly using SSI.

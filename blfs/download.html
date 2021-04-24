@@ -9,107 +9,105 @@
 
      <h2>Current Stable (version 10.1)</h2>
      <p>This is the latest released BLFS book.</p>
-   <ul>
-      <li><a href="downloads/stable/blfs-book-10.1-html.tar.xz">compressed HTML format, multiple pages</a></li>
-      <li><a href="downloads/stable/BLFS-BOOK-10.1-nochunks.html">HTML format, single page</a></li>
-      <li><a href="downloads/stable/BLFS-BOOK-10.1-nochunks.html.xz">compressed HTML format, single page</a></li>
-   </ul>
+     <ul>
+      <li><a href="downloads/stable/blfs-book-10.1-html.tar.xz">
+          compressed HTML format, multiple pages</a></li>
+      <li><a href="downloads/stable/BLFS-BOOK-10.1-nochunks.html">
+          HTML format, single page</a></li>
+      <li><a href="downloads/stable/BLFS-BOOK-10.1-nochunks.html.xz">
+          compressed HTML format, single page</a></li>
+     </ul>
 
      <p>A directory listing is <a href="downloads/stable">also available</a></p>
 
      <h2>Current Development</h2>      
+     
      <p>This is the BLFS Book in its current development state.
         The instructions are generally stable, but
         changes can happen that break the build temporarily.
      </p>
 
      <p>Daily rendered <a href="downloads/svn/">snapshots</a> may be downloaded. Or check
-        out the book's XML from the Subversion repository and render it yourself:</p>
+        out the book's XML from the Git repository and render it yourself:</p>
+     
      <div class="cmd">
-      <p>svn co svn://svn.linuxfromscratch.org/BLFS/trunk/BOOK/</p>
+       <p>git clone git://git.linuxfromscratch.org/blfs.git blfs-git</p>
      </div>
 
-     
      <h2>Current Stable Systemd (version 10.1)</h2>
 
      <p>This is the latest released BLFS systemd book.</p>
-   <ul>
-      <li><a href="downloads/stable-systemd/blfs-book-10.1-systemd-html.tar.xz">compresseded HTML format, multiple pages</a></li>
-      <li><a href="downloads/stable-systemd/BLFS-BOOK-10.1-systemd-nochunks.html">HTML format, single page</a></li>
-      <li><a href="downloads/stable-systemd/BLFS-BOOK-10.1-systemd-nochunks.html.xz">compressed HTML format, single page</a></li>
-   </ul>
+     <ul>
+      <li><a href="downloads/stable-systemd/blfs-book-10.1-systemd-html.tar.xz">
+          compresseded HTML format, multiple pages</a></li>
+      <li><a href="downloads/stable-systemd/BLFS-BOOK-10.1-systemd-nochunks.html">
+           HTML format, single page</a></li>
+      <li><a href="downloads/stable-systemd/BLFS-BOOK-10.1-systemd-nochunks.html.xz">
+           compressed HTML format, single page</a></li>
+     </ul>
 
      <p>A directory listing is <a href="downloads/stable-systemd">also available</a></p>
 
      <h2>Current Systemd Development</h2>      
+     
      <p>This is the BLFS Systemd Book in its current development state.
         The instructions are generally stable, but
-        changes can happen that break the build temporarily.
-     </p>
+        changes can happen that break the build temporarily.</p>
 
-     <p>Daily rendered <a href="downloads/systemd/">snapshots</a> may be downloaded. Or check
-   out the book's XML from the svn repository and render it yourself:</p>
+     <p>Daily rendered <a href="downloads/systemd/">snapshots</a> may be downloaded. 
+        Or check out the book's XML from the Git repository and render it yourself
+        using the instruction above.</p>
+     
      <div class="cmd">
-      <p>svn co svn://svn.linuxfromscratch.org/BLFS/trunk/BOOK/</p>
-      <p>After the prerequisites listed in the INSTALL file are present, 
-      use 'make REV=systemd', to render the book.  Additional infromation is 
-      listed in the README file.
+        <p>After the prerequisites listed in the INSTALL file are installed, 
+        use 'make REV=systemd', to render the book.  Additional information is 
+        listed in the README file.</p>
      </div>
 
      <h2>BLFS Museum</h2>
-     <p>Old, but still useful as an educational experience, or to see how BLFS has grown
-   over the years. <a
-        href="http://archive.linuxfromscratch.org/blfs-museum/">http://archive.linuxfromscratch.org/blfs-museum/</a>
+     
+     <p>Old, but still useful as an educational experience, or to see how 
+        BLFS has grown over the years:
+        <a href="downloads/">All BLFS Releases</a>.
      </p>
 
      <h2 id="packages">Packages for BLFS</h2>
-     <p>BLFS has a list of packages which you can download. Please use the versions which are
-   <a href="../faq/#why-not-version">listed in the book</a>; these
-   are tested versions which are known to work with each other. In addition to the packages you
-   will need to download some patches that are also listed in the book.
-   There are several ways to download the packages.</p>
-   <h3>Hunt and Peck</h3>
-        <p>When a package is not available from the location listed in the book,
+     
+     <p>BLFS has a list of packages which you can download. Please use the 
+        versions which are <a href="../faq/#why-not-version">listed in the book</a>; 
+        these are tested versions which are known to work with each other. 
+        In addition to the packages you will need to download some patches that 
+        are also listed in the book.
+        There are several ways to download the packages.</p>
+   
+     <h3>Hunt and Peck</h3>
+        
+     <p>When a package is not available from the location listed in the book,
         some other places to try are:</p>
+        
         <ul>
-           <li>A search for the full package name in <a href="https://www.google.com">google</a> or your 
-           favorite search engine</li>
-           <li><a href="https://www.debian.org/distrib/packages">Debian Package Search Page</a></li>
-<!-- this domain name seems to have been hijacked
-           <li><a href="http://www.filemirrors.com/">filemirrors.com</a></li>
-           <li>Sources from your linux distro</li>-->
+           <li>A search for the full package name in 
+               <a href="https://www.google.com">google</a> or your 
+               favorite search engine</li>
+           
+           <li><a href="https://www.debian.org/distrib/packages">
+                Debian Package Search Page</a></li>
         </ul>
-   <h3 id='sources'>BLFS HTTP/FTP Sites</h3>
+
+     <h3 id='sources'>BLFS HTTP/FTP Sites</h3>
         <p>If the above methods are not available to you, the packages are also available individually
            on the following ftp and http mirrors.
         </p>
         <ul>
            <li><a href="ftp://ftp.lfs-matrix.net/pub/blfs/">ftp://ftp.lfs-matrix.net/pub/blfs/</a>
+                (California, USA, 200Mbps)</li>
+           <li><a href="http://ftp.lfs-matrix.net/pub/blfs/">
+                http://ftp.lfs-matrix.net/pub/blfs/</a>
                (California, USA, 200Mbps)</li>
-           <li><a href="http://ftp.lfs-matrix.net/pub/blfs/">http://ftp.lfs-matrix.net/pub/blfs/</a>
-               (California, USA, 200Mbps)</li>
-<!--           <li><a href="http://tmuniz.com/pub/blfs/">http://tmuniz.com/pub/blfs/</a>
-               (Dallas, Texas, USA, 100Mbps)</li> -->
            <li><a href="ftp://ftp.osuosl.org/pub/blfs/">ftp://ftp.osuosl.org/pub/blfs/</a>
                (Oregon, USA, 310Mbps)</li>
            <li><a href="http://ftp.osuosl.org/pub/blfs/">http://ftp.osuosl.org/pub/blfs/</a>
                (Oregon, USA, 310Mbps)</li>
-<!--
-           <li><a href="http://mirrors-usa.go-parts.com/blfs">http://mirrors-usa.go-parts.com/blfs</a>
-               (Michigan, USA, 1Gbps) <br/>
-               Also available as ftp or rsync: ftp://mirrors-usa.go-parts.com/blfs and rsync://mirrors-usa.go-parts.com/blfs</li>-->
-<!--            
-           <li><a href="http://mirrors-ru.go-parts.com/blfs">http://mirrors-ru.go-parts.com/blfs</a>
-               (Moscow, Russia, 1Gbps) <br/>
-               Also available as ftp or rsync: ftp://mirrors-ru.go-parts.com/blfs and rsync://mirrors-ru.go-parts.com/blfs</li>-->
-            
-<!--           <li><a href="http://nwps.ws/pub/blfs/">http://nwps.ws/pub/blfs/</a>
-               (Roubaix, France, 200Mbps)</li>-->
-        
-<!--       <li><a href="http://blfs-packages.mirror.shizu-net.jp/">http://blfs-packages.mirror.shizu-net.jp/</a>
-                   (Shizuoka, Japan, 100Mbps)</li>-->
-<!--       <li><a href="ftp://lfs.dontuse.ms/pub/blfs/">ftp://lfs.dontuse.ms/pub/blfs/</a>
-               (London Docklands, United Kingdom, 100Mbps)</li>-->
         </ul>
 
 <!--#include virtual="/common/footer.html" -->

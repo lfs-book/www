@@ -3,12 +3,15 @@
 <!--#include virtual="menu.html" -->
     <div class="main">
      <h1>Download the Linux From Scratch Book</h1>
+
      <p>Several versions of the LFS book are available for download, 
         in several formats:</p>
 
      <h2>Current Stable</h2>
+     
      <p>This is the latest released LFS book, well tested and mature 
      enough for everyday use.</p>
+     
      <p>You may download the stable book in various formats from the 
         <a href="/lfs/downloads/stable/">stable book</a> directory.</p>
 <!--
@@ -25,22 +28,21 @@
         happen that break the build temporarily.<br />
         <em>Not recommended for inexperienced LFS'ers.</em>
      </p>
+     
      <p>Daily rendered <a href="downloads/development/">snapshots</a> may be 
-     downloaded. Or check out the book's XML source from our Subversion 
-     repository and render it yourself:</p>
+        downloaded. Or check out the book's XML source from our Git
+        repository and render it yourself:</p>
+     
      <div class="cmd">
-      <p>svn co svn://svn.linuxfromscratch.org/LFS/trunk/BOOK/</p>
+       <p>git clone git://git.linuxfromscratch.org/ilfs.git lfs-git</p>
      </div>
-
-     <p>Other versions of the source may be similarly downloaded by changing
-     the URL above.  For example, use
-     svn://svn.linuxfromscratch.org/LFS/tags/8.4/ for the 8.4 version of the book's
-     XML source.</p>
 
      <h2>Systemd version of LFS</h2>
      <h2>Current Stable</h2>
+     
      <p>This is the latest released LFS systemd book, well tested and mature 
-     enough for everyday use.</p>
+        enough for everyday use.</p>
+     
      <p>You may download the stable book in various formats from the
         <a href="/lfs/downloads/stable-systemd/">stable book</a> directory.</p>
 <!--
@@ -59,55 +61,59 @@
      </p>
 -->
      <h2>Current Development</h2>
+     
      <p>This is the LFS systemd Book in its current development state. Changes can
         happen that break the build temporarily.<br />
         <em>Not recommended for inexperienced LFS'ers.</em>
      </p>
 
      <p>Daily rendered <a href="downloads/systemd/">snapshots</a> may be 
-     downloaded. Or check out the book's XML source from our Subversion 
-     repository and render it yourself:</p>
+        downloaded. Or check out the book's XML as above
+        and render it yourself:</p>
 
      <div class="cmd">
-      <p>svn co svn://svn.linuxfromscratch.org/LFS/trunk/BOOK</p>
-
       <p>After the prerequisites listed in the INSTALL file are present, 
          use 'make REV=systemd', to render the book.  Additional information is 
          listed in the README file.</p>
      </div>
 
      <h2>LFS Museum</h2>
+     
      <p>Old and crusty. But still useful as an educational experience, or to 
-     see how LFS has grown	over the years. 
-     <a href="http://archive.linuxfromscratch.org/lfs-museum/">http://archive.linuxfromscratch.org/lfs-museum/</a>
+        see how LFS has grown	over the years. 
+        <a href="https://www.linuxfromscratch.org/lfs/downloads/">
+        https://www.linuxfromscratch.org/lfs/downloads/</a>
      </p>
 
      <!-- name breaks validation, but needed for LFS book -->
-     <h2 id="packages"><a href="#" name="packages" ></a>Packages for LFS</h2>
+     <h2 id="packages"><a href="#" name="packages"></a>Packages for LFS</h2>
+     
      <p>LFS has a list of packages and patches which you should download.
-     Please use the versions which are listed in the book (see
-     <a href="/faq/#why-not-version">the FAQ</a>); these are tested versions
-     which are known to work with each other. There are several ways to
-     download the packages.</p>
+        Please use the versions which are listed in the book (see
+        <a href="/faq/#why-not-version">the FAQ</a>); these are tested versions
+        which are known to work with each other. There are several ways to
+        download the packages.</p>
 
      <h3>Hunt and Peck</h3>
         <p>When a package is not available from the location listed 
         in the book, some other places to try are:</p>
+        
         <ul>
            <li>A search for the full package name in 
                <a href="https://www.google.com/">google</a> or your 
-           favorite search engine</li>
-           <li><a href="https://www.debian.org/distrib/packages">Debian Package Search Page</a></li>
-<!-- domain name seems to have been hijacked
-           <li><a href="http://www.filemirrors.com/">filemirrors.com</a></li>-->
+               favorite search engine</li>
+           
+           <li><a href="https://www.debian.org/distrib/packages">
+               Debian Package Search Page</a></li>
+
            <li>Sources from your linux distro</li>
         </ul>
         
 
         <h3 id="ftp">LFS HTTP/FTP Sites</h3>
+
         <p>If the above methods are not available to you, the packages are also 
            available in a tarball and individually on the following ftp and http mirrors.
-           HLFS package tarballs and individual packages are also available on these mirrors.
         </p>
         <!--#include virtual="/common/lfsftp.html" -->
 
