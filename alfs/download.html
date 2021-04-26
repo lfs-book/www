@@ -1,43 +1,23 @@
-<!--#set var="pageTitle" value="Download ALFS" -->
+<!--#set var="pageTitle" value="Download jhalfs" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
     <div class="main">
-      <h1>Download ALFS</h1>
-      <p>The only maintained project is jhalfs. It is available for download in
-         two formats:</p>
-      <h2>Stable jhalfs</h2>
-      <p>This is the lastest released jhalfs building framework. A tarball of
-         the most recent version is available from the <a
-         href="downloads/jhalfs/stable/">stable jhalfs</a> directory. It can
-         also be checked out from the subversion repository:</p>
-      <div class="cmd"><p>svn co
-         svn://svn.linuxfromscratch.org/ALFS/jhalfs/tags/2.4
-         jhalfs-2.4</p></div>
-<!--
-      <h2>Release Candidate Version &mdash; jhalfs-2.4-rc2</h2>
-      <p>After almost eight years without a stable version, this is a
-         soon-to-be-released version undergoing the last stages of
-         testing. It may be downloaded from the <a
-         href="/alfs/downloads/jhalfs/2.4-rc2"</a>jhalfs-2.4-rc2</a> directory,
-         or checked out from the subversion repository:</p>
-      <div class="cmd"><p>svn co
-         svn://svn.linuxfromscratch.org/ALFS/jhalfs/tags/2.4-rc2
-         jhalfs-2.4-rc2</p></div>
--->
-      <h2>Current Development</h2>
-      <p>The current development version can only be obtained from the
-         subversion repository:</p>
-      <div class="cmd"><p>svn co
-         svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk jhalfs-dev</p></div>
+      <h1>Download jhalfs</h1>
+      <h2>Obtain jhalfs</h2>
+      <p>jhalfs is maintained as a rolling release. It can be obtained from
+         the git repository:</p>
+      <div class="cmd"><p>git clone
+         git://git.linuxfromscratch.org/jhalfs.git</p></div>
       <h2>Packages required for jhalfs</h2>
       <p>Before it can parse the LFS book for commands, jhalfs needs to have a
          local copy of the book's XML source. Currently, jhalfs relies on <a
-         href="http://subversion.apache.org">Subversion</a> to ensure that it
+         href="https://git-scm.com/">git</a> to ensure that it
          has the most up-to-date version of the LFS Book. There are <a
-         href="/blfs/view/stable/general/subversion.html">build
+         href="/blfs/view/stable/general/git.html">build
          instructions</a> in BLFS.</p>
       <p>To extract the commands from the LFS book, jhalfs relies on xsltproc
-         from the <a href="http://xmlsoft.org/XSLT/">libxslt</a> package.
+         from the <a href="http://xmlsoft.org/XSLT/">libxslt</a> package and
+         its dependencies.
          There are <a href="/blfs/view/stable/general/libxslt.html">build
          instructions</a> in BLFS.</p>
       <p>If you want jhalfs to automatically download the source packages LFS
