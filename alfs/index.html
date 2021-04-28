@@ -3,18 +3,18 @@
 <!--#include virtual="menu.html" -->
     <div class="main">
      <h1>What is Automated Linux From Scratch?</h1>
-     <p>Automated Linux From Scratch (ALFS) is a project that creates the
-	generic framework for an extendable system builder and package installer.
+     <p>Automated Linux From Scratch (ALFS) is a project that allows
+	building the LFS system automatically. It also allows building packages
+        from the BLFS book, but that needs some manual intervention.
      </p>
 
      <h2>Why would I want to use ALFS?</h2>
-     <p>After having gone through the LFS and BLFS books more than 2 or 3 times,
-you will quickly appreciate the ability to automate the task of compiling the
-software you want for your systems.</p>
+     <p>After having gone through the LFS and BLFS books more than 2 or 3
+        times, you will quickly appreciate the ability to automate the task
+        of compiling the software you want for your systems.</p>
 
-     <h2>What can I do with ALFS?</h2>
-
-     <p>The goal of ALFS is to <em>automate</em> the process of creating an LFS system.
+     <p>The goal of ALFS is to <em>automate</em> the process of creating an
+        LFS system.
 	It seeks to follow the book as closely as possible by directly
         extracting instructions from the XML sources. This is the reason why
         it may also be used as a test of the current book instructions.
@@ -27,7 +27,7 @@ software you want for your systems.</p>
 	maintained by Manuel Canales Esparcia, George Boudreau, Thomas
 	Pegg, and Pierre Labastie. It has become a light-weight, practical
         method of automating an LFS build. It is a Bash shell script that
-        makes use of Subversion and xsltproc to first download the XML sources
+        makes use of Git and xsltproc to first download the XML sources
         of the Linux From Scratch book and then extract any necessary commands,
 	placing them into executable shell scripts. If you do not already
 	have the necessary source packages in place on your system, jhalfs
@@ -36,20 +36,13 @@ software you want for your systems.</p>
 	if the build should encounter an error. A framework to use package
 	management has been added by Pierre Labastie. 
      </p>
-     <p>The most current jhalfs stable release can been downloaded from
-	<a href="http://www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/">
-	http://www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/</a>.</p>
-<!--     <p>A release candidate for the next stable version can be found at <a
-        href="http://www.linuxfromscratch.org/alfs/downloads/jhalfs/2.4-rc2/">
-        http://www.linuxfromscratch.org/alfs/downloads/jhalfs/2.4-rc2/</a>.</p>
--->
-     <p>Due to a lack of developers, the last stable version is somewhat old,
-        and does not work well with recent versions of LFS/BLFS. It is better
-	to use the development version:</p>
-     <div class="cmd">
-	<p>svn co svn://svn.linuxfromscratch.org/ALFS/jhalfs/trunk jhalfs</p>
-     </div>
 
+     <p>Due to a lack of developers, jhalfs is maintained as a rolling release.
+        It can be obtained by cloning the git repository:</p>
+     <div class="cmd">
+	<p>git clone git://git.linuxfromscratch.org/jhalfs.git jhalfs</p>
+     </div>
+<!--
      <p>A fork of jhalfs, aiming at porting the scripts to Python, is hosted on
         github:</p>
      <div class="cmd">
@@ -59,12 +52,12 @@ software you want for your systems.</p>
         please see
         <a href="https://wiki.linuxfromscratch.org/alfs/wiki/SupportedBooks">
          https://wiki.linuxfromscratch.org/alfs/wiki/SupportedBooks</a>.</p>
+-->
      <p>An extension of ALFS aimed at automating the building
-	of packages in the BLFS book is now included in jhalfs. It is
-        still a work in progress, but the dependency chain code works, and
-        most of the packages can be built automatically. Still 10% or so
-        of the pages lead to non functional scripts, because of the book
-        layout, or of unavoidable circular dependencies.</p>
+	of packages in the BLFS book is now included in jhalfs. It
+        still needs editing some scripts (about 1%), mainly when the book
+        layout diverges from standard, but works rather well and
+        most of the packages can be built automatically.</p>
 
   <h2>History</h2>
      <p>Before jhalfs, an implementation named nALFS was developed. A more
@@ -79,10 +72,8 @@ software you want for your systems.</p>
     <h3>alfs</h3>
      <p>There were many in-depth features that had been requested for ALFS
 	implementations. Because of this, development had been slated for
-	an entirely new build tool which would have been called alfs. To see
-	a list of features that would have appeared in alfs, please read our
-	<a href="http://www.linuxfromscratch.org/alfs/view/alfs-srs/alfs-srs.html">
-	Software Requirements Specification</a>. Eventually, the ease of
+	an entirely new build tool which would have been called alfs.
+	Eventually, the ease of
 	use of jhalfs ultimately pushed development of alfs to the bottom
 	of the stack.</p>
 
