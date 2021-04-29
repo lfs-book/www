@@ -81,6 +81,17 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-10.1-035"/>
+    <h4>10.1 035 Python (LFS and BLFS) Date: 2021-04-29 Severity: High</h4>
+    <p>In Python3 before 3.9.4 'pydoc' can be used to read arbitrary files,
+    including those containing sensitive data.
+    This been assigned CVE-2021-3426 but the details are not yet public. See
+    <a href="https://security-tracker.debian.org/tracker/CVE-2021-3426">CVE-2021-3426 at debian</a>.</p>
+    <p>To fix this, update to Python-3.9.4 or later using the instructions from
+    the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
     <a id="sa-10.1-034"/>
     <h4>10.1 034 Xorg-Server  Date 2021-04-29  Severity: High</h4>
     <p>In Xorg-Server before version 1.20.11 an integer underflow in the Xinput
