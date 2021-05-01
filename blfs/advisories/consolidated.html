@@ -81,6 +81,40 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-10.1-037"/>
+    <h4>10.1 037 BIND         Date: 2021-05-01  Severity: High</h4>
+    <p>In BIND-9.16.15, three security vulnerabilities were fixed that could
+    result in crashes and remote code execution on 32-bit platforms. One
+    security vulnerability is rated as Medium, while the other two 
+    (one of which leads to remote code execution on 32-bit platforms, and 
+    crashes on 64-bit platforms) are rated as High. 
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25214">CVE-2021-25214</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25215">CVE-2021-25215</a>,
+    and <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25216">CVE-2021-25216</a>.
+    Additional information can be found at
+    <a href="https://lists.isc.org/pipermail/bind-announce/2021-April/001188.html">BIND Release Announcement</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.16.15 or higher using the
+    instructions for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+    <a id="sa-10.1-036"/>
+    <h4>10.1 036 OpenSSH      Date: 2021-05-01  Severity: Medium</h4>
+    <p>In OpenSSH-8.6p1, a security vulnerability was fixed that was introduced
+    in version 8.5p1 with the addition of the LogVerbose keywords. When this
+    option was enabled with a set of patterns that activated logging in code
+    that runs in the lower-privileged/sandboxed sshd process, the log messages
+    were constructed in a way that printf(3) format strings could effectively
+    be specified in the lower-privelged code. As a result, an attacker who had
+    successfully exploited the lower-privileged process could use the logging
+    feature to escape the sandbox and attack the higher-priveleged process.
+    No CVE has been assigned at this time. More details can be found at
+    <a href="https://marc.info/?l=openssh-unix-dev&m=161879443401200&w=2">Announce: OpenSSH 8.6 released</a>.</p>
+    <p>To fix this, update to OpenSSH-8.6p1 or later using the instructions for
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
     <a id="sa-10.1-035"/>
     <h4>10.1 035 Python (LFS and BLFS) Date: 2021-04-29 Severity: High</h4>
     <p>In Python3 before 3.9.4 'pydoc' can be used to read arbitrary files,

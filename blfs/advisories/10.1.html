@@ -61,6 +61,17 @@
 
 <!-- end of Avahi -->
 
+    <h3>BIND</h3>
+    <a id="sa-10.1-037"/>
+    <h4>10.1 037 BIND       Date: 2021-05-01 Severity: High</h4>
+    <p>In BIND-9.16.15, three security vulnerabilities were fixed, one of which
+    can result in remote code execution on 32-bit platforms. The other two
+    vulnerabilities result in crashes when certain queries are executed against
+    the DNS server. To fix these, update to BIND-9.16.15 or later.
+    <a href="consolidated.html#sa-10.1-037">10.1-037</a></p>
+
+<!-- end of BIND -->
+
     <h3>cifs-utils</h3>
     <a id="sa-10.1-030"/>
     <h4>10.1 030 cifs-utils Date: 2021-04-13 Severity: Medium</h4>
@@ -223,6 +234,14 @@
     discovered in OpenSSH. Update to OpenSSH-8.5p1 if you use
     the "ssh-agent" program.
     <a href="consolidated.html#sa-10.1-001">10.1-001</a></p>
+
+    <h4>10.1 036 OpenSSH      Date: 2021-05-01  Severity: Medium</h4>
+    <p>A vulnerability was fixed in OpenSSH-8.6p1 that was introduced in
+    OpenSSH-8.5p1. OpenSSH-8.5p1 added the LogVerbose flag, which can
+    be used to escape the sandbox of the lower-privileged process
+    and lead to privilege escalation. Update to OpenSSH-8.6p1 if you use
+    the LogVerbose option.
+    <a href="consolidated.html#sa-10.1-036">10.1-036</a></p>
 
 <!-- end of OpenSSH -->
 
