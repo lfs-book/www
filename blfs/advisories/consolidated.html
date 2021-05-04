@@ -81,6 +81,103 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-10.1-039"/>
+    <h4>10.1 039 Ruby         Date: 2021-05-04  Severity: Medium</h4>
+    <p>In ruby-3.0.1, a security vulnerability was fixed that could lead to
+    improper generation of XML files, including malicious code. This has been
+    classified as a "XML round-trip vulnerability". The ruby developers suggest
+    upgrading the REXML gem if updating Ruby on your system is not feasible. 
+    This can be done by executing "gem upgrade rexml". The fixed gem has been
+    bundled with ruby-3.0.1.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28965">CVE-2021-28965</a>.</p>
+    <p>To fix this vulnerability, update to ruby-3.0.1 or higher using the
+    instructions for
+    <a href="../view/svn/general/ruby.html">ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">ruby (systemd)</a>.</p>
+
+    <a id="sa-10.1-038"/>
+    <h4>10.1 038 Exim         Date: 2021-05-04  Severity: Critical</h4>
+    <p>In Exim-4.94.2, twenty-one security vulnerabilities were patched. These
+    vulnerabilities can allow for local privilege escalation, remote code
+    execution, arbitrary code execution in the context of the Exim user,
+    command injection, modification of mails, modification/deletion of files,
+    and more. Ten of these vulnerabilities can be exploited remotely, while the 
+    other eleven can be exploited locally. If you have any systems running Exim,
+    this is considered an urgent matter. There are multiple exploits available
+    in the wild for these vulnerabilities. 
+    These vulnerabilities have been assigned
+    CVE-2020-28007, CVE-2020-28008, CVE-2020-28014, CVE-2021-27216,
+    CVE-2020-28011, CVE-2020-28010, CVE-2020-28013, CVE-2020-28016,
+    CVE-2020-28016, CVE-2020-28015, CVE-2020-28012, CVE-2020-28009,
+    CVE-2020-28017, CVE-2020-28020, CVE-2020-28023, CVE-2020-28021,
+    CVE-2020-28022, CVE-2020-28026, CVE-2020-28019, CVE-2020-28024,
+    CVE-2020-28018, and CVE-2020-28025.
+    Additional information can be found at 
+    <a href="https://blog.qualys.com/vulnerabilities-research/2021/05/04/21nails-multiple-vulnerabilities-in-exim-mail-server">
+    Qualys Security Blog - 21Nails: Multiple Critical Vulnerabilities in Exim Mail Server</a>.</p>
+    <p>To fix these vulnerabilities, update to Exim-4.94.2 or higher as soon as
+    possible using the instructions for
+    <a href="../view/svn/server/exim.html">Exim (sysv)</a> or
+    <a href="../view/systemd/server/exim.html">Exim (systemd)</a>.</p>
+
+    <a id="sa-10.1-037"/>
+    <h4>10.1 037 BIND         Date: 2021-05-01  Severity: High</h4>
+    <p>In BIND-9.16.15, three security vulnerabilities were fixed that could
+    result in crashes and remote code execution on 32-bit platforms. One
+    security vulnerability is rated as Medium, while the other two 
+    (one of which leads to remote code execution on 32-bit platforms, and 
+    crashes on 64-bit platforms) are rated as High. 
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25214">CVE-2021-25214</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25215">CVE-2021-25215</a>,
+    and <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25216">CVE-2021-25216</a>.
+    Additional information can be found at
+    <a href="https://lists.isc.org/pipermail/bind-announce/2021-April/001188.html">BIND Release Announcement</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.16.15 or higher using the
+    instructions for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+    <a id="sa-10.1-036"/>
+    <h4>10.1 036 OpenSSH      Date: 2021-05-01  Severity: Medium</h4>
+    <p>In OpenSSH-8.6p1, a security vulnerability was fixed that was introduced
+    in version 8.5p1 with the addition of the LogVerbose keywords. When this
+    option was enabled with a set of patterns that activated logging in code
+    that runs in the lower-privileged/sandboxed sshd process, the log messages
+    were constructed in a way that printf(3) format strings could effectively
+    be specified in the lower-privelged code. As a result, an attacker who had
+    successfully exploited the lower-privileged process could use the logging
+    feature to escape the sandbox and attack the higher-priveleged process.
+    No CVE has been assigned at this time. More details can be found at
+    <a href="https://marc.info/?l=openssh-unix-dev&m=161879443401200&w=2">Announce: OpenSSH 8.6 released</a>.</p>
+    <p>To fix this, update to OpenSSH-8.6p1 or later using the instructions for
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
+    <a id="sa-10.1-035"/>
+    <h4>10.1 035 Python (LFS and BLFS) Date: 2021-04-29 Severity: High</h4>
+    <p>In Python3 before 3.9.4 'pydoc' can be used to read arbitrary files,
+    including those containing sensitive data.
+    This been assigned CVE-2021-3426 but the details are not yet public. See
+    <a href="https://security-tracker.debian.org/tracker/CVE-2021-3426">CVE-2021-3426 at debian</a>.</p>
+    <p>To fix this, update to Python-3.9.4 or later using the instructions from
+    the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
+    <a id="sa-10.1-034"/>
+    <h4>10.1 034 Xorg-Server  Date 2021-04-29  Severity: High</h4>
+    <p>In Xorg-Server before version 1.20.11 an integer underflow in the Xinput
+    extension can lead to out of bounds memory accesses. This can lead to local
+    privilege escalations (to root) <em>if the X server is running privileged</em>.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3472">CVE-2021-3472</a>.</p>
+    <p>To fix this, update to at least Xorg-Server-1.20.11 using the instructions
+    for
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+
     <a id="sa-10.1-033"/>
     <h4>10.1 033 Thunderbird  Date: 2021-04-26  Severity: High</h4>
     <p>Nine security vulnerabilities were fixed in Thunderbird-78.10.0, of which
@@ -305,7 +402,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3177">CVE-2021-3177</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23336">CVE-2021-23336</a>.</p>
     <p>To fix these vulnerabilities, it's recommended to port everything
-    using Python 2 to use Python 3 insteadly.</p>
+    using Python 2 to use Python 3 instead.</p>
     <p>If you decide to stick with Python 2 anyway, rebuild Python 2 with
     a security patch using the instructions for
     <a href="../view/svn/general/python2.html">Python 2 (sysv)</a> or
@@ -649,7 +746,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23336">CVE-2021-23336</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3177">CVE-2021-3177</a>.</p>
     <p>To fix this, update to Python-3.9.2 or later using the instructions from
-    the <b>BLFS</b> book for
+    the <em>BLFS</em> book for
     <a href="../view/10.1/general/python3.html">Python (sysv)</a> or
     <a href="../view/10.1-systemd/general/python3.html">Python (systemd)</a>.</p>
 
@@ -1267,7 +1364,7 @@
     <a href="https://bugs.python.org/issue42051">bpo-42051</a>,
     <a href="https://bugs.python.org/issue42103">bpo-42103</a>.</p>
     <p>To fix this, update to at least Python-3.9.1 using the instructions
-    from the <b>BLFS</b> book for
+    from the <em>BLFS</em> book for
     <a href="../view/10.1/general/python3.html">Python (sysv)</a> or
     <a href="../view/10.1-systemd/general/python3.html">Python (systemd)</a>.</p>
 
@@ -1300,7 +1397,7 @@
     <h4>10.0 048 Xorg-Server  Date 2020-12-05  Severity: High</h4>
     <p>In Xorg-Server before version 1.20.10 two input validation failures
     in X server extensions were found. These can lead to local privilege
-    escalations (to root) <b>if the X server is running privileged</b>.
+    escalations (to root) <em>if the X server is running privileged</em>.
     These have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14360">CVE-2020-14360</a>
     and
@@ -1884,7 +1981,7 @@
     <h4>10.0 002 Xorg-Server  Date 2020-09-03  Severity: High</h4>
     <p>In Xorg-Server before version 1.20.9 several input validation failures
     in X server extensions were found. These can lead to local privilege
-    escalations (to root) <b>if the X server is running privileged</b>.
+    escalations (to root) <em>if the X server is running privileged</em>.
     These have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14360">CVE-2020-14360</a>
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-14346">CVE-2020-14346</a>
