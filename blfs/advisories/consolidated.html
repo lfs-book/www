@@ -81,6 +81,35 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-10.1-041"/>
+    <h4>10.1 041 Rustc  Date: 2021-05-11  Severity: Critical</h4>
+    <p>Eight vulnerabilities have been found in the rust standard library before
+    1.52.0, or in crates which use it. One of the critical CVEs was raised as
+    'before 1.53.0', but the fix has been backported to 1.52.0.</p>
+    <p>For the general case (where static libraries are used and a variety of
+    crates might be built) the advice is to update both rust and all the packages
+    which use it.</p>
+    <p>For BLFS with its limited number of crates which use rust, it can be shown
+    (e.g. by removing the /opt/rustc symlink) that the built programs do not use
+    the standard library at runtime), and therefore the vulnerabilities are
+    assumed to have been at compile time. Nevertheless, the incorrect code has
+    been available and it may be that the resulting programs can do incorrect
+    things. The safest advice is to update rust and then rebuild (or update) all
+    the packages which use it.</p>
+    <p>The relevant CVEs are:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27376">CVE-2021-227376</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28036">CVE-2021-28036</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28875">CVE-2021-28875</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28876">CVE-2021-28876</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28877">CVE-2021-28877</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28878">CVE-2021-28878</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28879">CVE-2021-28879</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-31162">CVE-2021-31162</a>.
+    To fix rust, update to rustc-1.52.0 (or a later version) using the
+    instructions for
+    <a href="../view/svn/general/rust.html">Rust (sysv)</a> or
+    <a href="../view/systemd/general/rust.html">Rust (systemd)</a>.</p>
+
     <a id="sa-10.1-040"/>
     <h4>10.1 040 QtWebEngine  Updated: 2021-05-07  Severity: Critical</h4>
     <p>Many CVEs (from Chromium) in QtWebEngine have been fixed in the
