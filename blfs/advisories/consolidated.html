@@ -81,6 +81,79 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+
+    <!-- Note for SA-10.1-042 -> 045: During this time period,
+         the NVD website returned 404 for each CVE inputted. As a result,
+         I obtained alternate locations for those vulnerabilities. -->
+
+    <a id="sa-10.1-045"/>
+    <h4>10.1 045 Samba         Date: 2021-05-12 Severity: Critical</h4>
+    <p>In Samba-4.14.4, a security vulnerability was fixed that allows for
+    users to have unauthorized access to information, as well as the ability
+    for users to modify/delete files from shares that they should not have
+    access to. The underlying cause of this vulnerability is an out-of-bounds
+    read that sometimes occurs when mapping Windows group identities (SIDs) into
+    Unix group IDs (gids). The code that handles this could read data beyond
+    the end of an array in the case that a negative cache entry had been added
+    to the cache. This would then cause the conversion code to return those
+    values into the process token that stores the group membership of a user.
+    This vulnerability was originally spotted at Linkoping University, where
+    a user was found deleting files from a network share that they were not
+    supposed to have access to. If you are using the Samba file server to share
+    files, it is suggested that you update immediately. Other impacts include
+    potential server crashes, as well as impacts to data confidentiality and
+    integrity.
+    This vulnerability has been assigned
+    <a href="https://www.samba.org/samba/security/CVE-2021-20254.html">CVE-2021-20254</a>.</p>
+    <p>To fix this vulnerability, update to Samba-4.14.4 or later using the 
+    instructions for
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
+    <a id="sa-10.1-044"/>
+    <h4>10.1 044 MariaDB       Date: 2021-05-12 Severity: Medium</h4>
+    <p>Two security vulnerabilities were corrected in mariadb-10.5.10. These
+    vulnerabilities allowed for remotely exploitable crashes of the MariaDB
+    database server. Both of these vulnerabilties are simple to exploit and can
+    result in repeatable crashes over the network.
+    These vulnerabilities have been assigned
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-2166">CVE-2021-2166</a> and
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-2154">CVE-2021-2154</a>.</p>
+    <p>To fix these vulnerabilties, update to MariaDB-10.5.10 or later using
+    the instructions for
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
+    <a id="sa-10.1-043"/>
+    <h4>10.1 043 Wireshark     Date: 2021-05-12 Severity: Medium</h4>
+    <p>A security vulnerability was fixed in Wireshark that could allow for
+    excessive memory and CPU consumption when using the MS-WSP packet dissector.
+    This vulnerability could be exploited via a malformed packet, either by
+    placing the malformed packet onto the wire while Wireshark is capturing
+    packets, or by convincing someone to read a malformed packet trace file. 
+    This vulnerability could allow a remote attacker to run the system out of
+    memory, and thus can cause a denial of service.
+    This vulnerability has been assigned
+    <a href="https://www.wireshark.org/security/wnpa-sec-2021-04.html">CVE-2021-22207</a>.</p>
+    <p>To fix this vulnerability, update to Wireshark-3.4.5 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-10.1-042"/>
+    <h4>10.1 042 libjpeg-turbo Date: 2021-05-12 Severity: Low</h4>
+    <p>A security vulnerability was discovered in the "cjpeg" utility included
+    with libjpeg-turbo. This vulnerability is classified as a denial of service
+    vulnerability, and is caused by a divide-by-zero error when processing some
+    GIF images. The highest impact would be a crash of the 'cjpeg' application,
+    thus this vulnerability has been rated as Low.
+    This vulnerability has been assigned
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20205">CVE-2021-20205</a>.</p>
+    <p>To fix this vulnerability, update to libjpeg-turbo-2.1.0 or later using
+    the instructions for
+    <a href="../view/svn/general/libjpeg.html">libjpeg (sysv)</a> or
+    <a href="../view/systemd/general/libjpeg.html">libjpeg (systemd)</a>.</p>
+
     <a id="sa-10.1-041"/>
     <h4>10.1 041 Rustc  Date: 2021-05-11  Severity: Critical</h4>
     <p>Eight vulnerabilities have been found in the rust standard library before

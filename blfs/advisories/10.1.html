@@ -168,6 +168,16 @@
 
 <!-- end of JS78 -->
 
+    <h3>libjpeg-turbo</h3>
+    <h4>10.1 042 libjpeg-turbo Date: 2021-05-12 Severity: Low</h4>
+    <p>A denial of service vulnerability (divide by zero) was fixed in
+    libjpeg-turbo-2.1.0. Note that only the 'cjpeg' tool is affected,
+    and the worst impact is the 'cjpeg' program crashing, thus it has been
+    rated as Low. Update to libjpeg-turbo-2.1.0 or later.
+    <a href="consolidated.html#sa-10.1-042">10.1-042</a>.</p>
+
+<!-- end of libjpeg-turbo -->
+
     <h3>librsvg</h3>
     <h4>10.1 031 librsvg Date: 2021-04-14  Severity: Medium</h4>
     <p>In librsvg-2.50.4, a security vulnerability in a bundled rust crate
@@ -198,6 +208,16 @@
     <a href="consolidated.html#sa-10.1-014">10.1-014</a>.</p>
 
 <!-- end of lxml -->
+
+    <h3>MariaDB</h3>
+    
+    <h4>10.1 044 MariaDB Date: 2021-05-12 Severity: Medium</h4>
+    <p>Two easily exploitable remote denial of service vulnerabilities
+    were fixed in MariaDB-10.5.10. Successful exploitation may result in
+    repeatable crashes of the MariaDB database server. Update to MariaDB-10.5.10.
+    <a href="consolidated.html#sa-10.1-044">10.1-004</a></p>
+
+<!-- end of MariaDB -->
 
     <h3>MuPDF</h3>
 
@@ -338,6 +358,17 @@
 <!-- end of Rust -->
 
     <h3>Samba</h3>
+    
+    <a id="sa-10.1-045"/>
+    <h4>10.1 045 Samba   Date: 2021-05-12  Severity: Critical</h4>
+    <p>Samba-4.14.4 fixed a security vulnerability which, in some rare cases,
+    could allow for a user to delete or modify files on network shares that
+    they are not supposed to have access to. This vulnerability could allow
+    for data confidentiality and integrity impacts, but also for crashes
+    of the smbd server process. Update to Samba-4.14.4 (or 4.13.8) as soon
+    as possible.
+    <a href="consolidated.html#sa-10.1-045">10.1-045</a></p>
+
     <a id="sa-10.1-016"/>
     <h4>10.1 016 Samba   Date: 2021-03-28  Severity: High</h4>
     <p>Samba-4.14.2 fixed two security vulnerabilities, which may lead to
@@ -405,6 +436,14 @@
 <!-- end of WebKitGTK -->
 
     <h3>Wireshark</h3>
+
+    <a id="sa-10.1-043"/>
+    <h4>10.1 043 Wireshark    Date: 2021-05-21  Severity: Medium</h4>
+    <p>In Wireshark before 3.4.5, a security vulnerability existed that could
+    allow a remote attacker to consume excessive amounts of RAM and CPU
+    resources through a malformed packet in the MS-WSP packet dissector.
+    Update to Wireshark-3.4.5 if you are on a network with Windows PCs.
+    <a href="consolidated.html#sa-10.1-043">10.1-043</a></p>
 
     <a id="sa-10.1-006"/>
     <h4>10.1 006 Wireshark    Date: 2021-03-16  Severity: High</h4>
