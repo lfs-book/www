@@ -86,6 +86,21 @@
          the NVD website returned 404 for each CVE inputted. As a result,
          I obtained alternate locations for those vulnerabilities. -->
 
+    <a id="sa-10.1-046"/>
+    <h4>10.1 046 Exiv2  Date: 2021-05-17  Severity: High</h4>
+    <p>Five CVEs in exiv2-0.27.3, one rated as High, have been fixed upstream
+    but as yet there is no new release :
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3482">CVE-2021-3482</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29457">CVE-2021-29457</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29458">CVE-2021-29458</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29470">CVE-2021-29470</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29473">CVE-2021-29473</a>.</p>
+    <p>To fix these, apply the 
+    <a href="http://www.linuxfromscratch.org/patches/downloads/exiv2/exiv2-0.27.3-security_fixes-1.patch">exiv2-0.27.3-security_fixes-1.patch</a></em>
+    (or update to a later version) using the instructions at
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a>, or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
     <a id="sa-10.1-045"/>
     <h4>10.1 045 Samba         Date: 2021-05-12 Severity: Critical</h4>
     <p>In Samba-4.14.4, a security vulnerability was fixed that allows for
