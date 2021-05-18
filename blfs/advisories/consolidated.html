@@ -85,6 +85,81 @@
     <!-- Note for SA-10.1-042 -> 045: During this time period,
          the NVD website returned 404 for each CVE inputted. As a result,
          I obtained alternate locations for those vulnerabilities. -->
+    <!-- Note for SA-10.1-047: During this time period, NVD returned
+         RESERVED for CVE-2021-3541. I obtained it from Red Hat for this. -->
+
+    <a id="sa-10.1-050"/>
+    <h4>10.1 050 libX11     Date: 2021-05-19 Severity: Critical</h4>
+    <p>In libX11-1.7.1, a security vulnerability was fixed that allows through
+    command injection through the libX11 API protocol. This vulnerability exists
+    in the XLookupColor function, intended for server-side color lookup. 
+    The flaw consists of a client being allowed to send color names with a name
+    longer than the maximum size allowed, and also the maximum packet size for
+    normalized packets. This then allows for the X server authorization process
+    to be disabled completely, as the end of the packet is then considered a
+    protocol command. This vulnerability has existed since February of 1986.
+    This vulnerability has been rated at a 9.3 CRITICAL on the CVSS scale,
+    and has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-31535">CVE-2021-31535</a>,
+    and more information can be found at
+    <a href="https://lists.x.org/archives/xorg-announce/2021-May/003088.html">libX11 security advisory</a>.</p>
+    <p>To fix this vulnerability, update to libX11-1.7.1 using the instructions
+    at
+    <a href="../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a>, or
+    <a href="../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
+
+    <a id="sa-10.1-049"/>
+    <h4>10.1 049 postgresql Date: 2021-05-18 Severity: Medium</h4>
+    <p>In PostgreSQL-13.3, three security vulnerabilities were fixed that could
+    allow for memory disclosure as well as a buffer overrun caused by an integer
+    overflow in array subscripting calculations. The buffer overrun could allow
+    for authenticated database users to write arbitrary bytes to a wide area of
+    server memory. The memory disclosure vulnerabilities both allow for an
+    attacker to read arbitrary bytes of server memory when executing
+    UPDATE...RETURNING commands in partitioned-tables, and when executing
+    INSERT...ON CONFLICT... DO UPDATE commands on a purpose crafted table.
+    In the default PostgreSQL configuration, any authenticated database user
+    can create the prerequisite objects and complete this attack at will.
+    Users lacking the CREATE and TEMPORARY privileges on all databases and the
+    CREATE privilege on all schemas cannot exploit this attack. 
+    These vulnerabilities have been assigned
+    <a href="https://www.postgresql.org/support/security/CVE-2021-32028/">CVE-2021-32028</a>,
+    <a href="https://www.postgresql.org/support/security/CVE-2021-32029/">CVE-2021-32029</a>, and
+    <a href="https://www.postgresql.org/support/security/CVE-2021-32027/">CVE-2021-32027</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-13.3 using the
+    instructions at
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a>, or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
+    <a id="sa-10.1-048"/>
+    <h4>10.1 048 rxvt-unicode Date: 2021-05-18 Severity: Critical</h4>
+    <p>A security vulnerability was fixed in rxvt-unicode-9.26 that may allow
+    for remote code execution. An exploit has been discovered in the wild and
+    was published to the oss-security mailing list. The vulnerability occurs
+    due to the way that rxvt handles ANSI escape sequences, replying to queries
+    with a newline-terminated message, and will allow applications to execute
+    without user intervention. No CVE has been assigned, but more details can
+    be found at
+    <a href="https://seclists.org/oss-sec/2021/q2/145">oss-sec: rxvt terminal 0day</a>.
+    Note that there is some strong language within that link, but until a CVE
+    is assigned, this is the only information that is available.</p>
+    <p>To fix this vulnerability, update to rxvt-unicode-9.26 using the
+    instructions at
+    <a href="../view/svn/xsoft/rxvt-unicode.html">rxvt-unicode (sysv)</a>, or
+    <a href="../view/systemd/xsoft/rxvt-unicode.html">rxvt-unicode (systemd)</a>.</p>
+
+    <a id="sa-10.1-047"/>
+    <h4>10.1 047 libxml2 Date: 2021-05-18 Severity: Medium</h4>
+    <p>In libxml2-2.9.12, a security vulnerability was fixed (in addition
+    to all of the ones covered in libxml2-2.9.10-security_fixes-1.patch)
+    that allows for a denial of service (system resource exhaustion) when
+    processing a crafted XML file. This occurs through an exponential entity
+    expansion attack, and it bypasses all existing protection mechanisms.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-3541">CVE-2021-3541</a>.</p>
+    <p>To fix this, update to libxml2-2.9.12 or later using the instructions at
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a>, or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
 
     <a id="sa-10.1-046"/>
     <h4>10.1 046 Exiv2  Date: 2021-05-17  Severity: High</h4>

@@ -208,6 +208,27 @@
 
 <!-- end of Libssh2 -->
 
+    <h3>libX11</h3>
+    <h4>10.1 050 libX11  Date: 2021-05-18 Severity: Critical</h4>
+    <p>A security vulnerability was fixed in libX11-1.7.1 that could allow for
+    API protocol command injection. This vulnerability has existed since 1986.
+    This vulnerability is rated as critical because it can be exploited without
+    user interaction and can lead to the X server's authorization protocol
+    being disabled. Update to libX11-1.7.1 or later as soon as possible.
+    <a href="consolidated.html#10.1-050">10.1-050</a>.</p>
+
+<!-- end of libX11 -->
+
+    <h3>libxml2</h3>
+    <h4>10.1 047 libxml2 Date: 2021-05-18 Severity: Medium</h4>
+    <p>A security vulnerability was fixed in libxml2-2.9.12 that may allow for
+    resource exhaustion when processing a crafted XML file. This may occur
+    through an exponential entity expansion attack, and it bypasses all
+    existing protection mechanisms. Update to libxml2-2.9.12 or later.
+    <a href="consolidated.html#sa-10.1-047">10.1-047</a>.</p>
+
+<!-- end of libxml2 -->
+
     <h3>lxml</h3>
     <h4>10.1 014 lxml   Date: 2021-03-27  Severity: Medium</h4>
     <p>Improper input sanitization may lead to cross-site-scripting via
@@ -296,6 +317,17 @@
 
 <!-- end of PDFBox -->
 
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-10.1-049"/>
+    <h4>10.1 049 PostgreSQL Date: 2021-05-18 Severity: Medium</h4>
+    <p>Three security vulnerabilities were fixed in PostgreSQL-13.3 that could
+    allow for a remote attacker to read and write arbitrary locations in memory
+    by executing certain database commands. Update to PostgreSQL-13.3 or later.
+    <a href="consolidated.html#sa-10.1-049">10.1-049</a></p>
+
+<!-- end of PostgreSQL -->
+
     <h3>Python 2</h3>
 
     <a id="sa-10.1-019"/>
@@ -358,6 +390,8 @@
 
 <!-- end of Ruby -->
 
+    <h3>Rust</h3>
+
     <a id="sa-10.1-041"/>
     <h4>10.1 041 Rust  Date: 2021-05-11  Severity: Critical</h4>
     <p>Eight vulnerabilities have been found in the rust standard library before
@@ -365,6 +399,17 @@
     <a href="consolidated.html#sa-10.1-041">10.1-041</a></p>
 
 <!-- end of Rust -->
+
+    <h3>rxvt-unicode</h3>
+    
+    <a id="sa-10.1-048"/>
+    <h4>10.1 048 rxvt-unicode Date: 2021-05-18 Severity: Critical</h4>
+    <p>A flaw in rxvt-unicode may result in remote code execution, and an
+    exploit is available in the wild. This was fixed in rxvt-unicode-9.26.
+    Update to rxvt-unicode-9.26 as soon as possible.
+    <a href="consolidated.html#sa-10.1-048">10.1-048</a></p>
+
+<!-- end of rxvt-unicode -->
 
     <h3>Samba</h3>
     
