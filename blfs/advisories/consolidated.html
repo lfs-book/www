@@ -87,6 +87,32 @@
          I obtained alternate locations for those vulnerabilities. -->
     <!-- Note for SA-10.1-047: During this time period, NVD returned
          RESERVED for CVE-2021-3541. I obtained it from Red Hat for this. -->
+    <!-- Note for SA-10.1-051: During this time period, NVD returned
+         RESERVED for all three vulnerabilities. Pulled from the CVE docs on
+         curl.se instead. -->
+
+    <a id="sa-10.1-051"/>
+    <h4>10.1 051 cURL       Date: 2021-05-26 Severity: Critical</h4>
+    <p>In cURL-7.77.0, three security vulnerabilities were fixed. The first one
+    only applies to Windows systems and is therefore irrelevant to LFS. The 
+    second vulnerability allows the stack to be disclosed to a remote attacker
+    while a TELNET session is in progress. The third vulnerability, which is
+    rated as high, allows for remote code execution on HTTPS sessions. The
+    TELNET vulnerability is due to an issue with an uninitialized variable,
+    and the remote code execution vulnerability is due to a use-after-free.
+    This vulnerability has been called the "TLS session caching disaster", and
+    instructions for achieving remote code execution have been released to the
+    public. Therefore, it is suggested that you update immediately. Note that
+    this only applies to systems which use OpenSSL as their SSL backend, which
+    is the default configuration in BLFS.
+    These vulnerabilities have been assigned
+    <a href="https://curl.se/docs/CVE-2021-22897.html">CVE-2021-22897</a>,
+    <a href="https://curl.se/docs/CVE-2021-22898.html">CVE-2021-22898</a>, and
+    <a href="https://curl.se/docs/CVE-2021-22901.html">CVE-2021-22901</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.77.0 or later as soon as
+    possible using the instructions at
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a>, or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
 
     <a id="sa-10.1-050"/>
     <h4>10.1 050 libX11     Date: 2021-05-19 Severity: Critical</h4>
