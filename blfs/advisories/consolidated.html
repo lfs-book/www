@@ -91,6 +91,22 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-053"/>
+    <h4>10.1 053 ISC DHCP Date: 2021-05-29 Severity: High</h4>
+    <p>ISC DHCP (dhclient and dhcpd) before 4.4.2-P1 is affected by a
+    vulnerability that allows for DHCP leases to be improperly deleted,
+    or for the DHCP client and server services to be terminated
+    improperly. This is due to a buffer overrun, and may be exploited
+    remotely to allow for a denial of service (network outage) or
+    for improper DHCP leases to be issued. No user interaction is
+    required. If you use dhclient or dhcpd, it is highly recommended
+    that you update as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25217">CVE-2021-25217</a>.</p>
+    <p>To fix this, update to DHCP-4.4.2-P1 or later using the instructions for
+    <a href="../view/svn/basicnet/dhcp.html">DHCP (sysv)</a> or
+    <a href="../view/systemd/basicnet/dhcp.html">DHCP (systemd)</a>.</p>
+
     <a id="sa-10.1-052"/>
     <h4>10.1 052 Expat  Date: 2021-05-29  Severity: Medium</h4>
     <!-- slackware rated ths as medium, no current state at NVD -->
