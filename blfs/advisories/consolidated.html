@@ -91,6 +91,19 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-052"/>
+    <h4>10.1 052 Expat  Date: 2021-05-29  Severity: Medium</h4>
+    <!-- slackware rated ths as medium, no current state at NVD -->
+    <p>Expat before 2.4.0 is vulnerable to Denial of Service ('billion laughs'
+    attacks. The vulnerability was initially for versions up to 2.1, but
+    protection hs been strengthened in the 2.4.0 release: see
+    <a href="https://blog.hartwork.org/posts/cve-2013-0340-billion-laughs-fixed-in-expat-2-4-0/">blog.hartwork.org</a>,
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2013-0340">CVE-2013-03405</a>.</p>
+    <p>To fix this, update to Expat-2.4.1 or later, using the instructions in
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+
     <a id="sa-10.1-051"/>
     <h4>10.1 051 cURL       Date: 2021-05-26 Severity: Critical</h4>
     <p>In cURL-7.77.0, three security vulnerabilities were fixed. The first one
