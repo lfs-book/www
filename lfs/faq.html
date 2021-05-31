@@ -18,6 +18,7 @@
         <li><a href="#no-poweroff">How do I make my machine poweroff when shut down?</a></li>
         <li><a href="#uefi">How do I boot LFS with UEFI?</a></li>
         <li><a href="#rebuild-ch8">Can I skip a package in Chapter 8 since it's already built in Chapter 6 or 7, and it's functioning properly?</a></li>
+        <li><a href="#get-rid-of-lib64">Can I modify GCC code and get rid of /lib64?</a></li>
       </ul>
       <h3><a href="#resources">When reading and building LFS</a></h3>
       <ul>
@@ -174,6 +175,20 @@
           Chapter 6 since Chapter 7 and 8 are not applicable.  Or, you can
           do Chapter 7 and 8 with an emulator like
           <a href="/blfs/view/stable/postlfs/qemu.html">QEMU</a>.</p>
+        </dd>
+        <dt id="get-rid-of-lib64">Can I modify GCC code and get rid of /lib64?</dt>
+        <dd>
+          <p>Short answer: no.</p>
+          <p>Long answer: LSB mandates the ELF loader to be at
+          /lib64/ld-linux-x86-64.so.2 on x86-64.</p>
+          <p>Even longer answer: when the kernel is told to execute a
+          dynamic linked ELF executable, it reads the path to the ELF loader
+          hard-coded in the ELF executable, which is
+          /lib64/ld-linux-x86-64.so.2.  So, if it does not exist, LFS won't
+          be able to run any dynamic linked executable compiled elsewhere.
+          For example, executables from commercial software packages
+          (MATLAB or COMSOL) or binaries downloaded from GitHub release
+          page will not run.</p>
         </dd>
       </dl>
       <p><a href="#lfsfaq">Back to the top.</a></p>
