@@ -56,6 +56,13 @@
 
     <h3>Linux Kernel</h3>
 
+    <h4>10.1 054 Linux Kernel (LFS)  Date: 2021-03-31  Severity: High</h4>
+    <p>In Linux 5.12.7 and all earlier kernels back to 2.6.12 a "confused
+    deputy" weakness exists, which makes it possible to trick another process
+    (which may have different credentials) to write to its own /proc/$pid/attr/
+    files, leading to unexpected and possibly exploitable behaviors. See
+    <a href="../../blfs/advisories/consolidated.html#sa-10.1-054">10.1-054</a></p>
+
     <h4>10.1 005 Linux Kernel (LFS)  Date: 2021-03-15  Severity: Low</h4>
     <p>In Linux 5.11.3 or earlier there are vulnerabilities in iSCSI
 	 subsystem which can lead to potential privilege escalation.  See

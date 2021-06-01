@@ -91,6 +91,22 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-054"/>
+    <h4>10.1 054 Linux Kernel (LFS)  Date: 2021-03-31  Severity: High</h4>
+    <p>In Linux 5.12.7 and all earlier kernels back to 2.6.12 a "confused
+    deputy" weakness exists, which makes it possible to trick another process
+    (which may have different credentials) to write to its own /proc/$pid/attr/
+    files, leading to unexpected and possibly exploitable behaviors. Further
+    details in the links at
+    <a href="https://www.phoronix.com/scan.php?page=news_item&px=Linux-Confused-Deputy-2.6.12">Linux-Confused-Deputy-2.6.12</a>.</p>
+    <p>To fix this, update to Linux 5.12.8 or later, (or Linux 5.10.41 or
+    later if you prefer to stick with 5.10.y, or for old systems Linux 5.4.123
+    or later) using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.
+    Note that other linux-5 kernels are no-longer maintained, and the maintained
+    linux-4 kernels have not yet been updated.</p>
+
     <a id="sa-10.1-053"/>
     <h4>10.1 053 ISC DHCP Date: 2021-05-29 Severity: High</h4>
     <p>ISC DHCP (dhclient and dhcpd) before 4.4.2-P1 is affected by a
