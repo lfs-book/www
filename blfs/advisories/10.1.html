@@ -342,6 +342,18 @@
 
 <!-- end of PDFBox -->
 
+    <h3>Polkit</h3>
+    
+    <a id="sa-10.1-058"/>
+    <h4>10.1 058 Polkit     Date: 2021-06-06 Severity: High</h4>
+    <p>In Polkit-0.119, a security vulnerability was fixed that could allow
+    for local users to bypass authentication checks and execute commands in
+    the context of the root user. This is due to improper error value
+    detection. Update to Polkit-0.119 to fix this.
+    <a href="consolidated.html#sa-10.1-058">10.1-058</a></p>
+
+<!-- end of Polkit -->
+
     <h3>PostgreSQL</h3>
 
     <a id="sa-10.1-049"/>
@@ -475,10 +487,17 @@
     because scripting is disabled when reading mail, but are potentially risks
     in browser or browser-like contexts.</p>
 
+    <a id="sa-10.1-056"/>
+    <h4>10.1 056 Thunderbird  Date: 2021-06-06  Severity: High</h4>
+    <p>One security vulnerability was fixed in Thunderbird-78.11.0 which was
+    rated as high. This has to do with a memory safety problem. To fix these,
+    update to Thunderbird-78.11.0 or later.
+    <a href="consolidated.html#sa-10.1-056">10.1-056</a></p>
+    
     <a id="sa-10.1-033"/>
     <h4>10.1 033 Thunderbird  Date: 2021-04-26  Severity: High</h4>
     <p>Nine security vulnerabilities were fixed in Thunderbird-78.10.0, of which
-    two were rated as High. To fix hese update to 78.10.0 or later.
+    two were rated as High. To fix these update to 78.10.0 or later.
     <a href="consolidated.html#sa-10.1-033">10.1-033</a></p>
 
     <a id="sa-10.1-027"/>
@@ -515,6 +534,15 @@
 <!-- end of WebKitGTK -->
 
     <h3>Wireshark</h3>
+
+    <a id="sa-10.1-057"/>
+    <h4>10.1 057 Wireshark    Date: 2021-06-05  Severity: Low</h4>
+    <p>In Wireshark before 3.4.6, a security vulnerability existed
+    that could allow a remote attacker to crash the Wireshark 
+    process due to a CPU resource exhaustion issue. This existed in the
+    DVB-S2-BB packet, which is very uncommon. Update to Wireshark-3.4.6
+    if you are on a network with a satellite receiver installed.
+    <a href="consolidated.html#sa-10.1-057">10.1-057</a></p>
 
     <a id="sa-10.1-043"/>
     <h4>10.1 043 Wireshark    Date: 2021-05-21  Severity: Medium</h4>

@@ -91,6 +91,47 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-058"/>
+    <h4>10.1 058 Polkit      Date: 2021-06-06 Severity: High</h4>
+    <p>In Polkit-0.119, a security vulnerability was fixed that can allow
+    for unprivileged users to gain root access on the system by calling
+    a process that uses "polkit_system_bus_name_creds_sync" too many times,
+    and also by not checking for the error value correctly. This vulnerability
+    can be used by an unprivileged local attacker to bypass authorization and
+    escalate privileges up to the root user. This affects polkit back to 0.113.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-3560">CVE-2021-3560</a>.</p>
+    <p>To fix this, update to Polkit-0.119 or later using the instructions for
+    <a href="../view/svn/postlfs/polkit.html">Polkit (sysv)</a> or
+    <a href="../view/systemd/postlfs/polkit.html">Polkit (systemd)</a>.</p>
+
+    <a id="sa-10.1-057"/>
+    <h4>10.1 057 Wireshark   Date: 2021-06-06 Severity: Low</h4>
+    <p>In Wireshark-3.4.6, a security vulnerability was fixed that could
+    allow for a malformed DVB-S2-BB packet to cause a denial of service
+    due to excessive CPU resource consumption. This is due to an infinite
+    loop. There is no CVE for this vulnerability, but the information can
+    be found under "Security Advisories" on the Wireshark website.
+    More details can be found at
+    <a href="https://www.wireshark.org/security/wnpa-sec-2021-05.html">wpna-sec-2021-05</a>.</p>
+    <p>To fix this, update to Wireshark-3.4.6 or later using the instructions for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-10.1-056"/>
+    <h4>10.1 056 Thunderbird Date: 2021-06-06 Severity: High</h4>
+    <p>In Thunderbird-78.11.0, a security vulnerbaility was fixed that was
+    rated as High. This security vulnerability pertains to several memory
+    safety issues that were addressed by the Mozilla developers. More details
+    can be found at
+    <a href="https://www.mozilla.org/en-US/security/advisories/msfa2021-26"/>msfa2021-26</a>.
+    This security vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2021-29967">CVE-2021-29967</a>.</p>
+    <p>To fix these, update to Thunderbird-78.11.0 or later using the
+    instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-10.1-055"/>
     <h4>10.1 055 Firefox  Date: 2021-06-01  Severity: High</h4>
     <p>In firefox 78.11.0 two vulnerabilities were fixed, one rated as High. See
