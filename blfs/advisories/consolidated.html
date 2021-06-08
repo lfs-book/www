@@ -91,6 +91,22 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.0-059"/>
+    <h4>10.1 059 Intel Microcode  Date: 2021-06-08  Severity: High</h4>
+    <p>Intel microcode for Skylake and later processors has been updated to
+    fix three vulnerabilities, a privilege escalation via Virtualization for
+    direct I/O, rated as High
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00442.html">Intel-SA-00442 / CVE-2021-24489</a>
+    and two potential information disclosures by local access rated as Medium
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00464.html">Intel-SA-00464 / CVE-2020-24511</a>
+    and
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00465.html">Intel-SA-00465 / CVE-2020-24513.</a>.
+    The CVE details are not yet public.</p>
+    <p>To fix these, update to at least microcode-20210608 using the instructions
+    for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
     <a id="sa-10.1-058"/>
     <h4>10.1 058 Polkit      Date: 2021-06-06 Severity: High</h4>
     <p>In Polkit-0.119, a security vulnerability was fixed that can allow
