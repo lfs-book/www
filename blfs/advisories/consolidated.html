@@ -91,6 +91,42 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-062"/>
+    <h4>10.1 062 Linux Kernel (LFS)  Date: 2021-06-16  Severity: High</h4>
+    <p>In Linux 5.12.10 and earlier, several security vulnerabilities existed
+    in the Bluetooth, Xen (virtualization), and wireless networking stacks.
+    The Bluetooth vulnerability can allow for denial of service by allowing
+    a local user to cause a kernel panic by attaching a malicious HCI TTY
+    Bluetooth device. The Xen vulnerability can allow for the network adapter
+    on the host system to fail due to a driver crash in the kernel. This
+    vulnerability can be exploited through a virtual machine running on
+    the system. The wireless stack vulnerabilities impact all cards and
+    could allow for decryption of encrypted packets sent over Wi-Fi Protected
+    Access (WPA/WPA2/WPA3) and Wired Equivalent Privacy (WEP) packets due to
+    a protocol issue that does not require all fragments in a frame to be
+    signed by a single key. Another vulnerability in the ath11k wireless driver
+    can allow for an attacker to inject and decrypt packets in a connection
+    that uses WPA or WPA2 with the TKIP data-confidentiality protocol. Another
+    vulnerability in the ath10k driver allows for a remote attacker to
+    inject arbitrary packets since the plaintext QoS header in a packet is not
+    required to be authenticated under thw WPA, WPA2, WPA3, or WEP standard. 
+    Another vulnerability in the wireless stack allows for arbitrary network
+    packets to be injected and for the exfiltration of user data regardless of
+    whether any encryption is in place, and fragments are not cleared from memory
+    after reconnecting to a network. 
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3564">CVE-2021-3564</a>,
+    <a href="https://cert.civis.net/cgi-bin/skdb.pl/cvename/CVE-2021-28691.html">CVE-2021-28691</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24587">CVE-2020-24587</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26141">CVE-2020-26141</a>, 
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24588">CVE-2020-24588</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26145">CVE-2020-26145</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24586">CVE-2020-24586</a>.</p>
+    <p>To fix these, update to Linux 5.12.10 or later, or Linux 5.10.44 or
+    later (if you prefer to stick with 5.10.y) using the instructions
+    from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
     <a id="sa-10.1-061"/>
     <h4>10.1 061 PDFBox (FOP) Date: 2021-06-15 Severity: Medium</h4>
     <!-- impacts are the same as 10.1-010 -->
