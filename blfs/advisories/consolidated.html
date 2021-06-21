@@ -91,6 +91,21 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-064"/>
+    <h4>10.1 064 Qt5  Date: 2021-06-21  Severity: Medium</h4>
+    <p>An Out Of Bounds Read was discovered in the SVG component of Qt.  This
+    has been fixed upstream in the paid-for commercial releases, but for the
+    free versions it is necessary to patch it. This vulnerability has been
+    assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3481">CVE-2021-3481</a>
+    which is not yet public. For more information see
+    <a href="https://access.redhat.com/security/cve/CVE-2021-3481">RedHat CVE-2021-3481</a>
+    or <a href="https://bugreports.qt.io/browse/QTBUG-91507">QTBUG-91507</a>.</p>
+    <p>To fix this, apply the
+    <a href="http://www.linuxfromscratch.org/patches/downloads/qt-everywhere-src/qt-everywhere-src-5.15.2-CVE-2021-3481-1.patch">qt-everywhere-src-5.15.2-CVE-2021-3481-1.patch</a>
+    (or update to a later version) using the instructions at
+    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a>, or
+    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a>.</p>
+
     <a id="sa-10.1-063"/>
     <h4>10.1 063 Exiv2               Date: 2021-06-19  Severity: High</h4>
     <p>In Exiv2-0.27.4, nine security vulnerabilities were fixed. These
