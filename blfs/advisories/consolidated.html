@@ -91,6 +91,24 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-065"/>
+    <h4>10.1 065 QtWebEngine  Date: 2021-06-21  Severity: High</h4>
+    <p>Several more CVEs (from Chromium) in QtWebEngine have been fixed in the
+    upstream_fixes-2 patch (fixes to 2021-06-02) :
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30518">CVE-2021-30518</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30516">CVE-2021-30516</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30515">CVE-2021-30515</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30513">CVE-2021-30513</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30512">CVE-2021-30512</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30510">CVE-2021-30510</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30508">CVE-2021i-30508</a>.</p>
+    <p>To fix these, update to the BLFS 20210401 git tarball with instructions
+    for installing that as 5.15.2 to match Qt5 <em> plus the				
+    <a href="http://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-20210401-upstream_fixes-2.patch">qtwebengine-20210401-upstream_fixes-2.patch</a></em>
+    (or update to a later version) using the instructions at
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-10.1-064"/>
     <h4>10.1 064 Qt5  Date: 2021-06-21  Severity: Medium</h4>
     <p>An Out Of Bounds Read was discovered in the SVG component of Qt.  This
