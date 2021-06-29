@@ -91,6 +91,26 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-066"/>
+    <h4>10.1 066 Dovecot      Date: 2021-06-29  Severity: High</h4>
+    <p>Two security vulnerabilities were patched in Dovecot-2.3.15.
+    One of these vulnerabilities allows path traversal which can be
+    used as an authentication bypass via OAuth2, forcing Dovecot
+    to accept a key from an attacker-controlled location. This occurs
+    when Dovecot uses JWT validation with the posix filesystem driver.
+    The other vulnerability allows for command injection when using
+    STARTTLS command injection. If more commands are pipelined as
+    plaintext after a STARTTLS connection is initiated, the commands
+    are run as part of the TLS session. These can be used to redirect
+    mail, passwords, and other user variables to an attacker controlled
+    address. 
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29157">CVE-2021-29157</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33515">CVE-2021-33515</a>.</p>
+    <p>To fix these, update to dovecot-2.3.15 or later using the instructions for
+    <a href="../view/svn/server/dovecot.html">dovecot (sysv)</a>, or
+    <a href="../view/systemd/server/dovecot.html">dovecot (systemd)</a>.</p>
+
     <a id="sa-10.1-065"/>
     <h4>10.1 065 QtWebEngine  Date: 2021-06-21  Severity: High</h4>
     <p>Several more CVEs (from Chromium) in QtWebEngine have been fixed in the
