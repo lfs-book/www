@@ -90,6 +90,47 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+    <a id="sa-10.1-068"/>
+    <h4>10.1 068 NetworkManager Date: 2021-06-30 Severity: Moderate</h4>
+    <p>In NetworkManager-1.32.2, a security vulnerability was fixed that could
+    allow for a remote attacker to reconfigure your network information in
+    rare circumstances. This only applies if using systemd-networkd to get an
+    IP address via DHCP, which is enabled with "dhcp=systemd" in the configuration
+    files.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-13529">CVE-2020-13529</a>.</p>
+    <p>To fix this, update to NetworkManager-1.32.2 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/networkmanager.html">NetworkManager (sysv)</a>, or
+    <a href="../view/systemd/basicnet/networkmanager.html">NetworkManager (systemd)</a>.</p>
+
+    <a id="sa-10.1-067"/>
+    <h4>10.1 067 Seamonkey Date: 2021-06-30 Severity: Critical</h4>
+    <p>Fixes from firefox-78.8.0 to 78.8.11 were included in seamonkey-2.53.8. See
+    <a href="https://wiki.linuxfromscratch.org/blfs/ticket/15227">BLFS #15227</a>.
+    Updating to seamonkey-2.53.8 is highly recommended due to impacts relating to
+    remote code execution, memory safety problems, and command injection via FTP.
+    The following CVEs have been fixed, most of them being High or Critical:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29955">CVE-2021-29955</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23981">CVE-2021-23981</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23982">CVE-2021-23982</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23984">CVE-2021-23984</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23987">CVE-2021-23987</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23994">CVE-2021-23994</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23995">CVE-2021-23995</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23998">CVE-2021-23998</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23961">CVE-2021-23961</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23999">CVE-2021-23999</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-24002">CVE-2021-23402</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29945">CVE-2021-29945</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29946">CVE-2021-29946</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29951">CVE-2021-29951</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29964">CVE-2021-29964</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29967">CVE-2021-29967</a>.</p>
+    <p>To fix these, update to Seamonkey-2.53.8 or later using the instructions
+    for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
     <a id="sa-10.1-066"/>
     <h4>10.1 066 Dovecot      Date: 2021-06-29  Severity: High</h4>
