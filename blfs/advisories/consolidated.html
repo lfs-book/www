@@ -163,13 +163,15 @@
     <h4>10.1 068 NetworkManager Date: 2021-06-30 Severity: Moderate</h4>
     <p>In NetworkManager-1.32.2, a security vulnerability was fixed that could
     allow for a remote attacker to reconfigure your network information in
-    rare circumstances. This only applies if using systemd-networkd to get an
+    rare circumstances. This only applies if using a plugin shipped within
+    NetworkManager with some code borrowed from systemd-networkd to get an
     IP address via DHCP, which is enabled with "dhcp=systemd" in the configuration
-    files.
+    files.  This option is not the default, nor mentioned by NetworkManager
+    documentation or the BLFS book.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-13529">CVE-2020-13529</a>.</p>
-    <p>To fix this, update to NetworkManager-1.32.2 or later using the
-    instructions for
+    <p>If you'd like to use "dhcp=systemd" anyway, to fix this, update to
+    NetworkManager-1.32.2 or later using the instructions for
     <a href="../view/svn/basicnet/networkmanager.html">NetworkManager (sysv)</a>, or
     <a href="../view/systemd/basicnet/networkmanager.html">NetworkManager (systemd)</a>.</p>
 
