@@ -276,6 +276,17 @@
 
 <!-- end of Libssh2 -->
 
+    <h3>libuv</h3>
+
+    <h4>10.1 073 libuv   Date: 2021-07-09 Severity: Moderate</h4>
+    <p>A security vulnerability was fixed in libuv-1.41.1 that could lead to
+    information disclosure in applications that use libuv's ASCII converter
+    or the uv_getaddrinfo() function. To fix this, update to libuv-1.41.1 or
+    later.
+    <a href="consolidated.html#sa-10.1-073">10.1-073</a>.</p>
+
+<!-- end of libuv -->
+
     <h3>libX11</h3>
     <h4>10.1 050 libX11  Date: 2021-05-18 Severity: Critical</h4>
     <p>A security vulnerability was fixed in libX11-1.7.1 that could allow for
@@ -521,6 +532,15 @@
 <!-- end of QtWebEngine -->
 
     <h3>Ruby</h3>
+    <a id="sa-10.1-074"/>
+    <h4>10.1 074 Ruby    Date: 2021-07-09  Severity: High</h4>
+    <p>Three security vulnerabilities were fixed in Ruby-3.0.2, ranging from
+    attackers executing arbitrary commands via malicious RDoc files,
+    manipulation of Net::FTP to return information about other systems,
+    and a TLS bypass in Net::SMTP. It's suggested that you update to Ruby-3.0.2
+    as soon as possible.
+    <a href="consolidated.html#sa-10.1-074">10.1-074</a></p>
+
     <a id="sa-10.1-039"/>
     <h4>10.1 039 Ruby    Date: 2021-05-04  Severity: Medium</h4>
     <p>An XML round-trip vulnerability was discovered in the REXML gem bundled

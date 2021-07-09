@@ -91,6 +91,46 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-074"/>
+    <h4>10.1 074 Ruby                  Date: 2021-07-09 Severity: High</h4>
+    <p>In Ruby-3.0.2, three security vulnerabilities were fixed. One of these
+    vulnerabilities allows for the Net::FTP module to connect to another
+    IP address/port and return information about services that are otherwise
+    private and not disclosed (basically allowing the attacker to run a port
+    scan). This is due to invalid verification of FTP PASV responses. Another
+    security vulnerability exists in the Net::IMAP module, where Net::IMAP does
+    not raise an exception when a STARTTLS connection fails with an unknown response.
+    This would allow man-in-the-middle attacks to occur, as well as bypasses
+    of the TLS protections. The third vulnerability is rated High, and is a
+    command injection vulnerability in the RDoc command. When using the RDoc
+    command, if a file name starts with a pipe ("|"), and ends with a tag,
+    the command following the pipe character will be executed. A malicious
+    Ruby project could thus exploit it to run arbitrary commands against a user
+    who attempts to use the RDoc command. It is recommended to update Ruby
+    as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2021-31810">CVE-2021-31810</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-32066">CVE-2021-32066</a>,
+    and <a href="https://security.archlinux.org/CVE-2021-31799">CVE-2021-31799</a>.</p>
+    <p>To fix these vulnerabilities, update to Ruby-3.0.2 or later using the
+    instructions for
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a>, or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
+    <a id="sa-10.1-073"/>
+    <h4>10.1 073 libuv                 Date: 2021-07-09 Severity: Moderate</h4>
+    <p>In libuv before 1.41.1, a security vulnerability exists that allows for
+    information disclosure when using the punycode decoder in libuv's IDNA
+    implementation. Several downstream applications use this library and may
+    be affected. This is similar to the vulnerability that was fixed in
+    Node.JS-14.17.2. The vulnerability can be triggered via both
+    uv_getaddrinfo() and uv__idna_toascii().
+    This vulnerability has been assigned
+    <a href="https://ubuntu.com/security/CVE-2021-22918">CVE-2021-22918</a>.</p>
+    <p>To fix this, update to libuv-1.41.1 or later using the instructions for
+    <a href="../view/svn/general/libuv.html">libuv (sysv)</a>, or
+    <a href="../view/systemd/general/libuv.html">libuv (systemd)</a>.</p>
+
     <a id="sa-10.1-072"/>
     <h4>10.1 072 systemd (LFS and BLFS) Date: 2021-07-09 Severity: Moderate</h4>
     <p>In systemd before 249, a security vulnerability exists that could allow
