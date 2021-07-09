@@ -355,6 +355,13 @@
 <!-- end of NetworkManager -->
 
     <h3>Node.js</h3>			
+
+    <h4>10.1 070 node.js Date: 2021-07-09 Severity: Medium</h4>
+    <p>Node.JS-14.17.2 fixed a security vulnerability that could lead to
+    information disclosures in programs using Node's DNS module lookup()
+    function. Update to v14.16.3 or later.
+    <a href="consolidated.html#sa-10.1-070">10.1-070</a></p>
+
     <h4>10.1 025 node.js Date: 2021-04-09 Severity: High</h4>
     <p>Node.JS-14.16.1 fixed three security vulnerabilities.  Two are in OpenSSL
     and you should have already fixed those
@@ -412,6 +419,8 @@
     a Firebird database or if you are processing URLs in a PHP file.
     <a href="consolidated.html#sa-10.1-069">10.1-069</a></p>
 
+<!-- end of PHP -->
+
     <h3>Polkit</h3>
     
     <a id="sa-10.1-058"/>
@@ -449,6 +458,13 @@
     <!-- end of Python 2 -->
 
     <h3>Python 3</h3>
+
+    <a id="sa-10.1-071"/>
+    <h4>10.1 071 Python (LFS and BLFS) Date: 2021-07-09 Severity: Medium</h4>
+    <p>In Python3 before 3.9.6, a security vulnerability exists that could
+    allow for resource exhaustion due to an infinite loop in the mod:http.client
+    Python module. Update to Python-3.9.6 or later.
+    <a href="consolidated.html#sa-10.1-071">10.1-071</a></p>
 
     <a id="sa-10.1-035"/>
     <h4>10.1 035 Python (LFS and BLFS) Date: 2021-04-29 Severity: High</h4>
@@ -572,6 +588,19 @@
     <a href="consolidated.html#sa-10.1-021">10.1-021</a></p>
 
 <!-- end of Seamonkey -->
+
+    <h3>systemd</h3>
+
+    <a id="sa-10.1-072"/>
+    <h4>10.1 072 systemd (LFS and BLFS) Date: 2021-07-09 Severity: Medium</h4>
+    <p>In systemd-249, a security vulnerability was fixed that could allow for
+    a remote attacker to reconfigure the network on your system. Because of the
+    changes coming in LFS 11.0, updating to systemd-249 is not feasible.
+    However, a patch has been created for LFS 10.1/systemd-249. See the
+    advisory linked for more information.
+    <a href="consolidated.html#sa-10.1-072">10.1-072</a></p>
+
+<!-- end of systemd -->
 
     <h3>Thunderbird</h3>
 

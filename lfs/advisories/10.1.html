@@ -93,6 +93,13 @@
 
     <h3>Python 3</h3>
 
+    <a id="sa-10.1-071"/>
+    <h4>10.1 071 Python (LFS and BLFS) Date: 2021-07-09 Severity: Medium</h4>
+    <p>In Python3 before 3.9.6, a security vulnerability exists that could
+    allow for resource exhaustion due to an infinite loop in the mod:http.client
+    Python module. Update to Python-3.9.6 or later.
+    <a href="../../blfs/advisories/consolidated.html#sa-10.1-071">10.1-071</a></p>
+
     <a id="sa-10.1-035"/>
     <h4>10.1 035 Python (LFS and BLFS) Date: 2021-04-29 Severity: High</h4>
     <p>In Python3 before 3.9.4 'pydoc' can be used to read arbitrary files,
@@ -100,6 +107,19 @@
     <a href="../../blfs/advisories/consolidated.html#sa-10.1-035">10.1-035</a></p>
 
     <!-- end of Python 3 -->
+
+    <h3>systemd</h3>
+
+    <a id="sa-10.1-072"/>
+    <h4>10.1 072 systemd (LFS and BLFS) Date: 2021-07-09 Severity: Medium</h4>
+    <p>In systemd-249, a security vulnerability was fixed that could allow for
+    a remote attacker to reconfigure the network on your system. Because of the
+    changes coming in LFS 11.0, updating to systemd-249 is not feasible.
+    However, a patch has been created for LFS 10.1/systemd-249. See the
+    advisory linked for more information.
+    <a href="../../blfs/advisories/consolidated.html#sa-10.1-072">10.1-072</a></p>
+
+    <!-- end of systemd -->
 
     <!-- previous glibc text retained as comment, because it is special for
     rebuilfding

@@ -90,6 +90,60 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+
+    <a id="sa-10.1-072"/>
+    <h4>10.1 072 systemd (LFS and BLFS) Date: 2021-07-09 Severity: Moderate</h4>
+    <p>In systemd before 249, a security vulnerability exists that could allow
+    for a remote attacker to reconfigure network settings on systems that use
+    systemd-networkd without any user interaction. This happens due to an issue
+    with the handling of DHCPRENEW packets. With a DHCPRENEW and a DHCPACK
+    packet that is specially crafted, a remote attacker can reconfigure your
+    network settings. Due to the merged-/usr changes, upgrading to systemd-249
+    for non-SVN users is not advised. As a result, patches have been made
+    that you can apply to your build tree and rebuild systemd with.
+    These patches have been made available for LFS 10.0 (246) and LFS 10.1 (247).
+    This vulnerability affects all systems that use systemd-networkd,
+    and that run systemd-245 or higher (thus, LFS 9.1 is not affected).
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-13529">CVE-2020-13529</a>.</p>
+    <p>If you are running LFS SVN, you can update to systemd-249 using the
+    instructions in the <em>BLFS</em> book for
+    <a href="../view/systemd/general/systemd.html">systemd (systemd)</a>.</p>
+    <p>If you are running LFS 10.1, you can apply the patch from
+    <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-247-security_fix-1.patch">systemd-247-security_fix-1.patch</a>
+    to your build tree after applying the other systemd-247 patches and rebuild
+    systemd.</p>
+    <p>If you are running LFS 10.0, you can apply the patch from
+    <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-246-security_fix-1.patch">systemd-246-security_fix-1.patch</a>
+    to your build tree and rebuild systemd.</p>
+
+    <a id="sa-10.1-071"/>
+    <h4>10.1 071 Python (LFS and BLFS) Date: 2021-07-09 Severity: Moderate</h4>
+    <p>In Python3 before 3.9.6, a security vulnerability exists that could allow
+    a remote attacker to cause a resource exhaustion via the mod:http.client
+    module. This is due to a flaw where Python will infinitely read potential
+    HTTP headers after a "HTTP 100 Continue" message from the server.
+    This vulnerability has not been assigned a CVE, but more details can be
+    found at
+    <a href="https://bugs.python.org/issue44022">BPO-44022</a>.</p>
+    <p>To fix this, update to Python-3.9.6 or later using the instructions from
+    the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
+    <a id="sa-10.1-070"/>
+    <h4>10.1 070 node.js   Date: 2021-07-09 Severity: Moderate</h4>
+    <p>In Node.js-14.17.2, a security vulnerability was fixed that could lead
+    to information disclosures or crashes on applications that use Node's dns
+    module. The vulnerability exists in the lookup() function, and occurs due
+    to a similar vulnerability in libuv's uv__idna_toascii() function which is
+    used to convert strings to ASCII.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22918">CVE-2021-22918</a>.</p>
+    <p>To fix this, update to Node.js-14.17.2 or later using the instructions for
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a>, or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+
     <a id="sa-10.1-069"/>
     <h4>10.1 069 PHP       Date: 2021-07-01 Severity: Moderate</h4>
     <p>In PHP-8.0.8, two security vulnerabilities were fixed. One of them could
