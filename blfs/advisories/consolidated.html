@@ -90,6 +90,20 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+    <a id="sa-10.1-076"/>
+    <h4>10.1 076 Apache ANT Date: 2021-07-17 Severity: Moderate</h4>
+    <p>In apache-ant-1.10.11, two security vulnerabilities were fixed that
+    could lead to out-of-resource conditions when extracting ZIP or TAR
+    files during a build process. The problem can also be triggered with
+    JAR files. The out-of-resource condition consists of Out-Of-Memory
+    errors. These are similar to issues in Apache Commons.
+    These two vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35517">CVE-2021-35517</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36090">CVE-2021-36090</a>.</p>
+    <p>To fix these, update to apache-ant-1.10.11 or later using the instructions
+    for
+    <a href="../view/svn/general/apache-ant.html">apache-ant (sysv)</a>, or
+    <a href="../view/systemd/general/apache-ant.html">apache-ant (systemd)</a>.</p>
 
     <a id="sa-10.1-075"/>
     <h4>10.1 075 Firefox  Date: 2021-07-13  Severity: High</h4>
