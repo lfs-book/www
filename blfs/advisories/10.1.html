@@ -107,6 +107,19 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-10.1-079"/>
+    <h4>10.1 079 cURL  Date: 2021-07-23  Severity: Critical</h4>
+    <p>In cURL-7.78.0, four security vulnerabilities were fixed. Two of them
+    could allow for passwords to be disclosed when using the metalink feature
+    and also for the metalink feature to download malicious content due to
+    a lack of verification on hashes. Another security vulnerability allows for
+    certificate store bypass, and the last vulnerability allows for TELNET
+    stack leaks again, including sensitive information such as passwords being
+    leaked over a plain-text network protocol. This is due to an incomplete
+    fix being released in cURL-7.77.0. To fix these, update to cURL-7.78.0
+    or later.
+    <a href="consolidated.html#sa-10.1-079">10.1-079</a></p>
+
     <a id="sa-10.1-051"/>
     <h4>10.1 051 cURL  Date: 2021-05-26  Severity: Critical</h4>
     <p>In cURL-7.77.0, three security vulnerabilities were fixed. One of them
@@ -627,6 +640,19 @@
 <!-- end of Seamonkey -->
 
     <h3>systemd</h3>
+
+    <a id="sa-10.1-081"/>
+    <h4>10.1 081 systemd (LFS and BLFS) Date: 2021-07-23 Severity: High</h4>
+    <p>In systemd-220 and later, a security vulnerability exists that will
+    allow for a local attacker to crash your system by mounting a FUSE
+    filesystem that with a file path longer than 8MB present. The crash
+    occurs when reading /proc/self/mountinfo, and manifests itself as a
+    kernel panic due to PID1 (init) crashing. Because fo the changes coming in
+    LFS 11.0, updating to systemd-249 (with the patch) is not feasible.
+    However, a patch has been created for LFS 10.1/systemd-247. See the
+    advisory linked for more information. The patch replaces the current
+    systemd-247-security_fix-1.patch.
+    <a href="consolidated.html#sa-10.1-081">10.1-081</a></p>
 
     <a id="sa-10.1-072"/>
     <h4>10.1 072 systemd (LFS and BLFS) Date: 2021-07-09 Severity: Medium</h4>

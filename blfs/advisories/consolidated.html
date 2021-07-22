@@ -90,6 +90,93 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+    <a id="sa-10.1-081"/>
+    <h4>10.1 081 systemd (LFS and BLFS) Date: 2021-07-23 Severity: High</h4>
+    <p>In systemd-220 and later, a security vulnerability exists that could
+    allow a local attacker to crash systemd, which then causes a kernel panic.
+    This vulnerability is due to a flaw in the FUSE filesystem implementation,
+    and requires the kernel to be upgraded as well, to either Linux-5.10.52 or
+    Linux-5.13.4. systemd constantly monitors /proc/self/mountinfo, and when
+    a file path longer than 8MB is discovered and parsed, systemd will crash
+    with a segmentation fault. The security patch that is available will use
+    a different string duplication function to prevent this crash from
+    occuring. This primarily affects systems with FUSE filesystems, such as
+    SSHFS or NTFS. However, FUSE is also used by XFCE and GNOME because of GVFS.
+    This vulnerability is possible to exploit when automounting USB drives.
+    Filesystem corruption is also possible due to the memory corruption that
+    occurs when systemd crashes. A proof-of-concept exploit is also available
+    in the wild.
+    Due to the merged-/usr changes, upgrading to systemd-249 (with the patch)
+    for non-SVN users is not advised. As a result, patches have been made
+    that you can apply to your build tree and rebuild systemd with.
+    These patches have been made available for LFS 10.0 (246) and LFS 10.1 (247).
+    This vulnerability affects all systems that run systemd-220 or higher.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-33910">CVE-2021-33910</a>.</p>
+    <p>If you are running LFS SVN, you can update to systemd-249 with the patch
+    using the instructions in the <em>BLFS</em> book for
+    <a href="../view/systemd/general/systemd.html">systemd (systemd)</a>.
+    You must also upgrade your kernel to Linux-5.13.4.</p>
+    <p>If you are running LFS 10.1, you can apply the patch from
+    <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-247-security_fixes-1.patch">systemd-247-security_fixes-1.patch</a>
+    to your build tree after applying the other systemd-247 patches and rebuild
+    systemd. You must then upgrade your kernel to Linux-5.10.52.</p>
+    <p>If you are running LFS 10.0, you can apply the patch from
+    <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-246-security_fixes-1.patch">systemd-246-security_fixes-1.patch</a>
+    to your build tree and rebuild systemd. You must then upgrade your kernel
+    to Linux-5.10.52.</p>
+
+    <a id="sa-10.1-080"/>
+    <h4>10.1 080 Binutils (LFS) Date: 2021-07-23 Severity: Moderate</h4>
+    <p>In Binutils-2.37, four security vulnerabilties were fixed. One of
+    these vulnerabilities allows for arbitrary filesystem access due to a
+    race condition in ar, objcopy, strip and ranlib. When these utilities
+    are being run by a privileged user, an unprivileged user can trick them
+    into getting ownership of arbitrary files on the filesystem through a
+    symbolic link. An additional security vulnerability exists in
+    GNU libiberty, which can result in a crash due to an infinite loop.
+    Two more vulnerabilities allow for arbitrary code execution and memory
+    corruption due to a stack based buffer overflow, or an out-of-bounds
+    write. These vulnerabilities apply to objdump and libiberty. These
+    vulnerabilities cannot be exploited remotely.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20197">CVE-2021-20197</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2021-3648">CVE-2021-3648</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3549">CVE-2021-3549</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3530">CVE-2021-3530</a>.</p>
+    <p>To fix these vulnerabilities, update to Binutils-2.37 using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/binutils.html">Binutils (sysv)</a>, or
+    <a href="../../lfs/view/systemd/chapter08/binutils.html">Binutils (systemd)</a>.</p>
+
+    <a id="sa-10.1-079"/>
+    <h4>10.1 079 cURL      Date: 2021-07-23 Severity: Critical</h4>
+    <p>In cURL-7.78.0, four security vulnerabilities were fixed. The first
+    vulnerability will allow malicious content to be stored on disk instead
+    of discarded when using the metalink feature, because the information is
+    not checked against the XML file that contains the hash for the file
+    correctly. Another security vulnerability in the metalink feature
+    will send login credentials in plaintext and pass them on to any server
+    that cURL connects to for a metalink download. Another security
+    vulnerability exists in the way that cURL keeps previous connections
+    stored for use again. Due to a flaw in the logic that handles path name
+    checks, the comparison did not take security certificates into account,
+    and also compared the involved paths case insensitively. This will result
+    in a certificate store bypass as well as the potential of connecting to
+    a compromised server. Another TELNET stack content disclosure vulnerability
+    was fixed, caused by the fix for CVE-2021-22898 in cURL-7.78.0. This could
+    result in keystrokes, including passwords, being leaked to remote attackers
+    during a TELNET session.
+    These vulnerabilities have been assigned
+    <a href="https://curl.se/docs/CVE-2021-22922.html">CVE-2021-22922</a>,
+    <a href="https://curl.se/docs/CVE-2021-22923.html">CVE-2021-22923</a>,
+    <a href="https://curl.se/docs/CVE-2021-22924.html">CVE-2021-22924</a>, and
+    <a href="https://curl.se/docs/CVE-2021-22925.html">CVE-2021-22925</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.78.0 using the
+    instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a>, or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-10.1-078"/>
     <h4>10.1 078 Linux Kernel (LFS)  Date: 2021-07-20  Severity: High</h4>
     <p>In Linux 5.13.3 and earlier, a vulnerability given the name 'Sequoia'
@@ -99,7 +186,7 @@
     promise that details of the exploit will follow. This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33909">CVE-2021-33909</a>.</p>
 
-    <p>To fix these, update to Linux 5.13.4 or later, or Linux-5.10.52 or
+    <p>To fix this, update to Linux 5.13.4 or later, or Linux-5.10.52 or
     later (if you prefer to stick with 5.10.y) using the instructions
     from the LFS book for
     <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
