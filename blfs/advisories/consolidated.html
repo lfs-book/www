@@ -90,6 +90,38 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+    <a id="sa-10.1-083"/>
+    <h4>10.1 083 WebKitGTK+ Date: 2021-07-26 Severity: Critical</h4>
+    <p>WebKitGTK+-2.32.3 contained fixes for 11 security vulnerabilities.
+    These vulnerabilities include six arbitrary code execution vulnerabilities,
+    two cross-site-scripting vulnerabilities, two information leak vulnerabilities,
+    and a port scanning vulnerability. The two information leak vulnerabilities
+    are caused whenever a ImageLoader object or GraphicsContext object load
+    various image, or graphics, objects. Specially crafted web pages can thus
+    lead to leakage of stack contents. Several of the arbitrary code execution
+    vulnerabilties are known by Apple to be actively exploited, thus prompting
+    a Critical rating by the BLFS team. The port scanning vulnerability allows
+    malicious websites to access restricted ports on local machines on your
+    network. Updating to WebKitGTK+-2.32.3 immediately is suggested if you have
+    Epiphany, Evolution, or some other GNOME components installed.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-21775">CVE-2021-21775</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-21779">CVE-2021-21779</a>,
+    <a href="https://vuldb.com/?id.174511">CVE-2021-30663</a>,
+    <a href="https://www.rapid7.com/db/vulnerabilities/apple-safari-cve-2021-30665/">CVE-2021-30665</a>,
+    <a href="https://vulmon.com/vulnerabilitydetails?qid=CVE-2021-30689">CVE-2021-30689</a>,
+    <a href="https://vulmon.com/vulnerabilitydetails?qid=CVE-2021-30720">CVE-2021-30720</a>,
+    <a href="https://vulmon.com/vulnerabilitydetails?qid=CVE-2021-30734">CVE-2021-30734</a>,
+    <a href="https://vulmon.com/vulnerabilitydetails?qid=CVE-2021-30744">CVE-2021-30744</a>,
+    <a href="https://vulmon.com/vulnerabilitydetails?qid=CVE-2021-30749">CVE-2021-30749</a>,
+    <a href="https://vulmon.com/vulnerabilitydetails?qid=CVE-2021-30795">CVE-2021-30795</a>,
+    <a href="https://vulmon.com/vulnerabilitydetails?qid=CVE-2021-30797">CVE-2021-30797</a>, and
+    <a href="https://vulmon.com/vulnerabilitydetails?qid=CVE-2021-30799">CVE-2021-30799</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.32.3 or later using
+    the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a>, or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="sa-10.1-082"/>
     <h4>10.1 082 Seamonkey Date: 2021-07-23 Severity: High</h4>
     <p>Fixes from firefox-78.8.12 were included in seamonkey-2.53.8.1. Two
