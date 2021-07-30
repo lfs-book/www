@@ -90,6 +90,21 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+    <a id="sa-10.1-085"/>
+    <h4>10.1 085 Fetchmail  Date: 2021-07-30 Severity: Low</h4>
+    <p>Fetchmail before version 6.4.20 was missing initialization of a variable,
+    leading in some circumstances to reading from bad memory locations. This
+    can cause it to log random information (information disclosure), or to
+    segfault, stalling inbound mail.
+    an attacker might be able to exploit the memory corruption to change process
+    behaviour. This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36386">CVE-2021-36386</a>.
+    Further details are at
+    <a href="https://www.fetchmail.info/fetchmail-SA-2021-01.txt">fetchmail-SA-2021-01</a>.</p>
+    <p>To fix this, update to Fetchmail-6.2.20 or later using the instructions for
+    <a href="../view/svn/basicnet/fetchmail.html">Fetchmail (sysv)</a>, or
+    <a href="../view/systemd/basicnet/fetchmail.html">Fetchmail (systemd)</a>.</p>
+
     <a id="sa-10.1-084"/>
     <h4>10.1 084 node.js   Date: 2021-07-30 Severity: High</h4>
     <p>Node.js-14.17.4 fixed a vulnerability to a use after free attack, where
