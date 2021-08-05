@@ -43,6 +43,17 @@
 
     <!\-\- End of template -->
 
+    <h3>Binutils</h3>
+
+    <h4>10.1 080 Binutils Date: 2021-07-23 Severity: Moderate</h4>
+    <p>Binutils before 2.37 is vulnerable to an arbitrary filesystem access,
+    denial of service, and two arbitrary code execution vulnerabilities. These
+    vulnerabilities have been rated between Low and Moderate by NVD.
+    To fix these, update to Binutils-2.37 or later. See
+    <a href="../../blfs/advisories/consolidated.html#sa-10.1-080">10.1-080</a></p>
+
+    <!-- End of Binutils -->
+
     <h3>Expat</h3>
 
     <h4>10.1 052 Expat  Date: 2021-05-29  Severity: Medium</h4>
@@ -115,6 +126,19 @@
     <!-- end of Python 3 -->
 
     <h3>systemd</h3>
+
+    <a id="sa-10.1-081"/>
+    <h4>10.1 081 systemd (LFS and BLFS) Date: 2021-07-23 Severity: High</h4>
+    <p>In systemd-220 and later, a security vulnerability exists that will
+    allow for a local attacker to crash your system by mounting a FUSE
+    filesystem that with a file path longer than 8MB present. The crash
+    occurs when reading /proc/self/mountinfo, and manifests itself as a
+    kernel panic due to PID1 (init) crashing. Because fo the changes coming in
+    LFS 11.0, updating to systemd-249 (with the patch) is not feasible.
+    However, a patch has been created for LFS 10.1/systemd-247. See the
+    advisory linked for more information. The patch replaces the current
+    systemd-247-security_fix-1.patch.
+    <a href="../../blfs/advisories/consolidated.html#sa-10.1-081">10.1-081</a></p>
 
     <a id="sa-10.1-072"/>
     <h4>10.1 072 systemd (LFS and BLFS) Date: 2021-07-09 Severity: Medium</h4>
