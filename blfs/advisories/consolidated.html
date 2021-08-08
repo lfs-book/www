@@ -90,6 +90,39 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+    <a id="sa-10.1-087"/>
+    <h4>10.1 087 MariaDB    Date: 2021-08-08 Severity: Medium</h4>
+    <p>In MariaDB-10.6.4, two medium-severity security vulnerabilities were
+    patched. Both of these vulnerabilities are difficult to exploit, and can
+    result in a Denial Of Service. Note that successful exploitation requires
+    MariaDB to be listening for requests over TCP/IP ports, and not via local
+    applications. Successful exploitation can result in the ability to cause a
+    hang or frequently repeatable crash of the MariaDB process. 
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2389">CVE-2021-2389</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2372">CVE-2021-2372</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-10.6.4 or later using
+    the instructions for
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a>, or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
+    <a id="sa-10.1-086"/>
+    <h4>10.1 086 MIT Kerberos V5 Date: 2021-08-08 Severity: Medium</h4>
+    <p>MIT Kerberos V5 before 1.19.2 (or 1.18.4) is vulnerable to a denial of
+    service attack due to a NULL pointer dereference. This then causes the
+    krb5 daemon to crash. This vulnerability is remotely exploitable with no
+    user interaction, and this vulnerability is caused by a return value
+    noy being properly managed in a rare situation. An unauthenticated attacker
+    can exploit this by sending a request containing the
+    PA-ENCRYPTED-CHALLENGE element without using FAST. If you use Kerberos as
+    anything other than a build dependency, you should update as soon as
+    possible. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36222">CVE-2021-36222</a>.</p>
+    <p>To fix this, update to MIT Kerberos V5 1.19.2 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5 (sysv)</a>, or
+    <a href="../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5 (systemd)</a>.</p>
+
     <a id="sa-10.1-085"/>
     <h4>10.1 085 Fetchmail  Date: 2021-07-30 Severity: Low</h4>
     <p>Fetchmail before version 6.4.20 was missing initialization of a variable,
