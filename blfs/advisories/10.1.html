@@ -200,6 +200,13 @@
 
     <h3>Firefox</h3>
 
+    <a id="sa-10.1-089"/>
+    <h4>10.1 089 Firefox  Date: 2021-08-11  Severity: High</h4>
+    <p>In firefox 78.13.0 and 91.0, five vulnerabilities rated as High and one
+    rated as moderate were fixed. To fix these either update to firefox-91.0 or
+    later, or to legacy firefox-78.13.0 or later.
+    <a href="consolidated.html#sa-10.1-089">10.1-089</a></p>
+
     <a id="sa-10.1-075"/>
     <h4>10.1 075 Firefox  Date: 2021-07-13  Severity: High</h4>
     <p>In firefox 78.12.0 two vulnerabilities rated as High were fixed.
@@ -279,6 +286,14 @@
 <!-- end of Intel Microcode -->
 
     <h3>JS78</h3>
+    <a id="sa-10.1-088"/>
+    <h4>10.1 088 JS78  Date: 2021-08-11  Severity: High (low for BLFS packages using this)</h4>
+    <p>In the javascript JIT code of firefox-78.13.0 there is a fix for
+    incorrect instruction reordering during JIT optimization, CVE-2021-29984.
+    In BLFS, JS78 is used by GJS and Polkit, but neither use JIT at the moment.</p>
+    To apply these fixes, upgrade to JS-78.13.0 or later.
+    <a href="consolidated.html#sa-10.1-088">10.1-088</a></p>
+
     <a id="sa-10.1-009"/>
     <h4>10.1 009 JS78  Date: 2021-03-23  Severity: Medium</h4>
     <p>In the javascript code of firefox-78.9.0 there are hardening fixes

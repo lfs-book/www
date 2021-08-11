@@ -90,6 +90,37 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+
+    <a id="sa-10.1-089"/>
+    <h4>10.1 089 Firefox  Date: 2021-08-11  Severity: High</h4>
+    <p>In firefox 78.13.0 and 91.0, five vulnerabilities rated as High and one
+    rated as moderate were fixed. These have been allocated CVE-2021-29980,
+    CVE-2021-29984, CVE-2021-29985,  CVE-2021-29986, CVE-2021-29988, CVE-2021-29989
+    but details are not yet public. For details see either  
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-33/">mfsa-2021-33</a>
+    for firefox-91.0
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-34/">mfsa-2021-34</a>
+    for firefox-78.13.</p>
+    <p>To fix these, either update to firefox-91.0esr or later :
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>
+    or if you wish to stay on the 78esr series in the short term, update to
+    legacy firefox-78.13.0esr or later:
+    <a href="../view/svn/xsoft/firefox-legacy.html">Firefox-legacy (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox-legacy.html">Firefox-legacy (systemd)</a>.</p>
+
+    <a id="sa-10.1-088"/>
+    <h4>10.1 088 JS78  Date: 2021-08-11  Severity: High (low for BLFS packages using this)</h4>
+    <p>In the javascript JIT code of firefox-78.13.0 there is a fix for
+    incorrect instruction reordering during JIT optimization, CVE-2021-29984,
+    but details are not yet public, see the advisory for firefox-78.3.0,
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-34/">mfsa-2021-34</a>
+    In BLFS, JS78 is used by GJS and Polkit, but neither use JIT at the moment.</p>
+    <p>To fix this, update to JS-78.13.0 or later using the instructions
+    for
+    <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
+    <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
+
     <a id="sa-10.1-087"/>
     <h4>10.1 087 MariaDB    Date: 2021-08-08 Severity: Medium</h4>
     <p>In MariaDB-10.6.4, two medium-severity security vulnerabilities were
