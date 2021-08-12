@@ -63,7 +63,7 @@
     <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
      for clarity. -->
 
-    <h2>Items between the releases of the 10.1 and 10.2 books</h2>
+    <h2>Items between the releases of the 10.1 and 11.0 books</h2>
 
     <!-- Editors: This batch of advisories for the 10.1 books point to the
     development books until we make a release. After a release, new advisories
@@ -90,6 +90,70 @@
     <!-- Note for SA-10.1-051: During this time period, NVD returned
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
+
+    <a id="sa-10.1-089"/>
+    <h4>10.1 089 Firefox  Date: 2021-08-11  Severity: High</h4>
+    <p>In firefox 78.13.0 and 91.0, five vulnerabilities rated as High and one
+    rated as moderate were fixed. These have been allocated CVE-2021-29980,
+    CVE-2021-29984, CVE-2021-29985,  CVE-2021-29986, CVE-2021-29988, CVE-2021-29989
+    but details are not yet public. For details see either  
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-33/">mfsa-2021-33</a>
+    for firefox-91.0
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-34/">mfsa-2021-34</a>
+    for firefox-78.13.</p>
+    <p>To fix these, either update to firefox-91.0esr or later :
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>
+    or if you wish to stay on the 78esr series in the short term, update to
+    legacy firefox-78.13.0esr or later:
+    <a href="../view/svn/xsoft/firefox-legacy.html">Firefox-legacy (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox-legacy.html">Firefox-legacy (systemd)</a>.</p>
+
+    <a id="sa-10.1-088"/>
+    <h4>10.1 088 JS78  Date: 2021-08-11  Severity: High (low for BLFS packages using this)</h4>
+    <p>In the javascript JIT code of firefox-78.13.0 there is a fix for
+    incorrect instruction reordering during JIT optimization, CVE-2021-29984,
+    but details are not yet public, see the advisory for firefox-78.3.0,
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-34/">mfsa-2021-34</a>
+    In BLFS, JS78 is used by GJS and Polkit, but neither use JIT at the moment.</p>
+    <p>To fix this, update to JS-78.13.0 or later using the instructions
+    for
+    <a href="../view/svn/general/js78.html">JS78 (sysv)</a> or
+    <a href="../view/systemd/general/js78.html">JS78 (systemd)</a>.</p>
+
+    <a id="sa-10.1-087"/>
+    <h4>10.1 087 MariaDB    Date: 2021-08-08 Severity: Medium</h4>
+    <p>In MariaDB-10.6.4, two medium-severity security vulnerabilities were
+    patched. Both of these vulnerabilities are difficult to exploit, and can
+    result in a Denial Of Service. Note that successful exploitation requires
+    MariaDB to be listening for requests over TCP/IP ports, and not via local
+    applications. Successful exploitation can result in the ability to cause a
+    hang or frequently repeatable crash of the MariaDB process. 
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2389">CVE-2021-2389</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2372">CVE-2021-2372</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-10.6.4 or later using
+    the instructions for
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a>, or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
+    <a id="sa-10.1-086"/>
+    <h4>10.1 086 MIT Kerberos V5 Date: 2021-08-08 Severity: Medium</h4>
+    <p>MIT Kerberos V5 before 1.19.2 (or 1.18.4) is vulnerable to a denial of
+    service attack due to a NULL pointer dereference. This then causes the
+    krb5 daemon to crash. This vulnerability is remotely exploitable with no
+    user interaction, and this vulnerability is caused by a return value
+    noy being properly managed in a rare situation. An unauthenticated attacker
+    can exploit this by sending a request containing the
+    PA-ENCRYPTED-CHALLENGE element without using FAST. If you use Kerberos as
+    anything other than a build dependency, you should update as soon as
+    possible. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36222">CVE-2021-36222</a>.</p>
+    <p>To fix this, update to MIT Kerberos V5 1.19.2 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5 (sysv)</a>, or
+    <a href="../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5 (systemd)</a>.</p>
+
     <a id="sa-10.1-085"/>
     <h4>10.1 085 Fetchmail  Date: 2021-07-30 Severity: Low</h4>
     <p>Fetchmail before version 6.4.20 was missing initialization of a variable,
