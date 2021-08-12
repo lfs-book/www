@@ -91,6 +91,22 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-090"/>
+    <h4>10.1 090 c-ares   Date: 2021-08-12  Severity: Moderate</h4>
+    <p>In c-ares-1.17.2, a security vulnerability was fixed that could allow
+    for Domain Hijacking due to a lack of proper input validation of host names
+    returned by Domain Name Servers within the c-ares library. A proof of
+    concept vulnerability was included with the security announcement. This
+    vulnerability exists in all known versions of c-ares above 1.0.0. The
+    developers suggest upgrading to c-ares-1.17.2. immediately. More details
+    can be found at
+    <a href="https://c-ares.haxx.se/adv_20210810.html">c-ares Security Advisory</a>.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2021-3672">CVE-2021-3672</a>.</p>
+    <p>To fix this, update to c-ares-1.17.2 or later using the instructions for
+    <a href="../view/svn/basicnet/c-ares.html">c-ares (sysv)</a>, or
+    <a href="../view/systemd/basicnet/c-ares.html">c-ares (systemd)</a>.</p>
+
     <a id="sa-10.1-089"/>
     <h4>10.1 089 Firefox  Date: 2021-08-11  Severity: High</h4>
     <p>In firefox 78.13.0 and 91.0, five vulnerabilities rated as High and one
