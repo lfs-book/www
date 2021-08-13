@@ -91,6 +91,26 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-092"/>
+    <h4>10.1 092 PostgreSQL Date: 2021-08-13 Severity: High</h4>
+    <p>PostgreSQL-13.4 fixed a security vulnerability that could allow for a
+    purpose-crafted query to read arbitrary bytes of server memory. In the
+    default configuration, any authenticated database user can complete this
+    attack at will. The attack does not require the ability to create objects.
+    A workaround is to set max_worker_processes=0 inside of your PostgreSQL
+    configuration, however undiscovered variants of the attack may run
+    independently of that setting. It is suggested that you update your
+    PostgreSQL instances to 13.4 as soon as possible. More information can be
+    found at
+    <a href="https://www.postgresql.org/about/news/postgresql-134-128-1113-1018-9623-and-14-beta-3-released-2277/">
+    PostgreSQL 13.4 Release Announcement</a>.
+    This vulnerability has been assigned
+    <a href="https://www.postgresql.org/support/security/CVE-2021-3677/">CVE-2021-3677</a>.</p>
+    <p>To fix this, update to PostgreSQL-13.4 or higher using the instructions
+    for
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a>, or
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-10.1-091"/>
     <h4>10.1 091 node.js   Date: 2021-08-12 Severity: High</h4>
     <p>Node.js-14.17.5 fixed three vulnerabilities, two rated as high.
