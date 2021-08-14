@@ -91,6 +91,29 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-093"/>
+    <h4>10.1 093 Thunderbird Date: 2021-08-13 Severity: Critical</h4>
+    <p>Thunderbird-78.13.0 and 91.0 fixed several security vulnerabilities.
+    One of these allows for an attacker to remotely inject files, folders,
+    and IMAP commands when a STARTTLS connection is in use. Several of these
+    vulnerabilities have to do with memory corruption, leading to a remotely
+    exploitable crash and/or arbitrary code exeuction. These vulnerabilities
+    have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29969">CVE-2021-29969</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29970">CVE-2021-29970</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30547">CVE-2021-30547</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29976">CVE-2021-29976</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-29986">CVE-2021-29986</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-29988">CVE-2021-29988</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-29984">CVE-2021-29984</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-29980">CVE-2021-29980</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-29985">CVE-2021-29985</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2021-29989">CVE-2021-29989</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.0 or later using
+    the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a>, or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-10.1-092"/>
     <h4>10.1 092 PostgreSQL Date: 2021-08-13 Severity: High</h4>
     <p>PostgreSQL-13.4 fixed a security vulnerability that could allow for a
@@ -109,7 +132,7 @@
     <p>To fix this, update to PostgreSQL-13.4 or higher using the instructions
     for
     <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a>, or
-    <a href="../view/svn/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
 
     <a id="sa-10.1-091"/>
     <h4>10.1 091 node.js   Date: 2021-08-12 Severity: High</h4>
