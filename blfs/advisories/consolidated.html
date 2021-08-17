@@ -91,6 +91,19 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-095"/>
+    <h4>10.1 095 Firefox  Date: 2021-08-17  Severity: High</h4>
+    <p>In firefox 91.0.1 one vulnerability rated as High was fixed,
+    described as a header splitting attack against servers using HTTP/3.
+    This has been allocated CVE-2021-29991 but details are not yet public.
+    For a summary see
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-37/">mfsa-2021-37</a>.
+    Because HTTP/3 is not enabled by default in firefox before version 88,
+    legacy firefox-78 is not affected.</p>
+    <p>To fix this, update to firefox-91.0.1esr or later :
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
     <a id="sa-10.1-094"/>
     <h4>10.1 094 OpenJDK     Date: 2021-08-17 Severity: High</h4>
     <p>OpenJDK-16.0.2 brought fixes for six security vulnerabilities.
