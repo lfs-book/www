@@ -91,6 +91,32 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-094"/>
+    <h4>10.1 094 OpenJDK     Date: 2021-08-17 Severity: High</h4>
+    <p>OpenJDK-16.0.2 brought fixes for six security vulnerabilities.
+    Three of these vulnerabilities allows for an unauthenticated attacker
+    with network access via multiple protocols to take over the Java SE
+    runtime environment. Two more of these vulnerabilities give the ability
+    for an unauthenticated remote attacker to create, modify, or delete
+    information from inside the Java SE runtime environment, as well as
+    on the filesystem if they have access to the Java Console. The final
+    vulnerability is a denial of service vulnerability. The OpenJDK developers
+    suggest updating to OpenJDK-16.0.2 or 15.0.5 when it becomes available.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2388">CVE-2021-2388</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2369">CVE-2021-2369</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2432">CVE-2021-2432</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2341">CVE-2021-2341</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2161">CVE-2021-2161</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2163">CVE-2021-2163</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-16.0.2 using the
+    instructions for
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a>, or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>You may also use the Java binary using the instructions in
+    <a href="../view/svn/general/java.html">Java (sysv)</a>, or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
     <a id="sa-10.1-093"/>
     <h4>10.1 093 Thunderbird Date: 2021-08-13 Severity: Critical</h4>
     <p>Thunderbird-78.13.0 and 91.0 fixed several security vulnerabilities.
