@@ -91,6 +91,36 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-097"/>
+    <h4>10.1 097 BIND9    Date: 2021-08-19  Severity: High</h4>
+    <p>In BIND-9.16.20, a security vulnerability was fixed that could allow for
+    a trivial-to-exploit remotely-exploitable crash of the BIND DNS server to
+    occur. This is due to an assertion check which is too strict, and gets
+    triggered when responses in BIND 9.16.19 require UDP fragmentation if
+    RRL is in use. Note that this only affects BIND server, not the utilities.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25218">CVE-2021-25218</a>.</p>
+    <p>To fix this, update to BIND-9.16.20 or later using the instructions for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+    <a id="sa-10.1-096"/>
+    <h4>10.1 096 MC       Date: 2021-08-19  Severity: High</h4>
+    <p>Midnight Commander (MC) version 4.8.27 fixed a security vulnerability
+    where the SFTP filesystem layer does not verify the SSH Server Fingerprint
+    when a SFTP connection is established. The fingerprint is calculated, but
+    the verification step is missing. This allows for Man-In-The-Middle attacks
+    and attacks where the hostname has changed, but the IP address has stayed
+    the same, to occur. This could permit unauthorized access and modification
+    of files.
+    This vulnerability has been assigned CVE-2021-36370, but no details are
+    available yet other than the ticket in the Midnight Commander Trac, which
+    can be found at
+    <a href="https://midnight-commander.org/ticket/4259">Ticket #4259</a>.</p>
+    <p>To fix this, update to MC-4.8.27 or later using the instructions for
+    <a href="../view/svn/general/mc.html">MC (sysv)</a> or
+    <a href="../view/systemd/general/mc.html">MC (systemd)</a>.</p>
+
     <a id="sa-10.1-095"/>
     <h4>10.1 095 Firefox  Date: 2021-08-17  Severity: High</h4>
     <p>In firefox 91.0.1 one vulnerability rated as High was fixed,
