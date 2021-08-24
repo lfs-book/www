@@ -128,19 +128,19 @@
     install followed by stripping and installing only those libraries (watch for
     any error messages)</p>
 
-    <p>[code]<br>
-    make DESTDIR=/tmp/GLIBC install<br>
-    cd /tmp/GLIBC/usr/lib<br>
-    for LIB in libc.so.6 ; do<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;objcopy --only-keep-debug $LIB $LIB.dbg<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;cp $LIB /tmp/$LIB<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;strip --strip-unneeded /tmp/$LIB<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;objcopy --add-gnu-debuglink=$LIB.dbg /tmp/$LIB<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;install -vm755 /tmp/$LIB /usr/lib<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;rm /tmp/$LIB<br>
-    install -vm755 $LIB.dbg /usr/lib<br>
-    install -vm644 libc.a /usr/lib<br>
-    [/code]<br></p>
+    <p>[code]<br/>
+    make DESTDIR=/tmp/GLIBC install<br/>
+    cd /tmp/GLIBC/usr/lib<br/>
+    for LIB in libc.so.6 ; do<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;objcopy --only-keep-debug $LIB $LIB.dbg<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;cp $LIB /tmp/$LIB<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;strip --strip-unneeded /tmp/$LIB<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;objcopy --add-gnu-debuglink=$LIB.dbg /tmp/$LIB<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;install -vm755 /tmp/$LIB /usr/lib<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;rm /tmp/$LIB<br/>
+    install -vm755 $LIB.dbg /usr/lib<br/>
+    install -vm644 libc.a /usr/lib<br/>
+    [/code]<br/></p>
 
     <a id="sa-10.1-097"/>
     <h4>10.1 097 BIND9    Date: 2021-08-19  Severity: High</h4>
