@@ -91,6 +91,57 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-098"/>
+    <h4>10.1 098 (LFS) GLIBC  Date: 2021-08-24  Severity: High</h4>
+    <p>A vulnerability in the released version of glibc-2.34 has been
+    discovered. This is remotely exploitable and can be used to crash
+    programs linked to glibc. CVE-2021-38604 has been assigned, details at
+    <a href="https://blog.tuxcare.com/cve/tuxcare-team-identifies-cve-2021-38604-a-new-vulnerability-in-glibc">tuxcare</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38604">CVE-2021-38604</a>.</p>
+
+    <p>In the development book this unfixed vulnerability existed between 2021-08-02
+    and 2021-08-20, it was also in LFS-11.0-rc1. It has been fixed with a sed in the
+    chapter 8 glibc build.</p>
+
+    <p>There is a test file at https://www.linuxfromscratch.org/~xry111/glibc-28213.c
+    : compile that with 'gcc glibc-28213.c -o glibc-28213 -lrt' and run it. If that
+    segfaults, your system is vulnerable.</p>
+
+    <p>Some people will be happy to discard the vulnerable system and start over,
+    but the system can be fixed. It is necessary to rebuild glibc, but because the
+    API and ABI have not changed, only the following three files need to be updated:
+    libc.a, libc.so.6, and libc.so.6.dbg (if you did strip the debug symbols).</p>
+
+    <p>If you update these files, you should reboot as soon as possible afterwards.
+    The system will not shutdown cleanly. After rebooting, recompile and rerun the
+    test program to confirm it now ends normally.</p>
+
+    <p>If you are going to fix the existing system, make a usable backup before
+    you start (and check it can be applied in case things go wrong).</p>
+
+    <p>One approach is to make a fresh LFS build to the end of chapter 8 using the
+    modified instructions, then copy those 3 files to the running system.</p>
+
+    <p>A more adventurous approach is to rebuild (only) glibc in the running system,
+    using the modified instructions. But instead of installing it make a DESTDIR
+    install followed by stripping and installing only those libraries (watch for
+    any error messages)</p>
+
+    <p>[code]<br>
+    make DESTDIR=/tmp/GLIBC install<br>
+    cd /tmp/GLIBC/usr/lib<br>
+    for LIB in libc.so.6 ; do<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;objcopy --only-keep-debug $LIB $LIB.dbg<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;cp $LIB /tmp/$LIB<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;strip --strip-unneeded /tmp/$LIB<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;objcopy --add-gnu-debuglink=$LIB.dbg /tmp/$LIB<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;install -vm755 /tmp/$LIB /usr/lib<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;rm /tmp/$LIB<br>
+    install -vm755 $LIB.dbg /usr/lib<br>
+    install -vm644 libc.a /usr/lib<br>
+    [/code]<br></p>
+
     <a id="sa-10.1-097"/>
     <h4>10.1 097 BIND9    Date: 2021-08-19  Severity: High</h4>
     <p>In BIND-9.16.20, a security vulnerability was fixed that could allow for
