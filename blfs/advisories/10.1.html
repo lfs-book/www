@@ -72,6 +72,19 @@
 
 <!-- end of Apache HTTPD -->
 
+    <h3>APR</h3>
+    <a id="sa-10.1-102"/>
+    <h4>10.1 102 APR   Date: 2021-08-26  Severity: High</h4>
+    <p>In apr-1.7.0, an easily-exploitable security vulnerability exists that
+    allows for an out-of-bounds array read by using a month greater than 12
+    inside of an input to some APR functions. This vulnerability was originally
+    fixed in 2017, but the fix was not carried over into the apr-1.7.x branch
+    due to a problem in Apache's Subversion repositories. It has been fixed
+    with a sed in the development book, which you should apply.
+    <a href="consolidated.html#sa-10.1-102">10.1-102</a></p>
+
+<!-- end of APR -->
+
     <h3>Avahi</h3>
     <a id="sa-10.1-028"/>
     <h4>10.1 028 Avahi Date: 2021-04-14  Severity: Medium</h4>
@@ -336,7 +349,16 @@
     libarchive-3.5.2 or later.
     <a href="consolidated.html#sa-10.1-100">10.1-100</a>.</p>
 
-<!-- end of libjpeg-turbo -->
+<!-- end of libarchive -->
+
+    <h3>libgcrypt</h3>
+    <h4>10.1 101 libgcrypt     Date: 2021-08-26 Severity: High</h4>
+    <p>A denial of service and decryption vulnerability was fixed in
+    libgcrypt-1.9.4. This vulnerability has existed since the year 2000. If you
+    have libgcrypt installed, update to libgcrypt-1.9.4 as soon as possible.
+    <a href="consolidated.html#sa-10.1-101">10.1-101</a>.</p>
+
+<!-- end of libgcrypt -->
 
     <h3>libjpeg-turbo</h3>
     <h4>10.1 042 libjpeg-turbo Date: 2021-05-12 Severity: Low</h4>

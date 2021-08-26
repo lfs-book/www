@@ -91,6 +91,38 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-102"/>
+    <h4>10.1 102 APR         Date: 2021-08-26  Severity: High</h4>
+    <p>In apr-1.7.0, a security vulnerability exists due to a regression in the
+    Apache Subversion source code repository for APR. An out of bounds array
+    read in the apr_time_exp*() functions was fixed in apr-1.6.3 back in 2017,
+    but the fix was not carried over to the 1.7.x branch, resulting in this
+    vulnerability from 2017 not being fixed in apr-1.7.0. This vulnerability
+    is easy to exploit by setting the month to something larger than 12 in an
+    input to the apr_time_exp() functions. This vulnerability was originally
+    known as CVE-2017-12613, but this case has a new identifier. APR was fixed
+    with a sed in the BLFS development books.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35940">CVE-2021-35940</a>.</p>
+    <p>To fix this, apply the sed in the APR page and rebuild APR using the
+    instructions for
+    <a href="../view/svn/general/apr.html">Apr (sysv)</a>, or
+    <a href="../view/systemd/general/apr.html">Apr (systemd)</a>.</p>
+
+    <a id="sa-10.1-101"/>
+    <h4>10.1 101 libgcrypt   Date: 2021-08-26  Severity: High</h4>
+    <p>libgcrypt-1.9.4 has fixed a security vulnerability in the Elgamal
+    encryption implementation that allows for denial of service and decryption
+    of data via a side-channel attack. The vulnerability was originally
+    introduced in 2000. A paper has been written on this vulnerability, and the
+    developers recommend updating to libgcrypt-1.9.4 as soon as possible, as
+    any version after the year 1999 is affected by this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33560">CVE-2021-33560</a>.</p>
+    <p>To fix this, update to libgcrypt-1.9.4 or later using the instructions for
+    <a href="../view/svn/general/libgcrypt.html">libgcrypt (sysv)</a>, or
+    <a href="../view/systemd/general/libgcrypt.html">libgcrypt (systemd)</a>.</p>
+
     <a id="sa-10.1-100"/>
     <!-- No CVE numbers for this.
          Mark it Medium like other symlink issues for now. -->
@@ -110,7 +142,7 @@
 
     <a id="sa-10.1-099"/>
     <h4>10.1 099 (LFS) OpenSSL  Date: 2021-08-25  Severity: High</h4>
-    <p>Two vulnerabilities in OpenSSL-1.1.1k and earlier releases has been
+    <p>Two vulnerabilities in OpenSSL-1.1.1k and earlier releases have been
     discovered. These are exploitable with malicious inputs and can be used
     to crash programs linked to OpenSSL. CVE-2021-3711 and CVE-2021-3712
     have been assigned, details at
