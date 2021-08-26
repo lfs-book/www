@@ -91,6 +91,23 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-100"/>
+    <!-- No CVE numbers for this.
+         Mark it Medium like other symlink issues for now. -->
+    <h4>10.1 100 Libarchive  Date: 2021-08-26  Severity: Medium</h4>
+    <p>Three vulnerabilities about symlink handling in libarchive-3.5.1
+    and earlier releases has been discovered. These are exploitable with
+    malicious archives containing symlinks, and can be exploited to
+    overwrite file contents, flags, and ACL entries.  No CVE numbers are
+    assigned for those issues yet.  Details at
+    <a href="https://github.com/libarchive/libarchive/issues/1565">the upstream bug report</a>,
+    <a href="https://github.com/libarchive/libarchive/issues/1566">another upstream bug report</a>,
+    and
+    <a href="https://github.com/libarchive/libarchive/commit/e2ad1a2c">the commit message</a>.
+    <p>To fix this, update to libarchive-3.5.2 or later using the instructions for
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
     <a id="sa-10.1-099"/>
     <h4>10.1 099 (LFS) OpenSSL  Date: 2021-08-25  Severity: High</h4>
     <p>Two vulnerabilities in OpenSSL-1.1.1k and earlier releases has been
