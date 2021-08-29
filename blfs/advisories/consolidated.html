@@ -91,6 +91,47 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-103"/>
+    <h4>10.1 103 QtWebEngine  Date: 2021-08-29  Severity: High</h4>
+    <p>Many more CVEs (from Chromium) in QtWebEngine, most rated as High, have
+    been fixed in the 5.15.6 version:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30604">CVE-2021-30604</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30603">CVE-2021-30603</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30602">CVE-2021-30602</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30599">CVE-2021-30599</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30598">CVE-2021-30598</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30588">CVE-2021-30588</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30587">CVE-2021-30587</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30585">CVE-2021-30585</a>
+    (the backport to fix this mentions that it applies to linux, not just windows),
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30573">CVE-2021-30573</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30569">CVE-2021-30569</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30568">CVE-2021-30568</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30563">CVE-2021-30563</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30560">CVE-2021-30560</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30559">CVE-2021-30559</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30556">CVE-2021-30556</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30554">CVE-2021-30554</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30553">CVE-2021-30553</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30551">CVE-2021-30551</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30548">CVE-2021-30548</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30547">CVE-2021-30547</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30544">CVE-2021-30544</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30541">CVE-2021-30541</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30536">CVE-2021-30536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30535">CVE-2021-30535</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30534">CVE-2021-30534</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30533">CVE-2021-30533</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30530">CVE-2021-30530</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30523">CVE-2021-30523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30522">CVE-2021-30522</a>,
+    <p>To fix these, update to the BLFS 5.15.6 tarball with instructions
+    for installing that as 5.15.2 to match Qt5 <em> plus the
+    <a href="http://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-5.15.6-upstream_fixes-1.patch">qtwebengine-5.15.6-upstream_fixes-1.patch</a></em>
+    (or update to a later version) using the instructions at
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-10.1-102"/>
     <h4>10.1 102 APR         Date: 2021-08-26  Severity: High</h4>
     <p>In apr-1.7.0, a security vulnerability exists due to a regression in the
