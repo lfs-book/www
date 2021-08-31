@@ -91,6 +91,31 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-105"/>
+    <h4>10.1 105 ntfs-3g   Date: 2021-08-31 Severity: Critical</h4>
+    <p>ntfs-3g-2021.8.22 includes several security fixes that have to do
+    with buffer overflows when reading NTFS metadata. These vulnerabilities
+    allow attackers using a maliciously crafted NTFS image (or external storage,
+    such as a USB External Hard Drive) to potentially execute arbitrary code
+    in the context of the kernel. This can be exploited via plugging an
+    affected drive into a USB port, and can be automatically exploited when
+    filesystems are automounted in desktop environments. This can also be
+    manually exploited by mounting the filesystem normally. These vulnerabilities
+    exist due to insufficient validation of NTFS metadata. The developers of
+    ntfs-3g suggest updating as soon as possible.
+    These vulnerabilities have been assigned CVE-2021-33285, CVE-2021-35269,
+    CVE-2021-35268, CVE-2021-33289, CVE-2021-35266, CVE-2021-33287,
+    CVE-2021-33267, CVE-2021-39251, CVE-2021-39252, CVE-2021-39253,
+    CVE-2021-39254, CVE-2021-39255, CVE-2021-39256, CVE-2021-39257,
+    CVE-2021-39258, CVE-2021-39259, CVE-2021-39260, CVE-2021-39261,
+    CVE-2021-39262, and CVE-2021-39263 (21 total). Additonal details can be
+    found at
+    <a href="https://seclists.org/oss-sec/2021/q3/139">NTFS3G-SA-2021-001</a>.</p>
+    <p>To fix these vulnerabilities, update to ntfs-3g-2021.8.22 or later
+    using the instructions for
+    <a href="../view/svn/postlfs/ntfs-3g.html">ntfs-3g (sysv)</a> or
+    <a href="../view/systemd/postlfs/ntfs-3g.html">ntfs-3g (systemd)</a>.</p>
+
     <a id="sa-10.1-104"/>
     <h4>10.1 104 Seamonkey Date: 2021-08-29 Severity: High</h4>
     <p>The fixes from firefox-78.13.0 are understood to be included in
