@@ -91,6 +91,149 @@
          RESERVED for all three vulnerabilities. Pulled from the CVE docs on
          curl.se instead. -->
 
+    <a id="sa-10.1-105"/>
+    <h4>10.1 105 ntfs-3g   Date: 2021-08-31 Severity: Critical</h4>
+    <p>ntfs-3g-2021.8.22 includes several security fixes that have to do
+    with buffer overflows when reading NTFS metadata. These vulnerabilities
+    allow attackers using a maliciously crafted NTFS image (or external storage,
+    such as a USB External Hard Drive) to potentially execute arbitrary code
+    in the context of the kernel. This can be exploited via plugging an
+    affected drive into a USB port, and can be automatically exploited when
+    filesystems are automounted in desktop environments. This can also be
+    manually exploited by mounting the filesystem normally. These vulnerabilities
+    exist due to insufficient validation of NTFS metadata. The developers of
+    ntfs-3g suggest updating as soon as possible.
+    These vulnerabilities have been assigned CVE-2021-33285, CVE-2021-35269,
+    CVE-2021-35268, CVE-2021-33289, CVE-2021-35266, CVE-2021-33287,
+    CVE-2021-33267, CVE-2021-39251, CVE-2021-39252, CVE-2021-39253,
+    CVE-2021-39254, CVE-2021-39255, CVE-2021-39256, CVE-2021-39257,
+    CVE-2021-39258, CVE-2021-39259, CVE-2021-39260, CVE-2021-39261,
+    CVE-2021-39262, and CVE-2021-39263 (21 total). Additonal details can be
+    found at
+    <a href="https://seclists.org/oss-sec/2021/q3/139">NTFS3G-SA-2021-001</a>.</p>
+    <p>To fix these vulnerabilities, update to ntfs-3g-2021.8.22 or later
+    using the instructions for
+    <a href="../view/svn/postlfs/ntfs-3g.html">ntfs-3g (sysv)</a> or
+    <a href="../view/systemd/postlfs/ntfs-3g.html">ntfs-3g (systemd)</a>.</p>
+
+    <a id="sa-10.1-104"/>
+    <h4>10.1 104 Seamonkey Date: 2021-08-29 Severity: High</h4>
+    <p>The fixes from firefox-78.13.0 are understood to be included in
+    seamonkey-2.53.9. For details see
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29980">CVE-2021-29980</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29984">CVE-2021-29984</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29985">CVE-2021-29985</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29986">CVE-2021-29986</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29988">CVE-2021-29988</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29989">CVE-2021-29989</a>.</p>
+    <p>To fix these, update to Seamonkey-2.53.9 or later using the instructions
+    for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+    <a id="sa-10.1-103"/>
+    <h4>10.1 103 QtWebEngine  Date: 2021-08-29  Severity: High</h4>
+    <p>Many more CVEs (from Chromium) in QtWebEngine, most rated as High, have
+    been fixed in the 5.15.6 version:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30604">CVE-2021-30604</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30603">CVE-2021-30603</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30602">CVE-2021-30602</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30599">CVE-2021-30599</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30598">CVE-2021-30598</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30588">CVE-2021-30588</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30587">CVE-2021-30587</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30585">CVE-2021-30585</a>
+    (the backport to fix this mentions that it applies to linux, not just windows),
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30573">CVE-2021-30573</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30569">CVE-2021-30569</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30568">CVE-2021-30568</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30563">CVE-2021-30563</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30560">CVE-2021-30560</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30559">CVE-2021-30559</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30556">CVE-2021-30556</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30554">CVE-2021-30554</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30553">CVE-2021-30553</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30551">CVE-2021-30551</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30548">CVE-2021-30548</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30547">CVE-2021-30547</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30544">CVE-2021-30544</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30541">CVE-2021-30541</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30536">CVE-2021-30536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30535">CVE-2021-30535</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30534">CVE-2021-30534</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30533">CVE-2021-30533</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30530">CVE-2021-30530</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30523">CVE-2021-30523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30522">CVE-2021-30522</a>,
+    <p>To fix these, update to the BLFS 5.15.6 tarball with instructions
+    for installing that as 5.15.2 to match Qt5 <em> plus the
+    <a href="http://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-5.15.6-upstream_fixes-1.patch">qtwebengine-5.15.6-upstream_fixes-1.patch</a></em>
+    (or update to a later version) using the instructions at
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <a id="sa-10.1-102"/>
+    <h4>10.1 102 APR         Date: 2021-08-26  Severity: High</h4>
+    <p>In apr-1.7.0, a security vulnerability exists due to a regression in the
+    Apache Subversion source code repository for APR. An out of bounds array
+    read in the apr_time_exp*() functions was fixed in apr-1.6.3 back in 2017,
+    but the fix was not carried over to the 1.7.x branch, resulting in this
+    vulnerability from 2017 not being fixed in apr-1.7.0. This vulnerability
+    is easy to exploit by setting the month to something larger than 12 in an
+    input to the apr_time_exp() functions. This vulnerability was originally
+    known as CVE-2017-12613, but this case has a new identifier. APR was fixed
+    with a sed in the BLFS development books.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35940">CVE-2021-35940</a>.</p>
+    <p>To fix this, apply the sed in the APR page and rebuild APR using the
+    instructions for
+    <a href="../view/svn/general/apr.html">Apr (sysv)</a>, or
+    <a href="../view/systemd/general/apr.html">Apr (systemd)</a>.</p>
+
+    <a id="sa-10.1-101"/>
+    <h4>10.1 101 libgcrypt   Date: 2021-08-26  Severity: High</h4>
+    <p>libgcrypt-1.9.4 has fixed a security vulnerability in the Elgamal
+    encryption implementation that allows for denial of service and decryption
+    of data via a side-channel attack. The vulnerability was originally
+    introduced in 2000. A paper has been written on this vulnerability, and the
+    developers recommend updating to libgcrypt-1.9.4 as soon as possible, as
+    any version after the year 1999 is affected by this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33560">CVE-2021-33560</a>.</p>
+    <p>To fix this, update to libgcrypt-1.9.4 or later using the instructions for
+    <a href="../view/svn/general/libgcrypt.html">libgcrypt (sysv)</a>, or
+    <a href="../view/systemd/general/libgcrypt.html">libgcrypt (systemd)</a>.</p>
+
+    <a id="sa-10.1-100"/>
+    <!-- No CVE numbers for this.
+         Mark it Medium like other symlink issues for now. -->
+    <h4>10.1 100 Libarchive  Date: 2021-08-26  Severity: Medium</h4>
+    <p>Three vulnerabilities about symlink handling in libarchive-3.5.1
+    and earlier releases have been discovered. These are exploitable with
+    malicious archives containing symlinks, and can be exploited to
+    overwrite file contents, flags, and ACL entries.  No CVE numbers are
+    assigned for those issues yet.  Details at
+    <a href="https://github.com/libarchive/libarchive/issues/1565">the upstream bug report</a>,
+    <a href="https://github.com/libarchive/libarchive/issues/1566">another upstream bug report</a>,
+    and
+    <a href="https://github.com/libarchive/libarchive/commit/e2ad1a2c">the commit message</a>.
+    <p>To fix this, update to libarchive-3.5.2 or later using the instructions for
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
+    <a id="sa-10.1-099"/>
+    <h4>10.1 099 (LFS) OpenSSL  Date: 2021-08-25  Severity: High</h4>
+    <p>Two vulnerabilities in OpenSSL-1.1.1k and earlier releases have been
+    discovered. These are exploitable with malicious inputs and can be used
+    to crash programs linked to OpenSSL. CVE-2021-3711 and CVE-2021-3712
+    have been assigned, details at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3711">CVE-2021-3711</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3712">CVE-2021-3712</a>.</p>
+    <p>To fix this, update to OpenSSL-1.1.1l or later using the instructions for
+    <a href="../../lfs/view/11.0-rc3/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/11.0-systemd-rc3/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
     <a id="sa-10.1-098"/>
     <h4>10.1 098 (LFS) GLIBC  Date: 2021-08-24  Severity: High</h4>
     <p>A vulnerability in the released version of glibc-2.34 has been
@@ -212,7 +355,7 @@
     <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
 
     <a id="sa-10.1-093"/>
-    <h4>10.1 093 Thunderbird Date: 2021-08-13 Severity: Critical</h4>
+    <h4>10.1 093 Thunderbird Modified: 2021-08-13 Severity: Critical</h4>
     <p>Thunderbird-78.13.0 and 91.0 fixed several security vulnerabilities.
     One of these allows for an attacker to remotely inject files, folders,
     and IMAP commands when a STARTTLS connection is in use. Several of these
@@ -223,12 +366,12 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29970">CVE-2021-29970</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30547">CVE-2021-30547</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29976">CVE-2021-29976</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-29986">CVE-2021-29986</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-29988">CVE-2021-29988</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-29984">CVE-2021-29984</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-29980">CVE-2021-29980</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-29985">CVE-2021-29985</a>, and
-    <a href="https://access.redhat.com/security/cve/CVE-2021-29989">CVE-2021-29989</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29980">CVE-2021-29980</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29984">CVE-2021-29984</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29985">CVE-2021-29985</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29986">CVE-2021-29986</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29988">CVE-2021-29988</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29989">CVE-2021-29989</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-91.0 or later using
     the instructions for
     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a>, or
@@ -255,12 +398,12 @@
     <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
 
     <a id="sa-10.1-091"/>
-    <h4>10.1 091 node.js   Date: 2021-08-12 Severity: High</h4>
-    <p>Node.js-14.17.5 fixed three vulnerabilities, two rated as high.
-    These have been assigned CVE-2021-3672/CVE-2021-22931, CVE-2021-22930 and
-    CVE-2021-22931 but details are not yet public. See 'Node v14.17.5'
+    <h4>10.1 091 node.js Updated: 2021-08-31 Severity: Critical</h4>
+    <p>Node.js-14.17.5 fixed three vulnerabilities, one rated as critical.
+    These have been assigned CVE-2021-22930 (full details not yet public),
+    CVE-2021-22931 and CVE-2021-22939. See 'Node v14.17.5'
     <a href="https://nodejs.org/en/blog/">Node JS News</a>
-    which has links to nvd.nist.gov.</p>
+    which has links to nvd.nist.gov and cve.mitre.org.</p>
     <p>To fix these, update to Node.js-14.17.5 or later using the instructions for
     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a>, or
     <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
@@ -282,15 +425,15 @@
     <a href="../view/systemd/basicnet/c-ares.html">c-ares (systemd)</a>.</p>
 
     <a id="sa-10.1-089"/>
-    <h4>10.1 089 Firefox  Date: 2021-08-11  Severity: High</h4>
-    <p>In firefox 78.13.0 and 91.0, five vulnerabilities rated as High and one
-    rated as moderate were fixed. These have been allocated CVE-2021-29980,
-    CVE-2021-29984, CVE-2021-29985,  CVE-2021-29986, CVE-2021-29988, CVE-2021-29989
-    but details are not yet public. For details see either  
-    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-33/">mfsa-2021-33</a>
-    for firefox-91.0
-    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-34/">mfsa-2021-34</a>
-    for firefox-78.13.</p>
+    <h4>10.1 089 Firefox  Revised: 2021-08-11  Severity: High</h4>
+    <p>In firefox 78.13.0 and 91.0, six vulnerabilities rated as High were
+    fixed. For details see:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29980">CVE-2021-29980</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29984">CVE-2021-29984</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29985">CVE-2021-29985</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29986">CVE-2021-29986</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29988">CVE-2021-29988</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29989">CVE-2021-29989</a>.</p>
     <p>To fix these, either update to firefox-91.0esr or later :
     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>
@@ -404,7 +547,7 @@
 
     <a id="sa-10.1-082"/>
     <h4>10.1 082 Seamonkey Date: 2021-07-23 Severity: High</h4>
-    <p>Fixes from firefox-78.8.12 were included in seamonkey-2.53.8.1. Two
+    <p>Fixes from firefox-78.12 were included in seamonkey-2.53.8.1. Two
     apply to Linux builds and are rated as High, a third in ANGLE was also fixed,
     but that is not used for linux builds. CVEs have been assigned (CVE-2021-29970,
     CVE-2021-29976) but details are not yet public.
