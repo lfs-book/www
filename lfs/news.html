@@ -4,6 +4,59 @@
    <div class="main">
       <h1>LFS News</h1>
          <dl class="newsItem">
+           <dt>LFS-11.0 Release</dt>
+           <dd><em>Bruce Dubbs - 2021/09/01</em>
+
+           <p>
+           The Linux From Scratch community announces the release of LFS
+           Version 11.0.
+
+           The reason for the major release number increment is that this 
+           version no longer uses the "split-user" system.  That is, like 
+           most current distributions, /bin is a symbolic link to /usr/bin.  
+           Likewise, /lib and /sbin are both symbolic links to their /usr 
+           counterparts.
+           </p>
+
+           <p>
+           Additional major changes include toolchain updates to gcc-11.2.0, 
+           glibc-2.34, and binutils-2.37. 
+
+           The Linux kernel has also been updated to version 5.13.12.
+           </p>
+
+           <p>
+           In total, 40 packages were updated since the last release. 
+           Changes to the text have also been made throughout the book.  
+           </p>
+
+           <p>You can read the book
+              <a href="/lfs/view/11.0/">online</a>, or
+              <a href="/lfs/downloads/11.0/">download</a> to read locally.
+           </p>
+
+           <p>In coordination with this release, a new version of
+           LFS using the systemd package is also being released.  
+           This package implements the newer systemd style of
+           system initialization and control and is consistent with
+           LFS in most packages.  
+
+           <p>You can read the systemd version of the book online at
+              <a href="/lfs/view/11.0-systemd/">LFS-systemd</a>, or 
+              <a href="/lfs/downloads/11.0-systemd/">download-systemd</a> to read locally.
+           </p>
+
+           <p>Please direct any comments about this release to the LFS
+                development team at
+                <a href="mailto:&#108;&#102;&#115;&#45;&#100;&#101;&#118;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;">&#108;&#102;&#115;&#45;&#100;&#101;&#118;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#108;&#105;&#110;&#117;&#120;&#102;&#114;&#111;&#109;&#115;&#99;&#114;&#97;&#116;&#99;&#104;&#46;&#111;&#114;&#103;</a>.
+                Please note that registration for the lfs-dev
+                mailing list is required to avoid junk email.
+             </p>
+           </dd>
+         </dl>
+
+      <h1>LFS News</h1>
+         <dl class="newsItem">
            <dt>LFS-11.0-rc3 Release</dt>
            <dd><em>Bruce Dubbs - 2021/08/25</em>
 
