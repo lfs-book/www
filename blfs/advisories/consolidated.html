@@ -3,7 +3,7 @@
 <!-- try an LFS *and* BLFS menu at the side -->
 <!--#include virtual="/blfs/menuboth.html" -->
 <!-- perhaps review lfs/menu.html and blfs/menu.html to provide a custom menu
-    for this page which covers both ? -->
+    for this page which covers both ?  -->
     <div class="main">
 
     <h1>LFS and BLFS Security Advisories from September 2020 onwards</h1>
@@ -76,7 +76,6 @@
     replaced or archived). -->
 
     <!-- when we do have advisories, comment this for next time -->
-
 
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
@@ -165,8 +164,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30533">CVE-2021-30533</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30530">CVE-2021-30530</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30523">CVE-2021-30523</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30522">CVE-2021-30522</a>,
-    <p>To fix these, update to the BLFS 5.15.6 tarball with instructions
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30522">CVE-2021-30522</a>.
+    To fix these, update to the BLFS 5.15.6 tarball with instructions
     for installing that as 5.15.2 to match Qt5 <em> plus the
     <a href="http://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-5.15.6-upstream_fixes-1.patch">qtwebengine-5.15.6-upstream_fixes-1.patch</a></em>
     (or update to a later version) using the instructions at
@@ -183,7 +182,7 @@
     is easy to exploit by setting the month to something larger than 12 in an
     input to the apr_time_exp() functions. This vulnerability was originally
     known as CVE-2017-12613, but this case has a new identifier. APR was fixed
-    with a sed in the BLFS development books.
+    with a sed.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35940">CVE-2021-35940</a>.</p>
     <p>To fix this, apply the sed in the APR page and rebuild APR using the
@@ -217,7 +216,7 @@
     <a href="https://github.com/libarchive/libarchive/issues/1565">the upstream bug report</a>,
     <a href="https://github.com/libarchive/libarchive/issues/1566">another upstream bug report</a>,
     and
-    <a href="https://github.com/libarchive/libarchive/commit/e2ad1a2c">the commit message</a>.
+    <a href="https://github.com/libarchive/libarchive/commit/e2ad1a2c">the commit message</a>.</p>
     <p>To fix this, update to libarchive-3.5.2 or later using the instructions for
     <a href="../view/11.0/general/libarchive.html">libarchive (sysv)</a> or
     <a href="../view/11.0-systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
@@ -375,7 +374,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29989">CVE-2021-29989</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-91.0 or later using
     the instructions for
-    <a href="../view/11.0/xsoft/thunderrbird.html">Thunderbird (sysv)</a>, or
+    <a href="../view/11.0/xsoft/thunderbird.html">Thunderbird (sysv)</a>, or
     <a href="../view/11.0-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-10.1-092"/>
@@ -504,12 +503,11 @@
     <a href="../view/11.0-systemd/basicnet/fetchmail.html">Fetchmail (systemd)</a>.</p>
 
     <a id="sa-10.1-084"/>
-    <h4>10.1 084 node.js   Date: 2021-07-30 Severity: High</h4>
+    <h4>10.1 084 node.js Updated: 2021-08-31 Severity: Critical</h4>
     <p>Node.js-14.17.4 fixed a vulnerability to a use after free attack, where
     an attacker might be able to exploit the memory corruption to change process
     behaviour. This has been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22930">CVE-2021-22930</a>
-    but details are not yet public.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22931">CVE-2021-22931</a>.</p>
     <p>To fix this, update to Node.js-14.17.4 or later using the instructions for
     <a href="../view/11.0/general/nodejs.html">Node.js (sysv)</a>, or
     <a href="../view/11.0-systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
@@ -581,18 +579,18 @@
     This vulnerability affects all systems that run systemd-220 or higher.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-33910">CVE-2021-33910</a>.</p>
-    <p>If you are running LFS SVN, you can update to systemd-249 with the patch
+    <p>If you are running LFS git, you can update to systemd-249 with the patch
     using the instructions in the <em>BLFS</em> book for
     <a href="../view/11.0-systemd/general/systemd.html">systemd (systemd)</a>.
-    You must also upgrade your kernel to Linux-5.13.4.</p>
+    You must also upgrade your kernel to Linux-5.13.4 or later.</p>
     <p>If you are running LFS 10.1, you can apply the patch from
     <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-247-security_fixes-1.patch">systemd-247-security_fixes-1.patch</a>
     to your build tree after applying the other systemd-247 patches and rebuild
-    systemd. You must then upgrade your kernel to Linux-5.10.52.</p>
+    systemd. You must then upgrade your kernel to Linux-5.10.52 or later.</p>
     <p>If you are running LFS 10.0, you can apply the patch from
     <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-246-security_fixes-1.patch">systemd-246-security_fixes-1.patch</a>
     to your build tree and rebuild systemd. You must then upgrade your kernel
-    to Linux-5.10.52.</p>
+    to Linux-5.10.52 or later.</p>
 
     <a id="sa-10.1-080"/>
     <h4>10.1 080 Binutils (LFS) Date: 2021-07-23 Severity: Moderate</h4>
@@ -756,7 +754,7 @@
     and that run systemd-245 or higher (thus, LFS 9.1 is not affected).
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-13529">CVE-2020-13529</a>.</p>
-    <p>If you are running LFS SVN, you can update to systemd-249 using the
+    <p>If you are running LFS git, you can update to systemd-249 using the
     instructions in the <em>BLFS</em> book for
     <a href="../view/11.0-systemd/general/systemd.html">systemd (systemd)</a>.</p>
     <p>If you are running LFS 10.1, you can apply the patch from
@@ -805,7 +803,7 @@
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-21705">CVE-2021-21705</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-21704">CVE-2021-21704</a>.</p>
-    <p>To fix these, update to PHP-8.0.8 using the instructions for
+    <p>To fix these, update to PHP-8.0.8 or later using the instructions for
     <a href="../view/11.0/general/php.html">PHP (sysv)</a>, or
     <a href="../view/11.0-systemd/general/php.html">PHP (systemd)</a>.</p>
 
@@ -959,7 +957,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24588">CVE-2020-24588</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26145">CVE-2020-26145</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24586">CVE-2020-24586</a>.</p>
-    <p>To fix these, update to Linux 5.12.10 or later, or Linux 5.10.44 or
+    <p>To fix these, update to Linux 5.12.10 or later (5,12 is no-longer maintained),
+    or Linux 5.10.44 or
     later (if you prefer to stick with 5.10.y) using the instructions
     from the LFS book for
     <a href="../../lfs/view/11.0/chapter10/kernel.html">Linux Kernel (sysv)</a> or
@@ -1066,7 +1065,7 @@
     <a href="../view/11.0-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="sa-10.1-054"/>
-    <h4>10.1 054 Linux Kernel (LFS)  Date: 2021-03-31  Severity: High</h4>
+    <h4>10.1 054 Linux Kernel (LFS)  Updated: 2021-03-31  Severity: High</h4>
     <p>In Linux 5.12.7 and all earlier kernels back to 2.6.12 a "confused
     deputy" weakness exists, which makes it possible to trick another process
     (which may have different credentials) to write to its own /proc/$pid/attr/
@@ -1078,8 +1077,7 @@
     or later) using the instructions from the LFS book for
     <a href="../../lfs/view/11.0/chapter10/kernel.html">Linux Kernel (sysv)</a> or
     <a href="../../lfs/view/11.0-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.
-    Note that other linux-5 kernels are no-longer maintained, and the maintained
-    linux-4 kernels have not yet been updated.</p>
+    Note that since August linux-5.12 kernels are no-longer maintained.</p>
 
     <a id="sa-10.1-053"/>
     <h4>10.1 053 ISC DHCP Date: 2021-05-29 Severity: High</h4>
@@ -1151,8 +1149,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-31535">CVE-2021-31535</a>,
     and more information can be found at
     <a href="https://lists.x.org/archives/xorg-announce/2021-May/003088.html">libX11 security advisory</a>.</p>
-    <p>To fix this vulnerability, update to libX11-1.7.1 using the instructions
-    at
+    <p>To fix this vulnerability, update to libX11-1.7.1 or later using the
+    instructions at
     <a href="../view/11.0/x/x7lib.html">Xorg Libraries (sysv)</a>, or
     <a href="../view/11.0-systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
 
@@ -1174,23 +1172,22 @@
     <a href="https://www.postgresql.org/support/security/CVE-2021-32028/">CVE-2021-32028</a>,
     <a href="https://www.postgresql.org/support/security/CVE-2021-32029/">CVE-2021-32029</a>, and
     <a href="https://www.postgresql.org/support/security/CVE-2021-32027/">CVE-2021-32027</a>.</p>
-    <p>To fix these vulnerabilities, update to PostgreSQL-13.3 using the
+    <p>To fix these vulnerabilities, update to PostgreSQL-13.3 or later using the
     instructions at
     <a href="../view/11.0/server/postgresql.html">PostgreSQL (sysv)</a>, or
     <a href="../view/11.0-systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
 
     <a id="sa-10.1-048"/>
-    <h4>10.1 048 rxvt-unicode Date: 2021-05-18 Severity: Critical</h4>
+    <h4>10.1 048 rxvt-unicode Updated: 2021-05-18 Severity: High</h4>
     <p>A security vulnerability was fixed in rxvt-unicode-9.26 that may allow
     for remote code execution. An exploit has been discovered in the wild and
     was published to the oss-security mailing list. The vulnerability occurs
     due to the way that rxvt handles ANSI escape sequences, replying to queries
     with a newline-terminated message, and will allow applications to execute
-    without user intervention. No CVE has been assigned, but more details can
-    be found at
-    <a href="https://seclists.org/oss-sec/2021/q2/145">oss-sec: rxvt terminal 0day</a>.
-    Note that there is some strong language within that link, but until a CVE
-    is assigned, this is the only information that is available.</p>
+    without user intervention. This was originally graded as critical (no CVE
+    was available) but the details at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33477">CVE-2021-33477</a>
+    now show it as high severity.</p>
     <p>To fix this vulnerability, update to rxvt-unicode-9.26 using the
     instructions at
     <a href="../view/11.0/xsoft/rxvt-unicode.html">rxvt-unicode (sysv)</a>, or
@@ -1501,18 +1498,19 @@
     <a href="../view/11.0-systemd/basicnet/cifsutils.html">cifs-utils (systemd)</a>.</p>
 
     <a id="sa-10.1-029"/>
-    <h4>10.1 029 NetworkManager Date: 2021-04-14 Severity: Low</h4>
-    <p>A security vulnerability was found in NetworkManager where a local or 
-    remote attacker could set a "match.path" statement in a Network file, which
-    would cause NetworkManager to crash. The root cause of this vulnerability
+    <h4>10.1 029 NetworkManager Updated: 2021-09-01 Severity: Medium</h4>
+    <!-- reworded (ken) - the CVE is now public but says it was fixed in 1.30.0.
+    We updated to 1.30.2 and then later applied a sed to fix it. But pointing to
+    the 11.0 release while mentioning a sed is confusing. -->
+    <p>A security vulnerability was found in NetworkManager up tp 1.30.2 where
+    a local or  remote attacker could set a "match.path" statement in a Network file,
+    which would cause NetworkManager to crash. The root cause of this vulnerability
     is improper input validation.
     This vulnerability has been assigned
-    <a href="https://access.redhat.com/security/cve/cve-2021-20297">CVE-2021-20297</a>.</p>
-    <p>To fix this, apply a sed to NetworkManager using the instructions in
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20297">CVE-2021-20297</a>.</p>
+    <p>To fix this up date to NetworkManager-1.30.4 or later using the instructions at
     <a href="../view/11.0/basicnet/networkmanager.html">NetworkManager (sysv)</a>, or
     <a href="../view/11.0-systemd/basicnet/networkmanager.html">NetworkManager (systemd)</a>.</p>
-    <!-- Pulling the CVE from RedHat because it is "Reserved" at MITRE and
-         unavailable at NVD. -->
 
     <a id="sa-10.1-028"/>
     <h4>10.1 028 Avahi Date: 2021-04-14 Severity: Medium</h4>
@@ -1521,12 +1519,10 @@
     /run/avahi-daemon/socket. The event used to signal the termination of a
     client connection was not correctly handled. 
     This vulnerability has been assigned
-    <a href="https://access.redhat.com/security/cve/cve-2021-3468">CVE-2021-3468</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3468">CVE-2021-3468</a>.</p>
     <p>To fix this, apply a sed to Avahi using the instructions in
     <a href="../view/11.0/basicnet/avahi.html">Avahi (sysv)</a>, or
     <a href="../view/11.0-systemd/basicnet/avahi.html">Avahi (systemd)</a>.</p>
-    <!-- Pulling the CVE from RedHat because it is "Reserved" at MITRE and
-         unavailable at NVD. -->
 
     <a id="sa-10.1-027"/>
     <h4>10.1 027 Thunderbird  Updated: 2021-04-11  Severity: Medium</h4>
@@ -1535,11 +1531,11 @@
     encrypted email. These vulnerabilities have been rated Moderate, and have
     been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23991">CVE-2021-23991</a>,
-    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-13/#MOZ-2021-23992">MOZ-2021-23992</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23992">CVE-2021-23992</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23993">CVE-2021-23993</a>.
     Additional information can be found at
     <a href="https://www.mozilla.org/en-US/security/advisories/msfa2021-13/">MSFA2021-13</a>.</p>
-    <p>To fix these, update to the Thunderbird-78.9.1 using the instructions at
+    <p>To fix these, update to Thunderbird-78.9.1 or later using the instructions at
     <a href="../view/11.0/xsoft/thunderbird.html">Thunderbird (sysv)</a>, or
     <a href="../view/11.0-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
@@ -1573,7 +1569,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-7774/">CVE-2020-7774</a>
     and for an explanaton of 'Prototype Pollution' see
     <a href="https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1038306/">SNYK-JAVA-ORGWEBJARSNPM-1038306</a>.</p>
-    <p>To fix these, update to Node.JS-14.16.1 or later using the instructions for
+    <p>To fix these, update to Node.JS-14.16.1 or later using the instructions at
     <a href="../view/11.0/general/nodejs.html">Node.JS (sysv)</a> or
     <a href="../view/11.0-systemd/general/nodejs.html">Node.JS (systemd)</a>.</p>
 
@@ -1620,7 +1616,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0499">CVE-2020-0499</a>.</p>
     <p>This has been fixed upstream, but no new version has been released.
     To fix this, apply the patch
-    <a href="http://www.linuxfromscratch.org/patches/downloads/flac/flac-1.3.3-security_fix-1.patch">flac-1.3.3-security_fix-1.patch</a>
+    <a href="http://www.linuxfromscratch.org/patches/downloads/flac/flac-1.3.3-security_fixes-1.patch">flac-1.3.3-security_fixes-1.patch</a>
     using the instructions for
     <a href="../view/11.0/multimedia/flac.html">Flac (sysv)</a> or
     <a href="../view/11.0-systemd/multimedia/flac.html">Flac (systemd)</a>
@@ -1687,9 +1683,9 @@
     <p>In WebKitGTK 2.32.0, three security vulnerabilities were fixed
     that could lead to arbitary code execution.
     These vulnerabilities have been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1788">CVE-2021-1788 (NOT PUBLIC YET)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1844">CVE-2021-1844 (NOT PUBLIC YET)</a>, and
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1871">CVE-2021-1871 (NOT PUBLIC YET)</a>.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1788">CVE-2021-1788</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1844">CVE-2021-1844</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1871">CVE-2021-1871</a>.
     Additional information can be found at
     <a href="https://webkitgtk.org/security/WSA-2021-0003.html">WSA-2021-0003</a>.</p>
     <p>To fix these vulnerabilities, update to WebKitGTK-2.32.0 or higher
@@ -1721,8 +1717,8 @@
     <p>In Samba-4.14.2, two security vulnerabilities were fixed that could
     lead to denial of service or disclosure of sensitive information.
     These vulnerabilities have been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27840">CVE-2020-27840 (NOT PUBLIC YET)</a> and
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20277">CVE-2021-20277 (NOT PUBLIC YET)</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27840">CVE-2020-27840</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20277">CVE-2021-20277</a>.</p>
     <p>To fix these vulnerabilities, update to Samba-4.14.2 or higher
     using the instructions for
     <a href="../view/11.0/basicnet/samba.html">Samba (sysv)</a> or
@@ -1740,12 +1736,12 @@
     vulnerabilities has an exploit in the wild and is being actively 
     exploited. These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27918">CVE-2020-27918</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29623">CVE-2020-29623 (NOT PUBLIC YET)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1765">CVE-2021-1765 (NOT PUBLIC YET)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1789">CVE-2021-1789 (NOT PUBLIC YET)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1799">CVE-2021-1799 (NOT PUBLIC YET)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1801">CVE-2021-1801 (NOT PUBLIC YET)</a>,
-    and <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1870">CVE-2021-1870 (NOT PUBLIC YET)</a>.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29623">CVE-2020-29623</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1765">CVE-2021-1765</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1789">CVE-2021-1789</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1799">CVE-2021-1799</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1801">CVE-2021-1801</a>,
+    and <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-1870">CVE-2021-1870</a>.
     Additional information can be found at
     <a href="https://webkitgtk.org/security/WSA-2021-0002.html">WSA-2021-0002</a>.</p>
     <p>To fix these vulnerabilities, update to WebKitGTK-2.30.6 or higher
@@ -1783,8 +1779,8 @@
     <p>In Thunderbird before 78.9.0 there were two vulnerabilities rated as
     High for linux systems (the angle graphics item only applies to MS Windows), see
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-12/">mfsa2021-12</a>.
-    CVEs have been assigned (CVE-2021-23981, CVE-2021-23987),
-    but details are not yet public.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23981">CVE-2021-23981</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23987">CVE-2021-23987</a>.</p>
     <p>To fix these, update to thunderbird-78.9.0 or later using the instructions
     for
     <a href="../view/11.0/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
@@ -1815,9 +1811,9 @@
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27906">CVE-2021-27906</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27807">CVE-2021-27807</a>.</p>
-    <p>To fix these, update the supplemental JAR files in fop to 2.0.23 using the
-    instructions in
-    <a href="../view/11.0/pst/fop.html">fop (sysv)</a> or
+    <p>To fix these, update the supplemental JAR files in fop to 2.0.23 or update
+    to a later version using the instructions in
+    <a href="../view/11.0/pst/fop.html">fop (sysv)</a> or 
     <a href="../view/11.0-systemd/pst/fop.html">fop (systemd)</a>.</p>
 
     <a id="sa-10.1-009"/>
@@ -1835,8 +1831,11 @@
     <p>In firefox 78.9.0 several vulnerabilities were fixed, two
     are rated as High. See
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-11/">mfsa2021-11</a>.
-    CVEs have been assigned (CVE-2021-23981, CVE-2021-23982, CVE-20201-23984,
-    CVE-2021-23987) but details are not yet public.</p>
+    See
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23981">CVE-2021-23981</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23982">CVE-2021-23982</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23984">CVE-2021-23984</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23987">CVE-2021-23987</a>.</p>
     <p>To fix these, update to firefox-78.9.0 or later using the instructions
     for
     <a href="../view/11.0/xsoft/firefox.html">Firefox (sysv)</a> or
@@ -1889,7 +1888,8 @@
     later (if you prefer to stick with 5.10.y) using the instructions
     from the LFS book for
     <a href="../../lfs/view/11.0/chapter10/kernel.html">Linux Kernel (sysv)</a> or
-    <a href="../../lfs/view/11.0-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <a href="../../lfs/view/11.0-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.
+    Note that linux kernel 5.11 and 5.12 versions are no-longer maintained.</p>
 
     <a id="sa-10.1-004"/>
     <h4>10.1 004 GnuTLS  Date: 2021-03-12  Severity: Low</h4>
@@ -1902,8 +1902,8 @@
     <a href="https://gitlab.com/gnutls/gnutls/-/issues/1151">GnuTLS issue
     tracker</a>.</p>
     <p>To fix these, update to GnuTLS-3.7.1 or later using the instructions in
-    <a href="../view/11.0/general/gnutls.html">GnuTLS (sysv)</a> or
-    <a href="../view/11.0-systemd/general/gnutls.html">GnuTLS (systemd)</a>.</p>
+    <a href="../view/11.0/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/11.0-systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
     <a id="sa-10.1-003"/>
     <h4>10.1 003 MuPDF  Date: 2021-03-10  Severity: Medium</h4>
