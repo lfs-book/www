@@ -79,6 +79,25 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.0-002"/>
+    <h4>11.0 002 Firefox  Date: 2021-09-07  Severity: High</h4>
+    <p>In firefox 78.14.0 and 91.1.0, the usual 'Memory Safety bugs' with a High
+    severity have been fixed. However, the advisory for 91.1.0
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-40/">mfsa-2021-40</a>
+    appears to have a typo (it says CVE-2021-38495), the corresponding advisories for
+    78.14.0
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-39/">mfsa-2021-39</a>
+    and for 92.0 (which has an additional CVE fix)
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-38/">mfsa-2021-38</a>
+    are clear that the item is CVE-2021-38493. This is not yet public :
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38493">CVE-2021-38493 (Not yet public)</a>.</p>
+    <p>To fix these, either update to firefox-91.1.0esr or later :
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>
+    or if you wish to stay on the 78esr series in the short term, update to
+    legacy firefox-78.14.0esr or later:
+    <a href="../view/svn/xsoft/firefox-legacy.html">Firefox-legacy (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox-legacy.html">Firefox-legacy (systemd)</a>.</p>
 
     <a id="sa-11.0-001"/>
     <h4>11.0 001 Node.js   Date: 2021-09-07 Severity: High</h4>
