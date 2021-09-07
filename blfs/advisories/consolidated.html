@@ -77,8 +77,30 @@
 
     <!-- when we do have advisories, comment this for next time -->
 
-    <p>There are currently no known security vulnerabilities for the latest
-    releases of the books.</p>
+    <!--<p>There are currently no known security vulnerabilities for the latest
+    releases of the books.</p>-->
+
+    <a id="sa-11.0-001"/>
+    <h4>11.0 001 Node.js   Date: 2021-09-07 Severity: High</h4>
+    <p>In node.js-14.17.6, five security vulnerabilities were fixed that could
+    lead to arbitrary file creation/overwrite (due to insufficient symlink
+    protection) and arbitrary code execution. When using the Arborist module,
+    extracting the package into a node_modules folder that contains a symbolic
+    link will result in files being written to any location on the filesystem.
+    The node-tar module was also affected by a symbolic link attack that could
+    allow symlinks in a tarball to escape into the filesystem and overwrite (or
+    create) files in attacker-controlled locations. Both node-tar and Arborist
+    are included with Node.js. 
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37701">CVE-2021-37701</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37712">CVE-2021-37712</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37713">CVE-2021-37713</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39134">CVE-2021-39134</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39135">CVE-2021-39135</a>.</p>
+    <p>To fix these vulnerabilities, update to Node.js-14.17.6 using the
+    instructions for
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
 
     <!-- Note for SA-10.1-042 -> 045: During this time period,
          the NVD website returned 404 for each CVE inputted. As a result,
