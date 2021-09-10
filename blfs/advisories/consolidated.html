@@ -80,6 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-005"/>
+    <h4>11.0 005 Ghostscript  Date: 2021-09-10  Severity: Critical</h4>
+    <p>A vulnerability in the ghostscript library libgs.so which allows
+    arbitrary code execution, for example by invoking the convert program from
+    ImageMagick on a user-supplied image file, was announced in August with a
+    public PoC provided. This was initially reported as applying to version
+    9.50. It has now been reported upstream and determined to apply to all
+    current versions from 9.50 onwards. Upstream have applied a fix and are
+    now preparing for a new release (expected later this month). The public
+    details can now be seen at
+    <a href="https://bugs.ghostscript.com/show_bug.cgi?id=704342">bug 704342</a>,
+    CVE-2021-3781 has been created, details are not yet public:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3781/">CVE-2021-3781 (Not yet public)</a>.</p>
+    <p>To fix this use ghostscript-9.54 with the
+    <a href="http://www.linuxfromscratch.org/patches/downloads/ghostscript/ghostscript-9.54.0-upstream_fix-2.patch">ghostscript-9.54.0-upstream_fix-2.patch</a>
+    from the development book, or upgrade to a later version when that is released.
+    <a href="../view/svn/pst/gs.html">Ghostscript (sysv)</a> or
+    <a href="../view/systemd/pst/gs.html">Ghostscript (systemd)</a>.</p>
+
     <a id="sa-11.0-004"/>
     <h4>11.0 004 Thunderbird  Date: 2021-09-10  Severity: High</h4>
     <p>In thunderbird 91.1.0, a Memory Safety bug with a High
