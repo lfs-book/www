@@ -80,6 +80,19 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-006"/>
+    <h4>11.0 006 Apache HTTPD  Date: 2021-09-18  Severity: High</h4>
+    <p>Several 
+    <a href="https://httpd.apache.org/security/vulnerabilities_24.html">vulnerabilities</a>
+    in the Apache web server have been found, one of which is rated high:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40438/">CVE-2021-40438</a>.
+    A crafted request uri-path can cause mod_proxy to forward the request
+    to an origin server choosen by the remote user. This issue affects
+    Apache HTTP Server 2.4.48 and earlier.</p>
+    <p>To fix this upgrade to Apache-2.4.49 later:
+    <a href="../view/svn/server/httpd.html">Apache (sysv)</a> or
+    <a href="../view/systemd/server/httpd.html">Apache (systemd)</a>.</p>
+
     <a id="sa-11.0-005"/>
     <h4>11.0 005 Ghostscript  Date: 2021-09-10  Severity: Critical</h4>
     <p>A vulnerability in the ghostscript library libgs.so which allows
