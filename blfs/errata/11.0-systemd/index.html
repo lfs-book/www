@@ -7,9 +7,18 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
-
+<!--
      <ul>
        <li>There are no current errata for blfs-11.0-systemd.</li>
+     </ul>
+-->
+
+     <ul>
+       <li>When compiling Shadow in BLFS, changes were made to Makefile.in
+           prior to running 'autoreconf -fiv', which causes those changes to
+           be lost. Run 'autoreconf -fiv' before the changes to Makefile.in
+           instead, and execute the two seds below the one for login.defs
+           first.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>

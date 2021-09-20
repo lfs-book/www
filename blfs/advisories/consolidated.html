@@ -77,8 +77,118 @@
 
     <!-- when we do have advisories, comment this for next time -->
 
-    <p>There are currently no known security vulnerabilities for the latest
-    releases of the books.</p>
+    <!--<p>There are currently no known security vulnerabilities for the latest
+    releases of the books.</p>-->
+
+    <a id="sa-11.0-006"/>
+    <h4>11.0 006 Apache HTTPD  Date: 2021-09-18  Severity: High</h4>
+    <p>Several 
+    <a href="https://httpd.apache.org/security/vulnerabilities_24.html">vulnerabilities</a>
+    in the Apache web server have been found, one of which is rated high:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40438/">CVE-2021-40438</a>.
+    A crafted request uri-path can cause mod_proxy to forward the request
+    to an origin server choosen by the remote user. This issue affects
+    Apache HTTP Server 2.4.48 and earlier.</p>
+    <p>To fix this upgrade to Apache-2.4.49 or later:
+    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+
+    <a id="sa-11.0-005"/>
+    <h4>11.0 005 Ghostscript  Date: 2021-09-10  Severity: Critical</h4>
+    <p>A vulnerability in the ghostscript library libgs.so which allows
+    arbitrary code execution, for example by invoking the convert program from
+    ImageMagick on a user-supplied image file, was announced in August with a
+    public PoC provided. This was initially reported as applying to version
+    9.50. It has now been reported upstream and determined to apply to all
+    current versions from 9.50 onwards. Upstream have applied a fix and are
+    now preparing for a new release (expected later this month). The public
+    details can now be seen at
+    <a href="https://bugs.ghostscript.com/show_bug.cgi?id=704342">bug 704342</a>,
+    CVE-2021-3781 has been created, details are not yet public:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3781/">CVE-2021-3781 (Not yet public)</a>.</p>
+    <p>To fix this use ghostscript-9.54 with the
+    <a href="http://www.linuxfromscratch.org/patches/downloads/ghostscript/ghostscript-9.54.0-upstream_fix-2.patch">ghostscript-9.54.0-upstream_fix-2.patch</a>
+    from the development book, or upgrade to a later version when that is released.
+    <a href="../view/svn/pst/gs.html">Ghostscript (sysv)</a> or
+    <a href="../view/systemd/pst/gs.html">Ghostscript (systemd)</a>.</p>
+
+    <a id="sa-11.0-004"/>
+    <h4>11.0 004 Thunderbird  Date: 2021-09-10  Severity: High</h4>
+    <p>In thunderbird 91.1.0, a Memory Safety bug with a High
+    severity has been fixed. See
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-41/">mfsa-2021-41</a>.
+    This is not yet public:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38495">CVE-2021-38495 (Not yet public)</a>.</p>
+    <p>To fix this, update to thunderbird-91.1.0 or later:
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.0-003"/>
+    <h4>11.0 003 SANE     Date: 2021-09-08  Severity: Medium</h4>
+    <p>In sane-backends-1.0.32, several security vulnerabilities were fixed
+    with Epson scanners, and also in the magicolor backend and the TCP
+    (Network) scanning backend. These can result in a malicious scanner
+    residing on the same network as the victim causing a denial of service
+    (application crash). With the Epson scanner backend, it's also possible
+    for a malicious Epson scanner to read important information from
+    applications that use SANE (such as the ASLR offsets of the program), or
+    to execute arbitrary code whenever a program, such as GIMP, queries the
+    scanner for basic information. If you have an Epson scanner on your network
+    or connected directly to your computer, upgrading SANE is suggested.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12867">CVE-2020-12867</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12862">CVE-2020-12862</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12863">CVE-2020-12863</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12865">CVE-2020-12865</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12866">CVE-2020-12866</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12861">CVE-2020-12861</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12864">CVE-2020-12864</a>.</p>
+    <p>To fix these vulnerabilities, update to sane-backends-1.0.32 using the
+    instructions for
+    <a href="../view/svn/pst/sane.html">SANE (sysv)</a>, or
+    <a href="../view/systemd/pst/sane.html">SANE (systemd)</a>.</p>
+
+    <a id="sa-11.0-002"/>
+    <h4>11.0 002 Firefox  Date: 2021-09-07  Severity: High</h4>
+    <p>In firefox 78.14.0 and 91.1.0, the usual 'Memory Safety bugs' with a High
+    severity have been fixed. However, the advisory for 91.1.0
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-40/">mfsa-2021-40</a>
+    appears to have a typo (it says CVE-2021-38495), the corresponding advisories for
+    78.14.0
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-39/">mfsa-2021-39</a>
+    and for 92.0 (which has an additional CVE fix)
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-38/">mfsa-2021-38</a>
+    are clear that the item is CVE-2021-38493. This is not yet public :
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38493">CVE-2021-38493 (Not yet public)</a>.</p>
+    <p>To fix these, either update to firefox-91.1.0esr or later :
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>
+    or if you wish to stay on the 78esr series in the short term, update to
+    legacy firefox-78.14.0esr or later:
+    <a href="../view/svn/xsoft/firefox-legacy.html">Firefox-legacy (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox-legacy.html">Firefox-legacy (systemd)</a>.</p>
+
+    <a id="sa-11.0-001"/>
+    <h4>11.0 001 Node.js   Date: 2021-09-07 Severity: High</h4>
+    <p>In node.js-14.17.6, five security vulnerabilities were fixed that could
+    lead to arbitrary file creation/overwrite (due to insufficient symlink
+    protection) and arbitrary code execution. When using the Arborist module,
+    extracting the package into a node_modules folder that contains a symbolic
+    link will result in files being written to any location on the filesystem.
+    The node-tar module was also affected by a symbolic link attack that could
+    allow symlinks in a tarball to escape into the filesystem and overwrite (or
+    create) files in attacker-controlled locations. Both node-tar and Arborist
+    are included with Node.js. 
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37701">CVE-2021-37701</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37712">CVE-2021-37712</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37713">CVE-2021-37713</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39134">CVE-2021-39134</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39135">CVE-2021-39135</a>.</p>
+    <p>To fix these vulnerabilities, update to Node.js-14.17.6 using the
+    instructions for
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
 
     <!-- Note for SA-10.1-042 -> 045: During this time period,
          the NVD website returned 404 for each CVE inputted. As a result,

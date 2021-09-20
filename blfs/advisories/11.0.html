@@ -10,9 +10,11 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
+<!--
      <ul>
        <li>There are currently no known security vulnerabilities for BLFS-10.1.</li>
      </ul>
+-->
 
     <!-- Editors: do the consolidated file first, to get the next number -->
 
@@ -50,4 +52,75 @@
 -->
 <!-- end of PackageName -->
 
+    <h3>Apache HTTPD</h3>
+
+    <a id="sa-11.0-006"/>
+    <h4>11.0 006 Apache HTTPD  Date: 2021-09-18  Severity: High</h4>
+    <p>Several vulnerabilities have been fixed in Apache HTTPD 2.4.49,
+    one of which is rated high.
+    To fix these, update to httpd-2.4.49 or later.
+    <a href="consolidated.html#sa-11.0-006">11.0-006</a></p>
+
+<!-- end of Apache HTTPD -->
+
+    <h3>Firefox</h3>
+
+    <a id="sa-11.0-002"/>
+    <h4>11.0 002 Firefox  Date: 2021-09-07  Severity: High</h4>
+    <p>In firefox 78.14.0 and 91.1.0, the usual 'Memory Safety bugs' were fixed.
+    To fix these, update to firefox-91.1.0 (or firefox-78.14.0 if you are still
+    using firefox-78).
+    <a href="consolidated.html#sa-11.0-002">11.0-002</a></p>
+
+<!-- end of Firefox -->
+
+    <h3>Ghostscript</h3>
+
+    <a id="sa-11.0-005"/>
+    <h4>11.0 005 Ghostscript  Date: 2021-09-10  Severity: Critical</h4>
+    <p>A vulnerability in the ghostscript library libgs.so which allows
+    arbitrary code execution, for example by invoking the convert program from
+    ImageMagick on a user-supplied image file, was announced in August with a
+    public PoC provided. This was initially reported as applying to version
+    9.50. It has now been reported upstream and determined to apply to all
+    current versions from 9.50 onwards. To fix this apply the upstream_fix-2
+    patch from the development books, or upgrade to a later release when that
+    is available.
+    <a href="consolidated.html#sa-11.0-005">11.0-005</a></p>
+
+<!-- end of Ghostscript -->
+
+    <h3>Node.js</h3>
+
+    <a id="sa-11.0-001"/>
+    <h4>11.0 001 Node.js      Date: 2021-09-07  Severity: High</h4>
+    <p>In node.js-14.17.6, five security vulnerabilities have been fixed that
+    could allow for arbitrary file creation/overwrite and arbitrary code
+    execution. Update to node.js-14.17.6 or later.
+    <a href="consolidated.html#sa-11.0-001">11.0-001</a></p>
+
+<!-- end of Node.js -->
+
+    <h3>SANE</h3>
+
+    <a id="sa-11.0-003"/>
+    <h4>11.0 003 SANE         Date: 2021-09-08  Severity: Medium</h4>
+    <p>In sane-backends-1.0.32, several security vulnerabilities with Epson
+    scanners were resolved that could lead to malicious scanners reading
+    important information from programs that use SANE, executing arbitrary
+    code, or crashing programs that use SANE. Update to sane-backends-1.0.32
+    if you have an Epson scanner on your network.
+    <a href="consolidated.html#sa-11.0-003">11.0-003</a></p>
+
+<!-- end of SANE -->
+
+    <h3>Thunderbird</h3>
+
+    <a id="sa-11.0-004"/>
+    <h4>11.0 004 Thunderbird  Date: 2021-09-10  Severity: High</h4>
+    <p>In thunderbird 91.1.0, a few Memory Safety bugs were fixed.
+    To fix this, update to thunderbird-91.1.0.
+    <a href="consolidated.html#sa-11.0-004">11.0-004</a></p>
+
+<!-- end of Thunderbird -->
 <!--#include virtual="/common/footer.html" -->
