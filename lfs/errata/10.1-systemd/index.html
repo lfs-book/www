@@ -33,6 +33,11 @@
            "-j N" is set in MAKEFLAGS.  To workaround it, append "-j1" into
            Binutils (pass1, pass2, and final) "make install" command
            (Reported by Hans Meier).</li>
+           <li>When building Tcl, the tarball containing the documentation
+           is downloaded and untarred, but not installed into the system.
+           Install the documentation using the commands
+           <code>mkdir -v -p /usr/share/doc/tcl-8.6.11</code> and
+           <code>cp -v -r  ../html/* /usr/share/doc/tcl-8.6.11</code>.</li>
          </ul>
 
 
