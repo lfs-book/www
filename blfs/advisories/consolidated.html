@@ -81,6 +81,20 @@
     releases of the books.</p>-->
 
     <a id="sa-11.0-010"/>
+    <h4>11.0 010 Fetchmail  Date: 2021-09-23 Severity: Medium</h4>
+    <p>In fetchmail before version 6.4.22, on IMAP connections without --ssl
+    and with nonempty --sslproto, meaning that fetchmail is to enforce TLS, if
+    the server or an attacker sends a PREAUTH greeting, fetchmail used to continue
+    an unencrypted connection.  It is recommended to use '--ssl' or the ssl user
+    option in an rcfile.  Those were added to BLFS-11.0 in a note just before the
+    release, the BLFS editors believe that using those removes the problem and
+    in that case no update is necessary. The vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39272">CVE-2021-39272</a>.</p>
+    <p>In other cases, update to Fetchmail-6.2.22 or later using the instructions for
+    <a href="../view/svn/basicnet/fetchmail.html">Fetchmail (sysv)</a>, or
+    <a href="../view/systemd/basicnet/fetchmail.html">Fetchmail (systemd)</a>.</p>
+
+    <a id="sa-11.0-010"/>
     <h4>11.0 010 WebKitGTK+    Date: 2021-09-22   Severity: Critical</h4>
     <p>In WebKitGTK+-2.34.0 (and WebKitGTK+-2.32.4), a critical 0day security
     vulnerability was fixed that allows for attackers to silently execute

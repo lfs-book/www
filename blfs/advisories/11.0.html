@@ -75,6 +75,22 @@
 
 <!-- end of cURL -->
 
+    <h3>Fetchmail</h3>
+
+    <a id="sa-11.0-010"/>
+    <h4>11.0 010 Fetchmail  Date: 2021-09-23 Severity: Medium</h4>
+    <p>In fetchmail before version 6.4.22, on IMAP connections without --ssl
+    and with nonempty --sslproto, meaning that fetchmail is to enforce TLS, if
+    the server or an attacker sends a PREAUTH greeting, fetchmail used to continue
+    an unencrypted connection.  It is recommended to use '--ssl' or the ssl user
+    option in an rcfile.  Those were added to BLFS-11.0 in a note just before the
+    release, the BLFS editors believe that using those removes the problem and
+    in that case no update is necessary. In other cases, update to fetchmail-6.4.22
+    or later.
+    <a href="consolidated.html#sa-11.0-010">11.0-010</a></p>
+
+<!-- end of Fetchmail -->
+
     <h3>Firefox</h3>
 
     <a id="sa-11.0-002"/>
