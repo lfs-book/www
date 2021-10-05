@@ -80,6 +80,32 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-012"/>
+    <h4>11.0 012 Firefox  Date: 2021-10-05  Severity: Critical</h4>
+    <p>In firefox 78.15.0 and 91.2.0, the usual 'Memory Safety bugs' with a High
+    severity have been fixed as well as some other CVEs to which mozilla give a
+    lower severity, but for one of these NVD has now rated it as critical.
+    These are listed in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-44/">mfsa-2021-44</a>
+    and
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-45/">mfsa-2021-45</a>.
+    One of these is for the rust crosbeam-deque package, and rated as moderate
+    severity by mozilla, but now rated as Critical by NVD:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-32810">CVE-2021-32810</a>.
+    The rest are not yet public, except in the mozilla advisories :
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38496">CVE-2021-38496 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38497">CVE-2021-38497 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38498">CVE-2021-38498 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38500">CVE-2021-38500 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38501">CVE-2021-38501 (Not yet public)</a>.</p>
+    <p>To fix these, either update to firefox-91.12.0esr or later :
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.
+    The legacy 78esr series has been updated in 78.15.0 but will not receive any further
+    security fixes and will be removed from the book shortly. In the meantime it is at:
+    <a href="../view/svn/xsoft/firefox-legacy.html">Firefox-legacy (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox-legacy.html">Firefox-legacy (systemd)</a>.</p>
+
     <a id="sa-11.0-011"/>
     <h4>11.0 011 Fetchmail  Date: 2021-09-23 Severity: Medium</h4>
     <p>In fetchmail before version 6.4.22, on IMAP connections without --ssl
