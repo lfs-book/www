@@ -28,7 +28,11 @@
 -->
        <h2>Miscellaneous Errata</h2>
          <ul>
-           <li>There are no current errata items for LFS 10.0.</li> 
+           <li>When building Tcl, the tarball containing the documentation
+           is downloaded and untarred, but not installed into the system.
+           Install the documentation using the commands
+           <code>mkdir -v -p /usr/share/doc/tcl-8.6.10</code> and
+           <code>cp -v -r  ../html/* /usr/share/doc/tcl-8.6.10</code>.</li>
          </ul>
 
 

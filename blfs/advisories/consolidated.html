@@ -80,6 +80,106 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-011"/>
+    <h4>11.0 011 Fetchmail  Date: 2021-09-23 Severity: Medium</h4>
+    <p>In fetchmail before version 6.4.22, on IMAP connections without --ssl
+    and with nonempty --sslproto, meaning that fetchmail is to enforce TLS, if
+    the server or an attacker sends a PREAUTH greeting, fetchmail used to continue
+    an unencrypted connection.  It is recommended to use '--ssl' or the ssl user
+    option in an rcfile.  Those were added to BLFS-11.0 in a note just before the
+    release, the BLFS editors believe that using those removes the problem and
+    in that case no update is necessary. The vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39272">CVE-2021-39272</a>.</p>
+    <p>In other cases, update to Fetchmail-6.2.22 or later using the instructions for
+    <a href="../view/svn/basicnet/fetchmail.html">Fetchmail (sysv)</a>, or
+    <a href="../view/systemd/basicnet/fetchmail.html">Fetchmail (systemd)</a>.</p>
+
+    <a id="sa-11.0-010"/>
+    <h4>11.0 010 WebKitGTK+    Date: 2021-09-22   Severity: Critical</h4>
+    <p>In WebKitGTK+-2.34.0 (and WebKitGTK+-2.32.4), a critical 0day security
+    vulnerability was fixed that allows for attackers to silently execute
+    arbitrary code via maliciously crafted web content. In some cases, this
+    may include advertisements embedded on normal web pages. There have been
+    several reports over the past couple of days of this vulnerability being
+    exploited in the wild to silently install malware on various Apple devices,
+    and WebKitGTK+ is impacted because it uses Apple's WebKit. This
+    vulnerability was fixed with improved memory management, and updating to
+    the latest WebKit should be done without any delay due to it being actively
+    exploited through advertisements on many web pages and through other means,
+    such as malicious JPEG and PNG images. Exploitation is possible through the
+    Epiphany web browser and through malicious emails in Evolution or Balsa.
+    The vulnerability has been named "FORCEDENTRY".
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30858">CVE-2021-30858</a>,
+    and additional information is available at
+    <a href="https://us-cert.cisa.gov/ncas/current-activity/2021/09/13/apple-releases-security-updates-address-cve-2021-30858-and-cve">
+    United States Cybersecurity and Infrastructure Security Agency Advisory</a> and
+    <a href="https://support.apple.com/en-us/HT212808">Apple Security Advisory</a>.</p>
+    <p>To fix this security vulnerability, update to WebKitGTK+-2.34.0 (or
+    WebKitGTK+-2.32.4) immediately using the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-11.0-009"/>
+    <h4>11.0 009 libexif       Date: 2021-09-22   Severity: Moderate</h4>
+    <p>In libexif before 0.6.23, four total security vulnerabilities existed
+    that could allow for denial of service and arbitrary code execution. Two of
+    these security vulnerabilities were fixed in a patch for libexif in
+    BLFS 10.1. The two new security vulnerabilities have not been assigned CVEs
+    as they were discovered by automated testing.
+    The two previous vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0198">CVE-2020-0198</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0452">CVE-2020-0452</a>.</p>
+    <p>To fix these new vulnerabilities, update to libexif-0.6.23 or later
+    using the instructions for
+    <a href="../view/svn/general/libexif.html">libexif (sysv)</a> or
+    <a href="../view/systemd/general/libexif.html">libexif (systemd)</a>.</p>
+
+    <a id="sa-11.0-008"/>
+    <h4>11.0 008 cURL          Date: 2021-09-22   Severity: High</h4>
+    <p>In cURL before 7.79.0, three security vulnerabilities exist that could
+    allow for a denial of service, security protocol downgrades (leading to
+    disclosure of encrypted information), and malicious data injection. The
+    denial of service vulnerability occurs when sending data to a MQTT server
+    over the MQTT protocol, and that protocol is built into cURL by default.
+    The protocol downgrade vulnerability affects POP3, FTP, and IMAP connections
+    and occurs when a malicious server (or man-in-the-middle attacker) sends a
+    properly crafted and legitimate response. The flaw makes cURL silently
+    continue it's operations without encryption, contrary to the instructions
+    passed to it as well as general expectations. The data injection
+    vulnerability happens when using the STARTTLS protocol with IMAP, POP3,
+    SMTP, or FTP. Multiple responses can be received prior to using STARTTLS
+    to upgrade the connection to TLS, and cURL would process these out of
+    cache and trust them instead of processing (and verifying) them after the
+    TLS handshake was performed. This allows man-in-the-middle attackers to
+    inject fake responses and trick cURL into sending malicious (or fake) data
+    back to the user.
+    These vulnerabilities have been assigned
+    <a href="https://curl.se/docs/CVE-2021-22945.html">CVE-2021-22945</a>,
+    <a href="https://curl.se/docs/CVE-2021-22946.html">CVE-2021-22946</a>, and
+    <a href="https://curl.se/docs/CVE-2021-22947.html">CVE-2021-22947</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.79.0 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-11.0-007"/>
+    <h4>11.0 007 Python (LFS and BLFS) Date: 2021-09-22 Severity: Moderate</h4>
+    <p>In Python3 before 3.9.7, three security vulnerabilities exist that could
+    result in crashes, performance impacts, and command injection when
+    using Python's smtplib module. The performance impact can be triggered with
+    malicious .pyc files compiled from wheels. The crash could result when
+    creating Temporary Directories via tempfile.mktemp(), and the command
+    injection was fixed by sanitizing \r and \n commands in SMTP responses.
+    More information for these security vulnerabilities can be found at
+    <a href="https://bugs.python.org/issue42278">bpo-42278</a>,
+    <a href="https://bugs.python.org/issue41180">bpo-41180</a>, and
+    <a href="https://bugs.python.org/issue43124">bpo-43124</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.9.7 or later using the
+    instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
     <a id="sa-11.0-006"/>
     <h4>11.0 006 Apache HTTPD  Date: 2021-09-18  Severity: High</h4>
     <p>Several 
