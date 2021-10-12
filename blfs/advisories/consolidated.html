@@ -80,6 +80,21 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-013"/>
+    <h4>11.0 013 Apache HTTPD  Date: 2021-10-12  Severity: Critical</h4>
+    <p>New vulnerabilities were found in apache 2.4.49, and it was then discovered
+    that the fix in 2.4.50 was incomplete, resulting in a further CVE, see
+    <a href="https://httpd.apache.org/security/vulnerabilities_24.html">apache</a>.
+    This give two vulnerabilities identified as critical although not in the default
+    configuration (see the link above), and one which could be used to DoS the
+    server with a specially crafted request:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-42013">CVE-2021-42013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41773">CVE-2021-41773</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41524">CVE-2021-41524</a>.</p>
+    <p>To fix this upgrade to Apache-2.4.51 or later:
+    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+
     <a id="sa-11.0-012"/>
     <h4>11.0 012 Firefox  Date: 2021-10-05  Severity: Critical</h4>
     <p>In firefox 78.15.0 and 91.2.0, the usual 'Memory Safety bugs' with a High
