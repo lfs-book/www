@@ -80,6 +80,24 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-015"/>
+    <h4>11.0 015 VIM (LFS and BLFS) Date: 2021-10-18 Severity: High</h4>
+    <p>In vim-8.2.3508, three security vulnerabilities were fixed. These
+    vulnerabilities could lead to crashes and arbitrary code execution
+    when VIM processes crafted XML source code files. These vulnerabilities
+    can also be exploited when processing UTF-8 encoded files due to hidden
+    characters, or when running nv_replace(). All three of these issues have
+    been rated as High by the NVD. More information can be found at
+    <a href="https://www.openwall.com/lists/oss-security/2021/10/01/1">oss-security posting</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3770">CVE-2021-3770</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3778">CVE-2021-3778</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3796">CVE-2021-3796</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-8.2.3508 using the
+    instructions for
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
     <a id="sa-11.0-014"/>
     <h4>11.0 014 Node.js   Date: 2021-10-13 Severity: Medium</h4>
     <p>In node.js-14.18.1, two HTTP Request Smuggling vulnerabilities were fixed.
@@ -98,7 +116,8 @@
     <p>New vulnerabilities were found in apache 2.4.49, and it was then discovered
     that the fix in 2.4.50 was incomplete, resulting in a further CVE, see
     <a href="https://httpd.apache.org/security/vulnerabilities_24.html">apache</a>.
-    This CVE is known to be exploited in the wild and is trivial to exploit.
+    This CVE is known to be exploited in the wild and is trivial to exploit, and
+    allows for remote code execution with a simple HTTP request via cURL.
     This gives two vulnerabilities identified as critical although not in the default
     configuration (see the link above), and one which could be used to DoS the
     server with a specially crafted request:
