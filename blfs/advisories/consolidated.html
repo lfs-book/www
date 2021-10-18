@@ -80,6 +80,23 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-016"/>
+    <h4>11.0 016 MIT Kerberos V5    Date: 2021-10-18 Severity: Medium</h4>
+    <p>In MIT Kerberos V5 1.18.2, a security vulnerability exists that can
+    allow a remote attacker to crash the Key Distribution Center via a
+    specially crafted packet. The official description is a NULL pointer
+    dereference. It occurs when a packet is sent with a FAST inner body
+    which lacks a server field. The only threat caused by this vulnerability
+    is one to system availability, however the Samba 4.15.0 release notes
+    suggested that users update to a version that is not affected by the bug.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37750">CVE-2021-37750</a>.</p>
+    <p>To fix this vulnerability, rebuild KRB5 using the sed in the BLFS
+    Development Books by using the instructions for
+    <a href="../view/svn/postlfs/mitkrb5.html">MIT Kerberos V5 (sysv)</a> or
+    <a href="../view/systemd/postlfs/mitkrb5.html">MIT Kerberos V5 (systemd)</a>,
+    or update to a newer version when available.</p>
+
     <a id="sa-11.0-015"/>
     <h4>11.0 015 VIM (LFS and BLFS) Date: 2021-10-18 Severity: High</h4>
     <p>In vim-8.2.3508, three security vulnerabilities were fixed. These
