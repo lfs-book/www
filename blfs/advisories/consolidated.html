@@ -80,6 +80,41 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-019"/>
+    <h4>11.0 019 Thunderbird        Date: 2021-10-21 Severity: Critical</h4>
+    <p>In Thunderbird-91.2.0, several security vulnerabilities were fixed.
+    These vulnerabilities include a downgrade attack on SMTP STARTTLS
+    connections (which could allow for encryption to be downgraded to plaintext
+    and emails to be snooped over the wire), as well as potentially exploitable
+    crashes, memory leaks, and memory corruption. Upgrading to this version
+    of Thunderbird is recommended as soon as possible due to the SMTP STARTTLS
+    downgrade attack.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-38502">CVE-2021-38502</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-38496">CVE-2021-38496</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-38497">CVE-2021-38497</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-38498">CVE-2021-38498</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-32810">CVE-2021-32810</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-38500">CVE-2021-38500</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2021-38501">CVE-2021-38501</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.2.0 using the
+    instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.0-018"/>
+    <h4>11.0 018 Seamonkey          Date: 2021-10-21 Severity: High</h4>
+    <p>In Seamonkey-2.53.9.1, a memory safety bug that was present in Firefox
+    was fixed. This memory safety bug is the same bug that was fixed in
+    Firefox-78.14.0. The Mozilla developers believe that this vulnerability
+    may be exploited to allow remote code execution, and updating is suggested.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2021-38493">CVE-2021-38493</a>.</p>
+    <p>To fix this vulnerability, update to Seamonkey-2.53.9.1 using the
+    instructions for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
     <a id="sa-11.0-017"/>
     <h4>11.0 017 Samba              Date: 2021-10-20 Severity: Medium</h4>
     <p>In Samba-4.17.0, a security vulnerability was fixed that could allow for
