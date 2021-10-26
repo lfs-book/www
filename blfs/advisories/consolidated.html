@@ -239,8 +239,8 @@
     <a href="../view/systemd/basicnet/fetchmail.html">Fetchmail (systemd)</a>.</p>
 
     <a id="sa-11.0-010"/>
-    <h4>11.0 010 WebKitGTK+    Date: 2021-09-22   Severity: Critical</h4>
-    <p>In WebKitGTK+-2.34.0 (and WebKitGTK+-2.32.4), a critical 0day security
+    <h4>11.0 010 WebKitGTK+    Updated: 2021-10-26   Severity: Critical</h4>
+    <p>In WebKitGTK+-2.34.0, a critical 0day security
     vulnerability was fixed that allows for attackers to silently execute
     arbitrary code via maliciously crafted web content. In some cases, this
     may include advertisements embedded on normal web pages. There have been
@@ -259,8 +259,16 @@
     <a href="https://us-cert.cisa.gov/ncas/current-activity/2021/09/13/apple-releases-security-updates-address-cve-2021-30858-and-cve">
     United States Cybersecurity and Infrastructure Security Agency Advisory</a> and
     <a href="https://support.apple.com/en-us/HT212808">Apple Security Advisory</a>.</p>
-    <p>To fix this security vulnerability, update to WebKitGTK+-2.34.0 (or
-    WebKitGTK+-2.32.4) immediately using the instructions for
+    <p>On October 26th, 2021, the LFS project became aware of additional
+    vulnerabilities that were fixed in this version. These primarily include
+    memory corruption vulnerabilities that lead to code execution. These
+    vulnerabilities have been assigned.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30846">CVE-2021-30846</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30848">CVE-2021-30848</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30849">CVE-2021-30849</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30851">CVE-2021-30851</a>.</p>
+    <p>To fix this security vulnerability, update to WebKitGTK+-2.34.1
+    immediately using the instructions for
     <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
     <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
 
