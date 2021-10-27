@@ -80,6 +80,26 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-021"/>
+    <h4>11.0 021 Exiv2              Date: 2021-10-27 Severity: Medium</h4>
+    <p>In exiv2-0.27.5, a total of six denial-of-service security
+    vulnerabilities were fixed. Four of these are in libexiv2, while the other
+    two are in the exiv2 command line utility. These vulnerabilities happen due
+    to a variety of reasons, but they mostly occur due to null-pointer
+    dereferences, out-of-memory crashes, infinite loop bugs, integer divide by
+    zero, and out-of-bounds reads. These vulnerabilities pose no threat other
+    than crashing programs. Because of this, only three of these vulnerabilities
+    were assigned CVEs, while the other three were just mentioned as being
+    security related bugfixes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37620">CVE-2021-37620</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37621">CVE-2021-37621</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37618">CVE-2021-37618</a>.</p>
+    <p>To fix these vulnerabilities, update to exiv2-0.27.5 or later using the
+    instructions for
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
     <a id="sa-11.0-020"/>
     <h4>11.0 020 PHP                Date: 2021-10-27 Severity: Critical</h4>
     <p>In PHP-8.0.12 and PHP-7.4.25, a security vulnerability was fixed that
