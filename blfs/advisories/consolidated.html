@@ -80,6 +80,35 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-022"/>
+    <h4>11.0 022 ffmpeg             Date: 2021-10-27 Severity: Critical</h4>
+    <p>In ffmpeg-4.4.1 (as well as 4.3.3 and 4.2.5, if you prefer to use those
+    particular versions), 11 security vulnerabilities were fixed that could lead
+    to remote code exection, extraction of sensitive information, and remote
+    denial of service. These occur due to a variety of reasons, including
+    divide-by-zero errors, buffer overflows, heap buffer overflows, memory
+    leaks, out of bounds access, unchecked return values, and assertions being
+    reached due to malicious files. All users who have ffmpeg should upgrade
+    to the latest version of their particular branch. In the case of BLFS 11.0,
+    that would be 4.4.1, but previous versions should upgrade to the relevant
+    branches for that particular book to prevent problems when upgrading.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-20446">CVE-2020-20446</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24053">CVE-2020-24053</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-22015">CVE-2020-22015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-22019">CVE-2020-22019</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-22033">CVE-2020-22033</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-22021">CVE-2020-22021</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-22037">CVE-2020-22037</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33815">CVE-2021-33815</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38114">CVE-2021-38114</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38171">CVE-2021-38171</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38291">CVE-2021-38291</a>.</p>
+    <p>To fix these vulnerabilities, update to ffmpeg-4.4.1 (or 4.3.3/4.2.5)
+    using the instructions for
+    <a href="../view/svn/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
+    <a href="../view/systemd/multimedia/ffmpeg.html">ffmpeg (systemd)</a>.</p>
+
     <a id="sa-11.0-021"/>
     <h4>11.0 021 Exiv2              Date: 2021-10-27 Severity: Medium</h4>
     <p>In exiv2-0.27.5, a total of six denial-of-service security
