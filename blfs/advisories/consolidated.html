@@ -80,6 +80,28 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-024"/>
+    <h4>11.0 024 BIND9              Date: 2021-10-27 Severity: Medium</h4>
+    <p>In versions of BIND prior to 9.16.22, a security vulnerability existed
+    that could allow for remote attackers to cause a service degredation in
+    BIND resolver performance by sending malformed packets to a server. This
+    has to do with a feature called "lame cache", which is enabled by setting
+    the 'lame-ttl' option in named.conf to a number greater than 0. The option
+    is set to 600 in the default configuration, meaning that it's enabled by
+    default. A successful attack results in the internal data structures for
+    the lame cache growing infinitely, which results in a server burning most
+    of it's CPU time on just maintaining the "lame cache", resulting in
+    major slowdown and timeouts on client hosts. This vulnerability is
+    exploitable remotely. To work around this, set 'lame-ttl 0' in named.conf.
+    NOTE: Only the server is affected, you do not need to update if you are
+    running the client utilities.
+    This vulnerability has been assigned
+    <a href="https://kb.isc.org/v1/docs/cve-2021-25219">CVE-2021-25219</a>.</p>
+    <p>To fix this vulnerability, update to BIND-9.16.22 or later using the
+    instructions for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-11.0-023"/>
     <h4>11.0 023 Samba              Date: 2021-10-27 Severity: High</h4>
     <p>In Samba-4.15.1 (and Samba-4.14.9), a security vulnerability was fixed
