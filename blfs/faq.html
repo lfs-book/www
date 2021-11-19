@@ -69,7 +69,7 @@
 	<dd>
       <p>It usually indicates that your system is out of memory.  Then the kernel will find a process heavily utilizing memory and kill it, which is likely the process compiling a large source file.  The kernel will report "[process name] invoked oom-killer" in the kernel log, if a process is killed for this reason.</p>
       <p>If it's possible, you can solve the problem by adding more RAM into your system.  Otherwise, run make or ninja with "-j N", where N should be replaced with a relatively small positive integer.  You can try the value of N from the number of your CPU cores, down to 1.</p>
-      <p>If this issue still lingers with N = 1, you should really add more RAM.  You may work around it by adding more swap, but swapping can make the building process stupidly slow.</p>
+      <p>If this issue still lingers with N = 1, you should really add more RAM.  You may work around it by adding more swap, but swapping can make the building process slower.</p>
 	</dd>
       </dl>
       <p><a href="#blfsfaq">Back to the top.</a></p>
