@@ -80,6 +80,28 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-027"/>
+    <h4>11.0 027 Wireshark          Date: 2021-11-22 Severity: Medium</h4>
+    <p>In Wireshark-3.4.10, several denial of service vulnerabilities were
+    fixed, which could exploited through dissecting certain types of packets.
+    These denial-of-service vulnerabilities include application crashes and
+    excessive resource consumption. This can occur when dissecting Bluetooth
+    DHT, HCI_ISO, SDP, and DHT packets, as well as PNRP, C12.22, IEEE-802.11
+    (WiFi), modbus, and Internet Printing Protocol over USB (IPPUSB) packets.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39929">CVE-2021-39929</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39926">CVE-2021-39926</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39925">CVE-2021-39925</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39924">CVE-2021-39924</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39922">CVE-2021-39922</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39928">CVE-2021-39928</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39921">CVE-2021-39921</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39920">CVE-2021-39920</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-3.4.10 using the
+    instructions for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-11.0-026"/>
     <h4>11.0 026 Samba              Date: 2021-11-11 Severity: Critical</h4>
     <p>In Samba-4.15.2 (and Samba-4.14.10), eight security vulnerabilities
