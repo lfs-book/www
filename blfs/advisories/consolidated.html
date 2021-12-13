@@ -80,6 +80,37 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-034"/>
+    <h4>11.0 034 AudioFile    Date: 2021-12-13  Severity: Critical</h4>
+    <p>On December 13th, 2021, the BLFS project became aware of several
+    security vulnerabilities in AudioFile and created a patch. These 13
+    security vulnerabilities include denial of service, arbitrary command
+    execution, and arbitrary code execution vulnerabilities. They occur
+    in a variety of places, such as when playing a .WAV file, editing a
+    .WAV file, or adjusting various settings such as buffer sizes in a WAV file.
+    Some also occur when using the 'sfconvert' command provided with AudioFile.
+    Note that the only package in BLFS that uses AudioFile is KWave. If you have
+    KWave installed, updating to AudioFile with this patch should be done
+    immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6839">CVE-2017-6839</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6838">CVE-2017-6838</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6837">CVE-2017-6837</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6836">CVE-2017-6836</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6835">CVE-2017-6835</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6834">CVE-2017-6834</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6833">CVE-2017-6833</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6832">CVE-2017-6832</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6831">CVE-2017-6831</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6830">CVE-2017-6830</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6829">CVE-2017-6829</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6828">CVE-2017-6828</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6827">CVE-2017-6827</a>.</p>
+    <p>To fix these vulnerabilities, apply the patch for AudioFile using the
+    instructions for
+    <a href="../view/svn/multimedia/audiofile.html">AudioFile (sysv)</a> or
+    <a href="../view/systemd/multimedia/audiofile.html">AudioFile (systemd)</a>.</p>
+
     <a id="sa-11.0-033"/>
     <h4>11.0 033 PostgreSQL   Date: 2021-12-13  Severity: High</h4>
     <p>In PostgreSQL-14.1 (as well as 13.5, 12.9, 11.14, 10.19, and 9.6.24),
