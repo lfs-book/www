@@ -80,7 +80,24 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
-    <a if="sa-11.0-032"/>
+    <a id="sa-11.0-033"/>
+    <h4>11.0 033 PostgreSQL   Date: 2021-12-13  Severity: High</h4>
+    <p>In PostgreSQL-14.1 (as well as 13.5, 12.9, 11.14, 10.19, and 9.6.24),
+    two security vulnerabilities were fixed that could allow for both
+    PostgreSQL Client and PostgreSQL Server to process unencrypted bytes
+    from an unauthenticed remote attacker via a man-in-the-middle attack.
+    This is caused by injecting false responses into PostgreSQL during initial
+    authentication. In the case of PostgreSQL Server, this also allows for
+    injection of arbitrary SQL queries when a connection is first established.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-23214">CVE-2021-23214</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2021-23222">CVE-2021-23222</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-14.1 using the instructions
+    for
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
+    <a id="sa-11.0-032"/>
     <h4>11.0 032 Ruby     Date: 2021-12-13  Severity: High</h4>
     <p>In Ruby-3.0.3, three security vulnerabilities were fixed that could allow
     for arbitrary code execution, denial of service, and content spoofing.
