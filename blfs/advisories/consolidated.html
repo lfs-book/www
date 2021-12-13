@@ -80,6 +80,20 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-031"/>
+    <h4>11.0 031 PHP      Date: 2021-12-13  Severity: Medium</h4>
+    <p>In PHP-8.0.13, a security vulnerability was fixed that could allow for
+    PHP to read a different file from what the user intended. If a filename
+    cotains a URL-encoded NUL character, this may cause the simplexml_load_file()
+    function to interpret the character as the end of the filename, thus allowing
+    remote attackers to read a different file from what the programmers intended.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-21707">CVE-2021-21707</a>.</p>
+    <p>To fix this vulnerability, update to php-8.0.13 using the instructions
+    for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
     <a id="sa-11.0-030"/>
     <h4>11.0 030 Firefox  Date: 2021-12-07  Severity: High</h4>
     <p>In firefox 91.4.0 several CVE issues, some rated High, were fixed, as well
