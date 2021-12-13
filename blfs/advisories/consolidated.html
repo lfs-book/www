@@ -558,15 +558,22 @@
     <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
 
     <a id="sa-11.0-006"/>
-    <h4>11.0 006 Apache HTTPD  Date: 2021-09-18  Severity: High</h4>
+    <h4>11.0 006 Apache HTTPD  Updated: 2021-12-13  Severity: Critical</h4>
+    <!--CVE-2021-39275 is now rated 9.8/10 CRITICAL -->
     <p>Several 
     <a href="https://httpd.apache.org/security/vulnerabilities_24.html">vulnerabilities</a>
     in the Apache web server have been found, one of which is rated high:
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40438/">CVE-2021-40438</a>.
     A crafted request uri-path can cause mod_proxy to forward the request
     to an origin server choosen by the remote user. This issue affects
-    Apache HTTP Server 2.4.48 and earlier.</p>
-    <p>To fix this upgrade to Apache-2.4.49 or later:
+    Apache HTTP Server 2.4.48 and earlier. Additional vulnerabilities include
+    content spoofing, cache poisoning, denial-of-service, and buffer overflows.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33193">CVE-2021-33193</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-34798">CVE-2021-34798</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36160">CVE-2021-36160</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39275">CVE-2021-39275</a>.</p>
+    <p>To fix this upgrade to Apache-2.4.51 or later:
     <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
     <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
 
