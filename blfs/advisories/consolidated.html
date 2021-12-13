@@ -80,6 +80,26 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a if="sa-11.0-032"/>
+    <h4>11.0 032 Ruby     Date: 2021-12-13  Severity: High</h4>
+    <p>In Ruby-3.0.3, three security vulnerabilities were fixed that could allow
+    for arbitrary code execution, denial of service, and content spoofing.
+    The arbitrary code execution vulnerability exists in the CGI gem, and occurs
+    when large files are passed to CGI.escape_html due to a buffer overflow. The
+    denial of service vulnerability happens when parsing dates using Date.parse().
+    The content spoofing vulnerability occurs when using CGI::Cookie.parse. This
+    is a resurgence of the CVE-2020-8184 vulnerability, which allows for attackers
+    to modify cookies in transit and for them to be accepted by Ruby without going
+    through any validation.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2021-41817">CVE-2021-41817</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-41816">CVE-2021-41816</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2021-41819">CVE-2021-41819</a>.</p>
+    <p>To fix these vulnerabilities, update to ruby-3.0.3 using the instructions
+    for
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
     <a id="sa-11.0-031"/>
     <h4>11.0 031 PHP      Date: 2021-12-13  Severity: Medium</h4>
     <p>In PHP-8.0.13, a security vulnerability was fixed that could allow for
