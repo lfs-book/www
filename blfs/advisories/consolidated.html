@@ -80,6 +80,37 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-035"/>
+    <h4>11.0 035 OpenJDK      Date: 2021-12-17  Severity: Critical</h4>
+    <p>In OpenJDK-17.0.1, there were several security vulnerabilities fixes
+    that could allow for remote code execution, unauthorized modification of
+    data, and denial of service. Some of these occured via malicious image
+    files, as well as TLS bypass and connection hijacking. This update to JDK
+    also prevents exploitation of the log4j security vulnerability, known as
+    Log4Shell. Log4Shell permits trivial remote-code-execution and is being
+    exploited worldwide at an alarming rate. Most Java applications are affected
+    because they use Apache's log4j logging framework. If you have Java
+    installed, you MUST install this update immediately to protect yourself
+    from exploitation.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35567">CVE-2021-35567</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35586">CVE-2021-35586</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35564">CVE-2021-35564</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35556">CVE-2021-35556</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35559">CVE-2021-35559</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35561">CVE-2021-35561</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35578">CVE-2021-35578</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35603">CVE-2021-35603</a>,
+    and helps protect against
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">CVE-2021-44228</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-17.0.1 using the
+    instructions for
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>Alternatively, you may use the binary the BLFS Editors have produced:
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
     <a id="sa-11.0-034"/>
     <h4>11.0 034 AudioFile    Date: 2021-12-13  Severity: Critical</h4>
     <p>On December 13th, 2021, the BLFS project became aware of several
