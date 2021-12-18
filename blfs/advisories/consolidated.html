@@ -80,6 +80,21 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-036"/>
+    <h4>11.0 036 lxml         Date: 2021-12-18  Severity: High</h4>
+    <p>In lxml-4.7.1, two security vulnerabilities were fixed that could allow
+    for crafted script content to pass through the HTML Cleaner. This can
+    ocur with SVG files embedded with data URIs, as well as with CSS imports.
+    Note that this only affects packages that use 'lxml' for sanitizing HTML
+    imports, but upstream has rated both security vulnerabilities as high, and
+    has assigned one CVE for both.
+    This set of security vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43818">CVE-2021-43818</a>.</p>
+    <p>To fix these vulnerabilities, update to lxml-4.7.1 using the
+    instructions for
+    <a href="../view/svn/general/python-modules.html#lxml">lxml (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#lxml">lxml (systemd)</a>.</p>
+
     <a id="sa-11.0-035"/>
     <h4>11.0 035 OpenJDK      Date: 2021-12-17  Severity: Critical</h4>
     <p>In OpenJDK-17.0.1, there were several security vulnerabilities fixes
