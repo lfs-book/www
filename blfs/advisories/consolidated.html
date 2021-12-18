@@ -80,6 +80,21 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-039"/>
+    <h4>11.0 039 Lynx            Date: 2021-12-18  Severity: Medium</h4>
+    <p>A security vulnerability was brought to the BLFS Editors attention in
+    Lynx. This security vulnerability allows for passwords to be leaked in
+    cleartext on connections which are using HTTPS. In response to this, the
+    BLFS Editors created a patch to fix this vulnerability. The vulnerability
+    only affects users who use HTTPS URLs with Lynx, and who authenticate on
+    that website as well.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38165">CVE-2021-38165</a>.</p>
+    <p>To fix this vulnerability, apply the patch in Lynx using the
+    instructions for
+    <a href="../view/svn/basicnet/lynx.html">Lynx (sysv)</a> or
+    <a href="../view/systemd/basicnet/lymx.html">Lynx (systemd)</a>.</p>
+
     <a id="sa-11.0-038"/>
     <h4>11.0 038 xorg-server     Date: 2021-12-18  Severity: High</h4>
     <p>In xorg-server-21.1.2, four security vulnerabilities were fixed that allow
