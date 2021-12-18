@@ -80,6 +80,27 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-037"/>
+    <h4>11.0 037 XWayland     Date: 2021-12-18  Severity: High</h4>
+    <p>In XWayland-21.1.4, four security vulnerabilities were fixed that allow
+    for local privilege escalation (on local systems), and remote code execution
+    (on systems which are using SSH forwarding). All four of these
+    vulnerabilities are classified as out-of-bounds access, and are due to
+    improper input valiadtion. One of these vulnerabiilities exists in
+    the Record extension, another in the ScreenSaver extension, another in
+    XFixes, and the last in the Render extension (which handles fonts). Note
+    that these security vulnerabilities were fixed in xorg-server as well,
+    so you should install both updates.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-4008">CVE-2021-4008</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2021-4009">CVE-2021-4009</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2021-4010">CVE-2021-4010</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2021-4011">CVE-2021-4011</a>.</p>
+    <p>To fix these vulnerabilities, update to XWayland-21.1.4 using the
+    instructions for
+    <a href="../view/svn/x/xwayland.html">XWayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">XWayland (systemd)</a>.</p>
+
     <a id="sa-11.0-036"/>
     <h4>11.0 036 lxml         Date: 2021-12-18  Severity: High</h4>
     <p>In lxml-4.7.1, two security vulnerabilities were fixed that could allow
