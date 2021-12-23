@@ -80,6 +80,26 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-042"/>
+    <h4>11.0 042 Apache HTTPD    Date: 2021-12-23  Severity: Critical</h4>
+    <!-- CVE-2021-44790 marked as 9.8 -->
+    <p>In httpd-2.4.52, two security vulnerabilities were fixed. One of the
+    security vulnerabilities can cause a crash, or Server Side Request Forgery,
+    if ProxyRequests is turned on in httpd.conf (enabling forward proxy). An
+    additional security vulnerability exists that can cause a buffer overflow
+    when mod_lua is enabled. This is caused by a carefully crafted request body
+    when r:parsebody() is called from within a Lua script. While no exploit
+    currently exists, it is very likely that one will be created soon according
+    to upstream. If you use mod_lua or ProxyRequests, you should update to
+    httpd-2.4.52 as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44224">CVE-2021-44224</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44790">CVE-2021-44790</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.52 using the
+    instructions for
+    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+
     <a id="sa-11.0-041"/>
     <h4>11.0 041 PHP             Date: 2021-12-23  Severity: High</h4>
     <p>In PHP-8.1.1, a security vulnerability was fixed that could allow for an
