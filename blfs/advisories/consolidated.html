@@ -80,6 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-045"/>
+    <h4>11.0 045 wpa_supplicant  Date: 2021-12-26  Severity: High</h4>
+    <p>The BLFS Editors have become aware of six security vulnerabilities in
+    wpa_supplicant that are known upstream, and have created a patch to fix
+    them. These vulnerabilities allow for packets to be accepted across
+    networks without any validation (known as CallStranger), remote code
+    execution, crashes, forging attacks, and local privilege escalation. Note
+    that no user interaction is required to exploit any of these vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-16275">CVE-2019-16275</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12695">CVE-2020-12695</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0326">CVE-2021-0326</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27803">CVE-2021-27803</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30004">CVE-2021-30004</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0535">CVE-2021-0535</a>.</p>
+    <p>To fix these vulnerabilities, apply the patch using the instructions for
+    <a href="../view/svn/basicnet/wpa_supplicant.html">wpa_supplicant (sysv)</a> or
+    <a href="../view/systemd/basicnet/wpa_supplicant.html">wpa_supplicant (systemd)</a>.</p>
+
     <a id="sa-11.0-044"/>
     <h4>11.0 044 WebKitGTK+      Date: 2021-12-23  Severity: Medium</h4>
     <p>In WebKitGTK+-2.34.3, two security vulnerabilities were fixed that could
