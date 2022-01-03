@@ -80,6 +80,29 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-046"/>
+    <h4>11.0 046 Wireshark       Date: 2022-01-03  Severity: High</h4>
+    <p>In Wireshark-3.6.1, six security vulnerabilities were fixed that could
+    allow for remote attackers to cause Wireshark to crash or get stuck in an
+    infinite loop, which can cause resource exhaustion. This can occur via
+    packet injection while Wireshark is capturing packets and dissecting them,
+    or via a crafted capture file. This can occur when Wireshark is being used
+    on a network with Sysdig Event, BitTorrent, RTMPT, or Kafka packets being
+    sent and received, or when examining/parsing *.pcapng or RFC 7468 files.
+    If you use Wireshark to examine *.pcapng or RFC 7468 files, or are using
+    Wireshark on a network where there may be Sysdig Events, BitTorrent, RTMPT,
+    or Kafka packets being sent or received, update to Wireshark-3.6.1.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4185">CVE-2021-4185</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4184">CVE-2021-4184</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4183">CVE-2021-4183</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4182">CVE-2021-4182</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4181">CVE-2021-4181</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-3.6.1 using the
+    instructions for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-11.0-045"/>
     <h4>11.0 045 wpa_supplicant  Date: 2021-12-26  Severity: High</h4>
     <p>The BLFS Editors have become aware of six security vulnerabilities in
