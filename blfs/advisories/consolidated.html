@@ -80,6 +80,22 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-047"/>
+    <h4>11.0 047 make-ca       Date: 2022-01-10  Severity: Moderate</h4>
+    <p>In make-ca-1.9, a misinterpretion of input causes the generated trust
+    store to contain some certificates explicitly untrusted by Mozilla.  These
+    certificates were the anchors of some already hacked CAs.  Hostile
+    attackers may exploit it and perform a MIM attack if they have kept the
+    certificates obtained by defrauding those CAs.
+    For more information see
+    <a href="https://github.com/lfs-book/make-ca/security/advisories/GHSA-m5qh-728v-4xrx">GHSA-m5qh-728v-4xrx</a>.</p>
+    <p>To fix this vulnerabilitiy, update to make-ca-1.10 using the
+    instructions for
+    <a href="../view/svn/postlfs/make-ca.html">make-ca (sysv)</a> or
+    <a href="../view/systemd/postlfs/make-ca.html">make-ca (systemd)</a>,
+    and run <code>make-ca -r</code> as the root user to regenerate the trust
+    store after the update.</p>
+
     <a id="sa-11.0-046"/>
     <h4>11.0 046 Wireshark       Date: 2022-01-03  Severity: High</h4>
     <p>In Wireshark-3.6.1, six security vulnerabilities were fixed that could
