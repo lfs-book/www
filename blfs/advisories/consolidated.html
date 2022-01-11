@@ -80,7 +80,43 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
-    <a id="sa-11.0-048"/>
+    <a id="sa-11.0-050"/>
+    <h4>11.0 050 Firefox  Date: 2022-01-11  Severity: High</h4>
+    <p>In firefox 91.5.0 several CVE issues, some rated High, were fixed.
+    These are listed in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-02/">mfsa-2022-02</a>.
+    The CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4140">CVE-2021-4140 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22737">CVE-2022-22737 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22738">CVE-2022-22738 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22739">CVE-2022-22739 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22740">CVE-2022-22740 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22741">CVE-2022-22741 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22742">CVE-2022-22742 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22743">CVE-2022-22743 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22745">CVE-2022-22745 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22747">CVE-2022-22747 (Not yet public)</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22751">CVE-2022-22751 (Not yet public)</a>.</p>
+    <p>To fix these update to firefox-91.5.0esr or later :
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+
+    <a id="sa-11.0-049"/>
+    <h4>11.0 049 Node.js   Date: 2022-01-11 Severity: Medium</h4>
+    <p>In node.js-16.13.2, four medium-severity vulnerabilities were fixed.
+    Initial details are at
+    <a href="https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/">node.js/news</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22959">CVE-2021-44531</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22960">CVE-2021-44532</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22960">CVE-2021-44533</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22960">CVE-2021-21824</a>.</p>
+    <p>To fix these vulnerabilities, update to Node.js-16.13.2 using the
+    instructions for
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
     <h4>11.0 048 Grilo         Date: 2021-01-10  Severity: Moderate</h4>
     <p>In Grilo-0.3.14, a security vulnerability was fixed that could allow for
     man-in-the-middle attacks and silent TLS encryption downgrades. This problem
@@ -463,21 +499,22 @@
     <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
 
     <a id="sa-11.0-030"/>
-    <h4>11.0 030 Firefox  Date: 2021-12-07  Severity: High</h4>
-    <p>In firefox 91.4.0 several CVE issues, some rated High, were fixed, as well
-    as 'MOZ-2021-0009' Memory safety bugs fixed in Firefox 95 and Firefox ESR 91.4'.
+    <h4>11.0 030 Firefox  iUpdated: 2021-12-07  Severity: High</h4>
+    <p>In firefox 91.4.0 several CVE issues, some rated High, were fixed.
     These are listed in
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-53/">mfsa-2021-53</a>.
     The CVEs are
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43536">CVE-2021-43536 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43537">CVE-2021-43537 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43538">CVE-2021-43538 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43539">CVE-2021-43539 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43541">CVE-2021-43541 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43542">CVE-2021-43542 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43543">CVE-2021-43543 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43545">CVE-2021-43545 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43546">CVE-2021-43546 (Not yet public)</a>.</p>
+    <!-- the first of these was origibnally MOZ-2021-009 pending CVE assignment -->
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4129">CVE-2021-4129 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43536">CVE-2021-43536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43537">CVE-2021-43537</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43538">CVE-2021-43538</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43539">CVE-2021-43539</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43541">CVE-2021-43541</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43542">CVE-2021-43542</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43543">CVE-2021-43543</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43545">CVE-2021-43545</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43546">CVE-2021-43546</a>.</p>
     <p>To fix these update to firefox-91.4.0esr or later :
     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
