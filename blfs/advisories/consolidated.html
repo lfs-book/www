@@ -80,6 +80,23 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-048"/>
+    <h4>11.0 048 Grilo         Date: 2021-01-10  Severity: Moderate</h4>
+    <p>In Grilo-0.3.14, a security vulnerability was fixed that could allow for
+    man-in-the-middle attacks and silent TLS encryption downgrades. This problem
+    exists due to TLS certificate validation not being enabled on the
+    SoupSessionAsync objects that grilo creates. This could also allow for
+    commands and false data to be injected into a stream of data, depending on
+    the context where Grilo is used. According to the National Vulnerability
+    Database, this vulnerability can result in high confidentiality impact
+    (information leakage), due to the silent TLS encryption downgrade.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39365">CVE-2021-39365</a>.</p>
+    <p>To fix this vulnerability, update to Grilo-0.3.14 using the
+    instructions for
+    <a href="../view/svn/gnome/grilo.html">Grilo (sysv)</a> or
+    <a href="../view/systemd/gnome/grilo.html">Grilo (systemd)</a>.</p>
+
     <a id="sa-11.0-047"/>
     <h4>11.0 047 make-ca       Date: 2022-01-10  Severity: Moderate</h4>
     <p>In make-ca-1.9, a misinterpretion of input causes the generated trust
