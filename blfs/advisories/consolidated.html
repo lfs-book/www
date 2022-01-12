@@ -79,6 +79,22 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.0-052"/>
+    <h4>11.0 052 gfbgraph Date: 2022-01-11  Severity: High</h4>
+    <p>In gfbgraph-0.2.4, a security vulnerability was discovered that causes
+    gfbgraph to fail to perform TLS certificate validation when downloading or
+    uploading photos or graphs from remote sources. This is because it does not
+    enable TLS certificate validation on the SoupSessionSync objects it creates.
+    This allows for remote injection/modification of graphs and for remote code
+    execution. Note that this is almost identical to CVE-2016-20011 in libgrss,
+    and CVE-2021-39365 in Grilo.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39358">CVE-2021-39358</a>.</p>
+    <p>To fix this vulnerability, update to gfbgraph-0.2.5 or later using the
+    instructions for
+    <a href="../view/svn/gnome/gfbgraph.html">gfbgraph (sysv)</a> or
+    <a href="../view/systemd/gnome/gfbgraph.html">gfbgraph (systemd)</a>.</p>
+
     <a id="sa-11.0-051"/>
     <h4>11.0 051 libgrss  Date: 2022-01-11  Severity: High</h4>
     <p>In libgrss-0.7.0, a security vulnerability was discovered that
