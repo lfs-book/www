@@ -79,6 +79,21 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.0-051"/>
+    <h4>11.0 051 libgrss  Date: 2022-01-11  Severity: High</h4>
+    <p>In libgrss-0.7.0, a security vulnerability was discovered that
+    causes libgrss to fail to perform TLS certificate validation when
+    downloading feeds. This allows remote attackers to manipulate the contents
+    of feeds without detection and execute code on the machine remotely. This
+    is another issue related to libsoup's SoupSessionSync default behavior.
+    The BLFS developers have produced an update to the bugfixes patch for
+    libgrss that fixes this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2016-20011">CVE-2016-20011</a>.</p>
+    <p>To fix this vulnerability, rebuild libgrss with the patch using the
+    instructions for
+    <a href="../view/svn/general/libgrss.html">libgrss (sysv)</a> or
+    <a href="../view/systemd/general/libgrss.html">libgrss (systemd)</a>.</p>
 
     <a id="sa-11.0-050"/>
     <h4>11.0 050 Firefox  Date: 2022-01-11  Severity: High</h4>
