@@ -99,6 +99,7 @@
         <li><a href="/blfs/faq.html#gtk-version">I'm getting errors building a package that requires GTK+,but I've installed GTK+ 3.x.</a></li>
         <li><a href="/blfs/faq.html#gnome-versions">Any error while building part of Gnome</a></li>
         <li><a href="/blfs/faq.html#include-next-not-found">"fatal error: foo.h: No such file or directories" on include_next directives in C++ standard headers</a></li>
+        <li><a href="/blfs/faq.html#oom-kill">"fatal error: Killed signal terminated program cc1plus"</a></li>
       </ul>
       <h3><a href="/blfs/faq.html#confissues">Configuration issues</a></h3>
       <ul>
@@ -388,8 +389,8 @@
        href="https://wiki.linuxfromscratch.org/lfs/">LFS tickets</a> or <a
        href="https://wiki.linuxfromscratch.org/blfs/">BLFS tickets</a> to see if
        the release has been posted there.</li>
-       <li>If the release is not in an open ticket, report it to lfs-book (or
-       blfs-book for packages in BLFS). And if you like, test it and report any
+       <li>If the release is not in an open ticket, report it to lfs-dev (or
+       blfs-dev for packages in BLFS). And if you like, test it and report any
        problems or changes in compilation instructions, too.</li>
 	  </ul>
 	</dd>
@@ -429,15 +430,21 @@
      <p>While this means you have great control over your system (&quot;Your
      distro. Your rules.&quot;), it also has the drawback of having to take
      care of updating it yourself.</p>
+     <p>Please read
+     <a href="../lfs/view/development/chapter08/pkgmgt.html">the section
+     named "Upgrade Issues"</a> carefully before upgrading any package.</p>
      <p>If you've built an LFS system and have extended it to become your
      primary system, the best thing to do is to decide on an upgrade policy. Do
      you want to keep the latest version of every package? Then be careful,
      because you're going to be burned. I recommend slight conservatism when
      upgrading to keep a healthy system. A general rule of thumb which works
      for most people is: only upgrade packages if they have security fixes.
-     Subscribe to lfs-security and LWN to keep yourself informed about security
-     fixes. Another rule of thumb is: don't upgrade the toolchain (gcc, glibc
-     and binutils) unless you're going to rebuild your entire system. These
+     Periodically check
+     <a href="../lfs/advisories/">LFS</a> and
+     <a href="../blfs/advisories/">BLFS</a> security advisories, and
+     subscribe to LWN to keep yourself informed about security
+     fixes. Another rule of thumb is: don't upgrade glibc and Linux kernel
+     headers unless you're going to rebuild your entire system. These
      packages form the heart of your LFS system, destroying them means
      destroying the ability to compile packages or even run binaries. </p>
      <p>Remember that updating packages is at your own risk. LFS takes great
