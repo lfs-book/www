@@ -106,6 +106,19 @@
 
 <!-- end of BIND -->
 
+    <h3>cryptsetup</h3>
+
+    <a id="sa-11.0-053"/>
+    <h4>11.0 053 cryptsetup   Date: 2022-01-13 Severity: High</h4>
+    <p>In cryptsetup-2.3.6, a security vulnerability exists that could allow
+    for a local attacker to decrypt a LUKS2 device without a user passphrase.
+    This is done via manipulation of filesystem metadata while the disk is
+    unmounted. Update to cryptsetup-2.4.3 immediately if you use an encrypted
+    device.
+    <a href="consolidated.html#sa-11.0-053">11.0-053</a></p>
+
+<!-- end of cryptsetup -->
+
     <h3>cURL</h3>
 
     <a id="sa-11.0-008"/>

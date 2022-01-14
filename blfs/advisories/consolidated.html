@@ -79,6 +79,24 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.0-053"/>
+    <h4>11.0 053 cryptsetup   Date: 2022-01-13 Severity: High</h4>
+    <p>In cryptsetup-2.3.6, a security vulnerability was identified that allows
+    for decryption of data during crash recovery on a LUKS2-encrypted device.
+    This attack does require physical access to the device, but no knowledge of
+    user passphrases. An attacker can modify on-disk metadata to simulate
+    encryption in progress with a crashed (unfinished) reencryption step, which
+    allows for persistent decryption of the device. If you are using cryptsetup
+    for anything other than a build dependency, you should update to 2.4.2
+    immediately. Note that you need to finish any encryption tasks that are
+    currently in progress to prevent any data corruption/data loss.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2021-4122">CVE-2021-4122</a>.</p>
+    <p>To fix this vulnerability, update to cryptsetup-2.4.3 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/cryptsetup.html">cryptsetup (sysv)</a> or
+    <a href="../view/systemd/postlfs/cryptsetup.html">cryptsetup (systemd)</a>.</p>
+
     <a id="sa-11.0-052"/>
     <h4>11.0 052 gfbgraph Date: 2022-01-11  Severity: High</h4>
     <p>In gfbgraph-0.2.4, a security vulnerability was discovered that causes
