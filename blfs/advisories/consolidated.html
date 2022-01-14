@@ -79,6 +79,36 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+
+    <a id="sa-11.0-056"/>
+    <h4>11.0 056 Thunderbird  Date: 2022-01-13 Severity: High</h4>
+    In Thunderbird-91.5.0, several security vulnerabilities were fixed that
+    could allow for being unable to leave fullscreen mode, for out-of-bounds
+    memory access (when inserting text in edit mode), for use-after-free crashes
+    when certain network request objects were freed too early, for crashes when
+    processing CSS filter effects, for crashes when playing audio files, for
+    iframe sandbox escapes, origin spoofs, leakage of cross-origin URLs through
+    the securitypolicyviolation event, and for remote code execution due to
+    memory safety issues. An additional security vulnerability was fixed that
+    could allow for crashes when handling empty PKCS#7 sequences.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22743">CVE-2022-22743</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22742">CVE-2022-22742</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22741">CVE-2022-22741</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22740">CVE-2022-22740</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22738">CVE-2022-22738</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22737">CVE-2022-22737</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-4140">CVE-2021-4140</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22748">CVE-2022-22748</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22745">CVE-2022-22745</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22747">CVE-2022-22747</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22739">CVE-2022-22739</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22751">CVE-2022-22751</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.5.0 or later
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-11.0-055"/>
     <h4>11.0 055 Epiphany     Date: 2022-01-13 Severity: Moderate</h4>
     <p>In Epiphany-41.3, four security vulnerabilities were fixed that could
