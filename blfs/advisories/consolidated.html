@@ -79,6 +79,27 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.0-054"/>
+    <h4>11.0 054 systemd      Date: 2022-01-13 Severity: High</h4>
+    <p>In systemd-249 (and systemd-250), a security vulnerability exists that
+    allows for uncontrolled recursion in the systemd-tmpfiles program.
+    systemd-tmpfiles creates, modifies, and deletes temporary files and
+    directories on system startup. While this vulnerability is just classified
+    as a denial-of-service, it is also possible to cause PID1 to Segmentation
+    Fault when this is exploited. It is also possible to create arbitrary
+    files if an attacker can catch a folder while it is still world-writable.
+    If you use systemd, it is recommended that you patch your installation
+    immediately. In response to this, the BLFS Editors have developed a patch
+    for both version 250 (which is for the development books), and for 249
+    (which is the version that shipped with LFS/BLFS 11.0).
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-3997">CVE-2021-3997</a>.</p>
+    <p>If you are using systemd-250, apply the patch using the instructions for
+    <a href="../view/systemd/general/systemd.html">systemd (systemd)</a>.</p>
+    <p>If you are using systemd-249, apply the new upstream fixes patch located
+    at <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-249-upstream_fixes-2.patch">
+    systemd-249-upstream_fixes-2</a> and rebuild systemd.</p>
+
     <a id="sa-11.0-053"/>
     <h4>11.0 053 cryptsetup   Date: 2022-01-13 Severity: High</h4>
     <p>In cryptsetup-2.3.6, a security vulnerability was identified that allows
