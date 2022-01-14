@@ -79,6 +79,24 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.0-055"/>
+    <h4>11.0 055 Epiphany     Date: 2022-01-13 Severity: Moderate</h4>
+    <p>In Epiphany-41.3, four security vulnerabilities were fixed that could
+    allow for cross-site scripting (XSS) to take place. These security
+    vulnerabilities occurred in the about:overview page, the PDF.js PDF reader
+    (using a server's suggested_filename as the pdf_name), when using the
+    View Source mode or Reader Mode to view a page title, and via all internal
+    error pages.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45085">CVE-2021-45085</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45086">CVE-2021-45086</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45087">CVE-2021-45087</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45088">CVE-2021-45088</a>.</p>
+    <p>To fix these vulnerabilities, update to Epiphany-41.3 or later using
+    the instructions for
+    <a href="../view/svn/xsoft/epiphany.html">Epiphany (sysv)</a> or
+    <a href="../view/systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
+
     <a id="sa-11.0-054"/>
     <h4>11.0 054 systemd      Date: 2022-01-13 Severity: High</h4>
     <p>In systemd-249 (and systemd-250), a security vulnerability exists that
