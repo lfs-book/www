@@ -247,6 +247,21 @@
 
 <!-- end of Ghostscript -->
 
+    <h3>GnuTLS</h3>
+
+    <a id="sa-11.0-058"/>
+    <h4>11.0 058 GnuTLS  Date: 2022-01-18  Severity: Low</h4>
+    <p>A security advisory has been published by the GnuTLS team:
+    When a single trust list object is shared among multiple threads, calls
+    to gnutls_x509_trust_list_verify_crt2() was able to corrupt temporary
+    memory where internal copy of an issuer certificate is stored. The code
+    path is only taken when a PKCS#11 based trust store is enabled and the
+    issuer certificate is already stored as trusted. To fix this upgrade to
+    GnuTLS 3.7.3 or later.
+    <a href="consolidated.html#sa-11.0-058">11.0-058</a></p>
+
+<!-- end of GnuTLS -->
+
     <h3>Grilo</h3>
 
     <a id="sa-11.0-048"/>
