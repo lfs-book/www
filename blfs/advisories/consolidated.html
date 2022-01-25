@@ -80,6 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-059"/>
+    <h4>11.0 059 Rustc  Date: 2022-01-25  Severity: High</h4>
+    <p>In all versions of rust before 1.58.1 an attacker can exploit a race
+    condition to trick a privileged program into deleting files and directories
+    the attacker couldn't otherwise access or delete. The rust security advisory
+    <a href="https://blog.rust-lang.org/2022/01/20/cve-2022-21658.html">https://blog.rust-lang.org/2022/01/20/cve-2022-21658.html</a>
+    explains this. Pending further analysis, this is rated as High and if you
+    have any privileged rust programs they should be rebuilt if they use this
+    function on paths that may be manipulated with lesser privileges.
+    <!-- thanks to fedora for this wording -->
+    The programs in BLFS which use rust do not install any privileged programs
+    so most BLFS users who have installed rust will only need to upgrade it.</p>
+    <p>Please see
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21658">CVE-2022-21658 (Awaiting Analysis)</a>.<p>
+    <p>To fix rust, update to rustc-1.58.1 (or a later version) using the
+    instructions for
+    <a href="../view/svn/general/rust.html">Rust (sysv)</a> or
+    <a href="../view/systemd/general/rust.html">Rust (systemd)</a>.</p>
+
     <a id="sa-11.0-058"/>
     <h4>11.0 058 GnuTLS  Date: 2022-01-18 Severity: Low</h4>
     <p>A security advisory has been published by GnuTLS developpers:
