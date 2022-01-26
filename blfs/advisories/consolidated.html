@@ -80,9 +80,24 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-059"/>
+    <h4>11.0 059 polkit  Date: 2022-01-26 Severity: High</h4>
+    <p>In polkit-0.120, a trivially exploitable vulnerability allowing
+    local privilege escalation has been identified.  This vulnerability
+    affects polkit back to 0.92.  The details can be found at this
+    <a href="https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt">Qualys Security Advisory</a>.  The vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4034">CVE-2021-4034</a> (not disclosed yet).</p>
+    <p>To fix this, apply <a href="https://www.linuxfromscratch.org/patches/downloads/polkit/polkit-0.120-security_fix-1.patch">the patch</a>
+    for polkit &gt;=0.114, &lt;=0.120, or
+    <a href="https://www.linuxfromscratch.org/patches/downloads/polkit/polkit-0.113-cve_2021_4034_fix-1.patch">the rebased patch</a>
+    for polkit &gt;=0.92, &lt;=0.113 and rebuild polkit.  Or, if you don't
+    use the functionality of the <code>pkexec</code> command, you can unset
+    the SUID bit on it with <code>chmod -s /usr/bin/pkexec</code>
+    as the <code>root</code> user, as a workaround.</p>
+
     <a id="sa-11.0-058"/>
     <h4>11.0 058 GnuTLS  Date: 2022-01-18 Severity: Low</h4>
-    <p>A security advisory has been published by GnuTLS developpers:
+    <p>A security advisory has been published by GnuTLS developers:
     <a href="https://www.gnutls.org/security-new.html#GNUTLS-SA-2022-01-17">GNUTLS-SA-2022-01-17</a>.</p>
     <p>To fix these, update to GnuTLS 3.7.3 or a later version using the instructions at
     <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a>, or
