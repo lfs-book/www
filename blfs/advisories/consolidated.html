@@ -80,6 +80,18 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-061"/>
+    <h4>11.0 061 Qt5  Date: 2021-06-28  Severity: Medium</h4>
+    <p>An Out Of Bounds Write was discovered in the SVG component of Qt.  This
+    has been fixed upstream in the paid-for commercial releases, but for the
+    free versions it is necessary to patch it. Please see
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45930">CVE-2021-45930</a>.</p>
+    <p>To fix this apply the
+    <a href="http://www.linuxfromscratch.org/patches/downloads/qt-everywhere-src/qt-everywhere-src-5.15.2-kf5.15-2.patch">qt-everywhere-src-5.15.2-kf5.15-2.patch</a>
+    (or a later version of the patch if one exists) using the instructions at
+    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a>, or
+    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a>.</p>
+
     <a id="sa-11.0-060"/>
     <h4>11.0 060 Rustc  Date: 2022-01-25  Severity: High</h4>
     <p>In all versions of rust before 1.58.1 an attacker can exploit a race
