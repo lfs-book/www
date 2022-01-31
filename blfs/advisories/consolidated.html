@@ -80,8 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-062"/>
+    <h4>11.0 062 util-linux  Date: 2021-06-28  Severity: High</h4>
+    <p>Two bugs in libmount since version 2.33 have been discovered. These apply
+    to fuse mounts, but one of the examples shows fuse being used to umount /tmp.
+    See <a href="https://www.openwall.com/lists/oss-security/2022/01/24/2">oss-security</a>.
+    The CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3995">CVE-2021-3995 (Not yet public)</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3996">CVE-2021-3996 (Not yet public)</a>.</p>
+    <p>To fix this upgrade to util-linux-2.37.3 or later using the instructions at
+    <a href="../../lfs/view/development/chapter08/util-linux.html">util-linux (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/util-linux.html">util-linux (systemd)</a>
+    Please be aware that on older systems where the linux headers include 'linux/raw.h'
+    you will need to add '--disable-raw' to the configure, and on systems before /usr was
+    merged (LFS-10.1 and earlier) you should <em>omit</em> '--libdir=/usr/lib' to
+    ensure that the libraries overwrite the existing libraries in /lib.</p
+
     <a id="sa-11.0-061"/>
-    <h4>11.0 061 Qt5  Date: 2021-06-28  Severity: Medium</h4>
+    <h4>11.0 061 Qt5  Date: 2022-01-28  Severity: Medium</h4>
     <p>An Out Of Bounds Write was discovered in the SVG component of Qt.  This
     has been fixed upstream in the paid-for commercial releases, but for the
     free versions it is necessary to patch it. Please see
