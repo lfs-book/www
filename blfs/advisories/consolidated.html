@@ -80,6 +80,84 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-065"/>
+    <h4>11.0 065 Linux Kernel (LFS)  Date: 2022-02-01  Severity: High</h4>
+    <p>In Linux before 5.16.2 or 5.15.16 (current long term stable) a local
+    privilege escalation via heap overflow exists. Details at
+    <a href="https://www.openwall.com/lists/oss-security/2022/01/18/7">oss-security</a>.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0185">CVE-2022-0185 (Not yet public)</a>.
+    Please note that linux-5.16.2 and 5.15.16 had a vulnerabiity in ext4 which
+    could lead to data loss.</p>
+    <p>Additionally, in Linux before 5.16.4 or 5.15.18 there is a random memory
+    access flaw in the i915 driver which a malicious user can use to crash the
+    system or elevate their privileges. See
+    <a href="https://www.openwall.com/lists/oss-security/2022/01/25/12">oss-security</a>.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0330">CVE-2022-0330 (Not yet public)</a>.
+    <p>To fix these, update to Linux 5.16.4 or later, or Linux-5.15.18 or
+    later (if you prefer to stick with long-term stable 5.15), or versions from
+    2022-01-29  or later if for some reason you are using an older stable kernel series)
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <p>In addition, it has been claimed their is a bug allowing privilege escalation
+    in the kernel's vmwgfx driver (apparently not exploitable if qemu is used). See
+    <a href="https://www.openwall.com/lists/oss-security/2022/01/27/4">oss-security</a>
+    which has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22942">CVE-2022-22942 (Not yet public)</a>.
+    The proposed fix for this has not appeared on the kernel mailing list, therefore the
+    only mitigation is to disable the vmwgfx driver on affected systems. That in itself
+    might be a denial of service.</p>
+
+    <a id="sa-11.0-064"/>
+    <h4>11.0 064 Expat  Date: 2022-02-01  Severity: Critical</h4>
+    <p>Several vulnerabilities, three rated as Critical, have been fixed in
+    expat-2.4.3. See
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45960">CVE-2021-45960</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46143">CVE-2021-46143</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22822">CVE-2022-22822</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22823">CVE-2022-22823</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22824">CVE-2022-22824</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22825">CVE-2022-22825</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22826">CVE-2022-22826</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22827">CVE-2022-22827</a>.</p>
+    <p>To fix this, update to Expat-2.4.3 or later, using the instructions in
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
+    <a id="sa-11.0-063"/>
+    <h4>11.0 063 VIM (LFS and BLFS) Date: 2022-02-01 Severity: High</h4>
+    <p>Many security vulnerabilities in vim have been fixed in versions up to
+    vim-8.2.4236. Fifteen of these have been rated as High by the NVD.
+    Unfortunately, the details are minimal. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3875">CVE-2021-3875</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3903">CVE-2021-3903</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3927">CVE-2021-3927</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3968">CVE-2021-3968</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3973">CVE-2021-3973</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3974">CVE-2021-3974</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3984">CVE-2021-3984</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4019">CVE-2021-4019</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4069">CVE-2021-4069</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4136">CVE-2021-4136</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4166">CVE-2021-4166</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4173">CVE-2021-4173</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4187">CVE-2021-4187</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4192">CVE-2021-4192</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4193">CVE-2021-4193</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0128">CVE-2022-0128</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0156">CVE-2022-0156</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0158">CVE-2022-0158</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0213">CVE-2022-0213</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-8.2.4236 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
     <a id="sa-11.0-062"/>
     <h4>11.0 062 util-linux  Date: 2021-06-28  Severity: High</h4>
     <p>Two bugs in libmount since version 2.33 have been discovered. These apply
