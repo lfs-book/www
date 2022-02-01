@@ -106,6 +106,19 @@
 
 <!-- end of BIND -->
 
+    <h3>cryptsetup</h3>
+
+    <a id="sa-11.0-053"/>
+    <h4>11.0 053 cryptsetup   Date: 2022-01-13 Severity: High</h4>
+    <p>In cryptsetup-2.3.6, a security vulnerability exists that could allow
+    for a local attacker to decrypt a LUKS2 device without a user passphrase.
+    This is done via manipulation of filesystem metadata while the disk is
+    unmounted. Update to cryptsetup-2.4.3 immediately if you use an encrypted
+    device.
+    <a href="consolidated.html#sa-11.0-053">11.0-053</a></p>
+
+<!-- end of cryptsetup -->
+
     <h3>cURL</h3>
 
     <a id="sa-11.0-008"/>
@@ -117,6 +130,17 @@
     <a href="consolidated.html#sa-11.0-008">11.0-008</a></p>
 
 <!-- end of cURL -->
+
+    <h3>Epiphany</h3>
+
+    <a id="sa-11.0-055"/>
+    <h4>11.0 055 Epiphany   Date: 2022-01-13 Severity: Moderate</h4>
+    <p>In Epiphany-41.3, four cross-site scripting vulnerabilities were fixed.
+    These vulnerabilities existed in several areas, but most notably the
+    internal error pages and the about:overview screen. Update to Epiphany-41.3.
+    <a href="consolidated.html#sa-11.0-055">11.0-055</a></p>
+
+<!-- end of Epiphany -->
 
     <h3>Exiv2</h3>
 
@@ -222,6 +246,21 @@
     <a href="consolidated.html#sa-11.0-005">11.0-005</a></p>
 
 <!-- end of Ghostscript -->
+
+    <h3>GnuTLS</h3>
+
+    <a id="sa-11.0-058"/>
+    <h4>11.0 058 GnuTLS  Date: 2022-01-18  Severity: Low</h4>
+    <p>A security advisory has been published by the GnuTLS team:
+    When a single trust list object is shared among multiple threads, calls
+    to gnutls_x509_trust_list_verify_crt2() was able to corrupt temporary
+    memory where internal copy of an issuer certificate is stored. The code
+    path is only taken when a PKCS#11 based trust store is enabled and the
+    issuer certificate is already stored as trusted. To fix this upgrade to
+    GnuTLS 3.7.3 or later.
+    <a href="consolidated.html#sa-11.0-058">11.0-058</a></p>
+
+<!-- end of GnuTLS -->
 
     <h3>Grilo</h3>
 
@@ -378,6 +417,16 @@
 
 <!-- end of PHP -->
 
+    <h3>polkit</h3>
+    <a id="sa-11.0-059"/>
+    <h4>11.0 059 polkit          Date: 2022-01-26  Severity: High</h4>
+    <p>In polkit-0.120, a security vulnerability allowing allowing local
+    privilege escalation has been identified.  This affects polkit since
+    0.94.  Apply the patch to fix the vulnerability and rebuild polkit
+    immediately.  <a href="consolidated.html#sa-11.0-059">11.0-059</a></p>
+
+<!-- end of polkit -->
+
     <h3>PostgreSQL</h3>
 
     <a id="sa-11.0-033"/>
@@ -402,7 +451,25 @@
 
 <!-- end of Python3 -->
 
+    <h3>Qt5</h3>
+
+    <a id="sa-11.0-061"/>
+    <h4>11.0 061 Qt5  Date: 2022-01-28  Severity: Medium</h4>
+    <p>An Out Of Bounds Write was discovered in the SVG component of Qt.  This
+    has been fixed upstream in the paid-for commercial releases, but for the
+    free versions it is necessary to patch it.
+    <a href="consolidated.html#sa-11.0-061">11.0-061</a></p>
+
+    <!-- end of Qt5 -->
+
     <h3>QtWebEngine</h3>
+
+    <a id="sa-11.0-057"/>
+    <h4>11.0 057 QtWebEngine  Date: 2022-01-17 Severity: High</h4>
+    <p>Thirty-one more CVEs (from Chromium) in QtWebEngine, of which at least
+    seventeen are rated as High, have been fixed in the 5.15.8 version.
+    Update to 5.15.8 or use a later version.
+    <a href="consolidated.html#sa-11.0-057">11.0-057</a></p>
 
     <a id="sa-11.0-028"/>
     <h4>11.0 028 QtWebEngine  Date: 2021-11-27  Severity: Critical</h4>
@@ -412,9 +479,9 @@
     version.
     <a href="consolidated.html#sa-11.0-028">11.0-028</a></p>
 
-    <h3>Samba</h3>
-
 <!-- end of QtWebengine -->
+
+    <h3>Ruby</h3>
 
     <a id="sa-11.0-032"/>
     <h4>11.0 032 Ruby         Date: 2021-12-13  Severity: High</h4>
@@ -424,6 +491,19 @@
     <a href="consolidated.html#sa-11.0-032">11.0-032</a></p>
 
 <!-- end of Ruby -->
+
+    <h3>Rustc</h3>
+
+    <a id="sa-11.0-060"/>
+    <h4>11.0 059 Rustc  Date: 2022-01-25  Severity: High</h4>
+    <p>In all versions of rust before 1.58.1 an attacker can exploit a race
+    condition to trick a privileged program into deleting files and directories
+    the attacker couldn't otherwise access or delete. Update to rust-1.58.1 or
+    later, and if necessary rebuild any privileged rust programs.
+    <a href="consolidated.html#sa-11.0-060">11.0-060</a></p>
+
+<!-- end of Rust -->
+    <h3>Samba</h3>
 
     <a id="sa-11.0-026"/>
     <h4>11.0 026 Samba        Date: 2021-11-11  Severity: Critical</h4>
@@ -481,7 +561,24 @@
 
 <!-- end of SANE -->
 
+    <h3>systemd</h3>
+    <h4>11.0 054 systemd      Date: 2022-01-13  Severity: High</h4>
+    <p>In systemd-249 (and systemd-250), a security vulnerability was discovered
+    that allows for symlink attacks and infinite recursion (leading to a crash
+    of systemd-tmpfiles). The BLFS Editors have developed patches for 249 and
+    250. See the advisory for instructions on updating your system.
+    <a href="consolidated.html#sa-11.0-054">11.0-054</a></p>
+
+<!-- end of systemd -->
+
     <h3>Thunderbird</h3>
+
+    <a id="sa-11.0-056"/>
+    <h4>11.0 056 Thunderbird  Date: 2022-01-13  Severity: High</h4>
+    <p>In Thunderbird-91.5.0, several security vulnerabilities were fixed
+    that could allow for remotely exploitable crashes, remote code execution, and
+    content spoofing. Update to Thunderbird-91.5.0.
+    <a href="consolidated.html#sa-11.0-056">11.0-056</a></p>
 
     <a id="sa-11.0-040"/>
     <h4>11.0 040 Thunderbird  Date: 2021-12-23  Severity: Critical</h4>
@@ -509,6 +606,13 @@
 <!-- end of Thunderbird -->
 
     <h3>VIM</h3>
+
+    <a id="sa-11.0-063"/>
+    <h4>11.0 063 VIM (LFS and BLFS) Date: 2022-02-01 Severity: High</h4>
+    <p>Many security vulnerabilities in vim have been fixed in versions up to
+    vim-8.2.4236.  Fifteen of these have been rated as High by the NVD.
+    Unfortunately, the details are minimal.
+    <a href="consolidated.html#sa-11.0-063">11.0-063</a></p>
 
     <a id="sa-10.1-015"/>
     <h4>11.0 015 VIM (LFS and BLFS) Date: 2021-10-18  Severity: High</h4>

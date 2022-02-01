@@ -49,8 +49,18 @@
              <ul>
                 <li>Indexes</li>
                 <li>FollowSymlinks</li>
-                <li>IncludesNOEXEC</li>
+                <li>IncludesNOEXEC (requires mod_include.so)</li>
              </ul>
+          </li>
+
+          <li>
+            If you want to use Nginx instead of Apache, the following
+            options should be used:
+            <ul>
+              <li>ssi on; (requires ngx_http_ssi_module)</li>
+              <li>disable_symlinks off;</li>
+              <li>autoindex on;</li>
+            </ul>
           </li>
        </ul>
 

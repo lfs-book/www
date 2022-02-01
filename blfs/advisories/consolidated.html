@@ -79,6 +79,281 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+
+    <a id="sa-11.0-065"/>
+    <h4>11.0 065 Linux Kernel (LFS)  Date: 2022-02-01  Severity: High</h4>
+    <p>In Linux before 5.16.2 or 5.15.16 (current long term stable) a local
+    privilege escalation via heap overflow exists. Details at
+    <a href="https://www.openwall.com/lists/oss-security/2022/01/18/7">oss-security</a>.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0185">CVE-2022-0185 (Not yet public)</a>.
+    Please note that linux-5.16.2 and 5.15.16 had a vulnerabiity in ext4 which
+    could lead to data loss.</p>
+    <p>Additionally, in Linux before 5.16.4 or 5.15.18 there is a random memory
+    access flaw in the i915 driver which a malicious user can use to crash the
+    system or elevate their privileges. See
+    <a href="https://www.openwall.com/lists/oss-security/2022/01/25/12">oss-security</a>.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0330">CVE-2022-0330 (Not yet public)</a>.</p>
+    <p>To fix these, update to Linux 5.16.4 or later, or Linux-5.15.18 or
+    later (if you prefer to stick with long-term stable 5.15), or versions from
+    2022-01-29  or later if for some reason you are using an older stable kernel series)
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <p>In addition, it has been claimed their is a bug allowing privilege escalation
+    in the kernel's vmwgfx driver (apparently not exploitable if qemu is used). See
+    <a href="https://www.openwall.com/lists/oss-security/2022/01/27/4">oss-security</a>
+    which has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22942">CVE-2022-22942 (Not yet public)</a>.
+    The proposed fix for this has not appeared on the kernel mailing list, therefore the
+    only mitigation is to disable the vmwgfx driver on affected systems. That in itself
+    might be a denial of service.</p>
+
+    <a id="sa-11.0-064"/>
+    <h4>11.0 064 Expat  Date: 2022-02-01  Severity: Critical</h4>
+    <p>Several vulnerabilities, three rated as Critical, have been fixed in
+    expat-2.4.3. See
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45960">CVE-2021-45960</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46143">CVE-2021-46143</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22822">CVE-2022-22822</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22823">CVE-2022-22823</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22824">CVE-2022-22824</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22825">CVE-2022-22825</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22826">CVE-2022-22826</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22827">CVE-2022-22827</a>.</p>
+    <p>To fix this, update to Expat-2.4.3 or later, using the instructions in
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
+    <a id="sa-11.0-063"/>
+    <h4>11.0 063 VIM (LFS and BLFS) Date: 2022-02-01 Severity: High</h4>
+    <p>Many security vulnerabilities in vim have been fixed in versions up to
+    vim-8.2.4236. Fifteen of these have been rated as High by the NVD.
+    Unfortunately, the details are minimal. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3875">CVE-2021-3875</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3903">CVE-2021-3903</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3927">CVE-2021-3927</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3968">CVE-2021-3968</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3973">CVE-2021-3973</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3974">CVE-2021-3974</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3984">CVE-2021-3984</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4019">CVE-2021-4019</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4069">CVE-2021-4069</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4136">CVE-2021-4136</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4166">CVE-2021-4166</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4173">CVE-2021-4173</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4187">CVE-2021-4187</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4192">CVE-2021-4192</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4193">CVE-2021-4193</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0128">CVE-2022-0128</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0156">CVE-2022-0156</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0158">CVE-2022-0158</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0213">CVE-2022-0213</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-8.2.4236 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
+    <a id="sa-11.0-062"/>
+    <h4>11.0 062 util-linux  Date: 2021-06-28  Severity: High</h4>
+    <p>Two bugs in libmount since version 2.33 have been discovered. These apply
+    to fuse mounts, but one of the examples shows fuse being used to umount /tmp.
+    See <a href="https://www.openwall.com/lists/oss-security/2022/01/24/2">oss-security</a>.
+    The CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3995">CVE-2021-3995 (Not yet public)</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3996">CVE-2021-3996 (Not yet public)</a>.</p>
+    <p>To fix this upgrade to util-linux-2.37.3 or later using the instructions at
+    <a href="../../lfs/view/development/chapter08/util-linux.html">util-linux (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/util-linux.html">util-linux (systemd)</a>
+    Please be aware that on older systems where the linux headers include 'linux/raw.h'
+    you will need to add '--disable-raw' to the configure, and on systems before /usr was
+    merged (LFS-10.1 and earlier) you should <em>omit</em> '--libdir=/usr/lib' to
+    ensure that the libraries overwrite the existing libraries in /lib.</p>
+
+    <a id="sa-11.0-061"/>
+    <h4>11.0 061 Qt5  Date: 2022-01-28  Severity: Medium</h4>
+    <p>An Out Of Bounds Write was discovered in the SVG component of Qt.  This
+    has been fixed upstream in the paid-for commercial releases, but for the
+    free versions it is necessary to patch it. Please see
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45930">CVE-2021-45930</a>.</p>
+    <p>To fix this apply the
+    <a href="http://www.linuxfromscratch.org/patches/downloads/qt-everywhere-src/qt-everywhere-src-5.15.2-kf5.15-2.patch">qt-everywhere-src-5.15.2-kf5.15-2.patch</a>
+    (or a later version of the patch if one exists) using the instructions at
+    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a>, or
+    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a>.</p>
+
+    <a id="sa-11.0-060"/>
+    <h4>11.0 060 Rustc  Date: 2022-01-25  Severity: High</h4>
+    <p>In all versions of rust before 1.58.1 an attacker can exploit a race
+    condition to trick a privileged program into deleting files and directories
+    the attacker couldn't otherwise access or delete. The rust security advisory
+    <a href="https://blog.rust-lang.org/2022/01/20/cve-2022-21658.html">https://blog.rust-lang.org/2022/01/20/cve-2022-21658.html</a>
+    explains this. Pending further analysis, this is rated as High and if you
+    have any privileged rust programs they should be rebuilt if they use this
+    function on paths that may be manipulated with lesser privileges.
+    <!-- thanks to fedora for this wording -->
+    The programs in BLFS which use rust do not install any privileged programs
+    so most BLFS users who have installed rust will only need to upgrade it.</p>
+    <p>Please see
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21658">CVE-2022-21658 (Awaiting Analysis)</a>.</p>
+    <p>To fix rust, update to rustc-1.58.1 (or a later version) using the
+    instructions for
+    <a href="../view/svn/general/rust.html">Rust (sysv)</a> or
+    <a href="../view/systemd/general/rust.html">Rust (systemd)</a>.</p>
+
+    <h4>11.0 059 polkit  Date: 2022-01-26 Severity: High</h4>
+    <p>In polkit-0.120, a trivially exploitable vulnerability allowing
+    local privilege escalation has been identified.  This vulnerability
+    affects polkit back to 0.92.  The details can be found at this
+    <a href="https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt">Qualys Security Advisory</a>.  The vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4034">CVE-2021-4034</a> (not disclosed yet).</p>
+    <p>To fix this, apply <a href="https://www.linuxfromscratch.org/patches/downloads/polkit/polkit-0.120-security_fix-1.patch">the patch</a>
+    for polkit &gt;=0.114, &lt;=0.120, or
+    <a href="https://www.linuxfromscratch.org/patches/downloads/polkit/polkit-0.113-cve_2021_4034_fix-1.patch">the rebased patch</a>
+    for polkit &gt;=0.92, &lt;=0.113 and rebuild polkit.  Or, if you don't
+    use the functionality of the <code>pkexec</code> command, you can unset
+    the SUID bit on it with <code>chmod -s /usr/bin/pkexec</code>
+    as the <code>root</code> user, as a workaround.</p>
+>>>>>>> 9af98153d38efaf3eab1dcfa6da4eb88ae40bff0
+
+    <a id="sa-11.0-058"/>
+    <h4>11.0 058 GnuTLS  Date: 2022-01-18 Severity: Low</h4>
+    <p>A security advisory has been published by GnuTLS developers:
+    <a href="https://www.gnutls.org/security-new.html#GNUTLS-SA-2022-01-17">GNUTLS-SA-2022-01-17</a>.</p>
+    <p>To fix these, update to GnuTLS 3.7.3 or a later version using the instructions at
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a>, or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
+    <a id="sa-11.0-057"/>
+    <h4>11.0 057 QtWebEngine  Date: 2022-01-17 Severity: High</h4>
+    <p>Thirty-one more CVEs (from Chromium) in QtWebEngine, of which at least
+    seventeen are rated as High, have been fixed in the 5.15.8 version:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4102">CVE-2021-4102 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4101">CVE-2021-4101 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4099">CVE-2021-4099 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4098">CVE-2021-4098 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4079">CVE-2021-4079</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4078">CVE-2021-4078</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4062">CVE-2021-4062</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4059">CVE-2021-4059</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4058">CVE-2021-4058</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4057">CVE-2021-4057</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38022">CVE-2021-38022</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38021">CVE-2021-38021</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38019">CVE-2021-38019</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38018">CVE-2021-38018</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38017">CVE-2021-38017</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38015">CVE-2021-38015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38012">CVE-2021-38012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38010">CVE-2021-38010</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38009">CVE-2021-38009</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38007">CVE-2021-38007</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38005">CVE-2021-38005</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38003">CVE-2021-38003</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38001">CVE-2021-38001</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37996">CVE-2021-37996</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37993">CVE-2021-37993</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37992">CVE-2021-37992</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37989">CVE-2021-37989</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37987">CVE-2021-37987</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37984">CVE-2021-37984</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3541">CVE-2021-3541</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3517">CVE-2021-3517</a>.</p>
+    <p>To fix these, update to 5.15.8 or a later version using the instructions at
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <a id="sa-11.0-056"/>
+    <h4>11.0 056 Thunderbird  Date: 2022-01-13 Severity: High</h4>
+    <p>In Thunderbird-91.5.0, several security vulnerabilities were fixed that
+    could allow for being unable to leave fullscreen mode, for out-of-bounds
+    memory access (when inserting text in edit mode), for use-after-free crashes
+    when certain network request objects were freed too early, for crashes when
+    processing CSS filter effects, for crashes when playing audio files, for
+    iframe sandbox escapes, origin spoofs, leakage of cross-origin URLs through
+    the securitypolicyviolation event, and for remote code execution due to
+    memory safety issues. An additional security vulnerability was fixed that
+    could allow for crashes when handling empty PKCS#7 sequences.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22743">CVE-2022-22743</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22742">CVE-2022-22742</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22741">CVE-2022-22741</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22740">CVE-2022-22740</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22738">CVE-2022-22738</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22737">CVE-2022-22737</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-4140">CVE-2021-4140</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22748">CVE-2022-22748</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22745">CVE-2022-22745</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22747">CVE-2022-22747</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22739">CVE-2022-22739</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-22751">CVE-2022-22751</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.5.0 or later
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.0-055"/>
+    <h4>11.0 055 Epiphany     Date: 2022-01-13 Severity: Moderate</h4>
+    <p>In Epiphany-41.3, four security vulnerabilities were fixed that could
+    allow for cross-site scripting (XSS) to take place. These security
+    vulnerabilities occurred in the about:overview page, the PDF.js PDF reader
+    (using a server's suggested_filename as the pdf_name), when using the
+    View Source mode or Reader Mode to view a page title, and via all internal
+    error pages.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45085">CVE-2021-45085</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45086">CVE-2021-45086</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45087">CVE-2021-45087</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45088">CVE-2021-45088</a>.</p>
+    <p>To fix these vulnerabilities, update to Epiphany-41.3 or later using
+    the instructions for
+    <a href="../view/svn/xsoft/epiphany.html">Epiphany (sysv)</a> or
+    <a href="../view/systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
+
+    <a id="sa-11.0-054"/>
+    <h4>11.0 054 systemd      Date: 2022-01-13 Severity: High</h4>
+    <p>In systemd-249 (and systemd-250), a security vulnerability exists that
+    allows for uncontrolled recursion in the systemd-tmpfiles program.
+    systemd-tmpfiles creates, modifies, and deletes temporary files and
+    directories on system startup. While this vulnerability is just classified
+    as a denial-of-service, it is also possible to cause PID1 to Segmentation
+    Fault when this is exploited. It is also possible to create arbitrary
+    files if an attacker can catch a folder while it is still world-writable.
+    If you use systemd, it is recommended that you patch your installation
+    immediately. In response to this, the BLFS Editors have developed a patch
+    for both version 250 (which is for the development books), and for 249
+    (which is the version that shipped with LFS/BLFS 11.0).
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-3997">CVE-2021-3997</a>.</p>
+    <p>If you are using systemd-250, apply the patch using the instructions for
+    <a href="../view/systemd/general/systemd.html">systemd (systemd)</a>.</p>
+    <p>If you are using systemd-249, apply the new upstream fixes patch located
+    at <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-249-upstream_fixes-2.patch">
+    systemd-249-upstream_fixes-2</a> and rebuild systemd.</p>
+
+    <a id="sa-11.0-053"/>
+    <h4>11.0 053 cryptsetup   Date: 2022-01-13 Severity: High</h4>
+    <p>In cryptsetup-2.3.6, a security vulnerability was identified that allows
+    for decryption of data during crash recovery on a LUKS2-encrypted device.
+    This attack does require physical access to the device, but no knowledge of
+    user passphrases. An attacker can modify on-disk metadata to simulate
+    encryption in progress with a crashed (unfinished) reencryption step, which
+    allows for persistent decryption of the device. If you are using cryptsetup
+    for anything other than a build dependency, you should update to 2.4.2
+    immediately. Note that you need to finish any encryption tasks that are
+    currently in progress to prevent any data corruption/data loss.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2021-4122">CVE-2021-4122</a>.</p>
+    <p>To fix this vulnerability, update to cryptsetup-2.4.3 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/cryptsetup.html">cryptsetup (sysv)</a> or
+    <a href="../view/systemd/postlfs/cryptsetup.html">cryptsetup (systemd)</a>.</p>
+
     <a id="sa-11.0-052"/>
     <h4>11.0 052 gfbgraph Date: 2022-01-11  Severity: High</h4>
     <p>In gfbgraph-0.2.4, a security vulnerability was discovered that causes
@@ -220,7 +495,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27803">CVE-2021-27803</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30004">CVE-2021-30004</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0535">CVE-2021-0535</a>.</p>
-    <p>To fix these vulnerabilities, apply the patch using the instructions for
+    <p>To fix these vulnerabilities, update to wpa_supplicant-2.10 or later
+    using the instructions for
     <a href="../view/svn/basicnet/wpa_supplicant.html">wpa_supplicant (sysv)</a> or
     <a href="../view/systemd/basicnet/wpa_supplicant.html">wpa_supplicant (systemd)</a>.</p>
 

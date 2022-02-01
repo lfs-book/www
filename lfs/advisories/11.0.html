@@ -10,9 +10,9 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
-     <ul>
+<!-- <ul>
        <li>There are currently no known security vulnerabilities for LFS-11.0.</li>
-     </ul>
+     </ul>-->
 
     <!-- Editors: do the consolidated file first, to get the next number.
          Checking what you have prepared is easier if you can create symlinks
@@ -46,6 +46,7 @@
 
     <p>In Glibc before 2.33 there are four vulnerabilities in iconv which can lead
     to a crash when processing less-common character encodings.<p>
+
     Please read the link to assess the severity of this for your use case, and what
     action to take.
     <a href="../../blfs/advisories/consolidated.html#10.1-NNN">10.1-NNN</a></p>
@@ -63,6 +64,28 @@
     <!\-\- End of PackageName -->
     <!-- End of template -->
 
+    <h3>Expat</h3>
+
+    <a id="sa-11.0-064"/>
+    <h4>11.0 064 Expat  Date: 2022-02-01  Severity: Critical</h4>
+    <p>Several vulnerabilities, three rated as Critical, have been fixed in
+    expat-2.4.3. See
+    <a href="../../blfs/advisories/consolidated.html#sa-11.0-064">11.0-064</a></p>
+
+<!-- end of Expat -->
+
+    <h3>Linux kernel</h3>
+    <a id="sa-11.0-065"/>
+    <h4>11.0 065 Linux Kernel (LFS)  Date: 2022-02-01  Severity: High</h4>
+    <p>Some privilege escalation vulnerabilities have been reported in the
+    linux kernel. Two of these can be fixed by upgrading to linux-5.16.4 or
+    equivalent long-term stable releases. A third reported vulnerability in
+    the vmwgfx driver has not been fixed, but can be worked around by not
+    loading that driver. Please read
+    <a href="../../blfs/advisories/consolidated.html#sa-11.0-065">11.0-065</a></p>
+
+<!-- end of Linux kernel -->
+
     <h3>Python 3</h3>
 
     <a id="sa-11.0-007"/>
@@ -74,15 +97,41 @@
 
 <!-- end of Python3 -->
 
+    <h3>systemd</h3>
+    <h4>11.0 054 systemd      Date: 2022-01-13  Severity: High</h4>
+    <p>In systemd-249 (and systemd-250), a security vulnerability was discovered
+    that allows for symlink attacks and infinite recursion (leading to a crash
+    of systemd-tmpfiles). The BLFS Editors have developed patches for 249 and
+    250. See the advisory for instructions on updating your system.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.0-054">11.0-054</a></p>
+
+    <h3>util-linux</h3>
+
+    <a id="sa-11.0-062"/>
+    <h4>11.0 062 util-linux  Date: 2021-06-28  Severity: High</h4>
+    <p>Two bugs in libmount since version 2.33 have been discovered.
+    These require the use of fuse and can be used to unmount /tmp.
+    To fix these, please read the advisory.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.0-062">11.0-062</a></p>
+
+<!-- end of util-linux -->
+
     <h3>VIM</h3>
+
+    <a id="sa-11.0-063"/>
+    <h4>11.0 063 VIM (LFS and BLFS) Date: 2022-02-01 Severity: High</h4>
+    <p>Many security vulnerabilities in vim have been fixed in versions up to
+    vim-8.2.4236.  Fifteen of these have been rated as High by the NVD.
+    Unfortunately, the details are minimal.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.0-063">11.0-063</a></p>
 
     <a id="sa-11.0-015"/>
     <h4>11.0 015 VIM (LFS and BLFS)    Date: 2021-10-18 Severity: High</h4>
     <p>In vim-8.2.3508, three security vulnerabilities were fixed that could
     allow for crashes or arbitrary code execution. Updating to VIM-8.2.3508
     is suggested if you use UTF-8 encoded files or modify XML files.
-    <a href="../../blfs/advisories/consoldated.html#sa-11.0-015">11.0-015</a></p>
+    <a href="../../blfs/advisories/consolidated.html#sa-11.0-015">11.0-015</a></p>
 
-<-- end of VIM -->
+<!-- end of VIM -->
 
 <!--#include virtual="/common/footer.html" -->
