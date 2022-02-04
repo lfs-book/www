@@ -81,7 +81,7 @@
     releases of the books.</p>-->
 
     <a id="sa-11.0-065"/>
-    <h4>11.0 065 Linux Kernel (LFS)  Date: 2022-02-01  Severity: High</h4>
+    <h4>11.0 065 Linux Kernel (LFS)  Revised: 2022-02-04  Severity: High</h4>
     <p>In Linux before 5.16.2 or 5.15.16 (current long term stable) a local
     privilege escalation via heap overflow exists. Details at
     <a href="https://www.openwall.com/lists/oss-security/2022/01/18/7">oss-security</a>.
@@ -101,14 +101,15 @@
     using the instructions from the LFS book for
     <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
     <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
-    <p>In addition, it has been claimed their is a bug allowing privilege escalation
+    <p>In addition, there was a bug allowing privilege escalation
     in the kernel's vmwgfx driver (apparently not exploitable if qemu is used). See
     <a href="https://www.openwall.com/lists/oss-security/2022/01/27/4">oss-security</a>
     which has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22942">CVE-2022-22942 (Not yet public)</a>.
-    The proposed fix for this has not appeared on the kernel mailing list, therefore the
-    only mitigation is to disable the vmwgfx driver on affected systems. That in itself
-    might be a denial of service.</p>
+    The proposed fix for this did not appear on the kernel mailing list, but
+    was included in linux-5.16.4 and other stable kernels released at the same
+    time. Therefore, the workaround to disable the vmwgfx driver on affected systems
+    is not required if you upgrade to linux-5.16.4 or later, or linux-5.15.18 or later.</p>
 
     <a id="sa-11.0-064"/>
     <h4>11.0 064 Expat  Date: 2022-02-01  Severity: Critical</h4>
