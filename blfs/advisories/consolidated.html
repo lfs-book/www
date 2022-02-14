@@ -256,8 +256,13 @@
     <a id="sa-11.0-058"/>
     <h4>11.0 058 GnuTLS  Date: 2022-01-18 Severity: Low</h4>
     <p>A security advisory has been published by GnuTLS developers:
-    <a href="https://www.gnutls.org/security-new.html#GNUTLS-SA-2022-01-17">GNUTLS-SA-2022-01-17</a>.</p>
-    <p>To fix these, update to GnuTLS 3.7.3 or a later version using the instructions at
+    <a href="https://www.gnutls.org/security-new.html#GNUTLS-SA-2022-01-17">GNUTLS-SA-2022-01-17</a>.
+    This vulnerability has been classified as a memory corruption vulnerability
+    in the gnutls_x509_trust_list_verify_crt() vulnerability which occurs
+    when a single trust list object is shared among multiple threads. A CVE
+    identifier has not been issued for this vulnerability.</p>
+    <p>To fix this vulnerability, update to GnuTLS 3.7.3 or a later version
+    using the instructions for
     <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a>, or
     <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
