@@ -80,6 +80,40 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-069"/>
+    <h4>11.0 069 glibc            Date: 2022-02-13  Severity: Critical</h4>
+    <p>In glibc-2.35, four security vulnerabilities were fixed that could allow
+    for denial of service, remote code execution, information disclosure,
+    arbitrary code execution, and privilege escalation. One of these
+    vulnerabilties occurs due to an off-by-one buffer overflow and underflow
+    in the getcwd() function, which may lead to memory corruption when the
+    size of the buffer is exactly '1'. A local attacker who has the capability
+    of controlling the input buffer and size passed to getcwd() in a SUID-bit
+    enabled program can use this flaw to elevate privileges and execute
+    arbitrary code on the system. Another vulnerability is caused by the
+    realpath() function - in applications which use the realpath_stk() function,
+    it is possible to have unintentional information leakage and disclosure of
+    sensitive data due to an unexpected value being returned with the contents
+    of memory. Another vulnerability exists in the svcunix_create() function in
+    the SunRPC module in glibc. This occurs when the svcunix_create() function
+    copies its path argument on the stack without validating it's length, which
+    results in a buffer overflow and remote code execution (or crashes). The
+    fourth and final vulnerability exists in the clnt_create() function in the
+    SunRPC module. The clnt_create function will copy it's hostname argument
+    on the stack without validating it's length, which results in a buffer
+    overflow and remote code execution or application crashes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23219">CVE-2022-23219</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23218">CVE-2022-23218</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2021-3998">CVE-2021-3998</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2021-3999">CVE-2021-3999</a>.</p>
+    <p>Properly fixing these vulnerabilities can be tricky. To fix them, take a
+    full system backup, and then rebuild glibc with the patch found at
+    <a href="https://linuxfromscratch.org/patches/downloads/glibc/glibc-2.34-security_fixes-1.patch">
+    glibc-2.34-security_fixes-1.patch</a>, using the instructions for glibc from
+    <a href="../../lfs/view/11.0/chapter08/glibc.html">glibc (SysV)</a> or
+    <a href="../../lfs/view/11.0-systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
+
     <a id="sa-11.0-068"/>
     <h4>11.0 068 Expat            Date: 2022-02-13  Severity: Critical</h4>
     <p>In Expat-2.4.4, two security vulnerabilities were fixed that could allow
