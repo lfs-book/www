@@ -80,6 +80,23 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-073"/>
+    <h4>11.0 073 zsh              Date: 2022-02-13  Severity: High</h4>
+    <p>In zsh-5.8.1, a security vulnerability was fixed that could allow for
+    malicious command execution through the PROMPT_SUBST expansion. An attacker
+    can achieve code execution if they control a command output inside the
+    prompt. This has been demonstrated upstream via the %F argument, and a proof
+    of concept exploit exists that can be used to trick a user into executing
+    arbitrary code by having them check out a Git branch with a specially crafted
+    name. This was fixed in the shell via preventing PROMPT_SUBST evaluation on
+    prompt-expansion arguments.
+    This vulnerability has been assigned
+    <a href="https://www.tenable.com/plugins/nessus/157935">CVE-2021-45444</a>.</p>
+    <p>To fix this vulnerability, update to zsh-5.8.1 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/zsh.html">zsh (sysv)</a> or
+    <a href="../view/systemd/postlfs/zsh.html">zsh (systemd)</a>.</p>
+
     <a id="sa-11.0-072"/>
     <h4>11.0 072 Wireshark        Date: 2022-02-13  Severity: High</h4>
     <p>In Wireshark-3.6.2, several security vulnerabilities were fixed that
@@ -168,7 +185,7 @@
     full system backup, and then rebuild glibc with the patch found at
     <a href="https://linuxfromscratch.org/patches/downloads/glibc/glibc-2.34-security_fixes-1.patch">
     glibc-2.34-security_fixes-1.patch</a>, using the instructions for glibc from
-    <a href="../../lfs/view/11.0/chapter08/glibc.html">glibc (SysV)</a> or
+    <a href="../../lfs/view/11.0/chapter08/glibc.html">glibc (sysv)</a> or
     <a href="../../lfs/view/11.0-systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
 
     <a id="sa-11.0-068"/>
