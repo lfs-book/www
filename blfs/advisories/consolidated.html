@@ -80,6 +80,29 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-072"/>
+    <h4>11.0 072 Wireshark        Date: 2022-02-13  Severity: High</h4>
+    <p>In Wireshark-3.6.2, several security vulnerabilities were fixed that
+    could allow for a remote attacker to cause a denial-of-service due to
+    application crashes and excessive resource consumption. These issues can
+    be exploited on a network where AMP, ATN-ULCS, ASN.1, BP, GDSDB,
+    OpenFlow v5, P_MUL, SoulSeek, TDS, WBXML, WSP, ZigBee ZCL, RTMPT, PVFS,
+    CSN.1, or CMS packets are being transmitted. Note that this is also
+    exploitable via a malicious packet trace file, although the primary attack
+    vector is packets traveling across a network when Wireshark is run.
+    There are no CVEs for these issues, however they have been assigned
+    advisories upstream. More information about these vulnerabilities can be
+    found at
+    <a href="https://www.wireshark.org/security/wnpa-sec-2022-01">wnpa-sec-2022-01</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2022-02">wnpa-sec-2022-02</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2022-03">wnpa-sec-2022-03</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2022-04">wnpa-sec-2022-04</a>, and
+    <a href="https://www.wireshark.org/security/wnpa-sec-2022-05">wnpa-sec-2022-05</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-3.6.2 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-11.0-071"/>
     <h4>11.0 071 libarchive       Date: 2022-02-13  Severity: Medium</h4>
     <p>In libarchive-3.6.0, two security vulnerabilities were fixed that could
