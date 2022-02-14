@@ -80,6 +80,23 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-070"/>
+    <h4>11.0 070 libgcrypt        Date: 2022-02-13  Severity: Medium</h4>
+    <p>In libgcrypt-1.10.0, a security vulnerability was fixed that allows for
+    plaintext encryption key revcovery when using the ElGamal implementation in
+    libgcrypt. This was previously fixed in 1.9.4, but the fix was improved upon
+    in libgcrypt-1.10.0. The issue occurs during the interaction between two
+    cryptographic libraries and a dangerous combination of the prime defined by
+    the receiver's public key as well as the generator in the public key and the
+    sender's ephemeral exponents. This allows for a cross-configuration attack
+    leading to plaintext encryption key recovery.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40528">CVE-2021-40528</a>.</p>
+    <p>To fix this vulnerability, update to libgcrypt-1.10.0 or later using the
+    instructions for
+    <a href="../view/svn/general/libgcrypt.html">libgcrypt (sysv)</a> or
+    <a href="../view/systemd/general/libgcrypt.html">libgcrypt (systemd)</a>.</p>
+
     <a id="sa-11.0-069"/>
     <h4>11.0 069 glibc            Date: 2022-02-13  Severity: Critical</h4>
     <p>In glibc-2.35, four security vulnerabilities were fixed that could allow
