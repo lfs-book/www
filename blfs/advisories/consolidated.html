@@ -80,6 +80,23 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-071"/>
+    <h4>11.0 071 libarchive       Date: 2022-02-13  Severity: Medium</h4>
+    <p>In libarchive-3.6.0, two security vulnerabilities were fixed that could
+    allow for symlink attacks and for a denial of service. One of these
+    vulnerabilities occurs in the copy_string() function, and is classified
+    as a use-after-free that results in a denial of service. The other one occurs
+    when processing the fixup list while extracting an archive. Note that these
+    vulnerabilities can occur in any program which uses libarchive, but the
+    primary attack vector is a user downloading a malicious archive.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-31566">CVE-2021-31566</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36976">CVE-2021-36976</a>.</p>
+    <p>To fix these vulnerabilities, update to libarchive-3.6.0 or later using
+    the instructions for
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
     <a id="sa-11.0-070"/>
     <h4>11.0 070 libgcrypt        Date: 2022-02-13  Severity: Medium</h4>
     <p>In libgcrypt-1.10.0, a security vulnerability was fixed that allows for
