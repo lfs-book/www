@@ -80,6 +80,34 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-076"/>
+    <h4>11.0 076 Samba            Date: 2022-02-13  Severity: Critical</h4>
+    <p>In Samba-4.15.3, three security vulnerabilities were fixed that could
+    allow for an information leak, for trivial remote code execution, and for
+    the ability to impersonate services on an Active Directory network. The
+    information leak vulnerability occurs via symlinks, and can notify the user
+    of the existence of a file or folder outside of an exported directory share.
+    The remote code execution is trivial to exploit and allows remote attackers
+    to easily execute arbitrary code as root on affected Samba servers which
+    use the VFS module vfs_fruit. This vulnerability exists within the parsing
+    of EA metadata when opening files in smbd. Note that vfs_fruit is most
+    commonly used when an Apple Macintosh device is on the network. This
+    particular vulnerability has been rated a 9.9/10 by NVD. The Active
+    Directory impersonation vulnerability occurs due to checks being bypassed.
+    These checks are supposed to prevent aliased SPNs from being mixed up with
+    standard users. An attacker can exploit this vulnerability by writing to an
+    account that is identical to the name of an existing service. This also
+    allows an attacker to intercept traffic intended for those services, allowing
+    for a significant loss of confidentiality and integrity.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-44141">CVE-2021-44141</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2021-44142">CVE-2021-44142</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-0336">CVE-2022-0336</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.15.3 using the
+    instructions for
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a> immediately.</p>
+
     <a id="sa-11.0-075"/>
     <h4>11.0 075 WebKitGTK+       Date: 2022-02-13  Severity: Critical</h4>
     <p>In WebKitGTK+-2.34.5, several security vulnerabilities were fixed that
