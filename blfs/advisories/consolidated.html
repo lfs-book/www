@@ -80,6 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-074"/>
+    <h4>11.0 074 gst-plugins-base Date: 2022-02-13  Severity: Medium</h4>
+    <p>In gst-plugins-base-1.18.6 (and 1.20.0), a security vulnerability was
+    fixed that could allow for application crashes when presented with malformed
+    files. This occured when calling upon tagdemux during processing of a
+    malicious MP3 file, and happens due to a race condition between typefinding
+    and the end-of-stream event. This vulnerability can be exploited via
+    WebKitGTK+-based browsers by visiting a web page with a corrupted MP3 file
+    present on the page.
+    This vulnerability has not been assigned a CVE, but more details can be
+    found at
+    <a href="https://gitlab.freedesktop.org/gstreamer/gstreamer/-/issues/967">Gstreamer Issue 967</a>.</p>
+    <p>To fix this vulnerability, update to gstreamer-1.18.6 or 1.20.0 using
+    the instructions for
+    <a href="../view/svn/multimedia/gst10-plugins-base.html">gst-plugins-base (sysv)</a> or
+    <a href="../view/systemd/multimedia/gst10-plugins-base.html">gst-plugins-base (systemd)</a>.</p>
+    <p>If you decide to update to gst-plugins-base-1.20.0, you must update the
+    entire stack to 1.20 at the same time.</p>
+
     <a id="sa-11.0-073"/>
     <h4>11.0 073 zsh              Date: 2022-02-13  Severity: High</h4>
     <p>In zsh-5.8.1, a security vulnerability was fixed that could allow for
