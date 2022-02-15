@@ -80,6 +80,35 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-079"/>
+    <h4>11.0 079 MariaDB          Date: 2022-02-14  Severity: High</h4>
+    <p>In MariaDB-10.6.7, several security vulnerabilities were fixed that
+    could allow for application crashes and information disclosure when
+    executing certain SELECT commands. One of these issues occurs due to
+    incorrect usage of used_tables inside of the API. Another occurs due
+    to improper usage of the sub_select_postjoin_aggr() function in the API.
+    Another one occurs due to improper usage of the find_field_in_tables
+    and find_order_in_list API calls due to an unused table common table
+    expression. The rest of the vulnerabilities occur when a SELECT DISTINCT
+    statement is too long, such that they interact with storage-engine
+    resource limitations, and when SELECT is called with other unspecified
+    options.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46665">CVE-2021-46665</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46664">CVE-2021-46664</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46661">CVE-2021-46661</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46668">CVE-2021-46668</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46663">CVE-2021-46663</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24052">CVE-2022-24052</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24051">CVE_2022-24051</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24050">CVE-2022-24050</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24048">CVE-2022-24048</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46659">CVE-2021-46659</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-10.6.9 or later using
+    the instructions for
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
     <a id="sa-11.0-078"/>
     <h4>11.0 078 Exempi           Date: 2022-02-14  Severity: Critical</h4>
     <p>In Exempi-2.6.1, several security vulnerabilities were fixed that
@@ -111,7 +140,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36057">CVE-2021-36057</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36064">CVE-2021-36064</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36058">CVE-2021-36058</a>.</p>
-    <p>To fix these vulnerabilities, update to Exempi-2.6.1 using the
+    <p>To fix these vulnerabilities, update to Exempi-2.6.1 or later using the
     instructions for
     <a href="../view/svn/general/exempi.html">Exempi (sysv)</a> or
     <a href="../view/systemd/general/exempi.html">Exempi (systemd)</a>.</p>
