@@ -80,6 +80,42 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-078"/>
+    <h4>11.0 078 Exempi           Date: 2022-02-14  Severity: Critical</h4>
+    <p>In Exempi-2.6.1, several security vulnerabilities were fixed that
+    could allow for information disclosure, vulnerability mitigation bypass,
+    application crashes, arbitrary code execution, and remote code execution.
+    Most of these vulnerabilities are due to stack-based buffer overflows and
+    memory corruption issues, but a few of them are caused by use-after-free
+    problems which result in application crashes. In theory, these vulnerabilities
+    are exploitable by downloading files on systems where Tracker is installed
+    and configured to index the user's home directory, but the primary attack
+    vector listed is users who open crafted files. Due to the highly exploitable
+    nature of these vulnerabilities though, updating to Exempi-2.6.1 as soon
+    as possible is recommended.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40716">CVE-2021-40716</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40732">CVE-2021-40732</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36045">CVE-2021-36045</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36046">CVE-2021-36046</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36052">CVE-2021-36052</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36047">CVE-2021-36047</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36048">CVE-2021-36048</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36050">CVE-2021-36050</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36051">CVE-2021-36051</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39847">CVE-2021-39847</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36053">CVE-2021-36053</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36054">CVE-2021-36054</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36055">CVE-2021-36055</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36056">CVE-2021-36056</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36057">CVE-2021-36057</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36064">CVE-2021-36064</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36058">CVE-2021-36058</a>.</p>
+    <p>To fix these vulnerabilities, update to Exempi-2.6.1 using the
+    instructions for
+    <a href="../view/svn/general/exempi.html">Exempi (sysv)</a> or
+    <a href="../view/systemd/general/exempi.html">Exempi (systemd)</a>.</p>
+
     <a id="sa-11.0-077"/>
     <h4>11.0 077 Thunderbird      Date: 2022-02-13  Severity: High</h4>
     <p>In Thunderbird-91.6.0, several security vulnerabilities were fixed that
