@@ -80,6 +80,19 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-080"/>
+    <h4>11.0 080 ImageMagick  Date: 2022-02-18 Severity: High</h4>
+    <!-- unusual wording because we skip most versions, fixes in -35 and -40,
+      some later items looked like they might also be ssecurity-related. -->
+    <p>BLFS updated to ImageMagick-7.1.0-25 from 7.1.10-4. The changes include
+    two fixes for apparent security vulnerabilities: in 7.1.0-5 fixing a Heap-based
+    buffer overflow in the TIFF coder, and in 7.1.0-13 fixing a stack overflow when
+    parsing a malicious ps image file. No further details of these are available.
+    <p>To fix these, update to ImageMagick-7.1.0-25 or later using the instructions
+    for
+    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+
     <a id="sa-11.0-079"/>
     <h4>11.0 079 MariaDB          Date: 2022-02-14  Severity: High</h4>
     <p>In MariaDB-10.6.7, several security vulnerabilities were fixed that
