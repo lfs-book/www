@@ -80,6 +80,29 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-082"/>
+    <h4>11.0 082 util-linux (LFS and BLFS) Date: 2022-02-24 Severity: Moderate</h4>
+    <p>In util-linux-2.37.4, a security vulnerability was fixed that could allow
+    for local attackers to read information that is normally accessible only by
+    the 'root' user. This vulnerability exists in the 'chsh' and 'chfn'
+    utilities when compiled with support for libreadline, which is the default
+    in LFS. The readline library uses the INPUTRC environment variable to get
+    a path to the user's input settings from /etc/inputrc, but when the library
+    cannot parse the specified file, it prints an error containing data from
+    the file. An example attacker is a user setting INPUTRC to /etc/passwd, and
+    then running chsh (or any other setuid-root application). This flaw thus
+    allows an unprivileged user to read root-owned files, which can lead to
+    privilege escalation and unauthorized access to privileged information.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-0563">CVE-2022-0563</a>.</p>
+    <p>To fix this upgrade to util-linux-2.37.4 or later using the instructions at
+    <a href="../../lfs/view/development/chapter08/util-linux.html">util-linux (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/util-linux.html">util-linux (systemd)</a>
+    Please be aware that on older systems where the linux headers include 'linux/raw.h'
+    you will need to add '--disable-raw' to the configure, and on systems before /usr was
+    merged (LFS-10.1 and earlier) you should <em>omit</em> '--libdir=/usr/lib' to
+    ensure that the libraries overwrite the existing libraries in /lib.</p>
+
     <a id="sa-11.0-081"/>
     <h4>11.0 081 VIM (LFS and BLFS) Date: 2022-02-22 Severity: High</h4>
     <p>Another heap-based buffer overflow, causing a crash when repeatedly
