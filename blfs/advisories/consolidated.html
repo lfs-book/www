@@ -80,6 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-083"/>
+    <h4>11.0 083 libxslt      Date: 2022-02-24  Severity: High</h4>
+    <p>In libxslt-1.1.35, a security vulnerability was fixed that could allow
+    for remote attackers to exploit heap corruption via a use-after-free in the
+    xsltApplyTemplates function. This vulnerability was originally discovered
+    in Google Chrome (and thus QtWebEngine is affected), where remote attackers
+    were using malicious advertisements with crafted XML documents embedded
+    to cause remote code execution. The vulnerability was found to be in the
+    libxslt library. Additionally, two memory leaks and a double-free (which
+    could lead to denial of service) were fixed. The BLFS team recommends
+    updating to libxslt-1.1.35 as soon as possible, especially if you have
+    QtWebEngine installed.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30560">CVE-2021-30560</a>.</p>
+    <p>To fix this vulnerability, update to libxslt-1.1.35 or later using the
+    instructions for
+    <a href="../view/svn/general/libxslt.html">libxslt (sysv)</a> or
+    <a href="../view/systemd/general/libxslt.html">libxslt (systemd)</a>.</p>
+
     <a id="sa-11.0-082"/>
     <h4>11.0 082 util-linux (LFS and BLFS) Date: 2022-02-24 Severity: Moderate</h4>
     <p>In util-linux-2.37.4, a security vulnerability was fixed that could allow
