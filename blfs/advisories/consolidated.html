@@ -80,6 +80,39 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-086"/>
+    <h4>11.0 086 Expat        Date: 2022-02-24  Severity: Critical</h4>
+    <p>In expat-2.4.5, several security vulnerabilities were fixed that could
+    allow for remote code execution and denial of service. One of these
+    vulnerabilities allows for remote code execution due to missing validation
+    of UTF-8 characters, such as checks for whether a UTF-8 character is valid
+    in a certain context. This could allow for the characters to be passed
+    elsewhere in the stack, and lead to remote code execution. Another
+    vulnerability exists that allows attackers to insert namespace-separator
+    characters into namespace URIs, allowing for trivial remote code execution
+    or unauthorized access to information. Another vulnerability exists in the
+    build_model function that alows for a denial of service due to stack
+    exhaustion (application crash). In the functions storeRawNames and
+    copyString, integer overflow vulnerabilities exist that allow for remote
+    code execution when processing XML files. Similar to the libxml2 and libxslt
+    vulnerabilities, these can be exploited trivially through malicious
+    advertisements and other crafted web content, but also through other means
+    depending on the context of an application that uses these libraries.
+    The BLFS team recommends updating to expat-2.4.6 as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25235">CVE-2022-25235</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25236">CVE-2022-25236</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25313">CVE-2022-25313</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25314">CVE-2022-25314</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25315">CVE-2022-25315</a>.</p>
+    <p>To fix these vulnerabilities, update to expat-2.4.5 or later using the
+    instructions for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa-11.0-085"/>
     <h4>11.0 085 libxml2      Date: 2022-02-24  Severity: High</h4>
     <p>In libxml2-2.9.13, a security vulnerability was fixed that could allow
