@@ -80,6 +80,21 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-088"/>
+    <h4>11.0 088 Thunderbird  Date: 2022-02-24  Severity: High</h4>
+    <p>In Thunderbird-91.6.1, a security vulnerability was fixed that could
+    allow for remote code execution when processing new emails. This occurs
+    due to an out-of-bounds write that causes one additional byte to be written
+    into memory when processing a crafted email message. Note that this email
+    does not have to be opened, the vulnerability is exploited when Thunderbird
+    processes the email to add it to it's index.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-0566">CVE-2022-0566</a>.</p>
+    <p>To fix this vulnerability, update to Thunderbird-91.6.1 using the
+    instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-11.0-087"/>
     <h4>11.0 087 WebKitGTK+   Date: 2022-02-24  Severity: Critical</h4>
     <p>In WebKitGTK+-2.34.6, a security vulnerability was fixed that allows
