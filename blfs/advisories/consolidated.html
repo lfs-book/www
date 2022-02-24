@@ -80,6 +80,28 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-087"/>
+    <h4>11.0 087 WebKitGTK+   Date: 2022-02-24  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.34.6, a security vulnerability was fixed that allows
+    for trivial remote code execution, and that requires no user interaction.
+    This vulnerability has been rated as an emergency by Apple, and has
+    resulted in out-of-band security updates for all of it's devices.
+    Processing maliciously crafted images can result in trivial remote code
+    execution, and Apple is aware of several reports that this issue is being
+    actively exploited. This issue is classified as a use-after-free and was
+    fixed in WebKitGTK+ with improved memory management. Due to the severity
+    of this vulnerability and the fact that the vulnerability is being actively
+    exploited, the BLFS team recommends updating to WebKitGTK+-2.34.6 immediately.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22620">CVE-2022-22620</a>,
+    but additional information can be found at
+    <a href="https://support.apple.com/en-us/HT213093">Apple Security Advisory</a> and
+    <a href="https://webkitgtk.org/security/WSA-2022-0003.html">WSA-2022-0003</a>.</p>
+    <p>To fix this vulnerability, update to WebKitGTK+-2.34.6 using the
+    instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="sa-11.0-086"/>
     <h4>11.0 086 Expat        Date: 2022-02-24  Severity: Critical</h4>
     <p>In expat-2.4.5, several security vulnerabilities were fixed that could
