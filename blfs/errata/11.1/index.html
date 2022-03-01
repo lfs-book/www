@@ -1,0 +1,58 @@
+<!--#set var="pageTitle" value="BLFS Errata" -->
+<!--#include virtual="/blfs/header.html" -->
+<!--#include virtual="/blfs/menu.html" -->
+    <div class="main">
+
+     <h1>Errata for BLFS Version 11.1</h1>
+     
+     <!-- Editors: Do not remove this entry, just comment it out. -->
+
+     <ul>
+       <li>There are no current errata for blfs-11.1.</li>
+     </ul>
+
+<!--
+     <ul>
+       <li>When compiling Shadow in BLFS, changes were made to Makefile.in
+           prior to running 'autoreconf -fiv', which causes those changes to
+           be lost. Run 'autoreconf -fiv' before the changes to Makefile.in
+           instead, and execute the two seds below the one for login.defs
+           first.</li>
+
+       <li>After release, the repository of SoundTouch-2.3.0 is moved and
+       the download URL in the book is no longer accessible.  We recommends
+       to use the latest 2.3.1 release available at
+       https://www.surina.net/soundtouch/soundtouch-2.3.1.tar.gz, which is
+       API and ABI compatible with 2.3.0.</li>
+
+       <li>The details of running the test suite for shared-mime-info-2.1
+       are incorrect, the test suite needs to be separately downloaded and
+       compiled in the shared-mime-info directory. For details see the
+       development book.</li>
+     </ul>
+-->
+     <h2>Known Security Vulnerabilities</h2>
+     <!-- test commit -->
+     
+     <p>Details of Security Advisories for this version of BLFS are now
+     at <a href="../../advisories/11.1.html">Advisories for BLFS 11.1</a><p>
+
+<!-- COMMENT THE OLD ADVISORIES IN THE ERRATA: PLEASE NOW UPDATE advisories/10.0.html
+     AND and advisories/consolidated.html
+
+     <p>A few packages are good at reporting that a new
+     release fixes a vulnerability. For some others, such as firefox,
+     virtually every new release includes security fixes. But in many cases
+     the fixes are not documented as security issues.</p>
+     
+     <p>Updates to the packages in the book may be available in the 
+        <a href="../../view/svn/">development version of the book.</a>
+     </p>
+
+     - Editors: Do not remove this entry, just comment it out. -
+
+     <ul>
+       <li>There are no current known security vulnerabilities for blfs-10.0.</li>
+     </ul>
+-->
+<!--#include virtual="/common/footer.html" -->
