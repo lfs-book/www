@@ -63,6 +63,23 @@
     <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
      for clarity. -->
 
+    <h2>Items between the releases of the 11.1 and 11.2 books</h2>
+
+    <!-- Editors: This batch of advisories for the 11.1 books point to the
+    development books until we make a release. After a release, new advisories
+    for 11.2 need to point to the development books, but the existing 11.1
+    advisories need to be changed to point to 11.2 (sic), not 'stable' which
+    is a symlink and can change over time. That might sound odd, but the 11.1
+    advisories were developed during the build up to 11.2, so in normal
+    circumstances the 'or later' will be valid for the 11.2 release, but over
+    the longer term who knows what will happen to packages (e.g. getting
+    replaced or archived). -->
+
+    <!-- when we do have advisories, comment this for next time -->
+
+    <p>There are currently no known security vulnerabilities for the latest
+    releases of the books.</p>
+
     <h2>Items between the releases of the 11.0 and 11.1 books</h2>
 
     <!-- Editors: This batch of advisories for the 11.0 books point to the
@@ -92,8 +109,8 @@
     <a href="https://access.redhat.com/security/cve/cve-2022-0566">CVE-2022-0566</a>.</p>
     <p>To fix this vulnerability, update to Thunderbird-91.6.1 using the
     instructions for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-11.0-087"/>
     <h4>11.0 087 WebKitGTK+   Date: 2022-02-24  Severity: Critical</h4>
@@ -114,8 +131,8 @@
     <a href="https://webkitgtk.org/security/WSA-2022-0003.html">WSA-2022-0003</a>.</p>
     <p>To fix this vulnerability, update to WebKitGTK+-2.34.6 using the
     instructions for
-    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
-    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <a href="../view/11.1/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.1-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
 
     <a id="sa-11.0-086"/>
     <h4>11.0 086 Expat        Date: 2022-02-24  Severity: Critical</h4>
@@ -144,8 +161,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25315">CVE-2022-25315</a>.</p>
     <p>To fix these vulnerabilities, update to expat-2.4.5 or later using the
     instructions for
-    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    <a href="../../lfs/view/11.1/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/11.1-systemd/chapter08/expat.html">Expat (systemd)</a>.
     Note: If you have installed docbook-utils from BLFS you will need to add
     "--without-docbook" to work around an error in configure, since our
     installation of docbook-utils uses SGML instead of XML.</p>
@@ -163,11 +180,11 @@
     attacks utilizing malicious advertisements. The BLFS team recommends
     updating to libxml2-2.9.13 as soon as possible.
     This vulnerability has been assigned
-    <a href="https://access.redhat.com/security/cve/CVE-2022-23308">CVE-2022-23308</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23308">CVE-2022-23308</a>.</p>
     <p>To fix this vulnerability, update to libxml2-2.9.13 or later using the
     instructions for
-    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
-    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+    <a href="../view/11.1/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/11.1-systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
 
     <a id="sa-11.0-084"/>
     <h4>11.0 084 PHP          Date: 2022-02-24  Severity: Moderate</h4>
@@ -181,11 +198,11 @@
     important. However, if you are using the php_filter_float() function, you
     should update as soon as possible.
     This vulnerability has been assigned
-    <a href="https://access.redhat.com/security/cve/cve-2021-21708">CVE-2021-21708</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-21708">CVE-2021-21708</a>.</p>
     <p>To fix this vulnerability, update to PHP-8.1.3 or later using the
     instructions for
-    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-    <a href="../view/systemd/general/php.htlm">PHP (systemd)</a>.</p>
+    <a href="../view/11.1/general/php.html">PHP (sysv)</a> or
+    <a href="../view/11.1-systemd/general/php.htlm">PHP (systemd)</a>.</p>
 
     <a id="sa-11.0-083"/>
     <h4>11.0 083 libxslt      Date: 2022-02-24  Severity: High</h4>
@@ -203,8 +220,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30560">CVE-2021-30560</a>.</p>
     <p>To fix this vulnerability, update to libxslt-1.1.35 or later using the
     instructions for
-    <a href="../view/svn/general/libxslt.html">libxslt (sysv)</a> or
-    <a href="../view/systemd/general/libxslt.html">libxslt (systemd)</a>.</p>
+    <a href="../view/11.1/general/libxslt.html">libxslt (sysv)</a> or
+    <a href="../view/11.1-systemd/general/libxslt.html">libxslt (systemd)</a>.</p>
 
     <a id="sa-11.0-082"/>
     <h4>11.0 082 util-linux (LFS and BLFS) Date: 2022-02-24 Severity: Moderate</h4>
@@ -220,10 +237,10 @@
     allows an unprivileged user to read root-owned files, which can lead to
     privilege escalation and unauthorized access to privileged information.
     This vulnerability has been assigned
-    <a href="https://access.redhat.com/security/cve/cve-2022-0563">CVE-2022-0563</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0563">CVE-2022-0563</a>.</p>
     <p>To fix this upgrade to util-linux-2.37.4 or later using the instructions at
-    <a href="../../lfs/view/development/chapter08/util-linux.html">util-linux (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/util-linux.html">util-linux (systemd)</a>
+    <a href="../../lfs/view/11.1/chapter08/util-linux.html">util-linux (sysv)</a> or
+    <a href="../../lfs/view/11.1-systemd/chapter08/util-linux.html">util-linux (systemd)</a>
     Please be aware that on older systems where the linux headers include 'linux/raw.h'
     you will need to add '--disable-raw' to the configure, and on systems before /usr was
     merged (LFS-10.1 and earlier) you should <em>omit</em> '--libdir=/usr/lib' to
@@ -236,8 +253,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0572">CVE-2022-0572 (undergoing analysis)</a>.</p>
     <p>To fix this vulnerability update to vim-8.2.4383 or later using the
     instructions for
-    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
-    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+    <a href="../view/11.1/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/vim.html">vim (systemd)</a>.</p>
 
     <a id="sa-11.0-080"/>
     <h4>11.0 080 ImageMagick  Date: 2022-02-18 Severity: High</h4>
@@ -249,8 +266,8 @@
     parsing a malicious ps image file. No further details of these are available.</p>
     <p>To fix these, update to ImageMagick-7.1.0-25 or later using the instructions
     for
-    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
-    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+    <a href="../view/11.1/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/11.1-systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
 
     <a id="sa-11.0-079"/>
     <h4>11.0 079 MariaDB          Date: 2022-02-14  Severity: High</h4>
@@ -278,8 +295,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46659">CVE-2021-46659</a>.</p>
     <p>To fix these vulnerabilities, update to MariaDB-10.6.9 or later using
     the instructions for
-    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
-    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <a href="../view/11.1/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/11.1-systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
 
     <a id="sa-11.0-078"/>
     <h4>11.0 078 Exempi           Date: 2022-02-14  Severity: Critical</h4>
@@ -314,8 +331,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36058">CVE-2021-36058</a>.</p>
     <p>To fix these vulnerabilities, update to Exempi-2.6.1 or later using the
     instructions for
-    <a href="../view/svn/general/exempi.html">Exempi (sysv)</a> or
-    <a href="../view/systemd/general/exempi.html">Exempi (systemd)</a>.</p>
+    <a href="../view/11.1/general/exempi.html">Exempi (sysv)</a> or
+    <a href="../view/11.1-systemd/general/exempi.html">Exempi (systemd)</a>.</p>
 
     <a id="sa-11.0-077"/>
     <h4>11.0 077 Thunderbird      Date: 2022-02-13  Severity: High</h4>
@@ -338,8 +355,8 @@
     <a href="https://access.redhat.com/security/cve/CVE-2022-22764">CVE-2022-22764</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-91.6.0 using the
     instructions for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-11.0-076"/>
     <h4>11.0 076 Samba            Date: 2022-02-13  Severity: Critical</h4>
@@ -361,13 +378,13 @@
     allows an attacker to intercept traffic intended for those services, allowing
     for a significant loss of confidentiality and integrity.
     These vulnerabilities have been assigned
-    <a href="https://access.redhat.com/security/cve/cve-2021-44141">CVE-2021-44141</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-44142">CVE-2021-44142</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44141">CVE-2021-44141</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44142">CVE-2021-44142</a>, and
     <a href="https://access.redhat.com/security/cve/CVE-2022-0336">CVE-2022-0336</a>.</p>
     <p>To fix these vulnerabilities, update to Samba-4.15.3 using the
     instructions for
-    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a> immediately.</p>
+    <a href="../view/11.1/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/samba.html">Samba (systemd)</a> immediately.</p>
 
     <a id="sa-11.0-075"/>
     <h4>11.0 075 WebKitGTK+       Date: 2022-02-13  Severity: Critical</h4>
@@ -396,8 +413,8 @@
     <a href="https://access.redhat.com/security/cve/CVE-2022-22592">CVE-2022-22592</a>.</p>
     <p>To fix these vulnerabilities, update to WebKitGTK+-2.34.5 using the
     instructions for
-    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
-    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <a href="../view/11.1/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.1-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
 
     <a id="sa-11.0-074"/>
     <h4>11.0 074 gst-plugins-base Date: 2022-02-13  Severity: Medium</h4>
@@ -413,8 +430,8 @@
     <a href="https://gitlab.freedesktop.org/gstreamer/gstreamer/-/issues/967">Gstreamer Issue 967</a>.</p>
     <p>To fix this vulnerability, update to gstreamer-1.18.6 or 1.20.0 using
     the instructions for
-    <a href="../view/svn/multimedia/gst10-plugins-base.html">gst-plugins-base (sysv)</a> or
-    <a href="../view/systemd/multimedia/gst10-plugins-base.html">gst-plugins-base (systemd)</a>.</p>
+    <a href="../view/11.1/multimedia/gst10-plugins-base.html">gst-plugins-base (sysv)</a> or
+    <a href="../view/11.1-systemd/multimedia/gst10-plugins-base.html">gst-plugins-base (systemd)</a>.</p>
     <p>If you decide to update to gst-plugins-base-1.20.0, you must update the
     entire stack to 1.20 at the same time.</p>
 
@@ -432,8 +449,8 @@
     <a href="https://www.tenable.com/plugins/nessus/157935">CVE-2021-45444</a>.</p>
     <p>To fix this vulnerability, update to zsh-5.8.1 or later using the
     instructions for
-    <a href="../view/svn/postlfs/zsh.html">zsh (sysv)</a> or
-    <a href="../view/systemd/postlfs/zsh.html">zsh (systemd)</a>.</p>
+    <a href="../view/11.1/postlfs/zsh.html">zsh (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/zsh.html">zsh (systemd)</a>.</p>
 
     <a id="sa-11.0-072"/>
     <h4>11.0 072 Wireshark        Date: 2022-02-13  Severity: High</h4>
@@ -455,8 +472,8 @@
     <a href="https://www.wireshark.org/security/wnpa-sec-2022-05">wnpa-sec-2022-05</a>.</p>
     <p>To fix these vulnerabilities, update to Wireshark-3.6.2 or later using
     the instructions for
-    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="sa-11.0-071"/>
     <h4>11.0 071 libarchive       Date: 2022-02-13  Severity: Medium</h4>
@@ -472,8 +489,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36976">CVE-2021-36976</a>.</p>
     <p>To fix these vulnerabilities, update to libarchive-3.6.0 or later using
     the instructions for
-    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
-    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+    <a href="../view/11,1/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/11.1-systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
 
     <a id="sa-11.0-070"/>
     <h4>11.0 070 libgcrypt        Date: 2022-02-13  Severity: Medium</h4>
@@ -489,8 +506,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40528">CVE-2021-40528</a>.</p>
     <p>To fix this vulnerability, update to libgcrypt-1.10.0 or later using the
     instructions for
-    <a href="../view/svn/general/libgcrypt.html">libgcrypt (sysv)</a> or
-    <a href="../view/systemd/general/libgcrypt.html">libgcrypt (systemd)</a>.</p>
+    <a href="../view/11.1/general/libgcrypt.html">libgcrypt (sysv)</a> or
+    <a href="../view/11.1-systemd/general/libgcrypt.html">libgcrypt (systemd)</a>.</p>
 
     <a id="sa-11.0-069"/>
     <h4>11.0 069 glibc            Date: 2022-02-13  Severity: Critical</h4>
@@ -523,8 +540,8 @@
     full system backup, and then rebuild glibc with the patch found at
     <a href="https://linuxfromscratch.org/patches/downloads/glibc/glibc-2.34-security_fixes-1.patch">
     glibc-2.34-security_fixes-1.patch</a>, using the instructions for glibc from
-    <a href="../../lfs/view/11.0/chapter08/glibc.html">glibc (sysv)</a> or
-    <a href="../../lfs/view/11.0-systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
+    <a href="../../lfs/view/11.1/chapter08/glibc.html">glibc (sysv)</a> or
+    <a href="../../lfs/view/11.1-systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
 
     <a id="sa-11.0-068"/>
     <h4>11.0 068 Expat            Date: 2022-02-13  Severity: Critical</h4>
@@ -538,8 +555,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23990">CVE-2022-23990</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23852">CVE-2022-23852</a>.</p>
     <p>To fix these, update to Expat-2.4.4 or later, using the instructions in
-    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    <a href="../../lfs/view/11.1/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/11.1-systemd/chapter08/expat.html">Expat (systemd)</a>.
     Note: If you have installed docbook-utils from BLFS you will need to add
     "--without-docbook" to work around an error in configure, since our
     installation of docbook-utils uses SGML instead of XML.</p>
@@ -553,11 +570,11 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0146">CVE-2021-0146</a>,
     and for all Skylake and later processors a local Denial of Service
     <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00532.html">Intel-SA-00532</a>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0127">CVE-2021-0127 (awaiting analysis)</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0127">CVE-2021-0127</a>.</p>
     <p>To fix these, update to at least microcode-20220207 using the instructions
     for
-    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
-    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+    <a href="../view/11.1/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
 
     <a id="sa-11.0-066"/>
     <h4>11.0 066 Firefox  Date: 2022-02-09  Severity: High</h4>
@@ -572,9 +589,10 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22761">CVE-2022-22761 (Not yet public)</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22763">CVE-2022-22763 (Not yet public)</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22764">CVE-2022-22766 (Not yet public)</a>.</p>
-    <p>To fix these update to firefox-91.6.0esr or later :
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <p>To fix these, update to firefox-91.6.0esr or later using the instructions
+    for:
+    <a href="../view/11.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="sa-11.0-065"/>
     <h4>11.0 065 Linux Kernel (LFS)  Revised: 2022-02-04  Severity: High</h4>
@@ -595,8 +613,8 @@
     later (if you prefer to stick with long-term stable 5.15), or versions from
     2022-01-29  or later if for some reason you are using an older stable kernel series)
     using the instructions from the LFS book for
-    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <a href="../../lfs/view/11.1/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/11.1-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
     <p>In addition, there was a bug allowing privilege escalation
     in the kernel's vmwgfx driver (apparently not exploitable if qemu is used). See
     <a href="https://www.openwall.com/lists/oss-security/2022/01/27/4">oss-security</a>
@@ -620,8 +638,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22826">CVE-2022-22826</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22827">CVE-2022-22827</a>.</p>
     <p>To fix this, update to Expat-2.4.3 or later, using the instructions in
-    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    <a href="../../lfs/view/11.1/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/11.1-systemd/chapter08/expat.html">Expat (systemd)</a>.
     Note: If you have installed docbook-utils from BLFS you will need to add
     "--without-docbook" to work around an error in configure, since our
     installation of docbook-utils uses SGML instead of XML.</p>
@@ -652,8 +670,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0213">CVE-2022-0213</a>.</p>
     <p>To fix these vulnerabilities, update to vim-8.2.4236 or later using the
     instructions for
-    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
-    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+    <a href="../view/11.1/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/vim.html">vim (systemd)</a>.</p>
 
     <a id="sa-11.0-062"/>
     <h4>11.0 062 util-linux  Date: 2021-06-28  Severity: High</h4>
@@ -665,8 +683,8 @@
     and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3996">CVE-2021-3996 (Not yet public)</a>.</p>
     <p>To fix this upgrade to util-linux-2.37.3 or later using the instructions at
-    <a href="../../lfs/view/development/chapter08/util-linux.html">util-linux (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/util-linux.html">util-linux (systemd)</a>
+    <a href="../../lfs/view/11.1/chapter08/util-linux.html">util-linux (sysv)</a> or
+    <a href="../../lfs/view/11.1-systemd/chapter08/util-linux.html">util-linux (systemd)</a>
     Please be aware that on older systems where the linux headers include 'linux/raw.h'
     you will need to add '--disable-raw' to the configure, and on systems before /usr was
     merged (LFS-10.1 and earlier) you should <em>omit</em> '--libdir=/usr/lib' to
@@ -681,8 +699,8 @@
     <p>To fix this apply the
     <a href="http://www.linuxfromscratch.org/patches/downloads/qt-everywhere-src/qt-everywhere-src-5.15.2-kf5.15-2.patch">qt-everywhere-src-5.15.2-kf5.15-2.patch</a>
     (or a later version of the patch if one exists) using the instructions at
-    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a>, or
-    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a>.</p>
+    <a href="../view/11.1/x/qt5.html">Qt5 (sysv)</a>, or
+    <a href="../view/11.1-systemd/x/qt5.html">Qt5 (systemd)</a>.</p>
 
     <a id="sa-11.0-060"/>
     <h4>11.0 060 Rustc  Date: 2022-01-25  Severity: High</h4>
@@ -697,11 +715,11 @@
     The programs in BLFS which use rust do not install any privileged programs
     so most BLFS users who have installed rust will only need to upgrade it.</p>
     <p>Please see
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21658">CVE-2022-21658 (Awaiting Analysis)</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21658">CVE-2022-21658</a>.</p>
     <p>To fix rust, update to rustc-1.58.1 (or a later version) using the
     instructions for
-    <a href="../view/svn/general/rust.html">Rust (sysv)</a> or
-    <a href="../view/systemd/general/rust.html">Rust (systemd)</a>.</p>
+    <a href="../view/11.1/general/rust.html">Rust (sysv)</a> or
+    <a href="../view/11.1-systemd/general/rust.html">Rust (systemd)</a>.</p>
 
     <h4>11.0 059 polkit  Date: 2022-01-26 Severity: High</h4>
     <p>In polkit-0.120, a trivially exploitable vulnerability allowing
@@ -727,17 +745,17 @@
     identifier has not been issued for this vulnerability.</p>
     <p>To fix this vulnerability, update to GnuTLS 3.7.3 or a later version
     using the instructions for
-    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a>, or
-    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+    <a href="../view/11.1/postlfs/gnutls.html">GnuTLS (sysv)</a>, or
+    <a href="../view/11.1-systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
     <a id="sa-11.0-057"/>
     <h4>11.0 057 QtWebEngine  Date: 2022-01-17 Severity: High</h4>
     <p>Thirty-one more CVEs (from Chromium) in QtWebEngine, of which at least
     seventeen are rated as High, have been fixed in the 5.15.8 version:
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4102">CVE-2021-4102 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4101">CVE-2021-4101 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4099">CVE-2021-4099 (Not yet public)</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4098">CVE-2021-4098 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4102">CVE-2021-4102</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4101">CVE-2021-4101</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4099">CVE-2021-4099</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4098">CVE-2021-4098</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4079">CVE-2021-4079</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4078">CVE-2021-4078</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4062">CVE-2021-4062</a>,
@@ -766,8 +784,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3541">CVE-2021-3541</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3517">CVE-2021-3517</a>.</p>
     <p>To fix these, update to 5.15.8 or a later version using the instructions at
-    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
-    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a href="../view/11.1/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/11.1-systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
     <a id="sa-11.0-056"/>
     <h4>11.0 056 Thunderbird  Date: 2022-01-13 Severity: High</h4>
@@ -795,8 +813,8 @@
     <a href="https://access.redhat.com/security/cve/CVE-2022-22751">CVE-2022-22751</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-91.5.0 or later
     using the instructions for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-11.0-055"/>
     <h4>11.0 055 Epiphany     Date: 2022-01-13 Severity: Moderate</h4>
@@ -813,8 +831,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45088">CVE-2021-45088</a>.</p>
     <p>To fix these vulnerabilities, update to Epiphany-41.3 or later using
     the instructions for
-    <a href="../view/svn/xsoft/epiphany.html">Epiphany (sysv)</a> or
-    <a href="../view/systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/epiphany.html">Epiphany (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
 
     <a id="sa-11.0-054"/>
     <h4>11.0 054 systemd      Date: 2022-01-13 Severity: High</h4>
@@ -832,7 +850,7 @@
     This vulnerability has been assigned
     <a href="https://access.redhat.com/security/cve/cve-2021-3997">CVE-2021-3997</a>.</p>
     <p>If you are using systemd-250, apply the patch using the instructions for
-    <a href="../view/systemd/general/systemd.html">systemd (systemd)</a>.</p>
+    <a href="../view/11.1-systemd/general/systemd.html">systemd (systemd)</a>.</p>
     <p>If you are using systemd-249, apply the new upstream fixes patch located
     at <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-249-upstream_fixes-2.patch">
     systemd-249-upstream_fixes-2</a> and rebuild systemd.</p>
@@ -852,8 +870,8 @@
     <a href="https://access.redhat.com/security/cve/CVE-2021-4122">CVE-2021-4122</a>.</p>
     <p>To fix this vulnerability, update to cryptsetup-2.4.3 or later using the
     instructions for
-    <a href="../view/svn/postlfs/cryptsetup.html">cryptsetup (sysv)</a> or
-    <a href="../view/systemd/postlfs/cryptsetup.html">cryptsetup (systemd)</a>.</p>
+    <a href="../view/11.1/postlfs/cryptsetup.html">cryptsetup (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/cryptsetup.html">cryptsetup (systemd)</a>.</p>
 
     <a id="sa-11.0-052"/>
     <h4>11.0 052 gfbgraph Date: 2022-01-11  Severity: High</h4>
@@ -868,8 +886,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39358">CVE-2021-39358</a>.</p>
     <p>To fix this vulnerability, update to gfbgraph-0.2.5 or later using the
     instructions for
-    <a href="../view/svn/gnome/gfbgraph.html">gfbgraph (sysv)</a> or
-    <a href="../view/systemd/gnome/gfbgraph.html">gfbgraph (systemd)</a>.</p>
+    <a href="../view/11.1/gnome/gfbgraph.html">gfbgraph (sysv)</a> or
+    <a href="../view/11.1-systemd/gnome/gfbgraph.html">gfbgraph (systemd)</a>.</p>
 
     <a id="sa-11.0-051"/>
     <h4>11.0 051 libgrss  Date: 2022-01-11  Severity: High</h4>
@@ -884,8 +902,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2016-20011">CVE-2016-20011</a>.</p>
     <p>To fix this vulnerability, rebuild libgrss with the patch using the
     instructions for
-    <a href="../view/svn/general/libgrss.html">libgrss (sysv)</a> or
-    <a href="../view/systemd/general/libgrss.html">libgrss (systemd)</a>.</p>
+    <a href="../view/11.1/general/libgrss.html">libgrss (sysv)</a> or
+    <a href="../view/11.1-systemd/general/libgrss.html">libgrss (systemd)</a>.</p>
 
     <a id="sa-11.0-050"/>
     <h4>11.0 050 Firefox  Date: 2022-01-11  Severity: High</h4>
@@ -905,8 +923,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22747">CVE-2022-22747 (Not yet public)</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22751">CVE-2022-22751 (Not yet public)</a>.</p>
     <p>To fix these update to firefox-91.5.0esr or later :
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
 
     <a id="sa-11.0-049"/>
@@ -921,8 +939,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22960">CVE-2021-21824</a>.</p>
     <p>To fix these vulnerabilities, update to Node.js-16.13.2 using the
     instructions for
-    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+    <a href="../view/11.1/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/11.1-systemd/general/nodejs.html">node.js (systemd)</a>.</p>
 
     <h4>11.0 048 Grilo         Date: 2021-01-10  Severity: Moderate</h4>
     <p>In Grilo-0.3.14, a security vulnerability was fixed that could allow for
@@ -937,8 +955,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39365">CVE-2021-39365</a>.</p>
     <p>To fix this vulnerability, update to Grilo-0.3.14 using the
     instructions for
-    <a href="../view/svn/gnome/grilo.html">Grilo (sysv)</a> or
-    <a href="../view/systemd/gnome/grilo.html">Grilo (systemd)</a>.</p>
+    <a href="../view/11.1/gnome/grilo.html">Grilo (sysv)</a> or
+    <a href="../view/11.1-systemd/gnome/grilo.html">Grilo (systemd)</a>.</p>
 
     <a id="sa-11.0-047"/>
     <h4>11.0 047 make-ca       Date: 2022-01-10  Severity: Moderate</h4>
@@ -953,8 +971,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21672">CVE-2022-21672</a>.</p>
     <p>To fix this vulnerabilitiy, update to make-ca-1.10 using the
     instructions for
-    <a href="../view/svn/postlfs/make-ca.html">make-ca (sysv)</a> or
-    <a href="../view/systemd/postlfs/make-ca.html">make-ca (systemd)</a>,
+    <a href="../view/11.1/postlfs/make-ca.html">make-ca (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/make-ca.html">make-ca (systemd)</a>,
     and run <code>make-ca -r</code> as the root user to regenerate the trust
     store after the update.</p>
 
@@ -978,8 +996,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4181">CVE-2021-4181</a>.</p>
     <p>To fix these vulnerabilities, update to Wireshark-3.6.1 using the
     instructions for
-    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="sa-11.0-045"/>
     <h4>11.0 045 wpa_supplicant  Date: 2021-12-26  Severity: High</h4>
@@ -998,8 +1016,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0535">CVE-2021-0535</a>.</p>
     <p>To fix these vulnerabilities, update to wpa_supplicant-2.10 or later
     using the instructions for
-    <a href="../view/svn/basicnet/wpa_supplicant.html">wpa_supplicant (sysv)</a> or
-    <a href="../view/systemd/basicnet/wpa_supplicant.html">wpa_supplicant (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/wpa_supplicant.html">wpa_supplicant (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/wpa_supplicant.html">wpa_supplicant (systemd)</a>.</p>
 
     <a id="sa-11.0-044"/>
     <h4>11.0 044 WebKitGTK+      Date: 2021-12-23  Severity: Medium</h4>
@@ -1012,8 +1030,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30890">CVE-2021-30890</a>.</p>
     <p>To fix these vulnerabilities, update to WebKitGTK+-2.34.3 using the
     instructions for
-    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
-    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <a href="../view/11.1/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.1-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
 
     <a id="sa-11.0-043"/>
     <h4>11.0 043 Seamonkey       Date: 2021-12-23  Severity: Critical</h4>
@@ -1044,8 +1062,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4129">CVE-2021-4129 (Not Public)</a>.</p>
     <p>To fix these vulnerabilities, update to Seamonkey-2.53.10.1 using the
     instructions for
-    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
     <a id="sa-11.0-042"/>
     <h4>11.0 042 Apache HTTPD    Date: 2021-12-23  Severity: Critical</h4>
@@ -1064,8 +1082,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44790">CVE-2021-44790</a>.</p>
     <p>To fix these vulnerabilities, update to httpd-2.4.52 using the
     instructions for
-    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
-    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+    <a href="../view/11.1/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/11.1-systemd/server/apache.html">Apache (systemd)</a>.</p>
 
     <a id="sa-11.0-041"/>
     <h4>11.0 041 PHP             Date: 2021-12-23  Severity: High</h4>
@@ -1079,8 +1097,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-9118">CVE-2017-9118</a>.</p>
     <p>To fix this vulnerability, update to PHP-8.1.1 using the
     instructions for
-    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a href="../view/11.1/general/php.html">PHP (sysv)</a> or
+    <a href="../view/11.1-systemd/general/php.html">PHP (systemd)</a>.</p>
 
     <a id="sa-11.0-040"/>
     <h4>11.0 040 Thunderbird     Date: 2021-12-23  Severity: Critical</h4>
@@ -1118,8 +1136,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44538">CVE-2021-44538</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-91.4.1 using the
     instructions for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-11.0-039"/>
     <h4>11.0 039 Lynx            Date: 2021-12-18  Severity: Medium</h4>
@@ -1133,8 +1151,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38165">CVE-2021-38165</a>.</p>
     <p>To fix this vulnerability, apply the patch in Lynx using the
     instructions for
-    <a href="../view/svn/basicnet/lynx.html">Lynx (sysv)</a> or
-    <a href="../view/systemd/basicnet/lymx.html">Lynx (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/lynx.html">Lynx (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/lymx.html">Lynx (systemd)</a>.</p>
 
     <a id="sa-11.0-038"/>
     <h4>11.0 038 xorg-server     Date: 2021-12-18  Severity: High</h4>
@@ -1148,14 +1166,14 @@
     that these security vulnerabilities were fixed in XWayland as well,
     so you should install both updates.
     These vulnerabilities have been assigned
-    <a href="https://access.redhat.com/security/cve/cve-2021-4008">CVE-2021-4008</a>,
-    <a href="https://access.redhat.com/security/cve/cve-2021-4009">CVE-2021-4009</a>,
-    <a href="https://access.redhat.com/security/cve/cve-2021-4010">CVE-2021-4010</a>, and
-    <a href="https://access.redhat.com/security/cve/cve-2021-4011">CVE-2021-4011</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4008">CVE-2021-4008</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4009">CVE-2021-4009</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4010">CVE-2021-4010</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4011">CVE-2021-4011</a>.</p>
     <p>To fix these vulnerabilities, update to xorg-server-21.1.2 using the
     instructions for
-    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
-    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+    <a href="../view/11.1/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/11.1-systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
 
     <a id="sa-11.0-037"/>
     <h4>11.0 037 XWayland     Date: 2021-12-18  Severity: High</h4>
@@ -1169,14 +1187,14 @@
     that these security vulnerabilities were fixed in xorg-server as well,
     so you should install both updates.
     These vulnerabilities have been assigned
-    <a href="https://access.redhat.com/security/cve/cve-2021-4008">CVE-2021-4008</a>,
-    <a href="https://access.redhat.com/security/cve/cve-2021-4009">CVE-2021-4009</a>,
-    <a href="https://access.redhat.com/security/cve/cve-2021-4010">CVE-2021-4010</a>, and
-    <a href="https://access.redhat.com/security/cve/cve-2021-4011">CVE-2021-4011</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4008">CVE-2021-4008</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4009">CVE-2021-4009</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4010">CVE-2021-4010</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4011">CVE-2021-4011</a>.</p>
     <p>To fix these vulnerabilities, update to XWayland-21.1.4 using the
     instructions for
-    <a href="../view/svn/x/xwayland.html">XWayland (sysv)</a> or
-    <a href="../view/systemd/x/xwayland.html">XWayland (systemd)</a>.</p>
+    <a href="../view/11.1/x/xwayland.html">XWayland (sysv)</a> or
+    <a href="../view/11.1-systemd/x/xwayland.html">XWayland (systemd)</a>.</p>
 
     <a id="sa-11.0-036"/>
     <h4>11.0 036 lxml         Date: 2021-12-18  Severity: High</h4>
@@ -1190,8 +1208,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43818">CVE-2021-43818</a>.</p>
     <p>To fix these vulnerabilities, update to lxml-4.7.1 using the
     instructions for
-    <a href="../view/svn/general/python-modules.html#lxml">lxml (sysv)</a> or
-    <a href="../view/systemd/general/python-modules.html#lxml">lxml (systemd)</a>.</p>
+    <a href="../view/11.1/general/python-modules.html#lxml">lxml (sysv)</a> or
+    <a href="../view/11.1-systemd/general/python-modules.html#lxml">lxml (systemd)</a>.</p>
 
     <a id="sa-11.0-035"/>
     <h4>11.0 035 OpenJDK      Date: 2021-12-17  Severity: Critical</h4>
@@ -1218,11 +1236,11 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">CVE-2021-44228</a>.</p>
     <p>To fix these vulnerabilities, update to OpenJDK-17.0.1 using the
     instructions for
-    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
-    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <a href="../view/11.1/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/11.1-systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
     <p>Alternatively, you may use the binary the BLFS Editors have produced:
-    <a href="../view/svn/general/java.html">Java (sysv)</a> or
-    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+    <a href="../view/11.1/general/java.html">Java (sysv)</a> or
+    <a href="../view/11.1-systemd/general/java.html">Java (systemd)</a>.</p>
 
     <a id="sa-11.0-034"/>
     <h4>11.0 034 AudioFile    Date: 2021-12-13  Severity: Critical</h4>
@@ -1252,8 +1270,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-6827">CVE-2017-6827</a>.</p>
     <p>To fix these vulnerabilities, apply the patch for AudioFile using the
     instructions for
-    <a href="../view/svn/multimedia/audiofile.html">AudioFile (sysv)</a> or
-    <a href="../view/systemd/multimedia/audiofile.html">AudioFile (systemd)</a>.</p>
+    <a href="../view/11.1/multimedia/audiofile.html">AudioFile (sysv)</a> or
+    <a href="../view/11.1-systemd/multimedia/audiofile.html">AudioFile (systemd)</a>.</p>
 
     <a id="sa-11.0-033"/>
     <h4>11.0 033 PostgreSQL   Date: 2021-12-13  Severity: High</h4>
@@ -1269,11 +1287,11 @@
     <a href="https://access.redhat.com/security/cve/cve-2021-23222">CVE-2021-23222</a>.</p>
     <p>To fix these vulnerabilities, update to PostgreSQL-14.1 using the instructions
     for
-    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
-    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+    <a href="../view/11.1/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/11.1-systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
 
     <a id="sa-11.0-032"/>
-    <h4>11.0 032 Ruby     Date: 2021-12-13  Severity: High</h4>
+    <h4>11.0 032 Ruby     Date: 2021-12-13  Severity: Critical</h4>
     <p>In Ruby-3.0.3, three security vulnerabilities were fixed that could allow
     for arbitrary code execution, denial of service, and content spoofing.
     The arbitrary code execution vulnerability exists in the CGI gem, and occurs
@@ -1284,13 +1302,13 @@
     to modify cookies in transit and for them to be accepted by Ruby without going
     through any validation.
     These vulnerabilities have been assigned
-    <a href="https://access.redhat.com/security/cve/CVE-2021-41817">CVE-2021-41817</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-41816">CVE-2021-41816</a>, and
-    <a href="https://access.redhat.com/security/cve/CVE-2021-41819">CVE-2021-41819</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41817">CVE-2021-41817</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41816">CVE-2021-41816</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41819">CVE-2021-41819</a>.</p>
     <p>To fix these vulnerabilities, update to ruby-3.0.3 using the instructions
     for
-    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
-    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+    <a href="../view/11.1/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/11.1-systemd/general/ruby.html">Ruby (systemd)</a>.</p>
 
     <a id="sa-11.0-031"/>
     <h4>11.0 031 PHP      Date: 2021-12-13  Severity: Medium</h4>
@@ -1303,8 +1321,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-21707">CVE-2021-21707</a>.</p>
     <p>To fix this vulnerability, update to php-8.0.13 using the instructions
     for
-    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a href="../view/11.1/general/php.html">PHP (sysv)</a> or
+    <a href="../view/11.1-systemd/general/php.html">PHP (systemd)</a>.</p>
 
     <a id="sa-11.0-030"/>
     <h4>11.0 030 Firefox  iUpdated: 2021-12-07  Severity: High</h4>
@@ -1324,8 +1342,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43545">CVE-2021-43545</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43546">CVE-2021-43546</a>.</p>
     <p>To fix these update to firefox-91.4.0esr or later :
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="sa-11.0-029"/>
     <h4>11.0 029 NSS  Date: 2021-12-02  Severity: Critical</h4>
@@ -1336,8 +1354,8 @@
     .</p>
     <p>To fix this, update to at least NSS-3.73 using the instructions
     for
-    <a href="../view/svn/postlfs/nss.html">NSS (sysv)</a> or
-    <a href="../view/systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
+    <a href="../view/11.1/postlfs/nss.html">NSS (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
 
     <a id="sa-11.0-028"/>
     <h4>11.0 028 QtWebEngine  Date: 2021-11-27  Severity: Critical</h4>
@@ -1368,8 +1386,8 @@
     followed by
     <a href="http://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-5.15.7-build_fixes-1.patch">qtwebengine-5.15.7-build_fixes-1.patch</a>
     (or update to a later version) using the instructions at
-    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
-    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a href="../view/11.1/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
+    <a href="../view/11.1-systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
     <a id="sa-11.0-027"/>
     <h4>11.0 027 Wireshark          Date: 2021-11-22 Severity: Medium</h4>
@@ -1390,8 +1408,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39920">CVE-2021-39920</a>.</p>
     <p>To fix these vulnerabilities, update to Wireshark-3.4.10 using the
     instructions for
-    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="sa-11.0-026"/>
     <h4>11.0 026 Samba              Date: 2021-11-11 Severity: Critical</h4>
@@ -1410,8 +1428,8 @@
     Please read the advisories to see whether you are impacted.</p>
     <p>To fix these vulnerabilities update to Samba-4.15.2 (or 4.14.10) using
     the instructions for
-    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
     <a id="sa-11.0-025"/>
     <h4>11.0 025 Firefox  Updated: 2021-11-02  Severity: Critical</h4>
@@ -1431,8 +1449,8 @@
     The latter two were initially identified as MOZ-2021-0007 and MOZ-2021-0008
     pending allocation of a CVE.</p>
     <p>To fix these update to firefox-91.3.0esr or later :
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="sa-11.0-024"/>
     <h4>11.0 024 BIND9              Date: 2021-10-27 Severity: Medium</h4>
@@ -1450,11 +1468,11 @@
     NOTE: Only the server is affected, you do not need to update if you are
     running the client utilities.
     This vulnerability has been assigned
-    <a href="https://kb.isc.org/v1/docs/cve-2021-25219">CVE-2021-25219</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25219">CVE-2021-25219</a>.</p>
     <p>To fix this vulnerability, update to BIND-9.16.22 or later using the
     instructions for
-    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
-    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+    <a href="../view/11.1/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/11.1-systemd/server/bind.html">BIND (systemd)</a>.</p>
 
     <a id="sa-11.0-023"/>
     <h4>11.0 023 Samba              Date: 2021-10-27 Severity: High</h4>
@@ -1469,8 +1487,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-17049">CVE-2020-17049</a>.</p>
     <p>To fix this vulnerability, update to Samba-4.15.1 (or 4.14.9) using the
     instructions for
-    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
     <a id="sa-11.0-022"/>
     <h4>11.0 022 ffmpeg             Date: 2021-10-27 Severity: Critical</h4>
@@ -1498,8 +1516,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38291">CVE-2021-38291</a>.</p>
     <p>To fix these vulnerabilities, update to ffmpeg-4.4.1 (or 4.3.3/4.2.5)
     using the instructions for
-    <a href="../view/svn/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
-    <a href="../view/systemd/multimedia/ffmpeg.html">ffmpeg (systemd)</a>.</p>
+    <a href="../view/11.1/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
+    <a href="../view/11.1-systemd/multimedia/ffmpeg.html">ffmpeg (systemd)</a>.</p>
 
     <a id="sa-11.0-021"/>
     <h4>11.0 021 Exiv2              Date: 2021-10-27 Severity: Medium</h4>
@@ -1518,8 +1536,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37618">CVE-2021-37618</a>.</p>
     <p>To fix these vulnerabilities, update to exiv2-0.27.5 or later using the
     instructions for
-    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
-    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+    <a href="../view/11.1/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/11.1-systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
 
     <a id="sa-11.0-020"/>
     <h4>11.0 020 PHP                Date: 2021-10-27 Severity: Critical</h4>
@@ -1534,8 +1552,8 @@
     soon as possible. This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-21703">CVE-2021-21703</a>.</p>
     <p>To fix this vulnerability, update to php-8.0.12 using the instructions for
-    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a href="../view/11.1/general/php.html">PHP (sysv)</a> or
+    <a href="../view/11.1-systemd/general/php.html">PHP (systemd)</a>.</p>
 
     <a id="sa-11.0-019"/>
     <h4>11.0 019 Thunderbird        Date: 2021-10-21 Severity: Critical</h4>
@@ -1547,17 +1565,17 @@
     of Thunderbird is recommended as soon as possible due to the SMTP STARTTLS
     downgrade attack.
     These vulnerabilities have been assigned
-    <a href="https://access.redhat.com/security/cve/cve-2021-38502">CVE-2021-38502</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-38496">CVE-2021-38496</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-38497">CVE-2021-38497</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-38498">CVE-2021-38498</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-32810">CVE-2021-32810</a>,
-    <a href="https://access.redhat.com/security/cve/CVE-2021-38500">CVE-2021-38500</a>, and
-    <a href="https://access.redhat.com/security/cve/CVE-2021-38501">CVE-2021-38501</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38502">CVE-2021-38502</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38496">CVE-2021-38496</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38497">CVE-2021-38497</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38498">CVE-2021-38498</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-32810">CVE-2021-32810</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38500">CVE-2021-38500</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38501">CVE-2021-38501</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-91.2.0 using the
     instructions for
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-11.0-018"/>
     <h4>11.0 018 Seamonkey          Date: 2021-10-21 Severity: High</h4>
@@ -1566,11 +1584,11 @@
     Firefox-78.14.0. The Mozilla developers believe that this vulnerability
     may be exploited to allow remote code execution, and updating is suggested.
     This vulnerability has been assigned
-    <a href="https://access.redhat.com/security/cve/CVE-2021-38493">CVE-2021-38493</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38493">CVE-2021-38493</a>.</p>
     <p>To fix this vulnerability, update to Seamonkey-2.53.9.1 using the
     instructions for
-    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
     <a id="sa-11.0-017"/>
     <h4>11.0 017 Samba              Date: 2021-10-20 Severity: Medium</h4>
@@ -1587,8 +1605,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3671">CVE-2021-3671</a>.</p>
     <p>To fix this vulnerability, update to Samba-4.15.0 using the
     instructions for
-    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
     <a id="sa-11.0-016"/>
     <h4>11.0 016 MIT Kerberos V5    Date: 2021-10-18 Severity: Medium</h4>
@@ -1603,8 +1621,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37750">CVE-2021-37750</a>.</p>
     <p>To fix this vulnerability, rebuild KRB5 using the sed in the BLFS
     Development Books by using the instructions for
-    <a href="../view/svn/postlfs/mitkrb5.html">MIT Kerberos V5 (sysv)</a> or
-    <a href="../view/systemd/postlfs/mitkrb5.html">MIT Kerberos V5 (systemd)</a>,
+    <a href="../view/11.1/postlfs/mitkrb5.html">MIT Kerberos V5 (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/mitkrb5.html">MIT Kerberos V5 (systemd)</a>,
     or update to a newer version when available.</p>
 
     <a id="sa-11.0-015"/>
@@ -1622,8 +1640,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3796">CVE-2021-3796</a>.</p>
     <p>To fix these vulnerabilities, update to vim-8.2.3508 using the
     instructions for
-    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
-    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+    <a href="../view/11.1/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/11.1-systemd/postlfs/vim.html">vim (systemd)</a>.</p>
 
     <a id="sa-11.0-014"/>
     <h4>11.0 014 Node.js   Date: 2021-10-13 Severity: Medium</h4>
@@ -1635,8 +1653,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22960">CVE-2021-22960 (not yet public)</a>.</p>
     <p>To fix these vulnerabilities, update to Node.js-14.18.1 using the
     instructions for
-    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+    <a href="../view/11.1/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/11.1-systemd/general/nodejs.html">node.js (systemd)</a>.</p>
 
     <a id="sa-11.0-013"/>
     <h4>11.0 013 Apache HTTPD  Date: 2021-10-12  Severity: Critical</h4>
@@ -1652,8 +1670,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41773">CVE-2021-41773</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41524">CVE-2021-41524</a>.</p>
     <p>To fix this upgrade to Apache-2.4.51 or later:
-    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
-    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+    <a href="../view/11.1/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/11.1-systemd/server/apache.html">Apache (systemd)</a>.</p>
 
     <a id="sa-11.0-012"/>
     <h4>11.0 012 Firefox  Updated: 2021-11-02  Severity: Critical</h4>
@@ -1674,8 +1692,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38500">CVE-2021-38500 (Not yet public)</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38501">CVE-2021-38501 (Not yet public)</a>.</p>
     <p>To fix these update to firefox-91.2.0esr or later :
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.
+    <a href="../view/11.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.
     (Firefox-78 is now End of Life.)</p>
 
     <a id="sa-11.0-011"/>
@@ -1689,8 +1707,8 @@
     in that case no update is necessary. The vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39272">CVE-2021-39272</a>.</p>
     <p>In other cases, update to Fetchmail-6.2.22 or later using the instructions for
-    <a href="../view/svn/basicnet/fetchmail.html">Fetchmail (sysv)</a>, or
-    <a href="../view/systemd/basicnet/fetchmail.html">Fetchmail (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/fetchmail.html">Fetchmail (sysv)</a>, or
+    <a href="../view/11.1-systemd/basicnet/fetchmail.html">Fetchmail (systemd)</a>.</p>
 
     <a id="sa-11.0-010"/>
     <h4>11.0 010 WebKitGTK+    Updated: 2021-10-26   Severity: Critical</h4>
@@ -1723,8 +1741,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30851">CVE-2021-30851</a>.</p>
     <p>To fix this security vulnerability, update to WebKitGTK+-2.34.1
     immediately using the instructions for
-    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
-    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+    <a href="../view/11.1/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/11.1-systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
 
     <a id="sa-11.0-009"/>
     <h4>11.0 009 libexif       Date: 2021-09-22   Severity: Moderate</h4>
@@ -1738,8 +1756,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0452">CVE-2020-0452</a>.</p>
     <p>To fix these new vulnerabilities, update to libexif-0.6.23 or later
     using the instructions for
-    <a href="../view/svn/general/libexif.html">libexif (sysv)</a> or
-    <a href="../view/systemd/general/libexif.html">libexif (systemd)</a>.</p>
+    <a href="../view/11.1/general/libexif.html">libexif (sysv)</a> or
+    <a href="../view/11.1-systemd/general/libexif.html">libexif (systemd)</a>.</p>
 
     <a id="sa-11.0-008"/>
     <h4>11.0 008 cURL          Date: 2021-09-22   Severity: High</h4>
@@ -1766,8 +1784,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22947">CVE-2021-22947</a>.</p>
     <p>To fix these vulnerabilities, update to cURL-7.79.0 or later using the
     instructions for
-    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
-    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+    <a href="../view/11.1/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/11.1-systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
 
     <a id="sa-11.0-007"/>
     <h4>11.0 007 Python (LFS and BLFS) Date: 2021-09-22 Severity: Moderate</h4>
@@ -1783,8 +1801,8 @@
     <a href="https://bugs.python.org/issue43124">bpo-43124</a>.</p>
     <p>To fix these vulnerabilities, update to Python-3.9.7 or later using the
     instructions from the <em>BLFS</em> book for
-    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
-    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <a href="../view/11.1/general/python3.html">Python (sysv)</a> or
+    <a href="../view/11.1-systemd/general/python3.html">Python (systemd)</a>.</p>
 
     <a id="sa-11.0-006"/>
     <h4>11.0 006 Apache HTTPD  Updated: 2021-12-13  Severity: Critical</h4>
@@ -1803,8 +1821,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-36160">CVE-2021-36160</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39275">CVE-2021-39275</a>.</p>
     <p>To fix this upgrade to Apache-2.4.51 or later:
-    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
-    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+    <a href="../view/11.1/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/11.1-systemd/server/apache.html">Apache (systemd)</a>.</p>
 
     <a id="sa-11.0-005"/>
     <h4>11.0 005 Ghostscript  Date: 2021-09-10  Severity: Critical</h4>
@@ -1817,13 +1835,14 @@
     now preparing for a new release (expected later this month). The public
     details can now be seen at
     <a href="https://bugs.ghostscript.com/show_bug.cgi?id=704342">bug 704342</a>,
-    CVE-2021-3781 has been created, details are not yet public:
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3781/">CVE-2021-3781 (Not yet public)</a>.</p>
+    CVE-2021-3781 has been assigned to this vulnerability
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3781">CVE-2021-3781</a>.</p>
     <p>To fix this use ghostscript-9.54 with the
     <a href="http://www.linuxfromscratch.org/patches/downloads/ghostscript/ghostscript-9.54.0-upstream_fix-2.patch">ghostscript-9.54.0-upstream_fix-2.patch</a>
-    from the development book, or upgrade to a later version when that is released.
-    <a href="../view/svn/pst/gs.html">Ghostscript (sysv)</a> or
-    <a href="../view/systemd/pst/gs.html">Ghostscript (systemd)</a>.</p>
+    from the released book, or upgrade to ghostscript-9.55.0 using the
+    instructions for
+    <a href="../view/11.1/pst/gs.html">Ghostscript (sysv)</a> or
+    <a href="../view/11.1-systemd/pst/gs.html">Ghostscript (systemd)</a>.</p>
 
     <a id="sa-11.0-004"/>
     <h4>11.0 004 Thunderbird  Date: 2021-09-10  Severity: High</h4>
@@ -1833,8 +1852,8 @@
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38495">CVE-2021-38495</a>.</p>
     <p>To fix this, update to thunderbird-91.1.0 or later:
-    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-11.0-003"/>
     <h4>11.0 003 SANE     Date: 2021-09-08  Severity: Medium</h4>
@@ -1858,8 +1877,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-12864">CVE-2020-12864</a>.</p>
     <p>To fix these vulnerabilities, update to sane-backends-1.0.32 using the
     instructions for
-    <a href="../view/svn/pst/sane.html">SANE (sysv)</a>, or
-    <a href="../view/systemd/pst/sane.html">SANE (systemd)</a>.</p>
+    <a href="../view/11.1/pst/sane.html">SANE (sysv)</a>, or
+    <a href="../view/11.1-systemd/pst/sane.html">SANE (systemd)</a>.</p>
 
     <a id="sa-11.0-002"/>
     <h4>11.0 002 Firefox  Updated: 2021-11-02  Severity: High</h4>
@@ -1875,8 +1894,8 @@
     can be found here:
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-38493">CVE-2021-38493</a>.</p>
     <p>To fix these update to firefox-91.1.0esr or later (firefox-78 is now End of Life).
-    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/11.1/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/11.1-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="sa-11.0-001"/>
     <h4>11.0 001 Node.js   Date: 2021-09-07 Severity: High</h4>
@@ -1897,8 +1916,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-39135">CVE-2021-39135</a>.</p>
     <p>To fix these vulnerabilities, update to Node.js-14.17.6 using the
     instructions for
-    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+    <a href="../view/11.1/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/11.1-systemd/general/nodejs.html">node.js (systemd)</a>.</p>
 
     <!-- Note for SA-10.1-042 -> 045: During this time period,
          the NVD website returned 404 for each CVE inputted. As a result,
