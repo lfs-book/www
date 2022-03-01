@@ -80,6 +80,178 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.0-088"/>
+    <h4>11.0 088 Thunderbird  Date: 2022-02-24  Severity: High</h4>
+    <p>In Thunderbird-91.6.1, a security vulnerability was fixed that could
+    allow for remote code execution when processing new emails. This occurs
+    due to an out-of-bounds write that causes one additional byte to be written
+    into memory when processing a crafted email message. Note that this email
+    does not have to be opened, the vulnerability is exploited when Thunderbird
+    processes the email to add it to it's index.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-0566">CVE-2022-0566</a>.</p>
+    <p>To fix this vulnerability, update to Thunderbird-91.6.1 using the
+    instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.0-087"/>
+    <h4>11.0 087 WebKitGTK+   Date: 2022-02-24  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.34.6, a security vulnerability was fixed that allows
+    for trivial remote code execution, and that requires no user interaction.
+    This vulnerability has been rated as an emergency by Apple, and has
+    resulted in out-of-band security updates for all of it's devices.
+    Processing maliciously crafted images can result in trivial remote code
+    execution, and Apple is aware of several reports that this issue is being
+    actively exploited. This issue is classified as a use-after-free and was
+    fixed in WebKitGTK+ with improved memory management. Due to the severity
+    of this vulnerability and the fact that the vulnerability is being actively
+    exploited, the BLFS team recommends updating to WebKitGTK+-2.34.6 immediately.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22620">CVE-2022-22620</a>,
+    but additional information can be found at
+    <a href="https://support.apple.com/en-us/HT213093">Apple Security Advisory</a> and
+    <a href="https://webkitgtk.org/security/WSA-2022-0003.html">WSA-2022-0003</a>.</p>
+    <p>To fix this vulnerability, update to WebKitGTK+-2.34.6 using the
+    instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
+    <a id="sa-11.0-086"/>
+    <h4>11.0 086 Expat        Date: 2022-02-24  Severity: Critical</h4>
+    <p>In expat-2.4.5, several security vulnerabilities were fixed that could
+    allow for remote code execution and denial of service. One of these
+    vulnerabilities allows for remote code execution due to missing validation
+    of UTF-8 characters, such as checks for whether a UTF-8 character is valid
+    in a certain context. This could allow for the characters to be passed
+    elsewhere in the stack, and lead to remote code execution. Another
+    vulnerability exists that allows attackers to insert namespace-separator
+    characters into namespace URIs, allowing for trivial remote code execution
+    or unauthorized access to information. Another vulnerability exists in the
+    build_model function that alows for a denial of service due to stack
+    exhaustion (application crash). In the functions storeRawNames and
+    copyString, integer overflow vulnerabilities exist that allow for remote
+    code execution when processing XML files. Similar to the libxml2 and libxslt
+    vulnerabilities, these can be exploited trivially through malicious
+    advertisements and other crafted web content, but also through other means
+    depending on the context of an application that uses these libraries.
+    The BLFS team recommends updating to expat-2.4.6 as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25235">CVE-2022-25235</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25236">CVE-2022-25236</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25313">CVE-2022-25313</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25314">CVE-2022-25314</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25315">CVE-2022-25315</a>.</p>
+    <p>To fix these vulnerabilities, update to expat-2.4.5 or later using the
+    instructions for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
+    <a id="sa-11.0-085"/>
+    <h4>11.0 085 libxml2      Date: 2022-02-24  Severity: High</h4>
+    <p>In libxml2-2.9.13, a security vulnerability was fixed that could allow
+    for a remote attacker to cause an application crash or cause remote code
+    execution to occur. This occurs due to a use-after-free in the functions
+    that handle ID and IDREF attributes, which are extremely common in XML
+    documents. This update also included fixes for several memory leaks,
+    use-after-free vulnerabilities, and null-pointer dereference crashes in
+    other functions within the libxml2 library. Similar to the libxslt
+    vulnerabilities, these vulnerabilities have been spotted in the wild during
+    attacks utilizing malicious advertisements. The BLFS team recommends
+    updating to libxml2-2.9.13 as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-23308">CVE-2022-23308</a>.</p>
+    <p>To fix this vulnerability, update to libxml2-2.9.13 or later using the
+    instructions for
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
+    <a id="sa-11.0-084"/>
+    <h4>11.0 084 PHP          Date: 2022-02-24  Severity: Moderate</h4>
+    <p>In PHP-8.1.3, a security vulnerability was fixed that could allow for a
+    denial of service. This vulnerability occurs due to a logic error in the
+    php_filter_float() function that leads to a use-after-free vulnerability
+    due to it permitting integers to be passed to input that is only supposed
+    to accept floating point numbers. According to Red Hat, this flaw allows
+    an attacker to inject a malicious file, leading to a segmentation fault.
+    If you are not using the php_filter_float() function, upgrading is not
+    important. However, if you are using the php_filter_float() function, you
+    should update as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2021-21708">CVE-2021-21708</a>.</p>
+    <p>To fix this vulnerability, update to PHP-8.1.3 or later using the
+    instructions for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.htlm">PHP (systemd)</a>.</p>
+
+    <a id="sa-11.0-083"/>
+    <h4>11.0 083 libxslt      Date: 2022-02-24  Severity: High</h4>
+    <p>In libxslt-1.1.35, a security vulnerability was fixed that could allow
+    for remote attackers to exploit heap corruption via a use-after-free in the
+    xsltApplyTemplates function. This vulnerability was originally discovered
+    in Google Chrome (and thus QtWebEngine is affected), where remote attackers
+    were using malicious advertisements with crafted XML documents embedded
+    to cause remote code execution. The vulnerability was found to be in the
+    libxslt library. Additionally, two memory leaks and a double-free (which
+    could lead to denial of service) were fixed. The BLFS team recommends
+    updating to libxslt-1.1.35 as soon as possible, especially if you have
+    QtWebEngine installed.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30560">CVE-2021-30560</a>.</p>
+    <p>To fix this vulnerability, update to libxslt-1.1.35 or later using the
+    instructions for
+    <a href="../view/svn/general/libxslt.html">libxslt (sysv)</a> or
+    <a href="../view/systemd/general/libxslt.html">libxslt (systemd)</a>.</p>
+
+    <a id="sa-11.0-082"/>
+    <h4>11.0 082 util-linux (LFS and BLFS) Date: 2022-02-24 Severity: Moderate</h4>
+    <p>In util-linux-2.37.4, a security vulnerability was fixed that could allow
+    for local attackers to read information that is normally accessible only by
+    the 'root' user. This vulnerability exists in the 'chsh' and 'chfn'
+    utilities when compiled with support for libreadline, which is the default
+    in LFS. The readline library uses the INPUTRC environment variable to get
+    a path to the user's input settings from /etc/inputrc, but when the library
+    cannot parse the specified file, it prints an error containing data from
+    the file. An example attacker is a user setting INPUTRC to /etc/passwd, and
+    then running chsh (or any other setuid-root application). This flaw thus
+    allows an unprivileged user to read root-owned files, which can lead to
+    privilege escalation and unauthorized access to privileged information.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-0563">CVE-2022-0563</a>.</p>
+    <p>To fix this upgrade to util-linux-2.37.4 or later using the instructions at
+    <a href="../../lfs/view/development/chapter08/util-linux.html">util-linux (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/util-linux.html">util-linux (systemd)</a>
+    Please be aware that on older systems where the linux headers include 'linux/raw.h'
+    you will need to add '--disable-raw' to the configure, and on systems before /usr was
+    merged (LFS-10.1 and earlier) you should <em>omit</em> '--libdir=/usr/lib' to
+    ensure that the libraries overwrite the existing libraries in /lib.</p>
+
+    <a id="sa-11.0-081"/>
+    <h4>11.0 081 VIM (LFS and BLFS) Date: 2022-02-22 Severity: High</h4>
+    <p>Another heap-based buffer overflow, causing a crash when repeatedly
+    using :retab, was fixed in vim-8.2.4359. This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0572">CVE-2022-0572 (undergoing analysis)</a>.</p>
+    <p>To fix this vulnerability update to vim-8.2.4383 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
+    <a id="sa-11.0-080"/>
+    <h4>11.0 080 ImageMagick  Date: 2022-02-18 Severity: High</h4>
+    <!-- unusual wording because we skip most versions, fixes in -35 and -40,
+      some later items looked like they might also be ssecurity-related. -->
+    <p>BLFS updated to ImageMagick-7.1.0-25 from 7.1.10-4. The changes include
+    two fixes for apparent security vulnerabilities: in 7.1.0-5 fixing a Heap-based
+    buffer overflow in the TIFF coder, and in 7.1.0-13 fixing a stack overflow when
+    parsing a malicious ps image file. No further details of these are available.</p>
+    <p>To fix these, update to ImageMagick-7.1.0-25 or later using the instructions
+    for
+    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+
     <a id="sa-11.0-079"/>
     <h4>11.0 079 MariaDB          Date: 2022-02-14  Severity: High</h4>
     <p>In MariaDB-10.6.7, several security vulnerabilities were fixed that
