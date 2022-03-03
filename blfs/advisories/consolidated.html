@@ -80,6 +80,24 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-003"/>
+    <h4>11.1 003 FLAC               Date: 2022-03-03 Severity: Medium</h4>
+    <p>In FLAC-1.3.4, two security vulnerabilities were fixed that could allow
+    for remote information disclosure with no privileges required. One of these
+    vulnerabilities requires user interaction to exploit, while the other does
+    not. Both of these security vulnerabilities are due to memory safety issues
+    in the encoder, being out-of-bounds read/write vulnerabilities leading to
+    heap buffer overflows. These vulnerabilities can only be exploited by playing
+    a malicious file, so applications such as tracker-miners (which index files
+    on a hard disk) are not impacted.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-0499">CVE-2020-0499</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-0561">CVE-2021-0561</a>.</p>
+    <p>To fix these vulnerabilities, update to FLAC-1.3.4 or later using the
+    instructions for
+    <a href="../view/svn/multimedia/flac.html">FLAC (sysv)</a> or
+    <a href="../view/systemd/multimedia/flac.html">FLAC (systemd)</a>.</p>
+
     <a id="sa-11.1-002"/>
     <h4>11.1 002 Cyrus-SASL         Date: 2022-03-03 Severity: High</h4>
     <p>In cyrus-sasl-2.1.28, two security vulnerabilities were fixed that
