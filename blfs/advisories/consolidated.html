@@ -80,6 +80,23 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-002"/>
+    <h4>11.1 002 Cyrus-SASL         Date: 2022-03-03 Severity: High</h4>
+    <p>In cyrus-sasl-2.1.28, two security vulnerabilities were fixed that
+    could allow for password/information leakage and for denial of service.
+    The denial of service vulnerability exists in the 'common.c' file that
+    is included in all SASL plugins and in the 'libsasl2.so' library itself.
+    The password/information leakage vulnerability exists in the SQL plugin for
+    SASL, and is due to it not escaping the password for an SQL INSERT or UPDATE
+    statement. Both of these vulnerabilities can be exploited remotely.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-19906">CVE-2019-19906</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24407">CVE-2022-24407</a>.</p>
+    <p>To fix these vulnerabilities, update to cyrus-sasl-2.1.28 or later using
+    the instructions for
+    <a href="../view/svn/postlfs/cyrus-sasl.html">Cyrus-SASL (sysv)</a> or
+    <a href="../view/systemd/postlfs/cyrus-sasl.html">Cyrus-SASL (systemd)</a>.</p>
+
     <a id="sa-11.1-001"/>
     <h4>11.1 001 VIM (LFS and BLFS) Date: 2022-03-02 Severity: High</h4>
     <p>In vim-8.2.4489, four vulnerabilities causing vim to crash handling
