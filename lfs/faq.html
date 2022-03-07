@@ -55,8 +55,6 @@
       <ul>
         <li><a href="#unable-to-mount-root">Kernel panic - not syncing: VFS: Unable to mount root fs on ...</a></li>
         <li><a href="#respawning-too-fast">init: Id &quot;1&quot; respawning too fast: disabled for 5 minutes</a></li>
-        <li><a href="#char-major-10-135">modprobe: Can't locate module char-major-10-135</a></li>
-        <li><a href="#no-dev-rtc">modprobe: Can't locate module /dev/rtc</a></li>
         <li><a href="#eth0-unknown-interface">eth0:unknown interface</a></li>
         <li><a href="#irq-nobody-cared">IRQ 9: nobody cared (try booting with the "irqpoll" option)</a></li>
       </ul>
@@ -578,23 +576,6 @@
           <p>When you see, in your syslogs, this line:</p>
           <code>init: Id "1" respawning too fast: disabled for 5 minutes</code>
           <p>It means you have an error in the /etc/inittab line beginning with the given id ("1" in this example).</p>
-        </dd>
-        <dt id="char-major-10-135">modprobe: Can't locate module char-major-10-135</dt>
-        <dd>
-          <p><code>char-major-10-135</code> refers to the character device,
-          major 10, minor 135, which is /dev/rtc. It provides access to the
-          BIOS clock, or RTC, the Real Time Clock. See
-          /usr/src/linux/Documentation/rtc.txt for more information.</p>
-          <p>The error is because something, most likely hwclock, is trying to
-          use /dev/rtc but you haven't configured kernel support for it in your
-          kernel. Either delete /dev/rtc so hwclock won't try to use it or
-          enable RTC support in your kernel. It's located in make menuconfig
-          under "Character devices" -&gt; "Enhanced Real Time Clock
-          Support".</p>
-        </dd>
-        <dt id="no-dev-rtc">modprobe: Can't locate module /dev/rtc</dt>
-        <dd>
-          <p>See the question <a href="#char-major-10-135">"modprobe: Can't locate module char-major-10-135"</a>.</p>
         </dd>
         <dt id="eth0-unknown-interface">eth0:unknown interface:No such device [failed] </dt>
         <dd>
