@@ -80,6 +80,26 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-007"/>
+    <h4>11.1 007 Thunderbird Date: 2022-03-08 Severity: Critical</h4>
+    <p>In Thunderbird-91.6.2, two security issues which were rated as Critical
+    were resolved. One of these vulnerabilities has to do with XSLT processing,
+    and the other being in the WebGPU IPC Framework. The XSLT processing issue
+    occurs when a parameter is removed during processing, which results in an
+    exploitable use-after-free and subsequent remote code execution with
+    a sandbox escape. The WebGPU vulnerability is similar to the XSLT processing
+    issue, where an unexpected message can lead to a use-after-free resulting in
+    subsequent remote code execution and sandbox escapes. There are multiple active
+    attacks in the wild which are abusing these flaws, and it is thus recommended
+    that you update to Thunderbird-91.6.2 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-26485">CVE-2022-26485</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26486">CVE-2022-26486</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.6.2 immediately
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-11.1-006"/>
     <h4>11.1 006 Firefox  Date: 2022-03-08  Severity: Critical</h4>
     <p>In firefox 91.6.1 two CVE issues rated Critical were fixed (attacks in the wild).
