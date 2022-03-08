@@ -80,6 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-008"/>
+    <h4>11.1 008 Seamonkey   Date: 2022-03-08 Severity: Critical</h4>
+    <p>Similar to Thunderbird and Firefox, Seamonkey is vulnerable to
+    CVE-2022-26485 (the XSLT processing vulnerability). This vulnerablity
+    exists when a XSLT parameter is removed during processing, and results in
+    an exploitable use-after-free and subsequent remote code execution with a
+    sandbox escape. This vulnerability is being actively exploited in the wild.
+    Since no new version of Seamonkey is available to fix this vulnerability,
+    the BLFS Editors have crafted a patch which backports the fix from Firefox
+    so that the vulnerability is fixed. Note that Seamonkey is not vulnerable
+    to the WebGPU Processing Vulnerability. Rebuild Seamonkey with the patch
+    as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-26485">CVE-2022-26485</a>.</p>
+    <p>To fix this vulnerability, rebuild Seamonkey with the patch using the
+    instructions for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
     <a id="sa-11.1-007"/>
     <h4>11.1 007 Thunderbird Date: 2022-03-08 Severity: Critical</h4>
     <p>In Thunderbird-91.6.2, two security issues which were rated as Critical
