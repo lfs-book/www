@@ -7,18 +7,18 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
-     <ul>
+<!-- <ul>
        <li>There are no current errata for blfs-11.1-systemd.</li>
      </ul>
-<!--
-     <ul>
-       <li>When compiling Shadow in BLFS, changes were made to Makefile.in
-           prior to running 'autoreconf -fiv', which causes those changes to
-           be lost. Run 'autoreconf -fiv' before the changes to Makefile.in
-           instead, and execute the two seds below the one for login.defs
-           first.</li>
-     </ul>
 -->
+     <ul>
+       <li>Phonon installs plugins in /usr/lib, not /usr/lib/qt5 and the
+       QT_PLUGIN_PATH for kf5 was therefore wrong. This probably only
+       affects old ex-qt4 packages from 'Further KDE5 packages' such as
+       the dragon video player. For the correct QT_PLUGIN_PATH etc see the
+       development book.</li>
+     </ul>
+
      <h2>Known Security Vulnerabilities</h2>
      
      <p>Details of Security Advisories for this version of BLFS are now
