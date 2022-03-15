@@ -80,6 +80,30 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-011"/>
+    <h4>11.1 011 Linux Kernel (LFS)  Date: 2022-03-15  Severity: Medium</h4>
+    <p>In Linux-5.16.14, workarounds for hardware vulnerabilities named
+    Branch History Injection have been added.  These vulnerabilities may
+    be exploited to cause sensitive information leakage.
+    Read
+    <a href='https://download.vusec.net/papers/bhi-spectre-bhb_sec22.pdf'>the paper</a>
+    for the details.
+    The vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0001">CVE-2022-0001</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0002">CVE-2022-0002</a> (for x86), and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23690">CVE-2022-23690</a> (for ARM, not disclosed yet).</p>
+    <p>To work around them, update to at least linux-5.16.14
+    (or 5.15.28, 5.10.105, 5.4.184, 4.19.234, 4.14.271, 4.9.306 for older
+    systems using LTS stable kernels) using the instructions from the LFS
+    book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>, <b>and</b> disable unprivileged BPF syscall via the kernel
+    configuration option <code>BPF_UNPRIV_DEFAULT_OFF=y</code> or the
+    sysctl <code>kernel.unprivileged_bpf_disabled=2</code>.</p>
+    <p>This security update may have a performance impact especially on AMD
+    CPUs, but the benchmark from LFS editors shows the impact is
+    marginal.</p>
+
     <a id="sa-11.1-010"/>
     <h4>11.1 010 VIM (LFS and BLFS) Date: 2022-03-15 Severity: High</h4>
     <p>In vim-8.2.4567, a vulnerabilitiy causing vim to overflow the heap

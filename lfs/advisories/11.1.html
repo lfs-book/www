@@ -66,6 +66,16 @@
 
     <h3>Linux kernel</h3>
 
+    <a id="sa-11.1-011"/>
+    <h4>11.1 011 Linux Kernel (LFS)  Date: 2022-03-15  Severity: Medium</h4>
+    <p>In Linux-5.16.14, workarounds for hardware vulnerabilities named
+    Branch History Injection have been added.  These vulnerabilities may be
+    exploited to cause sensitive information leakage.
+    To work around these vulnerabilities, update to at least linux-5.16.14
+    (or 5.15.28, 5.10.105, 5.4.184, 4.19.234, 4.14.271, 4.9.306 for older
+    systems using LTS stable kernels), and disable unprivileged bpf syscall.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.1-011">11.1-011</a></p>
+
     <a id="sa-11.1-009"/>
     <h4>11.0 009 Linux Kernel (LFS)  Date: 2022-03-09  Severity: High</h4>
     <p>In Linux since 5.8, a local privilege escalation vulnerability known as
