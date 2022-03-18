@@ -79,6 +79,21 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.1-012"/>
+    <h4>11.1 012 (LFS) OpenSSL  Date: 2022-03-18  Severity: High</h4>
+    <p>A bug which can cause OpenSSL to loop forever when parsing a crafted
+    certificate was fixed in versions 3.0.2 and 1.1.1n. CVE-2022-0778 has
+    been assigned, details at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3711">CVE-2021-3711</a>
+    and
+    <a href="https://www.openssl.org/news/secadv/20220315.txt">openssl 20220315</a>.</p>
+    <p>To fix this, if using OpenSSL-3 update to OpenSSL-3.0.2 or later using the instructions for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>
+    <em>or</em> if using OpenSSL-1.1.1 update to OpenSSL-1.1.1n or later following
+    the instructions from the LFS-11.0 book but using version 1.1.1n for
+    <a href="../../lfs/view/11.0/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/11.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
 
     <a id="sa-11.1-011"/>
     <h4>11.1 011 Linux Kernel (LFS)  Date: 2022-03-15  Severity: Medium</h4>
