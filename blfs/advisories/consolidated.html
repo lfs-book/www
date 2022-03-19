@@ -79,6 +79,22 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.1-014"/>
+    <h4>11.1 014 Node.js   Date: 2022-03-18 Severity: High</h4>
+    <p>In node.js-16.14.2 the same vulnerability that was fixed in
+    <a href="consolidated.html#sa-11.1-012">11.1-012</a> is reported to have
+    been fixed. Although BLFS links to shared OpenSSL, Node builds using a copy
+    of the OpenSSL headers (1.1.1n in this version) with some changes and additions
+    (in particular, 'quic' protocol support). It is uncertain if using the updated
+    shared system OpenSSL library without updating Node.js would be an adequate
+    remedy.</p>
+    <p>The vulnerability is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3711">CVE-2021-3711</a>.
+    To fix these vulnerabilities, update to Node.js-16.14.2 or later using the
+    instructions for
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
     <a id="sa-11.1-013"/>
     <h4>11.1 013 Apache HTTPD    Date: 2022-03-18  Severity: Critical</h4>
     <p>In httpd-2.4.53, four security vulnerabilities were fixed. One of the
