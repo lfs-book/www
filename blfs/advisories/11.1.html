@@ -50,6 +50,19 @@
 -->
 <!-- end of PackageName -->
 
+    <h3>Apache HTTPD</h3>
+
+    <a id="sa-11.1-013"/>
+    <h4>11.1 013 Apache HTTPD    Date: 2022-03-18  Severity: Critical</h4>
+    <p>In httpd-2.4.53, four security vulnerabilities were fixed. One of the
+    security vulnerabilities can cause a crash, the others can allow HTTP Request
+    Smuggling, an integer overflow leading to Out Of Bounds Write on 32-bit
+    systems, and overwriting heap memory with attacker provided data. Update
+    to httpd-2.4.53 or later.
+    <a href="consolidated.html#sa-11.1-013">11.1-013</a></p>
+
+<!-- end of Apache HTTPD -->
+
     <h3>Cyrus-SASL</h3>
 
     <a id="sa-11.1-002"/>
@@ -83,6 +96,21 @@
     <a href="consolidated.html#sa-11.1-003">11.1-003</a></p>
 
 <!-- end of FLAC -->
+
+    <h3>Node.js</h3>
+
+    <a id="sa-11.1-014"/>
+    <h4>11.1 014 Node.js   Date: 2022-03-18 Severity: High</h4>
+    <p>In node.js-16.14.2 the same vulnerability that was fixed in
+    <a href="consolidated.html#sa-11.1-012">11.1-012</a> has been fixed.
+    Although BLFS links to shared OpenSSL, Node builds using a copy of the OpenSSL
+    headers (1.1.1n in this version) with some changes and additions (in particular,
+    'quic' protocol support). It is uncertain if using the shared system OpenSSL
+    library without upgrading Node.js would be an adequate remedy. Therefore
+    update to Node-v16.14.2 or later.
+    <a href="consolidated.html#sa-11.1-014">11.1-014</a></p>
+
+<!-- end of Node.js -->
 
     <h3>Polkit</h3>
 
@@ -130,6 +158,13 @@
 <!-- end of Thunderbird -->
 
     <h3>VIM</h3>
+
+    <a id="sa-11.1-010"/>
+    <h4>11.1 010 VIM (LFS and BLFS) Date: 2022-03-15 Severity: High</h4>
+    <p>One vulnerability causing heap-based buffer overflow and crahsing
+    have been fixed in vim-8.2.4567. To fix them update to vim-8.2.4567
+    or later.
+    <a href="consolidated.html#sa-11.1-010">11.1-010</a></p>
 
     <a id="sa-11.1-001"/>
     <h4>11.1 001 VIM (LFS and BLFS) Date: 2022-03-02 Severity: High</h4>

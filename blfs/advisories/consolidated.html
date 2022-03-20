@@ -79,15 +79,97 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.1-014"/>
+    <h4>11.1 014 Node.js   Date: 2022-03-18 Severity: High</h4>
+    <p>In node.js-16.14.2 the same vulnerability that was fixed in
+    <a href="consolidated.html#sa-11.1-012">11.1-012</a> is reported to have
+    been fixed. Although BLFS links to shared OpenSSL, Node builds using a copy
+    of the OpenSSL headers (1.1.1n in this version) with some changes and additions
+    (in particular, 'quic' protocol support). It is uncertain if using the updated
+    shared system OpenSSL library without updating Node.js would be an adequate
+    remedy.</p>
+    <p>The vulnerability is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3711">CVE-2021-3711</a>.
+    To fix these vulnerabilities, update to Node.js-16.14.2 or later using the
+    instructions for
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
+    <a id="sa-11.1-013"/>
+    <h4>11.1 013 Apache HTTPD    Date: 2022-03-18  Severity: Critical</h4>
+    <p>In httpd-2.4.53, four security vulnerabilities were fixed. One of the
+    security vulnerabilities can cause a crash, the others can allow HTTP Request
+    Smuggling, an integer overflow leading to Out Of Bounds Write on 32-bit
+    systems, and overwriting heap memory with attacker provided data.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22719">CVE-2022-22719</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22720">CVE-2022-22720</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22721">CVE-2022-22721</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23943">CVE-2022-23943</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.53 using the
+    instructions for
+    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+
+
+    <a id="sa-11.1-012"/>
+    <h4>11.1 012 (LFS) OpenSSL  Date: 2022-03-18  Severity: High</h4>
+    <p>A bug which can cause OpenSSL to loop forever when parsing a crafted
+    certificate was fixed in versions 3.0.2 and 1.1.1n. CVE-2022-0778 has
+    been assigned, details at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3711">CVE-2021-3711</a>
+    and
+    <a href="https://www.openssl.org/news/secadv/20220315.txt">openssl 20220315</a>.</p>
+    <p>To fix this, if using OpenSSL-3 update to OpenSSL-3.0.2 or later using the instructions for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>
+    <em>or</em> if using OpenSSL-1.1.1 update to OpenSSL-1.1.1n or later following
+    the instructions from the LFS-11.0 book but using version 1.1.1n for
+    <a href="../../lfs/view/11.0/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/11.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
+    <a id="sa-11.1-011"/>
+    <h4>11.1 011 Linux Kernel (LFS)  Date: 2022-03-15  Severity: Medium</h4>
+    <p>In Linux-5.16.14, workarounds for hardware vulnerabilities named
+    Branch History Injection have been added.  These vulnerabilities may
+    be exploited to cause sensitive information leakage.
+    Read
+    <a href='https://download.vusec.net/papers/bhi-spectre-bhb_sec22.pdf'>the paper</a>
+    for the details.
+    The vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0001">CVE-2022-0001</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0002">CVE-2022-0002</a> (for x86), and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23690">CVE-2022-23690</a> (for ARM, not disclosed yet).</p>
+    <p>To work around them, update to at least linux-5.16.14
+    (or 5.15.28, 5.10.105, 5.4.184, 4.19.234, 4.14.271, 4.9.306 for older
+    systems using LTS stable kernels) using the instructions from the LFS
+    book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>, <b>and</b> disable unprivileged BPF syscall via the kernel
+    configuration option <code>BPF_UNPRIV_DEFAULT_OFF=y</code> or the
+    sysctl <code>kernel.unprivileged_bpf_disabled=2</code>.</p>
+    <p>This security update may have a performance impact especially on AMD
+    CPUs, but the benchmark from LFS editors shows the impact is
+    marginal.</p>
+
+    <a id="sa-11.1-010"/>
+    <h4>11.1 010 VIM (LFS and BLFS) Date: 2022-03-15 Severity: High</h4>
+    <p>In vim-8.2.4567, a vulnerabilitiy causing vim to overflow the heap
+    buffer and crash handling "z=" in visual mode have been found and
+    fixed.  This vulnerability have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0943">CVE-2022-0943</a>.</p>
+    <p>To fix this vulnerability, update to vim-8.2.4567 or later using
+    the instructions for
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
 
     <a id="sa-11.1-009"/>
-    <h4>11.0 009 Linux Kernel (LFS)  Date: 2022-03-09  Severity: High</h4>
+    <h4>11.1 009 Linux Kernel (LFS)  Date: 2022-03-09  Severity: High</h4>
     <p>In Linux since 5.8, a local privilege escalation vulnerability known as
     'Dirty Pipe' has been discovered, see
     <a href="https://dirtypipe.cm4all.com/">dirtypipe</a>.
     This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0847">CVE-2022-0847 (Not yet public)</a>.</p>
-    To fix this, update to at least linux-5.16.11 (or 5.15.25, 5.10.102 for older
+    <p>To fix this, update to at least linux-5.16.11 (or 5.15.25, 5.10.102 for older
     systems using LTS stable kernels) using the instructions from the LFS book for
     <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
     <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>

@@ -66,17 +66,45 @@
 
     <h3>Linux kernel</h3>
 
+    <a id="sa-11.1-011"/>
+    <h4>11.1 011 Linux Kernel (LFS)  Date: 2022-03-15  Severity: Medium</h4>
+    <p>In Linux-5.16.14, workarounds for hardware vulnerabilities named
+    Branch History Injection have been added.  These vulnerabilities may be
+    exploited to cause sensitive information leakage.
+    To work around these vulnerabilities, update to at least linux-5.16.14
+    (or 5.15.28, 5.10.105, 5.4.184, 4.19.234, 4.14.271, 4.9.306 for older
+    systems using LTS stable kernels), and disable unprivileged bpf syscall.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.1-011">11.1-011</a></p>
+
     <a id="sa-11.1-009"/>
-    <h4>11.0 009 Linux Kernel (LFS)  Date: 2022-03-09  Severity: High</h4>
+    <h4>11.1 009 Linux Kernel (LFS)  Date: 2022-03-09  Severity: High</h4>
     <p>In Linux since 5.8, a local privilege escalation vulnerability known as
     'Dirty Pipe' has been discovered.
     To fix this, update to at least linux-5.16.11 (or 5.15.25, 5.10.102 for older
     systems using LTS stable kernels) using the instructions from the LFS book for
-    <a href="../../blfs/advisories/consolidated.html#sa-11.1-007">11.1-009</a></p>
+    <a href="../../blfs/advisories/consolidated.html#sa-11.1-009">11.1-009</a></p>
 
     <!-- end of Linux Kernel -->
 
+    <h3>OpensSSL</h3>
+    <a id="sa-11.1-012"/>
+    <h4>11.1 012 (LFS) OpenSSL  Date: 2022-03-18  Severity: High</h4>
+    <p>A bug which can cause OpenSSL to loop forever when parsing a crafted
+    certificate was fixed in versions 3.0.2 and 1.1.1n. Update to at least
+    OpenSSL-3.0.2 if using the 3.0 series, or at least OpenSSL-1.1.1n if using
+    the 1.1.1 series.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.1-012">11.1-012</a></p>
+
+    <!-- end of OpenSSL -->
+
     <h3>VIM</h3>
+
+    <a id="sa-11.1-010"/>
+    <h4>11.1 010 VIM (LFS and BLFS) Date: 2022-03-15 Severity: High</h4>
+    <p>One vulnerability causing heap-based buffer overflow and crahsing
+    have been fixed in vim-8.2.4567. To fix them update to vim-8.2.4567
+    or later.
+    <a href="consolidated.html#sa-11.1-010">11.1-010</a></p>
 
     <a id="sa-11.1-001"/>
     <h4>11.1 001 VIM (LFS and BLFS) Date: 2022-03-02 Severity: High</h4>
