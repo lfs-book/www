@@ -79,6 +79,28 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.1-016"/>
+    <h4>11.1 016 Thunderbird  Date: 2022-03-22 Severity: High</h4>
+    <p>In Thunderbird-91.7.0, several security vulnerabilities were fixed that
+    could allow for browser window spoofing, sandbox escapes (and thus remote
+    code execution), unauthorized add-on modification, exploitable crashes, and
+    for temporary files to be downloaded to /tmp instead of the user's home
+    directory. Note that the unauthorized add-on modification vulnerability
+    occurs due to a race condition, while the sandbox bypass vulnerability
+    occurs when processing iframes in HTML mail, and that the remotely
+    exploitable crashes occur when a crafted SVG file is loaded as an attachment
+    or when it is embedded in an HTML mail.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-26383">CVE-2022-26383</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-26384">CVE-2022-26384</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-26387">CVE-2022-26387</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-26381">CVE-2022-26381</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2022-26386">CVE-2022-26386</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.7.0 using the
+    instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-11.1-015"/>
     <h4>11.1 015 BIND9     Date: 2022-03-21 Severity: High</h4>
     <p>In BIND-9.18.1, four security vulnerabilities were fixed that could allow
