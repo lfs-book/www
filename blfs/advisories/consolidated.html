@@ -79,6 +79,52 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.1-016"/>
+    <h4>11.1 016 Thunderbird  Date: 2022-03-22 Severity: High</h4>
+    <p>In Thunderbird-91.7.0, several security vulnerabilities were fixed that
+    could allow for browser window spoofing, sandbox escapes (and thus remote
+    code execution), unauthorized add-on modification, exploitable crashes, and
+    for temporary files to be downloaded to /tmp instead of the user's home
+    directory. Note that the unauthorized add-on modification vulnerability
+    occurs due to a race condition, while the sandbox bypass vulnerability
+    occurs when processing iframes in HTML mail, and that the remotely
+    exploitable crashes occur when a crafted SVG file is loaded as an attachment
+    or when it is embedded in an HTML mail.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-26383">CVE-2022-26383</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-26384">CVE-2022-26384</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-26387">CVE-2022-26387</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-26381">CVE-2022-26381</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2022-26386">CVE-2022-26386</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.7.0 using the
+    instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.1-015"/>
+    <h4>11.1 015 BIND9     Date: 2022-03-21 Severity: High</h4>
+    <p>In BIND-9.18.1, four security vulnerabilities were fixed that could allow
+    for denial-of-service conditions (resource exhaustion due to infinite loops
+    and unexpected crashes), and for DNS cache poisoning. In the case of DNS
+    cache poisoning, it's possible for bogus NS records to be cached and used
+    by named if it named needs to recurse for any reason, causing it to obtain
+    and pass on incorrect records. This will cause the client-side cache to become
+    poisoned with incorrect records, leading to queries being made to the wrong
+    servers and thus resulting in false information being returned to clients.
+    This could allow for cache poisoning and for clients to be redirected to
+    malicious sites instead of the original website that they were attempting
+    to access. Note that all four of these vulnerabilities are exploitable
+    remotely, and one of them is only applicable to 32-bit systems.
+    These vulnerabilities have been assigned
+    <a href="https://kb.isc.org/docs/cve-2022-0667">CVE-2022-0667</a>,
+    <a href="https://kb.isc.org/docs/cve-2022-0635">CVE-2022-0635</a>,
+    <a href="https://kb.isc.org/docs/cve-2022-0396">CVE-2022-0396</a>, and
+    <a href="https://kb.isc.org/docs/cve-2021-25220">CVE-2021-25220</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.18.1 using the
+    instructions for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-11.1-014"/>
     <h4>11.1 014 Node.js   Date: 2022-03-18 Severity: High</h4>
     <p>In node.js-16.14.2 the same vulnerability that was fixed in
@@ -90,7 +136,7 @@
     remedy.</p>
     <p>The vulnerability is
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3711">CVE-2021-3711</a>.
-    To fix these vulnerabilities, update to Node.js-16.14.2 or later using the
+    To fix this vulnerability, update to Node.js-16.14.2 or later using the
     instructions for
     <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
     <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>

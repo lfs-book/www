@@ -18,6 +18,9 @@
        affects old ex-qt4 packages from 'Further KDE5 packages' such as
        the dragon video player. For the correct QT_PLUGIN_PATH etc see the
        development book.</li>
+       <li>In X265 the snapshot does not install the shared library and
+       pkgconfig file if git has not been installed. Add -DGIT_ARCHETYPE=1
+       to the cmake command to fix this.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
