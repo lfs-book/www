@@ -428,14 +428,14 @@
           <p>You're most likely getting this while building binutils in Chapter
           5 of the LFS Book. The problem is most likely your mount options. You
           probably have a line in /etc/fstab like:</p>
-          <code>/dev/hda10  /mnt/lfs  ext2  user  1  2</code>
+          <code>/dev/sda10  /mnt/lfs  ext2  user  1  2</code>
           <p>'user' is the mount flag, and it's the problem. To quote from the mount man page:</p>
           <cite>user:  Allow  an  ordinary  user to mount the file system. This
           option  implies  the options noexec, nosuid, and nodev (unless
           overridden by subsequent options, as in the option line
           user,exec,dev,suid).</cite>
           <p>So change the line in /etc/fstab like this:</p>
-          <code>/dev/hda10  /mnt/lfs  ext2  defaults  1  2</code>
+          <code>/dev/sda10  /mnt/lfs  ext2  defaults  1  2</code>
         </dd>
         <dt id="conf-guess-fail">configure can't guess my host type.</dt>
         <dd>
