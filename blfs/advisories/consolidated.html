@@ -79,6 +79,32 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.1-018"/>
+    <h4>11.1 018 Zlib  Date: 2022-04-04  Severity: High</h4>
+    <p>Zlib-1.2.12 fixes a vulnerability which allows memory corruption when deflating
+    (i.e. compressing) if the input has many distant matches, see
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-25032">CVE-2018-25032</a>.</p>
+    <p>To fix this update to zlib-1.2.12 or later using the instructions for
+    <a href="../../lfs/view/development/chapter08/zlib.html">Zlib (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/zlib.html">Zlib (systemd)</a>.</p>
+
+    <a id="sa-11.1-017"/>
+    <h4>11.1 017 Linux Kernel (LFS)  Date: 2022-04-04  Severity: High</h4>
+    <p>In Linux-5.17.1 (and 5.16.18, 5.15.32 and other stable relases on 2022-03-28)
+    fixes were made for for two vulnerabilities in the kernel's nf_tables code, one
+    rated as high. The details are not yet public but will be at
+    The vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1015">CVE-2022-1015 (not yet public)</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1016">CVE-2022-1016 (not yet public</a>
+    with preliminary details at
+    <a href="https://access.redhat.com/security/cve/cve-2022-1015">RedHat CVE-2022-1015</a>
+    and
+    <a href="https://access.redhat.com/security/cve/cve-2022-1016">RedHat CVE-2022-1016</a></p>
+    <p>To fix these, update to at least linux-5.17.1 (or linux-5.15.32 if you intend to stay
+    on a long-term supported kernel) using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
     <a id="sa-11.1-016"/>
     <h4>11.1 016 Thunderbird  Date: 2022-03-22 Severity: High</h4>
     <p>In Thunderbird-91.7.0, several security vulnerabilities were fixed that
