@@ -80,6 +80,27 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-025"/>
+    <h4>11.1 025 Subversion   Date: 2022-04-12 Severity: High</h4>
+    <p>In Subversion-1.14.2, two security vulnerabilities were fixed that could
+    allow for trivial denial-of-service and for arbitrary file paths to be
+    read. In the case of the denial-of-service vulnerability, only servers
+    that use mod_dav_svn in httpd are impacted. This occurs because mod_dav_svn
+    servers will atempt to use memory which has already been freed, and
+    subsequent attempts to access the same resource will immediately result in
+    httpd crashing. However, in the case of the arbitrary file path read
+    vulnerability, both standard svnserve servers are affected, as well as those
+    which use the mod_dav_svn module in httpd. This vulnerability occurs due to
+    an improper logging implementation, causing sensitive information to be
+    reported even if the information is supposed to be omitted.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-28544">CVE-2021-28544</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24070">CVE-2022-24070</a>.</p>
+    <p>To fix these vulnerabilities, update to Subversion-1.14.2 or later using
+    the instructions for
+    <a href="../view/svn/general/subversion.html">Subversion (sysv)</a> or
+    <a href="../view/systemd/general/subversion.html">Subversion (systemd)</a>.</p>
+
     <a id="sa-11.1-024"/>
     <h4>11.1 024 WebKitGTK+   Date: 2022-04-12 Severity: High</h4>
     <p>In WebKitGTK+-2.36.0, three security vulnerabilities were fixed that
