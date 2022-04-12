@@ -80,6 +80,23 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-026"/>
+    <h4>11.1 026 libarchive   Date: 2022-04-12 Severity: High</h4>
+    <p>In libarchive-3.6.1, several security vulnerabilities were fixed that
+    could allow for application crashes and arbitrary code execution.
+    These occur in the 7zip reader, the ZIP reader, the ISO reader, and the
+    RARv4 reader, as well as in the libarchive API. Note that these
+    vulnerabilities have not been assigned CVEs, but are listed as security
+    fixes by upstream. The primary attack vector for these vulnerabilties
+    is API misuse in another application, with a malformed archive file also
+    being a possibility.
+    For more information, please see
+    <a href="https://github.com/libarchive/libarchive/releases/tag/v3.6.1">Release Libarchive 3.6.1</a>.</p>
+    <p>To fix these vulnerabilities, update to libarchive-3.6.1 or later using
+    the instructions for
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
     <a id="sa-11.1-025"/>
     <h4>11.1 025 Subversion   Date: 2022-04-12 Severity: High</h4>
     <p>In Subversion-1.14.2, two security vulnerabilities were fixed that could
