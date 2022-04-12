@@ -79,6 +79,22 @@
 
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
+    <a id="sa-11.1-022"/>
+    <h4>11.1 022 libsndfile   Date: 2022-04-12 Severity: High</h4>
+    <p>In libsndfile-1.1.0, several security vulnerabilities were fixed that
+    could allow for heap buffer overflows (causing arbitrary code execution)
+    and denial of service (index out of bounds and uninitialized variables).
+    Since these vulnerabilities were found by oss-fuzz, no CVEs were assigned.
+    However, upstream does list these as security fixes. For more details,
+    please visit
+    <a href="https://github.com/libsndfile/libsndfile/releases/tag/1.1.0">Release 1.1.0</a>.
+    If CVEs are assigned for these vulnerabilities in the future, this advisory
+    will be updated.</p>
+    <p>To fix these vulnerabilities, update to libsndfile-1.1.0 or later using
+    the instructions for
+    <a href="../view/svn/multimedia/libsndfile.html">libsndfile (sysv)</a> or
+    <a href="../view/systemd/multimedia/libsndfile.html">libsndfile (systemd)</a>.</p>
+
     <a id="sa-11.1-021"/>
     <h4>11.1 021 Thunderbird  Date: 2022-04-12 Severity: High</h4>
     <p>In Thunderbird-91.8.0, several security vulnerabilities were fixed that
