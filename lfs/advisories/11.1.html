@@ -66,6 +66,14 @@
 
     <h3>Linux kernel</h3>
 
+    <a id="sa-11.1-017"/>
+    <h4>11.1 017 Linux Kernel (LFS)  Date: 2022-04-04  Severity: High</h4>
+    <p>In Linux-5.17.1 (and 5.16.18, 5.15.32 and other stable relases on 2022-03-28)
+    fixes were made for for two vulnerabilities in the kernel's nf_tables code, one
+    rated as high. To fix these, upgrade to at least linux-5.17.1 (or 5.15.32 or
+    other stable kernels released on 2022-03-28.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.1-017">11.1-017</a></p>
+
     <a id="sa-11.1-011"/>
     <h4>11.1 011 Linux Kernel (LFS)  Date: 2022-03-15  Severity: Medium</h4>
     <p>In Linux-5.16.14, workarounds for hardware vulnerabilities named
@@ -112,5 +120,15 @@
     have been fixed in vim-8.2.4489. To fix them update to vim-8.2.4489
     or later.
     <a href="../../blfs/advisories/consolidated.html#sa-11.1-001">11.1-001</a></p>
+
+    <!-- end of VIM -->
+
+    <h3>Zlib</h3>
+    <a id="sa-11.1-018"/>
+    <h4>11.1 018 Zlib  Date: 2022-04-04  Severity: High</h4>
+    <p>A  vulnerability which allows memory corruption when deflating
+    (i.e. compressing) if the input has many distant matches, has been
+    found in Zlib. To fix this update to zlib-1.2.12 or later.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.1-018">11.1-018</a></p>
 
 <!--#include virtual="/common/footer.html" -->
