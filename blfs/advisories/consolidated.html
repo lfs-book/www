@@ -80,6 +80,30 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-032"/>
+    <h4>11.1 032 Mutt  Updated: 2022-04-15 Severity: Medium</h4>
+    <p>In mutt before mutt-2.2.3 a buffer overflow in uudecoder allows reading
+    past the end of the input line. This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1328">CVE-2022-1328 (awaiting analysis)</a>.</p>
+    <p>To fix this update to mutt-2.2.3 or later using the instructions
+    for
+    <a href="../view/svn/basicnet/mutt.html">Mutt (sysv)</a> or
+    <a href="../view/systemd/basicnet/mutt.html">Mutt (systemd)</a>.</p>
+
+    <a id="sa-11.1-031"/>
+    <h4>11.1 031 xz (LFS)   Date: 2022-04-15 Severity: Critical</h4>
+    <p>The same vulnerability in zgrep which was fixed in zlib-1.2.12 also
+    applies to using xzgrep from xz. Upstream has provided a patch.
+    This vulnerability has been assigned CVE-2022-1271, see
+    <!-- different link, not yet at mitre or nvd, the redhat link for gzip
+         only mentions gzip -->
+    <a href="https://tukaani.org/xz/">tuukani.org/xz</a>.</p>
+    <p>To fix this, rebuild xz with the
+    <a href="https://www.linuxfromscratch.org/patches/downloads/xz/xz-5.2.5-upstream_fix-1.patch">
+    xz-5.2.5-upstream_fix-1.patch</a> using the instructions at
+    <a href="../../lfs/view/development/chapter08/xz.html">xz (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/xz.html">xz (systemd)</a>.</p>
+
     <a id="sa-11.1-030"/>
     <h4>11.1 030 Ruby         Date: 2022-04-15 Severity: Moderate</h4>
     <p>In ruby-3.1.2, two security vulnerabilities were fixed that could allow
