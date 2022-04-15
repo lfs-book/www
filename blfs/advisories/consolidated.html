@@ -80,6 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-027"/>
+    <h4>11.1 017 Linux Kernel (LFS)  Date: 2022-04-04  Severity: Moderate</h4>
+    <p>In Linux-5.17.3 (and 5.16.20, 5.15.34 and other stable relases on 2022-04-13)
+    fixes were made for vulnerabilities in the Linux Kernel's ax25 networking
+    subsystem. These vulnerabilities can cause remotely exploitable kernel panics
+    and are all rated as Moderate by upstream.
+    The vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1199">CVE-2022-1199 (not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1204">CVE-2022-1204 (not yet public)</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1205">CVE-2022-1205 (not yet public)</a>,
+    with preliminary details at
+    <a href="https://access.redhat.com/security/cve/cve-2022-1199">RedHat CVE-2022-1199</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-1204">RedHat CVE-2022-1204</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2022-1205">RedHat CVE-2022-1205</a>.</p>
+    <p>To fix these, update to at least linux-5.17.3 (or linux-5.15.34 if you intend to stay
+    on a long-term supported kernel) using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
     <a id="sa-11.1-026"/>
     <h4>11.1 026 libarchive   Date: 2022-04-12 Severity: High</h4>
     <p>In libarchive-3.6.1, several security vulnerabilities were fixed that
@@ -264,12 +283,12 @@
 
     <a id="sa-11.1-017"/>
     <h4>11.1 017 Linux Kernel (LFS)  Date: 2022-04-04  Severity: High</h4>
-    <p>In Linux-5.17.1 (and 5.16.18, 5.15.32 and other stable relases on 2022-03-28)
-    fixes were made for for two vulnerabilities in the kernel's nf_tables code, one
+    <p>In Linux-5.17.1 (and 5.16.18, 5.15.32 and other stable relases on 2022-03-28),
+    fixes were made for two vulnerabilities in the kernel's nf_tables code, one
     rated as high.
     The vulnerabilities has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1015">CVE-2022-1015 (not yet public)</a> and
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1016">CVE-2022-1016 (not yet public</a>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1016">CVE-2022-1016 (not yet public)</a>
     with preliminary details at
     <a href="https://access.redhat.com/security/cve/cve-2022-1015">RedHat CVE-2022-1015</a>
     and
