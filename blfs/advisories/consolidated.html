@@ -80,6 +80,25 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-030"/>
+    <h4>11.1 030 Ruby         Date: 2022-04-15 Severity: Moderate</h4>
+    <p>In ruby-3.1.2, two security vulnerabilities were fixed that could allow
+    for application crashes and invalid memory reads. These vulnerabilities can
+    be triggered when using Regular Expressions (regex), and when converting a
+    string to a float object. In the case of the regex vulnerability, it gets
+    exploited when using a crafted source string, and causes memory free to be
+    freed twice. In the case of the string-to-float conversion vulnerability,
+    some conversion methods such as Kernel#Float and String#to_f cause a
+    buffer over-read in some circumstances, leading to process termination
+    and potentially invalid memory reads.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-28738">CVE-2022-28738</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28739">CVE-2022-28739 (not yet public)</a>.</p>
+    <p>To fix these vulnerabilities, update to ruby-3.1.2 or later using the
+    instructions from
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
     <a id="sa-11.1-029"/>
     <h4>11.1 029 Git          Date: 2022-04-15 Severity: Moderate</h4>
     <p>In git-2.35.3, a security vulnerability was fixed that can allow for
