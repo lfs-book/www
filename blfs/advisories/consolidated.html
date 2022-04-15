@@ -80,6 +80,27 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-029"/>
+    <h4>11.1 029 Git          Date: 2022-04-15 Severity: Moderate</h4>
+    <p>In git-2.35.3, a security vulnerability was fixed that can allow for
+    local users to run commands from other repositories on the same system.
+    The Git developers mention that all supported platforms with multiple
+    users are affected in one way or another, and have released versions of
+    Git for all maintenance branches to fix this vulnerability. On multi-user
+    systems, Git users might find themselves unexpectedly in a Git worktree.
+    This occurs due to insufficient validation, and can allow users to run
+    commands defined by another user in another repository. A temporary
+    workaround would be to create the folder '.git' on all volumes/folders
+    where Git commands would be run, and then remove Read/Write/Execute
+    rights from all users other than root. Update to git-2.35.3 if you're
+    operating a system where multiple users may use Git.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-24765">CVE-2022-24765</a>.</p>
+    <p>To fix this vulnerability, update to git-2.35.3 or later using the
+    instructions from
+    <a href="../view/svn/general/git.html">Git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">Git (systemd)</a>.</p>
+
     <a id="sa-11.1-028"/>
     <h4>11.1 028 gzip (LFS)   Date: 2022-04-15 Severity: Critical</h4>
     <p>In gzip-1.12, a security vulnerability was fixed that can allow for
