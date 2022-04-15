@@ -80,8 +80,28 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-028"/>
+    <h4>11.1 028 gzip (LFS)   Date: 2022-04-15 Severity: Critical</h4>
+    <p>In gzip-1.12, a security vulnerability was fixed that can allow for
+    arbitrary file overwrite and command execution when using 'zgrep' on a
+    crafted archive. Upstream says that it's relatively hard to exploit, but
+    the BLFS team has independently confirmed that exploiting this vulnerability
+    is trivial. This vulnerability is only exploitable when GNU Sed is in use,
+    and it occurs due to insufficient validation when processing filenames
+    with two or more newlines where selected content and the target file names
+    are embedded in crafted multi-line file names. This would allow a remote
+    attacker to execute commands on a system, or overwrite files, when a user
+    runs 'zgrep' on the file. Please update your gzip package as soon as
+    possible.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-1271">CVE-2022-1271</a>.</p>
+    <p>To fix this vulnerability, update to gzip-1.12 or later using the
+    instructions from
+    <a href="../../lfs/view/development/chapter08/gzip.html">gzip (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/gzip.html">gzip (systemd)</a>.</p>
+
     <a id="sa-11.1-027"/>
-    <h4>11.1 017 Linux Kernel (LFS)  Date: 2022-04-04  Severity: Moderate</h4>
+    <h4>11.1 027 Linux Kernel (LFS)  Date: 2022-04-15  Severity: Moderate</h4>
     <p>In Linux-5.17.3 (and 5.16.20, 5.15.34 and other stable relases on 2022-04-13)
     fixes were made for vulnerabilities in the Linux Kernel's ax25 networking
     subsystem. These vulnerabilities can cause remotely exploitable kernel panics
