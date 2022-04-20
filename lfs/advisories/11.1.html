@@ -163,7 +163,9 @@
     (i.e. compressing) if the input has many distant matches, has been
     found in Zlib. To fix this update to zlib-1.2.12 or later.
     Note that the update will cause 9 test failures in perl testsuite
-    and these failures should be ignored.
+    and these failures should be ignored.  And, if you are going to strip
+    the debug symbols for your LFS system, you need to adjust the filename
+    of zlib library in the stripping instruction.</p>
     <a href="../../blfs/advisories/consolidated.html#sa-11.1-018">11.1-018</a></p>
 
 <!--#include virtual="/common/footer.html" -->
