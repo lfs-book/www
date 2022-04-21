@@ -80,6 +80,32 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-033"/>
+    <h4>11.1 033 libinput  Date: 2022-04-21 Severity: High</h4>
+    <p>In libinput-1.20.1, a security vulnerability was fixed that could allow
+    for arbitrary code execution due to a bug in the log handlers. When a device
+    is detected by libinput and initialized, libinput will log several messages
+    with log handlers setup by the calling functions. These log handlers will
+    eventually result in a printf() call. Logging happens with the privileges
+    of the caller - in some cases, that may be root, in other cases it'll occur
+    with whatever the privileges of the current user are. The device name ends
+    up being part of the format string, and a kernel device with
+    printf-style format string placeholders can enable an attacker to run
+    malicious code. An exploit is therefore possible through any device where
+    the attacker can control the device name. A couple examples are /dev/uinput
+    and Bluetooth devices. Upstream has noted that all versions of libinput since
+    1.10 (released in February of 2018) are affected, and this affects any
+    system that uses either X.org or Wayland, as well as the
+    xf86-input-libinput X.org input driver.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1215">CVE-2022-1215 (not public yet)</a>,
+    however more details can be found at
+    <a href="https://www.openwall.com/lists/oss-security/2022/04/20/2">libinput security advisory</a>.</p>
+    <p>To fix this vulnerability, update to libinput-1.20.1 or later using
+    the instructions for
+    <a href="../view/svn/x/x7driver.html#libinput">libinput (sysv)</a> or
+    <a href="../view/systemd/x/x7driver.html#libinput">libinput (systemd)</a>.</p>
+
     <a id="sa-11.1-032"/>
     <h4>11.1 032 Mutt  Updated: 2022-04-15 Severity: Medium</h4>
     <p>In mutt before mutt-2.2.3 a buffer overflow in uudecoder allows reading
