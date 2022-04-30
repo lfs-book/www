@@ -80,6 +80,23 @@
     <!--<p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>-->
 
+    <a id="sa-11.1-035"/>
+    <h4>11.1 035 Pidgin  Date: 2022-04-30  Severity: Low</h4>
+    <p>The XMPP protocol is a set of open technologies for instant messaging.
+    It relies heavily on DNS for both servers and client. One part of the
+    protocol defines "_xmppconnect TXT record", which are now known to be
+    vulnerable to Man-in-the-Middle attacks if not using DNSSEC. So
+    The Pidgin developers have decided to remove the associated code in version
+    2.4.19. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-26491">CVE-2022-26491</a>
+    (not public yet). More details may be found at
+    <a href="https://www.pidgin.im/about/security/advisories/cve-2022-26491/">the pidgin site</a>.</p>
+
+    <p>To fix this, update to pidgin-2.4.19 or later using the
+    instructions from the development book for
+    <a href="../view/svn/xsoft/pidgin.html">Pidgin (sysv)</a> or
+    <a href="../view/systemd/xsoft/pidgin.html">Pidgin (systemd)</a>.</p>
+
     <a id="sa-11.1-034"/>
     <h4>11.1 034 Java binaries/OpenJDK  Date: 2022-04-26 Severity: High</h4>
     <p>In openjdk-18.0.1, openjdk-17.0.3 (LTS), and openjdk-11.0.15 (LTS),
