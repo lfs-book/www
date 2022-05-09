@@ -35,6 +35,7 @@
       <h3><a href="#generrors">General compilation errors</a></h3>
       <ul>
         <li><a href="#optimizations">When using optimization flags (setting CFLAGS)</a></li>
+	<li><a href="#configure-errors">configure output shows errors, isn't "gcc -V" wrong?</a></li>
         <li><a href="#config-ice">Why does GCC reports "Internal Compiler Error" for a "hello world" program?</a></li>
         <li><a href="#dirty-sources">I didn't delete the source tree after my last attempt. Do I need to?</a></li>
         <li><a href="#perm-denied">I'm getting `/dev/null: Permission denied'</a></li>
@@ -360,6 +361,15 @@
           may mysteriously stop working. Even some small innocent hardware
           change can make the difference.</p>
           <p>(If you don't know what optimization flags are, don't worry, you really don't need to.)</p>
+        </dd>
+	<dt id="configure-errors">configure output shows errors, isn't "gcc -V" wrong?</dt>
+        <dd>
+	  <p>To determine what is present on the system, the configure scripts
+	  try various commands with various command line options. They then
+	  take actions depending on the exit code of the commands. Some
+	  of those commands may write error messages, and this is what you
+	  see, for example with "gcc -V". But the configure script itself
+	  has not failed.</p>
         </dd>
         <dt id="config-ice">Why does GCC reports "Internal Compiler Error" for a "hello world" program?</dt>
         <dd>
