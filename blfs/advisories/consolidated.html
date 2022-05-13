@@ -83,6 +83,29 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-039"/>
+    <h4>11.1 039 cURL  Date: 2022-05-13  Severity: Medium</h4>
+    <p>In cURL-7.83.1, six vulnerabilities have been fixed.  These
+    vulnerabilites may cause cURL to wrongly remove files, mishandle HTTP
+    cookie domains or percent-encoded elements in URLs, ignore
+    security-related option changes reusing connections, or bypass HSTS
+    rules.  And, if cURL is built with NSS (BLFS has not mentioned such a
+    configuration), one of the vulnerabilities can cause it to stuck into
+    a dead loop.</p>
+
+    <p>These vulnerabilities have been assigned
+    CVE-2022-<a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27778">27778</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27779">27779</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27780">27780</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27781">27781</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27782">27782</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30115">30115</a>
+    (not disclosed yet).  For details refer to
+    <a href="https://curl.se/docs/vuln-7.83.0.html">cURL vulnerability list</a>.</p>
+    <p>To fix them, update to at least cURL-7.83.1 for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-11.1-038"/>
     <h4>11.1 038 Intel Microcode  Date: 2022-05-10  Severity: Medium</h4>
     <p>Intel microcode for Skylake and later processors has been updated to
