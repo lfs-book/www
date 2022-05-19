@@ -83,6 +83,24 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-042"/>
+    <h4>11.1 042 BIND9     Date: 2022-05-19 Severity: Medium</h4>
+
+    <p>In BIND-9.18.3, On vulnerable configurations, the named daemon may, in
+    some circumstances, terminate with an assertion failure. Vulnerable
+    configurations are those that include a reference to http within the
+    listen-on statements in their named.conf. TLS is used by both DNS over TLS
+    (DoT) and DNS over HTTPS (DoH), but configurations using DoT alone are
+    unaffected.
+    This vulnerabilities has been assigned
+    <a href="https://kb.isc.org/docs/cve-2022-1183">CVE-2022-1183</a>.
+    </p>
+
+    <p>To fix this vulnerability, update to BIND-9.18.3 or later using the
+    instructions for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-11.1-041"/>
     <h4>11.1 041 Thunderbird  Date: 2022-05-13 Severity: High</h4>
     <p>In Thunderbird-91.9.0, several security vulnerabilities were fixed.
