@@ -83,6 +83,23 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-048"/>
+    <h4>11.1 048 PostgreSQL   Date: 2022-05-26  Severity: High</h4>
+    <p>In PostgreSQL-14.3, a security vulnerability was fixed that could allow
+    for a user to create objects within a database that could execute arbitrary
+    SQL code with superuser permissions the next time that autovacuum processed
+    the object, as well as when a superuser ran commands against it. This affects
+    the Autovacuum, CLUSTER, CREATE INDEX, REINDEX, REFRESH MATERIALIZED VIEW, and
+    pg_amcheck commands, due to them activating the "security restricted operation"
+    protection mechanism too late, or not at all in some code paths. If you use
+    PostgreSQL for anything in a server capacity, updating PostgreSQL is recommended.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-1552">CVE-2022-1552</a>.</p>
+    <p>To fix this vulnerability, update to PostgreSQL-14.3 or later using the
+    instructions for
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-11.1-047"/>
     <h4>11.1 047 OpenJPEG     Date: 2022-05-26  Severity: Medium</h4>
     <p>In OpenJPEG-2.5.0, a security vulnerability was fixed that could allow
@@ -95,7 +112,7 @@
     folder with millions of JPEG files in it, updating OpenJPEG is recommended.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29338">CVE-2021-29338</a>.</p>
-    <p>To fix this vulnerability, update to OpenJPEG-2.5.0 using the
+    <p>To fix this vulnerability, update to OpenJPEG-2.5.0 or later using the
     instructions for
     <a href="../view/svn/general/openjpeg2.html">OpenJPEG (sysv)</a> or
     <a href="../view/systemd/general/openjpeg2.html">OpenJPEG (systemd)</a>.</p>
