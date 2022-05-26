@@ -83,6 +83,22 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-046"/>
+    <h4>11.1 046 Epiphany     Date: 2022-05-26  Severity: High</h4>
+    <p>In Epiphany-42.2, a security vulnerability was fixed that could allow
+    for remote code execution due to a client buffer overflow when processing
+    some crafted HTML documents. The vulnerability exists in the
+    ephy_string_shorten function in the User Interface process, and it occurs
+    due to the number of bytes for a UTF-8 ellipsis character not being properly
+    considered. As a result of this, remote code execution can be achieved by
+    visiting web pages that have overly long titles.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29536">CVE-2022-29536</a>.</p>
+    <p>To fix this vulnerability, update to Epiphany-42.2 using the
+    instructions for
+    <a href="../view/svn/xsoft/epiphany.html">Epiphany (sysv)</a> or
+    <a href="../view/systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
+
     <a id="sa-11.1-045"/>
     <h4>11.1 045 libxml2      Date: 2022-05-26  Severity: Medium</h4>
     <p>In libxml2-2.9.14, a security vulnerability was fixed that can cause
