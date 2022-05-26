@@ -83,6 +83,23 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-047"/>
+    <h4>11.1 047 OpenJPEG     Date: 2022-05-26  Severity: Medium</h4>
+    <p>In OpenJPEG-2.5.0, a security vulnerability was fixed that could allow
+    for remote attackers to crash an application, causing a denial of service.
+    This occurs when an attacker uses a command line option called "-ImgDir"
+    on any of the OpenJPEG tools, when the directory contains 1048576 files.
+    This particular command line option combined with the amount of files
+    is relatively uncommon, but decompressing, compressing, and dumping
+    JPEG2000 files is a rather common operation. If you use OpenJPEG on a
+    folder with millions of JPEG files in it, updating OpenJPEG is recommended.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29338">CVE-2021-29338</a>.</p>
+    <p>To fix this vulnerability, update to OpenJPEG-2.5.0 using the
+    instructions for
+    <a href="../view/svn/general/openjpeg2.html">OpenJPEG (sysv)</a> or
+    <a href="../view/systemd/general/openjpeg2.html">OpenJPEG (systemd)</a>.</p>
+
     <a id="sa-11.1-046"/>
     <h4>11.1 046 Epiphany     Date: 2022-05-26  Severity: High</h4>
     <p>In Epiphany-42.2, a security vulnerability was fixed that could allow
