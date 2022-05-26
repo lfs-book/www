@@ -83,6 +83,21 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-045"/>
+    <h4>11.1 045 libxml2      Date: 2022-05-26  Severity: Medium</h4>
+    <p>In libxml2-2.9.14, a security vulnerability was fixed that can cause
+    out-of-bounds memory writes due to several buffer handling functions not
+    checking for integer overflows. Note that exploitation requires a victim to
+    open a crafted XML file that is multiple gigabytes in size, however other
+    software that uses libxml2's buffer functions, including libxslt, is
+    impacted as well.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29824">CVE-2022-29824</a>.</p>
+    <p>To fix this vulnerability, update to libxml2-2.9.14 using the
+    instructions for
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
     <a id="sa-11.1-044"/>
     <h4>11.1 044 Thunderbird  Date: 2022-05-22  Severity: Critical</h4>
     <p>In thunderbird 91.9.1 two critical javascript vulnerabilities were fixed,
