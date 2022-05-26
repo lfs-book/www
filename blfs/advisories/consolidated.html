@@ -83,6 +83,24 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-049"/>
+    <h4>11.1 049 cifs-utils   Date: 2022-05-26  Severity: High</h4>
+    <p>In cifs-utils-6.15, two security vulnerabilties were fixed that could
+    allow for local attackers to escalate privileges to root, or for information
+    disclosure (credentials) in some situations. The privilege escalation
+    vulnerability happens due to a stack-based buffer overflow, which occurs
+    when parsing the ip= command line argument to the mount.cifs command. The
+    information disclosure vulnerability occurs due to logging errors when
+    a file contains an 'equals sign' (=) that does not equal a valid credentials
+    file.
+    These vulnerabilties have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27239">CVE-2022-27239</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29869">CVE-2022-29869</a>.</p>
+    <p>To fix these vulnerabilties, update to cifs-utils-6.15 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/cifsutils.html">cifs-utils (sysv)</a> or
+    <a href="../view/systemd/basicnet/cifsutils.html">cifs-utils (systemd)</a>.</p>
+
     <a id="sa-11.1-048"/>
     <h4>11.1 048 PostgreSQL   Date: 2022-05-26  Severity: High</h4>
     <p>In PostgreSQL-14.3, a security vulnerability was fixed that could allow
