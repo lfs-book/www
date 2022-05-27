@@ -83,6 +83,21 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-052"/>
+    <h4>11.1 052 Logrotate    Date: 2022-05-27  Severity: High</h4>
+    <p>A vulnerability was found in logrotate in how the state file is
+    created. The state file is used to prevent parallel executions of
+    multiple instances of logrotate by acquiring and releasing a file
+    lock. When the state file does not exist, it is created with
+    world-readable permission, allowing an unprivileged user to lock the
+    state file, stopping any rotation.
+    This vulnerabilty has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1348">CVE-2022-1348</a>.</p>
+    <p>To fix this vulnerabilty, update to logrotate-3.20.1 or later with
+    the instructions for
+    <a href="../view/svn/general/logrotate.html">logrotate (sysv)</a> or
+    <a href="../view/systemd/general/logrotate.html">logrotate (systemd)</a>.</p>
+
     <a id="sa-11.1-051"/>
     <h4>11.1 051 Seamonkey    Date: 2022-05-26  Severity: Critical</h4>
     <p>A security vulnerability was identified in Seamonkey-2.53.12 that could
