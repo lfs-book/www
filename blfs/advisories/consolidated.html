@@ -83,6 +83,30 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-053"/>
+    <h4>11.1 053 VIM (LFS and BLFS) Date: 2022-05-29 Severity: Medium</h4>
+    <p>In vim-8.2.5014, 12 vulnerabilities causing vim crashing because
+    of buffer overflow, use after free, uncontrolled recursion, and NULL
+    pointer dereference have been found and fixed.  The analysis of some
+    vulnerabilities among them suggests that these might be exploited for
+    remote execution.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1616">CVE-2022-1616</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1620">CVE-2022-1620</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1621">CVE-2022-1621</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1629">CVE-2022-1629</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1674">CVE-2022-1674</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1674">CVE-2022-1733</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1735">CVE-2022-1735</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1769">CVE-2022-1769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1771">CVE-2022-1771</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1785">CVE-2022-1785</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1796">CVE-2022-1796</a>.
+    <p>To fix these vulnerabilities, update to vim-8.2.5014 or later using
+    the instructions for
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
     <a id="sa-11.1-052"/>
     <h4>11.1 052 Logrotate    Date: 2022-05-27  Severity: High</h4>
     <p>A vulnerability was found in logrotate in how the state file is
