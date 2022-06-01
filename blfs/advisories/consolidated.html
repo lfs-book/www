@@ -83,13 +83,34 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-056"/>
+    <h4>11.1 056 Thunderbird  Date: 2022-06-01  Severity: High</h4>
+    <p>In thunderbird 91.10.0 several vulnerabilites were fixed, of which six
+    were rated high and one medium. Documented in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-22/">mfsa-2022-22</a>.
+    The CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1834">CVE-2022-1834 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31736">CVE-2022-31736 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31737">CVE-2022-31737 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31738">CVE-2022-31738 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31741">CVE-2022-31741 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31742">CVE-2022-31742 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31747">CVE-2022-31747 (Not yet public)</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.10.0 or later
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-11.1-055"/>
-    <h4>11.1 055 NSS  Date: 2022-15-31  Severity: High</h4>
+    <h4>11.1 055 NSS  Updated: 2022-06-01  Severity: High</h4>
     <p>In NSS-3.68.4, 3.78.1 and 3.79 two bugs with restricted access were fixed.
     It is assumed these are vulnerability fixes, and in the absence of further
     details they are rated as high. The bugs are
     <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1767590">bmo1767590</a> and
     <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1766978">bmo1766978</a></p>
+    <p>The first of these has now been identified as CVE-2022-31741 in the list of
+    fixes for thunderbird-91.10.0,
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-22/">mfsa-2022-22</a>.</p>
     <p>To fix this, update to at least NSS-3.79
     using the instructions for
     <a href="../view/svn/postlfs/nss.html">NSS (sysv)</a> or
