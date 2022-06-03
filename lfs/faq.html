@@ -58,6 +58,7 @@
         <li><a href="#respawning-too-fast">init: Id &quot;1&quot; respawning too fast: disabled for 5 minutes</a></li>
         <li><a href="#eth0-unknown-interface">eth0:unknown interface</a></li>
         <li><a href="#irq-nobody-cared">IRQ 9: nobody cared (try booting with the "irqpoll" option)</a></li>
+        <li><a href="#lfs-very-slow">LFS system is much slower than the host distro (or another distro)</a></li>
       </ul>
       <div class="newsItem"></div>
 
@@ -629,6 +630,40 @@
           <a href="https://bugzilla.kernel.org">Kernel bug tracker</a>,
           no matter if it's a BIOS bug.  The kernel developers want to make
           Linux runable even if the BIOS has this kind of bug.</p>
+        </dd>
+        <dt id="lfs-very-slow">LFS system is much slower than the host distro (or another distro)</dt>
+        <dd>
+          <p>If the LFS system is slower than another distro but not much
+          slower, it's normal. We focus on building a Linux system from
+          source code and we do nothing to tweak the system for marginal
+          performance improvements.  The other distros may enable additional
+          compiler optimizations, tune kernel options (via sysctl), or use
+          other approaches to squeeze more performance out.  And, LFS uses
+          a latest GCC release which is likely slower than an old GCC
+          release.  A new GCC release often attempts to optimize the target
+          code more heavily (these optimizations will slow down the
+          compiliation, but hopefully make the compiled program faster).  So
+          LFS will take more time building a large package (like Linux
+          kernel).</p>
+          <p>But, if the LFS system is <b>very</b> slow (for example, takes
+          5 hours to build a kernel while the host distro needs only one
+          hour to build the same kernel with exactly same configuration),
+          it likely indicates a CPU dynamic frequency scaling issue.  You
+          can monitor the value of "cpu MHz" in <code>/proc/cpuinfo</code>
+          to see if your CPU is running at a reasonable frequency while a
+          workload (like, building the kernel) is running on the CPU.</p>
+          <p>If your CPU is running at a much lower frequency than expected
+          (an Intel Core i3 building the kernel but running at only 800 MHz
+          is definitely too slow), try to adjust the setting of "Default
+          CPUFreq governor" in the kernel configuration and rebuild the
+          kernel.  The ideal setting should limit the CPU at a low frequency
+          when the system is idle, but boost it to the maximum performance
+          while a workload is running.</p>
+          <p>Note that a governor may behave differently on different CPUs. 
+          For example, the "powersave" governor may work fine for one CPU
+          model, but lock another CPU at 800 MHz no matter if there is a
+          workload running.  If you can't (or don't want to spend too much
+          time to) find an ideal setting, use the "performance" governor.</p>
         </dd>
       </dl>
 
