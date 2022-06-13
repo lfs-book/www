@@ -83,6 +83,26 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-059"/>
+    <h4>11.1 059 WebKitGTK+   Date: 2022-06-13  Severity: High</h4>
+    <p>In WebKitGTK+-2.36.3, five security vulnerabilities were fixed that may
+    allow for remote code execution when processing maliciously crafted web
+    content, such as videos, audio files, advertisements, and web pages. These
+    vulnerabilties occur due to improper input validation when processing files,
+    and were classified as memory corruption and use-after-free issues, being
+    fixed by improved state and memory management. Updating to WebKitGTK+-2.36.3
+    immediately is recommended if you are using it in a web browser capacity.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-26700">CVE-2022-26700</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26709">CVE-2022-26709</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26717">CVE-2022-26717</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26716">CVE-2022-26716</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26719">CVE-2022-26719</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.36.3 or later using
+    the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="sa-11.1-058"/>
     <h4>11.1 058 libtiff      Date: 2022-06-13  Severity: Medium</h4>
     <p>In libtiff-4.4.0, two security vulnerabilities were fixed that could
