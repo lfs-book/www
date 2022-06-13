@@ -83,6 +83,32 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-061"/>
+    <h4>11.1 061 Apache HTTPD Date: 2022-06-13  Severity: High</h4>
+    <p>In httpd-2.4.54, several security vulnerabilities were fixed that could
+    allow for information disclosure (in applications using mod_lua),
+    authentication bypass (for applications using mod_proxy), denial of service
+    (when using mod_lua or mod_sed), and information disclosure when httpd
+    compares strings (using ap_strcmp_match() or ap_rwrite()). A vulnerability
+    also exists in mod_proxy_ajp that would allow for HTTP Request Smuggling.
+    In a standard configuration, only the information disclosure vulnerabilities
+    for strings are relevant, but some users may have applications which use
+    mod_proxy, mod_lua, or mod_sed, and may be impacted as well. Updating to
+    httpd-2.4.54 is recommended.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31813">CVE-2022-31813</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30556">CVE-2022-30556</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30522">CVE-2022-30522</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29404">CVE-2022-29404</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28615">CVE-2022-28615</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28614">CVE-2022-28614</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28330">CVE-2022-28330</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-26377">CVE-2022-26377</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.54 or later using the
+    instructions for
+    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+
     <a id="sa-11.1-060"/>
     <h4>11.1 060 ntfs-3g      Date: 2022-06-13  Severity: Critical</h4>
     <p>In ntfs-3g-2022.5.17, several security vulnerabilities were fixed that
