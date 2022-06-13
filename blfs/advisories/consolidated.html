@@ -83,6 +83,23 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-057"/>
+    <h4>11.1 057 CUPS         Date: 2022-06-13  Severity: Medium</h4>
+    <p>In CUPS-2.4.2, a security vulnerability was fixed that could allow for
+    a local privilege escalation to root (or the 'lp' user on LFS systems) due
+    to a logic error that occurs when processing internal certificates. Upstream
+    has noted that the vulnerability is trivial to exploit and can occur in the
+    CUPS web interface, which is often used for configuring and installing
+    printers.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-26691">CVE-2022-26691</a>,
+    and more details are available at
+    <a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2022/MNDT-2022-0026/MNDT-2022-0026.md">Mandiant Disclosure</a>.</p>
+    <p>To fix this vulnerability, update to CUPS-2.4.2 or later using the
+    instructions for
+    <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+
     <a id="sa-11.1-056"/>
     <h4>11.1 056 Thunderbird  Date: 2022-06-01  Severity: High</h4>
     <p>In thunderbird 91.10.0 several vulnerabilites were fixed, of which six
