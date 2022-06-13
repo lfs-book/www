@@ -83,6 +83,29 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-060"/>
+    <h4>11.1 060 ntfs-3g      Date: 2022-06-13  Severity: Critical</h4>
+    <p>In ntfs-3g-2022.5.17, several security vulnerabilities were fixed that
+    could allow for kernel-level code execution. These vulnerabilities all occur
+    due to incorrect validation of several kinds of NTFS metadata, which will
+    cause buffer overflows when a drive (or disk image) is mounted, leading to
+    kernel level code execution. Proof-of-concept exploits for all of these
+    vulnerabilities are floating around in the wild, and updating to the latest
+    version is recommended immediately if you have this package installed.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46790">CVE-2021-46790</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30784">CVE-2022-30784</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30786">CVE-2022-30786</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30788">CVE-2022-30788</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30789">CVE-2022-30789</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30783">CVE-2022-30783</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30785">CVE-2022-30785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30787">CVE-2022-30787</a>.</p>
+    <p>To fix these vulnerabilities, update to NTFS-3g-2022.5.17 or later using
+    the instructions for
+    <a href="../view/svn/postlfs/ntfs-3g.html">ntfs-3g (sysv)</a> or
+    <a href="../view/systemd/postlfs/ntfs-3g.html">ntfs-3g (systemd)</a>.</p>
+
     <a id="sa-11.1-059"/>
     <h4>11.1 059 WebKitGTK+   Date: 2022-06-13  Severity: High</h4>
     <p>In WebKitGTK+-2.36.3, five security vulnerabilities were fixed that may
