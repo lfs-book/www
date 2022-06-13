@@ -83,6 +83,25 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-062"/>
+    <h4>11.1 062 PHP          Date: 2022-06-13  Severity: Medium</h4>
+    <!-- Might need to be promoted when more details are available at NVD. -->
+    <p>In PHP-8.1.7, two security vulnerabilities were fixed that could allow
+    for remote code execution and denial of service when the mysqlnd and pgsql
+    modules are in use. In the case of mysqlnd, the vulnerability happens while
+    accepting passwords from a user, and results in a buffer overflow. In the
+    case of pgsql, there is an uninitialized array vulnerability that results
+    in remote code execution. If you have an application which accepts passwords
+    from users (and is written in PHP and uses mysqlnd), or which uses pgsql,
+    update to php-8.1.7 immediately as there are exploits known in the wild.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31625">CVE-2022-31625 (not yet public)</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31626">CVE_2022-31626 (not yet public)</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.1.7 using the
+    instructions for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
     <a id="sa-11.1-061"/>
     <h4>11.1 061 Apache HTTPD Date: 2022-06-13  Severity: High</h4>
     <p>In httpd-2.4.54, several security vulnerabilities were fixed that could
