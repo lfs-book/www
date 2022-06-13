@@ -83,6 +83,20 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-063"/>
+    <h4>11.1 063 Exo          Date: 2022-06-13  Severity: Critical</h4>
+    <p>In Exo-4.16.4, a security vulnerability was fixed that could allow for
+    Exo to silently execute malicious .desktop files which come from outside
+    sources, such as from the web. The vulnerability exists due to a logic error
+    which allows for untrusted .desktop files to be executed, and has been
+    resolved by only executing local .desktop files instead.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32278">CVE-2022-32278</a>.</p>
+    <p>To fix this vulnerability, update to Exo-4.16.4 or later using the
+    instructions for
+    <a href="../view/svn/xfce/exo.html">Exo (sysv)</a> or
+    <a href="../view/systemd/xfce/exo.html">Exo (systemd)</a>.</p>
+
     <a id="sa-11.1-062"/>
     <h4>11.1 062 PHP          Date: 2022-06-13  Severity: Medium</h4>
     <!-- Might need to be promoted when more details are available at NVD. -->
