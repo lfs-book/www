@@ -82,9 +82,22 @@
 
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
+    <a id="sa-11.1-065"/>
+    <h4>11.1 065 Qt5    Date: 2022-06-22  Severity: High</h4>
+    <p>In Qt5 5.15.6 (commercial), a security vulnerability has been fixed
+    which could allow an out-of-bound write in the qtbase code. The fix has
+    been ported to the repository maintained by kde, and is available in
+    the patch provided for Qt-5.15.5 in BLFS. It is recommended that you
+    update to version 5.15.5 as soon as possible. This vulnerability has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38593">CVE-2022-38593</a>.</p>
+    <p>To fix this vulnerability, update to Qt-5.15.5 using the instructions for
+    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> or
+    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a>.</p>
+
     <a id="sa-11.1-064"/>
     <h4>11.1 064 gstreamer    Date: 2022-06-18  Severity: High</h4>
-    <p>In gstreamer (and plugins) 1.20.3, seven security vulnerabilties were
+    <p>In gstreamer (and plugins) 1.20.3, seven security vulnerabilities were
     fixed which dould allow for heap overwrites, leading to arbitrary code
     execution or denial of service (application crashes). These vulnerabilities
     occur when processing AVI files, MKV files (which are using zlib, bz2, or
@@ -93,7 +106,7 @@
     gstreamer and it's plugins for playing files from the internet, it is
     recommended that you update to version 1.20.3 of the stack as soon as
     possible.
-    These vulnerabilties have been assigned
+    These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1921">CVE-2022-1921</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1922">CVE-2022-1922</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1923">CVE-2022-1923</a>,
