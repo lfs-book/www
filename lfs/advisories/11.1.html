@@ -117,6 +117,19 @@
     <!-- end of Linux Kernel -->
 
     <h3>OpensSSL</h3>
+
+    <a id="sa-11.1-066"/>
+    <h4>11.1 066 (LFS) OpenSSL  Date: 2022-06-22  Severity: Medium</h4>
+    <p>A bug in the c_rehash script handling shell metacharacters was
+    fixed in versions 3.0.4 and 1.1.1p.  This vulnerability may be exploited
+    to execute arbitrary commands.  Use of the c_rehash script is
+    considered obsolete and should be replaced by
+    <code>openssl rehash</code> command.  Update to at least OpenSSL-1.1.1p
+    if using the 1.1.1 series.  For 3.0 releases, it's not recommended to
+    update to OpenSSL-3.0.4 because 3.0.4 is broken on some CPU models.
+    Avoid using the obsoleted c_rehash script as a workaround.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.1-066">11.1-066</a></p>
+
     <a id="sa-11.1-012"/>
     <h4>11.1 012 (LFS) OpenSSL  Date: 2022-03-18  Severity: High</h4>
     <p>A bug which can cause OpenSSL to loop forever when parsing a crafted
