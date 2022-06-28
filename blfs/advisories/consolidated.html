@@ -82,6 +82,27 @@
 
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
+    <a id="sa-11.1-068"/>
+    <h4>11.1 068 Firefox  Date: 2022-06-28  Severity: High</h4>
+    <p>In firefox 91.11.0 and 102.0 several vulnerabilities were fixed, of which four
+    were rated high, and at least one of the others (see SA 11.1 067 below) sounds as
+    if it is high. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-25/">mfsa-2022-25 (91.11.0)</a>
+    and
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-24/">mfsa-2022-24 (102.0)</a>.
+    The high or assumed high CVEs common to 91esr and 102|esr are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2200">CVE-2022-2200 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34468">CVE-2022-34468 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34470">CVE-2022-34470 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34479">CVE-2022-34479 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34484">CVE-2022-34484 (Not yet public)</a>.</p>
+    <p>To fix these update to firefox-102.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <p>Alternatively, update to firefox-91.11.0 as a short-term fix which does not
+    require updated dependencies. Please note that firefox 91esr will have two more
+    releases and then become unsupported.</p>
+
     <a id="sa-11.1-067"/>
     <h4>11.1 067 JS91  Date: 2022-06-28  Severity: High</h4>
     <p>In the javascript code of firefox-91.11.0 and 102.0 there is a fix for
