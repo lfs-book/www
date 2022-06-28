@@ -82,6 +82,19 @@
 
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
+    <a id="sa-11.1-067"/>
+    <h4>11.1 067 JS91  Date: 2022-06-28  Severity: High</h4>
+    <p>In the javascript code of firefox-91.11.0 and 102.0 there is a fix for
+    attackers setting undesired attributes on a Javascript object, leading to
+    privileged code execution - CVE-2022-2200. Note that mozilla describe this
+    as 'moderate'. Details are not yet public, see the advisory for firefox-91.11.0
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-25/">mfsa-2022-25</a>.
+    Further details are expected at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2200">CVE-2022-2200 (Not yet public)</a>.</p>
+    <p>To fix this, update to JS-91.11.0 or later using the instructions for
+    <a href="../view/svn/general/js91.html">JS91 (sysv)</a> or
+    <a href="../view/systemd/general/js91.html">JS91 (systemd)</a>.</p>
+
     <a id="sa-11.1-066"/>
     <h4>11.1 066 (LFS) OpenSSL    Date: 2022-06-22  Severity: Medium</h4>
     <p>In OpenSSL 3.0.3, 1.1.1o, and earlier 3.0 or 1.1.1 releases, an
