@@ -82,6 +82,26 @@
 
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
+    <a id="sa-11.1-069"/>
+    <h4>11.1 069 Thunderbird  Date: 2022-06-29  Severity: High</h4>
+    <p>In thunderbird 91.11.0 and 102.0 several vulnerabilities were fixed, of which four
+    were rated high, and at least one of the others (see SA 11.1 067 below) sounds as
+    if it is high. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-26/">mfsa-2022-26</a>.
+    The high or assumed high CVEs common are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2200">CVE-2022-2200 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34468">CVE-2022-34468 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34470">CVE-2022-34470 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34479">CVE-2022-34479 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34484">CVE-2022-34484 (Not yet public)</a>.</p>
+    <p>To fix these update to thunderbird-102.0 or later using the instructions for:
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <p>Alternatively, update to thunderbird-91.11.0 as a short-term fix which does not
+    require updated dependencies. Please note that any future versions of the
+    thunderbird 91 series will not be specifically monitored, you should plan to
+    update to the 102 series.</p>
+
     <a id="sa-11.1-068"/>
     <h4>11.1 068 Firefox  Date: 2022-06-28  Severity: High</h4>
     <p>In firefox 91.11.0 and 102.0 several vulnerabilities were fixed, of which four
