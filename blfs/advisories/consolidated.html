@@ -153,12 +153,14 @@
     <p>To fix this vulnerability, if you are using OpenSSL 1.1.1 releases,
     update to OpenSSL-1.1.1p or later using the instructions for
     <a href="../../lfs/view/11.0/chapter08/openssl.html">OpenSSL (sysv)</a> or
-    <a href="../../lfs/view/11.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
-    <p>If you are using OpenSSL 3.0 releases, this vulnerability is
-    supposed to be fixed in 3.0.4 release.  But 3.0.4 is known to be
-    <a href="https://github.com/openssl/openssl/issues/18625">broken</a>
-    on some CPU models so we don't recommend to use it.  To work around
-    this vulnerability, avoid using the obsoleted c_rehash script.</p>
+    <a href="../../lfs/view/11.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.
+    <!-- TODO: bump to 3.0.5 once it's available: we will remove the
+         sed for CVE-2022-2274 once we update the book for 3.0.5 then
+         the instruction will not work for 3.0.4. -->
+    If you are using OpenSSL 3.0 releases, update to OpenSSL-3.0.4 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
 
     <a id="sa-11.1-065"/>
     <h4>11.1 065 Qt5    Date: 2022-06-22  Severity: High</h4>
