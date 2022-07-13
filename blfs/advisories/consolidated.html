@@ -82,6 +82,34 @@
 
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
+    <a id="sa-11.1-070"/>
+    <h4>11.1 070 cURL         Date: 2022-07-13  Severity: Medium</h4>
+    <p>In cURL-7.84.0, four security vulnerabilities were fixed that could
+    allow for denial of service, unpreserved file permissions, and faulty
+    message verification. The faulty message verification occurs when using the
+    FTP protocol with Kerberos support. This flaw makes it possible to inject
+    data into the data stream when downloading files due to improper
+    verification. Note that FTP support with Kerberos combined very rarely
+    used. The unpreserved file permissions vulnerability occurs due to
+    accidentally widening permissions on files which are downloaded from
+    cookies. Note that this can be worked around by using a strict umask.
+    One of the denial of service vulnerabilities occurs when using HTTP
+    compression due to a flaw in cURL's "chained" HTTP compression algorithm
+    support. The number of acceptable "links" in the chain was unbounded,
+    allowing for infinite amounts of memory to be used. The other
+    denial-of-service vulnerability occurs when the Set-Cookie option is used
+    in a HTTP header. A sufficient amount of cookies could cause cURL to deny
+    all further cookies from any other websites.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32208">CVE-2022-32208</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32207">CVE-2022-32207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32206">CVE-2022-32206</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32205">CVE-2022-32205</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.84.0 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-11.1-069"/>
     <h4>11.1 069 Thunderbird  Date: 2022-06-29  Severity: High</h4>
     <p>In thunderbird 91.11.0 and 102.0 several vulnerabilities were fixed, of which four
