@@ -83,6 +83,22 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-072"/>
+    <h4>11.1 072 Speex        Date: 2022-07-13  Severity: Medium</h4>
+    <p>In Speex-1.2.1, two security vulnerabilities were fixed that could
+    allow for stack buffer overflows and denial of service when using the
+    'speexenc' and 'speexdec' utilities to encode and decode WAV files.
+    Note that the primary attack vector is crafted WAV files, and a user
+    must download and run the files against the 'speexenc' and 'speexdec'
+    programs to exploit them.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-23903">CVE-2020-23903</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-23904">CVE-2020-23904</a>.</p>
+    <p>To fix these vulnerabilities, update to Speex-1.2.1 or later using
+    the instructions for
+    <a href="../view/svn/multimedia/speex.html">Speex (sysv)</a> or
+    <a href="../view/systemd/multimedia/speex.html">Speex (systemd)</a>.</p>
+
     <a id="sa-11.1-071"/>
     <h4>11.1 071 WebKitGTK+   Date: 2022-07-13  Severity: Medium</h4>
     <p>In WebKitGTK+-2.36.4, two security vulnerabilities were fixed that could
