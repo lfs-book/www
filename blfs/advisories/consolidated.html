@@ -83,6 +83,28 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-074"/>
+    <h4>11.1 074 Node.js      Date: 2022-07-13  Severity: High</h4>
+    <p>In node.js-16.16.0, several security vulnerabilities were fixed that
+    could allow for HTTP Request Smuggling and DNS rebinding. An additional
+    security vulnerability was fixed that could allow for a local attacker
+    to modify the OpenSSL configuration for other users due to a hardcoded
+    path check. The HTTP Request Smuggling vulnerabilities occur due to
+    a flawed parsing of the Transfer-Encoding field in an HTTP Header,
+    as well as due to a flaw where CRLF sequences are not properly delimited
+    in HTTP requests. The DNS rebinding vulnerability occurs due to
+    the IsIPAddress function not validating whether an IP address is valid.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32213">CVE-2022-32213</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32214">CVE-2022-32214</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32215">CVE-2022-32215</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32212">CVE-2022-32212</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32222">CVE-2022-32222</a>.</p>
+    <p>To fix these vulnerabilities, update to node.js-16.16.0 or later using
+    the instructions for
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
     <a id="sa-11.1-073"/>
     <h4>11.1 073 Git          Date: 2022-07-13  Severity: High</h4>
     <p>In git-2.37.1, a security vulnerability was fixed that could allow
