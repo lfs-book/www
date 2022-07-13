@@ -83,6 +83,24 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-073"/>
+    <h4>11.1 073 Git          Date: 2022-07-13  Severity: High</h4>
+    <p>In git-2.37.1, a security vulnerability was fixed that could allow
+    for privilege escalation and remote code execution due to Git not
+    properly checking the ownership of directories in a multi-user system
+    when running comamnds in the local repository configuration. This is
+    similar to CVE-2022-29187 and is due to an incomplete fix. An unsuspecting
+    user could still be affected by the issue, for example when navigating as
+    'root' into a shared temporary directory that is owned by them, but where
+    an attacker has created a git repository. A temporary workaround is to
+    avoid running git as 'root' or any administrator user.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29187">CVE-2022-29187</a>.</p>
+    <p>To fix this vulnerability, update to git-2.37.1 or later using the
+    instructions for
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
     <a id="sa-11.1-072"/>
     <h4>11.1 072 Speex        Date: 2022-07-13  Severity: Medium</h4>
     <p>In Speex-1.2.1, two security vulnerabilities were fixed that could
