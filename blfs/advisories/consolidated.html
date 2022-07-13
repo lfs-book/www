@@ -82,6 +82,24 @@
 
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
+
+    <a id="sa-11.1-071"/>
+    <h4>11.1 071 WebKitGTK+   Date: 2022-07-13  Severity: Medium</h4>
+    <p>In WebKitGTK+-2.36.4, two security vulnerabilities were fixed that could
+    allow for remote code execution and undesirable behavior. In the case of
+    the undesirable behavior, it was found that video calls that use WebRTC
+    could be interrupted if the audio capture was interrupted. In the case of
+    the remote code execution vulnerability, processing maliciously crated web
+    content can result in remote code execution - this was a use-after-free
+    issue which was addressed with improved memory management.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-22677">CVE-2022-22677</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2022-26710">CVE-2022-26710</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.36.4 or later
+    using the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="sa-11.1-070"/>
     <h4>11.1 070 cURL         Date: 2022-07-13  Severity: Medium</h4>
     <p>In cURL-7.84.0, four security vulnerabilities were fixed that could
