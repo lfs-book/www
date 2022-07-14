@@ -83,6 +83,20 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-078"/>
+    <h4>11.1 078 GnuPG        Date: 2022-07-13  Severity: Medium</h4>
+    <p>In GnuPG-2.3.7, a security vulnerability was fixed that could allow for
+    remote attackers to inject information into a signature that allows for
+    signature forgery, and for application crashes for any program that uses
+    GPGME. Note that this vulnerability can also cause repeatable crashes in
+    mail clients such as Mutt and Evolution.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34903">CVE-2022-34903</a>.</p>
+    <p>To fix this vulnerability, update to GnuPG-2.3.7 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+
     <a id="sa-11.1-077"/>
     <h4>11.1 077 Dovecot      Date: 2022-07-13  Severity: High</h4>
     <p>A security vulnerability was discovered in Dovecot-2.3.19.1 that could
