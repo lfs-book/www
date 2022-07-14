@@ -83,6 +83,23 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-080"/>
+    <h4>11.1 080 Xwayland  Date: 2022-07-13  Severity: High</h4>
+    <p>In Xwayland-22.1.3, two security vulnerabilities were fixed that
+    could allow for local attackers to elevate privileges. These vulnerabilities
+    occur due to improper input validation when processing keyboard inputs. Both
+    of these vulnerabilities are classified as out-of-bounds access
+    vulnerabilities, and they occur in the ProcXkbSetGeometry and
+    ProcXkbSetDeviceInfo functions. The vulnerabilities occur due to not
+    validating request lengths.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-2319">CVE-2022-2319</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-2320">CVE-2022-2320</a>.</p>
+    <p>To fix these vulnerabilities, update to Xwayland-22.1.3 or later
+    using the instructions for
+    <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
     <a id="sa-11.1-079"/>
     <h4>11.1 079 xorg-server  Date: 2022-07-13  Severity: High</h4>
     <p>In xorg-server-21.1.4, two security vulnerabilities were fixed that
