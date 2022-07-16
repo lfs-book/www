@@ -83,6 +83,33 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-081"/>
+    <h4>11.1 081 (LFS) OpenSSL    Date: 2022-07-16  Severity: Medium</h4>
+    <p>In OpenSSL 3.0.4, 1.1.1p, and earlier 3.0 or 1.1.1 releases,
+    AES OCB mode for 32-bit x86 platforms using the AES-NI assembly
+    optimised implementation will not encrypt the entirety of the data
+    under some circumstances.  This could reveal sixteen bytes of data
+    that was preexisting in the memory that wasn't written.  In the
+    special case of "in place" encryption, sixteen bytes of the plaintext
+    would be revealed. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2097">CVE-2022-2097</a>,
+    and more details are available at
+    <a href="https://www.openssl.org/news/secadv/20220705.txt">the OpenSSL
+    security advisory</a>.  (The OpenSSL security advisory also mentions
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2274">CVE-2022-2274</a>,
+    but we'd worked around it in the instructions provided by the LFS book.
+    So a LFS development system built "by the book" is not affected.)</p>
+    <p>If you are not running a 32-bit LFS installation, no action is
+    needed.  Otherwise to fix this vulnerability, if you are using OpenSSL
+    1.1.1 releases, update to OpenSSL-1.1.1q or later using the
+    instructions for
+    <a href="../../lfs/view/11.0/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/11.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.
+    If you are using OpenSSL 3.0 releases, update to OpenSSL-3.0.5 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
     <a id="sa-11.1-080"/>
     <h4>11.1 080 Xwayland  Date: 2022-07-13  Severity: High</h4>
     <p>In Xwayland-22.1.3, two security vulnerabilities were fixed that
@@ -370,13 +397,11 @@
     update to OpenSSL-1.1.1p or later using the instructions for
     <a href="../../lfs/view/11.0/chapter08/openssl.html">OpenSSL (sysv)</a> or
     <a href="../../lfs/view/11.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.
-    <!-- TODO: bump to 3.0.5 once it's available: we will remove the
-         sed for CVE-2022-2274 once we update the book for 3.0.5 then
-         the instruction will not work for 3.0.4. -->
-    If you are using OpenSSL 3.0 releases, update to OpenSSL-3.0.4 or later
+    If you are using OpenSSL 3.0 releases, update to OpenSSL-3.0.5 or later
     using the instructions for
     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.  Do not update to OpenSSL-3.0.4 because 3.0.4 contains a severe
+    issue and our workaround for it is no longer in the book.</p>
 
     <a id="sa-11.1-065"/>
     <h4>11.1 065 Qt5    Date: 2022-06-22  Severity: High</h4>
