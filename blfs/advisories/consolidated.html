@@ -83,6 +83,44 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-082"/>
+    <h4>11.1 082 Linux Kernel (LFS)  Date: 2022-04-24  Severity: Medium</h4>
+    <p>In Linux-5.18.14.3 (and 5.15.57) there are fixes for speculative
+    vulnerabilities which might lead to information disclosure and have been
+    named 'RETBleed'. There are actually two quite different sets of
+    vulnerabilities, for AMD and Intel.</p>
+    <p>This is particularly an issue for systems shared between multiple clients.
+    The available mitigations vary. If you consider the threat is low, you
+    might wish to disable the mitigations by passing 'retbleed=off'. Enabling the
+    mitigations but not specifying a boot-time option will give you whatever
+    'auto' means on that particular CPU. All of these mitigations cause some
+    reduction in the I/O per second and tend to slow compilations. </p>
+    <p>For AMD, this is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29900">CVE-2022-29900</a>,
+    which applies to Excavator, Zen1 and Zen2 processors.</p>
+    <p>For Zen1 and earlier, also Hygon, the options are 'unret' or 'unret,nosmt'.
+    The latter disables the SMT sibling cores, so in effect you only have half the
+    number of CPUs. 'Unret' means replace all 'ret' instructions with
+    'jmp __x86_return_thunk' on kernel entry. This is apparently not a total solution,
+    an AMD advisory notes that selecting CONFIG_ZERO_CALL_USED_REGS in the kernel
+    config may provide some strength in depth, but does not affect all possible
+    vulnerable sites.</p>
+    <p>For Zen2, the choices are 'auto' (same as 'unret', in this case it adds STIBP
+    protection for SMT) or 'ibpb' (stronger protection, higher performance impact.</p>
+    <p>For Intel, this is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29901">CVE-2022-29901</a>,
+    which is currently described at NVD as applying to generations 6 to 8.
+    Apparently, Intel's recommended mitigation for Spectre v2 on Skylake and newer
+    (IBRS) was not initially followed in the kernel because of the performance
+    impact. Now, 'auto' (or 'ibpb') selects IBRS and this is applied to ALL intel
+    processors from generation 6 onwards. In the future, a microcode update for Alder
+    Lake might disable the mitigation as unnecessary.</p>
+    <p>If you need to fix these, update to at least linux-5.18.14 (or linux-5.15.57
+    if you intend to stay on a long-term supported kernel) using the instructions
+    from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
     <a id="sa-11.1-081"/>
     <h4>11.1 081 (LFS) OpenSSL    Date: 2022-07-16  Severity: Medium</h4>
     <p>In OpenSSL 3.0.4, 1.1.1p, and earlier 3.0 or 1.1.1 releases,
