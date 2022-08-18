@@ -83,6 +83,23 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-092"/>
+    <h4>11.1 092 Python (LFS and BLFS) Date: 2022-08-18 Severity: Medium</h4>
+    <p>In Python3-3.10.6, two security vulnerabilities were fixed that could
+    allow for open redirection when using the HTTP server and for a
+    use-after-free-based denial of service when using the memoryview function.
+    The HTTP server vulnerability occurs when a URI path contains double slashes
+    (//) in it, and allows for redirection to an attacker controlled point.
+    The memoryview vulnerability occurs when accessing the backing buffer.
+    These vulnerabilities do not have CVEs assigned to them, but more details
+    can be found at their respective bug reports upstream:
+    <a href="https://github.com/python/cpython/issues/87389">Bug 87389</a> and
+    <a href="https://github.com/python/cpython/issues/92888">Bug 92888</a>.</p>
+    <p>To fix these vulnerabilities, update to Python3-3.10.6 or later using
+    the instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+
     <a id="sa-11.1-091"/>
     <h4>11.1 091 GnuTLS     Date: 2022-08-18    Severity: High</h4>
     <p>In GnuTLS-3.7.7, a security vulnerability was fixed that could allow for
