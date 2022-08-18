@@ -83,6 +83,24 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-097"/>
+    <h4>11.1 097 MariaDB    Date: 2022-08-18    Severity: Critical</h4>
+    <p>In MariaDB-10.6.9, five security vulnerabilities were fixed that could
+    allow for remote code execution and remotely exploitable crashes. These
+    vulnerabilities consist of assertion failures when processing database
+    queries, segmentation faults, and use-after-free poison vulnerabilities
+    when processing database queries and committing data to disk.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32082">CVE-2022-32082</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32089">CVE-2022-32089</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32081">CVE-2022-32081</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32091">CVE-2022-32091</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32084">CVE-2022-32084</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-10.6.9 or later using
+    the instructions for
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
     <a id="sa-11.1-096"/>
     <h4>11.1 096 tumbler    Date: 2022-08-18    Severity: High</h4>
     <p>In tumbler-4.16.1, a security vulnerability was fixed that could allow
