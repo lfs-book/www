@@ -83,6 +83,21 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-094"/>
+    <h4>11.1 094 unrar      Date: 2022-08-18    Severity: High</h4>
+    <p>In unrar-6.1.7, a security vulnerability was fixed that could allow for
+    path traversal, allowing for arbitrary files to be written during an extract
+    operation on a crafted archive. This vulnerability is known to be exploited
+    in the wild, and a proof-of-concept exploit exists that allows an attacker
+    to create a .ssh/authorized_keys file in the home directory of whichever
+    user extracts the archive. Update to unrar-6.1.7 as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30333">CVE-2022-30333</a>.</p>
+    <p>To fix this vulnerability, update to unrar-6.1.7 or later using the
+    instructions for
+    <a href="../view/svn/general/unrar.html">unrar (sysv)</a> or
+    <a href="../view/systemd/general/unrar.html">unrar (systemd)</a>.</p>
+
     <a id="sa-11.1-093"/>
     <h4>11.1 093 rsync      Date: 2022-08-18    Severity: High</h4>
     <p>In rsync-3.2.5, a security vulnerability was fixed that could allow
