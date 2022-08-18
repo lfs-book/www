@@ -83,6 +83,28 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-089"/>
+    <h4>11.1 089 Samba      Date: 2022-08-18    Severity: Critical</h4>
+    <p>In Samba-4.16.4, five security vulnerabilities were fixed that could
+    allow for password change restrictions to be bypassed, forging of password
+    change requests for users, server crashes with LDAP addition and
+    modification requests, and memory information leaks. In a standard BLFS
+    configuration, none of these vulnerabilities are applicable, but some users
+    may use Active Directory with their systems, or the SMB1 protocol for
+    supporting communication with legacy systems. If you use Active Directory
+    with a BLFS system, or use the SMB1 protocol in the Samba server, update to
+    Samba-4.16.4 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-2031">CVE-2022-2031</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-32744">CVE-2022-32744</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-32745">CVE-2022-32745</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-32746">CVE-2022-32746</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2022-32742">CVE-2022-32742</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.16.4 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
     <a id="sa-11.1-088"/>
     <h4>11.1 088 sqlite     Date: 2022-08-18    Severity: High</h4>
     <p>In sqlite-3.39.2, a security vulnerability was fixed that could allow
