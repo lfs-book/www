@@ -83,6 +83,24 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-093"/>
+    <h4>11.1 093 rsync      Date: 2022-08-18    Severity: High</h4>
+    <p>In rsync-3.2.5, a security vulnerability was fixed that could allow
+    for malicious remote servers to write arbitrary files inside the directories
+    of connecting peers. The server chooses the files/directories which are
+    sent to the client, and the rsync client performs insufficient validation
+    of file names. A malicious rsync server can overwrite arbitary files in
+    the rsync client target directory and any subdirectories, and a
+    proof-of-concept exploit exists that overwrites the .ssh/authorized_keys
+    file on a system to allow remote attackers to login without a password.
+    Update to rsync-3.2.5 as soon as possible if you are using it's client.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29154">CVE-2022-29154</a>.</p>
+    <p>To fix this vulnerability, update to rsync-3.2.5 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
+    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+
     <a id="sa-11.1-092"/>
     <h4>11.1 092 Python (LFS and BLFS) Date: 2022-08-18 Severity: Medium</h4>
     <p>In Python3-3.10.6, two security vulnerabilities were fixed that could
