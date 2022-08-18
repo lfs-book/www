@@ -83,6 +83,23 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-090"/>
+    <h4>11.1 090 WebKitGTK+ Date: 2022-08-18    Severity: High</h4>
+    <p>In WebKitGTK+-2.36.5 (which had crash problems, fixed by 2.36.6),
+    two security vulnerabilities were fixed that could allow for remote code
+    execution and UI spoofing. The remote code execution vulnerability occurs
+    when processing crafted web content, and is caused by an out-of-bounds
+    write, which was fixed with improved input validation. The UI spoofing
+    issue was resolved with improved UI handling, and occurs when visiting
+    websites which have malicious content in their frames.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32816">CVE-2022-32816</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32792">CVE-2022-32792</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.36.6 or later using
+    the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="sa-11.1-089"/>
     <h4>11.1 089 Samba      Date: 2022-08-18    Severity: Critical</h4>
     <p>In Samba-4.16.4, five security vulnerabilities were fixed that could
