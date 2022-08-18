@@ -83,6 +83,24 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-095"/>
+    <h4>11.1 095 Java Binaries/OpenJDK Date: 2022-08-18 Severity: Critical</h4>
+    <p>In OpenJDK-18.0.2, three security vulnerabilities were fixed that could
+    allow for arbitrary code execution, corruption of existing Java class files,
+    unauthorized creation, modification, and deletion of data, and unauthorized
+    access to information (reading). These vulnerabilities occur when processing
+    XSLT stylesheets, and when using the Hotspot feature to compile JIT code.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34169">CVE-2022-34169</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21541">CVE-2022-21541</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21540">CVE-2022-21540</a>.</p>
+    <p>To fix these vulnerabilities, update to Java Binaries/OpenJDK-18.0.2 or
+    17.0.4.1 (LTS) or 11.0.16.1 (LTS) or later using the instructions for
+    <a href="../view/svn/general/java.html">Java binaries (sysv)</a> or
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java binaries (systemd)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+
     <a id="sa-11.1-094"/>
     <h4>11.1 094 unrar      Date: 2022-08-18    Severity: High</h4>
     <p>In unrar-6.1.7, a security vulnerability was fixed that could allow for
