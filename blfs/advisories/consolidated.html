@@ -83,6 +83,22 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-096"/>
+    <h4>11.1 096 tumbler    Date: 2022-08-18    Severity: High</h4>
+    <p>In tumbler-4.16.1, a security vulnerability was fixed that could allow
+    for arbitrary code execution and server-side request forgery when indexing
+    certain file types using the gstreamer plugin. This vulnerability was
+    resolved by adding a MIME type check to the gst-thumbnailer plugin, but
+    further details are scarce at this time.
+    More information can be found at
+    <a href="https://mail.xfce.org/pipermail/xfce-announce/2022-August/001133.html">XFCE Mailing List</a>,
+    <a href="https://gitlab.xfce.org/xfce/tumbler/-/commit/a0fc191e8ab41fe579f3333085d649fdacb2daa5">XFCE Upstream Commit</a>,
+    and <a href="https://gitlab.xfce.org/xfce/tumbler/-/issues/65">Issue #65 (when available)</a>.</p>
+    <p>To fix this vulnerability, update to tumbler-4.16.1 or later using the
+    instructions for
+    <a href="../view/svn/xfce/tumbler.html">tumbler (sysv)</a> or
+    <a href="../view/systemd/xfce/tumbler.html">tumbler (systemd)</a>.</p>
+
     <a id="sa-11.1-095"/>
     <h4>11.1 095 Java Binaries/OpenJDK Date: 2022-08-18 Severity: Critical</h4>
     <p>In OpenJDK-18.0.2, three security vulnerabilities were fixed that could
