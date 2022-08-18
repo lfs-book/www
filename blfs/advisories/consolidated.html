@@ -83,6 +83,19 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-086"/>
+    <h4>11.1 086 Postgresql Updated: 2022-08-18 Severity: Medium</h4>
+    <p>Postgresql up to and including version 14.4 is vulnerable to
+    arbitrary code execution through the use of extension scripts. The
+    assigned CVE's is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2625">CVE-2022-2625</a>
+    (not public yet). Information about the issue can be found at:
+    <a href="https://www.postgresql.org/about/news/postgresql-145-138-1212-1117-1022-and-15-beta-3-released-2496/">Postgresql's site</a>.
+    <p>To fix this, update to postgresql-14.5 or later following the
+    instructions for
+    <a href="../view/svn/server/postgresql.html">Postgresql (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">Postgresql (systemd)</a>.</p>
+
     <a id="sa-11.1-085"/>
     <h4>11.1 085 Unbound Updated: 2022-08-02 Severity: Medium</h4>
     <p>Unbound up to and including version 1.16.1 is vulnerable to several
