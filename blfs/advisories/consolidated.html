@@ -83,6 +83,22 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-098"/>
+    <h4>11.1 098 libxml2    Date: 2022-08-18    Severity: High</h4>
+    <p>In libxml2-2.10.0, a security vulnerability was fixed that could
+    allow for attackers to cause a denial-of-service (application crash).
+    This vulnerability triggers a crash through forged input data, and
+    is caused by the iterwalk function. The primary application that is
+    affected is 'lxml', which is a python wrapper to libxslt and libxml2.
+    Note that libxml2-2.10.0 fixed several other security issues as well,
+    which were not assigned CVEs.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2309">CVE-2022-2309</a>.</p>
+    <p>To fix this vulnerability, update to libxml2-2.10.0 or later using the
+    instructions for
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
     <a id="sa-11.1-097"/>
     <h4>11.1 097 MariaDB    Date: 2022-08-18    Severity: Critical</h4>
     <p>In MariaDB-10.6.9, five security vulnerabilities were fixed that could
