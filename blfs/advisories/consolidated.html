@@ -83,6 +83,24 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-088"/>
+    <h4>11.1 088 sqlite     Date: 2022-08-18    Severity: High</h4>
+    <p>In sqlite-3.39.2, a security vulnerability was fixed that could allow
+    for an array boundary overflow if billions of bytes are used in a string
+    argument to a C API. This could be triggered when importing existing
+    databases in some applications, or when executing large queries.
+    The attack vector is listed as Network, while attack complexity is marked
+    as Low, but no privileges are required to exploit this vulnerability. The
+    primary impact is denial of service (application crashes), and updating
+    sqlite is recommended if you use it on any public-facing web server for a
+    database.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-35737">CVE-2022-35737</a>.</p>
+    <p>To fix this vulnerability, update to sqlite-3.39.2 using the
+    instructions for
+    <a href="../view/svn/server/sqlite.html">sqlite (sysv)</a> or
+    <a href="../view/systemd/server/sqlite.html">sqlite (systemd)</a>.</p>
+
     <a id="sa-11.1-087"/>
     <h4>11.1 087 libwebp    Date: 2022-08-18    Severity: Medium</h4>
     <p>In libwebp-1.2.3 (which has since been updated to 1.2.4), a security
