@@ -83,6 +83,21 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-087"/>
+    <h4>11.1 087 libwebp    Date: 2022-08-18    Severity: Medium</h4>
+    <p>In libwebp-1.2.3 (which has since been updated to 1.2.4), a security
+    vulnerability was fixed in the lossless encoder that could allow for memory
+    leaks and segmentation faults in applications which attempt to convert
+    JPEG images to WebP images using libwebp. No CVE number has been assigned,
+    but details (such as the commits where this vulnerability was fixed) can be
+    found in the BLFS ticket.
+    More information can be found at
+    <a href="https://wiki.linuxfromscratch.org/blfs/ticket/16803">BLFS Ticket #16803</a>.</p>
+    <p>To fix this vulnerability, update to libwebp-1.2.4 or later using the
+    instructions for
+    <a href="../view/svn/general/libwebp.html">libwebp (sysv)</a> or
+    <a href="../view/systemd/general/libwebp.html">libwebp (systemd)</a>.</p>
+
     <a id="sa-11.1-086"/>
     <h4>11.1 086 Postgresql Updated: 2022-08-18 Severity: Medium</h4>
     <p>Postgresql up to and including version 14.4 is vulnerable to
