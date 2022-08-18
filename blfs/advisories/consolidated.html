@@ -83,6 +83,20 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-091"/>
+    <h4>11.1 091 GnuTLS     Date: 2022-08-18    Severity: High</h4>
+    <p>In GnuTLS-3.7.7, a security vulnerability was fixed that could allow for
+    remotely-exploitable denial of service. This vulnerability occurs due to a
+    double-free error when verifying PKCS#7 signatures using the
+    gnutls_pkcs7_verify function. The highest impact from this vulnerability is
+    an application crash.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2509">CVE-2022-2509</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.7.7 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
     <a id="sa-11.1-090"/>
     <h4>11.1 090 WebKitGTK+ Date: 2022-08-18    Severity: High</h4>
     <p>In WebKitGTK+-2.36.5 (which had crash problems, fixed by 2.36.6),
