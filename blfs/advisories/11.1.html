@@ -52,6 +52,16 @@
 
     <h3>Apache HTTPD</h3>
 
+    <a id="sa-11.1-061"/>
+    <h4>11.1 061 Apache HTTPD    Date: 2022-06-13  Severity: High</h4>
+    <p>In httpd-2.4.54, eight security vulnerabilities were fixed that could
+    allow for authentication bypass, request smuggling, denial of service,
+    and information disclosure, all depending on what configuration the server
+    is using. Note that mod_proxy, mod_proxy_ajp, mod_sed, mod_lua, and
+    the standard Apache HTTP server are affected.
+    Update to httpd-2.4.54 or later.
+    <a href="consolidated.html#sa-11.1-061">11.1-061</a></p>
+
     <a id="sa-11.1-013"/>
     <h4>11.1 013 Apache HTTPD    Date: 2022-03-18  Severity: Critical</h4>
     <p>In httpd-2.4.53, four security vulnerabilities were fixed. One of the
@@ -81,7 +91,37 @@
 
 <!-- end of BIND -->
 
+    <h3>cifs-utils</h3>
+
+    <a id="sa-11.1-049"/>
+    <h4>11.1 049 cifs-utils         Date: 2022-05-26 Severity: High</h4>
+    <p>In cifs-utils-6.15, two security vulnerabilties were fixed that could
+    allow for privilege escalation and information disclosure (credential
+    leakage). Update to cifs-utils-6.15 immediately.
+    <a href="consolidated.html#sa-11.1-049">11.1-049</a></p>
+
+<!-- end of cifs-utils -->
+
+    <h3>CUPS</h3>
+
+    <a id="sa-11.1-057"/>
+    <h4>11.1 057 CUPS               Date: 2022-06-13 Severity: Medium</h4>
+    <p>In CUPS-2.4.2, a security vulnerability was fixed that could allow for
+    trivial local privilege escalation due to a logic issue. Update to
+    CUPS-2.4.2 or later.
+    <a href="consolidated.html#sa-11.1-057">11.1-057</a></p>
+
+<!-- end of CUPS -->
+
     <h3>cURL</h3>
+
+    <a id="sa-11.1-070"/>
+    <h4>11.1 070 cURL               Date: 2022-07-13 Severity: Medium</h4>
+    <p>In cURL-7.84.0, four security vulnerabilities were fixed that could
+    allow for denial of service, improper message verification, and files to
+    have different permissions than intended when downloaded. To fix them,
+    update to cURL-7.84.0 or later.
+    <a href="consolidated.html#sa-11.1-070">11.1-070</a></p>
 
     <a id="sa-11.1-039"/>
     <h4>11.1 039 cURL               Date: 2022-05-13 Severity: Medium</h4>
@@ -104,7 +144,72 @@
 
 <!-- end of Cyrus-SASL -->
 
+    <h3>Dovecot</h3>
+
+    <a id="sa-11.1-077"/>
+    <h4>11.1 077 Dovecot            Date: 2022-07-13 Severity: High</h4>
+    <p>A security vulnerability was discovered in Dovecot-2.3.19.1 that could
+    result in privilege escalation when a system administrator has
+    misconfigured multiple identical password databases. Rebuild Dovecot with
+    the security patch.
+    <a href="consolidated.html#sa-11.1-077">11.1-077</a></p>
+
+<!-- end of Dovecot -->
+
+    <h3>Epiphany</h3>
+
+    <a id="sa-11.1-046"/>
+    <h4>11.1 046 Epiphany           Date: 2022-05-26 Severity: High</h4>
+    <p>In Epiphany-42.2, a security vulnerability was fixed that could alow for
+    remote code execution when visiting web pages with overly long titles. The
+    root cause is a client buffer overflow which occurs when processing the
+    title. Update to Epiphany-42.2 or later.
+    <a href="consolidated.html#sa-11.1-046">11.1-046</a></p>
+
+<!-- end of Epiphany -->
+
+    <h3>Exo</h3>
+
+    <a id="sa-11.1-063"/>
+    <h4>11.1 063 Exo      Date: 2022-06-13  Severity: Critical</h4>
+    <p>In Exo-4.16.4, a security vulnerability was fixed that could allos for
+    remote code execution due to Exo processing remote .desktop files in
+    addition to local .desktop files. Update to Exo-4.16.4 immediately if you
+    use XFCE.
+    <a href="consolidated.html#sa-11.1-063">11.1-063</a></p>
+
+<!-- end of Exo -->
+
     <h3>Firefox</h3>
+
+    <a id="sa-11.1-083"/>
+    <h4>11.1 083 Firefox  Date: 2022-07-26  Severity: High</h4>
+    <p>In firefox 102.1.0 several vulnerabilities were fixed, of which one was
+    rated high. Update to firefox-102.1.0esr.
+    <a href="consolidated.html#sa-11.1-083">11.1-083</a></p>
+
+    <a id="sa-11.1-068"/>
+    <h4>11.1 068 Firefox  Date: 2022-06-28  Severity: High</h4>
+    <p>In firefox 91.11.0 and 102.0 several vulnerabilities were fixed, of
+    which four were rated high and at least one other
+    <a href="#sa-11.1-067">SA 11.1-067</a> sounds as if it is high.
+    Update to firefox-102.0esr or later for the
+    new ESR series. As a short term fix (to avoid updating dependencies which
+    were adequate for the 91ESR series) update to firefox-91.11.0 or later
+    while you prepare the updated dependencies.
+    <a href="consolidated.html#sa-11.1-068">11.1-068</a></p>
+
+    <a id="sa-11.1-054"/>
+    <h4>11.1 054 Firefox  Date: 2022-05-31  Severity: High</h4>
+    <p>In firefox 91.10.0 several vulnerabilities were fixed, of which five
+    were rated high and one rated medium. Update to firefox-91.10.0 or later.
+    <a href="consolidated.html#sa-11.1-054">11.1-054</a></p>
+
+    <a id="sa-11.1-043"/>
+    <h4>11.1 043 Firefox  Date: 2022-05-22  Severity: Critical</h4>
+    <p>In firefox 91.9.1 two critical javascript vulnerabilities were fixed.
+    Update to firefox-91.9.1 or later.
+    <a href="consolidated.html#sa-11.1-043">11.1-043</a></p>
 
     <a id="sa-11.1-036"/>
     <h4>11.1 036 Firefox  Date: 2022-05-03  Severity: High</h4>
@@ -140,6 +245,15 @@
 
     <h3>Git</h3>
 
+    <a id="sa-11.1-073"/>
+    <h4>11.1 073 Git                Date: 2022-07-13 Severity: High</h4>
+    <p>In git-2.37.1, a security vulnerability was fixed that could lead to
+    privilege escalation due to an incomplete fix for CVE-2022-24765. This
+    vulnerability allows users to be tricked into running commands as 'root'
+    when navigating through repositories in a multi-user system. Update to
+    git-2.37.1 or later if you're using Git on a multi-user system.
+    <a href="consolidated.html#sa-11.1-073">11.1-073</a></p>
+
     <a id="sa-11.1-029"/>
     <h4>11.1 029 Git                Date: 2022-04-15 Severity: Moderate</h4>
     <p>In git-2.35.3, a security vulnerability was fixed that could allow for
@@ -149,6 +263,40 @@
     <a href="consolidated.html#sa-11.1-029">11.1-029</a></p>
 
  <!-- end of Git -->
+
+    <h3>GnuPG</h3>
+
+    <a id="sa-11.1-078"/>
+    <h4>11.1 078 GnuPG            Date: 2022-07-13  Severity: Medium</h4>
+    <p>In GnuPG-2.3.7, a security vulnerability was fixed that could allow for
+    signature forgery and denial of service (crashes in applications which use
+    GPGME, as well as Evolution and Mutt). Update to GnuPG-2.3.7.
+    <a href="consolidated.html#sa-11.1-078">11.1-078</a></p>
+
+<!-- end of GnuPG -->
+
+    <h3>GnuTLS</h3>
+
+    <a id="sa-11.1-091"/>
+    <h4>11.1 091 GnuTLS          Date: 2022-08-18  Severity: High</h4>
+    <p>In GnuTLS-3.7.7, a security vulnerability was fixed that could allow for
+    remotely-exploitable crashes when verifying PKCS#7 certificates.
+    Update to GnuTLS-3.6.6 or later.
+    <a href="consolidated.html#sa-11.1-091">11.1-091</a></p>
+
+<!-- end of GnuTLS -->
+
+    <h3>Gstreamer (and plugins)</h3>
+
+    <a id="sa-11.1-064"/>
+    <h4>11.1 064 gstreamer        Date: 2022-06-18  Severity: High</h4>
+    <p>In gstreamer-1.20.3 (as well as the plugins), seven vulnerabilities were
+    fixed that could allow for denial of service and arbitrary code execution
+    when processing AVI, MKV, MP4, and Matroska video files. Update to
+    gstreamer-1.20.3 (and the plugins).
+    <a href="consolidated.html#sa-11.1-064">11.1-064</a></p>
+
+<!-- end of Gstreamer (and plugins) -->
 
     <h3>Intel microcode</h3>
 
@@ -163,6 +311,15 @@
 
     <h3>Java binaries</h3>
 
+    <a id="sa-11.1-095"/>
+    <h4>11.1 095 Java binaries         Date: 2022-08-18 Severity: Critical</h4>
+    <p>In OpenJDK-18.0.2, 17.0.4.1 (LTS), and 11.0.16.1 (LTS), three
+    security vulnerabilites were fixed that could allow for remote code
+    execution, class file overwrites, and unauthorized access (create/delete/
+    modify/read) of data. If you use the Java binaries provided by BLFS,
+    update to the Java-18.0.2 (or later) binaries.
+    <a href="consolidated.html#sa-11.1-095">11.1-095</a></p>
+
 <!--<a id="sa-11.1-034"/> no need to link, and is duplicate for openjdk -->
     <h4>11.1 034 Java binaries         Date: 2022-04-26 Severity: High</h4>
     <p>In openjdk-18.0.1, -17.0.3(LTS), and -11.0.15 (LTS), several
@@ -173,6 +330,17 @@
     <a href="consolidated.html#sa-11.1-034">11.1-034</a></p>
 
 <!-- end of Java binaries -->
+
+    <h3>JS91</h3>
+
+    <a id="sa-11.1-067"/>
+    <h4>10.1 067 JS91  Date: 2022-06-28  Severity: High</h4>
+    <p>In the javascript code of firefox-91.11.0 and 102.0 there is a fix for
+    attackers setting undesired attributes on a Javascript object, leading to
+    privileged code execution. Update to JS91-11.0 or later.
+    <a href="consolidated.html#sa-11.1-067">11.1-067</a></p>
+
+<!-- end of JS91 -->
 
     <h3>libarchive</h3>
 
@@ -212,6 +380,79 @@
 
 <!-- end of libsndfile -->
 
+    <h3>libtiff</h3>
+
+    <a id="sa-11.1-058"/>
+    <h4>11.1 058 libtiff            Date: 2022-06-13 Severity: Medium</h4>
+    <p>In libtiff-4.4.0, two security vulnerabilities were fixed in the 'tiffcp'
+    and 'tiffinfo' tools that could allow for application crashes and memory
+    corruption. Update to libtiff-4.4.0 if you use those tools.
+    <a href="consolidated.html#sa-11.1-058">11.1-058</a></p>
+
+<!-- end of libtiff -->
+
+    <h3>libwebp</h3>
+
+    <a id="sa-11.1-087"/>
+    <h4>11.1 087 libwebp            Date: 2022-08-18 Severity: Medium</h4>
+    <p>In libwebp-1.2.3 (which has been replaced with 1.2.4), a security
+    vulnerability was fixed that could allow for denial of service (memory leaks
+    and segmentation faults) when processing JPEG images to convert them to
+    WEBP images. Update to libwebp-1.2.4 or later.
+    <a href="consolidated.html#sa-11.1-087">11.1-087</a></p>
+
+<!-- end of libwebp -->
+
+    <h3>libxml2</h3>
+
+    <a id="sa-11.1-098"/>
+    <h4>11.1 098 libxml2            Date: 2022-08-18 Severity: High</h4>
+    <p>In libxml2-2.10.0, a security vulnerability was fixed that could allow
+    for denial-of-service conditions (application crashes) when processing
+    forged input data. The primary application affected is lxml. Several other
+    vulnerablilities were fixed as well, which were not given CVEs.
+    Update to libxml2-2.10.0 or later.
+    <a href="consolidated.html#sa-11.1-098">11.1-098</a></p>
+
+    <a id="sa-11.1-045"/>
+    <h4>11.1 045 libxml2            Date: 2022-05-26 Severity: Medium</h4>
+    <p>In libxml2-2.9.14, a security vulnerability was fixed that could allow
+    for out-of-bounds writes when processing crafted XML files that are multiple
+    gigabytes in size. Update to libxml2-2.9.14 or later.
+    <a href="consolidated.html#sa-11.1-045">11.1-045</a></p>
+
+<!-- end of libxml2 -->
+
+    <h3>logrotate</h3>
+
+    <a id="sa-11.1-052"/>
+    <h4>11.1 052 logrotate            Date: 2022-05-27 Severity: High</h4>
+    <p>In logrotate-3.20.1, a security vulnerability was fixed that could allow
+    an unprivileged user to block rotation of the files. Update to
+    logrotate-3.20.1 or later.
+    <a href="consolidated.html#sa-11.1-052">11.1-052</a></p>
+
+<!-- end of logrotate -->
+
+    <h3>MariaDB</h3>
+
+    <a id="sa-11.1-097"/>
+    <h4>11.1 097 MariaDB            Date: 2022-08-18 Severity: Critical</h4>
+    <p>In MariaDB-10.6.9, five security vulnerabilities were fixed that could
+    allow for remote code execution and remotely-exploitable crashes when
+    processing database queries and committing data to disk.
+    Update to MariaDB-10.6.9.
+    <a href="consolidated.html#sa-11.1-097">11.1-097</a></p>
+
+    <a id="sa-11.1-050"/>
+    <h4>11.1 050 MariaDB            Date: 2022-05-26 Severity: High</h4>
+    <p>In MariaDB-10.6.8, 24 security vulnerabilties were fixed that could allow
+    for unauthorized creation/deletion/modification of database records, remote
+    code execution, and denial of service. Update to MariaDB-10.6.8.
+    <a href="consolidated.html#sa-11.1-050">11.1-050</a></p>
+
+<!-- end of MariaDB -->
+
     <h3>Mutt</h3>
 
     <a id="sa-11.1-032"/>
@@ -223,6 +464,13 @@
 <!-- end of Mutt -->
 
     <h3>Node.js</h3>
+
+    <a id="sa-11.1-074"/>
+    <h4>11.1 074 Node.js   Date: 2022-07-13 Severity: High</h4>
+    <p>In node.js-16.16.0, several security vulnerabilities were fixed that
+    could allow for HTTP Request Smuggling, DNS rebinding, and modification of
+    system defaults by local attackers. Update to Node.js-16.16.0 or later.
+    <a href="consolidated.html#sa-11.1-074">11.1-074</a></p>
 
     <a id="sa-11.1-014"/>
     <h4>11.1 014 Node.js   Date: 2022-03-18 Severity: High</h4>
@@ -237,7 +485,39 @@
 
 <!-- end of Node.js -->
 
+    <h3>NSS</h3>
+
+    <a id="sa-11.1-055"/>
+    <h4>11.1 055 NSS  Updated: 2022-06-01  Severity: High</h4>
+    <p>In NSS-3.68.4, 3.78.1 and 3.79 two bugs with restricted access were fixed.
+    One of these has now been confirmed as a high severity vulnerability.
+    Update to nss-3.79 or later.
+    <a href="consolidated.html#sa-11.1-055">11.1-055</a></p>
+
+<!-- end of NSS -->
+
+    <h3>ntfs-3g</h3>
+
+    <h4>11.1 060 ntfs-3g         Date: 2022-06-13 Severity: Critical</h4>
+    <p>In ntfs-3g-2022.5.17, several security vulnerabilities were fixed that
+    could allow for kernel-level code execution when processing NTFS metadata
+    during mount time, occurring due to buffer overflows. Update to
+    ntfs-3g-2022.5.17 immediately if you have this package installed.
+    <a href="consolidated.html#sa-11.1-060">11.1-060</a></p>
+
+<!-- end of ntfs-3g -->
+
     <h3>OpenJDK</h3>
+
+    <a id="sa-11.1-095"/>
+    <h4>11.1 095 Java binaries         Date: 2022-08-18 Severity: Critical</h4>
+    <p>In OpenJDK-18.0.2, 17.0.4.1 (LTS), and 11.0.16.1 (LTS), three
+    security vulnerabilites were fixed that could allow for remote code
+    execution, class file overwrites, and unauthorized access (create/delete/
+    modify/read) of data. If you use the most recent of OpenJDK, update to
+    OpenJDK-18.0.2 or later. You may also update to OpenJDK-17.0.4.1 or
+    OpenJDK-11.0.16.1 if you prefer the LTS versions.
+    <a href="consolidated.html#sa-11.1-095">11.1-095</a></p>
 
 <!--<a id="sa-11.1-034"/> no need to link, and is duplicate for java binaries -->
     <h4>11.1 034 OpenJDK         Date: 2022-04-26 Severity: High</h4>
@@ -250,6 +530,36 @@
     <a href="consolidated.html#sa-11.1-034">11.1-034</a></p>
 
 <!-- end of OpenJDK -->
+
+    <h3>OpenJPEG</h3>
+
+    <a id="sa-11.1-047"/>
+    <h4>11.1 047 OpenJPEG           Date: 2022-05-26 Severity: Medium</h4>
+    <p>In OpenJPEG-2.5.0, a security vulnerability was fixed that allows
+    for remote attackers to cause application crashes when OpenJPEG utilities
+    are run in directories with 1048576 files. Update to OpenJPEG-2.5.0 if you
+    use OpenJPEG utilities in directories with large amounts of files.
+    <a href="consolidated.html#sa-11.1-047">11.1-047</a></p>
+
+<!-- end of OpenJPEG -->
+
+    <h3>PHP</h3>
+
+    <a id="sa-11.1-075"/>
+    <h4>11.1 075 PHP                Date: 2022-07-13 Severity: Medium</h4>
+    <p>In PHP-8.1.8, a security vulnerability was fixed that could allow for
+    a heap buffer overflow when trying to determine the file type of a given
+    file. Update to PHP-8.1.8 if you are processing untrusted files.
+    <a href="consolidated.html#sa-11.1-075">11.1-075</a></p>
+
+    <a id="sa-11.1-062"/>
+    <h4>11.1 062 PHP                Date: 2022-06-13 Severity: Medium</h4>
+    <p>In PHP-8.1.7, two security vulnerabilities were fixed that could allow
+    for remote code execution when using the mysqlnd and pgsql modules in PHP.
+    Update to PHP-8.1.7 immediately if you are using either of these modules.
+    <a href="consolidated.html#sa-11.1-062">11.1-062</a></p>
+
+<!-- end of PHP -->
 
     <h3>Pidgin</h3>
 
@@ -277,6 +587,50 @@
 
 <!-- end of Polkit -->
 
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-11.1-048"/>
+    <h4>11.1 048 PostgreSQL   Date: 2022-05-26 Severity: High</h4>
+    <p>In PostgreSQL-14.3, a security vulnerability was fixed that allows for
+    users with permissions to create objects in a database to run commands as a
+    superuser the next time that an autovacuum operation takes place, or when
+    some commands are executed. Update to PostgreSQL-14.3 immediately if you
+    use PostgreSQL's server functionality.
+    <a href="consolidated.html#sa-11.1-048">11.1-048</a></p>
+
+    <a id="sa-11.1-086"/>
+    <h4>11.1 086 PostgreSQL   Date: 2022-08-18 Severity: Medium</h4>
+    <p>In PostgreSQL-14.5, a security vulnerability was fixed that allows
+    arbitry code execution through the use of extension scripts. Update to
+    PostgreSQL-14.5 immediately if you or your users make use of extension
+    scripts.
+    <a href="consolidated.html#sa-11.1-086">11.1-086</a></p>
+
+<!-- end of PostgreSQL -->
+
+    <h3>Python3</h3>
+
+    <a id="sa-11.1-092"/>
+    <h4>11.1 092 Python3 (LFS and BLFS) Date: 2022-08-18 Severity: High</h4>
+    <p>In Python-3.10.6, two security vulnerabilities were fixed that could
+    allow for open redirection in the HTTP server, and for a use-after-free
+    when using the memoryview function. Update to Python-3.10.6 or later.
+    <a href="consolidated.html#sa-11.1-092">11.1-092</a></p>
+
+<!-- end of Python3 -->
+
+    <h3>Qt5</h3>
+
+    <a id="sa-11.1-065"/>
+    <h4>11.1 065 Qt5  Date: 2022-06-22 Severity: High</h4>
+    <p>An out-of-bound write has been fixed in (commercial) Qt 5.15.6, and
+    the fix has been backported to the repository maintained by kde folks, so
+    that it is included in the patch provided for QT-5.15.5 in the BLFS
+    book. Update to Qt-5.15.5 or to a later version.
+    <a href="consolidated.html#sa-11.1-065">11.1-065</a></p>
+
+<!-- end of Qt5 -->
+
     <h3>QtWebEngine</h3>
 
     <a id="sa-11.1-020"/>
@@ -287,6 +641,18 @@
     <a href="consolidated.html#sa-11.1-020">11.1-020</a></p>
 
 <!-- end of QtWebEngine -->
+
+    <h3>rsync</h3>
+
+    <a id="sa-11.1-093"/>
+    <h4>11.1 093 rsync              Date: 2022-08-18 Severity: High</h4>
+    <p>In rsync-3.2.5, a security vulnerability was fixed that could allow for
+    malicious rsync servers to overwrite arbitrary files and directories on
+    client systems. Update to rsync-3.2.5 or later, especially if you are using
+    rsync's client.
+    <a href="consolidated.html#sa-11.1-093">11.1-093</a></p>
+
+<!-- end of rsync -->
 
     <h3>Ruby</h3>
 
@@ -300,7 +666,36 @@
 
 <!-- end of Ruby -->
 
+    <h3>Samba</h3>
+
+    <a id="sa-11.1-089"/>
+    <h4>11.1 089 Samba              Date: 2022-08-18 Severity: Critical</h4>
+    <p>In Samba-4.16.4, several security vulnerabilities were fixed that could
+    allow for password change restriction bypasses, password change forgery,
+    crashes, and information leaks when using Active Directory or the SMB1
+    protocol. None of these are enabled by default in BLFS, but if you use
+    them, you should update to Samba-4.16.4 immediately.
+    <a href="consolidated.html#sa-11.1-089">11.1-089</a></p>
+
+<!-- end of Samba -->
+
     <h3>Seamonkey</h3>
+
+    <a id="sa-11.1-076"/>
+    <h4>11.1 076 Seamonkey          Date: 2022-07-13 Severity: High</h4>
+    <p>Several security vulnerabilities were fixed in Seamonkey-2.35.13 that
+    were fixed in Firefox-91.10.0 and Firefox-91.11.0 (as well as the relevant
+    Thunderbird vulnerabilities). There are a variety of impacts.
+    Update to Seamonkey-2.53.13 or later.
+    <a href="consolidated.html#sa-11.1-076">11.1-076</a>.</p>
+
+    <a id="sa-11.1-051"/>
+    <h4>11.1 051 Seamonkey          Date: 2022-05-26 Severity: Critical</h4>
+    <p>A security vulnerability was discovered in Seamonkey-2.53.12 which could
+    lead to remote code execution in a privileged context when processing crafted
+    JavaScript code, identical to CVE-2022-1802 in Firefox. Rebuild
+    Seamonkey-2.53.12 with the patch immediately.
+    <a href="consolidated.html#sa-11.1-051">11.1-051</a></p>
 
     <a id="sa-11.1-040"/>
     <h4>11.1 040 Seamonkey          Date: 2022-05-12 Severity: High</h4>
@@ -337,6 +732,30 @@
 
 <!-- end of Seamonkey -->
 
+    <h3>Speex</h3>
+
+    <a id="sa-11.1-072"/>
+    <h4>11.1 072 Speex              Date: 2022-07-13 Severity: Medium</h4>
+    <p>In Speex-1.2.1, two security vulnerabilities were fixed that could
+    allow for denial of service conditions as well as stack overflows when
+    using the 'speexenc' and 'speexdec' programs to do operations on crafted
+    WAV files. Update to Speex-1.2.1 or later.
+    <a href="consolidated.html#sa-11.1-072">11.1-072</a></p>
+
+<!-- end of Speex -->
+
+    <h3>sqlite</h3>
+
+    <a id="sa-11.1-088"/>
+    <h4>11.1 088 sqlite             Date: 2022-08-18 Severity: High</h4>
+    <p>In sqlite-3.39.2, a security vulnerability was fixed that could allow
+    for denial of service when a C API is passed a string argument with
+    billions of bytes contained in it (such as an overly large SQL query).
+    Update to sqlite-3.39.2 or later.
+    <a href="consolidated.html#sa-11.1-088">11.1-088</a></p>
+
+<!-- end of sqlite -->
+
     <h3>Subversion</h3>
 
     <a id="sa-11.1-025"/>
@@ -345,11 +764,47 @@
     that could allow for a remotely exploitable denial of service and for
     arbitrary paths to be read. Update to subversion-1.14.2 or later,
     especially if mod_dav_svn is in use within your configuration.
-    <a href="consolidated.html#-sa.11.1-025">11.1-025</a></p>
+    <a href="consolidated.html#-sa-11.1-025">11.1-025</a></p>
 
 <!-- end of Subversion -->
 
     <h3>Thunderbird</h3>
+
+    <a id="sa-11.1-084"/>
+    <h4>11.1 084 Thunderbird  Date: 2022-08-02  Severity: High</h4>
+    <p>In thunderbird 102.1.0 several vulnerabilities were fixed,
+    of which one was rated high. Update to Thunderbird-102.1.0 or later.
+    <a href="consolidated.html#sa-11.1-084">11.1-084</a></p>
+
+    <a id="sa-11.1-069"/>
+    <h4>11.1 069 Thunderbird  Date: 2022-06-29  Severity: High</h4>
+    <p>In thunderbird 91.11.0 and 102.0 several vulnerabilities were fixed,
+    of which four were rated high, and at least one of the others
+    <a href="#sa-11.1-067">SA 11.1-067</a> sounds as if it is high. Update
+    to Thunderbird-102.0 or later, or as a short-term fix to avoid building
+    the updated dependencies (particularly newer rustc, cbindgen, icu) on
+    older systems update to Thunderbird-91.11.0 and plan to update to
+    102.0 or later.
+    <a href="consolidated.html#sa-11.1-069">11.1-069</a></p>
+
+    <a id="sa-11.1-056"/>
+    <h4>11.1 056 Thunderbird  Date: 2022-06-01  Severity: High</h4>
+    <p>In thunderbird 91.10.0 several vulnerabilites were fixed, of which six
+    were rated high and one medium.
+    In general, these flaws cannot be exploited through email in the 
+    Thunderbird product because scripting is disabled when reading mail, 
+    but are potentially risks in browser or browser-like contexts.
+    Update to Thunderbird-91.10.0 or later.
+    <a href="consolidated.html#sa-11.1-056">11.1-056</a></p>
+
+    <a id="sa-11.1-044"/>
+    <h4>11.1 044 Thunderbird  Date: 2022-05-22  Severity: Critical</h4>
+    <p>In thunderbird 91.9.1 two critical javascript vulnerabilities were fixed,
+    It appears these vulnerabilities cannot be exploited via email, but
+    javascript is enabled by default (perhaps only for rss feeds) unless
+    you have disabled it in the Config settings.
+    Update to Thunderbird-91.9.1 or later.
+    <a href="consolidated.html#sa-11.1-044">11.1-044</a></p>
 
     <a id="sa-11.1-041"/>
     <h4>11.1 041 Thunderbird        Date: 2025-04-13 Severity: High</h4>
@@ -357,7 +812,7 @@
     In general, these flaws cannot be exploited through email in the 
     Thunderbird product because scripting is disabled when reading mail, 
     but are potentially risks in browser or browser-like contexts.
-    Update to Thunderbird-91.8.0 or later.
+    Update to Thunderbird-91.9.0 or later.
     <a href="consolidated.html#sa-11.1-041">11.1-041</a></p>
 
     <a id="sa-11.1-021"/>
@@ -386,7 +841,49 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>tumbler</h3>
+
+    <a id="sa-11.1-096"/>
+    <h4>11.1 096 tumbler Date: 2022-08-18 Severity: High</h4>
+    <p>In tumbler-4.16.1, a security vulnerability was fixed that could allow
+    for server-side request forgery and arbitrary code execution when indexing
+    crafted files using the gstreamer plugin.
+    Update to tumbler-4.16.1 or later.
+    <a href="consolidated.html#sa-11.1-096">11.1-096</a>.</p>
+
+<!-- end of tumbler -->
+
+    <h3>Unbound</h3>
+
+    <a id="sa-11.1-085"/>
+    <h4>11.1 085 Unbound Date: 2022-08-02 Severity: Medium</h4>
+    <p>Unbound versions up to and including 1.16.1 are vulnerable to several
+    <q>ghost domain names</q> attacks. To fix them update to
+    unbound-1.16.2 or later.
+    <a href="consolidated.html#sa-11.1-085">11.1-085</a></p>
+
+<!-- end of Unbound -->
+
+    <h3>unrar</h3>
+
+    <a id="sa-11.1-094"/>
+    <h4>11.1 094 unrar              Date: 2022-08-18 Severity: High</h4>
+    <p>In unrar-6.1.7, a path traversal vulnerability was fixed that could
+    allow for malicious archives to place files anywhere on the system. Update
+    to unrar-6.1.7 or later.
+    <a href="consolidated.html#sa-11.1-094">11.1-094</a></p>
+
+<!-- end of unrar -->
+
     <h3>VIM</h3>
+
+    <a id="sa-11.1-053"/>
+    <h4>11.1 053 VIM (LFS and BLFS) Date: 2022-05-29 Severity: Medium</h4>
+    <p>11 vulnerabilities causing heap-based buffer overflow, use after
+    free, NULL pointer dereference, or uncontrolled recursion and leading to
+    crashes have been fixed in vim-8.2.5014. To fix them update to
+    vim-8.2.5014 or later.
+    <a href="consolidated.html#sa-11.1-053">11.1-053</a></p>
 
     <a id="sa-11.1-037"/>
     <h4>11.1 037 VIM (LFS and BLFS) Date: 2022-05-06 Severity: High</h4>
@@ -413,6 +910,29 @@
 
     <h3>WebKitGTK+</h3>
 
+    <a id="sa-11.1-090"/>
+    <h4>11.1 090 WebKitGTK+         Date: 2022-08-18 Severity: High</h4>
+    <p>In WebKitGTK+-2.36.5 (and subsequently fixed in 2.36.6), two security
+    vulnerabilities were fixed that could allow for remote code execution and
+    UI spoofing when processing malicious web content.
+    Update to WebKitGTK+-2.36.6 or later.
+    <a href="consolidated.html#sa-11.1-090">11.1-090</a>.</p>
+
+    <a id="sa-11.1-071"/>
+    <h4>11.1 071 WebKitGTK+         Date: 2022-07-13 Severity: Medium</h4>
+    <p>In WebKitGTK+-2.36.4, two security vulnerabilities were fixed that could
+    allow for remote code execution when processing maliciously crafted web
+    content, and for undesirable behavior (crashing video calls).
+    Update to WebKitGTK+-2.36.4 or later.
+    <a href="consolidated.html#sa-11.1-071">11.1-071</a>.</p>
+
+    <a id="sa-11.1-059"/>
+    <h4>11.1 059 WebKitGTK+         Date: 2022-06-13 Severity: High</h4>
+    <p>In WebKitGTK+-2.36.3, five security vulnerabilities were fixed that
+    could allow for remote code execution when processing crafted web content.
+    Update to WebKitGTK+-2.36.3 or later.
+    <a href="consolidated.html#sa-11.1-059">11.1-059</a>.</p>
+
     <a id="sa-11.1-024"/>
     <h4>11.1 024 WebKitGTK+         Date: 2022-04-12 Severity: High</h4>
     <p>In WebKitGTK+-2.36.0, three security vulnerabilities were fixed that
@@ -421,5 +941,28 @@
     <a href="consolidated.html#sa-11.1-024">11.1-024</a>.</p>
 
 <!-- end of WebKitGTK+ -->
+
+    <h3>xorg-server</h3>
+
+    <a id="sa-11.1-079"/>
+    <h4>11.1 079 xorg-server        Date: 2022-07-13 Severity: High</h4>
+    <p>Two security vulnerabilities were fixed in xorg-server-21.1.4
+    that could allow for local privilege escalation and remote code execution
+    due to improper input validation. Update to xorg-server-21.1.4 or later as
+    soon as possible.
+    <a href="consolidated.html#sa-11.1-079">11.1-079</a>.</p>
+
+<!-- end of xorg-server -->
+
+    <h3>Xwayland</h3>
+
+    <a id="sa-11.1-080"/>
+    <h4>11.1 080 Xwayland           Date: 2022-07-13 Severity: High</h4>
+    <p>Two security vulnerabilities were fixed in Xwayland-22.1.3
+    that could allow for local privilege escalation due to improper input
+    validation. Update to Xwayland-22.1.3 or later as soon as possible.
+    <a href="consolidated.html#sa-11.1-080">11.1-080</a>.</p>
+
+<!-- end of Xwayland -->
 
 <!--#include virtual="/common/footer.html" -->

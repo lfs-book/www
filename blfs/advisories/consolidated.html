@@ -83,6 +83,1044 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-098"/>
+    <h4>11.1 098 libxml2    Date: 2022-08-18    Severity: High</h4>
+    <p>In libxml2-2.10.0, a security vulnerability was fixed that could
+    allow for attackers to cause a denial-of-service (application crash).
+    This vulnerability triggers a crash through forged input data, and
+    is caused by the iterwalk function. The primary application that is
+    affected is 'lxml', which is a python wrapper to libxslt and libxml2.
+    Note that libxml2-2.10.0 fixed several other security issues as well,
+    which were not assigned CVEs.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2309">CVE-2022-2309</a>.</p>
+    <p>To fix this vulnerability, update to libxml2-2.10.0 or later using the
+    instructions for
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
+    <a id="sa-11.1-097"/>
+    <h4>11.1 097 MariaDB    Date: 2022-08-18    Severity: Critical</h4>
+    <p>In MariaDB-10.6.9, five security vulnerabilities were fixed that could
+    allow for remote code execution and remotely exploitable crashes. These
+    vulnerabilities consist of assertion failures when processing database
+    queries, segmentation faults, and use-after-free poison vulnerabilities
+    when processing database queries and committing data to disk.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32082">CVE-2022-32082</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32089">CVE-2022-32089</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32081">CVE-2022-32081</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32091">CVE-2022-32091</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32084">CVE-2022-32084</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-10.6.9 or later using
+    the instructions for
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
+    <a id="sa-11.1-096"/>
+    <h4>11.1 096 tumbler    Date: 2022-08-18    Severity: High</h4>
+    <p>In tumbler-4.16.1, a security vulnerability was fixed that could allow
+    for arbitrary code execution and server-side request forgery when indexing
+    certain file types using the gstreamer plugin. This vulnerability was
+    resolved by adding a MIME type check to the gst-thumbnailer plugin, but
+    further details are scarce at this time.
+    More information can be found at
+    <a href="https://mail.xfce.org/pipermail/xfce-announce/2022-August/001133.html">XFCE Mailing List</a>,
+    <a href="https://gitlab.xfce.org/xfce/tumbler/-/commit/a0fc191e8ab41fe579f3333085d649fdacb2daa5">XFCE Upstream Commit</a>,
+    and <a href="https://gitlab.xfce.org/xfce/tumbler/-/issues/65">Issue #65 (when available)</a>.</p>
+    <p>To fix this vulnerability, update to tumbler-4.16.1 or later using the
+    instructions for
+    <a href="../view/svn/xfce/tumbler.html">tumbler (sysv)</a> or
+    <a href="../view/systemd/xfce/tumbler.html">tumbler (systemd)</a>.</p>
+
+    <a id="sa-11.1-095"/>
+    <h4>11.1 095 Java Binaries/OpenJDK Date: 2022-08-18 Severity: Critical</h4>
+    <p>In OpenJDK-18.0.2, three security vulnerabilities were fixed that could
+    allow for arbitrary code execution, corruption of existing Java class files,
+    unauthorized creation, modification, and deletion of data, and unauthorized
+    access to information (reading). These vulnerabilities occur when processing
+    XSLT stylesheets, and when using the Hotspot feature to compile JIT code.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34169">CVE-2022-34169</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21541">CVE-2022-21541</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21540">CVE-2022-21540</a>.</p>
+    <p>To fix these vulnerabilities, update to Java Binaries/OpenJDK-18.0.2 or
+    17.0.4.1 (LTS) or 11.0.16.1 (LTS) or later using the instructions for
+    <a href="../view/svn/general/java.html">Java binaries (sysv)</a> or
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java binaries (systemd)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+
+    <a id="sa-11.1-094"/>
+    <h4>11.1 094 unrar      Date: 2022-08-18    Severity: High</h4>
+    <p>In unrar-6.1.7, a security vulnerability was fixed that could allow for
+    path traversal, allowing for arbitrary files to be written during an extract
+    operation on a crafted archive. This vulnerability is known to be exploited
+    in the wild, and a proof-of-concept exploit exists that allows an attacker
+    to create a .ssh/authorized_keys file in the home directory of whichever
+    user extracts the archive. Update to unrar-6.1.7 as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30333">CVE-2022-30333</a>.</p>
+    <p>To fix this vulnerability, update to unrar-6.1.7 or later using the
+    instructions for
+    <a href="../view/svn/general/unrar.html">unrar (sysv)</a> or
+    <a href="../view/systemd/general/unrar.html">unrar (systemd)</a>.</p>
+
+    <a id="sa-11.1-093"/>
+    <h4>11.1 093 rsync      Date: 2022-08-18    Severity: High</h4>
+    <p>In rsync-3.2.5, a security vulnerability was fixed that could allow
+    for malicious remote servers to write arbitrary files inside the directories
+    of connecting peers. The server chooses the files/directories which are
+    sent to the client, and the rsync client performs insufficient validation
+    of file names. A malicious rsync server can overwrite arbitary files in
+    the rsync client target directory and any subdirectories, and a
+    proof-of-concept exploit exists that overwrites the .ssh/authorized_keys
+    file on a system to allow remote attackers to login without a password.
+    Update to rsync-3.2.5 as soon as possible if you are using it's client.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29154">CVE-2022-29154</a>.</p>
+    <p>To fix this vulnerability, update to rsync-3.2.5 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
+    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+
+    <a id="sa-11.1-092"/>
+    <h4>11.1 092 Python (LFS and BLFS) Date: 2022-08-18 Severity: Medium</h4>
+    <p>In Python3-3.10.6, two security vulnerabilities were fixed that could
+    allow for open redirection when using the HTTP server and for a
+    use-after-free-based denial of service when using the memoryview function.
+    The HTTP server vulnerability occurs when a URI path contains double slashes
+    (//) in it, and allows for redirection to an attacker controlled point.
+    The memoryview vulnerability occurs when accessing the backing buffer.
+    These vulnerabilities do not have CVEs assigned to them, but more details
+    can be found at their respective bug reports upstream:
+    <a href="https://github.com/python/cpython/issues/87389">Bug 87389</a> and
+    <a href="https://github.com/python/cpython/issues/92888">Bug 92888</a>.</p>
+    <p>To fix these vulnerabilities, update to Python3-3.10.6 or later using
+    the instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+
+    <a id="sa-11.1-091"/>
+    <h4>11.1 091 GnuTLS     Date: 2022-08-18    Severity: High</h4>
+    <p>In GnuTLS-3.7.7, a security vulnerability was fixed that could allow for
+    remotely-exploitable denial of service. This vulnerability occurs due to a
+    double-free error when verifying PKCS#7 signatures using the
+    gnutls_pkcs7_verify function. The highest impact from this vulnerability is
+    an application crash.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2509">CVE-2022-2509</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.7.7 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
+    <a id="sa-11.1-090"/>
+    <h4>11.1 090 WebKitGTK+ Date: 2022-08-18    Severity: High</h4>
+    <p>In WebKitGTK+-2.36.5 (which had crash problems, fixed by 2.36.6),
+    two security vulnerabilities were fixed that could allow for remote code
+    execution and UI spoofing. The remote code execution vulnerability occurs
+    when processing crafted web content, and is caused by an out-of-bounds
+    write, which was fixed with improved input validation. The UI spoofing
+    issue was resolved with improved UI handling, and occurs when visiting
+    websites which have malicious content in their frames.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32816">CVE-2022-32816</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32792">CVE-2022-32792</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.36.6 or later using
+    the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
+    <a id="sa-11.1-089"/>
+    <h4>11.1 089 Samba      Date: 2022-08-18    Severity: Critical</h4>
+    <p>In Samba-4.16.4, five security vulnerabilities were fixed that could
+    allow for password change restrictions to be bypassed, forging of password
+    change requests for users, server crashes with LDAP addition and
+    modification requests, and memory information leaks. In a standard BLFS
+    configuration, none of these vulnerabilities are applicable, but some users
+    may use Active Directory with their systems, or the SMB1 protocol for
+    supporting communication with legacy systems. If you use Active Directory
+    with a BLFS system, or use the SMB1 protocol in the Samba server, update to
+    Samba-4.16.4 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-2031">CVE-2022-2031</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-32744">CVE-2022-32744</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-32745">CVE-2022-32745</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-32746">CVE-2022-32746</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2022-32742">CVE-2022-32742</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.16.4 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
+    <a id="sa-11.1-088"/>
+    <h4>11.1 088 sqlite     Date: 2022-08-18    Severity: High</h4>
+    <p>In sqlite-3.39.2, a security vulnerability was fixed that could allow
+    for an array boundary overflow if billions of bytes are used in a string
+    argument to a C API. This could be triggered when importing existing
+    databases in some applications, or when executing large queries.
+    The attack vector is listed as Network, while attack complexity is marked
+    as Low, but no privileges are required to exploit this vulnerability. The
+    primary impact is denial of service (application crashes), and updating
+    sqlite is recommended if you use it on any public-facing web server for a
+    database.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-35737">CVE-2022-35737</a>.</p>
+    <p>To fix this vulnerability, update to sqlite-3.39.2 using the
+    instructions for
+    <a href="../view/svn/server/sqlite.html">sqlite (sysv)</a> or
+    <a href="../view/systemd/server/sqlite.html">sqlite (systemd)</a>.</p>
+
+    <a id="sa-11.1-087"/>
+    <h4>11.1 087 libwebp    Date: 2022-08-18    Severity: Medium</h4>
+    <p>In libwebp-1.2.3 (which has since been updated to 1.2.4), a security
+    vulnerability was fixed in the lossless encoder that could allow for memory
+    leaks and segmentation faults in applications which attempt to convert
+    JPEG images to WebP images using libwebp. No CVE number has been assigned,
+    but details (such as the commits where this vulnerability was fixed) can be
+    found in the BLFS ticket.
+    More information can be found at
+    <a href="https://wiki.linuxfromscratch.org/blfs/ticket/16803">BLFS Ticket #16803</a>.</p>
+    <p>To fix this vulnerability, update to libwebp-1.2.4 or later using the
+    instructions for
+    <a href="../view/svn/general/libwebp.html">libwebp (sysv)</a> or
+    <a href="../view/systemd/general/libwebp.html">libwebp (systemd)</a>.</p>
+
+    <a id="sa-11.1-086"/>
+    <h4>11.1 086 Postgresql Updated: 2022-08-18 Severity: Medium</h4>
+    <p>Postgresql up to and including version 14.4 is vulnerable to
+    arbitrary code execution through the use of extension scripts. The
+    assigned CVE's is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2625">CVE-2022-2625</a>
+    (not public yet). Information about the issue can be found at:
+    <a href="https://www.postgresql.org/about/news/postgresql-145-138-1212-1117-1022-and-15-beta-3-released-2496/">Postgresql's site</a>.
+    <p>To fix this, update to postgresql-14.5 or later following the
+    instructions for
+    <a href="../view/svn/server/postgresql.html">Postgresql (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">Postgresql (systemd)</a>.</p>
+
+    <a id="sa-11.1-085"/>
+    <h4>11.1 085 Unbound Updated: 2022-08-02 Severity: Medium</h4>
+    <p>Unbound up to and including version 1.16.1 is vulnerable to several
+    types of <q>ghost domain names</q> attacks. The assigned CVE's are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30698">CVE-2022-30698</a>
+    and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30699">CVE-2022-30699</a>.</p>
+    <p>To fix these, update to Unbound-1.16.2 or later following the instructions
+    for
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+
+    <a id="sa-11.1-084"/>
+    <h4>11.1 084 thunderbird  Date: 2022-08-02  Severity: High</h4>
+    <p>In thunderbird 102.1.0 several vulnerabilities were fixed, of which one
+    was rated high. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-32/">mfsa-2022-32</a>.
+    The CVEs applicable to linux are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2505">CVE-2022-2505 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-36318">CVE-2022-35318 (Not yet public)</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-36319">CVE-2022-36319 (Not yet public)</a>.</p>
+    <p>To fix these update to thunderbird-102.1.0 or later using the instructions for:
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.1-083"/>
+    <h4>11.1 083 Firefox  Date: 2022-07-26  Severity: High</h4>
+    <p>In firefox 102.1.0 several vulnerabilities were fixed, of which one was
+    rated high. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-30/">mfsa-2022-30</a>.
+    The CVEs applicable to linux are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2505">CVE-2022-2505 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-36318">CVE-2022-35318 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-36319">CVE-2022-36319 (Not yet public)</a>.</p>
+    <p>To fix these update to firefox-102.1.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-11.1-082"/>
+    <h4>11.1 082 Linux Kernel (LFS)  Date: 2022-04-24  Severity: Medium</h4>
+    <p>In Linux-5.18.14.3 (and 5.15.57) there are fixes for speculative
+    vulnerabilities which might lead to information disclosure and have been
+    named 'RETBleed'. There are actually two quite different sets of
+    vulnerabilities, for AMD and Intel.</p>
+    <p>This is particularly an issue for systems shared between multiple clients.
+    The available mitigations vary. If you consider the threat is low, you
+    might wish to disable the mitigations by passing 'retbleed=off'. Enabling the
+    mitigations but not specifying a boot-time option will give you whatever
+    'auto' means on that particular CPU. All of these mitigations cause some
+    reduction in the I/O per second and tend to slow compilations. </p>
+    <p>For AMD, this is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29900">CVE-2022-29900</a>,
+    which applies to Excavator, Zen1 and Zen2 processors.</p>
+    <p>For Zen1 and earlier, also Hygon, the options are 'unret' or 'unret,nosmt'.
+    The latter disables the SMT sibling cores, so in effect you only have half the
+    number of CPUs. 'Unret' means replace all 'ret' instructions with
+    'jmp __x86_return_thunk' on kernel entry. This is apparently not a total solution,
+    an AMD advisory notes that selecting CONFIG_ZERO_CALL_USED_REGS in the kernel
+    config may provide some strength in depth, but does not affect all possible
+    vulnerable sites.</p>
+    <p>For Zen2, the choices are 'auto' (same as 'unret', in this case it adds STIBP
+    protection for SMT) or 'ibpb' (stronger protection, higher performance impact.</p>
+    <p>For Intel, this is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29901">CVE-2022-29901</a> for generations 6 to 8, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28693">CVE-2022-28693</a> for generations 9 to 12.
+    Intel's recommended mitigation for Spectre v2 on generations 6 to 8
+    (IBRS) was not initially followed in the kernel because of the
+    performance impact. Now, 'auto' (or 'ibpb') selects IBRS and this is
+    applied to generations 6 to 8 processors.  For processors from
+    generation 9 to 12, enhanced IBRS (note that it's different from
+    the "original" IBRS) has been used to mitigate Spectre v2 and it will
+    be used to mitigate RETBleed too.</p>
+    <p>If you need to fix these, update to at least linux-5.18.14 (or linux-5.15.57
+    if you intend to stay on a long-term supported kernel) using the instructions
+    from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
+    <a id="sa-11.1-081"/>
+    <h4>11.1 081 (LFS) OpenSSL    Date: 2022-07-16  Severity: Medium</h4>
+    <p>In OpenSSL 3.0.4, 1.1.1p, and earlier 3.0 or 1.1.1 releases,
+    AES OCB mode for 32-bit x86 platforms using the AES-NI assembly
+    optimised implementation will not encrypt the entirety of the data
+    under some circumstances.  This could reveal sixteen bytes of data
+    that was preexisting in the memory that wasn't written.  In the
+    special case of "in place" encryption, sixteen bytes of the plaintext
+    would be revealed. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2097">CVE-2022-2097</a>,
+    and more details are available at
+    <a href="https://www.openssl.org/news/secadv/20220705.txt">the OpenSSL
+    security advisory</a>.  (The OpenSSL security advisory also mentions
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2274">CVE-2022-2274</a>,
+    but we'd worked around it in the instructions provided by the LFS book.
+    So a LFS development system built "by the book" is not affected.)</p>
+    <p>If you are not running a 32-bit LFS installation, no action is
+    needed.  Otherwise to fix this vulnerability, if you are using OpenSSL
+    1.1.1 releases, update to OpenSSL-1.1.1q or later using the
+    instructions for
+    <a href="../../lfs/view/11.0/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/11.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.
+    If you are using OpenSSL 3.0 releases, update to OpenSSL-3.0.5 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
+    <a id="sa-11.1-080"/>
+    <h4>11.1 080 Xwayland  Date: 2022-07-13  Severity: High</h4>
+    <p>In Xwayland-22.1.3, two security vulnerabilities were fixed that
+    could allow for local attackers to elevate privileges. These vulnerabilities
+    occur due to improper input validation when processing keyboard inputs. Both
+    of these vulnerabilities are classified as out-of-bounds access
+    vulnerabilities, and they occur in the ProcXkbSetGeometry and
+    ProcXkbSetDeviceInfo functions. The vulnerabilities occur due to not
+    validating request lengths.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-2319">CVE-2022-2319</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-2320">CVE-2022-2320</a>.</p>
+    <p>To fix these vulnerabilities, update to Xwayland-22.1.3 or later
+    using the instructions for
+    <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
+    <a id="sa-11.1-079"/>
+    <h4>11.1 079 xorg-server  Date: 2022-07-13  Severity: High</h4>
+    <p>In xorg-server-21.1.4, two security vulnerabilities were fixed that
+    could allow for local attackers to elevate privileges, and for remote
+    attackers to elevate privileges on systems that use X forwarding. These
+    vulnerabilities occur due to improper input validation when processing
+    keyboard inputs. Both of these vulnerabilities are classified as
+    out-of-bounds access vulnerabilities, and they occur in the
+    ProcXkbSetGeometry and ProcXkbSetDeviceInfo functions. The vulnerabilities
+    occur due to not validating request lengths.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-2319">CVE-2022-2319</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-2320">CVE-2022-2320</a>.</p>
+    <p>To fix these vulnerabilities, update to xorg-server-21.1.4 or later
+    using the instructions for
+    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+
+    <a id="sa-11.1-078"/>
+    <h4>11.1 078 GnuPG        Date: 2022-07-13  Severity: Medium</h4>
+    <p>In GnuPG-2.3.7, a security vulnerability was fixed that could allow for
+    remote attackers to inject information into a signature that allows for
+    signature forgery, and for application crashes for any program that uses
+    GPGME. Note that this vulnerability can also cause repeatable crashes in
+    mail clients such as Mutt and Evolution.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34903">CVE-2022-34903</a>.</p>
+    <p>To fix this vulnerability, update to GnuPG-2.3.7 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+
+    <a id="sa-11.1-077"/>
+    <h4>11.1 077 Dovecot      Date: 2022-07-13  Severity: High</h4>
+    <p>A security vulnerability was discovered in Dovecot-2.3.19.1 that could
+    allow for privilege escalation in some cases where a system administrator
+    has misconfigured Dovecot with multiple password databases. The BLFS
+    Editors have developed a patch to remediate this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30550 (not yet available)">CVE-2022-30550</a>.
+    More details can be found at
+    <a href="https://seclists.org/oss-sec/2022/q3/33">oss-security posting</a>.</p>
+    <p>To fix this vulnerability, rebuild Dovecot-2.3.19.1 with the patch using
+    the instructions for
+    <a href="../view/svn/server/dovecot.html">Dovecot (sysv)</a> or
+    <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
+
+    <a id="sa-11.1-076"/>
+    <h4>11.1 076 Seamonkey    Date: 2022-07-13  Severity: High</h4>
+    <p>In Seamonkey-2.53.13, several security vulnerabilities were fixed that
+    could allow for memory safety problems, privileged code execution,
+    incorrect error pages, full screen browser spoofing, content security
+    policy bypasses, integer overflows, incorrect email signatures, remotely
+    exploitable crashes, information disclosure, and remote code execution.
+    These vulnerabilities happen during a variety of use cases, so updating
+    as soon as possible is recommended.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31736">CVE-2022-31736</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31737">CVE-2022-31737</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31738">CVE-2022-31738</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31740">CVE-2022-31740</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31741">CVE-2022-31741</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31742">CVE-2022-31742</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31747">CVE-2022-31747</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1834">CVE-2022-1834</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34479">CVE-2022-34479</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34470">CVE-2022-34470</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34468">CVE-2022-34468</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34481">CVE-2022-34481</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31744">CVE-2022-31744</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34472">CVE-2022-34472</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2200">CVE-2022-2200</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2226">CVE-2022-2226</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34484">CVE-2022-34484</a>.</p>
+    <p>To fix these vulnerabilities, update to Seamonkey-2.53.13 or later using
+    the instructions for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+    <a id="sa-11.1-075"/>
+    <h4>11.1 075 PHP          Date: 2022-07-13  Severity: Medium</h4>
+    <p>In PHP-8.1.8, a security vulnerability was fixed that could allow for
+    a heap buffer overflow in finfo_buffer when processing input from users or
+    scripts. This occurs when trying to determine the type of file to be
+    processed. This heap buffer overflow mostly causes memory corruption, which
+    leads to a denial of service condition, and there is no evidence in the
+    upstream bug report that it can lead to remote code execution.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31627">CVE-2022-31627 (not yet available)</a>.
+    <!-- may need modification once it is analyzed at NVD. -->
+    For more information, see the upstream bug report:
+    <a href="https://bugs.php.net/bug.php?id=81723">PHP Bug 81723</a>.</p>
+    <p>To fix this vulnerability, update to PHP-8.1.8 or later using the
+    instructions for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+    <a id="sa-11.1-074"/>
+    <h4>11.1 074 Node.js      Date: 2022-07-13  Severity: High</h4>
+    <p>In node.js-16.16.0, several security vulnerabilities were fixed that
+    could allow for HTTP Request Smuggling and DNS rebinding. An additional
+    security vulnerability was fixed that could allow for a local attacker
+    to modify the OpenSSL configuration for other users due to a hardcoded
+    path check. The HTTP Request Smuggling vulnerabilities occur due to
+    a flawed parsing of the Transfer-Encoding field in an HTTP Header,
+    as well as due to a flaw where CRLF sequences are not properly delimited
+    in HTTP requests. The DNS rebinding vulnerability occurs due to
+    the IsIPAddress function not validating whether an IP address is valid.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32213">CVE-2022-32213</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32214">CVE-2022-32214</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32215">CVE-2022-32215</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32212">CVE-2022-32212</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32222">CVE-2022-32222</a>.</p>
+    <p>To fix these vulnerabilities, update to node.js-16.16.0 or later using
+    the instructions for
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
+    <a id="sa-11.1-073"/>
+    <h4>11.1 073 Git          Date: 2022-07-13  Severity: High</h4>
+    <p>In git-2.37.1, a security vulnerability was fixed that could allow
+    for privilege escalation and remote code execution due to Git not
+    properly checking the ownership of directories in a multi-user system
+    when running comamnds in the local repository configuration. This is
+    similar to CVE-2022-29187 and is due to an incomplete fix. An unsuspecting
+    user could still be affected by the issue, for example when navigating as
+    'root' into a shared temporary directory that is owned by them, but where
+    an attacker has created a git repository. A temporary workaround is to
+    avoid running git as 'root' or any administrator user.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29187">CVE-2022-29187</a>.</p>
+    <p>To fix this vulnerability, update to git-2.37.1 or later using the
+    instructions for
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
+    <a id="sa-11.1-072"/>
+    <h4>11.1 072 Speex        Date: 2022-07-13  Severity: Medium</h4>
+    <p>In Speex-1.2.1, two security vulnerabilities were fixed that could
+    allow for stack buffer overflows and denial of service when using the
+    'speexenc' and 'speexdec' utilities to encode and decode WAV files.
+    Note that the primary attack vector is crafted WAV files, and a user
+    must download and run the files against the 'speexenc' and 'speexdec'
+    programs to exploit them.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-23903">CVE-2020-23903</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-23904">CVE-2020-23904</a>.</p>
+    <p>To fix these vulnerabilities, update to Speex-1.2.1 or later using
+    the instructions for
+    <a href="../view/svn/multimedia/speex.html">Speex (sysv)</a> or
+    <a href="../view/systemd/multimedia/speex.html">Speex (systemd)</a>.</p>
+
+    <a id="sa-11.1-071"/>
+    <h4>11.1 071 WebKitGTK+   Date: 2022-07-13  Severity: Medium</h4>
+    <p>In WebKitGTK+-2.36.4, two security vulnerabilities were fixed that could
+    allow for remote code execution and undesirable behavior. In the case of
+    the undesirable behavior, it was found that video calls that use WebRTC
+    could be interrupted if the audio capture was interrupted. In the case of
+    the remote code execution vulnerability, processing maliciously crated web
+    content can result in remote code execution - this was a use-after-free
+    issue which was addressed with improved memory management.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-22677">CVE-2022-22677</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2022-26710">CVE-2022-26710</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.36.4 or later
+    using the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
+    <a id="sa-11.1-070"/>
+    <h4>11.1 070 cURL         Date: 2022-07-13  Severity: Medium</h4>
+    <p>In cURL-7.84.0, four security vulnerabilities were fixed that could
+    allow for denial of service, unpreserved file permissions, and faulty
+    message verification. The faulty message verification occurs when using the
+    FTP protocol with Kerberos support. This flaw makes it possible to inject
+    data into the data stream when downloading files due to improper
+    verification. Note that FTP support with Kerberos combined very rarely
+    used. The unpreserved file permissions vulnerability occurs due to
+    accidentally widening permissions on files which are downloaded from
+    cookies. Note that this can be worked around by using a strict umask.
+    One of the denial of service vulnerabilities occurs when using HTTP
+    compression due to a flaw in cURL's "chained" HTTP compression algorithm
+    support. The number of acceptable "links" in the chain was unbounded,
+    allowing for infinite amounts of memory to be used. The other
+    denial-of-service vulnerability occurs when the Set-Cookie option is used
+    in a HTTP header. A sufficient amount of cookies could cause cURL to deny
+    all further cookies from any other websites.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32208">CVE-2022-32208</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32207">CVE-2022-32207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32206">CVE-2022-32206</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32205">CVE-2022-32205</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.84.0 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-11.1-069"/>
+    <h4>11.1 069 Thunderbird  Date: 2022-06-29  Severity: High</h4>
+    <p>In thunderbird 91.11.0 and 102.0 several vulnerabilities were fixed, of which four
+    were rated high, and at least one of the others (see SA 11.1 067 below) sounds as
+    if it is high. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-26/">mfsa-2022-26</a>.
+    The high or assumed high CVEs common are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2200">CVE-2022-2200 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34468">CVE-2022-34468 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34470">CVE-2022-34470 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34479">CVE-2022-34479 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34484">CVE-2022-34484 (Not yet public)</a>.</p>
+    <p>To fix these update to thunderbird-102.0 or later using the instructions for:
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <p>Alternatively, update to thunderbird-91.11.0 as a short-term fix which does not
+    require updated dependencies. Please note that any future versions of the
+    thunderbird 91 series will not be specifically monitored, you should plan to
+    update to the 102 series.</p>
+
+    <a id="sa-11.1-068"/>
+    <h4>11.1 068 Firefox  Date: 2022-06-28  Severity: High</h4>
+    <p>In firefox 91.11.0 and 102.0 several vulnerabilities were fixed, of which four
+    were rated high, and at least one of the others (see SA 11.1 067 below) sounds as
+    if it is high. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-25/">mfsa-2022-25 (91.11.0)</a>
+    and
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-24/">mfsa-2022-24 (102.0)</a>.
+    The high or assumed high CVEs common to 91esr and 102|esr are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2200">CVE-2022-2200 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34468">CVE-2022-34468 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34470">CVE-2022-34470 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34479">CVE-2022-34479 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34484">CVE-2022-34484 (Not yet public)</a>.</p>
+    <p>To fix these update to firefox-102.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <p>Alternatively, update to firefox-91.11.0 as a short-term fix which does not
+    require updated dependencies. Please note that firefox 91esr will have two more
+    releases and then become unsupported.</p>
+
+    <a id="sa-11.1-067"/>
+    <h4>11.1 067 JS91  Date: 2022-06-28  Severity: High</h4>
+    <p>In the javascript code of firefox-91.11.0 and 102.0 there is a fix for
+    attackers setting undesired attributes on a Javascript object, leading to
+    privileged code execution - CVE-2022-2200. Note that mozilla describe this
+    as 'moderate'. Details are not yet public, see the advisory for firefox-91.11.0
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-25/">mfsa-2022-25</a>.
+    Further details are expected at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2200">CVE-2022-2200 (Not yet public)</a>.</p>
+    <p>To fix this, update to JS-91.11.0 or later using the instructions for
+    <a href="../view/svn/general/js91.html">JS91 (sysv)</a> or
+    <a href="../view/systemd/general/js91.html">JS91 (systemd)</a>.</p>
+
+    <a id="sa-11.1-066"/>
+    <h4>11.1 066 (LFS) OpenSSL    Date: 2022-06-22  Severity: Medium</h4>
+    <p>In OpenSSL 3.0.3, 1.1.1o, and earlier 3.0 or 1.1.1 releases, an
+    improper handling of shell metacharacters allowing command injection
+    were found in the c_rehash script.  This may be exploited to execute
+    arbitrary commands, causing a privilege escalation if c_rehash is
+    executed (maybe automatically in some configuration) with privileges.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2068">CVE-2022-2068</a>,
+    and more details are available at
+    <a href="https://www.openssl.org/news/secadv/20220621.txt">the OpenSSL
+    security advisory</a>.</p>
+    <p>Use of the c_rehash script is considered obsolete and should be
+    replaced by <code>openssl rehash</code> command.</p>
+    <p>To fix this vulnerability, if you are using OpenSSL 1.1.1 releases,
+    update to OpenSSL-1.1.1p or later using the instructions for
+    <a href="../../lfs/view/11.0/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/11.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.
+    If you are using OpenSSL 3.0 releases, update to OpenSSL-3.0.5 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.  Do not update to OpenSSL-3.0.4 because 3.0.4 contains a severe
+    issue and our workaround for it is no longer in the book.</p>
+
+    <a id="sa-11.1-065"/>
+    <h4>11.1 065 Qt5    Date: 2022-06-22  Severity: High</h4>
+    <p>In Qt5 5.15.6 (commercial), a security vulnerability has been fixed
+    which could allow an out-of-bound write in the qtbase code. The fix has
+    been ported to the repository maintained by kde, and is available in
+    the patch provided for Qt-5.15.5 in BLFS. It is recommended that you
+    update to version 5.15.5 as soon as possible. This vulnerability has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38593">CVE-2022-38593</a>.</p>
+    <p>To fix this vulnerability, update to Qt-5.15.5 using the instructions for
+    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> or
+    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a>.</p>
+
+    <a id="sa-11.1-064"/>
+    <h4>11.1 064 gstreamer    Date: 2022-06-18  Severity: High</h4>
+    <p>In gstreamer (and plugins) 1.20.3, seven security vulnerabilities were
+    fixed which dould allow for heap overwrites, leading to arbitrary code
+    execution or denial of service (application crashes). These vulnerabilities
+    occur when processing AVI files, MKV files (which are using zlib, bz2, or
+    LZO compression), MP4 files (which are using zlib compression), and when
+    processing files which use the Matroska video codec. If you are using
+    gstreamer and it's plugins for playing files from the internet, it is
+    recommended that you update to version 1.20.3 of the stack as soon as
+    possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1921">CVE-2022-1921</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1922">CVE-2022-1922</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1923">CVE-2022-1923</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1924">CVE-2022-1924</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1925">CVE-2022-1925</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2122">CVE-2022-2122</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1920">CVE-2022-1920</a>.</p>
+    <p>To fix these vulnerabilities, update to gstreamer-1.20.3 as well as the
+    plugins using the instructions for
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
+    <a id="sa-11.1-063"/>
+    <h4>11.1 063 Exo          Date: 2022-06-13  Severity: Critical</h4>
+    <p>In Exo-4.16.4, a security vulnerability was fixed that could allow for
+    Exo to silently execute malicious .desktop files which come from outside
+    sources, such as from the web. The vulnerability exists due to a logic error
+    which allows for untrusted .desktop files to be executed, and has been
+    resolved by only executing local .desktop files instead.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32278">CVE-2022-32278</a>.</p>
+    <p>To fix this vulnerability, update to Exo-4.16.4 or later using the
+    instructions for
+    <a href="../view/svn/xfce/exo.html">Exo (sysv)</a> or
+    <a href="../view/systemd/xfce/exo.html">Exo (systemd)</a>.</p>
+
+    <a id="sa-11.1-062"/>
+    <h4>11.1 062 PHP          Date: 2022-06-13  Severity: Medium</h4>
+    <!-- Might need to be promoted when more details are available at NVD. -->
+    <p>In PHP-8.1.7, two security vulnerabilities were fixed that could allow
+    for remote code execution and denial of service when the mysqlnd and pgsql
+    modules are in use. In the case of mysqlnd, the vulnerability happens while
+    accepting passwords from a user, and results in a buffer overflow. In the
+    case of pgsql, there is an uninitialized array vulnerability that results
+    in remote code execution. If you have an application which accepts passwords
+    from users (and is written in PHP and uses mysqlnd), or which uses pgsql,
+    update to php-8.1.7 immediately as there are exploits known in the wild.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31625">CVE-2022-31625 (not yet public)</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31626">CVE_2022-31626 (not yet public)</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.1.7 using the
+    instructions for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+    <a id="sa-11.1-061"/>
+    <h4>11.1 061 Apache HTTPD Date: 2022-06-13  Severity: High</h4>
+    <p>In httpd-2.4.54, several security vulnerabilities were fixed that could
+    allow for information disclosure (in applications using mod_lua),
+    authentication bypass (for applications using mod_proxy), denial of service
+    (when using mod_lua or mod_sed), and information disclosure when httpd
+    compares strings (using ap_strcmp_match() or ap_rwrite()). A vulnerability
+    also exists in mod_proxy_ajp that would allow for HTTP Request Smuggling.
+    In a standard configuration, only the information disclosure vulnerabilities
+    for strings are relevant, but some users may have applications which use
+    mod_proxy, mod_lua, or mod_sed, and may be impacted as well. Updating to
+    httpd-2.4.54 is recommended.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31813">CVE-2022-31813</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30556">CVE-2022-30556</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30522">CVE-2022-30522</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29404">CVE-2022-29404</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28615">CVE-2022-28615</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28614">CVE-2022-28614</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28330">CVE-2022-28330</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-26377">CVE-2022-26377</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.54 or later using the
+    instructions for
+    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+
+    <a id="sa-11.1-060"/>
+    <h4>11.1 060 ntfs-3g      Date: 2022-06-13  Severity: Critical</h4>
+    <p>In ntfs-3g-2022.5.17, several security vulnerabilities were fixed that
+    could allow for kernel-level code execution. These vulnerabilities all occur
+    due to incorrect validation of several kinds of NTFS metadata, which will
+    cause buffer overflows when a drive (or disk image) is mounted, leading to
+    kernel level code execution. Proof-of-concept exploits for all of these
+    vulnerabilities are floating around in the wild, and updating to the latest
+    version is recommended immediately if you have this package installed.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46790">CVE-2021-46790</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30784">CVE-2022-30784</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30786">CVE-2022-30786</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30788">CVE-2022-30788</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30789">CVE-2022-30789</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30783">CVE-2022-30783</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30785">CVE-2022-30785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30787">CVE-2022-30787</a>.</p>
+    <p>To fix these vulnerabilities, update to NTFS-3g-2022.5.17 or later using
+    the instructions for
+    <a href="../view/svn/postlfs/ntfs-3g.html">ntfs-3g (sysv)</a> or
+    <a href="../view/systemd/postlfs/ntfs-3g.html">ntfs-3g (systemd)</a>.</p>
+
+    <a id="sa-11.1-059"/>
+    <h4>11.1 059 WebKitGTK+   Date: 2022-06-13  Severity: High</h4>
+    <p>In WebKitGTK+-2.36.3, five security vulnerabilities were fixed that may
+    allow for remote code execution when processing maliciously crafted web
+    content, such as videos, audio files, advertisements, and web pages. These
+    vulnerabilties occur due to improper input validation when processing files,
+    and were classified as memory corruption and use-after-free issues, being
+    fixed by improved state and memory management. Updating to WebKitGTK+-2.36.3
+    immediately is recommended if you are using it in a web browser capacity.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-26700">CVE-2022-26700</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26709">CVE-2022-26709</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26717">CVE-2022-26717</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26716">CVE-2022-26716</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-26719">CVE-2022-26719</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.36.3 or later using
+    the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
+    <a id="sa-11.1-058"/>
+    <h4>11.1 058 libtiff      Date: 2022-06-13  Severity: Medium</h4>
+    <p>In libtiff-4.4.0, two security vulnerabilities were fixed that could
+    allow for denial of service and memory corruption when processing crafted
+    files. These occur in the 'tiffinfo' tool and in the 'tiffcp' tool, which
+    are commonly used by users who need to manipulate TIFF files.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-1354">CVE-2022-1354</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2022-1355">CVE-2022-1355</a>.</p>
+    <p>To fix these vulnerabilities, update to libtiff-4.4.0 using the
+    instructions for
+    <a href="../view/svn/general/libtiff.html">libtiff (sysv)</a> or
+    <a href="../view/systemd/general/libtiff.html">libtiff (systemd)</a>.</p>
+
+    <a id="sa-11.1-057"/>
+    <h4>11.1 057 CUPS         Date: 2022-06-13  Severity: Medium</h4>
+    <p>In CUPS-2.4.2, a security vulnerability was fixed that could allow for
+    a local privilege escalation to root (or the 'lp' user on LFS systems) due
+    to a logic error that occurs when processing internal certificates. Upstream
+    has noted that the vulnerability is trivial to exploit and can occur in the
+    CUPS web interface, which is often used for configuring and installing
+    printers.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-26691">CVE-2022-26691</a>,
+    and more details are available at
+    <a href="https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2022/MNDT-2022-0026/MNDT-2022-0026.md">Mandiant Disclosure</a>.</p>
+    <p>To fix this vulnerability, update to CUPS-2.4.2 or later using the
+    instructions for
+    <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+
+    <a id="sa-11.1-056"/>
+    <h4>11.1 056 Thunderbird  Date: 2022-06-01  Severity: High</h4>
+    <p>In thunderbird 91.10.0 several vulnerabilites were fixed, of which six
+    were rated high and one medium. Documented in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-22/">mfsa-2022-22</a>.
+    The CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1834">CVE-2022-1834 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31736">CVE-2022-31736 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31737">CVE-2022-31737 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31738">CVE-2022-31738 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31741">CVE-2022-31741 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31742">CVE-2022-31742 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31747">CVE-2022-31747 (Not yet public)</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.10.0 or later
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.1-055"/>
+    <h4>11.1 055 NSS  Updated: 2022-06-01  Severity: High</h4>
+    <p>In NSS-3.68.4, 3.78.1 and 3.79 two bugs with restricted access were fixed.
+    It is assumed these are vulnerability fixes, and in the absence of further
+    details they are rated as high. The bugs are
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1767590">bmo1767590</a> and
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1766978">bmo1766978</a></p>
+    <p>The first of these has now been identified as CVE-2022-31741 in the list of
+    fixes for thunderbird-91.10.0,
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-22/">mfsa-2022-22</a>.</p>
+    <p>To fix this, update to at least NSS-3.79
+    using the instructions for
+    <a href="../view/svn/postlfs/nss.html">NSS (sysv)</a> or
+    <a href="../view/systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
+
+    <a id="sa-11.1-054"/>
+    <h4>11.1 054 Firefox  Date: 2022-05-31  Severity: High</h4>
+    <p>In firefox 91.10.0 several vulnerabilities were fixed, of which five
+    were rated high and one rated medium. These are documented in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-21/">mfsa-2022-21</a>.
+    The CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31736">CVE-2022-31736 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31737">CVE-2022-31737 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31738">CVE-2022-31738 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31741">CVE-2022-31741 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31742">CVE-2022-31742 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31747">CVE-2022-31747 (Not yet public)</a>.</p>
+    <p>To fix these, update to firefox-91.10.0esr or later using the instructions
+    for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+
+    <a id="sa-11.1-053"/>
+    <h4>11.1 053 VIM (LFS and BLFS) Date: 2022-05-29 Severity: Medium</h4>
+    <p>In vim-8.2.5014, 11 vulnerabilities causing vim crashing because
+    of buffer overflow, use after free, uncontrolled recursion, and NULL
+    pointer dereference have been found and fixed.  The analysis of some
+    vulnerabilities among them suggests that these might be exploited for
+    remote execution.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1616">CVE-2022-1616</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1620">CVE-2022-1620</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1621">CVE-2022-1621</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1629">CVE-2022-1629</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1674">CVE-2022-1674</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1674">CVE-2022-1733</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1735">CVE-2022-1735</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1769">CVE-2022-1769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1771">CVE-2022-1771</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1785">CVE-2022-1785</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1796">CVE-2022-1796</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-8.2.5014 or later using
+    the instructions for
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
+    <a id="sa-11.1-052"/>
+    <h4>11.1 052 Logrotate    Date: 2022-05-27  Severity: High</h4>
+    <p>A vulnerability was found in logrotate in how the state file is
+    created. The state file is used to prevent parallel executions of
+    multiple instances of logrotate by acquiring and releasing a file
+    lock. When the state file does not exist, it is created with
+    world-readable permission, allowing an unprivileged user to lock the
+    state file, stopping any rotation.
+    This vulnerabilty has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1348">CVE-2022-1348</a>.</p>
+    <p>To fix this vulnerabilty, update to logrotate-3.20.1 or later with
+    the instructions for
+    <a href="../view/svn/general/logrotate.html">logrotate (sysv)</a> or
+    <a href="../view/systemd/general/logrotate.html">logrotate (systemd)</a>.</p>
+
+    <a id="sa-11.1-051"/>
+    <h4>11.1 051 Seamonkey    Date: 2022-05-26  Severity: Critical</h4>
+    <p>A security vulnerability was identified in Seamonkey-2.53.12 that could
+    allow for remote attackers to execute arbitrary code via crafted JavaScript
+    statements. This occurs due to prototype pollution in the top-level await
+    implementation, which can happen when triggering notifications from websites.
+    This is identical to CVE-2022-1802 in Firefox and Thunderbird, but Seamonkey
+    does not contain the required code to be vulnerable to CVE-2022-1529. The
+    BLFS editors have created a patch to prevent this issue from happening.
+    This vulnerabilty has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1802">CVE-2022-1802 (not yet public)</a>.</p>
+    <p>To fix this vulnerabilty, rebuild Seamonkey-2.53.12 with the patch using
+    the instructions for
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+    <a id="sa-11.1-050"/>
+    <h4>11.1 050 MariaDB      Date: 2022-05-26  Severity: High</h4>
+    <p>In MariaDB-10.6.8, 24 security vulnerabilties were fixed that could allow
+    for remote (and local) attackers to create, modify, and delete data, as well
+    as perform remote code execution on the server in the context of the user
+    which owns the MariaDB server, and cause the server to crash. This occurs due
+    to crafted SQL statements. Updating to MariaDB-10.6.8 is recommended if you
+    run a server which accepts queries from anonymous users, or from the internet.
+    These vulnerabilties have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-46669">CVE-2021-46669</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27376">CVE-2022-27376</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27377">CVE-2022-27377</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27378">CVE-2022-27378</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27379">CVE-2022-27379</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27380">CVE-2022-27380</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27381">CVE-2022-27381</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27382">CVE-2022-27382</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27383">CVE-2022-27383</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27384">CVE-2022-27384</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27386">CVE-2022-27386</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27387">CVE-2022-27387</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27444">CVE-2022-27444</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27445">CVE-2022-27445</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27446">CVE-2022-27446</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27447">CVE-2022-27447</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27448">CVE-2022-27448</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27449">CVE-2022-27449</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27451">CVE-2022-27451</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27452">CVE-2022-27452</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27455">CVE-2022-27455</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27456">CVE-2022-27456</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27457">CVE-2022-27457</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27458">CVE-2022-27458</a>.</p>
+    <p>To fix these vulnerabilties, update to MariaDB-10.6.8 or later using the
+    instructions for
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
+    <a id="sa-11.1-049"/>
+    <h4>11.1 049 cifs-utils   Date: 2022-05-26  Severity: High</h4>
+    <p>In cifs-utils-6.15, two security vulnerabilties were fixed that could
+    allow for local attackers to escalate privileges to root, or for information
+    disclosure (credentials) in some situations. The privilege escalation
+    vulnerability happens due to a stack-based buffer overflow, which occurs
+    when parsing the ip= command line argument to the mount.cifs command. The
+    information disclosure vulnerability occurs due to logging errors when
+    a file contains an 'equals sign' (=) that does not equal a valid credentials
+    file.
+    These vulnerabilties have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27239">CVE-2022-27239</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29869">CVE-2022-29869</a>.</p>
+    <p>To fix these vulnerabilties, update to cifs-utils-6.15 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/cifsutils.html">cifs-utils (sysv)</a> or
+    <a href="../view/systemd/basicnet/cifsutils.html">cifs-utils (systemd)</a>.</p>
+
+    <a id="sa-11.1-048"/>
+    <h4>11.1 048 PostgreSQL   Date: 2022-05-26  Severity: High</h4>
+    <p>In PostgreSQL-14.3, a security vulnerability was fixed that could allow
+    for a user to create objects within a database that could execute arbitrary
+    SQL code with superuser permissions the next time that autovacuum processed
+    the object, as well as when a superuser ran commands against it. This affects
+    the Autovacuum, CLUSTER, CREATE INDEX, REINDEX, REFRESH MATERIALIZED VIEW, and
+    pg_amcheck commands, due to them activating the "security restricted operation"
+    protection mechanism too late, or not at all in some code paths. If you use
+    PostgreSQL for anything in a server capacity, updating PostgreSQL is recommended.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-1552">CVE-2022-1552</a>.</p>
+    <p>To fix this vulnerability, update to PostgreSQL-14.3 or later using the
+    instructions for
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
+    <a id="sa-11.1-047"/>
+    <h4>11.1 047 OpenJPEG     Date: 2022-05-26  Severity: Medium</h4>
+    <p>In OpenJPEG-2.5.0, a security vulnerability was fixed that could allow
+    for remote attackers to crash an application, causing a denial of service.
+    This occurs when an attacker uses a command line option called "-ImgDir"
+    on any of the OpenJPEG tools, when the directory contains 1048576 files.
+    This particular command line option combined with the amount of files
+    is relatively uncommon, but decompressing, compressing, and dumping
+    JPEG2000 files is a rather common operation. If you use OpenJPEG on a
+    folder with millions of JPEG files in it, updating OpenJPEG is recommended.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29338">CVE-2021-29338</a>.</p>
+    <p>To fix this vulnerability, update to OpenJPEG-2.5.0 or later using the
+    instructions for
+    <a href="../view/svn/general/openjpeg2.html">OpenJPEG (sysv)</a> or
+    <a href="../view/systemd/general/openjpeg2.html">OpenJPEG (systemd)</a>.</p>
+
+    <a id="sa-11.1-046"/>
+    <h4>11.1 046 Epiphany     Date: 2022-05-26  Severity: High</h4>
+    <p>In Epiphany-42.2, a security vulnerability was fixed that could allow
+    for remote code execution due to a client buffer overflow when processing
+    some crafted HTML documents. The vulnerability exists in the
+    ephy_string_shorten function in the User Interface process, and it occurs
+    due to the number of bytes for a UTF-8 ellipsis character not being properly
+    considered. As a result of this, remote code execution can be achieved by
+    visiting web pages that have overly long titles.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29536">CVE-2022-29536</a>.</p>
+    <p>To fix this vulnerability, update to Epiphany-42.2 using the
+    instructions for
+    <a href="../view/svn/xsoft/epiphany.html">Epiphany (sysv)</a> or
+    <a href="../view/systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
+
+    <a id="sa-11.1-045"/>
+    <h4>11.1 045 libxml2      Date: 2022-05-26  Severity: Medium</h4>
+    <p>In libxml2-2.9.14, a security vulnerability was fixed that can cause
+    out-of-bounds memory writes due to several buffer handling functions not
+    checking for integer overflows. Note that exploitation requires a victim to
+    open a crafted XML file that is multiple gigabytes in size, however other
+    software that uses libxml2's buffer functions, including libxslt, is
+    impacted as well.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29824">CVE-2022-29824</a>.</p>
+    <p>To fix this vulnerability, update to libxml2-2.9.14 using the
+    instructions for
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
+    <a id="sa-11.1-044"/>
+    <h4>11.1 044 Thunderbird  Date: 2022-05-22  Severity: Critical</h4>
+    <p>In thunderbird 91.9.1 two critical javascript vulnerabilities were fixed,
+    documented in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-19/">mfsa-2022-19</a>.
+    The CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1529">CVE-2022-1529 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1802">CVE-2022-1802 (Not yet public)</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-91.9.1 or later
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.1-043"/>
+    <h4>11.1 043 Firefox  Date: 2022-05-22  Severity: Critical</h4>
+    <p>In firefox 91.9.1 two critical javascript vulnerabilities were fixed,
+    documented in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-19/">mfsa-2022-19</a>.
+    The CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1529">CVE-2022-1529 (Not yet public)</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1802">CVE-2022-1802 (Not yet public)</a>.</p>
+    <p>To fix these, update to firefox-91.9.1esr or later using the instructions
+    for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
     <a id="sa-11.1-042"/>
     <h4>11.1 042 BIND9     Date: 2022-05-19 Severity: Medium</h4>
 
