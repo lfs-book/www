@@ -83,6 +83,28 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-099"/>
+    <h4>11.1 099 Linux Kernel (LFS)  Date: 2022-08-23  Severity: High</h4>
+    <p>In Linux-5.19.2, four security vulnerabilities were fixed.  The
+    first one can be exploited by an attacker who tricks the administrator
+    to mount and operate on a maliciously crafted ext file system, causing
+    a denial-of-service (kernel panic).  The second or third one can be
+    exploited by an attacker who has already got the CAP_NET_ADMIN
+    priviledge (maybe in one separate namespace) to perform further
+    priviledge escalation.  The fourth one allows an unprivileged attacker
+    to cause a denial-of-service (kernel panic) or potential priviledge
+    escalation.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1184">CVE-2022-1184i</a> ,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2586">CVE-2022-2586</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2588">CVE-2022-2588</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2585">CVE-2022-2585</a> (all of them are not disclosed yet).</p>
+    <p>To fix these vulnerabilities, update to Linux 5.19.2 (or 5.18.19,
+    5.15.62, 5.10.137 if you prefer to stay on an old kernel series)
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
     <a id="sa-11.1-098"/>
     <h4>11.1 098 libxml2    Date: 2022-08-18    Severity: High</h4>
     <p>In libxml2-2.10.0, a security vulnerability was fixed that could
