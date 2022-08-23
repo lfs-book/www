@@ -83,6 +83,25 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-100"/>
+    <h4>11.1 100 Shadow (LFS and BLFS)  Date: 2022-08-23  Severity: Low</h4>
+    <p>In shadow-4.12.2, a time-of-check time-of-use race condition was
+    fixed.  When an administrator is running shadow utilities (useradd or
+    userdel), a local attacker with permissions to write into a directory
+    being operated by the utilitiy can conduct symbolic link attacks,
+    leading to their ability to alter or remove directories outside of this
+    directory.
+    This vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2013-4235">CVE-2013-4235</a>.</p>
+    <p>To fix these vulnerabilities, update to shadow-4.12.2 using the
+    instructions from the BLFS book for
+    <a href="../view/git/chapter08/shadow.html">Shadow (sysv)</a> or
+    <a href="../view/systemd/chapter08/shadow.html">Shadow (systemd)</a>.
+    If you are unwilling or unable to update, be careful when you use
+    the utilities from shadow as root.  Especially, when you remove a
+    user with userdel, ensure no processes are running as this user
+    first.</p>
+
     <a id="sa-11.1-099"/>
     <h4>11.1 099 Linux Kernel (LFS)  Date: 2022-08-23  Severity: High</h4>
     <p>In Linux-5.19.2, four security vulnerabilities were fixed.  The
@@ -95,7 +114,7 @@
     to cause a denial-of-service (kernel panic) or potential priviledge
     escalation.
     These vulnerabilities have been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1184">CVE-2022-1184i</a> ,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1184">CVE-2022-1184</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2586">CVE-2022-2586</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2588">CVE-2022-2588</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2585">CVE-2022-2585</a> (all of them are not disclosed yet).</p>
