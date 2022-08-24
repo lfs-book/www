@@ -79,8 +79,16 @@
 
     <h3>Linux kernel</h3>
 
+    <a id="sa-11.1-102"/>
+    <h4>11.1 101 Linux Kernel (LFS)  Date: 2022-08-24  Severity: High</h4>
+    <p>In Linux-6.0-rc2, there is a fix for a vulnerability which could be
+    exploited to write into read-only memory mappings and cause privilege
+    escalation.  As no fixes are backported into stable releases so far,
+    disable <code>CONFIG_USERFAULTFD</code> as a workaround.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.1-102">11.1-102</a></p>
+
     <a id="sa-11.1-099"/>
-    <h4>11.1 099 Linux Kernel (LFS)  Date: 2022-08-24  Severity: High</h4>
+    <h4>11.1 099 Linux Kernel (LFS)  Date: 2022-08-23  Severity: High</h4>
     <p>In Linux-5.19.2 (and 5.18.19, 5.15.62, 5.10.137) there are fixes for
     four vulnerabilities which could be exploited to cause denial-of-service
     or privilege escalation.  One of those vulnerabilities can be exploited

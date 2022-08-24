@@ -83,6 +83,25 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-102"/>
+    <h4>11.1 102 Linux Kernel (LFS)  Date: 2022-08-24  Severity: High</h4>
+    <p>In Linux-6.0-rc2, a race condition allowing an unprivileged, local
+    user to gain write access to read-only memory mappings and increase
+    their privileges on the system was fixed.
+    This vulnerability have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2590">CVE-2022-2590</a> (not disclosed yet).</p>
+    <p>This vulnerability affects Linux 5.16 or later, and the fix is not
+    backported into any stable release yet.  To mitigate the vulnerability,
+    disable <code>CONFIG_USERFAULTFD</code> in the kernel configuration
+    and rebuild the kernel using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <p>No LFS or BLFS components invoke userfaultfd() system call as of
+    now. If you need to enable <code>CONFIG_USERFAULTFD</code> for some
+    programs invoking userfaultfd(), update to Linux 6.0-rc2 or later to
+    fix the vulnerability.  But using a release candidate is not
+    recommended by the editors.</p>
+
     <a id="sa-11.1-101"/>
     <h4>11.1 101 Intel Microcode  Date: 2022-08-24  Severity: Medium</h4>
     <p>In intel-microcode-20220809, a hardware vulnerability was fixed.
