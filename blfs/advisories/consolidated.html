@@ -83,6 +83,33 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-101"/>
+    <h4>11.1 101 Intel Microcode  Date: 2022-08-24  Severity: Medium</h4>
+    <p>In intel-microcode-20220809, a hardware vulnerability was fixed.
+    When the interrupt controller (APIC) operates in xAPIC (also known as
+    "legacy") mode, the APIC configuration registers are exposed through a
+    memory-mapped I/O (MMIO) page.  An attacker able to execute code on a
+    target CPU can perform an unaligned read from the MMIO page, then the
+    vulnerability may cause the APIC to return stale data from previous
+    requests made by the same processor core to the same configuration
+    page, causing a sensitive information disclosure.
+    This vulnerability have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21233">CVE-2022-21233</a>.</p>
+    <p>Intel recommends to enable x2APIC mode, which disables the xAPIC
+    MMIO page and instead exposes APIC registers through model-specific
+    registers (MSRs) to mitigate the issue.  Run
+    <code>dmesg | grep 'x2apic'</code> to see if APIC is operating in
+    x2APIC mode.  If the output contains "x2apic enabled", it indicates
+    the APIC is already operating in x2APIC mode and no further action is
+    needed.  If there is no output, enable <code>CONFIG_X86_X2APIC</code>
+    in the kernel configuration and rebuild the kernel, then recheck after
+    booting the new kernel.  If the output contains "x2apic is disabled
+    because BIOS sets x2apic opt out bit", try to enable x2APIC in the BIOS
+    setting.  If it's not possible, you'll need to update to at least
+    intel-microcode-20220809 using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
     <a id="sa-11.1-100"/>
     <h4>11.1 100 Shadow (LFS and BLFS)  Date: 2022-08-23  Severity: Low</h4>
     <p>In shadow-4.12.2, a time-of-check time-of-use race condition was
@@ -91,7 +118,7 @@
     being operated by the utilitiy can conduct symbolic link attacks,
     leading to their ability to alter or remove directories outside of this
     directory.
-    This vulnerabilities have been assigned
+    This vulnerability have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2013-4235">CVE-2013-4235</a>.</p>
     <p>To fix these vulnerabilities, update to shadow-4.12.2 using the
     instructions from the BLFS book for
