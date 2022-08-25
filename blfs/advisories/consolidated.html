@@ -83,6 +83,26 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-103"/>
+    <h4>11.1 103 Firefox             Date: 2022-08-25  Severity: High</h4>
+    <p>In Firefox-102.2.0esr, five security vulnerabilities were fixed that
+    could allow for address bar spoofing, permission inheritance when
+    processing crafted XSLT documents, data race conditions, and memory safety
+    bugs which may lead to remote code execution. If you are staying on 91esr,
+    please note that the corresponding version (91.13.0esr) is the final
+    release of that branch, and you should update to Firefox-102esr.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-38472">CVE-2022-38472</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-38473">CVE-2022-38473</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-38476">CVE-2022-38476</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2022-38477">CVE-2022-38477</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-38478">CVE-2022-38478</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-102.2.0esr or later
+    (or Firefox-91.13.0esr, although this is the final release of that branch)
+    using the instructions for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
     <a id="sa-11.1-102"/>
     <h4>11.1 102 Linux Kernel (LFS)  Date: 2022-08-24  Severity: High</h4>
     <p>In Linux-6.0-rc2, a race condition allowing an unprivileged, local
