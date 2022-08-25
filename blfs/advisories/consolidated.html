@@ -83,6 +83,22 @@
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
+    <a id="sa-11.1-105"/>
+    <h4>11.1 105 WebKitGTK+          Date: 2022-08-25  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.36.7, a critical 0day security vulnerability was fixed
+    that allows for trivial remote code execution when processing maliciously
+    crafted web advertisement. This was classified as an out-of-bounds write,
+    and was addressed with improved boundary checking. Visiting a web page, or
+    having content loaded in (such as advertisements), can trigger this
+    vulnerability. There are numerous reports that this vulnerability is under
+    active exploitation, so updating immediately is recommended.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32893">CVE-2022-32893</a>.</p>
+    <p>To fix this vulnerability, update to WebKitGTK+-2.36.7 or later using
+    the instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="sa-11.1-104"/>
     <h4>11.1 104 Thunderbird         Date: 2022-08-25  Severity: High</h4>
     <p>In Thunderbird-102.2.0, five security vulnerabilities were fixed that
