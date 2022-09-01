@@ -1,0 +1,48 @@
+<!--#set var="pageTitle" value="LFS Errata" -->
+<!--#include virtual="/lfs/header.html" -->
+<!--#include virtual="/lfs/menu.html" -->
+    <div class="main">
+     <h1>Errata for the 11.2-systemd Version of the LFS Book</h1>
+
+<!-- TEMPLATE
+       <h2>Known Security Vulnerabilities</h2>
+         <ul>
+            <li><p>Item 1</p></li>
+            <li><p>Item 2</p></li>
+         </ul>
+
+       <h2>Miscellaneous Errata</h2>
+         <ul>
+           <li><p>Item 1</p></li>
+           <li><p>Item 2</p></li>
+         </ul>
+
+     END TEMPLATE -->
+
+
+
+       <h2>Known Security Vulnerabilities</h2>
+         <ul>
+           <li>Read <a href='../../advisories/11.2.html'>the security advisories page</a>.</li>
+         </ul>
+<!--
+       <h2>Miscellaneous Errata</h2>
+
+         <ul>
+           <li>In the installation of Systemd, the tarball
+           <code>systemd-man-pages-250.tar.xz</code> was untarred with
+           <code>- -strip-components=1</code>, causing the man pages
+           installed into the wrong location.  You should remove this
+           <code>- -strip-components=1</code> option building Systemd
+           when you are following the LFS 11.1-systemd book.
+           If you have already built LFS 11.1-systemd, remove the misplaced
+           man pages by running the command as the <code>root</code> user:
+           <code>rm -v /usr/share/man/*.[0-9]</code>.  If you have not
+           reinstalled Systemd following BLFS instruction with the optional
+           packages for rebuilding the manual pages, and does not plan to do
+           so, you can reinstall the man pages by running
+           <code>tar xf systemd-man-pages.250.tar.xz -C /usr/share/man</code>
+           as the <code>root</code> user.</li>
+         </ul>
+-->
+<!--#include virtual="/common/footer.html" -->
