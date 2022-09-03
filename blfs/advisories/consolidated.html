@@ -83,6 +83,33 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-001"/>
+    <h4>11.2 001 Poppler             Date: 2022-09-03  Severity: Critical</h4>
+    <p>In poppler-22.09.0, a critical security vulnerability was fixed that
+    allows for arbitrary code execution when PDF files are processed. This uses
+    the same exploit as "FORCEDENTRY" for Apple devices last year, which allowed
+    for trivial remote code execution through WebKit's image processing system.
+    Poppler is used to process PDF files, and a proof of concept exploit which
+    causes a crash is available to the public. Exploitation can happen simply
+    by opening a PDF file, or downloading a PDF file to a location where Tracker
+    or Baloo can index it, or even when printing a PDF file using CUPS. Update
+    to poppler-22.09.0 as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38784">CVE-2022-38784</a>.</p>
+    <p>To fix this vulnerability, update to poppler-22.09.0 or later using the
+    instructions for
+    <a href="../view/svn/general/poppler.html">Poppler (sysv)</a> or
+    <a href="../view/systemd/general/poppler.html">Poppler (systemd)</a>.</p>
+    <p>Unfortunately, this security update breaks the compilation of two
+    packages (Inkscape and Libreoffice) due to incompatible API changes.
+    The BLFS team has prepared patches for both of these packages.</p>
+    <p>If you are going to build Inkscape, apply this patch before compiling
+    the package:
+    <a href="https://linuxfromscratch.org/patches/downloads/inkscape/inkscape-1.2.1-poppler_22_09_fixes-1.patch">Inkscape Poppler Fixes Patch</a>.</p>
+    <p>If you are going to build Libreoffice, apply this patch before compiling
+    the package:
+    <a href="https://linuxfromscratch.org/patches/downloads/libreoffice/libreoffice-7.4.0.3-poppler_22_09-fixes-1.patch">Libreoffice Poppler Fixes Patch</a>.</p>
+
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->
 
