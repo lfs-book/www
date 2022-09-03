@@ -7,21 +7,18 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
+<!--
      <ul>
        <li>There are no current errata for blfs-11.2-systemd.</li>
      </ul>
-<!--
-     <ul>
-       <li>Phonon installs plugins in /usr/lib, not /usr/lib/qt5 and the
-       QT_PLUGIN_PATH for kf5 was therefore wrong. This probably only
-       affects old ex-qt4 packages from 'Further KDE5 packages' such as
-       the dragon video player. For the correct QT_PLUGIN_PATH etc see the
-       development book.</li>
-       <li>In X265 the snapshot does not install the shared library and
-       pkgconfig file if git has not been installed. Add -DGIT_ARCHETYPE=1
-       to the cmake command to fix this.</li>
-     </ul>
 -->
+
+     <ul>
+       <li>The dependencies as published for libreoffice were incorrect.
+       Libreoffice no longer needs neon, serf, or apr - but needs libwebp
+       and libtiff to be installed.</li>
+     </ul>
+
      <h2>Known Security Vulnerabilities</h2>
      
      <p>Details of Security Advisories for this version of BLFS are now
