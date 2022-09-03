@@ -82,6 +82,36 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-003"/>
+    <h4>11.2 003 Thunderbird         Date: 2022-09-03  Severity: High</h4>
+    <p>In Thunderbird-102.2.1, several security vulnerabilities were fixed that
+    could allow for leakage of sensitive information, objects to be loaded and
+    processed unexpectedly, unauthorized network requests, and denial-of-service
+    attacks. The leakage of sensitive information will occur when composing a
+    reply to an HTML email with a 'META' refresh tag contained within, if the
+    meta tag has a 'refresh' attribute and if the tag contains a URL.
+    Thunderbird then starts a network request that URL and processes any
+    JavaScript that is located within the email as a result (or from the URL),
+    and executes it in the context of the message compose document.
+    The JavaScript code could allow for an unauthorized read or modification of
+    the contents of the email, and could also decrypt mails. The contents can
+    then be transmitted to the network, with it being sent to the URL in the
+    meta tag or to another URL depending on the JavaScript in use.
+    In the case of remote content not being blocked and iframe elements
+    triggering network requests, these occur whenever a user receives an HTML
+    email. The denial-of-service attack can occur when connected to a network
+    using the Matrix chat protocol, and can cause temporary corrpution. Update
+    to Thunderbird-102.2.1 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-3033">CVE-2022-3033</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-3032">CVE-2022-3032</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-3034">CVE-2022-3034</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-36059">CVE-2022-36059</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-102.2.1 using the
+    instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-11.2-002"/>
     <h4>11.2 002 cURL                Date: 2022-09-03  Severity: Low</h4>
     <p>In curl-7.85.0, a security vulnerability was fixed that could allow for
