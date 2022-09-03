@@ -82,6 +82,20 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-002"/>
+    <h4>11.2 002 cURL                Date: 2022-09-03  Severity: Low</h4>
+    <p>In curl-7.85.0, a security vulnerability was fixed that could allow for
+    a denial of service when processing cookies. When curl retrieves and parses
+    cookies from an HTTP(S) server, it accepts cookies using control codes.
+    When cookies that contain these control codes are sent back, it might make
+    the server return a 400 response, effectively allowing another site
+    to deny service to related sites.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-35252">CVE-2022-35252</a>.</p>
+    <p>To fix this vulnerability, update to cURL-7.85.0 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
 
     <a id="sa-11.2-001"/>
     <h4>11.2 001 Poppler             Date: 2022-09-03  Severity: Critical</h4>
