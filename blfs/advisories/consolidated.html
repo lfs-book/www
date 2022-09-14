@@ -82,6 +82,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-004"/>
+    <h4>11.2 004 Wireshark           Date: 2022-09-14  Severity: Medium</h4>
+    <p>In Wireshark-3.6.8, a security vulnerability was fixed that could allow
+    for a denial-of-service (excessive resource consumption) when using the
+    F5 Ethernet Trailer packet dissector. This can occur via packet injection
+    or via reading a crafted capture file, and is caused by an infinite loop.
+    Note that this security vulnerability is only applicable if you are
+    operating Wireshark on a network that has F5 Ethernet Trailer packets
+    passing along it.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3190">CVE-2022-3190</a>.</p>
+    <p>To fix this vulnerability, update to Wireshark-3.6.8 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-11.2-003"/>
     <h4>11.2 003 Thunderbird         Date: 2022-09-03  Severity: High</h4>
     <p>In Thunderbird-102.2.1, several security vulnerabilities were fixed that
