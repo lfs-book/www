@@ -82,6 +82,20 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-005"/>
+    <h4>11.2 005 Python (LFS and BLFS) Date: 2022-09-14 Severity: High</h4>
+    <p>In Python-3.10.7, a security vulnerability was fixed that could allow
+    for a denial-of-service (application crash) due to algorithmic complexity.
+    This occurs when converting between integers ans trings in bases other than
+    2 (binary), 4, 8 (octal), 16 (hexadecimal), or 32. The new limit is 4300
+    digits, and there was no limit previously.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-10735">CVE-2020-10735</a>.</p>
+    <p>To fix this vulnerability, update to Python-3.10.7 using the instructions
+    from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+
     <a id="sa-11.2-004"/>
     <h4>11.2 004 Wireshark           Date: 2022-09-14  Severity: Medium</h4>
     <p>In Wireshark-3.6.8, a security vulnerability was fixed that could allow
