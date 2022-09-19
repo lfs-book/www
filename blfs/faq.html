@@ -17,6 +17,7 @@
 	<li><a href="#gnome-versions">Any error while building part of Gnome</a></li>
 	<li><a href="#include-next-not-found">"fatal error: foo.h: No such file or directories" on include_next directives in C++ standard headers</a></li>
 	<li><a href="#oom-kill">"fatal error: Killed signal terminated program cc1plus"</a></li>
+	<li><a href="#libbfd-la">"cannot find -liberty: No such file or directory"</a></li>
       </ul>
       <h3><a href="#confissues">Configuration issues</a></h3>
       <ul>
@@ -77,6 +78,15 @@
       <p>If it's possible, you can solve the problem by adding more RAM into your system.  Otherwise, run make or ninja with "-j N", where N should be replaced with a relatively small positive integer.  You can try the value of N from the number of your CPU cores, down to 1.</p>
       <p>If this issue still lingers with N = 1, you should really add more RAM.  You may work around it by adding more swap, but swapping can make the building process slower.</p>
 	</dd>
+        <dt id="libbfd-la">cannot find -liberty: No such file or directory</dt>
+        <dd>
+          <p>It's because libbfd.la refers to the non-exist libiberty.
+          libbfd.la should be removed in LFS ("Cleaning Up") section as we
+          consider all .la files in LFS unneeded and harmful.</p>
+          <p>Please do not skip any section building LFS.  You may skip
+          some instruction only if the book explicitly says it's
+          optional.</p>
+        </dd>
       </dl>
       <p><a href="#blfsfaq">Back to the top.</a></p>
 
