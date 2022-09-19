@@ -82,6 +82,36 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-006"/>
+    <h4>11.2 006 QtWebEngine           Date: 2022-09-19 Severity: Critical</h4>
+    <p>In QtWebEngine-5.15.11, several security vulnerabilities were fixed that
+    could allow for remote code execution, arbitrary file creation and deletion,
+    denial of service, and information disclosure. These vulnerabilities occur
+    due to segmentation violations, use-after-free vulnerabilities,
+    out-of-bounds access, insufficent policy enforcement, heap buffer overflows,
+    and type confusion. These occur in a variety of subsystems, including WebGL,
+    WebRTC, DevTools, V8, Guest View, Filesystem API, and Messaging.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2610">CVE-2022-2610</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2477">CVE-2022-2477</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27406">CVE-2022-27406</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27405">CVE-2022-27405</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27404">CVE-2022-27404</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2294">CVE-2022-2294</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2295">CVE-2022-2295</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2160">CVE-2022-2160</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2162">CVE-2022-2162</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2158">CVE-2022-2158</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2008">CVE-2022-2008</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2010">CVE-2022-2010</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1854">CVE-2022-1854</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1857">CVE-2022-1857</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1855">CVE-2022-1855</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-5.15.11 or later
+    using the instructions for
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-11.2-005"/>
     <h4>11.2 005 Python (LFS and BLFS) Date: 2022-09-14 Severity: High</h4>
     <p>In Python-3.10.7, a security vulnerability was fixed that could allow
