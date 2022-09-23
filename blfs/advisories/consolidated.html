@@ -82,6 +82,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-009"/>
+    <h4>11.2 009 Expat        Date: 2022-09-23  Severity: Critical</h4>
+    <p>In expat-2.4.9, a critical security vulnerability was fixed that could
+    allow for arbitrary code execution or denial of service, depending on
+    the context of the program that's calling the library. This occurs due to
+    a use-after-free vulnerability in the doContent function. This can be
+    exploited trivially through malicious advertisements and other crafted
+    web content, but also through other means depending on the context of an
+    application that uses these libraries usese them in. The BLFS team
+    recommends updating to expat-2.4.9 as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40674">CVE-2022-40674</a>.</p>
+    <p>To fix this vulnerability, update to expat-2.4.9 or later using the
+    instructions for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa-11.2-008"/>
     <h4>11.2 008 WebKitGTK+          Date: 2022-09-21  Severity: Critical</h4>
     <p>In WebKitGTK+-2.36.8, two security vulnerabilities were fixed that could
