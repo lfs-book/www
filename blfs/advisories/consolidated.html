@@ -82,6 +82,21 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-011"/>
+    <h4>11.2 011 Unbound      Date: 2022-09-24  Severity: High</h4>
+    <p>In Unbound-1.16.3, a security vulnerability was fixed that could allow
+    for uncontrolled resource consumption due to a non-responsive delegation
+    attack. This can occur over the network and the attack complexity is low,
+    but the only significant impact is to system availability (excessive CPU
+    and memory consumption). The BLFS team recommends updating Unbound if you
+    are using it on a high-traffic server.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-3204">CVE-2022-3204</a>.</p>
+    <p>To fix this vulnerability, update to Unbound-1.16.3 using the
+    instructions for
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+
     <a id="sa-11.2-010"/>
     <h4>11.2 010 Node.js      Date: 2022-09-24  Severity: Critical</h4>
     <p>In Node.js-16.17.1, three security vulnerabilities were fixed that
