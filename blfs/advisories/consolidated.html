@@ -82,6 +82,24 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-010"/>
+    <h4>11.2 010 Node.js      Date: 2022-09-24  Severity: Critical</h4>
+    <p>In Node.js-16.17.1, three security vulnerabilities were fixed that
+    could allow for HTTP Request Smuggling and weak randomness when using
+    the HTTP Parser module or the WebCrypto keygen. These vulnerabilities
+    occur due to unchecked return values, bypasses of previous vulnerabilities,
+    and incorrect parsing of Multi-line Transfer-Encoding fields in a HTTP
+    header. These occur inside the internal llhttp module and within the
+    core of the package itself.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32213">CVE-2022-32213</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-35255">CVE-2022-35255</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-35256">CVE-2022-35256</a>.</p>
+    <p>To fix these vulnerabilities, update to Node.js-16.17.1 using the
+    instructions for
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+
     <a id="sa-11.2-009"/>
     <h4>11.2 009 Expat        Date: 2022-09-23  Severity: Critical</h4>
     <p>In expat-2.4.9, a critical security vulnerability was fixed that could
