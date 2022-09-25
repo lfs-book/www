@@ -82,6 +82,28 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-012"/>
+    <h4>11.2 012 BIND         Date: 2022-09-24  Severity: High</h4>
+    <p>In BIND-9.18.7, six security vulnerabilities were fixed that could allow
+    for denial of service and arbitrary code execution. These occur due to
+    processing large delegations, buffer overreads in statistics channel code,
+    memory leaks in code handling Diffie-Hellman key exchanges, memory leaks
+    when processing ECDSA and EDDSA keys in DNSSEC, and crashes when processing
+    stale caches. Note that the vulnerability when processing large delegations
+    will also cause extremely degraded performance. These vulnerabilities only
+    affect the server, not the client utilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2795">CVE-2022-2795</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2881">CVE-2022-2881</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2906">CVE-2022-2906</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3080">CVE-2022-3080</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38177">CVE-2022-38177</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38178">CVE-2022-38178</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.18.7 using the
+    instructions for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-11.2-011"/>
     <h4>11.2 011 Unbound      Date: 2022-09-24  Severity: High</h4>
     <p>In Unbound-1.16.3, a security vulnerability was fixed that could allow
