@@ -473,12 +473,10 @@
             <p>checking whether we are using GNU C... no<br />
                configure: error: GNU libc must be compiled using GNU CC</p>
           </div>
-          <p>It may be because egrep isn't working. Since egrep is a
-          shell-script which calls grep, this actually means there's a problem
-          with grep.</p>
-          <p>To test if egrep is working in the chroot environment,
+          <p>It may be because grep isn't working.
+          To test if grep is working in the chroot environment,
           run the following command from <em>inside</em> chroot:</p>
-          <code>egrep root /etc/passwd</code>
+          <code>grep -E root /etc/passwd</code>
           <p>If it doesn't print root's line from /etc/passwd, again, you have
           a problem. (This test also works if you encounter the problem after
           rebooting into the new LFS system.)</p>
