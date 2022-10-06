@@ -33,5 +33,10 @@
            security vulnerability. Please use expat-2.4.9 instead, see the
            security advisories for more information.</li>
          </ul>
+         <ul>
+           <li>The sanity check in "5.5 Glibc-2.36" is wrong. The first
+           command should read "echo 'int main(){}' | $LFS_TGT-gcc -xc -"
+	   instead of "echo 'int main(){}' | gcc -xc -".</li>
+         </ul>
 
 <!--#include virtual="/common/footer.html" -->
