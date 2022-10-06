@@ -65,20 +65,287 @@
 
     <h2>Items between the releases of the 11.2 and 11.3 books</h2>
 
-    <!-- Editors: This batch of advisories for the 11.1 books point to the
+    <!-- Editors: This batch of advisories for the 11.2 books point to the
     development books until we make a release. After a release, new advisories
-    for 11.2 need to point to the development books, but the existing 11.1
-    advisories need to be changed to point to 11.2 (sic), not 'stable' which
-    is a symlink and can change over time. That might sound odd, but the 11.1
-    advisories were developed during the build up to 11.2, so in normal
-    circumstances the 'or later' will be valid for the 11.2 release, but over
+    for 11.3 need to point to the development books, but the existing 11.2
+    advisories need to be changed to point to 11.3 (sic), not 'stable' which
+    is a symlink and can change over time. That might sound odd, but the 11.2
+    advisories were developed during the build up to 11.3, so in normal
+    circumstances the 'or later' will be valid for the 11.3 release, but over
     the longer term who knows what will happen to packages (e.g. getting
     replaced or archived). -->
 
     <!-- when we do have advisories, comment this for next time -->
 
+
+<!--
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
+-->
+
+    <a id="sa-11.2-013"/>
+    <h4>11.2 013 Thunderbird             Date: 2022-09-25  Severity: High</h4>
+    <p>In Thunderbird-102.2.2, six security vulnerabilities (on x86 linux,
+    there is another for ARM64, and one on MacOS) were fixed that could allow
+    for potentially exploitable crashes, session fixation, Content Security
+    Policy bypass and memory safety bugs which may lead to remote code
+    execution. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-42/">mfsa-2022-42</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3266">CVE-2022-3266</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40956">CVE-2022-40956</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40958">CVE-2022-40958</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40959">CVE-2022-40959</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40960">CVE-2022-40960</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40962">CVE-2022-40962</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-102.3.0 or later
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.2-012"/>
+    <h4>11.2 012 BIND         Date: 2022-09-24  Severity: High</h4>
+    <p>In BIND-9.18.7, six security vulnerabilities were fixed that could allow
+    for denial of service and arbitrary code execution. These occur due to
+    processing large delegations, buffer overreads in statistics channel code,
+    memory leaks in code handling Diffie-Hellman key exchanges, memory leaks
+    when processing ECDSA and EDDSA keys in DNSSEC, and crashes when processing
+    stale caches. Note that the vulnerability when processing large delegations
+    will also cause extremely degraded performance. These vulnerabilities only
+    affect the server, not the client utilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2795">CVE-2022-2795</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2881">CVE-2022-2881</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2906">CVE-2022-2906</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3080">CVE-2022-3080</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38177">CVE-2022-38177</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38178">CVE-2022-38178</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.18.7 using the
+    instructions for
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+    <a id="sa-11.2-011"/>
+    <h4>11.2 011 Unbound      Date: 2022-09-24  Severity: High</h4>
+    <p>In Unbound-1.16.3, a security vulnerability was fixed that could allow
+    for uncontrolled resource consumption due to a non-responsive delegation
+    attack. This can occur over the network and the attack complexity is low,
+    but the only significant impact is to system availability (excessive CPU
+    and memory consumption). The BLFS team recommends updating Unbound if you
+    are using it on a high-traffic server.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-3204">CVE-2022-3204</a>.</p>
+    <p>To fix this vulnerability, update to Unbound-1.16.3 using the
+    instructions for
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+
+    <a id="sa-11.2-010"/>
+    <h4>11.2 010 Node.js      Date: 2022-09-24  Severity: Critical</h4>
+    <p>In Node.js-16.17.1, three security vulnerabilities were fixed that
+    could allow for HTTP Request Smuggling and weak randomness when using
+    the HTTP Parser module or the WebCrypto keygen. These vulnerabilities
+    occur due to unchecked return values, bypasses of previous vulnerabilities,
+    and incorrect parsing of Multi-line Transfer-Encoding fields in a HTTP
+    header. These occur inside the internal llhttp module and within the
+    core of the package itself.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32213">CVE-2022-32213</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-35255">CVE-2022-35255</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-35256">CVE-2022-35256</a>.</p>
+    <p>To fix these vulnerabilities, update to Node.js-16.17.1 using the
+    instructions for
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+
+    <a id="sa-11.2-009"/>
+    <h4>11.2 009 Expat        Date: 2022-09-23  Severity: Critical</h4>
+    <p>In expat-2.4.9, a critical security vulnerability was fixed that could
+    allow for arbitrary code execution or denial of service, depending on
+    the context of the program that's calling the library. This occurs due to
+    a use-after-free vulnerability in the doContent function. This can be
+    exploited trivially through malicious advertisements and other crafted
+    web content, but also through other means depending on the context of an
+    application that uses these libraries usese them in. The BLFS team
+    recommends updating to expat-2.4.9 as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40674">CVE-2022-40674</a>.</p>
+    <p>To fix this vulnerability, update to expat-2.4.9 or later using the
+    instructions for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
+    <a id="sa-11.2-008"/>
+    <h4>11.2 008 WebKitGTK+          Date: 2022-09-21  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.36.8, two security vulnerabilities were fixed that could
+    allow for remote code execution when processing maliciously crafted web
+    content. A proof of concept exists where a malicious advertisement is
+    sideloaded onto a page. These vulnerabilities occur due to a buffer
+    overflow and an out-of-bounds read, which were fixed with improved memory
+    handling and boundary checking.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32886">CVE-2022-32886</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32912">CVE-2022-32912</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.36.8 by substituting
+    WebKitGTK+-2.36.8 in for the instructions in
+    <a href="../view/11.2/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.2-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <!-- The instructions for using 11.2 here are due to incoming libsoup3 changes
+         which will cause incompoatibilities with 11.2 systems. -->
+
+    <a id="sa-11.2-007"/>
+    <h4>11.2 007 Firefox             Date: 2022-09-20  Severity: High</h4>
+    <p>In Firefox-102.2.0esr, six security vulnerabilities (on x86, there is
+    another for ARM64 if using WASM) were fixed that could allow for potentially
+    exploitable crashes, session fixation, Content Security Policy bypass and
+    memory safety bugs which may lead to remote code execution. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-41/">mfsa-2022-41</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3266">CVE-2022-3266</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40956">CVE-2022-40956</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40958">CVE-2022-40958</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40959">CVE-2022-40959</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40960">CVE-2022-40960</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40962">CVE-2022-40962</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-102.3.0esr or later
+    using the instructions for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-11.2-006"/>
+    <h4>11.2 006 QtWebEngine           Date: 2022-09-19 Severity: Critical</h4>
+    <p>In QtWebEngine-5.15.11, several security vulnerabilities were fixed that
+    could allow for remote code execution, arbitrary file creation and deletion,
+    denial of service, and information disclosure. These vulnerabilities occur
+    due to segmentation violations, use-after-free vulnerabilities,
+    out-of-bounds access, insufficent policy enforcement, heap buffer overflows,
+    and type confusion. These occur in a variety of subsystems, including WebGL,
+    WebRTC, DevTools, V8, Guest View, Filesystem API, and Messaging.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2610">CVE-2022-2610</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2477">CVE-2022-2477</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27406">CVE-2022-27406</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27405">CVE-2022-27405</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-27404">CVE-2022-27404</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2294">CVE-2022-2294</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2295">CVE-2022-2295</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2160">CVE-2022-2160</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2162">CVE-2022-2162</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2158">CVE-2022-2158</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2008">CVE-2022-2008</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2010">CVE-2022-2010</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1854">CVE-2022-1854</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1857">CVE-2022-1857</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1855">CVE-2022-1855</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-5.15.11 or later
+    using the instructions for
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <a id="sa-11.2-005"/>
+    <h4>11.2 005 Python (LFS and BLFS) Date: 2022-09-14 Severity: High</h4>
+    <p>In Python-3.10.7, a security vulnerability was fixed that could allow
+    for a denial-of-service (application crash) due to algorithmic complexity.
+    This occurs when converting between integers ans trings in bases other than
+    2 (binary), 4, 8 (octal), 16 (hexadecimal), or 32. The new limit is 4300
+    digits, and there was no limit previously.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-10735">CVE-2020-10735</a>.</p>
+    <p>To fix this vulnerability, update to Python-3.10.7 using the instructions
+    from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+
+    <a id="sa-11.2-004"/>
+    <h4>11.2 004 Wireshark           Date: 2022-09-14  Severity: Medium</h4>
+    <p>In Wireshark-3.6.8, a security vulnerability was fixed that could allow
+    for a denial-of-service (excessive resource consumption) when using the
+    F5 Ethernet Trailer packet dissector. This can occur via packet injection
+    or via reading a crafted capture file, and is caused by an infinite loop.
+    Note that this security vulnerability is only applicable if you are
+    operating Wireshark on a network that has F5 Ethernet Trailer packets
+    passing along it.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3190">CVE-2022-3190</a>.</p>
+    <p>To fix this vulnerability, update to Wireshark-3.6.8 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-11.2-003"/>
+    <h4>11.2 003 Thunderbird         Date: 2022-09-03  Severity: High</h4>
+    <p>In Thunderbird-102.2.1, several security vulnerabilities were fixed that
+    could allow for leakage of sensitive information, objects to be loaded and
+    processed unexpectedly, unauthorized network requests, and denial-of-service
+    attacks. The leakage of sensitive information will occur when composing a
+    reply to an HTML email with a 'META' refresh tag contained within, if the
+    meta tag has a 'refresh' attribute and if the tag contains a URL.
+    Thunderbird then starts a network request that URL and processes any
+    JavaScript that is located within the email as a result (or from the URL),
+    and executes it in the context of the message compose document.
+    The JavaScript code could allow for an unauthorized read or modification of
+    the contents of the email, and could also decrypt mails. The contents can
+    then be transmitted to the network, with it being sent to the URL in the
+    meta tag or to another URL depending on the JavaScript in use.
+    In the case of remote content not being blocked and iframe elements
+    triggering network requests, these occur whenever a user receives an HTML
+    email. The denial-of-service attack can occur when connected to a network
+    using the Matrix chat protocol, and can cause temporary corrpution. Update
+    to Thunderbird-102.2.1 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-3033">CVE-2022-3033</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-3032">CVE-2022-3032</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-3034">CVE-2022-3034</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-36059">CVE-2022-36059</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-102.2.1 using the
+    instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.2-002"/>
+    <h4>11.2 002 cURL                Date: 2022-09-03  Severity: Low</h4>
+    <p>In curl-7.85.0, a security vulnerability was fixed that could allow for
+    a denial of service when processing cookies. When curl retrieves and parses
+    cookies from an HTTP(S) server, it accepts cookies using control codes.
+    When cookies that contain these control codes are sent back, it might make
+    the server return a 400 response, effectively allowing another site
+    to deny service to related sites.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-35252">CVE-2022-35252</a>.</p>
+    <p>To fix this vulnerability, update to cURL-7.85.0 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-11.2-001"/>
+    <h4>11.2 001 Poppler             Date: 2022-09-03  Severity: Critical</h4>
+    <p>In poppler-22.09.0, a critical security vulnerability was fixed that
+    allows for arbitrary code execution when PDF files are processed. This uses
+    the same exploit as "FORCEDENTRY" for Apple devices last year, which allowed
+    for trivial remote code execution through WebKit's image processing system.
+    Poppler is used to process PDF files, and a proof of concept exploit which
+    causes a crash is available to the public. Exploitation can happen simply
+    by opening a PDF file, or downloading a PDF file to a location where Tracker
+    or Baloo can index it, or even when printing a PDF file using CUPS. Update
+    to poppler-22.09.0 as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38784">CVE-2022-38784</a>.</p>
+    <p>To fix this vulnerability, update to poppler-22.09.0 or later using the
+    instructions for
+    <a href="../view/svn/general/poppler.html">Poppler (sysv)</a> or
+    <a href="../view/systemd/general/poppler.html">Poppler (systemd)</a>.</p>
+    <p>Unfortunately, this security update breaks the compilation of two
+    packages (Inkscape and Libreoffice) due to incompatible API changes.
+    The BLFS team has prepared patches for both of these packages.</p>
+    <p>If you are going to build Inkscape, apply this patch before compiling
+    the package:
+    <a href="https://linuxfromscratch.org/patches/downloads/inkscape/inkscape-1.2.1-poppler_22_09_fixes-1.patch">Inkscape Poppler Fixes Patch</a>.</p>
+    <p>If you are going to build Libreoffice, apply this patch before compiling
+    the package:
+    <a href="https://linuxfromscratch.org/patches/downloads/libreoffice/libreoffice-7.4.0.3-poppler_22_09-fixes-1.patch">Libreoffice Poppler Fixes Patch</a>.</p>
 
     <!-- Please note that 'Moderate' in NOT a valid NVD rating, although upstreams
          use it. Probably 'Medium' in the absence of an NVD rating. -->

@@ -25,24 +25,18 @@
          <ul>
            <li>Read <a href='../../advisories/11.2.html'>the security advisories page</a>.</li>
          </ul>
-<!--
+
        <h2>Miscellaneous Errata</h2>
 
          <ul>
-           <li>In the installation of Systemd, the tarball
-           <code>systemd-man-pages-250.tar.xz</code> was untarred with
-           <code>- -strip-components=1</code>, causing the man pages
-           installed into the wrong location.  You should remove this
-           <code>- -strip-components=1</code> option building Systemd
-           when you are following the LFS 11.1-systemd book.
-           If you have already built LFS 11.1-systemd, remove the misplaced
-           man pages by running the command as the <code>root</code> user:
-           <code>rm -v /usr/share/man/*.[0-9]</code>.  If you have not
-           reinstalled Systemd following BLFS instruction with the optional
-           packages for rebuilding the manual pages, and does not plan to do
-           so, you can reinstall the man pages by running
-           <code>tar xf systemd-man-pages.250.tar.xz -C /usr/share/man</code>
-           as the <code>root</code> user.</li>
+           <li>The original tarball for expat is now unavailable due to a
+           security vulnerability. Please use expat-2.4.9 instead, see the
+           security advisories for more information.</li>
          </ul>
--->
+         <ul>
+           <li>The sanity check in "5.5 Glibc-2.36" is wrong. The first
+           command should read "echo 'int main(){}' | $LFS_TGT-gcc -xc -"
+	   instead of "echo 'int main(){}' | gcc -xc -".</li>
+         </ul>
+
 <!--#include virtual="/common/footer.html" -->

@@ -10,10 +10,11 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
+<!--
      <ul>
-       <li>There are currently no known security vulnerabilities for BLFS-11.1.</li>
+       <li>There are currently no known security vulnerabilities for BLFS-11.2.</li>
      </ul>
-
+-->
 
     <!-- Editors: do the consolidated file first, to get the next number -->
 
@@ -48,6 +49,140 @@
     <p>Brief explanatory text, followed by link to the consolidated page.
     <a href="consolidated.html#11.2-NNN">11.2-NNN</a></p>
 -->
+
 <!-- end of PackageName -->
+
+    <h3>BIND</h3>
+
+    <a id="sa-11.2-012"/>
+    <h4>11.2 012 BIND         Date: 2022-09-24  Severity: High</h4>
+    <p>In BIND-9.18.7, six security vulnerabilities were fixed that could allow
+    for denial of service or arbitrary code execution. Update to BIND-9.18.7
+    if you are using it for anything other than the client utilities.
+    <a href="consolidated.html#sa-11.2-012">11.2-012</a></p>
+
+<!-- end of BIND -->
+
+    <h3>cURL</h3>
+
+    <a id="sa-11.2-002"/>
+    <h4>11.2 002 cURL         Date: 2022-09-03  Severity: Low</h4>
+    <p>In cURL-7.85.0, a security vulnerability was fixed that could allow for
+    some sites to deny access to other sites when processing control codes in
+    cookies. Update to cURL-7.85.0 or later.
+    <a href="consolidated.html#sa-11.2-002">11.2-002</a></p>
+
+<!-- end of cURL -->
+
+    <h3>Firefox</h3>
+
+    <a id="sa-11.2-007"/>
+    <h4>11.2 007 Firefox             Date: 2022-09-20  Severity: High</h4>
+    <p>In Firefox-102.3.0esr several security vulnerabilities, of which three
+    were rated as high, were fixed.
+    Update to firefox-102.3.0esr.
+    <a href="consolidated.html#sa-11.2-007">11.2-007</a></p>
+
+<!-- end of firefox -->
+
+    <h3>Node.js</h3>
+
+    <a id="sa-11.2-010"/>
+    <h4>11.2 010 Node.js      Date: 2022-09-24  Severity: Critical</h4>
+    <p>In Node.js-16.17.1, three security vulnerabilities were fixed that could
+    allow for HTTP Request Smuggling and weak randomness in the WebCrypto
+    Cryptography system. Update to Node.js-16.17.1.
+    <a href="consolidated.html#sa-11.2-010">11.2-010</a></p>
+
+<!-- end of Node.js -->
+
+    <h3>Poppler</h3>
+
+    <a id="sa-11.2-001"/>
+    <h4>11.2 001 Poppler      Date: 2022-09-03  Severity: Critical</h4>
+    <p>In Poppler-22.09.0, a critical security vulnerability was fixed that
+    allows for trivial arbitrary code execution when processing PDF files.
+    Update to poppler-22.09.0 immediately, but take note of build failures
+    and their solutions described in the consolidated advisory.
+    <a href="consolidated.html#sa-11.2-001">11.2-001</a></p>
+
+<!-- end of Poppler -->
+
+    <h3>Python3</h3>
+
+    <a id="sa-11.2-005"/>
+    <h4>11.2 005 Python3 (LFS and BLFS) Date: 2022-09-14 Severity: High</h4>
+    <p>In Python-3.10.7, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) due to algorithmic complexity.
+    Update to Python-3.10.7 or later.
+    <a href="consolidated.html#sa-11.2-005">11.2-005</a></p>
+
+ <!-- end of Python3 -->
+
+    <h3>QtWebEngine</h3>
+
+    <a id="sa-11.2-006"/>
+    <h4>11.2 006 QtWebEngine  Date: 2022-09-19  Severity: Critical</h4>
+    <p>In QtWebEngine-5.15.11, several security vulnerabilities were fixed that
+    could allow for denial-of-service attacks, remote code execution,
+    information disclosure, and arbitrary file creation and deletion. Update
+    to QtWebEngine-5.15.11 immediately.
+    <a href="consolidated.html#sa-11.2-006">11.2-006</a></p>
+
+<!-- end of QtWebEngine -->
+
+    <h3>Thunderbird</h3>
+
+    <a id="sa-11.2-013"/>
+    <h4>11.2 013 Thunderbird  Date: 2022-09-25  Severity: High</h4>
+    <p>In Thunderbird-102.3.0, several security vulnerabilities were fixed that
+    could allow for potentially exploitable crashes, session fixation,
+    Content Security Policy bypass and memory safety bugs which may lead to
+    remote code execution.  Update to Thunderbird-102.3.0 immediately.
+    <a href="consolidated.html#sa-11.2-013">11.2-013</a></p>
+
+    <a id="sa-11.2-003"/>
+    <h4>11.2 003 Thunderbird  Date: 2022-09-03  Severity: High</h4>
+    <p>In Thunderbird-102.2.1, several security vulnerabilities were fixed that
+    could allow for leakage of sensitive information, unauthorized content access,
+    unexpected network requests, and denial-of-service attacks. Update to
+    Thunderbird-102.2.1 immediately.
+    <a href="consolidated.html#sa-11.2-003">11.2-003</a></p>
+
+<!-- end of Thunderbird -->
+
+    <h3>Unbound</h3>
+
+    <a id="sa-11.2-011"/>
+    <h4>11.2 011 Unbound      Date: 2022-09-24  Severity: High</h4>
+    <p>In Unbound-1.16.3, a security vulnerability was fixed that could allow
+    for a denial of service (excess resource consumption) due to a
+    non-responsive delegation attack. Update to Unbound-1.16.3.
+    <a href="consolidated.html#sa-11.2-011">11.2-011</a></p>
+
+<!-- end of Unbound -->
+
+    <h3>WebKitGTK+</h3>
+
+    <a id="sa-11.2-008"/>
+    <h4>11.2 008 WebKitGTK+   Date: 2022-09-21  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.36.8, two security vulnerabilities were fixed that could
+    allow for remote code execution when processing maliciously crafted web
+    content. A proof of concept exploit exists. Update to WebKitGTK+-2.36.8.
+    <a href="consolidated.html#sa-11.2-008">11.2-008</a></p>
+
+<!-- end of WebKitGTK+ -->
+
+    <h3>Wireshark</h3>
+
+    <a id="sa-11.2-004"/>
+    <h4>11.2 004 Wireshark    Date: 2022-09-14  Severity: Medium</h4>
+    <p>In Wireshark-3.6.8, a security vulnerability was fixed that could allow
+    for a denial-of-service when capturing packets on a network that uses
+    F5 Ethernet Trailer packets. Update to Wireshark-3.6.8 if you're on such a
+    network.
+    <a href="consolidated.html#sa-11.2-004">11.2-004</a></p>
+
+<!-- end of Wireshark -->
 
 <!--#include virtual="/common/footer.html" -->
