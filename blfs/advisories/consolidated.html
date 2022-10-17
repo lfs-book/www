@@ -83,6 +83,18 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-014"/>
+    <h4>11.2 014 Libksba             Date: 2022-10-17  Severity: High</h4>
+    <p>In libksba-1.6.2 a severe bug in parsing ASN.1 structures was fixed.
+    The subsequent binary release of gnupg-2.3.8 (linux uses separate libksba)
+    mentioned this - full details at
+    <a href="https://gnupg.org/blog/20221017-pepe-left-the-ksba.html">gnupg blog</a>
+   and it has been assigned
+   <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3515">CVE-2022-3515</a>.</p>
+   <p>To fix this, update to Libksba-1.6.2 or later using the instructions for
+    <a href="../view/svn/general/libksba.html">Libksba (sysv)</a> or
+    <a href="../view/systemd/general/libksba.html">Libksba (systemd)</a>.</p>
+
     <a id="sa-11.2-013"/>
     <h4>11.2 013 Thunderbird             Date: 2022-09-25  Severity: High</h4>
     <p>In Thunderbird-102.2.2, six security vulnerabilities (on x86 linux,
