@@ -83,6 +83,33 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-015"/>
+    <h4>11.2 015 Firefox             Date: 2022-10-18  Severity: High</h4>
+    <p>In Firefox-102.4.0esr, four security vulnerabilities were fixed, two
+    of them rated as High by upstream. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-45/">mfsa-2022-45</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42927">CVE-2022-42927</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42928">CVE-2022-42928</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42929">CVE-2022-42929</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42932">CVE-2022-42932</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-102.4.0esr or later
+    using the instructions for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-11.2-014"/>
+    <h4>11.2 014 Libksba             Date: 2022-10-17  Severity: High</h4>
+    <p>In libksba-1.6.2 a severe bug in parsing ASN.1 structures was fixed.
+    The subsequent binary release of gnupg-2.3.8 (linux uses separate libksba)
+    mentioned this - full details at
+    <a href="https://gnupg.org/blog/20221017-pepe-left-the-ksba.html">gnupg blog</a>
+   and it has been assigned
+   <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3515">CVE-2022-3515</a>.</p>
+   <p>To fix this, update to Libksba-1.6.2 or later using the instructions for
+    <a href="../view/svn/general/libksba.html">Libksba (sysv)</a> or
+    <a href="../view/systemd/general/libksba.html">Libksba (systemd)</a>.</p>
+
     <a id="sa-11.2-013"/>
     <h4>11.2 013 Thunderbird             Date: 2022-09-25  Severity: High</h4>
     <p>In Thunderbird-102.2.2, six security vulnerabilities (on x86 linux,
@@ -198,7 +225,7 @@
 
     <a id="sa-11.2-007"/>
     <h4>11.2 007 Firefox             Date: 2022-09-20  Severity: High</h4>
-    <p>In Firefox-102.2.0esr, six security vulnerabilities (on x86, there is
+    <p>In Firefox-102.3.0esr, six security vulnerabilities (on x86, there is
     another for ARM64 if using WASM) were fixed that could allow for potentially
     exploitable crashes, session fixation, Content Security Policy bypass and
     memory safety bugs which may lead to remote code execution. Details at
