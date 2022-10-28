@@ -82,6 +82,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-026"/>
+    <h4>11.2 026 libtiff             Date: 2022-10-28  Severity: Medium</h4>
+    <p>In libtiff-4.4.0, five security vulnerabilities exist which could allow
+    for crashes when using some of the utilities provided by the package.
+    These vulnerabilities occur in the tiffcrop and tiffsplit utilities, and
+    occue due to stack overflows, out-of-bounds reads, and divide-by-zero
+    errors when processing certain crafted files. Upstream has not made a new
+    release at this time, but the BLFS team has generated a patch to fix these
+    vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34526">CVE-2022-34526</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2022-2056">CVE-2022-2056</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2022-2057">CVE-2022-2057</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2022-2058">CVE-2022-2058</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2022-2953">CVE-2022-2953</a>.</p>
+    <p>To fix these vulnerabilities, rebuild libtiff-4.4.0 with the patch using
+    the instructions for
+    <a href="../view/svn/general/libtiff.html">libtiff (sysv)</a> or
+    <a href="../view/systemd/general/libtiff.html">libtiff (systemd)</a>.</p>
+
     <a id="sa-11.2-025"/>
     <h4>11.2 025 Samba               Date: 2022-10-28  Severity: Medium</h4>
     <p>In Samba-4.17.2, three security vulnerabilities were fixed that could
