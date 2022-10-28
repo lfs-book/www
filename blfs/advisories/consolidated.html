@@ -82,6 +82,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-020"/>
+    <h4>11.2 020 libxml2             Date: 2022-10-28  Severity: High</h4>
+    <p>In libxml2-2.10.3, two security vulnerabilities were fixed that could
+    allow for denial-of-service and arbitrary code execution. These occur
+    due to logic errors and integer overflows, and are caused by missing safety
+    checks and missing length limitations. Both of these issues can be triggered
+    when performing operations on XML documents, or when loading the XML
+    documents into memory for processing.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-40304">CVE-2022-40304</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2022-40303">CVE-2022-40303</a>.</p>
+    <p>To fix these vulnerabilities, update to libxml2-2.10.3 or later using
+    the instructions for
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
     <a id="sa-11.2-019"/>
     <h4>11.2 019 DHCP                Date: 2022-10-28  Severity: High</h4>
     <p>In DHCP-4.4.3-P1, two security vulnerabilities were fixed that could
