@@ -82,6 +82,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-017"/>
+    <h4>11.2 017 OpenSSH             Date: 2022-10-28  Severity: Moderate</h4>
+    <p>In OpenSSH-9.1p1, three security vulnerabilities were fixed in OpenSSH
+    tools that could allow for denial of service. These vulnerabilities have
+    not been assigned CVEs, but have been reported as potential security
+    issues. In the case of the ssh-keyscan utility, there is a one-byte
+    overflow when processing SSH- banners. In the case of ssh-keygen, there
+    is a denial-of-service (application crash) in the error path of the
+    file hashing step when signing and verifying the keys that ssh-keygen
+    has generated. In the case of ssh-keysign, there is a denial-of-service
+    when going into the error path as well (both ssh-keygen and ssh-keysign
+    vulnerabilities are due to free() being called twice). Updating to 9.1p1
+    is recommended if you are encountering crashes when using these utilities.
+    More information can be found at
+    <a href="http://www.openssh.com/txt/release-9.1">OpenSSH Release Notes</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSH-9.1p1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
     <a id="sa-11.2-016"/>
     <h4>11.2 016 Linux Kernel (LFS)  Date: 2022-10-28  Severity: Critical</h4>
     <p>In linux-6.0.2, several security vulnerabilities were fixed that could
