@@ -82,6 +82,33 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-024"/>
+    <h4>11.2 024 git                 Date: 2022-10-28  Severity: High</h4>
+    <p>In git-2.38.1, two security vulnerabilities were fixed that could allow
+    for remote code execution on servers where git repositories are stored, and
+    for sensitive information to be exposed to a remote attacker. In the case
+    of sensitive information leakage, this vulnerability can occur when a user
+    runs a 'git clone' in a folder where symbolic links exist. It was
+    originally thought that this exploit only worked on local clones, but it
+    was later discovered that cloning a submodule with the '--recurse-submodules'
+    command can achieve the same goal by having a symbolic link point to a file
+    like '/etc/passwd' inside of the repository. The remote code execution
+    vulnerability occurs in the 'git shell' program, which is used to implement
+    Git's push/pull functionality over SSH. It occurs due to the function that
+    splits command line arguments into an array improperly using an 'int' to
+    represent the amount of entries in the array, which allows remote attackers
+    to intentionally overflow the return value and cause arbitrary heap writes.
+    The vulnerability then occurs when the resulting array is passed to
+    'execv()'. Upgrade to git-2.38.1 immediately if you are using it on
+    a server, or if you clone untrusted repositories.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39253">CVE-2022-39253</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39260">CVE-2022-39260</a>.</p>
+    <p>To fix these vulnerabilities, update to git-2.38.1 or later using the
+    instructions for
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
     <a id="sa-11.2-023"/>
     <h4>11.2 023 PHP                 Date: 2022-10-28  Severity: Medium</h4>
     <p>In PHP-8.1.11, two security vulnerabilities were fixed that could allow
