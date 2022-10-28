@@ -82,6 +82,36 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-016"/>
+    <h4>11.2 016 Linux Kernel (LFS)  Date: 2022-10-28  Severity: Critical</h4>
+    <p>In linux-6.0.2, several security vulnerabilities were fixed that could
+    allow for arbitrary code execution, reading memory from anywhere on the
+    system, out-of-bounds writes and reads, firewall bypasses, and denial of
+    service (kernel panics). These occur in the ALSA (sound), nftables (firewall),
+    TCP/IP, BPF, EFI, and Wireless subsystems. Note that the wireless
+    vulnerabilities can be exploited without being connected to a network,
+    and can be triggered by simply scanning for networks. The ALSA vulnerability
+    occurs when using the OSS API emulation, and the firewall bypass occurs
+    when you are connected to an IRC network. The LFS team recommends updating
+    to a patched kernel immediately, which is one of 6.0.2 or 5.15.75 (if you
+    prefer to use LTS kernels).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3303">CVE-2022-3303</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2663">CVE-2022-2663</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40307">CVE-2022-40307</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2785">CVE-2022-2785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39190">CVE-2022-39190</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3028">CVE-2022-3028</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2905">CVE-2022-2905</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-41674">CVE-2022-41674</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42719">CVE-2022-42719</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42720">CVE-2022-42720</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42721">CVE-2022-42721</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42722">CVE-2022-42722</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-6.0.2 (or Linux-5.15.75)
+    or later using the instructions from
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
 
     <a id="sa-11.2-015"/>
     <h4>11.2 015 Firefox             Date: 2022-10-18  Severity: High</h4>
@@ -104,9 +134,9 @@
     The subsequent binary release of gnupg-2.3.8 (linux uses separate libksba)
     mentioned this - full details at
     <a href="https://gnupg.org/blog/20221017-pepe-left-the-ksba.html">gnupg blog</a>
-   and it has been assigned
-   <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3515">CVE-2022-3515</a>.</p>
-   <p>To fix this, update to Libksba-1.6.2 or later using the instructions for
+    and it has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3515">CVE-2022-3515</a>.</p>
+    <p>To fix this, update to Libksba-1.6.2 or later using the instructions for
     <a href="../view/svn/general/libksba.html">Libksba (sysv)</a> or
     <a href="../view/systemd/general/libksba.html">Libksba (systemd)</a>.</p>
 
