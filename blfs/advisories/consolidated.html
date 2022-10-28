@@ -82,6 +82,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-021"/>
+    <h4>11.2 021 Python3 (LFS and BLFS) Date: 2022-10-28 Severity: Critical</h4>
+    <p>In Python-3.10.8, three security vulnerabilities were fixed that could
+    allow for integer overflows, shell code injection, and unsafe text injection.
+    One of these vulnerabilities can occur any time that a list is multiplied
+    by an integer, and is fixed by detecting when the new allocated length is
+    close to the maximum size. The shell code injection vulnerability occurs
+    in the get-remote-certificate.py example script, and was fixed by it no
+    longer using a shell to run openssl commands. The unsafe text injection
+    vulnerability was in the 'mailcap' module and was fixed by refusing to
+    inject that text into a shell command. Instead of using the text, it will
+    throw a warning and act as if a match was not found.
+    These vulnerabilities have not been assigned CVEs, but more details
+    about them can be found at
+    <a href="https://docs.python.org/3.10/whatsnew/changelog.html#id2">Python 3.10.8 Release Notes.</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.10.8 using the
+    instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+
     <a id="sa-11.2-020"/>
     <h4>11.2 020 libxml2             Date: 2022-10-28  Severity: High</h4>
     <p>In libxml2-2.10.3, two security vulnerabilities were fixed that could
