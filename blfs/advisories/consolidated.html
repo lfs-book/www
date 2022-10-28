@@ -82,6 +82,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-019"/>
+    <h4>11.2 019 DHCP                Date: 2022-10-28  Severity: High</h4>
+    <p>In DHCP-4.4.3-P1, two security vulnerabilities were fixed that could
+    allow for a denial-of-service and memory leak when using the DHCPD server.
+    Note that these vulnerabilities do not affect the 'dhclient' utility.
+    One of these vulnerabilities occur due to a reference counter leak when
+    the server is building responses to leasequery packets, and leads to the
+    server aborting. The other vulnerability occurs when unpacking a packet
+    that has a FQDN option that contains a label with a length greater than 63
+    bytes. This causes a memory leak that eventually results in the server
+    running out of memory. Update to DHCP-4.4.3-P1 if you are using the DHCPD
+    server.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2928">CVE-2022-2928</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2929">CVE-2022-2929</a>.</p>
+    <p>To fix these vulnerabilities, update to DHCP-4.4.3-P1 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/dhcp.html">DHCP (sysv)</a> or
+    <a href="../view/systemd/basicnet/dhcp.html">DHCP (systemd)</a>.</p>
+
     <a id="sa-11.2-018"/>
     <h4>11.2 018 dbus (LFS and BLFS) Date: 2022-10-28 Severity: Medium</h4>
     <p>In dbus-1.14.4, three security vulnerabilities were fixed that could
