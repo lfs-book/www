@@ -82,6 +82,27 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-025"/>
+    <h4>11.2 025 Samba               Date: 2022-10-28  Severity: Medium</h4>
+    <p>In Samba-4.17.2, three security vulnerabilities were fixed that could
+    allow for bad passwords to be accepted (due to the count not being
+    incremented properly), for a write heap buffer overflow when using
+    GSSAPI, and for a malicious client to escape exported directories via
+    symbolic links. Note that the GSSAPI vulnerability also impacts standard
+    file servers which are not part of an Active Directory or NT4 domain.
+    The symbolic link vulnerability only affects systems which have
+    SMB1 communication enabled, which is not enabled by default. The bad
+    password vulnerability and GSSAPI vulnerability occur in the default
+    configuration though.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20251">CVE-2021-20251</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3437">CVE-2022-3437</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3592">CVE-2022-3952</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.17.2 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
     <a id="sa-11.2-024"/>
     <h4>11.2 024 git                 Date: 2022-10-28  Severity: High</h4>
     <p>In git-2.38.1, two security vulnerabilities were fixed that could allow
