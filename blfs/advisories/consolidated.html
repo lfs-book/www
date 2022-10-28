@@ -82,6 +82,25 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-023"/>
+    <h4>11.2 023 PHP                 Date: 2022-10-28  Severity: Medium</h4>
+    <p>In PHP-8.1.11, two security vulnerabilities were fixed that could allow
+    for a denial-of-service (infinite loop) and for cookie spoofing.
+    The denial-of-service happens when the 'phar' command uncompresses
+    'quines' gzip files because the uncompressor's code would recursively
+    uncompress them. The cookie spoofing attack can be performed either over
+    the network or locally, and allows an attacker to set a standard insecure
+    cookie in the victim's browser which is treated as a '__Host-'
+    or '__Secure-' cookie by PHP applications. Update to PHP-8.1.11 if you use
+    the 'phar' command or if you use cookies in PHP applications.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31628">CVE-2022-31628</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31629">CVE-2022-31629</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.1.11 or later using the
+    instructions for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
     <a id="sa-11.2-022"/>
     <h4>11.2 022 Thunderbird         Date: 2022-10-28  Severity: High</h4>
     <p>In Thunderbird-102.4.0, several security vulnerabilities were fixed that
