@@ -82,8 +82,28 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-018"/>
+    <h4>11.2 018 dbus (LFS and BLFS) Date: 2022-10-28 Severity: Medium</h4>
+    <p>In dbus-1.14.4, three security vulnerabilities were fixed that could
+    allow for a denial-of-service by sending messages with attached file
+    descriptors in an unexpected format, as well as when receiving messages
+    with invalid type signatures and messages where the length of an array
+    is not a multiple of the length of the element. These are due to assertion
+    failures, use-after-frees, memory corruption, and out-of-bounds reads.
+    Note that this can cause the system D-Bus daemon to crash, as well as
+    any application which links to libdbus, and this can be exploited as an
+    unprivileged user.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42011">CVE-2022-42011</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42010">CVE-2022-42010</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42012">CVE-2022-42012</a>.</p>
+    <p>To fix these vulnerabilities, update to dbus-1.14.4 or later using the
+    instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/dbus.html">dbus (sysv)</a> or
+    <a href="../view/systemd/general/dbus.html">dbus (systemd)</a>.</p>
+
     <a id="sa-11.2-017"/>
-    <h4>11.2 017 OpenSSH             Date: 2022-10-28  Severity: Moderate</h4>
+    <h4>11.2 017 OpenSSH             Date: 2022-10-28  Severity: Medium</h4>
     <p>In OpenSSH-9.1p1, three security vulnerabilities were fixed in OpenSSH
     tools that could allow for denial of service. These vulnerabilities have
     not been assigned CVEs, but have been reported as potential security
