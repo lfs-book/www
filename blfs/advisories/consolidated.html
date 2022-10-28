@@ -82,6 +82,32 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-027"/>
+    <h4>11.2 027 cURL                Date: 2022-10-28  Severity: Medium</h4>
+    <p>In cURL-7.86.0, three security vulnerabilities were fixed that could
+    allow for an application to send wrong data or use memory after it's been
+    freed in certain circumstances, for a denial of service when using a .netrc
+    file, and for applications to use HTTP instead of HTTPS by bypassing HSTS
+    checks. The vulnerability which allows for an application to send wrong
+    data, use memory after it's been freed, or cause other unexpected
+    behavior is due to a logic problem which occurs because libcurl may
+    erroneously use the read callback to ask for data to send if the same handle
+    was previously used to issue a 'PUT' request which used that callback.
+    The denial of service when using a .netrc file occurs due to an
+    out-of-bounds access whenever a file ends in a line with consecutive
+    non-white space characters and no new-line. The HSTS bypass occurs when a
+    given URL uses IDN characters that get replaced to their ASCII counterparts
+    as part of the IDN conversion. The primary threat from this vulnerability
+    is cleartext transmission of sensitive information.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32221">CVE-2022-32221</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-35260">CVE_2022-35260</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42916">CVE-2022-42916</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.86.0 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-11.2-026"/>
     <h4>11.2 026 libtiff             Date: 2022-10-28  Severity: Medium</h4>
     <p>In libtiff-4.4.0, five security vulnerabilities exist which could allow
