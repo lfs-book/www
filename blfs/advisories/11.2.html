@@ -65,6 +65,13 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-11.2-027"/>
+    <h4>11.2 027 cURL         Date: 2022-10-28  Severity: Medium</h4>
+    <p>In cURL-7.86.0, three security vulnerabilities were fixed that could
+    allow for denial-of-service (application crashes), PUT confusion, and for
+    HSTS bypasses. Update to cURL-7.86.0 or later.
+    <a href="consolidated.html#sa-11.2-027">11.2-027</a></p>
+
     <a id="sa-11.2-002"/>
     <h4>11.2 002 cURL         Date: 2022-09-03  Severity: Low</h4>
     <p>In cURL-7.85.0, a security vulnerability was fixed that could allow for
@@ -73,6 +80,29 @@
     <a href="consolidated.html#sa-11.2-002">11.2-002</a></p>
 
 <!-- end of cURL -->
+
+    <h3>dbus</h3>
+
+    <a id="sa-11.2-018"/>
+    <h4>11.2 018 dbus (LFS and BLFS)    Date: 2022-10-28 Severity: Medium</h4>
+    <p>In dbus-1.14.4, three security vulnerabilities were fixed that could
+    allow for unprivileged attackers to cause denial-of-service conditions
+    (system dbus-daemon crashes, as well as crashes of any programs which
+    use the libdbus library). Update to dbus-1.14.4 or later.
+    <a href="consolidated.html#sa-11.2-018">11.2-018</a></p>
+
+<!-- end of dbus -->
+
+    <h3>DHCP</h3>
+
+    <a id="sa-11.2-019"/>
+    <h4>11.2 019 DHCP                Date: 2022-10-28  Severity: High</h4>
+    <p>In DHCP-4.4.3-P1, two security vulnerabilites were fixed that could
+    allow for a denial-of-service and memory leak in the DHCPD server. Update
+    to DHCP-4.4.3-P1 if you are using the DHCPD server.
+    <a href="consolidated.html#sa-11.2-019">11.2-019</a></p>
+
+ <!-- end of DHCP -->
 
     <h3>Firefox</h3>
 
@@ -91,12 +121,51 @@
 
 <!-- end of firefox -->
 
+    <h3>git</h3>
+
+    <a id="sa-11.2-024">
+    <h4>11.2 024 git                 Date: 2022-10-28  Severity: High</h4>
+    <p>In git-2.38.1, two security vulnerabilities were fixed that could allow
+    for remote code execution on servers which have 'git' installed, and for
+    leakage of sensitive information on systems where untrusted repositories
+    are cloned when symbolic links exist within the repository. Update to
+    git-2.38.1 immediately, especially if you run a git server.
+    <a href="consolidated.html#sa-11.2-024">11.2-024</a></p>
+
+<!-- end of git -->
+
     <h3>Libksba</h3>
 
     <a id="sa-11.2-014"/>
     <h4>11.2 014 Libksba             Date: 2022-10-17  Severity: High</h4>
     <p>In libksba-1.6.2 a severe bug in parsing ASN.1 structures was fixed.
     <a href="consolidated.html#sa-11.2-014">11.2-014</a></p>
+
+<!-- end of Libksba -->
+
+    <h3>libtiff</h3>
+
+    <a id="sa-11.2-026"/>
+    <h4>11.2 026 libtiff             Date: 2022-10-28  Severity: Medium</h4>
+    <p>In libtiff-4.4.0, five security vulnerabilities exist which can cause
+    crashes when using the 'tiffcrop' and 'tiffsplit' utilities provided by
+    that package. The BLFS team has created a patch to fix these issues.
+    Rebuild libtiff with the patch.
+    <a href="consolidated.html#sa-11.2-026">11.2-026</a></p>
+
+<!-- end of libtiff -->
+
+    <h3>libxml2</h3>
+
+    <a id="sa-11.2-020"/>
+    <h4>11.2 020 libxml2             Date: 2022-10-28  Severity: High</h4>
+    <p>In libxml2-2.10.3, two security vulnerabilites were fixed that could
+    allow for denial-of-service conditions or arbitrary code execution
+    depending on the context that an XML document is loaded. Update to
+    libxml2-2.10.3.
+    <a href="consolidated.html#sa-11.2-020">11.2-020</a></p>
+
+<!-- end of libxml2 -->
 
     <h3>Node.js</h3>
 
@@ -108,6 +177,29 @@
     <a href="consolidated.html#sa-11.2-010">11.2-010</a></p>
 
 <!-- end of Node.js -->
+
+    <h3>OpenSSH</h3>
+
+    <a id="sa-11.2-017"/>
+    <h4>11.2 017 OpenSSH      Date: 2022-10-28  Severity: Moderate</h4>
+    <p>In OpenSSH-9.1p1, three potential security vulnerabilities were fixed
+    in the ssh-keyscan, ssh-keysign, and ssh-keygen utilities. Update to
+    OpenSSH-9.1p1 if you begin to experience crashes when using these utilities.
+    <a href="consolidated.html#sa-11.2-017">11.2-017</a></p>
+
+<!-- end of OpenSSH -->
+
+    <h3>PHP</h3>
+
+    <a id="sa-11.2-023"/>
+    <h4>11.2 023 PHP          Date: 2022-10-28  Severity: Medium</h4>
+    <p>In PHP-8.1.11, two security vulnerabilities were fixed that could
+    allow for cookie spoofing, and for denial-of-service when using the
+    'phar' command (due to an infinite loop). Update to PHP-8.1.11 if you use
+    an application which uses cookies, or if you use the 'phar' command.
+    <a href="consolidated.html#sa-11.2-023">11.2-023</a></p>
+
+<!-- end of PHP -->
 
     <h3>Poppler</h3>
 
@@ -122,6 +214,13 @@
 <!-- end of Poppler -->
 
     <h3>Python3</h3>
+
+    <a id="sa-11.2-021"/>
+    <h4>11.2 021 Python3 (LFS and BLFS) Date: 2022-10-28 Severity: High</h4>
+    <p>In Python-3.10.8, three security vulnerabilities were fixed that could
+    allow for integer overflows, shell code injection, and unsafe text
+    injection when some modules are used. Update to Python-3.10.8 or later.
+    <a href="consolidated.html#sa-11.2-021">11.2-021</a></p>
 
     <a id="sa-11.2-005"/>
     <h4>11.2 005 Python3 (LFS and BLFS) Date: 2022-09-14 Severity: High</h4>
@@ -144,7 +243,28 @@
 
 <!-- end of QtWebEngine -->
 
+    <h3>Samba</h3>
+
+    <a id="sa-11.2-025"/>
+    <h4>11.2 025 Samba        Date: 2022-10-28  Severity: Medium</h4>
+    <p>In Samba-4.15.2, three security vulnerabilities were fixed that could
+    allow for bad passwords to be accepted in some circumstances, as well as
+    for attackers to escape an exported share using symbolic links, and for
+    a crash when using GSSAPI. Update to Samba-4.15.2.
+    <a href="consolidated.html#sa-11.2-025">11.2-025</a></p>
+
+<!-- end of Samba -->
+
     <h3>Thunderbird</h3>
+
+    <a id="sa-11.2-022"/>
+    <h4>11.2 022 Thunderbird  Date: 2022-10-28  Severity: High</h4>
+    <p>In Thunderbird-102.4.0, several security vulnerabilities were fixed
+    that could allow for arbitrary code execution, impersonation attacks,
+    device verification attacks, and denial-of-service conditions. Update to
+    Thunderbird-102.4.0 immediately, especially if you use the Matrix chat
+    protocol.
+    <a href="consolidated.html#sa-11.2-022">11.2-022</a></p>
 
     <a id="sa-11.2-013"/>
     <h4>11.2 013 Thunderbird  Date: 2022-09-25  Severity: High</h4>

@@ -82,6 +82,270 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-027"/>
+    <h4>11.2 027 cURL                Date: 2022-10-28  Severity: Medium</h4>
+    <p>In cURL-7.86.0, three security vulnerabilities were fixed that could
+    allow for an application to send wrong data or use memory after it's been
+    freed in certain circumstances, for a denial of service when using a .netrc
+    file, and for applications to use HTTP instead of HTTPS by bypassing HSTS
+    checks. The vulnerability which allows for an application to send wrong
+    data, use memory after it's been freed, or cause other unexpected
+    behavior is due to a logic problem which occurs because libcurl may
+    erroneously use the read callback to ask for data to send if the same handle
+    was previously used to issue a 'PUT' request which used that callback.
+    The denial of service when using a .netrc file occurs due to an
+    out-of-bounds access whenever a file ends in a line with consecutive
+    non-white space characters and no new-line. The HSTS bypass occurs when a
+    given URL uses IDN characters that get replaced to their ASCII counterparts
+    as part of the IDN conversion. The primary threat from this vulnerability
+    is cleartext transmission of sensitive information.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32221">CVE-2022-32221</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-35260">CVE_2022-35260</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42916">CVE-2022-42916</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.86.0 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-11.2-026"/>
+    <h4>11.2 026 libtiff             Date: 2022-10-28  Severity: Medium</h4>
+    <p>In libtiff-4.4.0, five security vulnerabilities exist which could allow
+    for crashes when using some of the utilities provided by the package.
+    These vulnerabilities occur in the tiffcrop and tiffsplit utilities, and
+    occue due to stack overflows, out-of-bounds reads, and divide-by-zero
+    errors when processing certain crafted files. Upstream has not made a new
+    release at this time, but the BLFS team has generated a patch to fix these
+    vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-34526">CVE-2022-34526</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2022-2056">CVE-2022-2056</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2022-2057">CVE-2022-2057</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2022-2058">CVE-2022-2058</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2022-2953">CVE-2022-2953</a>.</p>
+    <p>To fix these vulnerabilities, rebuild libtiff-4.4.0 with the patch using
+    the instructions for
+    <a href="../view/svn/general/libtiff.html">libtiff (sysv)</a> or
+    <a href="../view/systemd/general/libtiff.html">libtiff (systemd)</a>.</p>
+
+    <a id="sa-11.2-025"/>
+    <h4>11.2 025 Samba               Date: 2022-10-28  Severity: Medium</h4>
+    <p>In Samba-4.17.2, three security vulnerabilities were fixed that could
+    allow for bad passwords to be accepted (due to the count not being
+    incremented properly), for a write heap buffer overflow when using
+    GSSAPI, and for a malicious client to escape exported directories via
+    symbolic links. Note that the GSSAPI vulnerability also impacts standard
+    file servers which are not part of an Active Directory or NT4 domain.
+    The symbolic link vulnerability only affects systems which have
+    SMB1 communication enabled, which is not enabled by default. The bad
+    password vulnerability and GSSAPI vulnerability occur in the default
+    configuration though.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20251">CVE-2021-20251</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3437">CVE-2022-3437</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3592">CVE-2022-3952</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.17.2 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
+    <a id="sa-11.2-024"/>
+    <h4>11.2 024 git                 Date: 2022-10-28  Severity: High</h4>
+    <p>In git-2.38.1, two security vulnerabilities were fixed that could allow
+    for remote code execution on servers where git repositories are stored, and
+    for sensitive information to be exposed to a remote attacker. In the case
+    of sensitive information leakage, this vulnerability can occur when a user
+    runs a 'git clone' in a folder where symbolic links exist. It was
+    originally thought that this exploit only worked on local clones, but it
+    was later discovered that cloning a submodule with the '--recurse-submodules'
+    command can achieve the same goal by having a symbolic link point to a file
+    like '/etc/passwd' inside of the repository. The remote code execution
+    vulnerability occurs in the 'git shell' program, which is used to implement
+    Git's push/pull functionality over SSH. It occurs due to the function that
+    splits command line arguments into an array improperly using an 'int' to
+    represent the amount of entries in the array, which allows remote attackers
+    to intentionally overflow the return value and cause arbitrary heap writes.
+    The vulnerability then occurs when the resulting array is passed to
+    'execv()'. Upgrade to git-2.38.1 immediately if you are using it on
+    a server, or if you clone untrusted repositories.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39253">CVE-2022-39253</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39260">CVE-2022-39260</a>.</p>
+    <p>To fix these vulnerabilities, update to git-2.38.1 or later using the
+    instructions for
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
+    <a id="sa-11.2-023"/>
+    <h4>11.2 023 PHP                 Date: 2022-10-28  Severity: Medium</h4>
+    <p>In PHP-8.1.11, two security vulnerabilities were fixed that could allow
+    for a denial-of-service (infinite loop) and for cookie spoofing.
+    The denial-of-service happens when the 'phar' command uncompresses
+    'quines' gzip files because the uncompressor's code would recursively
+    uncompress them. The cookie spoofing attack can be performed either over
+    the network or locally, and allows an attacker to set a standard insecure
+    cookie in the victim's browser which is treated as a '__Host-'
+    or '__Secure-' cookie by PHP applications. Update to PHP-8.1.11 if you use
+    the 'phar' command or if you use cookies in PHP applications.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31628">CVE-2022-31628</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31629">CVE-2022-31629</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.1.11 or later using the
+    instructions for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+    <a id="sa-11.2-022"/>
+    <h4>11.2 022 Thunderbird         Date: 2022-10-28  Severity: High</h4>
+    <p>In Thunderbird-102.4.0, several security vulnerabilities were fixed that
+    could allow for impersonation attacks, device verification attacks,
+    data corruption, cross-origin URL leakage, memory corruption, arbitrary
+    code execution, and denial-of-service conditions. The data corruption,
+    impersonation attacks, and device verification attacks occur when using the
+    Matrix chat protocol within Thunderbird, and can lead to encryption key
+    exfiltration as well as the ability to make messages look like they came
+    from a legitimate source, while being from an attacker-controlled system.
+    The arbitrary code execution issues are due to memory safety problems.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39249">CVE-2022-39249</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39250">CVE-2022-39250</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39251">CVE-2022-39251</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39236">CVE-2022-39236</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-42927">CVE-2022-42927</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-42928">CVE-2022-42928</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2022-42929">CVE-2022-42929</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2022-42932">CVE-2022-42932</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-102.4.1 or later
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.2-021"/>
+    <h4>11.2 021 Python3 (LFS and BLFS) Date: 2022-10-28 Severity: High</h4>
+    <p>In Python-3.10.8, three security vulnerabilities were fixed that could
+    allow for integer overflows, shell code injection, and unsafe text injection.
+    One of these vulnerabilities can occur any time that a list is multiplied
+    by an integer, and is fixed by detecting when the new allocated length is
+    close to the maximum size. The shell code injection vulnerability occurs
+    in the get-remote-certificate.py example script, and was fixed by it no
+    longer using a shell to run openssl commands. The unsafe text injection
+    vulnerability was in the 'mailcap' module and was fixed by refusing to
+    inject that text into a shell command. Instead of using the text, it will
+    throw a warning and act as if a match was not found.
+    These vulnerabilities have not been assigned CVEs, but more details
+    about them can be found at
+    <a href="https://docs.python.org/3.10/whatsnew/changelog.html#id2">Python 3.10.8 Release Notes.</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.10.8 using the
+    instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+
+    <a id="sa-11.2-020"/>
+    <h4>11.2 020 libxml2             Date: 2022-10-28  Severity: High</h4>
+    <p>In libxml2-2.10.3, two security vulnerabilities were fixed that could
+    allow for denial-of-service and arbitrary code execution. These occur
+    due to logic errors and integer overflows, and are caused by missing safety
+    checks and missing length limitations. Both of these issues can be triggered
+    when performing operations on XML documents, or when loading the XML
+    documents into memory for processing.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-40304">CVE-2022-40304</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2022-40303">CVE-2022-40303</a>.</p>
+    <p>To fix these vulnerabilities, update to libxml2-2.10.3 or later using
+    the instructions for
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
+    <a id="sa-11.2-019"/>
+    <h4>11.2 019 DHCP                Date: 2022-10-28  Severity: High</h4>
+    <p>In DHCP-4.4.3-P1, two security vulnerabilities were fixed that could
+    allow for a denial-of-service and memory leak when using the DHCPD server.
+    Note that these vulnerabilities do not affect the 'dhclient' utility.
+    One of these vulnerabilities occur due to a reference counter leak when
+    the server is building responses to leasequery packets, and leads to the
+    server aborting. The other vulnerability occurs when unpacking a packet
+    that has a FQDN option that contains a label with a length greater than 63
+    bytes. This causes a memory leak that eventually results in the server
+    running out of memory. Update to DHCP-4.4.3-P1 if you are using the DHCPD
+    server.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2928">CVE-2022-2928</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2929">CVE-2022-2929</a>.</p>
+    <p>To fix these vulnerabilities, update to DHCP-4.4.3-P1 or later using the
+    instructions for
+    <a href="../view/svn/basicnet/dhcp.html">DHCP (sysv)</a> or
+    <a href="../view/systemd/basicnet/dhcp.html">DHCP (systemd)</a>.</p>
+
+    <a id="sa-11.2-018"/>
+    <h4>11.2 018 dbus (LFS and BLFS) Date: 2022-10-28 Severity: Medium</h4>
+    <p>In dbus-1.14.4, three security vulnerabilities were fixed that could
+    allow for a denial-of-service by sending messages with attached file
+    descriptors in an unexpected format, as well as when receiving messages
+    with invalid type signatures and messages where the length of an array
+    is not a multiple of the length of the element. These are due to assertion
+    failures, use-after-frees, memory corruption, and out-of-bounds reads.
+    Note that this can cause the system D-Bus daemon to crash, as well as
+    any application which links to libdbus, and this can be exploited as an
+    unprivileged user.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42011">CVE-2022-42011</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42010">CVE-2022-42010</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42012">CVE-2022-42012</a>.</p>
+    <p>To fix these vulnerabilities, update to dbus-1.14.4 or later using the
+    instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/dbus.html">dbus (sysv)</a> or
+    <a href="../view/systemd/general/dbus.html">dbus (systemd)</a>.</p>
+
+    <a id="sa-11.2-017"/>
+    <h4>11.2 017 OpenSSH             Date: 2022-10-28  Severity: Medium</h4>
+    <p>In OpenSSH-9.1p1, three security vulnerabilities were fixed in OpenSSH
+    tools that could allow for denial of service. These vulnerabilities have
+    not been assigned CVEs, but have been reported as potential security
+    issues. In the case of the ssh-keyscan utility, there is a one-byte
+    overflow when processing SSH- banners. In the case of ssh-keygen, there
+    is a denial-of-service (application crash) in the error path of the
+    file hashing step when signing and verifying the keys that ssh-keygen
+    has generated. In the case of ssh-keysign, there is a denial-of-service
+    when going into the error path as well (both ssh-keygen and ssh-keysign
+    vulnerabilities are due to free() being called twice). Updating to 9.1p1
+    is recommended if you are encountering crashes when using these utilities.
+    More information can be found at
+    <a href="http://www.openssh.com/txt/release-9.1">OpenSSH Release Notes</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSH-9.1p1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
+    <a id="sa-11.2-016"/>
+    <h4>11.2 016 Linux Kernel (LFS)  Date: 2022-10-28  Severity: Critical</h4>
+    <p>In linux-6.0.2, several security vulnerabilities were fixed that could
+    allow for arbitrary code execution, reading memory from anywhere on the
+    system, out-of-bounds writes and reads, firewall bypasses, and denial of
+    service (kernel panics). These occur in the ALSA (sound), nftables (firewall),
+    TCP/IP, BPF, EFI, and Wireless subsystems. Note that the wireless
+    vulnerabilities can be exploited without being connected to a network,
+    and can be triggered by simply scanning for networks. The ALSA vulnerability
+    occurs when using the OSS API emulation, and the firewall bypass occurs
+    when you are connected to an IRC network. The LFS team recommends updating
+    to a patched kernel immediately, which is one of 6.0.2 or 5.15.75 (if you
+    prefer to use LTS kernels).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3303">CVE-2022-3303</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2663">CVE-2022-2663</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40307">CVE-2022-40307</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2785">CVE-2022-2785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39190">CVE-2022-39190</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3028">CVE-2022-3028</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2905">CVE-2022-2905</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-41674">CVE-2022-41674</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42719">CVE-2022-42719</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42720">CVE-2022-42720</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42721">CVE-2022-42721</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42722">CVE-2022-42722</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-6.0.2 (or Linux-5.15.75)
+    or later using the instructions from
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
 
     <a id="sa-11.2-015"/>
     <h4>11.2 015 Firefox             Date: 2022-10-18  Severity: High</h4>
@@ -104,15 +368,15 @@
     The subsequent binary release of gnupg-2.3.8 (linux uses separate libksba)
     mentioned this - full details at
     <a href="https://gnupg.org/blog/20221017-pepe-left-the-ksba.html">gnupg blog</a>
-   and it has been assigned
-   <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3515">CVE-2022-3515</a>.</p>
-   <p>To fix this, update to Libksba-1.6.2 or later using the instructions for
+    and it has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3515">CVE-2022-3515</a>.</p>
+    <p>To fix this, update to Libksba-1.6.2 or later using the instructions for
     <a href="../view/svn/general/libksba.html">Libksba (sysv)</a> or
     <a href="../view/systemd/general/libksba.html">Libksba (systemd)</a>.</p>
 
     <a id="sa-11.2-013"/>
     <h4>11.2 013 Thunderbird             Date: 2022-09-25  Severity: High</h4>
-    <p>In Thunderbird-102.2.2, six security vulnerabilities (on x86 linux,
+    <p>In Thunderbird-102.3.0, six security vulnerabilities (on x86 linux,
     there is another for ARM64, and one on MacOS) were fixed that could allow
     for potentially exploitable crashes, session fixation, Content Security
     Policy bypass and memory safety bugs which may lead to remote code
