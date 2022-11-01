@@ -82,6 +82,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-029"/>
+    <h4>11.2 029 Linux Kernel (LFS)     Date: 2022-11-01  Severity: Medium</h4>
+    <p>In Linux-6.0.6 (and Linux-5.15.76), a security vulnerability was fixed
+    that could allow a local unprivileged attacker to cause a kernel panic
+    when running commands on an ext4 filesystem. This vulnerability occurs due
+    to a directory block check being incorrect, it used to compare the block
+    number against the directory size in bytes. This vulnerability only affects
+    systems with the ext4 filesystem in use, which is the default configuration
+    used in LFS.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1184">CVE-2022-1184</a>.</p>
+    <p>To fix this vulnerability, update to Linux-6.0.6 (or Linux-5.15.76)
+    or later using the instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
     <a id="sa-11.2-028"/>
     <h4>11.2 028 OpenJDK                Date: 2022-10-31  Severity: Medium</h4>
     <p>In OpenJDK-19.0.1, five security vulnerabilities were fixed that could
