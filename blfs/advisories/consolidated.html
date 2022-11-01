@@ -82,6 +82,30 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-031"/>
+    <h4>11.2 031 Inetutils (LFS)        Date: 2022-11-01  Severity: High</h4>
+    <p>In inetutils-2.4, two security vulnerabilities were fixed in the
+    telnet and telnetd programs which could allow for buffer overflows and
+    crashes, leading to denial of service and remote code execution. In the
+    case of the telnet vulnerability, it occurs due to insufficient validation
+    of environment variables, and it leads to remote code execution and also
+    for the potential of escaping restricted shells on embedded devices. It
+    occurs primarily when processing an oversized DISPLAY argument. In the case
+    of the telnetd vulnerability, it occurs when sending a 'IAC EC' or 'IAC EL'
+    character to the daemon, and just results in a crash. In this version of
+    inetutils, there were also several fixes to the 'ftp' and 'tftp' programs
+    which can prevent crashes, but they were not assigned CVE numbers. These
+    crashes do occur due to integer overflows (and thus out-of-bounds access),
+    NULL pointer dereferences, heap buffer overflows, and inifinite macro
+    recusion, so they still should be treated as security problems.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-0053">CVE-2019-0053</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39028">CVE-2022-39028</a>.</p>
+    <p>To fix these vulnerabilities, update to inetutils-2.4 or later using the
+    instructions from
+    <a href="../../lfs/view/development/chapter08/inetutils.html">Inetutils (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/inetutils.html">Inetutils (systemd)</a>.</p>
+
     <a id="sa-11.2-030"/>
     <h4>11.2 030 Expat (LFS)            Date: 2022-11-01  Severity: High</h4>
     <p>In expat-2.5.0, a security vulnerability was fixed that could allow for
