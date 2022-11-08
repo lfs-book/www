@@ -82,6 +82,25 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-033"/>
+    <h4>11.2 033 Sudo                   Date: 2022-11-08  Severity: High</h4>
+    <p>In Sudo-1.9.12p1, a security vulnerability was fixed that could allow
+    for arbitrary code execution, privilege escalation, or a denial of service.
+    This vulnerability occurs due to a heap-based buffer overread which happens
+    due to an array out-of-bounds error. This vulnerability has a significantly
+    worse impact on x86_64 systems, while on i686 systems it just causes a
+    crash. This can be triggered by arbitrary local users with access to Sudo
+    by entering a password of 7 characters or fewer. Note that this only
+    affects the default BLFS configuration of Sudo, which does not use PAM.
+    If you use PAM with Sudo, you are immune to this vulnerability. A temporary
+    mitigation is to use a password which is more than 8 characters in length.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-43995">CVE-2022-43995</a>.</p>
+    <p>To fix this vulnerability, update to Sudo-1.9.12p1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/sudo.html">Sudo (sysv)</a> or
+    <a href="../view/systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
+
     <a id="sa-11.2-032"/>
     <h4>11.2 032 OpenSSL (LFS)          Date: 2022-11-01  Severity: High</h4>
     <p>In OpenSSL-3.0.7, three security vulnerabilites were fixed that could
