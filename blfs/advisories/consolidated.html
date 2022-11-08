@@ -82,6 +82,135 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-033"/>
+    <h4>11.2 033 Sudo                   Date: 2022-11-08  Severity: High</h4>
+    <p>In Sudo-1.9.12p1, a security vulnerability was fixed that could allow
+    for arbitrary code execution, privilege escalation, or a denial of service.
+    This vulnerability occurs due to a heap-based buffer overread which happens
+    due to an array out-of-bounds error. This vulnerability has a significantly
+    worse impact on x86_64 systems, while on i686 systems it just causes a
+    crash. This can be triggered by arbitrary local users with access to Sudo
+    by entering a password of 7 characters or fewer. Note that this only
+    affects the default BLFS configuration of Sudo, which does not use PAM.
+    If you use PAM with Sudo, you are immune to this vulnerability. A temporary
+    mitigation is to use a password which is more than 8 characters in length.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-43995">CVE-2022-43995</a>.</p>
+    <p>To fix this vulnerability, update to Sudo-1.9.12p1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/sudo.html">Sudo (sysv)</a> or
+    <a href="../view/systemd/postlfs/sudo.html">Sudo (systemd)</a>.</p>
+
+    <a id="sa-11.2-032"/>
+    <h4>11.2 032 OpenSSL (LFS)          Date: 2022-11-01  Severity: High</h4>
+    <p>In OpenSSL-3.0.7, three security vulnerabilites were fixed that could
+    allow for remote code execution and denial of service. Note that one of
+    these vulnerabilities were fixed in OpenSSL-3.0.6, but that version was
+    withdrawn shortly after it was released. In the case of the remote code
+    execution, an attacker can craft a malicious email address which will
+    overflow four attacker-controlled bytes on the stack, which guarantees
+    denial-of-service and potentially also causes remote code execution. One
+    of these vulnerabilities is exploitable by a crafted email address which
+    has several '.' (dots) in them. One of the vulnerabilities also allows for
+    NULL encryption when using a custom cipher, but this is uncommon and no
+    packages in LFS or BLFS use this feature. Note that any of these
+    vulnerabilities can be triggered by a TLS client connecting to a malicious
+    server, and in the case of a TLS server, it's triggered when a malicious
+    client connects after authentication. One of the most common mechanisms
+    reported so far is through sending and receiving email, due to the
+    vulnerabilities being in the X.509 certificate verification code, which is
+    commonly used for S/MIME. These vulnerabilities were originally rated as
+    Critical by upstream, but were later downgraded to High. Update to
+    OpenSSL-3.0.7 immediately on <em>ANY</em> system which has OpenSSL-3.x
+    installed. This includes LFS 11.1 and 11.2.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3602">CVE-2022-3602</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3786">CVE-2022-3786</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3358">CVE-2022-3358</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.0.7 or later using the
+    instructions from
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
+    <a id="sa-11.2-031"/>
+    <h4>11.2 031 Inetutils (LFS)        Date: 2022-11-01  Severity: High</h4>
+    <p>In inetutils-2.4, two security vulnerabilities were fixed in the
+    telnet and telnetd programs which could allow for buffer overflows and
+    crashes, leading to denial of service and remote code execution. In the
+    case of the telnet vulnerability, it occurs due to insufficient validation
+    of environment variables, and it leads to remote code execution and also
+    for the potential of escaping restricted shells on embedded devices. It
+    occurs primarily when processing an oversized DISPLAY argument. In the case
+    of the telnetd vulnerability, it occurs when sending a 'IAC EC' or 'IAC EL'
+    character to the daemon, and just results in a crash. In this version of
+    inetutils, there were also several fixes to the 'ftp' and 'tftp' programs
+    which can prevent crashes, but they were not assigned CVE numbers. These
+    crashes do occur due to integer overflows (and thus out-of-bounds access),
+    NULL pointer dereferences, heap buffer overflows, and inifinite macro
+    recusion, so they still should be treated as security problems.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-0053">CVE-2019-0053</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39028">CVE-2022-39028</a>.</p>
+    <p>To fix these vulnerabilities, update to inetutils-2.4 or later using the
+    instructions from
+    <a href="../../lfs/view/development/chapter08/inetutils.html">Inetutils (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/inetutils.html">Inetutils (systemd)</a>.</p>
+
+    <a id="sa-11.2-030"/>
+    <h4>11.2 030 Expat (LFS)            Date: 2022-11-01  Severity: High</h4>
+    <p>In expat-2.5.0, a security vulnerability was fixed that could allow for
+    a denial of service (or arbitrary code execution) when a system is low on
+    memory. The problem occurs due to overeager destruction of a shared DTD
+    in the XML_ExternalEntityParserCreate function when in situations where the
+    system is out of memory, and it is classified as a use-after-free. This can be
+    exploited trivially through malicious advertisements and other crafted
+    web content, but also through other means depending on the context of an
+    application that uses these libraries uses them in.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-43680">CVE-2022-43680</a>.</p>
+    <p>To fix this vulnerability, update to expat-2.5.0 using the instructions
+    for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
+    <a id="sa-11.2-029"/>
+    <h4>11.2 029 Linux Kernel (LFS)     Date: 2022-11-01  Severity: Medium</h4>
+    <p>In Linux-6.0.6 (and Linux-5.15.76), a security vulnerability was fixed
+    that could allow a local unprivileged attacker to cause a kernel panic
+    when running commands on an ext4 filesystem. This vulnerability occurs due
+    to a directory block check being incorrect, it used to compare the block
+    number against the directory size in bytes. This vulnerability only affects
+    systems with the ext4 filesystem in use, which is the default configuration
+    used in LFS.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-1184">CVE-2022-1184</a>.</p>
+    <p>To fix this vulnerability, update to Linux-6.0.6 (or Linux-5.15.76)
+    or later using the instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
+    <a id="sa-11.2-028"/>
+    <h4>11.2 028 OpenJDK                Date: 2022-10-31  Severity: Medium</h4>
+    <p>In OpenJDK-19.0.1, five security vulnerabilities were fixed that could
+    allow an unauthenticated attacker with network access via Kerberos, HTTP,
+    or (more difficult) other protocols, to compromise a Java VM, 
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21618">CVE-2022-21618</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21619">CVE_2022-21619</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21624">CVE_2022-21624</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21628">CVE_2022-21628</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39399">CVE-2022-39399</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-19.0.1 or later using the
+    instructions for
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>, or
+    the binaries
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
     <a id="sa-11.2-027"/>
     <h4>11.2 027 cURL                Date: 2022-10-28  Severity: Medium</h4>
     <p>In cURL-7.86.0, three security vulnerabilities were fixed that could

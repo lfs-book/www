@@ -78,6 +78,13 @@
 
     <h3>Expat</h3>
 
+    <a id="sa-11.2-030"/>
+    <h4>11.2 030 Expat                  Date: 2022-11-01 Severity: High</h4>
+    <p>In expat-2.5.0, a security vulnerability was fixed that could allow for
+    arbitrary code execution or denial of service when a system is running
+    low on memory while processing a DTD. Update to expat-2.5.0.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.2-030">11.2-030</a></p>
+
     <a id="sa-11.2-009"/>
     <h4>11.2 009 Expat                  Date: 2022-09-23 Severity: Critical</h4>
     <p>In expat-2.4.9, a critical security vulnerability was fixed in the
@@ -87,7 +94,27 @@
 
 <!-- end of Expat -->
 
+    <h3>Inetutils</h3>
+
+    <a id="sa-11.2-031"/>
+    <h4>11.2 031 Inetutils (LFS)        Date: 2022-11-01 Severity: High</h4>
+    <p>In inetutils-2.4, two security vulnerabilities were fixed that could
+    allow for denial of service or remote code execution. Note that additional
+    bugfixes were implemented as well which fix crashes with the 'ftp' and
+    'tftp' programs. Update to inetutils-2.4 if you use telnet, telnetd, ftp,
+    or tftp.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.2-031">11.2-031</a></p>
+
+<!-- end of Inetutils -->
+
     <h3>Linux Kernel</h3>
+
+    <a id="sa-11.2-029"/>
+    <h4>11.2 029 Linux Kernel (LFS)     Date: 2022-11-01 Severity: Medium</h4>
+    <p>In Linux-6.0.6, a security vulnerability was fixed that allows local
+    unprivileged attackers to cause a kernel panic when using an ext4
+    filesystem. Update to Linux-6.0.6 or Linux-5.15.76 (LTS).
+    <a href="../../blfs/advisories/consolidated.html#sa-11.2-029">11.2-020</a></p>
 
     <a id="sa-11.2-016"/>
     <h4>11.2 016 Linux Kernel (LFS)     Date: 2022-10-28 Severity: Critical</h4>
@@ -98,6 +125,18 @@
     <a href="../../blfs/advisories/consolidated.html#sa-11.2-016">11.2-016</a></p>
 
 <!-- end of Linux Kernel -->
+
+    <h3>OpenSSL</h3>
+
+    <a id="sa-11.2-032"/>
+    <h4>11.2 032 OpenSSL (LFS)          Date: 2022-11-01 Severity: High</h4>
+    <p>In OpenSSL-3.0.7, three security vulnerabilities were fixed which could
+    allow for remote code execution, denial of service, and for NULL encryption.
+    Update to OpenSSL-3.0.7 immediately on <em>ANY</em> system which has
+    OpenSSL-3 installed.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.2-032">11.2-032</a></p>
+
+<!-- end of OpenSSL -->
 
     <h3>Python3</h3>
 
