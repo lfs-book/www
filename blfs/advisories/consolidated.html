@@ -82,6 +82,23 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-037"/>
+    <h4>11.2 037 Pixman                 Date: 2022-11-09  Severity: High</h4>
+    <p>In Pixman-0.42.2, a security vulnerability was fixed that could allow
+    for either arbitrary code execution or denial-of-service, depending on
+    the context that the library is used in. This vulnerability was caused due
+    to an integer overflow in the rasterize_edges_8() function, and is
+    classified as an out-of-bounds write/heap buffer overflow. A proof of
+    concept for this vulnerability exists in the wild, but just causes a crash.
+    Since Pixman is used in most web broswers for pixmap processing, it is
+    recommended that you update to the latest version as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-44638">CVE-2022-44638</a>.</p>
+    <p>To fix this vulnerability, update to Pixman-0.42.2 or later using the
+    instructions for
+    <a href="../view/svn/general/pixman.html">Pixman (sysv)</a> or
+    <a href="../view/systemd/general/pixman.html">Pixman (systemd)</a>.</p>
+
     <a id="sa-11.2-036"/>
     <h4>11.2 036 zlib (LFS)             Date: 2022-11-09  Severity: Critical</h4>
     <p>In zlib-1.2.13, a security vulnerability was fixed that could allow for
