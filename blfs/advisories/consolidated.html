@@ -82,6 +82,25 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-038"/>
+    <h4>11.2 038 ntfs-3g                Date: 2022-11-09  Severity: High</h4>
+    <p>In ntfs-3g-2022.10.3, a security vulnerability was fixed that could
+    allow for execute arbitrary code at the kernel level. Note that successful
+    exploitation of this vulnerability requires physical access to the computer
+    in order to insert a compromised USB flash drive. The vulnerability is a
+    result of invalid verification of some of the NTFS metadata, and it is
+    classified as a buffer overflow. This vulnerability is exploitable by both
+    the ntfs-3g driver, as well as all of the NTFS utilities (which may be used
+    on systems where creating or checking a NTFS filesystem is necessary).
+    If you regularly use external media which is shared with other users,
+    updating to ntfs-3g-2022.10.3 is recommended.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40284">CVE-2022-40284</a>.</p>
+    <p>To fix this vulnerability, update to ntfs-3g-2022.10.3 using the
+    instructions for
+    <a href="../view/svn/postlfs/ntfs-3g.html">ntfs-3g (sysv)</a> or
+    <a href="../view/systemd/postlfs/ntfs-3g.html">ntfs-3g (systemd)</a>.</p>
+
     <a id="sa-11.2-037"/>
     <h4>11.2 037 Pixman                 Date: 2022-11-09  Severity: High</h4>
     <p>In Pixman-0.42.2, a security vulnerability was fixed that could allow
