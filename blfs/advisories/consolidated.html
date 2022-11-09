@@ -82,6 +82,27 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-036"/>
+    <h4>11.2 036 zlib (LFS)             Date: 2022-11-09  Severity: Critical</h4>
+    <p>In zlib-1.2.13, a security vulnerability was fixed that could allow for
+    arbitrary code execution when an application calls inflateGetHeader with
+    an overly large gzip header extra field. This is caused by a heap buffer
+    overflow or a buffer over-read. Zlib is used in many, many packages, but
+    is often not advertised as such, such as cURL and Node.js. A public
+    exploit exists for this vulnerability, and exploitation is trivial.
+    Upstream has pulled the previous version of zlib for download, so this one
+    must be used when constructing new LFS 11.2 systems. Update to zlib-1.2.13
+    immediately.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-37434">CVE-2022-37434</a>.</p>
+    <p>To fix this vulnerability, update to zlib-1.2.13 using the instructions
+    from
+    <a href="../../lfs/view/development/chapter08/zlib.html">zlib (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/zlib.html">zlib (systemd)</a>.</p>
+    <p>NOTE: When upgrading zlib-1.2.13, update the stripping commands in
+    Chapter 8 to use libz.so.1.2.13 instead of libz.so.1.2.12. This wil prevent
+    your system from breaking after running the stripping commands.</p>
+
     <a id="sa-11.2-035"/>
     <h4>11.2 035 node.js                Date: 2022-11-09  Severity: Medium</h4>
     <p>In node.js-18.12.1, three security vulnerabilities were fixed. Only
