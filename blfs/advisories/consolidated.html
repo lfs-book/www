@@ -82,6 +82,19 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-035"/>
+    <h4>11.2 035 node.js                Date: 2022-11-09  Severity: Medium</h4>
+    <p>In node.js-18.12.1, three security vulnerabilities were fixed. Only
+    one applies to the version (16.18.0) which is in the stable book. It
+    allows an attacker to perform DNS rebinding and execute arbitrary code
+    by passing an invalid octal IP address during a "--inspect" session.
+    This vulnerability has been assigned
+    <a href="https://nodejs.org/en/blog/vulnerability/november-2022-security-releases/">CVE-2022-43548</a>
+    <p>To fix this vulnerability, update to node.js-18.12.1 or later using the
+    instructions from
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+
     <a id="sa-11.2-034"/>
     <h4>11.2 034 jasper                 Date: 2022-11-08  Severity: High</h4>
     <p>In jasper-4.0.0, two security vulnerabilities were fixed that could
