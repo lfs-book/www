@@ -82,6 +82,24 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-034"/>
+    <h4>11.2 034 jasper                 Date: 2022-11-08  Severity: High</h4>
+    <p>In jasper-4.0.0, two security vulnerabilities were fixed that could
+    allow for a denial of service when processing crafted JPEG2000 images.
+    These occur due to memory leaks in the cmdopts_parse function, and an
+    integer overflow in jasper's inttobits() function, which is used when
+    processing JPEG2000 images. Note that this can be exploited through any
+    application which uses jasper for processing JPEG2000 images, such as
+    ImageMagick, gegl (GIMP), or Qt5 (KDE applications such as Gwenview and
+    Okular). Update this package to avoid crashes in those programs.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2963">CVE-2022-2963</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40755">CVE-2022-40755</a>.</p>
+    <p>To fix these vulnerabilities, update to jasper-4.0.0 or later using the
+    instructions from
+    <a href="../view/svn/general/jasper.html">jasper (sysv)</a> or
+    <a href="../view/systemd/general/jasper.html">jasper (systemd)</a>.</p>
+
     <a id="sa-11.2-033"/>
     <h4>11.2 033 Sudo                   Date: 2022-11-08  Severity: High</h4>
     <p>In Sudo-1.9.12p1, a security vulnerability was fixed that could allow
