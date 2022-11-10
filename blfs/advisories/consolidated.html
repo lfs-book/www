@@ -82,6 +82,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-039"/>
+    <h4>11.2 039 PHP                    Date: 2022-11-10  Severity: Critical</h4>
+    <p>In PHP-8.1.12, two security vulnerabilities were fixed in a couple of the
+    internal modules that could allow for passing specially crafted data to a
+    web application, to trigger an out-of-bounds read error, to read contents of
+    memory on the system, decrypt information, and to execute arbitrary code.
+    Both of these vulnerabilities are a result of insufficient input validation
+    and buffer overflows. One of them is in the hashing library and is due to
+    an underlying bug in the XKCP SHA-3 Reference Implementation, and the other
+    occurs in the imageloadfont() function when the GD module is in use. If
+    you run an application that uses the GD or Hash modules in PHP, you should
+    update to the latest version immediately.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-31630">CVE-2022-31630</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-37454">CVE-2022-37454</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.1.12 using the
+    instructions for
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
     <a id="sa-11.2-038"/>
     <h4>11.2 038 ntfs-3g                Date: 2022-11-09  Severity: High</h4>
     <p>In ntfs-3g-2022.10.3, a security vulnerability was fixed that could
