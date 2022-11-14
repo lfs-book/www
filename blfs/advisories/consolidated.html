@@ -82,6 +82,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-041"/>
+    <h4>11.2 041 xfce4-settings         Date: 2022-11-14  Severity: High</h4>
+    <p>In xfce4-settings-4.16.5, a security vulnerability was fixed that could
+    allow for argument injection when processing MIME types. This could allow
+    an attacker to inject arguments, such as a path to a remote filesystem,
+    into a MIME type when using the xfce4-mime-settings program (or
+    using "Default Applications" within the Settings Manager). The details for
+    this vulnerability are sparse at this time, with the only mentions of it
+    being within a release note, and the Gitlab issue is not public yet.
+    As a result, it is unknown if a CVE has been assigned. However,
+    more details can be found at
+    <a href="https://gitlab.xfce.org/xfce/xfce4-settings/-/commit/55e3c5fb667e96ad1412cf249879262b369d28d7">
+    the upstream commit</a> and
+    <a href="https://mail.xfce.org/pipermail/xfce-announce/2022-November/001170.html">
+    the XFCE Mailing List Announcement</a>.</p>
+    <p>To fix this vulnerability, update to xfce4-settings-4.16.5 or later
+    using the instructions from
+    <a href="../view/svn/xfce/xfce4-settings.html">xfce4-settings (sysv)</a> or
+    <a href="../view/systemd/xfce/xfce4-settings.html">xfce4-settings (systemd)</a>.</p>
+
     <a id="sa-11.2-040"/>
     <h4>11.2 040 sysstat                Date: 2022-11-14  Severity: High</h4>
     <p>In sysstat-12.6.1, a security vulnerability was fixed that could allow
