@@ -82,6 +82,24 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-040"/>
+    <h4>11.2 040 sysstat                Date: 2022-11-14  Severity: High</h4>
+    <p>In sysstat-12.6.1, a security vulnerability was fixed that could allow
+    for remote code execution when using the sysstat utilities. This occurs due
+    to a size_t overflow in the shared code between all of the utilities. The
+    function in question, allocate_structures, does not check boundaries before
+    arithmetic manipulation, allowing for an overflow in the size allocated for
+    representing system activities. This can lead to remote code execution, but
+    only affects 32-bit machines. 64-bit machines are thus immune to this
+    vulnerability. Note that the most common way of triggering this vulnerability
+    is by displaying activity files.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39377">CVE-2022-39377</a>.</p>
+    <p>To fix this vulnerability, update to sysstat-12.6.1 or later using the
+    instructions from
+    <a href="../view/svn/general/sysstat.html">sysstat (sysv)</a> or
+    <a href="../view/systemd/general/sysstat.html">sysstat (systemd)</a>.</p>
+
     <a id="sa-11.2-039"/>
     <h4>11.2 039 PHP                    Date: 2022-11-10  Severity: Critical</h4>
     <p>In PHP-8.1.12, two security vulnerabilities were fixed in a couple of the
