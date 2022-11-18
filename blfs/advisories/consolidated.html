@@ -83,6 +83,21 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-045"/>
+    <h4>11.2 045 Samba           Date: 2022-11-17  Severity: Medium</h4>
+    <p>In Samba-4.17.3, a security vulnerability was fixed that could allow
+    for arbitrary code execution or application crashes on 32-bit systems.
+    These occur due to the same bug as the one in krb5, because Samba uses
+    a bundled copy of MIT Kerberos (and the Heimdal implementation is also
+    impacted). If you are using Samba in a server capacity on a 32-bit system,
+    update to Samba-4.17.3 immediately.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-42898">CVE-2022-42898</a>.</p>
+    <p>To fix this vulnerability, update to Samba-4.17.3 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
     <a id="sa-11.2-044"/>
     <h4>11.2 044 krb5            Date: 2022-11-17  Severity: Medium</h4>
     <p>In krb5-1.20.1, a security vulnerability was fixed that could allow for
