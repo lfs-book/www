@@ -82,6 +82,27 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+
+    <a id="sa-11.2-044"/>
+    <h4>11.2 044 krb5            Date: 2022-11-17  Severity: Medium</h4>
+    <p>In krb5-1.20.1, a security vulnerability was fixed that could allow for
+    arbitrary code execution or application crashes on 32-bit systems. These
+    occur due to a bug which allows remote attackers to read beyond the
+    bounds of allocated memory, due to an integer overflow. Note that Samba
+    is also impacted by this vulnerability, but is again only affected on
+    32-bit systems. Privileged attackers can also cause applications to crash
+    which rely on the Kerberos libraries, rather than just the Kerberos
+    applications (such as krb5kdc and kadmind). Since this vulnerability
+    only affects 32-bit systems, the severity is only listed as Medium.
+    However, if you are running such a system, especially in a server
+    capacity, you should update to krb5-1.20.1 immediately.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-42898">CVE-2022-42898</a>.</p>
+    <p>To fix this vulnerability, update to krb5-1.20.1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5 (sysv)</a> or
+    <a href="../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5 (systemd)</a>.</p>
+
     <a id="sa-11.2-043"/>
     <h4>11.2 043 Firefox  Date: 2022-10-18  Severity: High</h4>
     <p>In Firefox-102.5.0esr, twelve security vulnerabilities were fixed, seven
