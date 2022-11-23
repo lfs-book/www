@@ -83,6 +83,22 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-047"/>
+    <h4>11.2 047 Linux Kernel (LFS)     Date: 2022-11-23  Severity: Medium</h4>
+    <p>In Linux-6.0.8 (and Linux-5.15.78), three security vulnerability have
+    been fixed.  One of those could be exploited with a malicious USB device
+    and trivially cause a kernel panic.  If KASLR is disabled or bypassed, the
+    exploitation might cause an arbitrary code execution as well.  The
+    consequences of other two vulnerabilities are not fully published yet.
+    These vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2638">CVE-2022-3628</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42895">CVE-2022-42895</a>,
+    and <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42896">CVE-2022-42896</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-6.0.8 (or Linux-5.15.78)
+    or later using the instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
     <a id="sa-11.2-046"/>
     <h4>11.2 046 Thunderbird  Date: 2022-11-20  Severity: High</h4>
     <p>In Thunderbird-102.5.0, thirteen security vulnerabilities were fixed,
