@@ -83,6 +83,25 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-050"/>
+    <h4>11.2 050 Ruby                   Date: 2022-12-08  Severity: High</h4>
+    <p>In Ruby-3.1.3, a security vulnerability was fixed that can allow for
+    HTTP response splitting in applications which use the 'CGI' gem. If an
+    application which uses the built-in 'CGI' gem generates HTTP responses with
+    untrusted/verified user input, an attacker can exploit it to inject a
+    malicious HTTP response header and/or body. The contents for the
+    CGI::Cookie object were also not checked properly. If an application
+    creates a cookie using that malicious user input, an attacker could inject
+    invalid attributes into the Set-Cookie header. Since this gem is built into
+    the Ruby interpreter itself, it's recommended to update even if you don't
+    have applications which use HTTP requests which are written in Ruby.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33621">CVE-2021-33621</a>.</p>
+    <p>To fix this vulnerability, update to Ruby-3.1.3 or later using the
+    instructions from
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
     <a id="sa-11.2-049"/>
     <h4>11.2 049 Linux Kernel (LFS)     Date: 2022-12-04  Severity: Medium</h4>
     <p>In Linux-6.0.11 (and Linux-5.15.81), a security vulnerability has
