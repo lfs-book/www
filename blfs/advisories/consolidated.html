@@ -83,6 +83,24 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-051"/>
+    <h4>11.2 051 Wireshark              Date: 2022-12-08  Severity: Medium</h4>
+    <p>In Wireshark-4.0.2, two security vulnerabilities were fixed that could
+    allow for a denial of service (CPU resource exhaustion) due to infinite
+    loops in protocol dissectors. These vulnerabilities impact the BPv6,
+    OpenFlow, and Kafka protocol dissectors in particular, and can be triggered
+    either via a malicious PCAP packet trace, or when using Wireshark to capture
+    packets on a network. If you are using Wireshark on a network where BPv6,
+    OpenFlow, or Kafka packets may be transmitted, update to Wireshark-4.0.2.
+    These vulnerabilities have not been assigned CVEs at this time, but more
+    details about them can be found here:
+    <a href="https://www.wireshark.org/security/wnpa-sec-2022-09.html">Wireshark Security Advisory 2022-09</a> and
+    <a href="https://www.wireshark.org/security/wnpa-sec-2022-10.html">Wireshark Security Advisory 2022-10</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.0.2 or later using
+    the instructions for
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-11.2-050"/>
     <h4>11.2 050 Ruby                   Date: 2022-12-08  Severity: High</h4>
     <p>In Ruby-3.1.3, a security vulnerability was fixed that can allow for
