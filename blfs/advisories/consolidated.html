@@ -82,6 +82,31 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-056"/>
+    <h4>11.2 056 WebKitGTK+   Date: 2022-12-15  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.38.2, five security vulnerabilities were fixed that
+    could allow for arbitrary code execution, remote code execution, disclosure
+    of internal states from the application, user interface spoofing, and
+    disclosure of sensitive user information (such as saved passwords). These
+    vulnerabilities were resolved with improved boundary checking, state
+    management, UI handling, and memory handling. These vulnerabilities can be
+    exploited through malicious advertisements, HTML email, and via browsing
+    to an impacted site. The BLFS team recommends updating WebKitGTK+ immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32888">CVE-2022-32888</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-32923">CVE-2022-32923</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42799">CVE-2022-42799</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42823">CVE-2022-42823</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42824">CVE-2022-42824</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.38.2 using the
+    instructions from
+    <a href="../view/11.2/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.2-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>When using these instructions, you must pass -DENABLE_DOCUMENTATION=OFF
+    to the CMake command. The instructions in the development book are
+    incompatible with packages which use WebKitGTK+ in BLFS 11.2 due to a
+    difference in libsoup versions.</p>
+    <!-- pointing to 11.2 was intentional here -->
 
     <a id="sa-11.2-055"/>
     <h4>11.2 055 xwayland  Date: 2022-12-15  Severity: High</h4>
