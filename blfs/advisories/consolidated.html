@@ -82,6 +82,30 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-057"/>
+    <h4>11.2 057 Samba        Date: 2022-12-15  Severity: High</h4>
+    <p>In Samba-4.17.4, four security vulnerabilities were fixed that could
+    allow for elevation of privilege. These vulnerabilities are identical to
+    the "Microsoft Windows Kerberos RC4-HMAC Elevation of Privilege
+    Vulnerability" and "Netlogon RPC Elevation of Privilege Vulnerability"
+    disclosed on November 8th, 2022. It was later found that these
+    vulnerabilities allow for privilege escalation in the same way within Samba.
+    Three of the vulnerabilities (which are related to Kerberos) require the
+    system to be in an Active Directory domain, or Samba running in AD DC mode.
+    However, the Netlogon vulnerability affects all configurations of Samba.
+    Note that this update also fixes support for connecting to (and from)
+    Microsoft Windows 11 22H2 systems, which could previously cause Samba
+    to crash.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-37966">CVE-2022-37966</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-37967">CVE-2022-37967</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38023">CVE-2022-38023</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-45141">CVE-2022-45141</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.17.4 using the
+    instructions from
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
     <a id="sa-11.2-056"/>
     <h4>11.2 056 WebKitGTK+   Date: 2022-12-15  Severity: Critical</h4>
     <p>In WebKitGTK+-2.38.2, five security vulnerabilities were fixed that
