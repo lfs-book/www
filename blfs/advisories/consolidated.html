@@ -82,6 +82,19 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-058"/>
+    <h4>11.2 058 xorg-server  Date: 2022-12-20  Severity: Medium</h4>
+    <p>In xorg-server-21.1.6, two security vulnerabilities were fixed that
+    could allow an attacker to write into random memory of the X server. This
+    is specially a problem when the server is run as root.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2022-3550">CVE-2022-3550</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-3551">CVE-2022-3551</a>.</p>
+    <p>To fix these vulnerabilities, update to xorg-server-21.1.6 or later
+    using the instructions for
+    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+
     <a id="sa-11.2-057"/>
     <h4>11.2 057 Samba        Date: 2022-12-15  Severity: High</h4>
     <p>In Samba-4.17.4, four security vulnerabilities were fixed that could
