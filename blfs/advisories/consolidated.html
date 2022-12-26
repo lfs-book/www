@@ -82,6 +82,42 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-060"/>
+    <h4>11.2 060 Python3 (LFS and BLFS) Date: 2022-12-26 Severity: High, or Critical</h4>
+    <p>The development books are using Python-3.11 and the details of how to
+    build that series of Python have changed. If you update from an older
+    series to 3.11 you will need to rebuild <em>all</em> Python3 modules,
+    including meson and wheel (the latter was added for LFS-11.2). Alternatively,
+    Python-3.10 (and some older series) are still maintained by upstream although
+    fixes may take a little longer to appear. If you stick with 3.10 on an
+    existing system you will not need to rebuild modules. Therefore, please choose
+    whether to upgrade to Python-3.11.1 or to Python-3.10.9.</p>
+
+    <p>In Python-3.11.1, five security vulnerabilities were fixed, with one rated as
+    High. See
+    <a href="https://docs.python.org/release/3.11.1/whatsnew/changelog.html#python-3-11-1">Python 3.11.1 Release Notes</a>.
+    The IDA codec decoder vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-45061">CVE-2022-45061</a>,
+    the other vulnerabilities have not been assigned CVEs.</p>
+    <p>To fix these vulnerabilities using the Python-3.11 series, update to
+    Python-3.11.1 using the instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+
+    <p>Alternatively, in Python-3.10.9 a similar set of vulnerabilities with one rated
+    as Critical and two rated as High have been fixed in Python-3.10.9, see
+  <a href="https://docs.python.org/release/3.10.9/whatsnew/changelog.html#python-3-10-9-final">Python 3.10.9 Release Notes</a>. The fixes with CVEs are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-37454">CVE-2022-37474</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42919">CVE-2022-42919</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-45061">CVE-2022-45061</a>.
+    Please note that you should read the 'Looking for a specific release?' section of
+    <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
+    to get the source and to find when a future 3.10 release is available.</p>
+    <p>To fix these vulnerabilities update to Python-3.10.9 but following thw
+    instructions from the <em>BLFS</em> 11.2 books:
+    <a href="../view/11.2/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/11.2-systemd/general/python3.html">Python3 (systemd)</a>.</p>
+
     <a id="sa-11.2-059"/>
     <h4>11.2 059 Libksba             Date: 2022-12-21  Severity: High</h4>
     <p>In libksba-1.6.3 a severe bug in parsing ASN.1 structures was fixed.
@@ -1139,6 +1175,9 @@
     <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
     <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
 
+    <p>Alternatively, to fix the vulnerabilities while remaining on the Python-3.10
+    series update to Python-3.10.9 but following the instructions from the
+    11.2 book,		
     <a id="sa-11.2-004"/>
     <h4>11.2 004 Wireshark           Date: 2022-09-14  Severity: Medium</h4>
     <p>In Wireshark-3.6.8, a security vulnerability was fixed that could allow
