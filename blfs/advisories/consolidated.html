@@ -82,6 +82,34 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-061"/>
+    <h4>11.2 061 systemd (LFS and BLFS) Date: 2022-12-28 Severity: High</h4>
+    <p>In systemd-246 and higher, a security vulnerability was discovered that
+    could allow for a local information leak and for privilege escalation. This
+    vulnerability exists in the systemd-coredump program, and is caused by
+    systemd-coredump not respecting the fs.suid_dumpable kernel setting. The
+    BLFS team has developed a patch for systemd-251 and systemd-252 that fixes
+    this vulnerability. Note that this vulnerability theoretically could be
+    exploited any time an application crashes, and can even be exploited by
+    users who intentionally crash programs (such as the 'su' command). There is
+    a proof-of-concept available publicly that allows for the root user's
+    password hash to be leaked through the usage of the 'su' command by an
+    unprivileged user. If you do not wish to patch systemd, a workaround
+    would be to set the fs.suid_dumpable flag to 0, using the following
+    command: "sysctl -w fs.suid_dumpable=0", but note that you will be
+    unable to debug application crashes from other users (including from root).
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-4415">CVE-2022-4415</a>, and
+    more information is available at
+    <a href="https://www.openwall.com/lists/oss-security/2022/12/21/3">oss-security mailing list post</a>.</p>
+    <p>To fix this vulnerability, update to systemd-252 with the patch using
+    the instructions from
+    <a href="../view/systemd/general/systemd.html">systemd in BLFS development</a>.</p>
+    <p>Alternatively, you can rebuild systemd-251 with the patch from
+    <a href="https://linuxfromscratch.org/patches/downloads/systemd/systemd-251-security_fix-1.patch">systemd-251 security patch</a>,
+    applying this patch before the systemd-251-glibc_2.36_fix-1.patch in
+    <a href="../view/11.2-systemd/general/systemd.html">systemd in BLFS 11.2</a>.</p>
+
     <a id="sa-11.2-060"/>
     <h4>11.2 060 Python3 (LFS and BLFS) Date: 2022-12-26 Severity: High, or Critical</h4>
     <p>The development books are using Python-3.11 and the details of how to
