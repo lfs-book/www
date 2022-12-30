@@ -82,6 +82,24 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-063"/>
+    <h4>11.2 063 cURL                Date: 2022-12-30 Severity: Low</h4>
+    <p>In cURL-7.87.0, two security vulnerabilities were fixed that could allow
+    for HSTS bypasses and for secure tunneling to fail when using TELNET and
+    SMB. In the case of the HSTS bypass, this can lead to plaintext transmission
+    of sensitive information, and in the case of the secure tunnel failure,
+    it can allow for either a crash or unintended behavior. Note that you must
+    use internationalized domain names (IDN) for the HSTS bypass to work,
+    and you must use SMB/TELNET through cURL and stunnel for the stunnel
+    failure to work.
+    These vulnerabilities have been assigned
+    <a href="https://curl.se/docs/CVE-2022-43551.html">CVE-2022-43551</a> and
+    <a href="https://curl.se/docs/CVE-2022-43552.html">CVE-2022-43552</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.87.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-11.2-062"/>
     <h4>11.2 062 glib                Date: 2022-12-30 Severity: High</h4>
     <p>In glib-2.74.4, several security vulnerabilities in the GVariant
