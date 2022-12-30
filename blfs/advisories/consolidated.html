@@ -82,6 +82,21 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-062"/>
+    <h4>11.2 062 glib                Date: 2022-12-30 Severity: High</h4>
+    <p>In glib-2.74.4, several security vulnerabilities in the GVariant
+    subsystem when processing untrusted data, as well as adding some input
+    validation in the 'GDBusMenuModel'. Upstream has declared these as security
+    fixes, but no CVEs have been assigned, and there are a variety of impacts
+    such as denial of service, arbitrary code execution, and undesirable
+    application behavior.
+    Please check the forum post for more details:
+    <a href="https://discourse.gnome.org/t/multiple-fixes-for-gvariant-normalisation-issues-in-glib/">GNOME Discourse Forum Post</a>.</p>
+    <p>To fix these vulnerabilities, update to glib-2.74.4 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+
     <a id="sa-11.2-061"/>
     <h4>11.2 061 systemd (LFS and BLFS) Date: 2022-12-28 Severity: High</h4>
     <p>In systemd-246 and higher, a security vulnerability was discovered that
