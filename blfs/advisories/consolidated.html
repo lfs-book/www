@@ -89,8 +89,8 @@
     could exploit this to perform man-in-the-middle attacks. Note that even if you
     don't explicitly use SSH for alternate registry indexes or crate dependencies,
     you might be affected by this vulnerability if you have configured git to
-    replace HTTPS connections to GitHub with SSH (through git's url.<base>.insteadOf
-    setting), as that'd cause you to clone the crates.io index through SSH.</p>
+    replace HTTPS connections to GitHub with SSH, as that'd cause you to clone
+    the crates.io index through SSH.</p>
     <p>The rust security advisory is
     <a href="https://blog.rust-lang.org/2023/01/10/cve-2022-46176.html">https://blog.rust-lang.org/2023/01/10/cve-2022-46176.html</a>. At the moment it appears that most rust
     users do not explicitly use SSH, the usage of SSH by developers who use rust
