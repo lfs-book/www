@@ -82,6 +82,23 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-071"/>
+    <h4>11.2 071 git                    Date: 2023-01-19  Severity: Critical</h4>
+    <p>In git-2.39.1, two security vulnerabilities were fixed which could allow
+    for arbitrary heap reads and writes, which can allow for remote code
+    execution. The git project advises all users to upgrade immediately as no
+    workarounds are available for the issues. The issues can occur when using
+    the 'git log' and 'git archive' commands, especially when using the --format
+    option, and they can also occur when a .gitattributes file exists within
+    a repository. These issues are all classified as integer overflows.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-41903">CVE-2022-41903</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23521">CVE-2022-23521</a>.</p>
+    <p>To fix these vulnerabilities, update to git-2.39.1 using the
+    instructions from
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
     <a id="sa-11.2-070"/>
     <h4>11.2 070 Linux Kernel (LFS)     Date: 2023-01-19  Severity: Critical</h4>
     <p>In Linux-6.1.6 (and Linux-5.15.89), several security vulnerabilities were
