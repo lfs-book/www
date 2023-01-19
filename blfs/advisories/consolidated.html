@@ -82,6 +82,34 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-068"/>
+    <h4>11.2 068 WebKitGTK+      Date: 2023-01-19 Severity: High</h4>
+    <p>In WebKitGTK+-2.38.3, several security vulnerabilities were fixed that
+    could allow for remote code execution, disclosure of process memory,
+    Same Origin Policy bypass, sensitive user information disclosure, and
+    denial of service. These vulnerabilities all occur when processing crafted
+    web content, and may be exploited via malicious advertisements on pages as
+    well as embedded HTML content in mails, and standard visits to malicious
+    webpages. Most of these issues were fixed with improved input validation,
+    improved memory handling, and improved state handling.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42852">CVE-2022-42852</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42856">CVE-2022-42856</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42867">CVE-2022-42867</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46692">CVE-2022-46692</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46698">CVE-2022-46698</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46699">CVE-2022-46699</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46700">CVE-2022-46700</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.38.3 using the
+    instructions from
+    <a href="../view/11.2/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.2-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>When using these instructions, you must pass -DENABLE_DOCUMENTATION=OFF
+    to the CMake command. The instructions in the development book are
+    incompatible with packages which use WebKitGTK+ in BLFS 11.2 due to a
+    difference in libsoup versions.</p>
+    <!-- pointing to 11.2 was intentional here -->
+
     <a id="sa-11.2-067"/>
     <h4>11.2 067 Firefox  Date: 2023-01-17  Severity: High</h4>
     <p>In Firefox-102.7.0esr, seven security vulnerabilities were fixed, three
