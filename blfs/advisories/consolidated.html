@@ -82,6 +82,20 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-069"/>
+    <h4>11.2 069 rxvt-unicode    Date: 2023-01-19 Severity: Critical</h4>
+    <p>In rxvt-unicode-9.31, a critical security vulnerability was fixed that
+    could allow for remote code execution in the Perl background extension,
+    when an attacker can control the data written to the user's terminal
+    and certain options are set. Note that the default configuration supplied
+    in BLFS 11.2 is vulnerable due to it's usage of the Perl extension.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4170">CVE-2022-4170</a>.</p>
+    <p>To fix this vulnerability, update to rxvt-unicode-9.31 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/rxvt-unicode.html">rxvt-unicode (sysv)</a> or
+    <a href="../view/systemd/xsoft/rxvt-unicode.html">rxvt-unicode (systemd)</a>.</p>
+
     <a id="sa-11.2-068"/>
     <h4>11.2 068 WebKitGTK+      Date: 2023-01-19 Severity: High</h4>
     <p>In WebKitGTK+-2.38.3, several security vulnerabilities were fixed that
