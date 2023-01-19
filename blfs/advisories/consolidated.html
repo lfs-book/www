@@ -82,6 +82,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-073"/>
+    <h4>11.2 073 PHP                    Date: 2023-01-19  Severity: Medium</h4>
+    <p>In PHP-8.2.1, a security vulnerability was fixed in the PDO_SQLite
+    module that could allow for an unquoted string to be returned due to an
+    uncaught integer overflow in PDO::quote(). This is due to PHP's
+    implementation of sqlite3_snprintf(), where it's possible to force the
+    function to return a single apostrophe if the function is called on user
+    supplied input without any length restrictions in place. Upgrading to
+    PHP-8.2.1 is only necessary if you use the PDO_SQLite function.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-31631">CVE-2022-31631</a>.</p>
+    <p>To fix this vulnerability, update to PHP-8.2.1 using the instructions
+    from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
     <a id="sa-11.2-072"/>
     <h4>11.2 072 Apache HTTPD           Date: 2023-01-19  Severity: High</h4>
     <p>In httpd-2.4.55, three security vulnerabilities were fixed in the
