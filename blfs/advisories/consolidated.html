@@ -82,6 +82,222 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-074"/>
+    <h4>11.2 074 Sudo                   Date: 2023-01-20  Severity: Medium</h4>
+    <p>In Sudo-1.9.12p2, a flaw in sudo's -e option (aka sudoedit) was fixed
+    that could allow a malicious user with sudoedit privileges to edit
+    arbitrary files.
+    This vulnerability has been assigned
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22809">CVE-2023-22809</a>.</p>
+    <p>To fix this vulnerability, update to Sudo-1.9.12p2 using the instructions
+    from
+    <a href="../view/svn/postlfs/sudo.html">Sudo</a>.</p>
+
+    <a id="sa-11.2-073"/>
+    <h4>11.2 073 PHP                    Date: 2023-01-19  Severity: Medium</h4>
+    <p>In PHP-8.2.1, a security vulnerability was fixed in the PDO_SQLite
+    module that could allow for an unquoted string to be returned due to an
+    uncaught integer overflow in PDO::quote(). This is due to PHP's
+    implementation of sqlite3_snprintf(), where it's possible to force the
+    function to return a single apostrophe if the function is called on user
+    supplied input without any length restrictions in place. Upgrading to
+    PHP-8.2.1 is only necessary if you use the PDO_SQLite function.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-31631">CVE-2022-31631</a>.</p>
+    <p>To fix this vulnerability, update to PHP-8.2.1 using the instructions
+    from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+    <a id="sa-11.2-072"/>
+    <h4>11.2 072 Apache HTTPD           Date: 2023-01-19  Severity: High</h4>
+    <p>In httpd-2.4.55, three security vulnerabilities were fixed in the
+    mod_proxy, mod_proxy_ajp, and mod_dav modules which could allow for
+    remotely exploitable crashes, HTTP Response Splitting, and Request
+    Smuggling. These vulnerabilities only affect BLFS users who have those
+    modules enabled in their HTTPD configuration.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2006-20001">CVE-2006-20001</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-36760">CVE-2022-36370</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-37436">CVE-2022-37436</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.55 using the
+    instructions from
+    <a href="../view/svn/server/apache.html">Apache (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache (systemd)</a>.</p>
+
+    <a id="sa-11.2-071"/>
+    <h4>11.2 071 git                    Date: 2023-01-19  Severity: Critical</h4>
+    <p>In git-2.39.1, two security vulnerabilities were fixed which could allow
+    for arbitrary heap reads and writes, which can allow for remote code
+    execution. The git project advises all users to upgrade immediately as no
+    workarounds are available for the issues. The issues can occur when using
+    the 'git log' and 'git archive' commands, especially when using the --format
+    option, and they can also occur when a .gitattributes file exists within
+    a repository. These issues are all classified as integer overflows.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-41903">CVE-2022-41903</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23521">CVE-2022-23521</a>.</p>
+    <p>To fix these vulnerabilities, update to git-2.39.1 using the
+    instructions from
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
+    <a id="sa-11.2-070"/>
+    <h4>11.2 070 Linux Kernel (LFS)     Date: 2023-01-19  Severity: Critical</h4>
+    <p>In Linux-6.1.6 (and Linux-5.15.89), several security vulnerabilities were
+    fixed that could allow for information disclosure, remote code execution,
+    remotely-triggered denial of service, and for data loss.
+    These vulnerabilities occur in a variety of places, including the core
+    network stack, namespaces (Net/User namespaces), the BPF subsystem,
+    the SGI-GRU subsystem, the NFS Daemon, the multimedia subsystem (for digital
+    video recorders), the VMWare and Intel graphics drivers, the network
+    scheduler, the /proc filesystem, the Xen subsystem, the sysctl subsystem,
+    and the Bluetooth subsystem. Because of the amount of vulnerabilities and
+    their severities, it's recommended to upgrade your kernel as soon as
+    possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4378">CVE-2022-4378</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3435">CVE-2022-3435</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-45934">CVE-2022-45934</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42329">CVE-2022-42329</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3643">CVE-2022-3643</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42328">CVE-2022-42328</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3531">CVE-2022-3531</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3532">CVE-2022-3532</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3534">CVE-2022-3534</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3424">CVE-2022-3424</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4379">CVE-2022-4379</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-36280">CVE-2022-36280</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-41218">CVE-2022-41218</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23454">CVE-2023-23454</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3707">CVE-2022-3707</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23455">CVE-2022-23455</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0210">CVE-2023-0210</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-6.1.6 (or Linux-5.15.89)
+    or later using the instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
+    <a id="sa-11.2-069"/>
+    <h4>11.2 069 rxvt-unicode    Date: 2023-01-19 Severity: Critical</h4>
+    <p>In rxvt-unicode-9.31, a critical security vulnerability was fixed that
+    could allow for remote code execution in the Perl background extension,
+    when an attacker can control the data written to the user's terminal
+    and certain options are set. Note that the default configuration supplied
+    in BLFS 11.2 is vulnerable due to it's usage of the Perl extension.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4170">CVE-2022-4170</a>.</p>
+    <p>To fix this vulnerability, update to rxvt-unicode-9.31 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/rxvt-unicode.html">rxvt-unicode (sysv)</a> or
+    <a href="../view/systemd/xsoft/rxvt-unicode.html">rxvt-unicode (systemd)</a>.</p>
+
+    <a id="sa-11.2-068"/>
+    <h4>11.2 068 WebKitGTK+      Date: 2023-01-19 Severity: High</h4>
+    <p>In WebKitGTK+-2.38.3, several security vulnerabilities were fixed that
+    could allow for remote code execution, disclosure of process memory,
+    Same Origin Policy bypass, sensitive user information disclosure, and
+    denial of service. These vulnerabilities all occur when processing crafted
+    web content, and may be exploited via malicious advertisements on pages as
+    well as embedded HTML content in mails, and standard visits to malicious
+    webpages. Most of these issues were fixed with improved input validation,
+    improved memory handling, and improved state handling.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42852">CVE-2022-42852</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42856">CVE-2022-42856</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42867">CVE-2022-42867</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46692">CVE-2022-46692</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46698">CVE-2022-46698</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46699">CVE-2022-46699</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46700">CVE-2022-46700</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.38.3 using the
+    instructions from
+    <a href="../view/11.2/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.2-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>When using these instructions, you must pass -DENABLE_DOCUMENTATION=OFF
+    to the CMake command. The instructions in the development book are
+    incompatible with packages which use WebKitGTK+ in BLFS 11.2 due to a
+    difference in libsoup versions.</p>
+    <!-- pointing to 11.2 was intentional here -->
+
+    <a id="sa-11.2-067"/>
+    <h4>11.2 067 Firefox  Date: 2023-01-17  Severity: High</h4>
+    <p>In Firefox-102.7.0esr, seven security vulnerabilities were fixed, three
+    of them rated as High by upstream. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-02/">mfsa-2023-02</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23598">CVE-2023-23598</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23601">CVE-2023-23601</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23602">CVE-2023-23602</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23603">CVE-2023-23603</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23605">CVE-2023-23605</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-46871">CVE-2023-46871</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-46877">CVE-2023-46877</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-102.7.0esr or later
+    using the instructions for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-11.2-066"/>
+    <h4>11.2 066 Rust  Date: 2023-01-15  Severity: Medium</h4>
+    <p>In all versions of Rust before 1.66.1, Cargo did not perform SSH host key
+    verification when cloning indexes and dependencies via SSH. An attacker
+    could exploit this to perform man-in-the-middle attacks. Note that even if you
+    don't explicitly use SSH for alternate registry indexes or crate dependencies,
+    you might be affected by this vulnerability if you have configured git to
+    replace HTTPS connections to GitHub with SSH, as that'd cause you to clone
+    the crates.io index through SSH.</p>
+    <p>The rust security advisory is
+    <a href="https://blog.rust-lang.org/2023/01/10/cve-2022-46176.html">https://blog.rust-lang.org/2023/01/10/cve-2022-46176.html</a>. At the moment it appears that most rust
+    users do not explicitly use SSH, the usage of SSH by developers who use rust
+    is not known. For those who do explicitly use SSH in rust the severity should
+    be regarded as High.</p>
+    <p>Please see
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46176">CVE-2022-46176</a>.</p>
+    <p>To fix this vulnerability, update to rustc-1.66.1 (or a later version) using
+    the instructions for
+    <a href="../view/svn/general/rust.html">Rust (sysv)</a> or
+    <a href="../view/systemd/general/rust.html">Rust (systemd)</a>.</p>
+
+    <a id="sa-11.2-065"/>
+    <h4>11.2 065 QtWebEngine           Date: 2023-01-07 Severity: Critical</h4>
+    <p>In QtWebEngine-5.15.12, many Chromium security vulnerabilities were
+    fixed, including two rated as Critical that allow a remote attacker who has
+    compromised the render to escape the sandbox, as well as many rated High
+    allowing a remote attacker to potentially exploit heap corruption. Most of
+    these are via a crafted HTML page, two are via a crafted PDF file, a few
+    require the user to install a malicious extension (which might not apply to
+    users of qtwebengine).
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4262">CVE-2022-4262</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4181">CVE-2022-4181</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4180">CVE-2022-4180</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4174">CVE-2022-4174</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3890">CVE-2022-3890</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3887">CVE-2022-3887</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3885">CVE-2022-3885</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3573">CVE-2022-3573</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3446">CVE-2022-3446</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3445">CVE-2022-3445</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3373">CVE-2022-3373</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3370">CVE-2022-3370</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3304">CVE-2022-3304</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3201">CVE-2022-3201</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3200">CVE-2022-3200</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3199">CVE-2022-3199</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3198">CVE-2022-3198</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3197">CVE-2022-3197</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3196">CVE-2022-3196</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3075">CVE-2022-3075</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3046">CVE-2022-3046</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3041">CVE-2022-3041</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3040">CVE-2022-3040</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3038">CVE-2022-3038</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-5.15.11 or later
+    using the instructions for
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+	
     <a id="sa-11.2-064"/>
     <h4>11.2 064 libtiff             Date: 2022-12-30 Severity: High</h4>
     <p>In libtiff-4.5.0, ten security vulnerabilities were fixed that could
@@ -200,7 +416,7 @@
     Please note that you should read the 'Looking for a specific release?' section of
     <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
     to get the source and to find when a future 3.10 release is available.</p>
-    <p>To fix these vulnerabilities update to Python-3.10.9 but following thw
+    <p>To fix these vulnerabilities update to Python-3.10.9 but following the
     instructions from the <em>BLFS</em> 11.2 books:
     <a href="../view/11.2/general/python3.html">Python3 (sysv)</a> or
     <a href="../view/11.2-systemd/general/python3.html">Python3 (systemd)</a>.</p>
@@ -314,10 +530,11 @@
     <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
 
     <a id="sa-11.2-053"/>
-    <h4>11.2 053 Thunderbird  Date: 2022-12-15  Severity: High</h4>
+    <h4>11.2 053 Thunderbird  Date: 2023-01-17  Severity: Critical</h4>
     <p>In Thunderbird-102.6.0, six security vulnerabilities were fixed, four
     of them rated as High by upstream. Details at
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-53/">mfsa-2022-53</a>.
+    CVE-2022-46882 has now been rated as Critical by nvd.nist.gov.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46872">CVE-2022-46872</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46874">CVE-2022-46874</a>,
@@ -331,10 +548,11 @@
     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-11.2-052"/>
-    <h4>11.2 052 Firefox  Date: 2022-12-13  Severity: High</h4>
+    <h4>11.2 052 Firefox  Revised: 2023-01-17  Severity: Critical</h4>
     <p>In Firefox-102.6.0esr, six security vulnerabilities were fixed, four
     of them rated as High by upstream. Details at
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2022-52/">mfsa-2022-52</a>.
+    CVE-2022-46882 has now been rated as Critical by nvd.nist.gov.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46872">CVE-2022-46872</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46874">CVE-2022-46874</a>,

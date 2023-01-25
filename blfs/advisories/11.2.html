@@ -52,6 +52,18 @@
 
 <!-- end of PackageName -->
 
+    <h3>Apache HTTPD</h3>
+
+    <a id="sa-11.2-072"/>
+    <h4>11.2 072 Apache HTTPD Date: 2023-01-19  Severity: High</h4>
+    <p>In httpd-2.4.55, three security vulnerabilities were fixed in the
+    mod_proxy, mod_proxy_ajp, and mod_dav modules that could allow for
+    HTTP Response Splitting, Request Smuggling, and remotely exploitable
+    crahses. Update to httpd-2.4.55 if you are using those modules.
+    <a href="consolidated.html#sa-11.2-072">11.2-072</a></p>
+
+<!-- end of Apache HTTPD -->
+
     <h3>BIND</h3>
 
     <a id="sa-11.2-012"/>
@@ -114,10 +126,17 @@
 
     <h3>Firefox</h3>
 
+    <a id="sa-11.2-067"/>
+    <h4>11.2 067 Firefox  Date: 2023-01-17  Severity: High</h4>
+    <p>In Firefox-102.7.0esr, seven security vulnerabilities were fixed, three
+    of them rated as High by upstream.
+    <a href="consolidated.html#sa-11.2-067">11.2-067</a></p>
+
     <a id="sa-11.2-052"/>
-    <h4>11.2 052 Firefox  Date: 2022-12-13  Severity: High</h4>
+    <h4>11.2 052 Firefox  Revised: 2023-01-17  Severity: Critical</h4>
     <p>In Firefox-102.6.0esr, six security vulnerabilities were fixed, four
     of them rated as High by upstream.
+    CVE-2022-46882 has now been rated as Critical by nvd.nist.gov.
     <a href="consolidated.html#sa-11.2-052">11.2-052</a></p>
 
     <a id="sa-11.2-043"/>
@@ -152,6 +171,14 @@
 <!-- end of glib -->
 
     <h3>git</h3>
+
+    <a id="sa-11.2-071"/>
+    <h4>11.2 071 git                 Date: 2023-01-19  Severity: Critical</h4>
+    <p>In git-2.39.1, two security vulnerabilities were fixed that could allow
+    for remote code execution on git clients and servers when using repositories
+    with a .gitattributes file, or when running the 'git log' and 'git archive'
+    commands. Update to git-2.39.1 immediately.
+    <a href="consolidated.html#sa-11.2-071">11.2-071</a></p>
 
     <a id="sa-11.2-024"/>
     <h4>11.2 024 git                 Date: 2022-10-28  Severity: High</h4>
@@ -300,6 +327,13 @@
 
     <h3>PHP</h3>
 
+    <a id="sa-11.2-073"/>
+    <h4>11.2 073 PHP          Date: 2023-01-19  Severity: Medium</h4>
+    <p>In PHP-8.2.1, a security vulnerability was fixed in PDO_SQLite which
+    could allow for the module to return an unquoted string. Update to PHP-8.2.1
+    if you use the PDO_SQLite module.
+    <a href="consolidated.html#sa-11.2-073">11.2-073</a></p>
+
     <a id="sa-11.2-039"/>
     <h4>11.2 039 PHP          Date: 2022-11-10  Severity: Critical</h4>
     <p>In PHP-8.1.12, two security vulnerabilities were fixed that could allow
@@ -372,6 +406,17 @@
 
     <h3>QtWebEngine</h3>
 
+    <a id="sa-11.2-065"/>
+    <h4>11.2 065 QtWebEngine           Date: 2023-01-07 Severity: Critical</h4>
+    <p>In QtWebEngine-5.15.12, many Chromium security vulnerabilities were
+    fixed, including two rated as Critical that allow a remote attacker who has
+    compromised the render to escape the sandbox, as well as many rated High
+    allowing a remote attacker to potentially exploit heap corruption. Most of
+    these are via a crafted HTML page, two are via a crafted PDF file, a few
+    require the user to install a malicious extension (which might not apply to
+    users of qtwebengine). Update to QtWebEngine-5.15.12 or later.
+    <a href="consolidated.html#sa-11.2-065">11.2-065</a></p>
+
     <a id="sa-11.2-006"/>
     <h4>11.2 006 QtWebEngine  Date: 2022-09-19  Severity: Critical</h4>
     <p>In QtWebEngine-5.15.11, several security vulnerabilities were fixed that
@@ -392,6 +437,27 @@
     <a href="consolidated.html#sa-11.2-050">11.2-050</a></p>
 
 <!-- end of Ruby -->
+
+    <h3>Rust</h3>
+    <a id="sa-11.2-066"/>
+    <h4>11.2 066 Rust  Date: 2023-01-15  Severity: Medium</h4>
+    <p>In all versions of Rust before 1.66.1, Cargo did not perform SSH host key
+    verification when cloning indexes and dependencies via SSH. This can allow
+    an attacker to perform man-in-the-middle attacks when SSH is used.
+    <a href="consolidated.html#sa-11.2-066">11.2-066</a></p>
+
+<!-- end of Rust -->
+
+    <h3>rxvt-unicode</h3>
+
+    <a id="sa-11.2-069"/>
+    <h4>11.2 069 rxvt-unicode Date: 2023-01-19  Severity: Critical</h4>
+    <p>In rxvt-unicode-9.31, a critical security vulnerability was fixed that
+    could allow for remote code execution in some cases when using the Perl
+    background extension. Update to rxvt-unicode-9.31 immediately.
+    <a href="consolidated.html#sa-11.2-069">11.2-069</a>.</p>
+
+<!-- end of rxvt-unicode -->
 
     <h3>Samba</h3>
 
@@ -422,6 +488,14 @@
 <!-- end of Samba -->
 
     <h3>Sudo</h3>
+
+    <a id="sa-11.2-074"/>
+    <h4>11.2 074 Sudo         Date: 2023-01-20  Severity: High</h4>
+    <p>In Sudo-1.9.12p2, a flaw in sudo’s -e option (aka sudoedit) was fixed
+    that could allow a malicious user with sudoedit privileges to edit
+    arbitrary files.
+    Update to Sudo-1.9.12p2 or later.
+    <a href="consolidated.html#sa-11.2-074">11.2-074</a></p>
 
     <a id="sa-11.2-033"/>
     <h4>11.2 033 Sudo         Date: 2022-11-08  Severity: High</h4>
@@ -458,9 +532,10 @@
     <h3>Thunderbird</h3>
 
     <a id="sa-11.2-053"/>
-    <h4>11.2 053 Thunderbird  Date: 2022-12-15  Severity: High</h4>
+    <h4>11.2 053 Thunderbird  Revised: 2023-01-17  Severity: Critical</h4>
     <p>In Thunderbird-102.6.0, six security vulnerabilities weres fixed, four
     of them rated as High by upstream.
+    CVE-2022-46882 has now been rated as Critical by nvd.nist.gov.
     <a href="consolidated.html#sa-11.2-053">11.2-053</a></p>
 
     <a id="sa-11.2-048"/>
@@ -517,6 +592,14 @@
 <!-- end of Unbound -->
 
     <h3>WebKitGTK+</h3>
+
+    <a id="sa-11.2-068"/>
+    <h4>11.2 068 WebKitGTK+   Date: 2023-01-19  Severity: High</h4>
+    <p>In WebKitGTK+-2.38.3, several security vulnerabilities were fixed that
+    could allow for remote code execution, denial of service, and sensitive
+    information disclosure. Update to WebKitGTK+-2.38.3 immediately, but note
+    the special instructions in the advisory.
+    <a href="consolidated.html#sa-11.2-068">11.2-068</a></p>
 
     <a id="sa-11.2-056"/>
     <h4>11.2 056 WebKitGTK+   Date: 2022-12-15  Severity: Critical</h4>
