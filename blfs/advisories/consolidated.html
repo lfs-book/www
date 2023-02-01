@@ -82,6 +82,40 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+
+    <a id="sa-11.2-075"/>
+    <h4>11.2 075 Glibc (LFS)              Date: 2022-02-01  Severity: Medium</h4>
+    <p>In Glibc-2.37, a security vulnerability was fixed in the
+    <code>syslog</code> function that could allow an information disclosure
+    with a long (&gt; 1024 bytes) input.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39046">CVE-2022-39046</a>.
+    The only Glibc release affected is 2.36.</p>
+    <p>To fix this vulnerability, backup the system first, then apply
+    <a href="https://linuxfromscratch.org/patches/downloads/glibc/glibc-2.36-security_fix-1.patch">the patch</a>
+    for Glibc-2.36 and rebuild it with the instructions from
+    <a href='../../lfs/view/11.2/chapter08/glibc.html'>Glibc</a>.  After
+    testing the package with <code>make check</code>, instead of installing
+    it directly, perform a <code>DESTDIR</code> installation with
+    <code>make install DESTDIR=$PWD/dest</code>.  Now as the
+    <code>root</code> user, replace the library files containing the
+    <code>syslog</code> function:</p>
+    <pre><code>install -vm755 dest/usr/lib/libc.so.6 /usr/lib
+install -vm644 dest/usr/lib/libc.a    /usr/lib</code></pre>
+    <p>If the debug symbols for <code>libc.so.6</code> is saved in a
+    separate <code>libc.so.6.dbg</code> file (as demonstrated in
+    <a href='../../lfs/view/11.2/chapter08/stripping.html'>Stripping</a>),
+    use the following commands instead to replace the library files and
+    the debug symbol file:</p>
+    <pre>objcopy --only-keep-debug dest/usr/lib/libc.so.6{,.dbg}
+install -vm755 dest/usr/lib/libc.so.6         /usr/lib
+install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
+    <p>After the files are replaced, reboot the system immediately.</p>
+<!-- uncomment after LFS 11.3 release
+    <p>Alternatively, update to
+    <a href='../../lfs/view/stable/'>the latest LFS stable release</a>
+    if you can afford a system rebuild.</p>
+-->
     <a id="sa-11.2-074"/>
     <h4>11.2 074 Sudo                   Date: 2023-01-20  Severity: Medium</h4>
     <p>In Sudo-1.9.12p2, a flaw in sudo's -e option (aka sudoedit) was fixed
@@ -297,7 +331,6 @@
     <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
     <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
-	
     <a id="sa-11.2-064"/>
     <h4>11.2 064 libtiff             Date: 2022-12-30 Severity: High</h4>
     <p>In libtiff-4.5.0, ten security vulnerabilities were fixed that could
