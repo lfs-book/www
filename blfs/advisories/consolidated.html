@@ -102,12 +102,15 @@
     <code>syslog</code> function:</p>
     <pre><code>install -vm755 dest/usr/lib/libc.so.6 /usr/lib
 install -vm644 dest/usr/lib/libc.a    /usr/lib</code></pre>
-    <p>If the debug symbols for <code>libc.so.6</code> is saved in a
-    separate <code>libc.so.6.dbg</code> file (as demonstrated in
+    <p>If the debug symbols for Glibc is stripped from the library files
+    and saved in a separate <code>libc.so.6.dbg</code> file (as
+    demonstrated in
     <a href='../../lfs/view/11.2/chapter08/stripping.html'>Stripping</a>),
     use the following commands instead to replace the library files and
     the debug symbol file:</p>
     <pre>objcopy --only-keep-debug dest/usr/lib/libc.so.6{,.dbg}
+strip   --strip-unneeded  dest/usr/lib/libc.{a,so.6}
+objcopy --add-gnu-debuglink=/usr/lib/libc.so.6.dbg dest/usr/lib/libc.so.6
 install -vm755 dest/usr/lib/libc.so.6         /usr/lib
 install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <p>After the files are replaced, reboot the system immediately.</p>
