@@ -82,6 +82,39 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-077"/>
+    <h4>11.2 077 Apr                    Date: 2023-02-02  Severity: Medium</h4>
+    <p>In apr-1.7.0 and earlier, three vulnerabilites have been found:
+    <ul>
+    <li>Integer Overflow or Wraparound vulnerability in 
+    apr_encode functions of Apache Portable Runtime (APR) allows
+    an attacker to write beyond bounds of a buffer.</li> 
+	<li>On Windows, Apache Portable Runtime 1.7.0 and earlier may
+    write beyond the end of a stack based buffer in apr_socket_sendv().
+    This is a result of integer overflow.</lib>
+	<li>Restore fix for out-of-bounds array dereference
+    in apr_time_exp*() functions.</li>
+	</ul>
+
+    These vulnerability have been assigned:<br>
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24963">CVE-2022-24963</a>.<br>
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28331">CVE-2022-28331</a>.<br>
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-35940">CVE-2021-35940</a>.<br></p>
+    <p>To fix these vulnerability, update to apr-1.7.2 using the 
+    instructions from
+    <a href="../view/svn/general/apr.html">Apr</a>.</p>
+
+    <a id="sa-11.2-076"/>
+    <h4>11.2 076 Apr-Util               Date: 2023-02-02  Severity: Medium</h4>
+    <p>In apr-util-1.6.1 and prior, integer Overflow or Wraparound
+    vulnerability in apr_base64 functions allows an attacker to write
+    beyond bounds of a buffer.
+    This vulnerability has been assigned
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25147">CVE-2022-25147</a>.</p>
+    <p>To fix this vulnerability, update to apr-util-1.6.3 using the
+    instructions from
+    <a href="../view/svn/general/apr-util.html">Apr-Util</a>.</p>
+
 
     <a id="sa-11.2-075"/>
     <h4>11.2 075 Glibc (LFS)              Date: 2022-02-01  Severity: Medium</h4>
