@@ -409,8 +409,19 @@
           hardware.)</p>
           <p>Assuming you're not overclocking, the most likely hardware problem
           is bad memory which you can check with Memtest86+ from <a
-          href="https://www.memtest.org/">https://www.memtest.org/</a>. If
-          that isn't it, see the long answer.</p>
+          href="https://www.memtest.org/">https://www.memtest.org/</a>.
+          <p>CPU overheating is another common hardware problem.  Ensure the
+          cooler is properly installed with thermal paste applied.  And,
+          some coolers (especially all-in-one liquid coolers) cannot be
+          configured via BIOS and they need special software (for example,
+          <a href='https://github.com/liquidctl/liquidctl'>liquidctl</a> to set
+          the parameters correctly.  If such a cooler is not properly
+          configured, it can run in a lower speed (or does not run at all).
+          If the cooler is already running at full speed but the CPU still
+          overheats, either upgrade the cooler, or downclock the CPU via
+          BIOS.</p>
+          <p>If both bad memory and CPU overheating can be ruled out, see the
+          long answer.</p>
         </dd>
         <dt id="any-no-such-file">No such file or directory</dt>
         <dd>
