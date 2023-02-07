@@ -83,6 +83,31 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-081"/>
+    <h4>11.2 081 Linux Kernel (LFS)     Date: 2023-02-07  Severity: High</h4>
+    <p>In Linux-6.1.9 (and 5.15.91), three security vulnerabilities were fixed
+    that could allow for remotely exploitable system crashes, leakage of
+    stack/heap addresses, local privilege escalation, and arbitrary code
+    execution. These vulnerabilities existed in the Netfilter subsystem (buffer
+    overflow), IPv6 subsystem (NULL pointer dereference in
+    rawv6_push_pending_frames), and the kernel's NTFS3 driver (NULL pointer
+    dereference). The IPv6 vulnerability can be exploited during normal system
+    usage, and the NTFS vulnerability requires the user to mount a filesystem
+    with NTFS Extended Attributes.
+    The most serious of these vulnerabilities is the Netfilter buffer overflow,
+    and a mitigation is possible by running
+    "sysctl -w kernel.unprivileged_userns_clone = 0". Note
+    that this will break desktop environments and any other applications which
+    use User Namespaces though, such as QtWebEngine.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2023-0179">CVE-2023-0179</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2023-0394">CVE-2023-0394</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2022-4842">CVE-2022-4842</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-6.1.9 (or Linux-5.15.91)
+    or later using the instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
     <a id="sa-11.2-080"/>
     <h4>11.2 080 WebKitGTK+   Date: 2023-02-07  Severity: Critical</h4>
     <p>In WebKitGTK+-2.38.4, three security vulnerabilities were fixed that could
