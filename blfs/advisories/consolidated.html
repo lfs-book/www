@@ -83,6 +83,19 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-083"/>
+    <h4>11.2 083 e2fsprogs (LFS)        Date: 2023-02-07  Severity: High</h4>
+    <p>In e2fsprogs-1.46.6, a security vulnerability was fixed that could allow
+    for a segmentation fault or arbitrary code execution when mounting or
+    running fsck on a specially crafted filesystem. This occurs due to an
+    out-of-bounds read/write.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2022-1304">CVE-2022-1304</a>.</p>
+    <p>To fix this vulnerability, update to e2fsprogs-1.46.6 or later using the
+    instructions from
+    <a href="../../lfs/view/development/chapter08/e2fsprogs.html">e2fsprogs (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/e2fsprogs.html">e2fsprogs (systemd)</a>.</p>
+
     <a id="sa-11.2-082"/>
     <h4>11.2 082 OpenSSL (LFS)          Date: 2023-02-07  Severity: High</h4>
     <p>In OpenSSL-3.0.8, eight security vulnerabilities were fixed that could
