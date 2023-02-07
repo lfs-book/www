@@ -83,6 +83,32 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-080"/>
+    <h4>11.2 080 WebKitGTK+   Date: 2023-02-07  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.38.4, three security vulnerabilities were fixed that could
+    allow for remote code execution when processing maliciously crafted web
+    content. All three of these issues are related to memory management problems.
+    Note that since WebKitGTK+ is used to process HTML content in emails when
+    using Evolution, it is possible for malicious HTML emails to exploit these
+    vulnerabilities. These vulnerabilities may also be exploited via malicious
+    advertisements.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23517">CVE-2023-23517</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23518">CVE-2023-23518</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-42826">CVE-2022-42826</a>.
+    Further information can be found in Apple's security advisory for Safari
+    16.3, which uses the same version of the WebKit rendering engine:
+    <a href="https://support.apple.com/en-us/HT213600">Apple Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.38.4 using the
+    instructions from
+    <a href="../view/11.2/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.2-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>When using these instructions, you must pass -DENABLE_DOCUMENTATION=OFF
+    to the CMake command. The instructions in the development book are
+    incompatible with packages which use WebKitGTK+ in BLFS 11.2 due to a
+    difference in libsoup versions.</p>
+    <!-- pointing to 11.2 was intentional here -->
+
     <a id="sa-11.2-079"/>
     <h4>11.2 079 Wireshark    Date: 2023-02-07  Severity: High</h4>
     <p>In Wireshark-4.0.3, several security vulnerabilities were fixed that
