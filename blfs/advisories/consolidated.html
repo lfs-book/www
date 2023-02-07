@@ -82,6 +82,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+
+    <a id="sa-11.2-078"/>
+    <h4>11.2 078 Xorg-Server  Date 2023-02-07  Severity: High</h4>
+    <p>In Xorg-Server before version 21.1.7, a dangling pointer in
+    DeepCopyPointerClasses can be exploited by ProcXkbSetDeviceInfo() and
+    ProcXkbGetDeviceInfo() to read/write into freed memory.
+    This issue can lead to local privileges elevation on systems
+    where the X server is running privileged and remote code execution for
+    ssh X forwarding sessions.
+
+    <p>To fix this, update to at least Xorg-Server-21.1.7 using the instructions
+    for
+    <a href="../view/11.0/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/11.0-systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+
+
     <a id="sa-11.2-077"/>
     <h4>11.2 077 Apr                    Date: 2023-02-02  Severity: Medium</h4>
     <p>In apr-1.7.0 and earlier, three vulnerabilites have been found:
