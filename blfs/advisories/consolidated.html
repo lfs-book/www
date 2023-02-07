@@ -91,46 +91,48 @@
     This issue can lead to local privileges elevation on systems
     where the X server is running privileged and remote code execution for
     ssh X forwarding sessions.
-
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0494">CVE-2023-0494</a>.</p>
     <p>To fix this, update to at least Xorg-Server-21.1.7 using the instructions
     for
-    <a href="../view/11.0/x/xorg-server.html">Xorg-Server (sysv)</a> or
-    <a href="../view/11.0-systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
-
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
 
     <a id="sa-11.2-077"/>
     <h4>11.2 077 Apr                    Date: 2023-02-02  Severity: Medium</h4>
     <p>In apr-1.7.0 and earlier, three vulnerabilites have been found:
     <ul>
-    <li>Integer Overflow or Wraparound vulnerability in 
-    apr_encode functions of Apache Portable Runtime (APR) allows
-    an attacker to write beyond bounds of a buffer.</li> 
-	<li>On Windows, Apache Portable Runtime 1.7.0 and earlier may
-    write beyond the end of a stack based buffer in apr_socket_sendv().
-    This is a result of integer overflow.</lib>
-	<li>Restore fix for out-of-bounds array dereference
-    in apr_time_exp*() functions.</li>
-	</ul>
-
-    These vulnerability have been assigned:<br>
-    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24963">CVE-2022-24963</a>.<br>
-    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28331">CVE-2022-28331</a>.<br>
-    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-35940">CVE-2021-35940</a>.<br></p>
-    <p>To fix these vulnerability, update to apr-1.7.2 using the 
+    <li>Integer Overflow or Wraparound vulnerability in
+     apr_encode functions of Apache Portable Runtime (APR) allows
+     an attacker to write beyond bounds of a buffer.</li>
+	 <li>On Windows, Apache Portable Runtime 1.7.0 and earlier may
+     write beyond the end of a stack based buffer in apr_socket_sendv().
+     This is a result of integer overflow.</li>
+	 <li>Restore fix for out-of-bounds array dereference
+     in apr_time_exp*() functions.</li>
+    </ul>
+    This could allow for denial of service or remote code execution.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24963">CVE-2022-24963</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28331">CVE-2022-28331</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-35490">CVE-2021-35940</a>.</p>
+    <p>To fix these vulnerabilities, update to apr-1.7.2 using the
     instructions from
-    <a href="../view/svn/general/apr.html">Apr</a>.</p>
+    <a href="../view/svn/general/apr.html">Apr (sysv)</a> or
+    <a href="../view/systemd/general/apr.html">Apr (systemd)</a>.</p>
 
     <a id="sa-11.2-076"/>
     <h4>11.2 076 Apr-Util               Date: 2023-02-02  Severity: Medium</h4>
-    <p>In apr-util-1.6.1 and prior, integer Overflow or Wraparound
+    <p>In apr-util-1.6.1 and prior, an integer overflow or wraparound
     vulnerability in apr_base64 functions allows an attacker to write
-    beyond bounds of a buffer.
+    beyond bounds of a buffer. This could allow for denial of service or
+    arbitrary code execution.
     This vulnerability has been assigned
-    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25147">CVE-2022-25147</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-25147">CVE-2022-25147</a>.</p>
     <p>To fix this vulnerability, update to apr-util-1.6.3 using the
     instructions from
-    <a href="../view/svn/general/apr-util.html">Apr-Util</a>.</p>
-
+    <a href="../view/svn/general/apr-util.html">Apr-Util (sysv)</a> or
+    <a href="../view/systemd/general/apr-util.html">Apr-Util (systemd)</a>.</p>
 
     <a id="sa-11.2-075"/>
     <h4>11.2 075 Glibc (LFS)              Date: 2022-02-01  Severity: Medium</h4>
