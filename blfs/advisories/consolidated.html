@@ -83,8 +83,30 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-079"/>
+    <h4>11.2 079 Wireshark    Date: 2023-02-07  Severity: High</h4>
+    <p>In Wireshark-4.0.3, several security vulnerabilities were fixed that
+    could allow for crashes, memory leaks, and excessive CPU resource
+    consumption. These vulnerabilities all occur when dissecting different
+    types of packets during a packet capture or analysis, and can be exploited
+    by running Wireshark on a network which has crafted EAP, NFS, GNW, iSCSI,
+    TIPC, BPv6, NCP, or RTPS packets passing through it. This can also occur by
+    reading a malformed packet trace file. These vulnerabilities have not been
+    assigned CVEs, but more details about them can be found at
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-01.html">WNPA-SEC-2023-01</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-02.html">WNPA-SEC-2023-02</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-03.html">WNPA-SEC-2023-03</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-04.html">WNPA-SEC-2023-04</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-05.html">WNPA-SEC-2023-05</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-06.html">WNPA-SEC-2023-06</a>, and
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-07.html">WNPA-SEC-2023-07</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.0.3 using the
+    instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-11.2-078"/>
-    <h4>11.2 078 Xorg-Server  Date 2023-02-07  Severity: High</h4>
+    <h4>11.2 078 Xorg-Server  Date: 2023-02-07  Severity: High</h4>
     <p>In Xorg-Server before version 21.1.7, a dangling pointer in
     DeepCopyPointerClasses can be exploited by ProcXkbSetDeviceInfo() and
     ProcXkbGetDeviceInfo() to read/write into freed memory.
