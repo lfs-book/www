@@ -83,6 +83,35 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-082"/>
+    <h4>11.2 082 OpenSSL (LFS)          Date: 2023-02-07  Severity: High</h4>
+    <p>In OpenSSL-3.0.8, eight security vulnerabilities were fixed that could
+    allow for remotely exploitable denial of service, arbitrary reading of
+    memory (including the ability to harvest private keys), plaintext data
+    recovery, and side channel attacks. These vulnerabilities occur when
+    performing PKCS7 data verification, validating DSA public keys, decrypting
+    RSA data, using X.509 certificates, and when using various different
+    OpenSSL API functions. Since OpenSSL is used in a variety of different
+    contexts and applications for cryptography operations, it is imperative
+    that you update OpenSSL on all affected systems immediately. For older
+    systems which do not use OpenSSL-3 (LFS 11.1 for example), you should
+    upgrade to 1.1.1t instead of 3.0.8.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0286">CVE-2023-0286</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4304">CVE-2022-4304</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4203">CVE-2022-4203</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0215">CVE-2023-0215</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4450">CVE-2022-4450</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0216">CVE-2023-0216</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0217">CVE-2023-0217</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0401">CVE-2023-0401</a>.
+    Additional information can be found at
+    <a href="https://www.openssl.org/news/secadv/20230207.txt">OpenSSL Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.0.8 or later using the
+    instructions from
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
     <a id="sa-11.2-081"/>
     <h4>11.2 081 Linux Kernel (LFS)     Date: 2023-02-07  Severity: High</h4>
     <p>In Linux-6.1.9 (and 5.15.91), three security vulnerabilities were fixed
