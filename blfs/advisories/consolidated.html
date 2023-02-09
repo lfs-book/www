@@ -83,6 +83,21 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-084"/>
+    <h4>11.2 084 Xwayland  Date: 2023-02-09  Severity: High</h4>
+    <p>In Xwayland before version 21.1.8, a dangling pointer in
+    DeepCopyPointerClasses can be exploited by ProcXkbSetDeviceInfo() and
+    ProcXkbGetDeviceInfo() to read/write into freed memory.
+    This issue can lead to local privileges elevation on systems
+    where Xwayland is running privileged and remote code execution for
+    ssh X forwarding sessions.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0494">CVE-2023-0494</a>.</p>
+    <p>To fix this, update to at least Xwayland-21.1.8 using the instructions
+    for
+    <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
     <a id="sa-11.2-083"/>
     <h4>11.2 083 e2fsprogs (LFS)        Date: 2023-02-07  Severity: High</h4>
     <p>In e2fsprogs-1.46.6, a security vulnerability was fixed that could allow
