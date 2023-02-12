@@ -83,6 +83,30 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-085"/>
+    <h4>11.2 085 PostgreSQL             Date: 2023-02-12 Severity: Low</h4>
+    <p>In PostgreSQL-15.2, a security vulnerability was fixed that could allow
+    for an unauthenticated server to send an unterminated string during the
+    establishment of Kerberos transport encryption. When this occurs, and a
+    libpq client application has a Kerberos credential cache setup that doesn't
+    explicitly disable the gssencmode option, a server can cause libpq to
+    over-read and report an error message containing uninitialized bytes from
+    and following it's receive buffer. If the caller somehow makes that
+    message accessible to the attacker, it'll achieve a disclosure of over-read
+    bytes. It has not been confirmed that a crash or leakage of confidential
+    information can be achieved. It is important that you update PostgreSQL
+    if you are using Kerberos transport encryption in your configuration.
+    Alternatively, you can disable the gssencmode option as a workaround on
+    any clients. Note that no dump/restore is required if upgrading from
+    another version in the 15 series, and 14.7 has been released for
+    PostgreSQL-14 users.
+    This vulnerability has been assigned
+    <a href="https://www.postgresql.org/support/security/CVE-2022-41862/">CVE-2022-41862</a>.</p>
+    <p>To fix this vulnerability, update to PostgreSQL-15.2 or later using
+    the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-11.2-084"/>
     <h4>11.2 084 Xwayland  Date: 2023-02-09  Severity: High</h4>
     <p>In Xwayland before version 22.1.8, a dangling pointer in
