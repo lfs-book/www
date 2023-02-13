@@ -83,6 +83,20 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-086"/>
+    <h4>11.2 086 Samba                  Date: 2022-02-12 Severity; High</h4>
+    <p>In Samba-4.17.5, a significant improvement to a prior security fix for
+    a high severity security vulnerability was released. This vulnerability
+    allowed for elevation of privilege to root through the Netlogon RPC
+    subsystem, and also affected Windows. Note that this version of Samba
+    fixes several other bugs when using macOS clients wtih Samba.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38023">CVE-2022-38023</a>.</p>
+    <p>To fix this vulnerability, update to Samba-4.17.5 using the instructions
+    from
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
     <a id="sa-11.2-085"/>
     <h4>11.2 085 PostgreSQL             Date: 2023-02-12 Severity: Low</h4>
     <p>In PostgreSQL-15.2, a security vulnerability was fixed that could allow
