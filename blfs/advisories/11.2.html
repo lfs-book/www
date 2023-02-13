@@ -64,6 +64,29 @@
 
 <!-- end of Apache HTTPD -->
 
+    <h3>Apr</h3>
+
+    <a id="sa-11.2-077"/>
+    <h4>11.2 077 Apr Date: 2023-02-02  Severity: Medium</h4>
+    <p>In apr-1.7.2, three security vulnerabilities were fixed regarding 
+    out-of-bounds writes.
+    Update to apr-1.7.2.
+    <a href="consolidated.html#sa-11.2-077">11.2-077</a></p>
+
+<!-- end of Apr -->
+
+
+    <h3>Apr-Util</h3>
+
+    <a id="sa-11.2-076"/>
+    <h4>11.2 076 Apr Date: 2023-02-02  Severity: Medium</h4>
+    <p>In apr-util-1.6.3, a security vulnerability was fixed that allowed
+    an attacker to write beyond bounds of a buffer.
+    Update to apr-util-1.6.3.
+    <a href="consolidated.html#sa-11.2-076">11.2-076</a></p>
+
+<!-- end of Apr-Util -->
+
     <h3>BIND</h3>
 
     <a id="sa-11.2-012"/>
@@ -377,6 +400,18 @@
 
 <!-- end of Poppler -->
 
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-11.2-085"/>
+    <h4>11.2 085 PostgreSQL             Date: 2023-02-12 Severity: Low</h4>
+    <p>In PostgreSQL-15.2, a security vulnerability was fixed that could
+    allow for leakage of confidential information in special circumstances
+    when using Kerberos encryption. Update to PostgreSQL-15.2 if you are
+    using PostgreSQL with Kerberos.
+    <a href="consolidated.html#sa-11.2-085">11.2-085</a>.</p>
+
+<!-- end of PostgreSQL -->
+
     <h3>Python3</h3>
 
     <a id="sa-11.2-060"/>
@@ -461,6 +496,13 @@
 
     <h3>Samba</h3>
 
+    <a id="sa-11.2-086"/>
+    <h4>11.2 086 Samba        Date: 2023-02-12  Severity: High</h4>
+    <p>In Samba-4.17.5, an improvement to a security fix for the Netlogon
+    RPC Elevation of Privilege vulnerability was made. Update to Samba-4.17.5
+    immediately.
+    <a href="consolidated.html#sa-11.2-086">11.2-086</a></p>
+
     <a id="sa-11.2-057"/>
     <h4>11.2 057 Samba        Date: 2022-12-15  Severity: High</h4>
     <p>In Samba-4.17.4, four security vulnerabilities were fixed that could
@@ -531,6 +573,14 @@
 
     <h3>Thunderbird</h3>
 
+    <a id="sa-11.2-087"/>
+    <h4>11.2 087 Thunderbird            Date: 2022-02-13 Severity: High</h4>
+    <p>In Thunderbird-102.7.2, several security vulnerabilities were fixed that
+    could allow for content security policy bypasses, remote code execution,
+    notification bypasses, website spoofing attacks, and invalid signature
+    verification of S/MIME email messages. Update to Thunderbird-102.7.2.
+    <a href="consolidated.html#sa-11.2-087">11.2-087</a></p>
+
     <a id="sa-11.2-053"/>
     <h4>11.2 053 Thunderbird  Revised: 2023-01-17  Severity: Critical</h4>
     <p>In Thunderbird-102.6.0, six security vulnerabilities weres fixed, four
@@ -593,6 +643,13 @@
 
     <h3>WebKitGTK+</h3>
 
+    <a id="sa-11.2-080"/>
+    <h4>11.2 080 WebKitGTK+   Date: 2023-02-07  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.38.4, three security vulnerabilities were fixed that
+    could allow for remote code execution. Update to WebKitGTK+-2.38.4
+    immediately, but note the special instructions in the advisory.
+    <a href="consolidated.html#sa-11.2-080">11.2-080</a></p>
+
     <a id="sa-11.2-068"/>
     <h4>11.2 068 WebKitGTK+   Date: 2023-01-19  Severity: High</h4>
     <p>In WebKitGTK+-2.38.3, several security vulnerabilities were fixed that
@@ -620,6 +677,15 @@
 <!-- end of WebKitGTK+ -->
 
     <h3>Wireshark</h3>
+
+    <a id="sa-11.2-079"/>
+    <h4>11.2 079 Wireshark    Date: 2023-02-07  Severity: High</h4>
+    <p>In Wireshark-4.0.3, several security vulnerabilities were fixed that
+    could allow for denial of service (excessive resource consumption, crashes,
+    and memory leaks) when capturing (or reading packets) from a network which
+    has EAP, NFS, GNW, iSCSI, TIPC, NCP, RTPS, or BPv6 packets traveling across
+    it. Update to Wireshark-4.0.3 if you are on such a network.
+    <a href="consolidated.html#sa-11.2-079">11.2-079</a></p>
 
     <a id="sa-11.2-051"/>
     <h4>11.2 051 Wireshark    Date: 2022-12-08  Severity: Medium</h4>
@@ -652,6 +718,13 @@
 
     <h3>Xorg-server</h3>
 
+    <a id="sa-11.2-078"/>
+    <h4>11.2 078 xorg-server Date: 2023-02-07  Severity: High</h4>
+    <p>In xorg-server-21.1.7, a vulnerability was fixed that could lead
+    to local privileges elevation on systems where the X server is running
+    privileged remote code execution for ssh X forwarding sessions.
+    <a href="consolidated.html#sa-11.2-078">11.2-078</a></p>
+
     <a id="sa-11.2-058"/>
     <h4>11.2 058 xorg-server Date: 2022-12-20  Severity: Medium</h4>
     <p>In xorg-server-21.1.6, two vulnerabilities were fixed that could
@@ -667,6 +740,13 @@
 <!-- end of xorg-server -->
 
     <h3>xwayland</h3>
+
+    <a id="sa-11.2-084"/>
+    <h4>11.2 084 xwayland Date: 2023-02-09  Severity: High</h4>
+    <p>In xwayland-22.1.8, a vulnerability was fixed that could lead
+    to local privileges elevation on systems where xwayland is running
+    privileged, or remote code execution for ssh X forwarding sessions.
+    <a href="consolidated.html#sa-11.2-084">11.2-084</a></p>
 
     <a id="sa-11.2-055"/>
     <h4>11.2 055 xwayland Date: 2022-12-15  Severity: High</h4>

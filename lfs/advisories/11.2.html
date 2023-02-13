@@ -76,6 +76,17 @@
 
 <!-- end of dbus -->
 
+    <h3>e2fsprogs</h3>
+
+    <a id="sa-11.2-083"/>
+    <h4>11.2 083 e2fsprogs (LFS)        Date: 2023-02-07  Severity: High</h4>
+    <p>In e2fsprogs-1.46.6, a security vulnerability was fixed that could allow
+    for arbitrary code execution or segmentation faults when mounting or
+    checking a specially crafted filesystem. Update to e2fsprogs-1.46.6.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.2-083">11.2-083</a></p>
+
+<!-- end of e2fsprogs -->
+
     <h3>Expat</h3>
 
     <a id="sa-11.2-030"/>
@@ -126,6 +137,15 @@
 
     <h3>Linux Kernel</h3>
 
+    <a id="sa-11.2-081"/>
+    <h4>11.2 081 Linux Kernel (LFS)     Date: 2023-02-07 Severity: High</h4>
+    <p>In Linux-6.1.9 (and Linux-5.15.91), three security vulnerabilities were
+    fixed in the Netfilter subsystem, NTFS3 driver, and IPv6 subsystem that
+    could allow for full system crashes, privilege escalation, remote code
+    execution, and heap/stack address leakage. Update to Linux-6.1.9 or
+    Linux-5.15.91 (LTS) if you use IPv6, NTFS3, or Netfilter.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.2-081">11.2-081</a></p>
+
     <a id="sa-11.2-070"/>
     <h4>11.2 070 Linux Kernel (LFS)     Date: 2023-01-19 Severity: Critical</h4>
     <p>In Linux-6.1.6 (and Linux-5.15.89), several security vulnerabilities were
@@ -168,6 +188,15 @@
 <!-- end of Linux Kernel -->
 
     <h3>OpenSSL</h3>
+
+    <a id="sa-11.2-082"/>
+    <h4>11.2 082 OpenSSL (LFS)          Date: 2023-02-07  Severity: High</h4>
+    <p>In OpenSSL-3.0.8, eight security vulnerabilities were fixed that could
+    allow for leakage of sensitive information, denial of service, plaintext
+    data recovery, and more. Update to OpenSSL-3.0.8 (or 1.1.1t on older
+    systems, such as LFS 11.1) <em>immediately on all systems which have
+    OpenSSL installed.</em>
+    <a href="../../blfs/advisories/consolidated.html#sa-11.2-082">11.2-082</a></p>
 
     <a id="sa-11.2-032"/>
     <h4>11.2 032 OpenSSL (LFS)          Date: 2022-11-01 Severity: High</h4>
