@@ -83,6 +83,19 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-089"/>
+    <h4>11.2 089 GnuTLS     Date: 2023-02-14    Severity: Medium</h4>
+    <p>In GnuTLS-3.8.0, a security vulnerability which allowed a remote attacker
+    to perform a man-in-the-middle attack was fixed. An error in TLS RSA key
+    exchange allowed a remote attacker to perform Bleichenbacher oracle attacks
+    using malformed TLS RSA keys, and potentially decrypt information.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0361">CVE-2023-0361</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.8.0 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
     <a id="sa-11.2-088"/>
     <h4>11.2 088 Seamonkey              Date: 2023-02-13 Severity: Critical</h4>
     <p>In Seamonkey-2.53.15, several security vulnerabilities that were fixed
