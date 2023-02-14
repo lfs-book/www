@@ -362,18 +362,19 @@
 
     <a id="sa-11.2-077"/>
     <h4>11.2 077 Apr                    Date: 2023-02-02  Severity: Medium</h4>
-    <p>In apr-1.7.0 and earlier, three vulnerabilites have been found:
-    <ul>
-    <li>Integer Overflow or Wraparound vulnerability in
+    <p>In apr-1.7.0 and earlier, three vulnerabilites have been found:</p>
+<!-- Line 463, Column 8: document type does not allow element "ul" here; missing one of "button", "map", "object", "ins", "del", "noscript" start-tag
+    <ul> -->
+    <!-- Remove ul and therefore li, replace by paragraphs -->
+    <p>Integer Overflow or Wraparound vulnerability in
      apr_encode functions of Apache Portable Runtime (APR) allows
-     an attacker to write beyond bounds of a buffer.</li>
-	 <li>On Windows, Apache Portable Runtime 1.7.0 and earlier may
+     an attacker to write beyond bounds of a buffer.</p>
+	 <p>On Windows, Apache Portable Runtime 1.7.0 and earlier may
      write beyond the end of a stack based buffer in apr_socket_sendv().
-     This is a result of integer overflow.</li>
-	 <li>Restore fix for out-of-bounds array dereference
-     in apr_time_exp*() functions.</li>
-    </ul>
-    This could allow for denial of service or remote code execution.
+     This is a result of integer overflow.</p>
+	 <p>Restore fix for out-of-bounds array dereference
+     in apr_time_exp*() functions.</p>
+    <p>This could allow for denial of service or remote code execution.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24963">CVE-2022-24963</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28331">CVE-2022-28331</a>, and
