@@ -83,6 +83,41 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-093"/>
+    <h4>11.2 093 Firefox  Date: 2023-02-14  Severity: High</h4>
+    <p>In Firefox-102.8.0esr, eleven security vulnerabilities applicable to linux
+    systems were fixed, eight of them rated as High by upstream. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-06/">mfsa-2023-06</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0767">CVE-2023-0767</a>
+    which only applies if using the shipped NSS instead of system NSS,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23728">CVE-2023-25728</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23729">CVE-2023-25729</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23730">CVE-2023-25730</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23732">CVE-2023-25732</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25735">CVE-2023-25737</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25737">CVE-2023-25737</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25739">CVE-2023-25739</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25742">CVE-2023-25742</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25744">CVE-2023-25744</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25746">CVE-2023-25746</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-102.8.0esr or later
+    using the instructions for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-11.2-092"/>
+    <h4>11.2 092 JS-102  Date: 2023-02-14  Severity: High</h4>
+    <p>In the Javascript code of firefox-102.8.0 there is a fix for a Use After
+    Free, which could cause a potentially exploitable crash, rated as High by
+    Mozilla - see CVE-2023-25735 in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-06/">mfsa-2023-06</a>.
+    Further details may appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25735">CVE-2023-25735</a>.</p>
+    <p>To fix this, update to JS-102.8.0 or later using the instructions for
+    <a href="../view/svn/general/js102.html">JS102 (sysv)</a> or
+    <a href="../view/systemd/general/js102.html">JS102 (systemd)</a>.</p>
+
     <a id="sa-11.2-091"/>
     <h4>11.2 091 NSS  Updated: 2023-02-14  Severity: High</h4>
     <p>In NSS-3.88.1, 3.79.4 and 3.87.1 a bug where an attacker could construct a
