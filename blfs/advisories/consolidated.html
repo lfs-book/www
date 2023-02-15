@@ -83,6 +83,28 @@
     releases of the books.</p>
 -->
 
+    <a id="sa-11.2-094"/>
+    <h4>11.2 094 Intel Microcode  Date: 2022-02-15  Severity: High</h4>
+    <p>In intel-microcode-20230214, three hardware vulnerabilities were fixed.
+    Two of them allows a local privileged user to access disclose the
+    information in a SGX (Intel Software Guard Extensions) enclave, affecting
+    9th Generation Intel Core desktop processors, 10th Generation Intel Core
+    mobile processors, Intel Pentium Silver, J, and N Series processors, 3rd
+    Generation Intel Xeon Scalable processors, and Intel Xeon D processors.
+    Another one allows a privileged user to enable escalation of privilege via
+    adjacent network access, affecting 3rd Generation Intel Xeon Scalable
+    processors and Intel Atom P59xx, P53xx, and C53xx processors.  These
+    vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21216">CVE-2022-21216</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-33196">CVE-2022-33196</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38090">CVE-2022-38090</a>.</p>
+
+    <p>If you are running the system on an affected processor, to fix these
+    vulnerabilitites, update to intel-microcode-20230214 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
     <a id="sa-11.2-093"/>
     <h4>11.2 093 Firefox  Date: 2023-02-14  Severity: High</h4>
     <p>In Firefox-102.8.0esr, eleven security vulnerabilities applicable to linux
