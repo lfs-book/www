@@ -82,6 +82,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-096"/>
+    <h4>11.2 096 PHP              Date: 2022-02-16  Severity: Critical</h4>
+    <p>In PHP-8.2.3, three security vulnerabilities were fixed that could allow
+    for trivial authentication bypass and denial-of-service (application
+    crashes). The authentication bypass occurs in the Password_verify()
+    function, where it was determined that it would always return <em>true</em>
+    with some hashes, which would allow for a trivial authentication bypass. One
+    of the denial of service vulnerabilities is caused by a 1-byte array overrun
+    in common path resolution code, and the other denial of service vulnerability
+    can be triggered when parsing multipart request bodies. It's imperative that
+    you update PHP to 8.2.3 immediately if you are using the Password_verify()
+    function.
+    These security vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0567">CVE-2023-0567</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0568">CVE-2023-0568</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0662">CVE-2023-0662</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.2.3 using the instructions
+    from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
 
     <a id="sa-11.2-095"/>
     <h4>11.2 095 git              Date: 2022-02-16  Severity: Medium</h4>
