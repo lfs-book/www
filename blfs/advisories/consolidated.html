@@ -82,6 +82,32 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-100"/>
+    <h4>11.2 100 WebKitGTK+             Date: 2023-02-21  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.38.5, a security vulnerability was fixed that could allow
+    for remote code execution. It occurs when processing maliciously crafted
+    web content. A proof of concept exists and is public, and Apple is aware of
+    reports that this vulnerability is under active exploitation. This occurs
+    due to type confusion, and was addressed with improved logic checks.
+    A temporary workaround would be to set the environment variable
+    JSC_useDFGJIT=0 to force WebKitGTK+ to not use the Just-In-Time JS compiler.
+    If you have WebKitGTK+ installed on your system, it is imperative that you
+    apply this update immediately.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2023-23529">CVE-2023-23529</a>.
+    Further information can be found in Apple's security advisory for iPadOS
+    16.3.1, which uses the same version of the WebKit rendering engine:
+    <a href="https://support.apple.com/en-us/HT213635">Apple Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.38.5 using the
+    instructions from
+    <a href="../view/11.2/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.2-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>When using these instructions, you must pass -DENABLE_DOCUMENTATION=OFF
+    to the CMake command. The instructions in the development book are
+    incompatible with packages which use WebKitGTK+ in BLFS 11.2 due to a
+    difference in libsoup versions.</p>
+    <!-- pointing to 11.2 was intentional here -->
+
     <a id="sa-11.2-099"/>
     <h4>11.2 099 cURL                   Date: 2023-02-21  Severity: Medium</h4>
     <p>In cURL-7.88.1, three security vulnerabilities were fixed that could
