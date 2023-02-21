@@ -82,6 +82,32 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-099"/>
+    <h4>11.2 099 cURL                   Date: 2023-02-21  Severity: Medium</h4>
+    <p>In cURL-7.88.1, three security vulnerabilities were fixed that could
+    allow for denial of service and HSTS bypass. The denial of service issue
+    occurs when transferring data which is compressed. The problem happens when
+    data is compressed multiple times, since cURL supports chained HTTP
+    compression algorithms. Due to a logic flaw, it was possible for malicious
+    servers to insert a virtually unlimited number of compression steps simply
+    by using many headers. This can cause a "malloc bomb", where cURL spends
+    enormous amounts of heap memory and eventually running out of system
+    resources. In the case of the two HSTS bypass vulnerabilities, these
+    vulnerabilities occur due to cURL's cache saving behaving incorrectly when
+    using multiple URLs in parallel, and the other vulnerability allows for
+    HSTS bypass because cURL's HSTS mechanism would ignore subsequent transfers
+    when done on the same command line (due to the state not being properly
+    carried on.). Note that the last HSTS vulnerability only affects the cURL
+    command line utility, and not the library.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-23916">CVE-2023-23916</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-23915">CVE-2023-23915</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2023-23914">CVE-2023-23914</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.88.1 using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-11.2-098"/>
     <h4>11.2 098 Thunderbird            Date: 2023-02-21  Severity: High</h4>
     <p>In Thunderbird-102.8.0, several security vulnerabilities were fixed that
