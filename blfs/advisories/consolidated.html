@@ -82,6 +82,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-101"/>
+    <h4>11.2 101 OpenJDK             Date: 2023-02-22  Severity: Medium</h4>
+    <p>In OpenJDK-19.0.2, two security vulnerability were fixed that could allow
+    for unauthorized ability to cause a partial Denial of Service, or
+    compromise some JAVA VM data. It applies to Java deployements, typically
+    in clients running sandboxed Java Web Start applications or sandboxed
+    Java applets, that load and run untrusted code (e.g., code that comes
+    from the internet) and rely on the Java sandbox for security. Those
+    vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2023-21835">CVE-2023-21835</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2023-21843">CVE-2023-21843</a>.
+    <p>To fix these vulnerabilities, update to OpenJDK-19.0.2 using the
+    instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+
     <a id="sa-11.2-100"/>
     <h4>11.2 100 WebKitGTK+             Date: 2023-02-21  Severity: Critical</h4>
     <p>In WebKitGTK+-2.38.5, a security vulnerability was fixed that could allow
