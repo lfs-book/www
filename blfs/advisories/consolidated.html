@@ -82,6 +82,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-103"/>
+    <h4>11.2 103 HTTP-Daemon            Date: 2023-02-23  Severity: Medium</h4>
+    <p>In HTTP-Daemon-6.15 a vulnerability was fixed which could potentially
+    be exploited to gain privileged access to APIs or poison intermediate
+    caches. It is uncertain how large the risks are, most Perl based applications
+    are served on top of Nginx or Apache, not on the HTTP::Daemon. This library
+    is commonly used for local development and tests. The vulnerability has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31081">CVE-2022-31081</a>.</p>
+    <p>To fix this vulnerability, update to HTTP-Daemon-6.15 using the
+    instructions for
+    <!-- html shows as perl-modules.html#perl-http-daemon but that drops
+    you at the top of the modules page -->
+    <a href="../view/svn/general/perl-modules.html">perl module HTTP::Daemon (sysv)</a> or
+    <a href="../view/systemd/general/perl-modules.html">perl module HTTP::Daemon (systemd)</a>.</p>
+
     <a id="sa-11.2-102"/>
     <h4>11.2 102 Epiphany            Date: 2023-02-22  Severity: High</h4>
     <p>In Epiphany-43.1, a security vulnerability was fixed that could allow
