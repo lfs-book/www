@@ -82,6 +82,256 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
 -->
+    <a id="sa-11.2-103"/>
+    <h4>11.2 103 HTTP-Daemon            Date: 2023-02-23  Severity: Medium</h4>
+    <p>In HTTP-Daemon-6.15 a vulnerability was fixed which could potentially
+    be exploited to gain privileged access to APIs or poison intermediate
+    caches. It is uncertain how large the risks are, most Perl based applications
+    are served on top of Nginx or Apache, not on the HTTP::Daemon. This library
+    is commonly used for local development and tests. The vulnerability has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31081">CVE-2022-31081</a>.</p>
+    <p>To fix this vulnerability, update to HTTP-Daemon-6.15 using the
+    instructions for
+    <!-- html shows as perl-modules.html#perl-http-daemon but that drops
+    you at the top of the modules page -->
+    <a href="../view/svn/general/perl-modules.html">perl module HTTP::Daemon (sysv)</a> or
+    <a href="../view/systemd/general/perl-modules.html">perl module HTTP::Daemon (systemd)</a>.</p>
+
+    <a id="sa-11.2-102"/>
+    <h4>11.2 102 Epiphany            Date: 2023-02-22  Severity: High</h4>
+    <p>In Epiphany-43.1, a security vulnerability was fixed that could allow
+    for untrusted web content to trick user into exfiltrating passwords. This
+    occurs because autofill occured in sandboxed contexts, and was worked
+    around by disabling the password manager entirely when running inside of a
+    sandbox. Google Security Research discovered this vulnerability and
+    reported that it also impacts Safari, Bitwarden, and Dash Lane, and allows
+    for credentials to be automatically filled into untrusted pages without
+    the master password, and allows for complete account compromise for any
+    users who use the password management functionality. A proof-of-concept
+    exploit has been made public. If you are using this function, you should
+    update Epiphany immediately, even if you don't use the sandbox mode.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-26081">CVE-2023-26081</a>.
+    Additional information can be found at
+    <a href="https://github.com/google/security-research/security/advisories/GHSA-mhhf-w9xw-pp9x">
+    Google Security Advisory in GitHub</a>.</p>
+    <p>To fix this vulnerability, update to Epiphany-43.1 using the
+    instructions for
+    <a href="../view/svn/xsoft/epiphany.html">Epiphany (sysv)</a> or
+    <a href="../view/systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
+
+    <a id="sa-11.2-101"/>
+    <h4>11.2 101 OpenJDK             Date: 2023-02-22  Severity: Medium</h4>
+    <p>In OpenJDK-19.0.2, two security vulnerability were fixed that could allow
+    for unauthorized ability to cause a partial Denial of Service, or
+    compromise some JAVA VM data. It applies to Java deployements, typically
+    in clients running sandboxed Java Web Start applications or sandboxed
+    Java applets, that load and run untrusted code (e.g., code that comes
+    from the internet) and rely on the Java sandbox for security. Those
+    vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2023-21835">CVE-2023-21835</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2023-21843">CVE-2023-21843</a>.
+    <p>To fix these vulnerabilities, update to OpenJDK-19.0.2 using the
+    instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+
+    <a id="sa-11.2-100"/>
+    <h4>11.2 100 WebKitGTK+             Date: 2023-02-21  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.38.5, a security vulnerability was fixed that could allow
+    for remote code execution. It occurs when processing maliciously crafted
+    web content. A proof of concept exists and is public, and Apple is aware of
+    reports that this vulnerability is under active exploitation. This occurs
+    due to type confusion, and was addressed with improved logic checks.
+    A temporary workaround would be to set the environment variable
+    JSC_useDFGJIT=0 to force WebKitGTK+ to not use the Just-In-Time JS compiler.
+    If you have WebKitGTK+ installed on your system, it is imperative that you
+    apply this update immediately.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2023-23529">CVE-2023-23529</a>.
+    Further information can be found in Apple's security advisory for iPadOS
+    16.3.1, which uses the same version of the WebKit rendering engine:
+    <a href="https://support.apple.com/en-us/HT213635">Apple Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.38.5 using the
+    instructions from
+    <a href="../view/11.2/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/11.2-systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>When using these instructions, you must pass -DENABLE_DOCUMENTATION=OFF
+    to the CMake command. The instructions in the development book are
+    incompatible with packages which use WebKitGTK+ in BLFS 11.2 due to a
+    difference in libsoup versions.</p>
+    <!-- pointing to 11.2 was intentional here -->
+
+    <a id="sa-11.2-099"/>
+    <h4>11.2 099 cURL                   Date: 2023-02-21  Severity: Medium</h4>
+    <p>In cURL-7.88.1, three security vulnerabilities were fixed that could
+    allow for denial of service and HSTS bypass. The denial of service issue
+    occurs when transferring data which is compressed. The problem happens when
+    data is compressed multiple times, since cURL supports chained HTTP
+    compression algorithms. Due to a logic flaw, it was possible for malicious
+    servers to insert a virtually unlimited number of compression steps simply
+    by using many headers. This can cause a "malloc bomb", where cURL spends
+    enormous amounts of heap memory and eventually running out of system
+    resources. In the case of the two HSTS bypass vulnerabilities, these
+    vulnerabilities occur due to cURL's cache saving behaving incorrectly when
+    using multiple URLs in parallel, and the other vulnerability allows for
+    HSTS bypass because cURL's HSTS mechanism would ignore subsequent transfers
+    when done on the same command line (due to the state not being properly
+    carried on.). Note that the last HSTS vulnerability only affects the cURL
+    command line utility, and not the library.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-23916">CVE-2023-23916</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-23915">CVE-2023-23915</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2023-23914">CVE-2023-23914</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-7.88.1 using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-11.2-098"/>
+    <h4>11.2 098 Thunderbird            Date: 2023-02-21  Severity: High</h4>
+    <p>In Thunderbird-102.8.0, several security vulnerabilities were fixed that
+    could allow for user interface lockups, content security policy leaks,
+    screen hijacks, arbitrary memory writes, crashes, undefined behavior,
+    extensions opening applications and executing code without a user's
+    knowledge, and remote code execution. As is the case for most Thunderbird
+    vulnerabilities, exploiting these takes specially crafted emails, or
+    installation of a third party extension which has been compromised.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-0616">CVE-2023-0616</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-25728">CVE-2023-25728</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-25730">CVE-2023-25730</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-0767">CVE-2023-0767</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-25735">CVE-2023-25735</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-25737">CVE-2023-25737</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-25739">CVE-2023-25739</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-25729">CVE-2023-25729</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-25732">CVE-2023-25732</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-25742">CVE-2023-25742</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2023-25746">CVE-2023-25746</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-102.8.0 using the
+    instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.2-097"/>
+    <h4>11.2 097 node.js                Date: 2023-02-17  Severity: High</h4>
+    <p>In node.js-18.14.1, five security vulnerabilities were fixed. One of these
+    is rated as High. See
+    <a href="https://nodejs.org/en/blog/">node.js blog</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23918">CVE-2023-23918</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23919">CVE-2023-23919</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23920">CVE-2023-23920</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23936">CVE-2023-23936</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-24807">CVE-2023-24807</a>.</p>
+    <p>To fix this vulnerability, update to node.js-18.14.1 or later using the
+    instructions from
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+    <p>These also apply to node v16 from the 11.2 book, for that you could
+    alternatively update to v16.19.1 using the instructions from the 11.2 book,
+    but BLFS will not be tracking v16.</p>
+
+    <a id="sa-11.2-096"/>
+    <h4>11.2 096 PHP              Date: 2022-02-16  Severity: Critical</h4>
+    <p>In PHP-8.2.3, three security vulnerabilities were fixed that could allow
+    for trivial authentication bypass and denial-of-service (application
+    crashes). The authentication bypass occurs in the Password_verify()
+    function, where it was determined that it would always return <em>true</em>
+    with some hashes, which would allow for a trivial authentication bypass. One
+    of the denial of service vulnerabilities is caused by a 1-byte array overrun
+    in common path resolution code, and the other denial of service vulnerability
+    can be triggered when parsing multipart request bodies. It's imperative that
+    you update PHP to 8.2.3 immediately if you are using the Password_verify()
+    function.
+    These security vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0567">CVE-2023-0567</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0568">CVE-2023-0568</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0662">CVE-2023-0662</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.2.3 using the instructions
+    from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+    <a id="sa-11.2-095"/>
+    <h4>11.2 095 git              Date: 2022-02-16  Severity: Medium</h4>
+    <p>In git-2.39.2, two security vulnerabilities were fixeed that could allow
+    for data exfiltration and path traversal through abusing symbolic links in
+    repositories. One of these relies on the user feeding a crafted input to
+    the 'git apply' command (and the path outside the working tree will be
+    overwritten as long as that user has the authority to do so), and the other
+    relies off the usage of submodules. Note that the data exfiltration
+    vulnerability can be worked around by not cloning repositories with
+    '--recurse-submodules', and running 'git submodule update' at each layer of
+    a repository using submodules. When doing this, it's also important
+    to inspect all .gitmodules files to ensure that it does not contain
+    suspicious module URLs.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-22490">CVE-2023-22490</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23946">CVE-2023-23946</a>.</p>
+    <p>To fix these vulnerabilities, update to git-2.39.2 or later using the
+    instructions from
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
+    <a id="sa-11.2-094"/>
+    <h4>11.2 094 Intel Microcode  Date: 2022-02-15  Severity: High</h4>
+    <p>In intel-microcode-20230214, three hardware vulnerabilities were fixed.
+    Two of them allows a local privileged user to access disclose the
+    information in a SGX (Intel Software Guard Extensions) enclave, affecting
+    9th Generation Intel Core desktop processors, 10th Generation Intel Core
+    mobile processors, Intel Pentium Silver, J, and N Series processors, 3rd
+    Generation Intel Xeon Scalable processors, and Intel Xeon D processors.
+    Another one allows a privileged user to enable escalation of privilege via
+    adjacent network access, affecting 3rd Generation Intel Xeon Scalable
+    processors and Intel Atom P59xx, P53xx, and C53xx processors.  These
+    vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21216">CVE-2022-21216</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-33196">CVE-2022-33196</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-38090">CVE-2022-38090</a>.</p>
+
+    <p>If you are running the system on an affected processor, to fix these
+    vulnerabilitites, update to intel-microcode-20230214 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
+    <a id="sa-11.2-093"/>
+    <h4>11.2 093 Firefox  Date: 2023-02-14  Severity: High</h4>
+    <p>In Firefox-102.8.0esr, eleven security vulnerabilities applicable to linux
+    systems were fixed, eight of them rated as High by upstream. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-06/">mfsa-2023-06</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0767">CVE-2023-0767</a>
+    which only applies if using the shipped NSS instead of system NSS,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23728">CVE-2023-25728</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23729">CVE-2023-25729</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23730">CVE-2023-25730</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23732">CVE-2023-25732</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25735">CVE-2023-25737</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25737">CVE-2023-25737</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25739">CVE-2023-25739</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25742">CVE-2023-25742</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25744">CVE-2023-25744</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25746">CVE-2023-25746</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-102.8.0esr or later
+    using the instructions for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-11.2-092"/>
+    <h4>11.2 092 JS-102  Date: 2023-02-14  Severity: High</h4>
+    <p>In the Javascript code of firefox-102.8.0 there is a fix for a Use After
+    Free, which could cause a potentially exploitable crash, rated as High by
+    Mozilla - see CVE-2023-25735 in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-06/">mfsa-2023-06</a>.
+    Further details may appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25735">CVE-2023-25735</a>.</p>
+    <p>To fix this, update to JS-102.8.0 or later using the instructions for
+    <a href="../view/svn/general/js102.html">JS102 (sysv)</a> or
+    <a href="../view/systemd/general/js102.html">JS102 (systemd)</a>.</p>
 
     <a id="sa-11.2-091"/>
     <h4>11.2 091 NSS  Updated: 2023-02-14  Severity: High</h4>
@@ -99,7 +349,7 @@
 
     <a id="sa-11.2-090"/>
     <h4>11.2 090 ImageMagick  Date: 2023-02-14 Severity: High</h4>
-    <p>BLFS updated to ImageMagick-7.1.0-61 from 7.1.10-46. Belatedly, two CVEs
+    <p>BLFS updated to ImageMagick-7.1.0-61 from 7.1.0-46. Belatedly, two CVEs
     have been raised against 7.1.0-49 (each with the same one-line fix in 7.1.0-52).
     These were for a Denial of Service and possible information disclosure on png
     files. The relevant code in 7.1.0-49 was identical in 7.1.0-46.

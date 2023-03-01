@@ -100,6 +100,13 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-11.2-099"/>
+    <h4>11.2 099 cURL                   Date: 2023-02-21  Severity: Medium</h4>
+    <p>In cURL-7.88.1, three security vulnerabilities were fixed that could
+    allow for HSTS bypasses and denial of service. Update to cURL-7.88.1 or
+    later.
+    <a href="consolidated.html#sa-11.2-099">11.2-099</a></p>
+
     <a id="sa-11.2-063"/>
     <h4>11.2 063 cURL         Date: 2022-12-30  Severity: Low</h4>
     <p>In cURL-7.87.0, two security vulnerabilities were fixed that could allow
@@ -147,7 +154,24 @@
 
  <!-- end of DHCP -->
 
+    <h3>Epiphany</h3>
+
+    <a id="sa-11.2-102"/>
+    <h4>11.2 102 Epiphany            Date: 2023-02-22  Severity: High</h4>
+    <p>In Epiphany-43.1, a security vulnerability was fixed that could allow
+    for password exfiltration through autofill when in a sandboxed environment.
+    Update to Epiphany-43.1 immediately if you use it's password manager.
+    <a href="consolidated.html#sa-11.2-102">11.2-102</a></p>
+
+<!-- end of Epiphany -->
+
     <h3>Firefox</h3>
+
+    <a id="sa-11.2-093"/>
+    <h4>11.2 093 Firefox  Date: 2023-02-14  Severity: High</h4>
+    <p>In Firefox-102.8.0esr, eleven security vulnerabilities applicable to linux
+    systems were fixed, eight of them rated as High by upstream.
+    <a href="consolidated.html#sa-11.2-093">11.2-093</a></p>
 
     <a id="sa-11.2-067"/>
     <h4>11.2 067 Firefox  Date: 2023-01-17  Severity: High</h4>
@@ -195,6 +219,14 @@
 
     <h3>git</h3>
 
+    <a id="sa-11.2-095"/>
+    <h4>11.2 095 git              Date: 2022-02-16  Severity: Medium</h4>
+    <p>In git-2.39.2, two security vulnerabilities were fixed that could allow
+    for data exfiltration and path traversal/arbitrary file overwrites when
+    using repositories with symbolic links. Update to git-2.39.2, especially if
+    you are using a repository from an untrusted source with submodules.
+    <a href="consolidated.html#sa-11.2-095">11.2-095</a></p>
+
     <a id="sa-11.2-071"/>
     <h4>11.2 071 git                 Date: 2023-01-19  Severity: Critical</h4>
     <p>In git-2.39.1, two security vulnerabilities were fixed that could allow
@@ -224,11 +256,22 @@
 
 <!-- end of GnuTLS -->
 
+    <h3>HTTP::Daemon (perl module)</h3>
+
+    <a id="sa-11.2-103"/>
+    <h4>11.2 103 HTTP-Daemon            Date: 2023-02-23  Severity: Medium</h4>
+    <p>In HTTP-Daemon-6.15 a vulnerability was fixed which could potentially
+    be exploited to gain privileged access to APIs or poison intermediate
+    caches. Update to HTTP-Daemon-6.15.
+    <a href="consolidated.html#sa-11.2-103">11.2-103</a></p>
+
+<!-- end of HTTP::Daemon -->
+
     <h3>ImageMagick</h3>
 
     <a id="sa-11.2-090"/>
     <h4>11.2 090 ImageMagick  Date: 2023-02-14 Severity: High</h4>
-    <p>BLFS updated to ImageMagick-7.1.0-61 from 7.1.10-46. Belatedly, two CVEs
+    <p>BLFS updated to ImageMagick-7.1.0-61 from 7.1.0-46. Belatedly, two CVEs
     have been raised against 7.1.0-49 (each with the same one-line fix in 7.1.0-52).
     These were for a Denial of Service and possible information disclosure on png
     files. The relevant code in 7.1.0-49 was identical in 7.1.0-46. Update to
@@ -236,6 +279,20 @@
     <a href="consolidated.html#sa-11.2-090">11.2-090</a></p>
 
 <!-- end of ImageMagick -->
+
+    <h3>Intel microcode</h3>
+
+    <a id="sa-11.2-094"/>
+    <h4>11.2 094 Intel Microcode  Date: 2023-02-15  Severity: High</h4>
+    <p>Intel microcode for some processors has been updated to
+    fix two information disclosure vulnerabilities exploitable by local privileged
+    users, and one privilege escalation vulnerability exploitable via adjacent
+    network address.  Read
+    <a href="consolidated.html#sa-11.2-094">11.2-094</a> for the list of
+    affected processors and how to update the microcode to fix the
+    vulnerabilities.</p>
+
+<!-- end of Intel Microcode -->
 
     <h3>jasper</h3>
 
@@ -251,6 +308,13 @@
 
     <h3>Java (OpenJDK)</h3>
 
+    <a id="sa-11.2-101"/>
+    <h4>11.2 101 OpenJDK                 Date: 2022-02-22  Severity: Medium</h4>
+    <p>In OpenJDK-19.0.2, two security vulnerabilities were fixed that could
+    allow an unauthenticated attacker with network access to compromise a
+    Java VM.  Update to OpenJDK-19.0.2 immediately.
+    <a href="consolidated.html#sa-11.2-101">11.2-101</a></p>
+
     <a id="sa-11.2-028"/>
     <h4>11.2 028 OpenJDK                 Date: 2022-10-31  Severity: Medium</h4>
     <p>In OpenJDK-19.0.1, five security vulnerabilities were fixed that could
@@ -263,12 +327,18 @@
 
     <h3>JS-102</h3>
 
+    <a id="sa-11.2-092"/>
+    <h4>11.2 092 JS-102  Date: 2023-02-14  Severity: High</h4>
+    <p>In the Javascript code of firefox-102.8.0 there is a fix for a Use After
+    Free, which could cause a potentially exploitable crash.
+    <a href="consolidated.html#sa-11.2-092">11.2-092</a></p>
+
     <a id="sa-11.2-042"/>
     <h4>11.2 042 JS-102  Date: 2022-11-16  Severity: High</h4>
     <p>In the Javascript code of firefox-102.5.0 there is a fix for a Use After
     Free of a Javascript Realm, which could cause a potentially exploitable
     crash.
-    <a href="consolidated.html#sa11.2-042">11.2-042</a></p>
+    <a href="consolidated.html#sa-11.2-042">11.2-042</a></p>
 
 <!-- end of JS-102 -->
 
@@ -332,6 +402,13 @@
 
     <h3>Node.js</h3>
 
+    <a id="sa-11.2-097"/>
+    <h4>11.2 097 node.js                Date: 2023-02-17  Severity: High</h4>
+    <p>In node.js-18.14.1, five security vulnerabilities were fixed. One of these
+    is rated as High. Update to Node.js-v18.14.1 (or v16.19.1 if you intend to
+    stay with v16 and will be monitoring that for future updates).
+    <a href="consolidated.html#sa-11.2-097">11.2-097</a></p>
+
     <a id="sa-11.2-035"/>
     <h4>11.2 035 Node.js      Date: 2022-11-09  Severity: Medium</h4>
     <p>In Node.js-18.12.1, three security vulnerabilities were fixed. Only
@@ -383,6 +460,15 @@
 <!-- end of OpenSSH -->
 
     <h3>PHP</h3>
+
+    <a id="sa-11.2-096"/>
+    <h4>11.2 096 PHP              Date: 2022-02-16  Severity: Critical</h4>
+    <p>In PHP-8.2.3, three security vulnerabilities were fixed that could allow
+    for denial of service or authentication bypass. If you are using the
+    Password_verify() function in an application, it is imperative that you
+    update to PHP-8.2.3 immediately since it will always return true with
+    some hashes.
+    <a href="consolidated.html#sa-11.2-096">11.2-096</a></p>
 
     <a id="sa-11.2-073"/>
     <h4>11.2 073 PHP          Date: 2023-01-19  Severity: Medium</h4>
@@ -620,6 +706,14 @@
 
     <h3>Thunderbird</h3>
 
+    <a id="sa-11.2-098"/>
+    <h4>11.2 098 Thunderbird            Date: 2023-02-21  Severity: High</h4>
+    <p>In Thunderbird-102.8.0, several security vulnerabilities were fixed that
+    could allow for content security policy bypasses, crashes, UI lockups,
+    remote code execution, execution of code without a user's knowledge,
+    and screen hijack. Update to Thunderbird-102.8.0.
+    <a href="consolidated.html#sa-11.2-098">11.2-098</a>.</p>
+
     <a id="sa-11.2-087"/>
     <h4>11.2 087 Thunderbird            Date: 2022-02-13 Severity: High</h4>
     <p>In Thunderbird-102.7.2, several security vulnerabilities were fixed that
@@ -689,6 +783,14 @@
 <!-- end of Unbound -->
 
     <h3>WebKitGTK+</h3>
+
+    <a id="sa-11.2-100"/>
+    <h4>11.2 100 WebKitGTK+   Date: 2023-02-21  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.35.5, a critical security vulnerability was fixed
+    that could allow for remote code execution. The vulnerability is under
+    active exploitation. Update to WebKitGTK+-2.38.5 immediately, but note
+    the special instructions in the advisory.
+    <a href="consolidated.html#sa-11.2-100">11.2-100</a></p>
 
     <a id="sa-11.2-080"/>
     <h4>11.2 080 WebKitGTK+   Date: 2023-02-07  Severity: Critical</h4>
