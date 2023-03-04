@@ -556,7 +556,7 @@
           forgotten to bind mount <code>/dev</code> to <code>$LFS/dev</code> in
           "Preparing Virtual Kernel File Systems".</p>
           <p>Exit from the chroot environment first.  Then run
-          <code>ls -l /dev/null</code> first.  It should output something like
+          <code>ls -l /dev/null</code>.  It should output something like
           <code>crw-rw-rw- 1 root root 1, 3 {some date} /dev/null</code>.
           Especially, the first letter <code>c</code> and the numbers
           <code>1, 3</code> must be correct.
