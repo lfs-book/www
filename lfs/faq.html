@@ -501,53 +501,14 @@
         <dt id="no-ptys">The system has no more ptys.  Ask your system
         administrator to create more.</dt>
         <dd>
-          <p>If you run</p>
-          <div class="cmd">
-            <p>expect -c &quot;spawn ls&quot;</p>
-          </div>
-          <p>and get the following error:</p>
-          <div class="cmd">
-            <p>The system has no more ptys.<br />
-               Ask your system administrator to create more.</p>
-          </div>
-          <p>then your linux distribution is either not setup to use Unix98
-          PTYs or to use the /dev/pts file system.</p>
-          <p>The solution may require recompiling your kernel. First, go to
-          your kernel's source directory and look at the .config file. If you
-          do not have a .config file, and you are running the pre-compiled
-          kernel that was installed with rpm, aptget, or whatever your
-          distribution uses, then you need to seek support from your
-          distribution's support FAQ's, mailing lists or IRC channels.</p>
-          <p>If you do have a .config file, look inside it for the following 2 options:</p>
-          <div class="cmd">
-            <p>CONFIG_UNIX98_PTYS=y<br />
-               CONFIG_DEVPTS_FS=y</p>
-          </div>
-          <p>If either of these has 'n' instead of 'y', then change it and recompile the kernel.</p>
-          <p>If they both have 'y', then you probably will not have to recompile the kernel.</p>
-          <p>Next, we need to ensure that the system is actually using both
-          Unix98 PTYs and the /dev/pts file system.</p>
-          <p>First, look for a device called /dev/ptmx.  If it doesn't exist, create it with:</p>
-          <div class="cmd">
-            <p>mknod /dev/ptmx c 5 2</p>
-          </div>
-          <p>Then, whether it existed or you just created it, run:</p>
-          <div class="cmd">
-            <p>chmod 666 /dev/ptmx</p>
-          </div>
-          <p>Next, ensure that there is a directory called /dev/pts.  The
-          permissions should be 755.  Create it and/or chmod it if needed.</p>
-          <p>The final setup is to add the following line to /etc/fstab:</p>
-          <div class="code">
-            <p>devpts&nbsp;&nbsp;&nbsp;&nbsp;/dev/pts&nbsp;&nbsp;&nbsp;&nbsp;devpts&nbsp;&nbsp;&nbsp;&nbsp;gid=5,mode=620&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;0</p>
-          </div>
-          <p>NOTE:  Look for the tty group in /etc/group and note the group id
-          number.  Change the gid=5 option to match the group id number of the
-          tty group.  The group id of 5 is just an example and may differ on
-          your system.</p>
-          <p>Now that everything is setup, you have two options.</p>
-          <p>1.  Mount /dev/pts and test it by rerunning the above expect command.</p>
-          <p>2.  Reboot the computer and test it by rerunning the above expect command.</p>
+          <p>If it happens in the LFS chroot environment, ensure your host
+          kernel supports UNIX 98 pseudo terminal (all not-so-old desktop
+          or server distros should support it), and the virtual kernel
+          file systems have been mounted correctly before entering the
+          chroot environment.</p>
+          <p>If it happens in the complete system built following the SysV
+          revision of the LFS book, it's likely you've missed the line for
+          the <code>devpts</code> filesystem in <code>/etc/fstab</code>.
         </dd>
         <dt id="dev-null-as-cache">"configure: loading cache /dev/null" in
         config.log</dt>
