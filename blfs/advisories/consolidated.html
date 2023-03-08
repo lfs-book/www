@@ -72,22 +72,36 @@
     releases of the books.</p>
     -->
 
-    <!-- Editors: This batch of advisories for the 11.3 books point to the
-    development books until we make a release. After a release, new advisories
-    for 11.4 need to point to the development books, but the existing 11.3
-    advisories need to be changed to point to 11.4 (sic), not 'stable' which
-    is a symlink and can change over time. That might sound odd, but the 11.3
-    advisories were developed during the build up to 11.4, so in normal
-    circumstances the 'or later' will be valid for the 11.4 release, but over
-    the longer term who knows what will happen to packages (e.g. getting
-    replaced or archived). -->
-
-    <h2>Items between the releases of the 11.2 and 11.3 books</h2>
+    <a id="sa-11.3-002"/>
+    <h4>11.3 002 Apache HTTPD           Date: 2023-03-07  Severity: High</h4>
+    <p>In httpd-2.4.56, two security vulnerabilities were fixed that could
+    allow for HTTP Request Smuggling attacks. These can occur on servers where
+    the mod_proxy and mod_rewrite modules are enabled, or where mod_proxy_uwsgi
+    is enabled. Request splitting or smuggling could result in bypass of access
+    controls in the proxy server, proxying unintended URLs to existing origin
+    servers, and for cache poisoning. Special characters in the origin response
+    header can truncate/split the response forwarded to the client. Configurations
+    are affected when mod_proxy is enabled along with some form of RewriteRule
+    or ProxyPassMatch in which a non-specific pattern matches some portion of the
+    user supplied request-target (URL) data, and it is re-inserted into the
+    proxied request-target using variable substitution. You should update
+    Apache HTTPD if you are using the mod_proxy and mod_rewrite modules in
+    combination, or if you are using the mod_proxy_uwsgi module.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-27522">CVE-2023-27522</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25690">CVE-2023-25690</a>.
+    Additional information regarding example configurations which are affected
+    can be found in
+    <a href="https://wiki.linuxfromscratch.org/blfs/ticket/17764">BLFS Ticket #17764</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.56 or later using
+    the instructions from
+    <a href="../view/svn/server/apache.html">Apache HTTPD (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
 
     <a id="sa-11.3-001"/>
     <h4>11.3 001 Linux Kernel (LFS)     Date: 2023-03-05  Severity: High</h4>
     <p>In Linux 6.2.2 five vulnerabilies were fixed which could potentially
-    allow a Deniel of Service (kernel panic) or sensitive information leak
+    allow a Denial of Service (kernel panic) or sensitive information leak
     (insufficient protection against hardware vulnerabilities).  These
     vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2196">CVE-2022-2196</a>,
@@ -100,6 +114,18 @@
     using the instructions for
     <a href="../../lfs/view/11.3/chapter10/kernel.html">Linux Kernel (sysv)</a> or
     <a href="../../lfs/view/11.3-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
+    <!-- Editors: This batch of advisories for the 11.3 books point to the
+    development books until we make a release. After a release, new advisories
+    for 11.4 need to point to the development books, but the existing 11.3
+    advisories need to be changed to point to 11.4 (sic), not 'stable' which
+    is a symlink and can change over time. That might sound odd, but the 11.3
+    advisories were developed during the build up to 11.4, so in normal
+    circumstances the 'or later' will be valid for the 11.4 release, but over
+    the longer term who knows what will happen to packages (e.g. getting
+    replaced or archived). -->
+
+    <h2>Items between the releases of the 11.2 and 11.3 books</h2>
 
     <a id="sa-11.2-103"/>
     <h4>11.2 103 HTTP-Daemon            Date: 2023-02-23  Severity: Medium</h4>
