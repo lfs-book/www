@@ -46,11 +46,13 @@
         <li><a href="#conf-guess-fail">configure can't guess my host type.</a></li>
         <li><a href="#config-not-gnu-c">checking whether we are using GNU C... no</a></li>
         <li><a href="#no-ptys">The system has no more ptys.  Ask your system administrator to create more.</a></li>
+        <li><a href="#dev-null-as-cache">"configure: loading cache /dev/null" in config.log</a></li>
       </ul>
       <h3><a href="#packerrors">Package-specific errors</a></h3>
       <ul>
         <li><a href="#m4-mb-len-max-wrong">M4: Assumed value of MB_LEN_MAX wrong</a></li>
         <li><a href="#systemd-user-credentials-esrch">Systemd: systemd-networkd.service: Failed to determine user credentials: No such process</a></li>
+        <li><a href="#tcl-config-status">Tcl: ./config.status: line 508: 0a1,66: command not found</a></li>
       </ul>
       <h3><a href="#confboot">Configuration and booting issues</a></h3>
       <ul>
@@ -260,14 +262,20 @@
           take a look at the <a
           href="https://trac.clfs.org/wiki/read">Cross-LFS branch</a> of
           LFS.</p>
-          <p>For ARM (64-bit or 32-bit), consult LFS Fork for ARM
-(<a href='https://www.linuxfromscratch.org/~kb0iic/lfs-sysv'>SysV</a> and
-<a href='https://www.linuxfromscratch.org/~kb0iic/lfs-systemd'>Systemd</a>),
-          maintained by William Harrington.</p>
+          <p>For ARM, consult LFS Fork for ARM (64-bit or 32-bit)
+(<a href='https://clfs.org/~kb0iic/lfs-sysv'>SysV</a> and
+<a href='https://clfs.org/~kb0iic/lfs-systemd'>Systemd</a>),
+          maintained by William Harrington; and another LFS ARM64 Branch
+          (64-bit only,
+<a href='https://www.linuxfromscratch.org/~xry111/lfs/view/arm64-systemd/'>Systemd</a> and
+<a href='https://www.linuxfromscratch.org/~xry111/lfs/view/arm64/'>SysV [NOT TESTED!]</a>),
+          maintained by Xi Ruoyao.
+<!-- Abandoned for now, maybe recontinue when I get some spare time
           <p>For 64-bit little-endian MIPS, Xi Ruoyao has done an experiment
           building LFS on it.
           <a href="/~xry111/lfs-mips64el/">The modified LFS book</a>
           documented the instruction used in the experiment.</p>
+-->
         </dd>
         <dt id="cross-compile">How do I cross compile LFS?</dt>
         <dd>
@@ -391,9 +399,9 @@
             <p>$ ls -l /dev/null<br />
                crw-rw-rw- 1 root root 1, 3 Aug  3  2000 /dev/null</p>
           </div>
-          <p>If not, it should. See the chmod(1), chown(1), and mknod(1) man
-          pages and /usr/src/linux/Documentation/devices.txt if you need help
-          fixing it.</p>
+          <p>If not, it should. Refer to
+          <a href="#dev-null-as-cache">"configure: loading cache /dev/null"
+          in config.log</a>.
           <p>If it does look right, the problem is probably your mount options.
           See the answer to "<a
           href="#bad-interpreter-permission-denied">./configure: bad
@@ -493,54 +501,43 @@
         <dt id="no-ptys">The system has no more ptys.  Ask your system
         administrator to create more.</dt>
         <dd>
-          <p>If you run</p>
-          <div class="cmd">
-            <p>expect -c &quot;spawn ls&quot;</p>
-          </div>
-          <p>and get the following error:</p>
-          <div class="cmd">
-            <p>The system has no more ptys.<br />
-               Ask your system administrator to create more.</p>
-          </div>
-          <p>then your linux distribution is either not setup to use Unix98
-          PTYs or to use the /dev/pts file system.</p>
-          <p>The solution may require recompiling your kernel. First, go to
-          your kernel's source directory and look at the .config file. If you
-          do not have a .config file, and you are running the pre-compiled
-          kernel that was installed with rpm, aptget, or whatever your
-          distribution uses, then you need to seek support from your
-          distribution's support FAQ's, mailing lists or IRC channels.</p>
-          <p>If you do have a .config file, look inside it for the following 2 options:</p>
-          <div class="cmd">
-            <p>CONFIG_UNIX98_PTYS=y<br />
-               CONFIG_DEVPTS_FS=y</p>
-          </div>
-          <p>If either of these has 'n' instead of 'y', then change it and recompile the kernel.</p>
-          <p>If they both have 'y', then you probably will not have to recompile the kernel.</p>
-          <p>Next, we need to ensure that the system is actually using both
-          Unix98 PTYs and the /dev/pts file system.</p>
-          <p>First, look for a device called /dev/ptmx.  If it doesn't exist, create it with:</p>
-          <div class="cmd">
-            <p>mknod /dev/ptmx c 5 2</p>
-          </div>
-          <p>Then, whether it existed or you just created it, run:</p>
-          <div class="cmd">
-            <p>chmod 666 /dev/ptmx</p>
-          </div>
-          <p>Next, ensure that there is a directory called /dev/pts.  The
-          permissions should be 755.  Create it and/or chmod it if needed.</p>
-          <p>The final setup is to add the following line to /etc/fstab:</p>
-          <div class="code">
-            <p>devpts&nbsp;&nbsp;&nbsp;&nbsp;/dev/pts&nbsp;&nbsp;&nbsp;&nbsp;devpts&nbsp;&nbsp;&nbsp;&nbsp;gid=5,mode=620&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;0</p>
-          </div>
-          <p>NOTE:  Look for the tty group in /etc/group and note the group id
-          number.  Change the gid=5 option to match the group id number of the
-          tty group.  The group id of 5 is just an example and may differ on
-          your system.</p>
-          <p>Now that everything is setup, you have two options.</p>
-          <p>1.  Mount /dev/pts and test it by rerunning the above expect command.</p>
-          <p>2.  Reboot the computer and test it by rerunning the above expect command.</p>
+          <p>If it happens in the LFS chroot environment, ensure your host
+          kernel supports UNIX 98 pseudo terminal (all not-so-old desktop
+          or server distros should support it), and the virtual kernel
+          file systems have been mounted correctly before entering the
+          chroot environment.</p>
+          <p>If it happens in the complete system built following the SysV
+          revision of the LFS book, it's likely you've missed the line for
+          the <code>devpts</code> filesystem in <code>/etc/fstab</code>.
         </dd>
+        <dt id="dev-null-as-cache">"configure: loading cache /dev/null" in
+        config.log</dt>
+        <dd>
+          <p>If it happens in the LFS chroot environment, it's likely you've
+          forgotten to bind mount <code>/dev</code> to <code>$LFS/dev</code> in
+          "Preparing Virtual Kernel File Systems".</p>
+          <p>Exit from the chroot environment first.  Then run
+          <code>ls -l /dev/null</code>.  It should output something like
+          <code>crw-rw-rw- 1 root root 1, 3 {some date} /dev/null</code>.
+          Especially, the first letter <code>c</code> and the numbers
+          <code>1, 3</code> must be correct.
+          If not, it means your host distro is somehow broken (it may happen
+          if you used the dangerous <code>rm -rf $LFS/*</code> command or
+          similar when <code>/dev</code> had been bind mounted).  For a modern host
+          distro it can be fixed by rebooting (a broken <code>/dev</code> may
+          prevent normal rebooting and you may need to use the reset button).
+          For a very old host distro, you may need to reinstall it (so why not
+          update to a modern one? :)</p>
+          <p>Now we've known the host distro is sane.  Make sure
+          <code>$LFS</code> is correctly set and the LFS partition is mounted
+          first.  Use <code>umount -R $LFS/dev</code> to unmount
+          <code>$LFS/dev</code> (in case you've mounted something wrong there),
+          then remove everything in <code>$LFS/dev</code> and follow the
+          "Preparing Virtual Kernel File Systems" section to mount
+          <code>$LFS/dev</code> and <code>$LFS/dev/pts</code> correctly.  Once
+          they are mounted, you can reenter the chroot environment and
+          continue.</p>
+        <dd>
       </dl>
       <p><a href="#lfsfaq">Back to the top.</a></p>
 
@@ -566,6 +563,13 @@
           is misused in systemd-based system.  "No such process" is just the
           "standard" error message for <code>ESRCH</code>, it's not very
           helpful for diagnosis of this issue.</p>
+        </dd>
+
+        <dt id="tcl-config-status">Tcl: ./config.status: line 508: 0a1,66: command not found<dt>
+        <dd>
+          <p>Check if <code>config.log</code> contains "configure: loading
+          cache /dev/null".  If it's the case, refer to
+          <a href='#dev-null-as-cache'>the entry for it</a>.
         </dd>
       </dl>
       <p><a href="#lfsfaq">Back to the top.</a></p>

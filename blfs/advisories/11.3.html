@@ -1,0 +1,77 @@
+<!--#set var="pageTitle" value="BLFS Security Advisories for 11.3" -->
+<!--#include virtual="/blfs/header.html" -->
+<!--#include virtual="/blfs/menu.html" -->
+    <div class="main">
+
+    <h2>BLFS Security Advisories for BLFS 11.3 and the current development books.</h2>
+
+    <a id="BLFS11.3"/>
+    <p>BLFS-11.3 was released on 2022-03-01</p>
+
+     <!-- Editors: Do not remove this entry, just comment it out. -->
+
+<!-- <ul>
+       <li>There are currently no known security vulnerabilities for BLFS-11.3.</li>
+     </ul>-->
+
+
+    <!-- Editors: do the consolidated file first, to get the next number -->
+
+    <p style="font-style: italic;">This page is in alphabetical order of packages,
+    and if a package has multiple advisories the newer come first.</p>
+
+    <p> The links at the end of each item point to fuller details which have
+    links to the
+    development <!-- change to 'released' when links in consolidated are changed
+    after a release -->
+    books.</p>
+
+    <p>In general, the severity is taken from upstream, if supplied, or from
+    NVD (https://nvd.nist.gov/vuln/detail/) if an analysis is available there,
+    but individual severity ratings at NVD can change over time. If no other
+    information is available, 'High' will normally be assumed.</p>
+
+    <!-- After a release, copy for next book version, leave just template stuff
+     and initially say "There are no known vulnerabilities." -->
+
+<!-- start of list: Order is Alphabetic by package name (create multiple entries
+     if more than one package is involved, e.g. for those firefox updates which
+     also require JS to be updated.  Within each package, latest update first
+     and link to the consolidated page, e.g.
+     <a href="consolidated.html#sa-11.0-001">11.0-001</a> -->
+
+<!--
+    <h3>PackageName</h3>
+
+    <a id="sa-11.3-NNN"/>
+    <h4>11.3 NNN PackageName  Date: 2023-03-01  Severity: High</h4>
+    <p>Brief explanatory text, followed by link to the consolidated page.
+    <a href="consolidated.html#11.3-NNN">11.3-NNN</a></p>
+-->
+
+<!-- end of PackageName -->
+
+    <h3>Apache HTTPD</h3>
+
+    <a id="sa-11.3-002"/>
+    <h4>11.3 002 Apache HTTPD           Date: 2023-03-07  Severity: High</h4>
+    <p>In httpd-2.4.56, two security vulnerabilities were fixed that could
+    allow for HTTP Request Smuggling when mod_proxy and mod_rewrite are
+    enabled in combination with one another, or when mod_proxy_uwsgi is
+    enabled. Update to httpd-2.4.56 if you use either of those configurations.
+    <a href="consolidated.html#sa-11.3-002">11.3-002</a></p>
+
+<!-- end of Apache HTTPD -->
+
+    <h3>QtWebEngine</h3>
+
+    <a id="sa-11.3-003"/>
+    <h4>11.3 003 QtWebEngine           Date: 2023-03-10 Severity: High</h4>
+    <p>In QtWebEngine-5.15.13, fixes for several recent Chromium security
+    vulnerabilities rated as High were backported to the branch used for 5.15.
+    Update to 5.15.13.
+    <a href="consolidated.html#sa-11.3-003">11.3-003</a></p>
+
+<!-- end of QtWebEngine -->
+
+<!--#include virtual="/common/footer.html" -->
