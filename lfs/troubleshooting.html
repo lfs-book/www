@@ -4,7 +4,7 @@
 <div class="main">
  <h1>Troubleshooting the Initial LFS System</h1>
 
- <p>This page us under development</p>
+ <p>This page is under development</p>
 
  <p>
    There are several places where the initial boot of a new LFS
@@ -22,15 +22,14 @@
 
  <h3>I have no internet</h3>
  <p style="margin-bottom: 0.3em">
-    There are several things to check here. First run: <code>ls
+    There are several things to check here. First run: <code style="font-weight: bold;">ls
     /sys/class/net</code>.  If your network interface does not show up, then
     the kernel configuration needs to be updated and rebuilt with the
     appropriate network driver. To see what driver is needed run <br/>
 
-    <code>lspci | grep -i ethernet</code> on the host system. From there, look
-    in the kernel configuration for the configuration item that matches your
-    hardware: 
- </p>
+    <code style="font-weight: bold;">lspci | grep -i ethernet</code> on the
+    host system. From there, look in the kernel configuration for the
+    configuration item that matches your hardware: </p>
 
     <pre style="padding: 0; margin: 0"
 <code>Device Drivers ---&gt;
