@@ -14,6 +14,92 @@
 
  <h2>GRUB Related Issues</h2>
 
+ <dl>
+   <dt>GRUB: "error: hd1 cannot get C/H/S values."</dt>
+   <dd>
+     <p>
+       If you see this message, press any key and you'll be in GRUB
+       command line interface.  Issue the <code>ls</code> command and
+       it will show the list the designators of all partitions
+       available.  Now you can issue <code>ls &lt;designator&gt;/</code>
+       (note that the trailing "/" is necessary but you may omit
+       "msdos" or "gpt" in the designator)
+       to inspect the content of each partition to see if it contains
+       your LFS kernel.  Once you find the correct designator for the
+       partition containing the LFS kernel, you need to manually issue
+       the <code>set root=</code> command and the <code>linux</code>
+       command (just like you are writing them in <code>grub.cfg</code>)
+       to load the kernel and set the kernel command line, then issue
+       the <code>boot</code> command to boot the LFS system.  Once it
+       boots successfully, fix the <code>set root=</code> command in
+       <code>grub.cfg</code>.
+     </p>
+   </dd>
+
+   <dt>GRUB: "error: disk `hd0,4' not found."</dt>
+   <dt>GRUB: "error: file `vmlinuz-6.2.2-lfs-11.3' not found"</dt>
+   <dd>
+     <p>
+       If you have a USB storage device plugged in, remove it and
+       reboot.  If this message still shows up with no USB storage
+       devices plugged in, use the same diagnostic procedure as the
+       previous issue.  Note that you need to specify the partition
+       containing the LFS <strong>kernel</strong> for the
+       <code>set root=</code> or <code>search --set=root --fs-uuid</code>
+       command, i. e. if <code>/boot</code> is a separate partition you
+       need to specify it instead of the LFS partition.
+     </p>
+     <p>
+       If the system boots successfully without a USB storage device
+       plugged in, but fails to boot with this message when a USB
+       storage device is connected, you can either live with it and
+       make sure you've disconnected all USB storage devices when you
+       boot the LFS system, or use the <code>search --set=root
+       --fs-uuid</code> command to replace the <code>set root=</code>
+       command in <code>grub.cfg</code>.  The usage of the <code>search
+       --set=root --fs-uuid</code> command is already explained in the
+       LFS book (11.2 or later).
+     </p>
+   </dd>
+
+   <dt>GRUB: "error: unknown filesystem."</dt>
+   <dd>
+     <p>
+       Try the same diagnostic procedure for the previous issue first.
+     </p>
+     <p>
+       If it does not work (i. e. you are sure a correct designator is
+       used but the <code>ls &lt;designator&gt;/</code> command still
+       says "unknown filesystem"), one possiblity is the ext4 file
+       system in the partition has the <code>metadata_csum_seed</code>
+       feature enabled, but you are using the GRUB from the host distro
+       which may not support this feature.  Boot into the host distro,
+       and use the <code>tune2fs -O ^metadata_csum_seed
+       /dev/&lt;the device node for the partition containing the LFS
+       kernel&gt;</code> command to disable the feature.  Or, build
+       and install GRUB following the LFS (for BIOS) or BLFS (for UEFI)
+       book, where GRUB is patched to support this feature.
+     </p>
+   </dd>
+
+   <dt>GRUB: "error: no such device: 3efa8848-4383-4987-8991-97e3fb323ef6"</dt>
+   <dd>
+     <p>
+       You've specified the wrong file system UUID in the <code>search
+       --set=root --fs-uuid</code> command.  Note that you need the
+       file system UUID here, not the partition UUID.
+     </p>
+     <p>
+       Press any button to enter the GRUB command line interface, then
+       use the same diagnostic procedure as the previous issue.
+       Once the LFS system boots /successfully, get the correct file
+       system UUID via the
+       <code>lsblk -o uuid,name</code> command and fix the
+       <code>search</code> command in <code>grub.cfg</code>.
+     </p>
+   </dd>
+ </dl>
+
  <h2>Video Related Issues</h2>
  
  <h2>Problems Mounting the Root partitiaon</h2>
@@ -62,3 +148,4 @@
  </p>
 
 <!--#include virtual="/common/footer.html" -->
+<!-- vim: set et sw=2: -->
