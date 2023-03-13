@@ -40,6 +40,11 @@ em {
         color: #444;
 }
 
+code {
+        font-weight: bold;
+        color: #444;
+}
+
 dt { font-weight: bold; }
 
 a img, a:link, a:hover { border: none; }

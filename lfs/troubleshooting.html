@@ -13,6 +13,10 @@
  </p>
 
  <h2>GRUB Related Issues</h2>
+<!--     using grub from host
+     grub on another disk
+     lfs on a usb based drive
+     grub finding the lfs kernel-->
 
  <dl>
    <dt>GRUB: "error: hd1 cannot get C/H/S values."</dt>
@@ -101,9 +105,20 @@
  </dl>
 
  <h2>Video Related Issues</h2>
+<!--     blank screen
+     lspci |grep -i vga
+     when selecting FB devices, select all as modules
+       when logging in, check what modules are loaded with lsmod
+     firmware issues -->
  
- <h2>Problems Mounting the Root partitiaon</h2>
- 
+ <h2>Problems Mounting the Root Partition</h2>
+<!--     kernel panic not finding the root partition
+       sda vs nvme0n1
+       Using PARTUUID or PARTLABEL when specifying root=
+       Partition format support in kernel
+       scsi drivers
+       rootdelay
+ -->
  <h2>Network Related Issues</h2>
 
  <h3>I have no internet</h3>
@@ -120,7 +135,7 @@
     <pre style="padding: 0; margin: 0"
 <code>Device Drivers ---&gt;
   Network Device Support ---&gt;
-    Ethernet driver suport ---&gt;</code>
+    Ethernet driver support ---&gt;</code>
 </pre>
 
  <p>
@@ -138,8 +153,14 @@
 
  <h3>Wifi and/or DHCP are not working</h3>
  <p>
+<<<<<<< Updated upstream
    LFS does not supoprt wifi directly, and the SystemV revision does not
    support DHCP directly either.  To add those
+||||||| Stash base
+   LFS does not supoprt wifi or dhcp directly. To add those
+=======
+   LFS does not support wifi or dhcp directly. To add those
+>>>>>>> Stashed changes
    capabilities see the following pages in BLFS:
    <ul>
      <li><a href="https://www.linuxfromscratch.org/blfs/view/svn/basicnet/wireless_tools.html">Wireless Tools</a></li>
