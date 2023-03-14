@@ -85,19 +85,21 @@
            this YYY cannot be the same as set for Grub's root as the
            LFS system hasn't been installed in XXX but in YYY.</li>
        </ul>
+       <br>
        In case you have <b>no separate</b> partition for /boot, the
        root for Grub as well for the kernel is the same partition. In
        this case the root setting will look like<br>
        <ul>
          <li><code>set root=(XXX)</code>: The XXX points to the
            partition where the LFS system (including the /boot) has
-           been installed to.<li>
+           been installed to.</li>
          <li><code>linux /boot/vmlinuz... root=XXX ...</code>: The
            XXX here points to the same partition as specified in
            Grub's root. Note that the path to the kernel image
            has sightly changed to the example above - thats because
            Grub will find the kernel in a subdirectory of its root.</li>
        </ul>
+       <br>
        In any case, the syntax to name the partitions is different
        when specifying the Grub's root even when the designate the
        same partition. For Grub it looks like <code>set root=(hd0,1)</code>
