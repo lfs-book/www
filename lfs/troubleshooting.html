@@ -25,7 +25,11 @@
        If you see this message, press any key and you'll be in GRUB
        command line interface.  Issue the <code>ls</code> command and
        it will show the list the designators of all partitions
-       available.  Now you can issue <code>ls &lt;designator&gt;/</code>
+       available. The designators will look like
+       <code>(hd0) (hd0,gpt1) (hd0,gpt2) (hd1) (hd1,msdos1)...</code>
+     </p> 
+     <p>
+       Now you can issue <code>ls &lt;designator&gt;/</code>
        (note that the trailing "/" is necessary but you may omit
        "msdos" or "gpt" in the designator)
        to inspect the content of each partition to see if it contains
@@ -66,45 +70,46 @@
      </p>
      <p>
        Don't get confused with the two 'root' designators which are
-       used in <code>grub.cfg</code> in the line <code>set root=(XXX)</code>
+       used in <code>grub.cfg</code>.  One is in the line <code>set root=(XXX)</code>
        and the other root is in the kernel command
-       line (<code>linux ... root=YYY ...</code>). Those roots may
+       line (<code>linux ... root=YYY ...</code>). These entries may
        point to different partitions. Assuming you have setup a
        <b>separate</b> partition for /boot which is different to the one
-       where the system has been installed to, this two roots has to
-       point to different partitions. In this case:<br/>
+       where the system has been installed, these two root entries refer
+       to different partitions. In this case:<br/>
        <ul>
          <li><code>set root=(XXX)</code>: The XXX must designate the
            <code>/boot</code> partition. This can be read as: Grub
-           searches the kernel in Grub's root. So, the XXX must be the
+           searches for the kernel in GRUB's root. So, the XXX must be the
            /boot partition.</li>
          <li><code>linux /vmlinuz... root=YYY ...</code>: This root
-           designates the root from the kernel perspective. This root
-           is the partition where all the /usr, /etc, /var,... directories
-           has been installed to. When using a separate /boot partition,
-           this YYY cannot be the same as set for Grub's root as the
+           designates the root from the kernel's perspective. This root
+           is the partition where all the /usr, /etc, /var, ... directories
+           are installed. When using a separate /boot partition,
+           this YYY is not the same as set for GRUB's root as the
            LFS system hasn't been installed in XXX but in YYY.</li>
        </ul>
        <br/>
-       In case you have <b>no separate</b> partition for /boot, the
-       root for Grub as well for the kernel is the same partition. In
+       In the case you have <b>no separate</b> partition for /boot, the
+       root for GRUB as well for the kernel is the same partition. In
        this case the root setting will look like<br/>
        <ul>
-         <li><code>set root=(XXX)</code>: The XXX points to the
-           partition where the LFS system (including the /boot) has
-           been installed to.</li>
-         <li><code>linux /boot/vmlinuz... root=XXX ...</code>: The
-           XXX here points to the same partition as specified in
-           Grub's root. Note that the path to the kernel image
-           has sightly changed to the example above - thats because
-           Grub will find the kernel in a subdirectory of its root.</li>
+         <li><code>set root=(hdx,y)</code>: Here hdx points to the
+           drive and y is the partition where the LFS system 
+           (including the /boot) has been installed to.</li>
+         <li><code>linux /boot/vmlinuz... root=dev/sdx ...</code>: Here
+           root points to the same partition as specified in
+           GRUB's root, but is specifed in the format expected by the kernel.
+           Note that the path to the kernel image
+           has sightly changed to the example above &ndash; that is because
+           GRUB will find the kernel in a subdirectory of its root.</li>
        </ul>
        <br/>
        In any case, the <i>syntax</i> to name the partitions is different
-       when specifying the Grub's root even when they designate the
-       same partition. For Grub it looks like <code>set root=(hd0,1)</code>
+       when specifying GRUB's root even when they designate the
+       same partition. For Grub it looks like <code>set root=(hd0,2)</code>
        while the syntax for the kernel root is the well-known
-       path to a node in /dev like <code>/dev/sda1</code>.
+       path to a node in /dev like <code>/dev/sda2</code>.
      </p>
    </dd>
 
@@ -119,10 +124,15 @@
        says "unknown filesystem"), one possiblity is the ext4 file
        system in the partition has the <code>metadata_csum_seed</code>
        feature enabled, but you are using the GRUB from the host distro
-       which may not support this feature.  Boot into the host distro,
-       and use the <code>tune2fs -O ^metadata_csum_seed
-       /dev/&lt;the device node for the partition containing the LFS
-       kernel&gt;</code> command to disable the feature.  Or, build
+       which may not support this feature.
+     </p>
+     <p>
+       To check this issue, reboot into the host distro,
+       and use the <code>tune2fs -l /dev/&lt;the device node for the 
+       partition containing the LFS kernel&gt;</code>.  If you see
+       the <code>metadata_csum_seed</code> filesystem feature, remove
+       it with <code>tune2fs -O ^metadata_csum_seed /dev/&lt;device&gt;</code>.
+       Alternatively, you can build
        and install GRUB following the LFS (for BIOS) or BLFS (for UEFI)
        book, where GRUB is patched to support this feature.
      </p>
@@ -137,7 +147,7 @@
      </p>
      <p>
        Press any button to enter the GRUB command line interface, then
-       use the same diagnostic procedure as the previous issue.
+       use the same diagnostic procedure as the first issue above.
        Once the LFS system boots successfully, get the correct file
        system UUID via the
        <code>lsblk -o uuid,name</code> command and fix the
