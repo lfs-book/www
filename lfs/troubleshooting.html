@@ -13,10 +13,6 @@
  </p>
 
  <h2>GRUB Related Issues</h2>
-<!--     using grub from host
-     grub on another disk
-     lfs on a usb based drive
-     grub finding the lfs kernel-->
 
  <dl>
    <dt>GRUB: "error: hd1 cannot get C/H/S values."</dt>
@@ -164,12 +160,63 @@
      firmware issues -->
  
  <h2>Problems Mounting the Root Partition</h2>
+
+ <p>
+   This problem can occur for a couple of reasons:
+ </p>
+
+ <dl>
+   <dt>The disk drivers are not installed in the kernel.</dt>
+   <dd>
+     <p>
+       Since LFS does not use an initrd, all drivers needed to access
+       the disk must be installed in the kernel itself. Generally if
+       using a plain ext4 partition and starting the kernel configuration
+       with <code>make defconfig</code> this problem will not occur,
+       but trying to over-optimize the kernel may result in them missing.
+       In addition, if a different disk format such as btrfs is being
+       used, that driver must also be installed in the kernel.
+     </p> 
+     <p>Kernel config options to check: TBD</p>
+   </dd>
+
+   <dt>The kernel will not mount the root partition on my USB disk.</dt>
+   <dd>
+     <p>
+       The kernel is probably trying to mount the root partition
+       before the USB system is ready.  Put the parameter 
+       <code>rootdelay=10</code> on the kernel command line in 
+       grub.cfg.
+     </p> 
+   </dd>
+ </dl>
+     
+   <dt>The kernel thinks the root device is different from what is on the 
+       command line.</dt>
+   <dd>
+     <p>
+       Sometimes the disk layout for the LFS kernel is different from 
+       the host layout.  This can be solved by specifying the
+       root <code>partition</code>'s UUID or LABEL. To see what the identifiers are,
+       run <code>lsblk -o name,partlabel,partuuid</code> on your host 
+       system.  Then tell the kernel how to identify the root partition with:<br/>
+       <code>root=PARTUUID=&lt;uuid&gt;</code> or<br/>
+       <code>root=PARTLABEL=&lt;label&gt;</code>.
+     </p>
+     <p>
+        Note that filesystems also have a UUID and optionally a LABEL, 
+        but the kernel does not recognize them.  Those identifiers require 
+        an initrd.
+     </p> 
+   </dd>
+ </dl>
+     
 <!--     kernel panic not finding the root partition
        sda vs nvme0n1
-       Using PARTUUID or PARTLABEL when specifying root=
-       Partition format support in kernel
+       Using PARTUUID or PARTLABEL when specifying root - done
+       Partition format support in kernel - half done
        scsi drivers
-       rootdelay
+       rootdelay - done
  -->
  <h2>Network Related Issues</h2>
 
