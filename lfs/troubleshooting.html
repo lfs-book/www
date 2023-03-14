@@ -67,12 +67,12 @@
      <p>
        Don't get confused with the two 'root' designators which are
        used in <code>grub.cfg</code> in the line <code>set root=(XXX)</code>
-       and the other root</code> in the kernel command
+       and the other root is in the kernel command
        line (<code>linux ... root=YYY ...</code>). Those roots may
        point to different partitions. Assuming you have setup a
        <b>separate</b> partition for /boot which is different to the one
        where the system has been installed to, this two roots has to
-       point to different partitions. In this case:<br>
+       point to different partitions. In this case:<br/>
        <ul>
          <li><code>set root=(XXX)</code>: The XXX must designate the
            <code>/boot</code> partition. This can be read as: Grub
@@ -85,10 +85,10 @@
            this YYY cannot be the same as set for Grub's root as the
            LFS system hasn't been installed in XXX but in YYY.</li>
        </ul>
-       <br>
+       <br/>
        In case you have <b>no separate</b> partition for /boot, the
        root for Grub as well for the kernel is the same partition. In
-       this case the root setting will look like<br>
+       this case the root setting will look like<br/>
        <ul>
          <li><code>set root=(XXX)</code>: The XXX points to the
            partition where the LFS system (including the /boot) has
@@ -99,7 +99,7 @@
            has sightly changed to the example above - thats because
            Grub will find the kernel in a subdirectory of its root.</li>
        </ul>
-       <br>
+       <br/>
        In any case, the <i>syntax</i> to name the partitions is different
        when specifying the Grub's root even when they designate the
        same partition. For Grub it looks like <code>set root=(hd0,1)</code>
