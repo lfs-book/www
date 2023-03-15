@@ -164,8 +164,8 @@
    <dd>
      <p>
        This problem can have a couple of causes.  The first 
-       is because there are ont or more missing video drivers
-       int the kernel.  The second is due to the keernel not
+       is because there are one or more missing video drivers
+       in the kernel.  The second is due to the kernel not
        loading required firmware for the video device.
      </p>
 
@@ -176,17 +176,17 @@
      <code>lspci | grep -i vga</code>
 
      <p>
-       Now, in the kernel configuration, go to Device Drivers ---&gt;
-       Graphics Suport. First select the device driver that matches
+       Now, in the kernel configuration, go to <code>Device Drivers ---&gt;
+       Graphics Support</code>. First select the device driver that matches
        your video hardware.  For now, select this as a module.
      </p>
 
      <p>
        Then select Frame buffer Devices and go to the menu
-       that selects. Select as a module <code>VESA VGA graphics support</code>,
-       <code>EFI-based Framebuffer Support</code>,
-       and any entry that matches your video hardware.  If you
-       are unsure, just select them all as modules for now. 
+       that selects. Select <code>VESA VGA graphics support</code> and
+       <code>EFI-based Framebuffer Support</code>.
+       You can also select as a module any entry that matches your video 
+       hardware.  If you are unsure, just select them all as modules for now. 
        After a successful boot, you can run <code>lsmod</code> and
        rebuild the kernel without any of the unused modules.
      </p>
@@ -194,8 +194,8 @@
      <p>
        If the above does not work, your graphics device may need
        firmware to be loaded at boot time.  For information about 
-       how to do that, see <ulink 
-       href="https://www.linuxfromscratch.org/blfs/view/stable/postlfs/firmware.html#video-firmware"/>.
+       how to do that, see <a 
+       href="https://www.linuxfromscratch.org/blfs/view/stable/postlfs/firmware.html#video-firmware">About Firware in BLFS</a>.
      </p>
 
    </dd>
@@ -224,7 +224,7 @@
      </p>
      <code>lspci | grep --color -i "controller"</code>
 
-     <p style="margin-bottom: 0.3em">Kernel config options to check depending 
+     <p style="margin-bottom: 0">Kernel config options to check depending 
         on your disk and  file system types:
      </p>
      <pre><code>
