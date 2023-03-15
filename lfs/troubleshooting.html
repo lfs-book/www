@@ -72,7 +72,7 @@
        point to different partitions. Assuming you have setup a
        <b>separate</b> partition for /boot which is different to the one
        where the system has been installed, these two root entries refer
-       to different partitions. In this case:<br/>
+       to different partitions. In this case:</p>
        <ul>
          <li><code>set root=(XXX)</code>: The XXX must designate the
            <code>/boot</code> partition. This can be read as: Grub
@@ -88,7 +88,7 @@
        <br/>
        In the case you have <b>no separate</b> partition for /boot, the
        root for GRUB as well for the kernel is the same partition. In
-       this case the root setting will look like<br/>
+       this case the root setting will look like</p>
        <ul>
          <li><code>set root=(hdx,y)</code>: Here hdx points to the
            drive and y is the partition where the LFS system 
@@ -191,6 +191,7 @@
    </dd>
  </dl>
      
+ <dl>
    <dt>The kernel thinks the root device is different from what is on the 
        command line.</dt>
    <dd>
@@ -201,7 +202,8 @@
        run <code>lsblk -o name,partlabel,partuuid</code> on your host 
        system.  Then tell the kernel how to identify the root partition with:<br/>
        <code>root=PARTUUID=&lt;uuid&gt;</code> or<br/>
-       <code>root=PARTLABEL=&lt;label&gt;</code>.
+       <code>root=PARTLABEL=&lt;label&gt;</code><br/>
+       on the kernel command line in grub.cfg.
      </p>
      <p>
         Note that filesystems also have a UUID and optionally a LABEL, 
@@ -231,7 +233,7 @@
     host system. From there, look in the kernel configuration for the
     configuration item that matches your hardware: </p>
 
-    <pre style="padding: 0; margin: 0"
+    <pre style="padding: 0; margin: 0">
 <code>Device Drivers ---&gt;
   Network Device Support ---&gt;
     Ethernet driver support ---&gt;</code>
@@ -254,7 +256,7 @@
  <p>
    LFS does not supoprt wifi directly, and the SystemV revision does not
    support DHCP directly either.  To add those
-   capabilities see the following pages in BLFS:
+   capabilities see the following pages in BLFS:</p>
    <ul>
      <li><a href="https://www.linuxfromscratch.org/blfs/view/svn/basicnet/wireless_tools.html">Wireless Tools</a></li>
      <li><a href="https://www.linuxfromscratch.org/blfs/view/svn/basicnet/wpa_supplicant.html">WPA Supplicant (SysV)</a></li>
