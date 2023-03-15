@@ -177,7 +177,38 @@
        In addition, if a different disk format such as btrfs is being
        used, that driver must also be installed in the kernel.
      </p> 
-     <p>Kernel config options to check: TBD</p>
+     <p>
+       To help determine what hardware you have, on your host system run:
+     </p>
+     <code>lspci | grep --color -i "controller"</code>
+
+     <p>Kernel config options to check depending on your disk and
+        file system types:
+     </p>
+     <code>
+       ---&gt; Device Drivers
+         ---&gt; SCSI device support
+           * SCSI disk support (needed for SATA and PATA hard disks)
+         ---&gt; Serial ATA and Parallel ATA drivers (libata)
+           * ATA ACPI Support (older systems)
+           * AHCI SATA support (most SATA interfaces)
+           * ATA BMDMA support (SATA SFF controllers with BMDMA)
+             This provides SATA emulation for IDE hardware, 
+             Additional options may be needed for some HW.
+         ---&gt; NVME Support (m.2 based SSD drives)
+         ---&gt; USB Support
+           * USB Mass Storage support
+         ---&gt; Block devices
+           * Virtio block driver
+         ---&gt; Virtio drivers
+           * PCI driver for virtio devices (optional for qemu)
+       ---&gt; File Systems
+           * The Extended 4 (ext4) filesystem
+           * Use ext4 for ext2 file systems
+         ---&gt; DOS/FAT/EXFAT/NT Filesystems 
+           * VFAT (Windows-95) fs support
+         Other file system option used for the root partition
+     </code>
    </dd>
 
    <dt>The kernel will not mount the root partition on my USB disk.</dt>
@@ -213,13 +244,6 @@
    </dd>
  </dl>
      
-<!--     kernel panic not finding the root partition
-       sda vs nvme0n1
-       Using PARTUUID or PARTLABEL when specifying root - done
-       Partition format support in kernel - half done
-       scsi drivers
-       rootdelay - done
- -->
  <h2>Network Related Issues</h2>
 
  <h3>I have no internet</h3>
