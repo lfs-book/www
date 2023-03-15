@@ -85,10 +85,10 @@
            this YYY is not the same as set for GRUB's root as the
            LFS system hasn't been installed in XXX but in YYY.</li>
        </ul>
-       <br/>
-       In the case you have <b>no separate</b> partition for /boot, the
+       
+       <p>In the case you have <b>no separate</b> partition for /boot, the
        root for GRUB as well for the kernel is the same partition. In
-       this case the root setting will look like</p>
+       this case the root setting will look like:</p>
        <ul>
          <li><code>set root=(hdx,y)</code>: Here hdx points to the
            drive and y is the partition where the LFS system 
@@ -100,7 +100,7 @@
            has sightly changed to the example above &ndash; that is because
            GRUB will find the kernel in a subdirectory of its root.</li>
        </ul>
-       <br/>
+     <p>
        In any case, the <i>syntax</i> to name the partitions is different
        when specifying GRUB's root even when they designate the
        same partition. For Grub it looks like <code>set root=(hd0,2)</code>
@@ -263,7 +263,7 @@
      <li><a href="https://www.linuxfromscratch.org/blfs/view/systemd/basicnet/wpa_supplicant.html">WPA Supplicant (Systemd)</a></li>
      <li><a href="https://www.linuxfromscratch.org/blfs/view/svn/basicnet/dhcpcd.html">dhcpcd</a></li>
    </ul>
- </p>
+
 
 <!--#include virtual="/common/footer.html" -->
 <!-- vim: set et sw=2: -->
