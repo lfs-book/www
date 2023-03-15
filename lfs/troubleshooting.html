@@ -153,11 +153,6 @@
  </dl>
 
  <h2>Video Related Issues</h2>
-<!--     blank screen
-     lspci |grep -i vga
-     when selecting FB devices, select all as modules
-       when logging in, check what modules are loaded with lsmod
-     firmware issues -->
  
  <dl>
    <dt>The screen goes blank during the boot process.</dt>
@@ -183,12 +178,13 @@
 
      <p>
        Then select Frame buffer Devices and go to the menu
-       that selects. Select <code>VESA VGA graphics support</code> and
+       that selects <code>Support for frame buffer devices</code>. 
+       Now select <code>VESA VGA graphics support</code> and
        <code>EFI-based Framebuffer Support</code>.
        You can also select as a module any entry that matches your video 
-       hardware.  If you are unsure, just select them all as modules for now. 
-       After a successful boot, you can run <code>lsmod</code> and
-       rebuild the kernel without any of the unused modules.
+       hardware.  If you are unsure, just select them all for now. 
+       After a successful boot, you can run <code>lsmod</code> and,
+       if desired, rebuild the kernel without any of the unused modules.
      </p>
 
      <p>
