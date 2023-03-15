@@ -159,6 +159,48 @@
        when logging in, check what modules are loaded with lsmod
      firmware issues -->
  
+ <dl>
+   <dt>The screen goes blank during the boot process.</dt>
+   <dd>
+     <p>
+       This problem can have a couple of causes.  The first 
+       is because there are ont or more missing video drivers
+       int the kernel.  The second is due to the keernel not
+       loading required firmware for the video device.
+     </p>
+
+     <p>
+       To solve this problem, first identify your video device:
+     </p>
+
+     <code>lspci | grep -i vga</code>
+
+     <p>
+       Now, in the kernel configuration, go to Device Drivers ---&gt;
+       Graphics Suport. First select the device driver that matches
+       your video hardware.  For now, select this as a module.
+     </p>
+
+     <p>
+       Then select Frame buffer Devices and go to the menu
+       that selects. Select as a module <code>VESA VGA graphics support</code>,
+       <code>EFI-based Framebuffer Support</code>,
+       and any entry that matches your video hardware.  If you
+       are unsure, just select them all as modules for now. 
+       After a successful boot, you can run <code>lsmod</code> and
+       rebuild the kernel without any of the unused modules.
+     </p>
+
+     <p>
+       If the above does not work, your graphics device may need
+       firmware to be loaded at boot time.  For information about 
+       how to do that, see <ulink 
+       href="https://www.linuxfromscratch.org/blfs/view/stable/postlfs/firmware.html#video-firmware"/>.
+     </p>
+
+   </dd>
+ </dl>
+     
  <h2>Problems Mounting the Root Partition</h2>
 
  <p>
@@ -182,8 +224,8 @@
      </p>
      <code>lspci | grep --color -i "controller"</code>
 
-     <p>Kernel config options to check depending on your disk and
-        file system types:
+     <p style="margin-bottom: 0.3em">Kernel config options to check depending 
+        on your disk and  file system types:
      </p>
      <pre><code>
        ---&gt; Device Drivers
@@ -202,12 +244,13 @@
            * Virtio block driver
          ---&gt; Virtio drivers
            * PCI driver for virtio devices (optional for qemu)
+
        ---&gt; File Systems
            * The Extended 4 (ext4) filesystem
            * Use ext4 for ext2 file systems
          ---&gt; DOS/FAT/EXFAT/NT Filesystems 
            * VFAT (Windows-95) fs support
-         Other file system option used for the root partition
+         Other file system option for the type used for the root partition
      </code></pre>
    </dd>
 
