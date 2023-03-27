@@ -72,6 +72,31 @@
     releases of the books.</p>
     -->
 
+    <a id="sa-11.3-007"/>
+    <h4>11.3 007 cURL         Date: 2023-03-27  Severity: Medium</h4>
+    <p>In cURL-8.0.1, six security vulnerabilities were fixed that could allow
+    for authentication bypasses, remotely exploitable crashes, content filtering
+    circumvention or arbitrary file writes, and command injection. These
+    vulnerabilities occur due to improper reusage of connections when using
+    GSS delegation, SSH, or FTP. The double-free remotely exploitable crash
+    occurs when using HSTS, and the command injection occurs whenever using the
+    TELNET protocol. The content filtering circumvention and arbitrary file
+    writes occur when using SFTP, and happen due to a discrepancy when resolving
+    the ~ (tilde) character. It's important to update cURL if you're using it to
+    resolve HTTP URLs that redirect to HTTPS, or if you use TELNET/SSH/FTP/SFTP
+    or GSS delegation with cURL.
+    These vulnerabilities have been assigned
+    <a href="https://curl.se/docs/CVE-2023-27538.html">CVE-2023-27538</a>,
+    <a href="https://curl.se/docs/CVE-2023-27537.html">CVE-2023-27537</a>,
+    <a href="https://curl.se/docs/CVE-2023-27536.html">CVE-2023-27536</a>,
+    <a href="https://curl.se/docs/CVE-2023-27535.html">CVE-2023-27535</a>,
+    <a href="https://curl.se/docs/CVE-2023-27534.html">CVE-2023-27534</a>, and
+    <a href="https://curl.se/docs/CVE-2023-27533.html">CVE-2023-27533</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.0.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-11.3-006"/>
     <h4>11.3 006 Thunderbird  Date: 2023-03-26  Severity: High</h4>
     <p>In Thunderbird-102.9.0, five security vulnerabilities applicable to Linux
