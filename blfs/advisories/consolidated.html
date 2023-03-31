@@ -71,6 +71,21 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-009"/>
+    <h4>11.3 009 xorg-server  Date: 2023-03-30  Severity: High</h4>
+    <p>In xorg-server-21.1.8, a security vulnerability was fixed that
+    could allow for local privilege escalation on systems where the X
+    server is running privileged, and for remote code execution when using
+    SSH X Forwarding. This vulnerability occurs due to a Use-After-Free,
+    which happens if a client explicitly destroys the overlay window. The
+    X server would leave a dangling pointer to that overlay window in the
+    CompScreen structure, which would trigger a use-afre-free later.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1393">CVE-2023-1393</a>.</p>
+    <p>To fix this vulnerability, update to xorg-server-21.1.8 or later using
+    the instructions from
+    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
 
     <a id="sa-11.3-008"/>
     <h4>11.3 008 Samba        Date: 2023-03-30  Severity: High</h4>
