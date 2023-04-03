@@ -71,6 +71,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-012"/>
+    <h4>11.3 012 xwayland  Date: 2023-04-02  Severity: High</h4>
+    <p>In xwayland-23.1.1, a security vulnerability was fixed that
+    could allow for local privilege escalation on systems where the X
+    server is running privileged, and for remote code execution when using
+    SSH X Forwarding. This vulnerability occurs due to a Use-After-Free,
+    which happens if a client explicitly destroys the overlay window. The
+    X server would leave a dangling pointer to that overlay window in the
+    CompScreen structure, which would trigger a use-afre-free later.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1393">CVE-2023-1393</a>.</p>
+    <p>To fix this vulnerability, update to xwayland-23.1.1 or later using
+    the instructions from
+    <a href="../view/svn/x/xwayland.html">xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">xwayland (systemd)</a>.</p>
+
     <a id="sa-11.3-011"/>
     <h4>11.3 011 Linux Kernel (LFS)     Date: 2023-03-31  Severity: Medium</h4>
     <p>In Linux 6.2.3 through 6.2.9, eleven vulnerabilies were fixed which
