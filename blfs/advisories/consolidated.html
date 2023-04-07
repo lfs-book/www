@@ -71,6 +71,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+
+    <a id="sa-11.3-013"/>
+    <h4>11.3 013 Ruby      Date: 2023-04-06  Severity: Medium</h4>
+    <p>In Ruby-3.2.2, two security vulnerabilities were fixed that could allow
+    for a denial of service when using the Time or URI gems bundled with Ruby.
+    These issues happen due to mishandling URLs with special characters, and
+    mishandling invalid strings that have specific characters. In both cases,
+    it results in a significantly longer execution time when parsing strings
+    to URI or Time objects. These vulnerabilities have been officially
+    classified as Regular Expression Denial of Service vulnerabilities.
+    If you do not want to update Ruby to version 3.2.2, you can update the
+    gems manually using 'gem update uri' and 'gem update time' as a workaround.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-28755">CVE-2023-28755</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2023-28756">CVE-2023-28756</a>.</p>
+    <p>To fix these vulnerabilities, update to Ruby-3.2.2 or later using the
+    instructions from
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
     <a id="sa-11.3-012"/>
     <h4>11.3 012 xwayland  Date: 2023-04-02  Severity: High</h4>
     <p>In xwayland-23.1.1, a security vulnerability was fixed that
