@@ -63,6 +63,19 @@
 
 <!-- end of Apache HTTPD -->
 
+    <h3>cURL</h3>
+
+    <a id="sa-11.3-007"/>
+    <h4>11.3 007 cURL     Date: 2023-03-27  Severity: Medium</h4>
+    <p>In cURL-8.0.1, six security vulnerabilities were fixed that could allow
+    for authentication bypass, arbitrary file writes, content filter bypasses,
+    command injection, and remotely exploitable crashes. Update to cURL-8.0.1
+    if you use SFTP/SSH/TELNET/GSS/FTP with cURL or if you use HTTP sites which
+    redirect to HTTPS.
+    <a href="consolidated.html#sa-11.3-007">11.3-007</a></p>
+
+<!-- end of cURL -->
+
     <h3>Firefox</h3>
 
     <a id="sa-11.3-005"/>
@@ -94,4 +107,86 @@
 
 <!-- end of QtWebEngine -->
 
+    <h3>Ruby</h3>
+
+    <a id="sa-11.3-013"/>
+    <h4>11.3 013 Ruby      Date: 2023-04-06  Severity: Medium</h4>
+    <p>In Ruby-3.2.2, two security vulnerabilities were fixed that could allow
+    for denial of service when using the URI and Time gems. Update to ruby-3.2.2
+    or use the workaround described in the consolidated advisory.
+    <a href="consolidated.html#sa-11.3-013">11.3-013</a></p>
+
+<!-- end of Ruby -->
+
+    <h3>Samba</h3>
+
+    <a id="sa-11.3-008"/>
+    <h4>11.3 008 Samba        Date: 2023-03-30  Severity: High</h4>
+    <p>In Samba-4.18.1, three security vulnerabilities were fixed. Note that
+    they only affect Samba in LDAP/AD DC mode, which is not the book's default
+    configuration. However, the security vulnerabilites are severe enough that
+    if you have LDAP or AD DC enabled, you must take immediate action to protect
+    yourself and assume that BitLocker recovery keys have been compromised.
+    One vulnerability allows for cleartext password resets as well and for
+    unauthorized attribute detection. If you are using LDAP/AD DC functionality
+    in Samba, you must update immediately.
+    <a href="consolidated.html#sa-11.3-008">11.3-008</a></p>
+
+<!-- end of Samba -->
+
+    <h3>Seamonkey</h3>
+
+    <a id="sa-11.3-014"/>
+    <h4>11.3 014 Seamonkey Date: 2023-04-07  Severity: High</h4>
+    <p>In Seamonkey-2.53.16, three versions worth of Firefox and Thunderbird
+    security vulnerabilities were resolved. This includes fixes for issues that
+    could cause remotely exploitable crashes, remote code execution, invalid
+    JavaScript execution, arbitrary file reads, content security policy bypass,
+    screen hijacking, and content spoofing. Update to Seamonkey-2.53.16.
+    <a href="consolidated.html#sa-11.3-014">11.3-014</a></p>
+
+<!-- end of Seamonkey -->
+
+    <h3>Thunderbird</h3>
+
+    <a id="sa-11.3-010"/>
+    <h4>11.3 010 Thunderbird  Date: 2023-03-30  Severity: High</h4>
+    <p>In Thunderbird-102.9.1, a security vulnerability was fixed that could
+    allow for a remotely exploitable denial of service when using the Matrix
+    chat protocol. Update to Thunderbird-102.9.1 if you use that protocol.
+    <a href="consolidated.html#sa-11.3-010">11.3-010</a></p>
+
+    <a id="sa-11.3-006"/>
+    <h4>11.3 006 Thunderbird  Date: 2023-03-26  Severity: High</h4>
+    <p>In Thunderbird-102.9.0, five security vulnearabilities which can mostly
+    be exploited via HTML mail were resolved. These can allow for spoofing,
+    potentially exploitable crashes, and potentially remote code execution.
+    Update to Thunderbird-102.9.0.
+    <a href="consolidated.html#sa-11.3-006">11.3-006</a></p>
+
+<!-- end of Thunderbird -->
+
+    <h3>xorg-server</h3>
+
+    <a id="sa-11.3-009"/>
+    <h4>11.3 009 xorg-server  Date: 2023-03-30  Severity: High</h4>
+    <p>In xorg-server-21.1.8, a security vulnerability was fixed that could
+    allow for remote code execution for SSH X forwarding sessions and for
+    local privilege escalation on systems where the X server is running
+    privileged. Update to xorg-server-21.1.8.
+    <a href="consolidated.html#sa-11.3-009">11.3-009</a></p>
+
+<!-- end of xorg-server -->
+
+    <h3>xwayland</h3>
+
+    <a id="sa-11.3-012"/>
+    <h4>11.3 012 xwayland  Date: 2023-04-02  Severity: High</h4>
+    <p>In xwayland-23.1.1, a security vulnerability was fixed that could
+    allow for remote code execution for SSH X forwarding sessions and for
+    local privilege escalation on systems where the X server is running
+    privileged. Update to xwayland-23.1.1.
+    <a href="consolidated.html#sa-11.3-012">11.3-012</a></p>
+
+<!-- end of xwayland -->
 <!--#include virtual="/common/footer.html" -->

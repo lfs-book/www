@@ -72,6 +72,208 @@
     releases of the books.</p>
     -->
 
+    <a id="sa-11.3-014"/>
+    <h4>11.3 014 Seamonkey Date: 2023-04-07  Severity: High</h4>
+    <p>In Seamonkey-2.53.16, three versions worth of Firefox and Thunderbird
+    security vulnerabilities were resolved. This includes fixes for issues that
+    could cause remotely exploitable crashes, remote code execution, invalid
+    JavaScript execution, arbitrary file reads, content security policy bypass,
+    screen hijacking, and content spoofing.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46871">CVE-2022-46871</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23598">CVE-2023-23598</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23601">CVE-2023-23601</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23602">CVE-2023-23602</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-46877">CVE-2022-46877</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23603">CVE-2023-23603</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23605">CVE-2023-23605</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23728">CVE-2023-23728</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0767">CVE-2023-0767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25735">CVE-2023-25735</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25737">CVE-2023-25737</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25739">CVE-2023-25739</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25729">CVE-2023-25729</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25732">CVE-2023-25732</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25742">CVE-2023-25742</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25744">CVE-2023-25744</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25751">CVE-2023-25751</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28164">CVE-2023-28164</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28162">CVE-2023-28162</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25752">CVE-2023-25752</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28176">CVE-2023-28176</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0616">CVE-2023-0616</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28427">CVE-2023-28427</a>.</p>
+    <p>To fix these vulnerabilities, update to Seamonkey-2.53.16 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+    <a id="sa-11.3-013"/>
+    <h4>11.3 013 Ruby      Date: 2023-04-06  Severity: Medium</h4>
+    <p>In Ruby-3.2.2, two security vulnerabilities were fixed that could allow
+    for a denial of service when using the Time or URI gems bundled with Ruby.
+    These issues happen due to mishandling URLs with special characters, and
+    mishandling invalid strings that have specific characters. In both cases,
+    it results in a significantly longer execution time when parsing strings
+    to URI or Time objects. These vulnerabilities have been officially
+    classified as Regular Expression Denial of Service vulnerabilities.
+    If you do not want to update Ruby to version 3.2.2, you can update the
+    gems manually using 'gem update uri' and 'gem update time' as a workaround.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-28755">CVE-2023-28755</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2023-28756">CVE-2023-28756</a>.</p>
+    <p>To fix these vulnerabilities, update to Ruby-3.2.2 or later using the
+    instructions from
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
+    <a id="sa-11.3-012"/>
+    <h4>11.3 012 xwayland  Date: 2023-04-02  Severity: High</h4>
+    <p>In xwayland-23.1.1, a security vulnerability was fixed that
+    could allow for local privilege escalation on systems where the X
+    server is running privileged, and for remote code execution when using
+    SSH X Forwarding. This vulnerability occurs due to a Use-After-Free,
+    which happens if a client explicitly destroys the overlay window. The
+    X server would leave a dangling pointer to that overlay window in the
+    CompScreen structure, which would trigger a use-afre-free later.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1393">CVE-2023-1393</a>.</p>
+    <p>To fix this vulnerability, update to xwayland-23.1.1 or later using
+    the instructions from
+    <a href="../view/svn/x/xwayland.html">xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">xwayland (systemd)</a>.</p>
+
+    <a id="sa-11.3-011"/>
+    <h4>11.3 011 Linux Kernel (LFS)     Date: 2023-03-31  Severity: Medium</h4>
+    <p>In Linux 6.2.3 through 6.2.9, eleven vulnerabilies were fixed which
+    could potentially allow a Denial of Service (deadlock or kernel panic),
+    information leak (network filter bypass) or local priviledge
+    escalation. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4269">CVE-2022-4269</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1032">CVE-2023-1032</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1076">CVE-2023-1076</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1077">CVE-2023-1077</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1079">CVE-2023-1079</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1118">CVE-2023-1118</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1583">CVE-2023-1583</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1670">CVE-2023-1670</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25012">CVE-2023-25012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28466">CVE-2023-28466</a>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28866">CVE-2023-28866</a></p>.
+    <p>To fix these vulnerabilities, update to Linux kernel 6.2.9 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>;
+    or 6.1.22 or later if you prefer to stick with the 6.1 LTS series
+    using the instructions for
+    <a href="../../lfs/view/11.3/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/11.3-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
+    <a id="sa-11.3-010"/>
+    <h4>11.3 010 Thunderbird  Date: 2023-03-30  Severity: High</h4>
+    <p>In Thunderbird-102.9.1, a security vulnerability was fixed that could
+    allow for a remotely exploitable denial-of-service when using the Matrix
+    chat protocol in Thunderbird. This was fixed by updating the 3rd-party
+    Matrix SDK that is bundled with Thunderbird to a more recent version.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28427">CVE-2023-28427</a>.</p>
+    <p>To fix this vulnerability, update to Thunderbird-102.9.1 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.3-009"/>
+    <h4>11.3 009 xorg-server  Date: 2023-03-30  Severity: High</h4>
+    <p>In xorg-server-21.1.8, a security vulnerability was fixed that
+    could allow for local privilege escalation on systems where the X
+    server is running privileged, and for remote code execution when using
+    SSH X Forwarding. This vulnerability occurs due to a Use-After-Free,
+    which happens if a client explicitly destroys the overlay window. The
+    X server would leave a dangling pointer to that overlay window in the
+    CompScreen structure, which would trigger a use-afre-free later.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1393">CVE-2023-1393</a>.</p>
+    <p>To fix this vulnerability, update to xorg-server-21.1.8 or later using
+    the instructions from
+    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+
+    <a id="sa-11.3-008"/>
+    <h4>11.3 008 Samba        Date: 2023-03-30  Severity: High</h4>
+    <p>In Samba-4.18.1, three security vulnerabilities were fixed that could
+    allow for unauthorized attribute deletion, password resets where the new
+    password is transmitted in plaintext, and for confidential attribute
+    disclosure. Note that all three of these vulnerabilities require LDAP/AD DC
+    to exploit, and while this isn't the default configuration of Samba in BLFS,
+    some users are known to use it. The most serious vulnerability of the three
+    is the confidential attribute disclosure. It has been discovered to be used
+    to exfiltrate TPM owner passwords, certificate secret keys, and Bitlocker
+    recovery keys. For users who have Active Directory Domain Controllers using
+    Samba and use these features on Windows clients, the Samba team states that
+    you should assume that this information has been compromised, and steps
+    should be made to ensure that data that may have been leaked from
+    confidential or otherwise access-controlled attributes is no longer useful.
+    For example, drives should be re-encrypted if they are using BitLocker,
+    TPM passwords should be changed, certificates should be re-issued, etc.
+    Note that a successful exploitation will not show anything in the logs
+    unless the logs are set to a level of 10 (which is highly verbose).
+    If you are using Samba as an AD DC, you should take immediate action. In
+    addition to applying this update, you will need to take actions to protect
+    any data that may have been potentially compromised. See the information on
+    CVE-2023-0614 for more information.
+    These vulnerabilities have been assigned
+    <a href="https://www.samba.org/samba/security/CVE-2023-0225.html">CVE-2023-0225</a>,
+    <a href="https://www.samba.org/samba/security/CVE-2023-0922.html">CVE-2023-0922</a>, and
+    <a href="https://www.samba.org/samba/security/CVE-2023-0614.html">CVE-2023-0614</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.18.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
+    <a id="sa-11.3-007"/>
+    <h4>11.3 007 cURL         Date: 2023-03-27  Severity: Medium</h4>
+    <p>In cURL-8.0.1, six security vulnerabilities were fixed that could allow
+    for authentication bypasses, remotely exploitable crashes, content filtering
+    circumvention or arbitrary file writes, and command injection. These
+    vulnerabilities occur due to improper reusage of connections when using
+    GSS delegation, SSH, or FTP. The double-free remotely exploitable crash
+    occurs when using HSTS, and the command injection occurs whenever using the
+    TELNET protocol. The content filtering circumvention and arbitrary file
+    writes occur when using SFTP, and happen due to a discrepancy when resolving
+    the ~ (tilde) character. It's important to update cURL if you're using it to
+    resolve HTTP URLs that redirect to HTTPS, or if you use TELNET/SSH/FTP/SFTP
+    or GSS delegation with cURL.
+    These vulnerabilities have been assigned
+    <a href="https://curl.se/docs/CVE-2023-27538.html">CVE-2023-27538</a>,
+    <a href="https://curl.se/docs/CVE-2023-27537.html">CVE-2023-27537</a>,
+    <a href="https://curl.se/docs/CVE-2023-27536.html">CVE-2023-27536</a>,
+    <a href="https://curl.se/docs/CVE-2023-27535.html">CVE-2023-27535</a>,
+    <a href="https://curl.se/docs/CVE-2023-27534.html">CVE-2023-27534</a>, and
+    <a href="https://curl.se/docs/CVE-2023-27533.html">CVE-2023-27533</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.0.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-11.3-006"/>
+    <h4>11.3 006 Thunderbird  Date: 2023-03-26  Severity: High</h4>
+    <p>In Thunderbird-102.9.0, five security vulnerabilities applicable to Linux
+    systems were resolved, and two of them were rated as High by upstream.
+    These vulnerabilities are only applicable if you are reading mail with HTML
+    in it, and can allow for potentially exploitable crashes, spoofing attacks,
+    and potentially remote code execution. It's important to update if you
+    receive HTML mail.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25751">CVE-2023-25751</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25752">CVE-2023-25752</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28162">CVE-2023-28162</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28164">CVE-2023-28164</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28176">CVE-2023-28176</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-102.9.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-11.3-005"/>
     <h4>11.3 005 Firefox  Date: 2023-03-14  Severity: High</h4>
     <p>In Firefox-102.9.0esr, five security vulnerabilities applicable to linux
