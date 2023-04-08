@@ -46,13 +46,13 @@
         <li><a href="#conf-guess-fail">configure can't guess my host type.</a></li>
         <li><a href="#config-not-gnu-c">checking whether we are using GNU C... no</a></li>
         <li><a href="#no-ptys">The system has no more ptys.  Ask your system administrator to create more.</a></li>
+        <li><a href="#config-status-0ax-y">./config.status: line 508: 0a1,66: command not found (or any similar message with only numbers different)</a></li>
         <li><a href="#dev-null-as-cache">"configure: loading cache /dev/null" in config.log</a></li>
       </ul>
       <h3><a href="#packerrors">Package-specific errors</a></h3>
       <ul>
         <li><a href="#m4-mb-len-max-wrong">M4: Assumed value of MB_LEN_MAX wrong</a></li>
         <li><a href="#systemd-user-credentials-esrch">Systemd: systemd-networkd.service: Failed to determine user credentials: No such process</a></li>
-        <li><a href="#tcl-config-status">Tcl: ./config.status: line 508: 0a1,66: command not found</a></li>
       </ul>
       <h3><a href="#confboot">Configuration and booting issues</a></h3>
       <ul>
@@ -510,6 +510,12 @@
           revision of the LFS book, it's likely you've missed the line for
           the <code>devpts</code> filesystem in <code>/etc/fstab</code>.
         </dd>
+        <dt id="config-status-0ax-y">./config.status: line 508: 0a1,66: command not found (or any similar message with only numbers different)<dt>
+        <dd>
+          <p>Check if <code>config.log</code> contains "configure: loading
+          cache /dev/null".  If it's the case, refer to
+          <a href='#dev-null-as-cache'>the entry for it</a>.
+        </dd>
         <dt id="dev-null-as-cache">"configure: loading cache /dev/null" in
         config.log</dt>
         <dd>
@@ -563,13 +569,6 @@
           is misused in systemd-based system.  "No such process" is just the
           "standard" error message for <code>ESRCH</code>, it's not very
           helpful for diagnosis of this issue.</p>
-        </dd>
-
-        <dt id="tcl-config-status">Tcl: ./config.status: line 508: 0a1,66: command not found<dt>
-        <dd>
-          <p>Check if <code>config.log</code> contains "configure: loading
-          cache /dev/null".  If it's the case, refer to
-          <a href='#dev-null-as-cache'>the entry for it</a>.
         </dd>
       </dl>
       <p><a href="#lfsfaq">Back to the top.</a></p>
