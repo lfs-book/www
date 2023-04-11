@@ -72,6 +72,17 @@
     releases of the books.</p>
     -->
 
+    <a id="sa-11.3-015"/>
+    <h4>11.3 015 Libwebp Date: 2023-04-11  Severity: High</h4>
+    <p>The update to firefox-102.10.0 makes public a double-free vulnerability
+    in libwebp which the mozilla developers say could lead to memory corruption
+    and a potentially exploitable crash. See the MFSA-TMP-2001-001 entry in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-14/">mfsa-2023-14</a>.</p>
+    <p>To fix this in the absence of a newer libwebp reliease. apply the
+    libwebp-1.3.0-upstream_fix-1.patch using the instructions for
+    <a href="../view/svn/general/libwebp.html">LibWebP (sysv)</a> or
+    <a href="../view/systemd/general/libwebp.html">Libwebp (systemd)</a>.</p>
+
     <a id="sa-11.3-014"/>
     <h4>11.3 014 Seamonkey Date: 2023-04-07  Severity: High</h4>
     <p>In Seamonkey-2.53.16, three versions worth of Firefox and Thunderbird
