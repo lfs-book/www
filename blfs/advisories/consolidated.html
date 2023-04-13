@@ -71,6 +71,23 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-019"/>
+    <h4>11.3 019 ghostscript  Date: 2023-04-13  Severity: Critical</h4>
+    <p>In ghostscript-10.01.1, a critical security vulnerability was fixed that
+    allows for arbitrary code execution when loading crafted PostScript files. A
+    proof of concept for this vulnerability is public, and it is known to be
+    exploited. The vulnerability was fixed with ghostscript-10.01.1, but was
+    not known to be part of this update until a posting was released to
+    oss-security on 04-13-2023 making it public. This vulnerability is called
+    "Shell in the Ghost", and is due to a buffer overflow. It is imperative that
+    you update ghostscript on all systems which have it installed immediately.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28879">CVE-2023-28879</a>.</p>
+    <p>To fix this vulnerability, update to ghostscript-10.01.1 or later using
+    the instructions for
+    <a href="../view/svn/pst/gs.html">ghostscript (sysv)</a> or
+    <a href="../view/systemd/pst/gs.html">ghostscript (systemd)</a>.</p>
+
     <a id="sa-11.3-018"/>
     <h4>11.3 018 Thunderbird Date: 2023-04-13 Severity: High</h4>
     <p>In Thunderbird-102.10.0, several security vulnerabilities were fixed that
