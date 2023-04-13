@@ -71,9 +71,34 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-018"/>
+    <h4>11.3 018 Thunderbird Date: 2023-04-13 Severity: High</h4>
+    <p>In Thunderbird-102.10.0, several security vulnerabilities were fixed that
+    could allow for user confusion/spoofing attacks, potentially exploitable
+    crashes, memory corruption, denial of service, security control bypasses
+    (revocation status of S/MIME certificates were not checked), user interface
+    hangs, remote code execution through download reflection and mishandling of
+    .desktop files on Linux systems, and arbitrary code execution. Updating
+    Thunderbird is highly recommended, and is crucial if you are using S/MIME
+    encrypted email.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-29533">CVE-2023-29533</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-29535">CVE-2023-29535</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-29536">CVE-2023-29536</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-0457">CVE-2023-0457</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-29479">CVE-2023-29479</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-29539">CVE-2023-29539</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-29541">CVE-2023-29541</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-1945">CVE-2023-1945</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2023-29548">CVE-2023-29548</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2023-29550">CVE-2023-29550</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-102.10.0 or later
+    using the instructions for
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-11.3-017"/>
-    <h4>11.3 017 Firefox  Date: 2023-03-11  Severity: High</h4>
+    <h4>11.3 017 Firefox  Date: 2023-04-11  Severity: High</h4>
     <p>In Firefox-102.10.0esr, seven security vulnerabilities applicable to linux
     systems were fixed, four of them rated as High by upstream (also a vulnerability
     fixed for the shipped libwebp - BLFS uses system libwebp see SA 11.3-015). Details at
