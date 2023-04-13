@@ -71,6 +71,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-020"/>
+    <h4>11.3 020 libxml2      Date: 2023-04-13  Severity: Medium</h4>
+    <p>In libxml2-2.10.4, three security vulnerabilities were fixed that could
+    cause crashes. One of these is because hashing of empty dict strings wasn't
+    deterministic, but the other two vulnerabilities are due to null pointer
+    dereferences when using the xmlSchemeFixupComplexType and the
+    xmlSchemaCheckCOSSTDerivedOK functions. Note that only two of these
+    vulnerabilities were assigned CVE IDs.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-29469">CVE-2023-29469</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2023-28484">CVE-2023-28484</a>.</p>
+    <p>To fix these vulnerabilities, update to libxml2-2.10.4 or later using
+    the instructions for
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
     <a id="sa-11.3-019"/>
     <h4>11.3 019 ghostscript  Date: 2023-04-13  Severity: Critical</h4>
     <p>In ghostscript-10.01.1, a critical security vulnerability was fixed that
