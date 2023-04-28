@@ -71,6 +71,24 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-023"/>
+    <h4>11.3 023 Git          Date: 2023-04-28  Severity: High</h4>
+    <p>In several versions up to Git-2.40.0, three security issues were
+    identified and fixed in Git-2.40.1. They allowed to write outside a working
+    tree when applying a specially crafted patch, allowed for malicious
+    placement of crafted messages under certain circumstances, and arbitrary
+    configuration injection.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25652">CVE-2023-25652</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-25815">CVE-2023-25815</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-29007">CVE-2023-29007</a>.
+    </p>
+    <p>To fix these vulnerabilities, update to Git-2.40.1 or later using
+    the instructions from
+    <a href="../view/svn/general/git.html">Git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">Git (systemd)</a>.</p>
+
+
     <a id="sa-11.3-022"/>
     <h4>11.3 022 WebKitGTK+   Date: 2023-04-23  Severity: Critical</h4>
     <p>In WebKitGTK+-2.40.1, six security vulnerabilities were fixed that could
