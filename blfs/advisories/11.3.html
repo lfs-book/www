@@ -78,6 +78,13 @@
 
     <h3>Firefox</h3>
 
+    <a id="sa-11.3-017"/>
+    <h4>11.3 017 Firefox  Date: 2023-03-11  Severity: High</h4>
+    <p>In Firefox-102.10.0esr, seven security vulnerabilities applicable to linux
+    systems were fixed, four of them rated as High by upstream, as well as a
+    fix in the shipped version of libwebp (see SA 11.3-016).
+    <a href="consolidated.html#sa-11.3-017">11.3-017</a></p>
+
     <a id="sa-11.3-005"/>
     <h4>11.3 005 Firefox  Date: 2023-03-14  Severity: High</h4>
     <p>In Firefox-102.9.0esr, five security vulnerabilities applicable to linux
@@ -86,7 +93,40 @@
 
 <!-- end of firefox -->
 
+    <h3>Git</h3>
+
+    <a id="sa-11.3-023"/>
+    <h4>11.3 023 Git  Date: 2023-04-28  Severity: High</h4>
+    <p>In Git-2.40.1, three security issues were fixed. They allowed
+    to write outside a working tree when applying a specially crafted patch,
+    allowed for malicious placement of crafted messages under certain
+    circumstances, and arbitrary configuration injection.
+    Update to git-2.40.1.
+    <a href="consolidated.html#sa-11.3-023">11.3-023</a></p>
+
+<!-- end of Git -->
+
+    <h3>Git</h3>
+
+    <a id="sa-11.3-019"/>
+    <h4>11.3 019 ghostscript  Date: 2023-04-13  Severity: Critical</h4>
+    <p>In ghostscript-10.01.1, a critical security vulnerability was fixed that
+    allows for trivial arbitrary code execution when processing crafted
+    PostScript files. It is known as "Shell in the Ghost", and is known to be
+    actively exploited with a public proof of concept available. Update to
+    ghostscript-10.01.1 immediately.
+    <a href="consolidated.html#sa-11.3-019">11.3-019</a></p>
+
+<!-- end of ghostscript -->
+
+
     <h3>JS-102</h3>
+
+    <a id="sa-11.3-016"/>
+    <h4>11.3 016 JS-102  Date: 2023-04-11  Severity: High</h4>
+    <p>In the Javascript code of firefox-102.10.0 there is a fix for a potentially
+    exploitable invalid free.
+    <a href="consolidated.html#sa-11.3-016">11.3-016</a></p>
 
     <a id="sa-11.3-004"/>
     <h4>11.3 004 JS-102  Date: 2023-03-14  Severity: High</h4>
@@ -95,6 +135,29 @@
     <a href="consolidated.html#sa-11.3-004">11.3-004</a></p>
 
 <!-- end of JS-102 -->
+
+    <h3>Libwebp</h3>
+
+    <a id="sa-11.3-015"/>
+    <h4>11.3 015 Libwebp Date: 2023-04-11  Severity: High</h4>
+    <p>The update to firefox-102.10.0 makes public a double-free vulnerability
+    in libwebp which the mozilla developers say could lead to memory corruption
+    and a potentially exploitable crash. In the absence of a new release, apply
+    the patch from upstream.
+    <a href="consolidated.html#sa-11.3-015">11.3-015</a></p>
+
+<!-- end of Libwebp -->
+
+    <h3>libxml2</h3>
+
+    <a id="sa-11.3-020"/>
+    <h4>11.3 020 libxml2      Date: 2023-04-13  Severity: Medium</h4>
+    <p>In libxml2-2.10.4, three security vulnerabilities were fixed that could
+    cause crashes due to null pointer dereferences and improper resource
+    management. Update to libxml2-2.10.4.
+    <a href="consolidated.html#sa-11.3-020">11.3-020</a></p>
+
+<!-- end of libxml2 -->
 
     <h3>QtWebEngine</h3>
 
@@ -149,6 +212,14 @@
 
     <h3>Thunderbird</h3>
 
+    <a id="sa-11.3-018"/>
+    <h4>11.3 018 Thunderbird  Date: 2023-04-13  Severity: High</h4>
+    <p>In Thunderbird-102.10.0, several security vulnerabilities were fixed
+    that could allow for remote code execution, denial of service, spoofing,
+    encrypted emails accepting revoked certificates, and more. Update to
+    Thunderbird-102.10.0.
+    <a href="consolidated.html#sa-11.3-018">11.3-018</a></p>
+
     <a id="sa-11.3-010"/>
     <h4>11.3 010 Thunderbird  Date: 2023-03-30  Severity: High</h4>
     <p>In Thunderbird-102.9.1, a security vulnerability was fixed that could
@@ -165,6 +236,33 @@
     <a href="consolidated.html#sa-11.3-006">11.3-006</a></p>
 
 <!-- end of Thunderbird -->
+
+    <h3>WebKitGTK+</h3>
+
+    <a id="sa-11.3-022"/>
+    <h4>11.3 022 WebKitGTK+   Date: 2023-04-23  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.40.1, six security vulnerabilities were fixed, including
+    one which is known to be actively exploited through crafted advertisements
+    or other web content. If you have WebKitGTK+ installed, it is critical that
+    you update this package to protect yourself and your system. Update to
+    WebKitGTK+-2.40.1 immediately, and note the instruction recommendations in
+    the advisory.
+    <a href="consolidated.html#sa-11.3-022">11.3-022</a></p>
+
+<!-- end of WebKitGTK+ -->
+
+    <h3>Wireshark</h3>
+
+    <a id="sa-11.3-021"/>
+    <h4>11.3 021 Wireshark    Date: 2023-04-13  Severity: Medium</h4>
+    <p>In Wireshark-4.0.5, three security vulnerabilities were fixed that could
+    allow for denial of service via packet injection or crafted capture files.
+    These vulnerabilities can occur when Wireshark is run on a network with
+    GQUIC, RPCoRDMA, or LISP packets. Update to Wireshark-4.0.5 if you are on
+    such a network.
+    <a href="consolidated.html#sa-11.3-021">11.3-021</a></p>
+
+<!-- end of Wireshark -->
 
     <h3>xorg-server</h3>
 
