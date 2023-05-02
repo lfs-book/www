@@ -553,7 +553,11 @@
         <dd>
           <p>This error message usually indicates that <code>limits.h</code>
           provided by GCC isn't including <code>limits.h</code> from Glibc
-          as it should be.  There are two commands as a workaround for
+          as it should be.</p>
+          <p>In development LFS, there is one command as a workaround for
+          <code>limits.h</code> in GCC Pass 1.  Do not forget to run the
+          command.</p>
+          <p>In LFS 11.3, there are two commands as a workaround for
           <code>limits.h</code> in Chapter 5, one in GCC Pass 1 and another
           in Glibc.  Forgetting any of them will lead to this issue.  You
           can rerun the forgotten commands (untar GCC tarball if necessary)
