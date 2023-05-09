@@ -71,6 +71,26 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-024"/>
+    <h4>11.3 024 Texlive (20230313 source and 2023 binary) Date: 2023-05-09  Severity: Medium</h4>
+    <p>In <a
+    href="https://tug.org/texlive/bugs.html">texlive_bugs (Known issues in TeX Live 2023)</a>
+    all users of the luatex programs are advised to update to v1.17.0 (and for the
+    binary, that includes users of ConTeXt which uses the luametatex binary: in
+    texlive-source we only support ConTeXt using the mkiv backend - that also needs
+    a fix). The issue has been described as "obscure ways to work around some security
+    features", no further details are available.<p>
+    <p>Users of install-tl-unx who have installed lualatex should check the version
+    using 'lualatex --version' and use tlmgr to update if the version is less than
+    1.17.0.</p>
+    <p>To fix this using texlive-sourcei2023 reinstall using the security-fixes-1
+    patch and applying a sed to mtxrun.lua (if you use ConTeXt) following the
+    instructions from 
+    <a href="../view/svn/pst/texlive.html">texlive (sysv)</a> or
+    <a href="../view/systemd/pst/texlive.html">texlive (systemd)</a>.
+    Unfortunately, you will need to reinstall any of asymptote, biber, dvisvgm or
+    xindy which you have installed.</p>
+
     <a id="sa-11.3-023"/>
     <h4>11.3 023 Git          Date: 2023-04-28  Severity: High</h4>
     <p>In several versions up to Git-2.40.0, three security issues were
