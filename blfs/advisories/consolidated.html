@@ -71,6 +71,21 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-028"/>
+    <h4>11.3 028 c-ares   Date: 2023-05-22  Severity: High</h4>
+    <p>In c-ares-1.19.1, three security vulnerabilities were fixed, one of
+    them rated as high (and one other regarding cross-compilation using
+    autotools, which is not how BLFS builds this package). Details can be
+    found at
+    <a href="https://c-ares.org/vulns.html">c-ares vulnerabilities</a>.
+    These have been assigned
+    <a href="https://github.com/c-ares/c-ares/security/advisories/GHSA-9g78-jv2r-p7vc">CVE-2023-32067</a>,
+    <a href="https://github.com/c-ares/c-ares/security/advisories/GHSA-8r8p-23f3-64c2">CVE-2023-31147</a> and
+    <a href="https://github.com/c-ares/c-ares/security/advisories/GHSA-x6mf-cxr9-8q6v">CVE-2023-31130</a>.</p>
+    <p>To fix this, update to c-ares-1.19.1 or later using the instructions for
+    <a href="../view/svn/basicnet/c-ares.html">c-ares (sysv)</a>, or
+    <a href="../view/systemd/basicnet/c-ares.html">c-ares (systemd)</a>.</p>
+
     <a id="sa-11.3-027"/>
     <h4>11.3 027 QtWebEngine Date: 2023-05-13 Severity: Critical</h4>
     <p>In QtWebEngine-5.15.14, fixes for several recent Chromium security
