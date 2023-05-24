@@ -255,12 +255,17 @@
     <h3>TeXLive and install-tl-unx </h3>
 
     <a id="sa-11.3-024"/>
-    <h4>11.3 024 Texlive (20230313 source and 2023 binary) Date: 2023-05-09  Severity: Medium</h4>
-    All users of the luatex programs are advised to update to v1.17.0.  For users
-    who installed the binary, use tlmgr to update. For those who built from source,
+    <h4>11.3 024 Texlive (source and binary) Revised: 2023-05-09  Severity: High</h4>
+    <p>All users of the luatex programs with versions of TexLive from 2017 to 2023
+    are advised to update to v1.17.0 because of a potential privilege escalation
+    vulnerability if you use an untrusted tex file or on a multiuser system. For
+    users who installed the v2023 binary, use tlmgr. For those who built from source,
     reinstall with the texlive-20230313-source-security_fix-1.patch and (if using
-    ConTeXt) apply the sed to support luatex-v1.17.0 in mtxrun.lua..
-    <a href="consolidated.html#sa-11.3-024">11.3-024</a>
+    ConTeXt) apply the sed to support luatex-v1.17.0 in mtxrun.lua.</p>
+    <p>For Texlive before 2023 no new versions are available, so only use those old
+    versions if you need to recreate output from known-good old tex files on
+    single-user systems.
+    <a href="consolidated.html#sa-11.3-024">11.3-024</a></p>
 
 <!-- end of TeXLive -->
 

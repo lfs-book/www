@@ -152,18 +152,28 @@
 
 
     <a id="sa-11.3-024"/>
-    <h4>11.3 024 Texlive (20230313 source and 2023 binary) Date: 2023-05-09  Severity: Medium</h4>
+    <h4>11.3 024 Texlive (source and binary) Revised: 2023-05-09  Severity: High</h4>
+    <p>Revision: details now at <a
+    href="https://tug.org/~mseven/luatex.html">LuaTeX Security Vulnerabilities</a>
+    with an example exploit (it runs the last command on the lualatex command line).
+    Now rated as High because the public exploit looks like an easy step towards
+    privilege escalation, either by persuading you to run an untrusted file, or for
+    a user on a multiuser system. This is
+    <a href="https://www.cve.org/CVERecord?id=CVE-2023-32700">CVE-2023-32700</a>.
+    Note that ConTeXt was not vulnerable because the debug module is disabled
+    there, and that the vulnerability applies to LuaTeX versions 1.04 to 1.16.1
+    (TeXLive 2017 to 2023). There are no fixes for versions of Texlive before 2023.</p>
     <p>In <a
     href="https://tug.org/texlive/bugs.html">texlive_bugs (Known issues in TeX Live 2023)</a>
-    all users of the luatex programs are advised to update to v1.17.0 (and for the
+    all users of the luatex programs were advised to update to v1.17.0 (and for the
     binary, that includes users of ConTeXt which uses the luametatex binary: in
     texlive-source we only support ConTeXt using the mkiv backend - that also needs
-    a fix). The issue has been described as "obscure ways to work around some security
-    features", no further details are available.</p>
+    a fix). The issue was described as "obscure ways to work around some security
+    features".</p>
     <p>Users of install-tl-unx who have installed lualatex should check the version
     using 'lualatex --version' and use tlmgr to update if the version is less than
     1.17.0.</p>
-    <p>To fix this using texlive-sourcei2023 reinstall using the security-fixes-1
+    <p>To fix this using texlive-source-2023 reinstall using the security-fixes-1
     patch and applying a sed to mtxrun.lua (if you use ConTeXt) following the
     instructions from 
     <a href="../view/svn/pst/texlive.html">texlive (sysv)</a> or
