@@ -71,6 +71,30 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-030"/>
+    <h4>11.3 030 Wireshark    Date: 2023-05-25  Severity: TBD (Probably low)</h4>
+
+    <p>In Wireshark-4.0.6, nine security vulnerabilities were fixed that could
+    allow for denial of service via packet injection or crafted capture files.
+    These can occur when using a malformed packet trace file or by injecting a
+    malformed packet onto the wire.  These vulnerabilities cause a crash or
+    cause Wireshark to go into an infinite loop.  These vulnerabilities have
+    been assigned: 
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-12">wnpa-sec-2023-12/CVE-2023-2855</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-13">wnpa-sec-2023-13/CVE-2023-2857</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-14">wnpa-sec-2023-14</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-15">wnpa-sec-2023-15/CVE-2023-2858</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-16">wnpa-sec-2023-16/CVE-2023-2856</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-17">wnpa-sec-2023-17/CVE-2023-2854</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-18">wnpa-sec-2023-18/CVE-2023-0666</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-19">wnpa-sec-2023-19/CVE-2023-0668</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-20">wnpa-sec-2023-20</a>.
+    </p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.0.6 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-11.3-029"/>
     <h4>11.3 029 requests (python module): 2023-05-24  Severity: Moderate</h4>
     <p>In Requests-2.31.0, a security vulnerability was fixed,
