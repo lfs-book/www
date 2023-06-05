@@ -71,6 +71,29 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-035"/>
+    <h4>11.3 035 Exiv2         Date: 2023-06-05 Severity: Critical</h4>
+    <p>In Exiv2-0.28.0, several security vulnerabilities were fixed that could
+    allow for denial of service and arbitrary code execution when processing
+    image metadata. Some of these occured due to Out-of-bounds reads, while
+    others occured due to infinite loops and memory management problems. These
+    vulnerabilities primarily occur in the library, though they are exploitable
+    through the command line utility. Most of these vulnerabilities can be
+    triggered automatically when processing an image.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29473">CVE-2021-29473</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-31761">CVE-2021-31761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37620">CVE-2021-37620</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-34334">CVE-2021-34334</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37622">CVE-2021-37622</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37623">CVE-2021-37623</a>.</p>
+    <p>Additional information can be found at the
+    <a href="https://github.com/Exiv2/exiv2/issues/2406#issuecomment-1529139799">Exiv2 release notes</a>.</p>
+    <p>To fix these vulnerabilities, update to Exiv2-0.28.0 using the
+    instructions from
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
     <a id="sa-11.3-034"/>
     <h4>11.3 034 PostgreSQL    Date: 2023-06-05 Severity: High</h4>
     <p>In PostgreSQL-15.3, two security vulnerabilities were fixed that could
