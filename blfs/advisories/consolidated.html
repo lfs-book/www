@@ -71,6 +71,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-036"/>
+    <h4>11.3 036 WebKitGTK+    Date: 2023-06-05 Severity: Critical</h4>
+    <p>In WebKitGTK+-2.40.2, two security vulnerabilities were fixed that could
+    allow for sensitive information disclosure and remote code execution. These
+    vulnerabilities are caused by out-of-bounds reads and use-after-frees, and
+    can be exploited trivially with no user interaction necessary. Apple is aware
+    of several reports of active exploitation of these vulnerabilities, and it
+    is critical that you update your system immediately.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2023-28204">CVE-2023-28204</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2023-32373">CVE-2023-32373</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.40.2 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href=".../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="sa-11.3-035"/>
     <h4>11.3 035 Exiv2         Date: 2023-06-05 Severity: Critical</h4>
     <p>In Exiv2-0.28.0, several security vulnerabilities were fixed that could
