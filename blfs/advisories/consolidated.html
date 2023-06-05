@@ -71,6 +71,23 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-034"/>
+    <h4>11.3 034 PostgreSQL    Date: 2023-06-05 Severity: High</h4>
+    <p>In PostgreSQL-15.3, two security vulnerabilities were fixed that could
+    allow for arbitrary code execution and for incorrect policies to be applied
+    on rows. The arbitrary code execution vulnerability occurs due to CREATE
+    SCHEMA ... schema_element defeating protective search_path changes, enabling
+    attackers having database-level CREATE privilege to execute commands as root.
+    The incorrect security policy application on rows occurs due to Row security
+    policies disregarding user ID changes after inlining.
+    These vulnerabilities were assigned
+    <a href="https://www.postgresql.org/support/security/CVE-2023-2454/">CVE-2023-2454</a> and
+    <a href="https://www.postgresql.org/support/security/CVE-2023-2455/">CVE-2023-2455</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-15.3 or later using
+    the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-11.3-033"/>
     <h4>11.3 033 OpenSSL (LFS) Date: 2023-06-05 Severity: Medium</h4>
     <p>In OpenSSL-3.1.1, five security vulnerabilities were fixed that could
