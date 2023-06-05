@@ -71,6 +71,24 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-032"/>
+    <h4>11.3 032 libcap (LFS) Date: 2023-06-05  Severity: Medium</h4>
+    <p>In libcap-2.69, two security vulnerabilities were fixed that could allow
+    for denial of service. One of the denial of service vulnerabilities occurs
+    when an application calls the __real_pthread_create() function in libcap,
+    and is caused by a memory leak. It can occur when an
+    attacker purposely causes an error to return, and memory is not properly
+    released. The other vulnerability is caused by an integer overflow, which
+    happens in the _libcap_strdup() function and can occur when an attacker
+    provides an input string that is close to 4 GiB.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-2602">CVE-2023-2602</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2023-2603">CVE-2023-2603</a>.</p>
+    <p>To fix these vulnerabilities, update to libcap-2.69 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/libcap.html">libcap (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/libcap.html">libcap (systemd)</a>
+
     <a id="sa-11.3-031"/>
     <h4>11.3 031 cURL         Date: 2023-06-05  Severity: Medium</h4>
     <p>In cURL-8.1.0, several security vulnerabilities were fixed that could

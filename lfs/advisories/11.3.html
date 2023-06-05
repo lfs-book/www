@@ -8,6 +8,18 @@
     <a id="LFS11.3"/>
     <p>LFS-11.3 was released on 2022-03-01</p>
 
+    <h3>libcap</h3>
+
+    <a id="sa-11.3-032"/>
+    <h4>11.3 032 libcap (LFS) Date: 2023-06-05  Severity: Medium</h4>
+    <p>In libcap-2.69, two security vulnerabilities were fixed that could allow
+    for denial of service. These occur due to an integer overflow and a memory
+    leak, and can be triggered when using the __real_pthread_create() and the
+    _libcap_strdup() functions in libcap. Update to libcap-2.69 to fix them.
+    <a href="../../blfs/advisories/consolidated.html#sa-11.3-032">11.3-032</a></p>
+
+<!-- end of libcap -->
+
     <h3>Linux Kernel</h3>
 
     <a id="sa-11.3-011"/>
@@ -27,6 +39,8 @@
     vulnerabilities.  Update to Linux-6.2.2 or Linux-6.1.14 (LTS) to fix
     them.
     <a href="../../blfs/advisories/consolidated.html#sa-11.3-001">11.3-001</a></p>
+
+<!-- end of Linux Kernel -->
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
