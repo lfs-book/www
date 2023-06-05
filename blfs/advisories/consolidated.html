@@ -71,6 +71,31 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-031"/>
+    <h4>11.3 031 cURL         Date: 2023-06-05  Severity: Medium</h4>
+    <p>In cURL-8.1.0, several security vulnerabilities were fixed that could
+    allow for expected behavior violations, IDN wildcard matches, race
+    conditions (causing improper synchronization in multi-threaded applications),
+    and for an information leak due to a use-after-free. These vulnerabilities
+    are limited in their scope and exploitability due to cURL's design, but
+    can still be exploited on normal systems in some circumstances. The
+    information leak occurs in the SSH SHA256 fingerprint check, and the
+    race condition occurs due to libcurl using a global buffer that isn't
+    mutex protected. The vulnerability is exploitable if cURL is built to use
+    a synchronous resolver, which would allow for name resolves to timeout
+    slow operations using alarm() and siglongjmp(). The IDN wildcard matching
+    applies to TLS server certificates, and the expected behavior violations
+    apply to POST-after-PUT commands in HTTP(S) transfers.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28322">CVE-2023-28322</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28321">CVE-2023-28321</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28320">CVE-2023-28320</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28319">CVE-2023-28319</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.1.2 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-11.3-030"/>
     <h4>11.3 030 Wireshark    Date: 2023-05-25  Severity: Medium</h4>
     <p>In Wireshark-4.0.6, nine security vulnerabilities were fixed that could
