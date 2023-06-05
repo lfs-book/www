@@ -71,6 +71,38 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-033"/>
+    <h4>11.3 033 OpenSSL (LFS) Date: 2023-06-05 Severity: Medium</h4>
+    <p>In OpenSSL-3.1.1, five security vulnerabilities were fixed that could
+    allow for denial of service, invalid certificate policies being silently
+    ignored, certificate policy checks not being enabled, crashes on 64-bit
+    ARM platforms, and for significantly degraded performance. The denial of
+    service vulnerability occurs due to excessive resource consumption when
+    verifying X.509 policy constraints in certificate chains. The invalid
+    certificate policies being silently ignored occurs due to leaf certificates
+    being processed incorrectly when checking certificates. However, this
+    vulnerability requires the nonstandard "-policy" argument to be passed to
+    command line utilities, or by calling the X509_VERIFY_PARAM_set1_policies()
+    function, and must be exploited by a malicious CA. The certificate policy
+    checks not being enabled is caused by improper documentation of the
+    X509_VERIFY_PARAM_add0_policy() function, and might require upstreams to
+    modify applications to enable the policy check, since it's not done
+    automatically. The ARM64-specific crash occurs because the AES-XTS cipher
+    decryption implementation for this platform has a problem that causes it to
+    read past its input buffer, leading to an instant crash. The performance
+    degredation occurs when processing some ASN.1 object identifiers through the
+    OBJ_obj2txt() function or any subsystems with no message size limit.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2650">CVE-2023-2650</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1255">CVE-2023-1255</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0466">CVE-2023-0466</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0465">CVE-2023-0465</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0464">CVE-2023-0464</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.1.1 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
     <a id="sa-11.3-032"/>
     <h4>11.3 032 libcap (LFS) Date: 2023-06-05  Severity: Medium</h4>
     <p>In libcap-2.69, two security vulnerabilities were fixed that could allow
@@ -87,7 +119,7 @@
     <p>To fix these vulnerabilities, update to libcap-2.69 or later using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/libcap.html">libcap (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/libcap.html">libcap (systemd)</a>
+    <a href="../../lfs/view/systemd/chapter08/libcap.html">libcap (systemd)</a>.</p>
 
     <a id="sa-11.3-031"/>
     <h4>11.3 031 cURL         Date: 2023-06-05  Severity: Medium</h4>
