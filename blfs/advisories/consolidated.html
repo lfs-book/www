@@ -71,6 +71,23 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-043"/>
+    <h4>11.3 043 cups-filters             Date: 2023-06-17  Severity: High</h4>
+    <p>In cups-filters-1.28.16, a security vulnerability exists that allows for
+    remote code execution when using an IPP printer with the 'beh' backend.
+    Upstream has resolved the problem, but has not cut a new release yet, so
+    the BLFS team has developed a patch for it. The remote code execution
+    vulnerability occurs due to calling the system command with an unsanitized
+    user-provided command line when sending print jobs to the printer. This
+    update is extremely important if you're hosting a print server which uses
+    the 'beh' printer backend (beh standing for Backend Error Handler).
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-24805">CVE-2023-24805</a>.</p>
+    <p>To fix this vulnerability, apply the patch to cups-filters using the
+    instructions from
+    <a href="../view/svn/pst/cups-filters.html">cups-filters (sysv)</a> or
+    <a href="../view/systemd/pst/cups-filters.html">cups-filters (systemd)</a>.</p>
+
     <a id="sa-11.3-042"/>
     <h4>11.3 042 Thunderbird              Date: 2023-06-17  Severity: High</h4>
     <p>In Thunderbird-102.12.0, several security vulnerabilities were fixed that
