@@ -71,6 +71,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-039"/>
+    <h4>11.3 039 CUPS    Date: 2023-06-17  Severity: Medium</h4>
+    <p>In CUPS-2.4.5, a security vulnerability was fixed that could allow for
+    a remote attacker to trigger a denial-of-service attack against a CUPS
+    server. It offurs due to a heap buffer overflow vulnerability, and the
+    vulnerable function has to do with logging (the format_log_line function).
+    This would also cause all current print jobs to be canceled. If you share
+    printers with other users, it's highly recommended to update to CUPS-2.4.5
+    or later.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32324">CVE-2023-32324</a>.</p>
+    <p>To fix this vulnerability, update to CUPS-2.4.5 or later using the
+    instructions for
+    <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+
     <a id="sa-11.3-038"/>
     <h4>11.3 038 LibX11  Date: 2023-06-17  Severity: Moderate</h4>
     <p>In LibX11-1.8.6, a security vulnerability was fixed. A malicious X
