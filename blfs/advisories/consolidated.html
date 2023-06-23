@@ -71,6 +71,24 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-044"/>
+    <h4>11.3 044 CUPS                     Date: 2023-06-23  Severity: Medium</h4>
+    <p>In CUPS-2.4.6, a security vulnerability was fixed that could allow for
+    denial of service or information disclosure. The problem occurs due to a
+    use-after-free bug that affects the 'cupsd' process, and occurs in the
+    cupsdAcceptClient() function. On systems where the cupsd process is running
+    in a privileged mode, it is possible to exfiltrate sensitive information
+    from the server, as well as cause a remotely exploitable crash and loss of
+    all print jobs stored in the queue as a result. It's highly recommended to
+    update CUPS if you print regularly or if you share printers with other
+    computers on your network.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34241">CVE-2023-34241</a>.</p>
+    <p>To fix this vulnerability, update to CUPS-2.4.6 or later using the
+    instructions from
+    <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+
     <a id="sa-11.3-043"/>
     <h4>11.3 043 cups-filters             Date: 2023-06-17  Severity: High</h4>
     <p>In cups-filters-1.28.16, a security vulnerability exists that allows for
