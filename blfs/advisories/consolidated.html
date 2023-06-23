@@ -71,6 +71,35 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-045"/>
+    <h4>11.3 045 node.js                  Date: 2023-06-23  Severity: High</h4>
+    <p>In node.js-18.16.1, four security vulnerabilities were fixed that could
+    allow for policy mechanism bypasses, denial of service, HTTP Request
+    Smuggling, and keys not being properly generated. The policy mechanism
+    bypass happens when using the process.mainModule.proto.require() function
+    and can allow for modules to be downloaded from outside of the policy.json
+    definition. In terms of the denial of service vulnerability, it can occur
+    when an invalid public key is provided to the crypt function
+    and can allow for modules to be downloaded from outside of the policy.json
+    definition. In terms of the denial of service vulnerability, it can occur
+    when an invalid public key is provided to the crypto.X509Certificate() API
+    and will result in process termination. The HTTP Request Smuggling
+    vulnerability is very similar to the one fixed in Python. It was fixed by
+    changing the API to use the CRLF sequence to delimit HTTP requests. The
+    vulnerability where keys were not being properly generated occurs due to
+    invalid documentation, where there is an inconsistency between implementation
+    and documented design. The documentation said that crypto.createDiffieHellman()
+    will generate keys, while the implmentation in the module does not.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-30581">CVE-2023-30581</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-30588">CVE-2023-30588</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-30589">CVE-2023-30589</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-30590">CVE-2023-30590</a>.</p>
+    <p>To fix these vulnerabilities, update to node.js-18.16.1 or later using
+    the instructions from
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
     <a id="sa-11.3-044"/>
     <h4>11.3 044 CUPS                     Date: 2023-06-23  Severity: Medium</h4>
     <p>In CUPS-2.4.6, a security vulnerability was fixed that could allow for
