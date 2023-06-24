@@ -71,6 +71,32 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-046"/>
+    <h4>11.3 046 BIND                     Date: 2023-06-23  Severity: High</h4>
+    <p>In BIND-9.18.16, two security vulnerabilities were fixed that could
+    allow for a denial of service (application crash and system memory
+    exhaustion). On systems where there is a lot of cached information, it was
+    possible to significantly exceed the configurable cache limit by sending
+    requests for RRsets in a certain order. Note that this impacts the default
+    configuration for BIND, and can lead to the system running out of memory
+    quickly. The other vulnerability occurs due to the 'recursive-clients' quota
+    on some resolvers. If the server is configured with both
+    'stale-answer-enable yes' and 'stale-anser-client-timeout 0', a sequence of
+    serve-stale-related lookups will cause the server to loop infinitely and
+    terminate unexpectedly due to a stack overflow. If you're using BIND's DNS
+    server instead of just the client utilities, it is recommended that you
+    update to BIND-9.18.16 immediately as the first denial-of-service
+    vulnerability can be exploited by any system which contacts the DNS server
+    when using the default configuration in BLFS.
+    <em>This does not affect the client utilities, it only affects the server</em>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2911">CVE-2023-2911</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2828">CVE-2023-2828</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.18.16 or later using
+    the instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-11.3-045"/>
     <h4>11.3 045 node.js                  Date: 2023-06-23  Severity: High</h4>
     <p>In node.js-18.16.1, four security vulnerabilities were fixed that could
