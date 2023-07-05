@@ -71,6 +71,38 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-048"/>
+    <h4>11.3 048 Firefox  Date: 2023-07-05  Severity: High</h4>
+    <p>In both firefox 115.0 and 102.13.0 several vulnerabilities were fixed, of
+    which three were rated high, as well as others only applicable to versions
+    after 102esr. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-22/">mfsa-2023-22 (115.0)</a>
+    and
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-23/">mfsa-2022-23 (102.13.0)</a>.
+    The high severity CVEs common to 102esr and 115esr are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-37201">CVE-2023-37201</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-37202">CVE-2023-37202</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-37212">CVE-2023-37121</a>.</p>
+    <p>To fix these update to firefox-115.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <p>Alternatively, update to firefox-102.13.0 as a short-term fix which does not
+    require updated dependencies.  See the Editor Notes in the development book for
+    guidance on required minimum dependencies for 115esr. Please note that firefox
+    102esr will have two more releases and then become unsupported at the end of
+    August.</p>
+
+    <a id="sa-11.3-047"/>
+    <h4>11.3 047 JS-102  Date: 2023-07-05  Severity: High</h4>
+    <p>In the Javascript code of firefox-102.13.0 there is a fix for a potential
+    use after free, see CVE-2023-37202 in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-23/">mfsa-2023-23</a>.
+    Further details may appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-37202">CVE-2023-37202</a>.</p>
+    <p>To fix this, update to JS-102.13.0 or later using the instructions for
+    <a href="../view/svn/general/js102.html">JS102 (sysv)</a> or
+    <a href="../view/systemd/general/js102.html">JS102 (systemd)</a>.</p>
+
     <a id="sa-11.3-046"/>
     <h4>11.3 046 BIND                     Date: 2023-06-23  Severity: High</h4>
     <p>In BIND-9.18.16, two security vulnerabilities were fixed that could
