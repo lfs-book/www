@@ -71,6 +71,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-051"/>
+    <h4>11.3 051 ghostscript     Date: 2023-07-06  Severity: High</h4>
+    <p>In ghostscript-10.01.2, a security vulnerability was fixed that could
+    allow for arbitrary code execution and a denial of service. This problem
+    occurs due to mishandling permission validation, and can allow for PS files
+    to execute commands on the system if the files use the %pipe% prefix or the
+    "|" pipe character prefix. Note that this can be exploited by sending a
+    print job to a print server as well as when viewing/editing PostScript and
+    PDF files in most applications.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-36664">CVE-2023-36664</a>.</p>
+    <p>To fix this vulnerability, update to ghostscript-10.01.2 or later using
+    the instructions from
+    <a href="../view/svn/ps/gs.html">ghostscript (sysv)</a> or
+    <a href="../view/systemd/ps/gs.html">ghostscript (systemd)</a>.</p>
+
     <a id="sa-11.3-050"/>
     <h4>11.3 050 libjpeg-turbo   Date: 2023-07-06  Severity: Medium</h4>
     <p>In libjpeg-turbo-3.0.0, a security vulnerability was fixed that could
