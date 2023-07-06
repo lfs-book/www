@@ -71,6 +71,25 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-054"/>
+    <h4>11.3 054 gstreamer       Date: 2023-07-06  Severity: High</h4>
+    <p>In gst-plugins-base and gst-plugins-good 1.22.4, three security
+    vulnerabilities were fixed that could allow for arbitrary code execution
+    and application crashes. These happen due to heap overwrites and integer
+    overflows when processing subtitles (using the subparse and PGS subtitle
+    parsers), and when processing malformed image tags in the FLAC parser. If
+    you use subtitles or FLAC files, it's recommended that you update the
+    gstreamer stack to 1.22.4 immediately.
+    These vulnerabilities have not been assigned CVEs yet, but more details
+    can be found at
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0001.html">ZDI-CAN-20775</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0002.html">ZDI-CAN-20968</a>, and
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0003.html">ZDI-CAN-20994</a>.</p>
+    <p>To fix these vulnerabilities, update the gstreamer stack to 1.22.4 using
+    the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
     <a id="sa-11.3-053"/>
     <h4>11.3 053 OpenJDK         Date: 2023-07-06  Severity: High</h4>
     <p>In OpenJDK-20.0.1, six security vulnerabilities were fixed that could
