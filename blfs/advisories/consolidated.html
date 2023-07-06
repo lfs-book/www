@@ -71,6 +71,20 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-050"/>
+    <h4>11.3 040 libjpeg-turbo   Date: 2023-07-06  Severity: Medium</h4>
+    <p>In libjpeg-turbo-3.0.0, a security vulnerability was fixed that could
+    allow for a denial of service when processing certain 12-bit lossless JPEG
+    images which contain samples that were out-of-range. An application which
+    attempts to decompress such an image would lead to a buffer overflow which
+    causes an application to crash.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2804">CVE-2023-2804</a>.</p>
+    <p>To fix this vulnerability, update to libjpeg-turbo-3.0.0 or later using
+    the instructions from
+    <a href="../view/svn/general/libjpeg.html">libjpeg (sysv)</a> or
+    <a href="../view/systemd/general/libjpeg.html">libjpeg (systemd)</a>.</p>
+
     <a id="sa-11.3-049"/>
     <h4>11.3 049 ImageMagick  Date: 2023-07-06 Severity: High</h4>
     <p>Since ImageMagick-7.1.0-61 several vulnerabilites have come to light, one
