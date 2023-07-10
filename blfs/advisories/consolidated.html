@@ -71,25 +71,497 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
-    <a id="sa-11.3-030"/>
-    <h4>11.3 030 Wireshark    Date: 2023-05-25  Severity: TBD (Probably low)</h4>
+    <a id="sa-11.3-055"/>
+    <h4>11.3 055 LWP-Protocol-https Date: 2023-07-10  Severity: Medium</h4>
+    <p>In LWP-Protocol-https-6.11, a security vulnerability was fixed that
+    could for attackers to disable server certificate validation via passing
+    the HTTPS_CA_DIR or HTTPS_CA_FILE environment variable.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2014-3230">CVE-2014-3230</a>.</p>
+    <p>To fix this vulnerability, update to LWP-Protocol-https-6.11 or later
+    using the instructions from
+    <a href="../view/svn/general/perl-modules.html#perl-lwp-protocol-https">LWP::Protocol::https (sysv)</a> or
+    <a href="../view/systemd/general/perl-modules.html#perl-lwp-protocol-https">LWP::Protocol::https (systemd)</a>.</p>
 
+    <a id="sa-11.3-054"/>
+    <h4>11.3 054 gstreamer       Date: 2023-07-06  Severity: High</h4>
+    <p>In gst-plugins-base and gst-plugins-good 1.22.4, three security
+    vulnerabilities were fixed that could allow for arbitrary code execution
+    and application crashes. These happen due to heap overwrites and integer
+    overflows when processing subtitles (using the subparse and PGS subtitle
+    parsers), and when processing malformed image tags in the FLAC parser. If
+    you use subtitles or FLAC files, it's recommended that you update the
+    gstreamer stack to 1.22.4 immediately.
+    These vulnerabilities have not been assigned CVEs yet, but more details
+    can be found at
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0001.html">ZDI-CAN-20775</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0002.html">ZDI-CAN-20968</a>, and
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0003.html">ZDI-CAN-20994</a>.</p>
+    <p>To fix these vulnerabilities, update the gstreamer stack to 1.22.4 using
+    the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
+    <a id="sa-11.3-053"/>
+    <h4>11.3 053 OpenJDK         Date: 2023-07-06  Severity: High</h4>
+    <p>In OpenJDK-20.0.1, six security vulnerabilities were fixed that could
+    allow for unauthorized creation, modification, or deletion of data on a
+    system, as well as for denial of service. These vulnerabilities occur in
+    the TLS, HTTPS, Swing, core libraries, and networking components, and can
+    be exploited remotely with no authentication required.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-21930">CVE-2023-21930</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-21967">CVE-2023-21967</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-21939">CVE-2023-21939</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-21938">CVE-2023-21938</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-21968">CVE-2023-21968</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-21937">CVE-2023-21937</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-20.0.1 (or the prebuilt
+    Java binaries) using the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+
+    <a id="sa-11.3-052"/>
+    <h4>11.3 052 Linux Kernel (LFS) Date: 2023-07-06  Severity: High</h4>
+    <p>In Linux Kernel 6.4.1 (as well as 6.1.31), a security vulnerability
+    was fixed that allows for trivial privilege escalation. The vulnerability
+    occurs due to the updated memory management subsystem starting in Linux 6.1,
+    where the maple tree (which is responsible for managing virtual memory
+    areas) can undergo node replacement without properly acquiring a write lock.
+    This allows for use-after-free issues which allow unprivileged local users
+    to compromise the kernel and escalate their privileges. This vulnerability
+    has been called "StackRot".
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-3269">CVE-2023-3269</a>.
+    A detailed technical explanation can be found at
+    <a href="https://seclists.org/oss-sec/2023/q3/4">StackRot post on seclists.org</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux kernel 6.4.1 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>;
+    or 6.1.31 or later if you prefer to stick with the 6.1 LTS series
+    using the instructions for
+    <a href="../../lfs/view/11.3/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/11.3-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+
+    <a id="sa-11.3-051"/>
+    <h4>11.3 051 ghostscript     Date: 2023-07-06  Severity: High</h4>
+    <p>In ghostscript-10.01.2, a security vulnerability was fixed that could
+    allow for arbitrary code execution and a denial of service. This problem
+    occurs due to mishandling permission validation, and can allow for PS files
+    to execute commands on the system if the files use the %pipe% prefix or the
+    "|" pipe character prefix. Note that this can be exploited by sending a
+    print job to a print server as well as when viewing/editing PostScript and
+    PDF files in most applications.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-36664">CVE-2023-36664</a>.</p>
+    <p>To fix this vulnerability, update to ghostscript-10.01.2 or later using
+    the instructions from
+    <a href="../view/svn/ps/gs.html">ghostscript (sysv)</a> or
+    <a href="../view/systemd/ps/gs.html">ghostscript (systemd)</a>.</p>
+
+    <a id="sa-11.3-050"/>
+    <h4>11.3 050 libjpeg-turbo   Date: 2023-07-06  Severity: Medium</h4>
+    <p>In libjpeg-turbo-3.0.0, a security vulnerability was fixed that could
+    allow for a denial of service when processing certain 12-bit lossless JPEG
+    images which contain samples that were out-of-range. An application which
+    attempts to decompress such an image would lead to a buffer overflow which
+    causes an application to crash.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2804">CVE-2023-2804</a>.</p>
+    <p>To fix this vulnerability, update to libjpeg-turbo-3.0.0 or later using
+    the instructions from
+    <a href="../view/svn/general/libjpeg.html">libjpeg (sysv)</a> or
+    <a href="../view/systemd/general/libjpeg.html">libjpeg (systemd)</a>.</p>
+
+    <a id="sa-11.3-049"/>
+    <h4>11.3 049 ImageMagick  Date: 2023-07-06 Severity: High</h4>
+    <p>Since ImageMagick-7.1.0-61 several vulnerabilites have come to light, one
+    rated as High. These were fixed between 7.1.0-62 and 7.1.1-10.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1289">CVE-2023-1289</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1906">CVE-2023-1906</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2157">CVE-2023-2157</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34151">CVE-2023-34151</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34153">CVE-2023-34153</a>.</p>
+    <p>To fix these, update to ImageMagick-7.1.1-12 or later using the instructions
+    for
+    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+
+    <a id="sa-11.3-048"/>
+    <h4>11.3 048 Firefox  Date: 2023-07-05  Severity: High</h4>
+    <p>In both firefox 115.0 and 102.13.0 several vulnerabilities were fixed, of
+    which three were rated high, as well as others only applicable to versions
+    after 102esr. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-22/">mfsa-2023-22 (115.0)</a>
+    and
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-23/">mfsa-2022-23 (102.13.0)</a>.
+    The high severity CVEs common to 102esr and 115esr are
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-37201">CVE-2023-37201</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-37202">CVE-2023-37202</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-37212">CVE-2023-37121</a>.</p>
+    <p>To fix these update to firefox-115.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <p>Alternatively, update to firefox-102.13.0 as a short-term fix which does not
+    require updated dependencies.  See the Editor Notes in the development book for
+    guidance on required minimum dependencies for 115esr. Please note that firefox
+    102esr will have two more releases and then become unsupported at the end of
+    August.</p>
+
+    <a id="sa-11.3-047"/>
+    <h4>11.3 047 JS-102  Date: 2023-07-05  Severity: High</h4>
+    <p>In the Javascript code of firefox-102.13.0 there is a fix for a potential
+    use after free, see CVE-2023-37202 in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-23/">mfsa-2023-23</a>.
+    Further details may appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-37202">CVE-2023-37202</a>.</p>
+    <p>To fix this, update to JS-102.13.0 or later using the instructions for
+    <a href="../view/svn/general/js102.html">JS102 (sysv)</a> or
+    <a href="../view/systemd/general/js102.html">JS102 (systemd)</a>.</p>
+
+    <a id="sa-11.3-046"/>
+    <h4>11.3 046 BIND                     Date: 2023-06-23  Severity: High</h4>
+    <p>In BIND-9.18.16, two security vulnerabilities were fixed that could
+    allow for a denial of service (application crash and system memory
+    exhaustion). On systems where there is a lot of cached information, it was
+    possible to significantly exceed the configurable cache limit by sending
+    requests for RRsets in a certain order. Note that this impacts the default
+    configuration for BIND, and can lead to the system running out of memory
+    quickly. The other vulnerability occurs due to the 'recursive-clients' quota
+    on some resolvers. If the server is configured with both
+    'stale-answer-enable yes' and 'stale-anser-client-timeout 0', a sequence of
+    serve-stale-related lookups will cause the server to loop infinitely and
+    terminate unexpectedly due to a stack overflow. If you're using BIND's DNS
+    server instead of just the client utilities, it is recommended that you
+    update to BIND-9.18.16 immediately as the first denial-of-service
+    vulnerability can be exploited by any system which contacts the DNS server
+    when using the default configuration in BLFS.
+    <em>This does not affect the client utilities, it only affects the server</em>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2911">CVE-2023-2911</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2828">CVE-2023-2828</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.18.16 or later using
+    the instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+    <a id="sa-11.3-045"/>
+    <h4>11.3 045 node.js                  Date: 2023-06-23  Severity: High</h4>
+    <p>In node.js-18.16.1, four security vulnerabilities were fixed that could
+    allow for policy mechanism bypasses, denial of service, HTTP Request
+    Smuggling, and keys not being properly generated. The policy mechanism
+    bypass happens when using the process.mainModule.proto.require() function
+    and can allow for modules to be downloaded from outside of the policy.json
+    definition. In terms of the denial of service vulnerability, it can occur
+    when an invalid public key is provided to the crypt function
+    and can allow for modules to be downloaded from outside of the policy.json
+    definition. In terms of the denial of service vulnerability, it can occur
+    when an invalid public key is provided to the crypto.X509Certificate() API
+    and will result in process termination. The HTTP Request Smuggling
+    vulnerability is very similar to the one fixed in Python. It was fixed by
+    changing the API to use the CRLF sequence to delimit HTTP requests. The
+    vulnerability where keys were not being properly generated occurs due to
+    invalid documentation, where there is an inconsistency between implementation
+    and documented design. The documentation said that crypto.createDiffieHellman()
+    will generate keys, while the implmentation in the module does not.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-30581">CVE-2023-30581</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-30588">CVE-2023-30588</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-30589">CVE-2023-30589</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-30590">CVE-2023-30590</a>.</p>
+    <p>To fix these vulnerabilities, update to node.js-18.16.1 or later using
+    the instructions from
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
+    <a id="sa-11.3-044"/>
+    <h4>11.3 044 CUPS                     Date: 2023-06-23  Severity: Medium</h4>
+    <p>In CUPS-2.4.6, a security vulnerability was fixed that could allow for
+    denial of service or information disclosure. The problem occurs due to a
+    use-after-free bug that affects the 'cupsd' process, and occurs in the
+    cupsdAcceptClient() function. On systems where the cupsd process is running
+    in a privileged mode, it is possible to exfiltrate sensitive information
+    from the server, as well as cause a remotely exploitable crash and loss of
+    all print jobs stored in the queue as a result. It's highly recommended to
+    update CUPS if you print regularly or if you share printers with other
+    computers on your network.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34241">CVE-2023-34241</a>.</p>
+    <p>To fix this vulnerability, update to CUPS-2.4.6 or later using the
+    instructions from
+    <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+
+    <a id="sa-11.3-043"/>
+    <h4>11.3 043 cups-filters             Date: 2023-06-17  Severity: High</h4>
+    <p>In cups-filters-1.28.16, a security vulnerability exists that allows for
+    remote code execution when using an IPP printer with the 'beh' backend.
+    Upstream has resolved the problem, but has not cut a new release yet, so
+    the BLFS team has developed a patch for it. The remote code execution
+    vulnerability occurs due to calling the system command with an unsanitized
+    user-provided command line when sending print jobs to the printer. This
+    update is extremely important if you're hosting a print server which uses
+    the 'beh' printer backend (beh standing for Backend Error Handler).
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-24805">CVE-2023-24805</a>.</p>
+    <p>To fix this vulnerability, apply the patch to cups-filters using the
+    instructions from
+    <a href="../view/svn/pst/cups-filters.html">cups-filters (sysv)</a> or
+    <a href="../view/systemd/pst/cups-filters.html">cups-filters (systemd)</a>.</p>
+
+    <a id="sa-11.3-042"/>
+    <h4>11.3 042 Thunderbird              Date: 2023-06-17  Severity: High</h4>
+    <p>In Thunderbird-102.12.0, several security vulnerabilities were fixed that
+    could allow for crashes, browser outputs to be obscured by popups, memory
+    corruption, spoofing, unauthorized certificate exceptions, and remote code
+    execution. Most of these vulnerabilities are only exploitable via HTML mail.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32205">CVE-2023-32205</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32206">CVE-2023-32206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32207">CVE-2023-32207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32211">CVE-2023-32211</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32212">CVE-2023-32212</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32213">CVE-2023-32213</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32215">CVE-2023-32215</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34414">CVE-2023-34414</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34416">CVE-2023-34416</a>.</p>
+    <p>To fix this vulnerability, update to Thunderbird-102.12.0 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-11.3-041"/>
+    <h4>11.3 041 D-Bus (LFS and BLFS)     Date: 2023-06-17  Severity: High</h4>
+    <p>In dbus-1.14.8, a security vulnerability was fixed that could allow
+    for unprivileged users to crash the dbus-daemon. Note that this could cause
+    serious problems on systemd systems, but can lead to desktop environments
+    crashing on SysV systems. If a privileged user with control over the dbus
+    daemon is using the org.freedesktop.DBus.Monitoring interface to monitor
+    message bus traffic (such as QDbusViewer from Qt), an unprivileged user
+    can trigger a crash of the dbus-daemon process by sending an unreplyable
+    message.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34969">CVE-2023-34969</a>.</p>
+    <p>To fix this vulnerability, update to dbus-1.14.8 or later using the
+    instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/dbus.html">dbus (sysv)</a> or
+    <a href="../view/systemd/general/dbus.html">dbus (systemd)</a>.</p>
+
+    <a id="sa-11.3-040"/>
+    <h4>11.3 040 Python3 (LFS and BLFS)   Date: 2023-06-17  Severity: High</h4>
+    <p>In Python-3.11.4, three security vulnerabilities were fixed that could
+    allow for directory traversal, location exposure over HTTP, and for policy
+    bypasses. The directory traversal vulnerability occurs when using the
+    uu.decode function when no out_file was specified. The location exposure
+    over HTTP vulnerability occurs when using the
+    http.client.SimpleHTTPRequestHandler function. The policy bypass happens
+    due to not correctly following the WHATWG standard, and was resolved by
+    modifying the urllib.parse.urlsplit function to strip leading C0 control
+    and space characters. Note that this is the only vulnerability to have a
+    CVE assigned to it.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-24329">CVE-2023-24329</a>,
+    and more details are available at
+    <a href="https://wiki.linuxfromscratch.org/lfs/ticket/5271">LFS Ticket #5271</a>.</p>
+    <p>To fix this vulnerability, update to Python-3.11.4 or later
+    (or Python-3.8.17 or later, Python-3.9.16 or later, Python-3.10.12
+    or later if you decide not to update the minor version) using the
+    instructions from the <em>BLFS</em> book for
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
+    <a id="sa-11.3-039"/>
+    <h4>11.3 039 CUPS    Date: 2023-06-17  Severity: Medium</h4>
+    <p>In CUPS-2.4.5, a security vulnerability was fixed that could allow for
+    a remote attacker to trigger a denial-of-service attack against a CUPS
+    server. It offurs due to a heap buffer overflow vulnerability, and the
+    vulnerable function has to do with logging (the format_log_line function).
+    This would also cause all current print jobs to be canceled. If you share
+    printers with other users, it's highly recommended to update to CUPS-2.4.5
+    or later.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32324">CVE-2023-32324</a>.</p>
+    <p>To fix this vulnerability, update to CUPS-2.4.5 or later using the
+    instructions for
+    <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+
+    <a id="sa-11.3-038"/>
+    <h4>11.3 038 LibX11  Date: 2023-06-17  Severity: Moderate</h4>
+    <p>In LibX11-1.8.6, a security vulnerability was fixed. A malicious X
+    server (or a malicious proxy-in-the-middle) may corrupt client memory
+    and at least cause the client to crash.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-3138">CVE-2023-3138</a>.</p>
+    <p>To fix this vulnerability, update to LibX11-1.8.6 or later
+    using the instructions for
+    <a href="../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a> or
+    <a href="../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
+
+    <a id="sa-11.3-037"/>
+    <h4>11.3 037 Firefox  Date: 2023-06-06  Severity: High</h4>
+    <p>In Firefox-102.12.0esr, two security vulnerabilities rated as High
+    by upstream were fixed. Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-19/">mfsa-2023-19</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34414">CVE-2023-34414</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34416">CVE-2023-34416</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-102.12.0esr or later
+    using the instructions for
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-11.3-036"/>
+    <h4>11.3 036 WebKitGTK+    Date: 2023-06-05 Severity: Critical</h4>
+    <p>In WebKitGTK+-2.40.2, two security vulnerabilities were fixed that could
+    allow for sensitive information disclosure and remote code execution. These
+    vulnerabilities are caused by out-of-bounds reads and use-after-frees, and
+    can be exploited trivially with no user interaction necessary. Apple is aware
+    of several reports of active exploitation of these vulnerabilities, and it
+    is critical that you update your system immediately.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2023-28204">CVE-2023-28204</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2023-32373">CVE-2023-32373</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK+-2.40.2 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href=".../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
+    <a id="sa-11.3-035"/>
+    <h4>11.3 035 Exiv2         Date: 2023-06-05 Severity: Critical</h4>
+    <p>In Exiv2-0.28.0, several security vulnerabilities were fixed that could
+    allow for denial of service and arbitrary code execution when processing
+    image metadata. Some of these occured due to Out-of-bounds reads, while
+    others occured due to infinite loops and memory management problems. These
+    vulnerabilities primarily occur in the library, though they are exploitable
+    through the command line utility. Most of these vulnerabilities can be
+    triggered automatically when processing an image.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29473">CVE-2021-29473</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-31761">CVE-2021-31761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37620">CVE-2021-37620</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-34334">CVE-2021-34334</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37622">CVE-2021-37622</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37623">CVE-2021-37623</a>.</p>
+    <p>Additional information can be found at the
+    <a href="https://github.com/Exiv2/exiv2/issues/2406#issuecomment-1529139799">Exiv2 release notes</a>.</p>
+    <p>To fix these vulnerabilities, update to Exiv2-0.28.0 using the
+    instructions from
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
+    <a id="sa-11.3-034"/>
+    <h4>11.3 034 PostgreSQL    Date: 2023-06-05 Severity: High</h4>
+    <p>In PostgreSQL-15.3, two security vulnerabilities were fixed that could
+    allow for arbitrary code execution and for incorrect policies to be applied
+    on rows. The arbitrary code execution vulnerability occurs due to CREATE
+    SCHEMA ... schema_element defeating protective search_path changes, enabling
+    attackers having database-level CREATE privilege to execute commands as root.
+    The incorrect security policy application on rows occurs due to Row security
+    policies disregarding user ID changes after inlining.
+    These vulnerabilities were assigned
+    <a href="https://www.postgresql.org/support/security/CVE-2023-2454/">CVE-2023-2454</a> and
+    <a href="https://www.postgresql.org/support/security/CVE-2023-2455/">CVE-2023-2455</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-15.3 or later using
+    the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
+    <a id="sa-11.3-033"/>
+    <h4>11.3 033 OpenSSL (LFS) Date: 2023-06-05 Severity: Medium</h4>
+    <p>In OpenSSL-3.1.1, five security vulnerabilities were fixed that could
+    allow for denial of service, invalid certificate policies being silently
+    ignored, certificate policy checks not being enabled, crashes on 64-bit
+    ARM platforms, and for significantly degraded performance. The denial of
+    service vulnerability occurs due to excessive resource consumption when
+    verifying X.509 policy constraints in certificate chains. The invalid
+    certificate policies being silently ignored occurs due to leaf certificates
+    being processed incorrectly when checking certificates. However, this
+    vulnerability requires the nonstandard "-policy" argument to be passed to
+    command line utilities, or by calling the X509_VERIFY_PARAM_set1_policies()
+    function, and must be exploited by a malicious CA. The certificate policy
+    checks not being enabled is caused by improper documentation of the
+    X509_VERIFY_PARAM_add0_policy() function, and might require upstreams to
+    modify applications to enable the policy check, since it's not done
+    automatically. The ARM64-specific crash occurs because the AES-XTS cipher
+    decryption implementation for this platform has a problem that causes it to
+    read past its input buffer, leading to an instant crash. The performance
+    degredation occurs when processing some ASN.1 object identifiers through the
+    OBJ_obj2txt() function or any subsystems with no message size limit.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2650">CVE-2023-2650</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1255">CVE-2023-1255</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0466">CVE-2023-0466</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0465">CVE-2023-0465</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0464">CVE-2023-0464</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.1.1 or later
+    (or 1.1.1u or later if you decide not to update from OpenSSL-1.1 to
+    OpenSSL-3) using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
+    <a id="sa-11.3-032"/>
+    <h4>11.3 032 libcap (LFS) Date: 2023-06-05  Severity: Medium</h4>
+    <p>In libcap-2.69, two security vulnerabilities were fixed that could allow
+    for denial of service. One of the denial of service vulnerabilities occurs
+    when an application calls the __real_pthread_create() function in libcap,
+    and is caused by a memory leak. It can occur when an
+    attacker purposely causes an error to return, and memory is not properly
+    released. The other vulnerability is caused by an integer overflow, which
+    happens in the _libcap_strdup() function and can occur when an attacker
+    provides an input string that is close to 4 GiB.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-2602">CVE-2023-2602</a> and
+    <a href="https://access.redhat.com/security/cve/cve-2023-2603">CVE-2023-2603</a>.</p>
+    <p>To fix these vulnerabilities, update to libcap-2.69 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/libcap.html">libcap (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/libcap.html">libcap (systemd)</a>.</p>
+
+    <a id="sa-11.3-031"/>
+    <h4>11.3 031 cURL         Date: 2023-06-05  Severity: Medium</h4>
+    <p>In cURL-8.1.0, several security vulnerabilities were fixed that could
+    allow for expected behavior violations, IDN wildcard matches, race
+    conditions (causing improper synchronization in multi-threaded applications),
+    and for an information leak due to a use-after-free. These vulnerabilities
+    are limited in their scope and exploitability due to cURL's design, but
+    can still be exploited on normal systems in some circumstances. The
+    information leak occurs in the SSH SHA256 fingerprint check, and the
+    race condition occurs due to libcurl using a global buffer that isn't
+    mutex protected. The vulnerability is exploitable if cURL is built to use
+    a synchronous resolver, which would allow for name resolves to timeout
+    slow operations using alarm() and siglongjmp(). The IDN wildcard matching
+    applies to TLS server certificates, and the expected behavior violations
+    apply to POST-after-PUT commands in HTTP(S) transfers.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28322">CVE-2023-28322</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28321">CVE-2023-28321</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28320">CVE-2023-28320</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28319">CVE-2023-28319</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.1.2 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-11.3-030"/>
+    <h4>11.3 030 Wireshark    Date: 2023-05-25  Severity: Medium</h4>
     <p>In Wireshark-4.0.6, nine security vulnerabilities were fixed that could
     allow for denial of service via packet injection or crafted capture files.
     These can occur when using a malformed packet trace file or by injecting a
     malformed packet onto the wire.  These vulnerabilities cause a crash or
     cause Wireshark to go into an infinite loop.  These vulnerabilities have
     been assigned: 
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-12">wnpa-sec-2023-12/CVE-2023-2855</a>,
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-13">wnpa-sec-2023-13/CVE-2023-2857</a>,
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-14">wnpa-sec-2023-14</a>,
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-15">wnpa-sec-2023-15/CVE-2023-2858</a>,
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-16">wnpa-sec-2023-16/CVE-2023-2856</a>,
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-17">wnpa-sec-2023-17/CVE-2023-2854</a>,
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-18">wnpa-sec-2023-18/CVE-2023-0666</a>,
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-19">wnpa-sec-2023-19/CVE-2023-0668</a>,
-    <a href="https://www.wireshark.org/security/wnpa-sec-2023-20">wnpa-sec-2023-20</a>.
-    </p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2855">CVE-2023-2855</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2857">CVE-2023-2857</a>,
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-14.html">wnpa-sec-2023-14</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2858">CVE-2023-2858</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2856">CVE-2023-2856</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2854">CVE-2023-2854</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0666">CVE-2023-0666</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0668">CVE-2023-0668</a>, and
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-20">wnpa-sec-2023-20</a>.</p>
     <p>To fix these vulnerabilities, update to Wireshark-4.0.6 or later using
     the instructions from
     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or

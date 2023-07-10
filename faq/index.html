@@ -34,6 +34,7 @@
 	<li><a href="#where-lfs-packages">Where are the lfs-packages tarballs or wget scripts?</a></li>
 	<li><a href="#how-to-find">How do I find a package or command?</a></li>
 	<li><a href="#how-to-upgrade">How do I upgrade my LFS/BLFS system?</a></li>
+	<li><a href="#sudo-book-commands">The commands in LFS/BLFS book does not work with sudo!</a></li>
       </ul>
 
       <h2 id="lfsfaq">LFS FAQ:</h2>
@@ -465,6 +466,29 @@
      to lfs-dev. Keep in mind that this is not a support list but a development
      list.</p>
 	</dd>
+        <dt id="sudo-book-commands">The commands in LFS/BLFS book does not work with sudo!</dt>
+        <dd>
+          <p>sudo can only run executables as root.  It does not understand
+          internal grammar constructs of the shell, for example "case",
+          "cd", "for", "if", "|" (piping), "&gt;" (redirecting output to a
+          file), etc.</p>
+          <p>For example, when the book tells to run <code>echo /bin/zsh
+          &gt;&gt; /etc/shells</code> as the root user,
+          you cannot run <code>sudo echo /bin/zsh &gt;&gt;
+          /etc/shells</code> as a non-root user and expect it to work.
+          The output redirection is performed by the shell, so the shell
+          needs to open <code>/etc/shells</code> for write and doing so
+          requires a privilege.  But sudo has no way to raise the privilege
+          for the current shell. It can only raise the privilege for the
+          <code>echo</code> command with <code>/bin/zsh</code> as the
+          parameter, but this is not helpful at all.</p>
+          <p>For another example, when the book tells to run <code>for i in
+          /usr/lib/libfoo*.so; do chmod 755 $i; done</code>, you cannot
+          prepend <code>sudo</code> before the command and run it as a
+          non-root user. <code>for</code> is a shell grammar construct, not
+          an executable.  So sudo will report "for: command not found".</p>
+          <p>If you do not know how to use sudo correctly, don't use it.</p>
+        </dd>
       </dl>
       <p><a href="#generalfaq">Back to the top.</a></p>
       <h3 id="oldfaq">Old and expired FAQ's</h3>

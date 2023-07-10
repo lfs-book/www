@@ -63,6 +63,19 @@
 
 <!-- end of Apache HTTPD -->
 
+    <h3>BIND</h3>
+
+    <a id="sa-11.3-046"/>
+    <h4>11.3 046 BIND     Date: 2023-06-23  Severity: High</h4>
+    <p>In BIND-9.18.16, two security vulnerabilities were fixed that could
+    allow for denial-of-service (application crashes and exhaustion of system
+    memory). One of these vulnerabilities affects the default BIND configuration
+    in BLFS. <em>This does not affect the client utilities</em>. If you use
+    BIND as a DNS server, you should update to BIND-9.18.16 immediately.
+    <a href="consolidated.html#sa-11.3-046">11.3-046</a></p>
+
+<!-- end of BIND -->
+
     <h3>c-ares</h3>
 
     <a id="sa-11.3-028"/>
@@ -73,7 +86,48 @@
 
 <!-- end of c-ares -->
 
+    <h3>CUPS</h3>
+
+    <a id="sa-11.3-044"/>
+    <h4>11.3 044 CUPS    Date: 2023-06-23  Severity: Medium</h4>
+    <p>In CUPS-2.4.6, a security vulnerability was fixed that could allow for a
+    denial-of-service or for information disclosure. Note that all print jobs
+    on the system will be lost once the cupsd process crashes. If you print
+    regularly or share printers with other systems, update to CUPS-2.4.6.
+    <a href="consolidated.html#sa-11.3-044">11.3-044</a></p>
+
+    <a id="sa-11.3-039"/>
+    <h4>11.3 039 CUPS    Date: 2023-06-17  Severity: Medium</h4>
+    <p>In CUPS-2.4.5, a security vulnerability was fixed that could allow for a
+    remote attacker to trigger a denial of service on a CUPS server. Update to
+    CUPS-2.4.5 if you're sharing printers with other systems.
+    <a href="consolidated.html#sa-11.3-039">11.3-039</a></p>
+
+<!-- end of CUPS -->
+
+    <h3>cups-filters</h3>
+
+    <a id="sa-11.3-043"/>
+    <h4>11.3 043 cups-filters  Date: 2023-06-17  Severity: High</h4>
+    <p>In cups-filters-1.28.16, a security vulnerability exists that allows for
+    remote code execution on IPP printers which use the 'beh' backend. Upstream
+    is aware of the problem and has patched it, but has not cut a new release.
+    The BLFS team has developed a patch and implemented it into the book.
+    Apply the patch and rebuild cups-filters if you use a printer with the 'beh'
+    backend.
+    <a href="consolidated.html#sa-11.3-043">11.3-043</a></p>
+
+<!-- end of cups-filters -->
+
     <h3>cURL</h3>
+
+    <a id="sa-11.3-031"/>
+    <h4>11.3 031 cURL     Date: 2023-06-05  Severity: Medium</h4>
+    <p>In cURL-8.1.0, several security vulnerabilities were fixed that could
+    allow for IDN wildcard matches, unexpected application behavior, race
+    conditions, and for information leakage when verifying sha256 fingerprints
+    in the SSH functions of cURL. Update to cURL-8.1.0.
+    <a href="consolidated.html#sa-11.3-031">11.3-031</a></p>
 
     <a id="sa-11.3-007"/>
     <h4>11.3 007 cURL     Date: 2023-03-27  Severity: Medium</h4>
@@ -86,7 +140,42 @@
 
 <!-- end of cURL -->
 
+    <h3>D-Bus</h3>
+
+    <a id="sa-11.3-041"/>
+    <h4>11.3 041 D-Bus (LFS and BLFS)     Date: 2023-06-17  Severity: High</h4>
+    <p>In dbus-1.14.8, a security vulnerability was fixed that could allow for
+    an unprivileged user to cause a denial-of-service (system message bus
+    daemon crash) by sending an unreplyable message when an administrator is
+    monitoring the dbus daemon. Update to dbus-1.14.8 or later.
+    <a href="consolidated.html#sa-11.3-041">11.3-041</a></p>
+
+<!-- end of D-Bus -->
+
+    <h3>Exiv2</h3>
+
+    <a id="sa-11.3-035"/>
+    <h4>11.3 035 Exiv2         Date: 2023-06-05 Severity: Critical</h4>
+    <p>In Exiv2-0.28.0, several security vulnerabilities were fixed that could
+    allow for arbitrary code execution and denial-of-service when processing
+    image metadata. Update to exiv2-0.28.0 or later.
+    <a href="consolidated.html#sa-11.3-035">11.3-035</a></p>
+
+<!-- end of Exiv2 -->
+
     <h3>Firefox</h3>
+
+    <a id="sa-11.3-048"/>
+    <h4>11.3 048 Firefox  Date: 2023-07-05  Severity: High</h4>
+    <p>In both firefox 115.0 and 102.13.0 several vulnerabilities were fixed, of
+    which three were rated high.
+    <a href="consolidated.html#sa-11.3-048">11.3-048</a></p>
+
+    <a id="sa-11.3-037"/>
+    <h4>11.3 037 Firefox  Date: 2023-06-06  Severity: High</h4>
+    <p>In Firefox-102.12.0esr, two security vulnerabilities rated as High
+    by upstream were fixed.
+    <a href="consolidated.html#sa-11.3-037">11.3-037</a></p>
 
     <a id="sa-11.3-026"/>
     <h4>11.3 026 Firefox  Date: 2023-05-09  Severity: High</h4>
@@ -124,6 +213,14 @@
 
     <h3>Ghostscript</h3>
 
+    <a id="sa-11.3-051"/>
+    <h4>11.3 051 ghostscript     Date: 2023-07-06  Severity: High</h4>
+    <p>In ghostscript-10.01.2, a security vulnerability was fixed that allows
+    for arbitrary code execution and denial of service when processing
+    PostScript files with contain a %pipe% or "|" character. The problem is due
+    to mishandling of permission validation. Update to ghostscript-10.01.2.
+    <a href="consolidated.html#sa-11.3-051">11.3-051</a></p>
+
     <a id="sa-11.3-019"/>
     <h4>11.3 019 ghostscript  Date: 2023-04-13  Severity: Critical</h4>
     <p>In ghostscript-10.01.1, a critical security vulnerability was fixed that
@@ -135,8 +232,35 @@
 
 <!-- end of ghostscript -->
 
+    <h3>gstreamer</h3>
+
+    <a id="sa-11.3-054"/>
+    <h4>11.3 054 gstreamer       Date: 2023-07-06  Severity: High</h4>
+    <p>In gst-plugins-base and gst-plugins-good 1.22.4, three security issues
+    were fixed that could allow for arbitrary code execution and denial of
+    service when processing malformed FLAC titles or parsing subtitles. Update
+    the gstreamer stack to 1.22.4.
+    <a href="consolidated.html#sa-11.3-054">11.3-054</a></p>
+
+<!-- end of gstreamer -->
+
+    <h3>ImageMagick</h3>
+
+    <a id="sa-11.3-049"/>
+    <h4>11.3 049 ImageMagick  Date: 2023-07-06 Severity: High</h4>
+    <p>Since ImageMagick-7.1.0-61 several vulnerabilites have come to light, one
+    rated as High. These were fixed between 7.1.0-62 and 7.1.1-10.
+    <a href="consolidated.html#sa-11.3-049">11.3-049</a></p>
+
+<!-- end of ImageMagick -->
 
     <h3>JS-102</h3>
+
+    <a id="sa-11.3-047"/>
+    <h4>11.3 047 JS-102  Date: 2023-07-05  Severity: High</h4>
+    <p>In the Javascript code of firefox-102.13.0 there is a fix for a potential
+    use after free.
+    <a href="consolidated.html#sa-11.3-047">11.3-047</a></p>
 
     <a id="sa-11.3-025"/>
     <h4>11.3 025 JS-102  Date: 2023-05-09  Severity: Medium</h4>
@@ -159,6 +283,17 @@
 
 <!-- end of JS-102 -->
 
+    <h3>libjpeg-turbo</h3>
+
+    <a id="sa-11.3-050"/>
+    <h4>11.3 050 libjpeg-turbo   Date: 2023-07-06  Severity: Medium</h4>
+    <p>In libjpeg-turbo-3.0.0, a security vulnerability was fixed that could
+    allow for a denial-of-service when processing a crafted 12-bit JPEG image
+    that contains values which go out-of-range.
+    <a href="consolidated.html#sa-11.3-050">11.3-050</a></p>
+
+<!-- end of libjpeg-turbo -->
+
     <h3>Libwebp</h3>
 
     <a id="sa-11.3-015"/>
@@ -171,6 +306,17 @@
 
 <!-- end of Libwebp -->
 
+    <h3>LibX11</h3>
+
+    <a id="sa-11.3-038"/>
+    <h4>11.3 038 LibX11 Date: 2023-06-17  Severity: Moderate</h4>
+    <p>In LibX11-1.8.6, a security vulnerability was fixed. A malicious X
+    server (or a malicious proxy-in-the-middle) may corrupt client memory
+    and at least cause the client to crash. Update to LibX11-1.8.6 or later.
+    <a href="consolidated.html#sa-11.3-038">11.3-038</a></p>
+
+<!-- end of LibX11 -->
+
     <h3>libxml2</h3>
 
     <a id="sa-11.3-020"/>
@@ -181,6 +327,63 @@
     <a href="consolidated.html#sa-11.3-020">11.3-020</a></p>
 
 <!-- end of libxml2 -->
+
+    <h3>LWP-Protocol-https</h3>
+
+    <a id="sa-11.3-055"/>
+    <h4>11.3 055 LWP-Protocol-https Date: 2023-07-10  Severity: Medium</h4>
+    <p>In LWP-Protocol-https-6.11, a security vulnerability was fixed that 
+    could for attackers to disable server certificate validation via passing
+    the HTTPS_CA_DIR or HTTPS_CA_FILE environment variable. Update to
+    LWP-Protocol-https-6.11 or later.
+    <a href="consolidated.html#sa-11.3-055">11.3-055</a></p>
+
+<!-- end of LWP-Protocol-https -->
+
+    <h3>node.js</h3>
+
+    <a id="sa-11.3-045"/>
+    <h4>11.3 045 node.js       Date: 2023-06-23  Severity: High</h4>
+    <p>In node.js-18.16.1, four security vulnerabilities were fixed that could
+    allow for denial of service, HTTP Request Smuggling, keys to not be
+    generated, and for policy bypasses. Update to node.js-18.16.1.
+    <a href="consolidated.html#sa-11.3-045">11.3-045</a></p>
+
+<!-- end of node.js -->
+
+    <h3>OpenJDK</h3>
+
+    <a id="sa-11.3-053"/>
+    <h4>11.3 053 OpenJDK         Date: 2023-07-06  Severity: High</h4>
+    <p>In OpenJDK-20.0.1, six security vulnerabilities were fixed that could
+    allow for denial of service or unauthorized creation, modification, or
+    deletion of data. These require no authentication and can be exploited
+    remotely. Update to OpenJDK-20.0.1.
+    <a href="consolidated.html#sa-11.3-053">11.3-053</a></p>
+
+<!-- end of OpenJDK -->
+
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-11.3-034"/>
+    <h4>11.3 034 PostgreSQL    Date: 2023-06-05 Severity: High</h4>
+    <p>In PostgreSQL-15.3, two security vulnerabilities were fixed that could
+    allow for arbitrary code execution as root for some users, and for incorrect
+    security policies to be applied to users. Update to PostgreSQL-15.3.
+    <a href="consolidated.html#sa-11.3-034">11.3-034</a></p>
+
+<!-- end of PostgreSQL -->
+
+    <h3>Python</h3>
+
+    <a id="sa-11.3-040"/>
+    <h4>11.3 040 Python3 (LFS and BLFS)   Date: 2023-06-17  Severity: High</h4>
+    <p>In Python-3.11.4, three security vulnerabilities were fixed that could
+    allow for directory traversal, disk location exposure over HTTP, and for
+    policy bypasses. Update to Python-3.11.4.
+    <a href="consolidated.html#sa-11.3-040">11.3-040</a></p>
+
+<!-- end of Python -->
 
     <h3>QtWebEngine</h3>
 
@@ -271,6 +474,15 @@
 
     <h3>Thunderbird</h3>
 
+    <a id="sa-11.3-042"/>
+    <h4>11.3 042 Thunderbird  Date: 2023-06-17  Severity: High</h4>
+    <p>In Thunderbird-102.12.0, several security vulnerabilities were fixed that
+    could allow for crashes, browser outputs to be obscured by popups, memory
+    corruption, spoofing, unauthorized certificate exceptions, and remote code
+    execution. Most of these vulnerabilities are only exploitable via HTML mail.
+    Update to Thunderbird-102.12.0.
+    <a href="consolidated.html#sa-11.3-042">11.3-042</a></p>
+
     <a id="sa-11.3-018"/>
     <h4>11.3 018 Thunderbird  Date: 2023-04-13  Severity: High</h4>
     <p>In Thunderbird-102.10.0, several security vulnerabilities were fixed
@@ -298,6 +510,15 @@
 
     <h3>WebKitGTK+</h3>
 
+    <a id="sa-11.3-036"/>
+    <h4>11.3 036 WebKitGTK+    Date: 2023-06-05 Severity: Critical</h4>
+    <p>In WebKitGTK+-2.40.2, two security vulnerabilities which could lead to
+    remote code execution and information disclosure were fixed. They are both
+    known to be actively exploited, and require no user interaction. If you have
+    WebKitGTK+ installed, it is critical that you update to WebKitGTK+-2.40.2 or
+    later immediately.
+    <a href="consolidated.html#sa-11.3-036">11.3-036</a></p>
+
     <a id="sa-11.3-022"/>
     <h4>11.3 022 WebKitGTK+   Date: 2023-04-23  Severity: Critical</h4>
     <p>In WebKitGTK+-2.40.1, six security vulnerabilities were fixed, including
@@ -313,7 +534,7 @@
     <h3>Wireshark</h3>
 
     <a id="sa-11.3-030"/>
-    <h4>11.3 021 Wireshark    Date: 2023-04-13  Severity: TBD (Probably Low)</h4>
+    <h4>11.3 021 Wireshark    Date: 2023-04-13  Severity: Medium</h4>
     <p>In Wireshark-4.0.6, nine security vulnerabilities were fixed that could
     allow for denial of service via packet injection or crafted capture files.
     These can occur when using a malformed packet trace file or by injecting a
