@@ -71,6 +71,18 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-055"/>
+    <h4>11.3 055 LWP-Protocol-https Date: 2023-07-10  Severity: Medium</h4>
+    <p>In LWP-Protocol-https-6.11, a security vulnerability was fixed that
+    could for attackers to disable server certificate validation via passing
+    the HTTPS_CA_DIR or HTTPS_CA_FILE environment variable.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2014-3230">CVE-2014-3230</a>.</p>
+    <p>To fix this vulnerability, update to LWP-Protocol-https-6.11 or later
+    using the instructions from
+    <a href="../view/svn/general/perl-modules.html#perl-lwp-protocol-https">LWP::Protocol::https (sysv)</a> or
+    <a href="../view/systemd/general/perl-modules.html#perl-lwp-protocol-https">LWP::Protocol::https (systemd)</a>.</p>
+
     <a id="sa-11.3-054"/>
     <h4>11.3 054 gstreamer       Date: 2023-07-06  Severity: High</h4>
     <p>In gst-plugins-base and gst-plugins-good 1.22.4, three security
