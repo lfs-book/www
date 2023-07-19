@@ -71,6 +71,21 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-056"/>
+    <h4>11.3 056 Wireshark    Date: 2023-07-19  Severity: Medium</h4>
+    <p>In Wireshark-4.0.7, two security vulnerabilities were fixed that could
+    allow for denial of service via packet injection or crafted capture files.
+    These can occur when using a malformed packet trace file or by injecting a
+    malformed packet onto the wire.  These vulnerabilities cause a crash or
+    cause Wireshark to go into an infinite loop.  These vulnerabilities have
+    been assigned: 
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-21">wnpa-sec-2023-21</a>.</p>
+    <a href="https://www.wireshark.org/security/wnpa-sec-2023-22">wnpa-sec-2023-22</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.0.7 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-11.3-055"/>
     <h4>11.3 055 LWP-Protocol-https Date: 2023-07-10  Severity: Medium</h4>
     <p>In LWP-Protocol-https-6.11, a security vulnerability was fixed that
