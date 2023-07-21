@@ -71,6 +71,37 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-060"/>
+    <h4>11.3 060 Samba       Date: 2023-07-21  Severity: High</h4>
+    <p>In Samba-4.18.5, five security vulnerabilities were fixed that could
+    allow for remotely exploitable crashes, packet signatures not being
+    enforced, and for the absolute path of files on a
+    server to be disclosed to a remote attacker. The denial of service
+    vulnerabilities occur if you are using winbind for NTLM authentication and
+    if you are using the mdssvc RPC service for Spotlight. Note that one of the
+    vulnerabilities in Spotlight can result in 100% CPU usage on the server.
+    The packet signature enforcement bypass occurs when using SMB2 packet
+    signing, and the absolute path disclosure occurs when the Spotlight
+    protocol is used. The vulnerability that allows for packet signature
+    enforcement bypass also is known to cause issues with systems running
+    the July 2023 Security Updates for Windows 10, Windows 11, and Windows
+    Server 2012 R2 through Windows Server 2022, as those versions of Windows
+    request packet signature enforcement when using SMBv2. On those versions of
+    Windows, intermittent connection failures to servers without this update
+    will occur. It is thus recommended to update Samba if you use it on a
+    network with Windows systems present, even if you do not use winbindd or
+    Spotlight.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-2127">CVE-2022-2127</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-3347">CVE-2023-3347</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34966">CVE-2023-34966</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34967">CVE-2023-34967</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34968">CVE-2023-34968</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.18.5 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
     <a id="sa-11.3-059"/>
     <h4>11.3 059 OpenSSH     Date: 2023-07-21  Severity: High</h4>
     <p>In OpenSSH-9.3p2, a security vulnerability was fixed that could allow

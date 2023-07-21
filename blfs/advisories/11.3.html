@@ -454,6 +454,19 @@
 
     <h3>Samba</h3>
 
+    <a id="sa-11.3-060"/>
+    <h4>11.3 060 Samba       Date: 2023-07-21  Severity: High</h4>
+    <p>In Samba-4.18.5, five security vulnerabilities were fixed that could
+    allow for remotely exploitable crashes, absolute path disclosure for files
+    located on the server, and for packet signature enforcement bypass. Note
+    that the remotely exploitable crashes occur when using winbindd and
+    Spotlight, and the Spotlight service also causes the absolute path
+    disclosure. The packet signature enforcement vulnerability also causes
+    intermittent connection problems with Windows systems running the July 2023
+    security updates. Update to Samba-4.18.5, especially if you are on a network
+    with Windows systems that connect to your Samba server.
+    <a href="consolidated.html#sa-11.3-060">11.3-060</a></p>
+
     <a id="sa-11.3-008"/>
     <h4>11.3 008 Samba        Date: 2023-03-30  Severity: High</h4>
     <p>In Samba-4.18.1, three security vulnerabilities were fixed. Note that
