@@ -71,9 +71,31 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-059"/>
+    <h4>11.3 059 OpenSSH     Date: 2023-07-21  Severity: High</h4>
+    <p>In OpenSSH-9.3p2, a security vulnerability was fixed that could allow
+    for remote code execution in some cases when using the PKCS#11 feature in
+    ssh-agent. The PKCS#11 feature in ssh-agent has a search path that is not
+    trustworthy, and will load any library in /usr/lib and cause remote code
+    execution if the agent is forward to an attacker-controlled system. This
+    is due to an incomplete fix for CVE-2016-10009. Note that this fix does
+    introduce incompatible behavior. The defaults have been changed to refuse
+    requests to load PKCS#11 modules issued by remote clients. If this impacts
+    you, you must add the "-Oallow-remote-pkcs11" flag to your ssh-agent
+    command. Note that this vulnerability only impacts users who use the
+    ssh-agent command.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38408">CVE-2023-38408</a>,
+    and further details are available from Qualys from
+    <a href="https://www.qualys.com/2023/07/19/cve-2023-38408/rce-openssh-forwarded-ssh-agent.txt">Qualys Security Advisory</a>.</p>
+    <p>To fix this vulnerability, update to OpenSSH-9.3p2 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
     <a id="sa-11.3-058"/>
-    <h4>11.3 058 nghttpp2    Date: 2023-07-19  Severity: Low</h4>
-    <p>In nghttpp2-1.55.1, a security vulnerability was fixed that could
+    <h4>11.3 058 nghttp2    Date: 2023-07-19  Severity: Low</h4>
+    <p>In nghttp2-1.55.1, a security vulnerability was fixed that could
     allow for denial of service through memory exhaustion.
     This vulnerability has been assigned: 
     <a href="https://github.com/envoyproxy/envoy/security/advisories/GHSA-jfxv-29pc-x22r">wnpa-sec-2023-22</a>.</p>
