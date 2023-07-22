@@ -71,6 +71,25 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-061"/>
+    <h4>11.3 061 WebKitGTK+  Date: 2023-07-21  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.41.6, a critical security vulnerability was fixed that
+    could lead to remote code execution. This vulnerability occurs when
+    processing crafted web content, and is known to Apple to be actively
+    exploited. The BLFS team has created a patch on top of 2.41.6, but if you
+    are using WebKitGTK+-2.40.x, WebKitGTK+-2.40.4 has been released with the
+    patch already included.
+    This vulnerability has been issued
+    <a href="https://access.redhat.com/security/cve/cve-2023-37450">CVE-2023-37450</a>.</p>
+    <p>To fix this vulnerability, update to WebKitGTK+-2.41.6 or later with the
+    patch from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>A temporary workaround is to export the following environment variable
+    prior to running a program that uses WebKitGTK+ from the terminal:
+    export JSC_useWebAssembly=0. Note that this is known to break some websites
+    which rely off WASM.</p>
+
     <a id="sa-11.3-060"/>
     <h4>11.3 060 Samba       Date: 2023-07-21  Severity: High</h4>
     <p>In Samba-4.18.5, five security vulnerabilities were fixed that could
