@@ -71,6 +71,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-063"/>
+    <h4>11.3 063 librsvg     Date: 2023-07-23  Severity: High</h4>
+    <p>In librsvg-2.56.3, a security vulnerability was fixed that could allow
+    for arbitrary file reads when an xinclude href has special characters in
+    it. These special characters include '?', '#', and '@'. A proof of concept
+    is public which allows for reading /etc/passwd on a system when loading an
+    SVG image using librsvg.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38633">CVE-2023-38633</a>.
+    Additional information can be found at the
+    <a href="https://gitlab.gnome.org/GNOME/librsvg/-/issues/996">librsvg Gitlab issue</a>.</p>
+    <p>To fix this vulnerability, update to librsvg-2.56.3 or later using the
+    instructions from
+    <a href="../view/svn/general/librsvg.html">librsvg (sysv)</a> or
+    <a href="../view/systemd/general/librsvg.html">librsvg (systemd)</a>.</p>
+
     <a id="sa-11.3-062"/>
     <h4>11.3 062 OpenJDK     Date: 2023-07-23  Severity: High</h4>
     <p>In OpenJDK-20.0.2, six security vulnerabilities were fixed that could
