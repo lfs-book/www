@@ -71,6 +71,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-064"/>
+    <h4>11.3 064 gstreamer   Date: 2023-07-23  Severity: High</h4>
+    <p>In gst-plugins-ugly-1.22.5, two security vulnerabilities were fixed that
+    could allow for arbitrary code execution or denial of service. These
+    vulnerabilities are in the RealMedia plugin, and occur due to integer
+    overflows which lead to heap overwrites. If you use RealMedia files, you
+    should update the gstreamer stack to 1.22.5 immediately.
+    These vulnerabilities do not have CVEs assigned yet, but details are
+    available upstream at
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0004.html">ZDI-CAN-21443</a> and
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0005.html">ZDI-CAN-21444</a>.</p>
+    <p>To fix these vulnerabilities, update the gstreamer stack to 1.22.5 using
+    the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
     <a id="sa-11.3-063"/>
     <h4>11.3 063 librsvg     Date: 2023-07-23  Severity: High</h4>
     <p>In librsvg-2.56.3, a security vulnerability was fixed that could allow
