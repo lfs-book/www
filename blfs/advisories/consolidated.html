@@ -71,6 +71,27 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-065"/>
+    <h4>11.3 065 AMD Microcode   Date: 2023-07-24  Severity: High</h4>
+    <p>In amd-microcode-20230719, one hardware vulnerability known as
+    "zenbleed" has been fixed.  The vulnerability may allow sensitive
+    information disclosure on all Zen 2 class processors.  This
+    vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-20593">CVE-2023-20593</a>.
+    More details can be found at
+    <a href='https://lock.cmpxchg8b.com/zenbleed.html'>the article written
+    by the discoverer of this vulnerability</a>.</p>
+    <p>If you are running LFS on a Zen 2 processor, update AMD Microcode
+    to 20230719 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a> to fix the issue.
+    Alternatively, <a
+    href="https://git.kernel.org/linus/0a9266b79cacdd02b888aed1308c308ad6d4ee4e">a
+    software mitigation</a> has been developed for Linux kernel.  But the
+    software mitigation can cause performance degradation, so we highly
+    recommend to update the microcode instead of relying on the software
+    mitigation.</p>
+
     <a id="sa-11.3-064"/>
     <h4>11.3 064 gstreamer   Date: 2023-07-23  Severity: High</h4>
     <p>In gst-plugins-ugly-1.22.5, two security vulnerabilities were fixed that
