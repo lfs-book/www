@@ -132,6 +132,15 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-11.3-066"/>
+    <h4>11.3 066 cURL            Date: 2023-07-26  Severity: Medium</h4>
+    <p>In cURL-8.2.1, a security vulnerability was fixed that could allow for
+    an attacker to trick a user into overwriting or creating protected files
+    holding cookie, HSTS, or alt-svc data. This occurs due to a TOCTOU race
+    condition, which causes symbolic links to be followed instead of
+    overwritten. Update to cURL-8.2.1.
+    <a href="consolidated.html#sa-11.3-066">11.3-066</a></p>
+
     <a id="sa-11.3-031"/>
     <h4>11.3 031 cURL     Date: 2023-06-05  Severity: Medium</h4>
     <p>In cURL-8.1.0, several security vulnerabilities were fixed that could

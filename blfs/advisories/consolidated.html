@@ -71,6 +71,24 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-066"/>
+    <h4>11.3 066 cURL            Date: 2023-07-26  Severity: Medium</h4>
+    <p>In cURL-8.2.1, a security vulnerability was fixed that could allow for
+    accidental overwriting of data due to a TOCTOU race condition when libcurl
+    is told to save cookies, HSTS, or alt-svc data to a file. When exploiting
+    this flaw, an attacker can trick a victim into creating or overwriting
+    protected files holding this data in ways it was not intended to. The
+    race condition modifies the behavior of symbolic links in affected
+    components, allowing them to be followed instead of overwritten. This
+    vulnerability impacts libcurl itself rather than just the cURL utility,
+    and thus can be exploited in many different applications.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-32001">CVE-2023-32001</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.2.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-11.3-065"/>
     <h4>11.3 065 AMD Microcode   Date: 2023-07-24  Severity: High</h4>
     <p>In amd-microcode-20230719, one hardware vulnerability known as
