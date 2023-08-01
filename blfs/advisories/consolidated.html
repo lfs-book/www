@@ -71,6 +71,39 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-067"/>
+    <h4>11.3 067 AMD Zen2 CPUs Date: 2023-08-01  Severity: High</h4>
+    <p>A High-severity vulnerability (information disclosure in 16-byte
+    chunks by a non-privileged user) has been publicised. Update the
+    linux kernel to version 6.4.6 or later (6.1.41 or later if you use
+    the LTS 6.1 version). This hardware vulnerability is known as zenbleed
+    and allows disclosure of sensitive information. This vulnerability
+    has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-20593">CVE-2023-20593</a>.
+    More details can be found at
+    <a href='https://lock.cmpxchg8b.com/zenbleed.html'>the article written
+    by the discoverer of this vulnerability</a>.</p>
+     <p>AMD made an unexpectely early release of microcode for a few of the
+    higher-end affected CPUs, confusion about which led to an initial
+    recommendation to update the microcode because the fix in the kernel
+    could slow down some usages. It has now become clear that AMD are
+    intending to ship updated AGESA for other affected CPUs in October to
+    December, and past experience suggests that updates to linux firmware
+    will only happen after that. See <a
+    href='https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7008.html'>amd-sb-7008</a>
+    while noting that AMD downplay the severity.<p>
+    <p>When a fixed kernel has been booted, look for a one-time message
+    using 'dmesg | grep -i zenbleed'. If that shows 'Zenbleed: please update
+    your microcode for the most optimal fix' then you know that the kernel has
+    worked around the issue, and you can update to the new microcode (or update
+    the AGESA via a 'bios' update from the motherboard manufacturer) when
+    available.</p>
+    <p>If the fixed kernel does not mention Zenbleed then either you are not on
+    a Zen2 CPU, or alternatively you are on one of the EPYC Zen2 variants for
+    which the family 17 microcode has been released (currently only Rome/Castle
+    Peak and Mendocino). More details in the thread and sub-threads starting at <a
+    href='https://www.openwall.com/lists/oss-security/2023/07/24/1'>oss-security</a></p>
+
     <a id="sa-11.3-066"/>
     <h4>11.3 066 cURL            Date: 2023-07-26  Severity: Medium</h4>
     <p>In cURL-8.2.1, a security vulnerability was fixed that could allow for
@@ -91,6 +124,9 @@
 
     <a id="sa-11.3-065"/>
     <h4>11.3 065 AMD Microcode   Date: 2023-07-24  Severity: High</h4>
+    <p>This advisory was based on incomplete information from upstream
+    and has been replaced by <a
+    href="consolidated.html#sa-11.3-067">SA 11.3-067</a> above.</p>
     <p>In amd-microcode-20230719, one hardware vulnerability known as
     "zenbleed" has been fixed.  The vulnerability may allow sensitive
     information disclosure on all Zen 2 class processors.  This
