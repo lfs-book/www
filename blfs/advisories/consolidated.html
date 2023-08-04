@@ -71,6 +71,23 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-069"/>
+    <h4>11.3 069 OpenSSL (LFS)   Date: 2023-08-04 Severity: Low</h4>
+    <p>In OpenSSL-3.1.2 (and OpenSSL-1.1.1v), three security vulnerabilities
+    were fixed that could allow for applications which use the AES-SIV
+    implementation in OpenSSL to be misled by empty associated data entries,
+    excessive slowdown when checking DH keys and parameters, and for excessive
+    slowdown when checking the 'q' parameter value in a DH key. This could lead
+    to a denial of service condition due to excessive usage of resources.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2975">CVE-2023-2975</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-3446">CVE-2023-3446</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-3817">CVE-2023-3817</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.1.2 (or OpenSSL-1.1.1v
+    if you prefer to say on the 1.1 series) using the instructions from
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
     <a id="sa-11.3-068"/>
     <h4>11.3 068 Firefox  Date: 2023-08-01  Severity: High</h4>
     <p>In firefox 115.1.0 seven vulnerabilities appliccable to BLFS and rated as
