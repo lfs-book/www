@@ -71,6 +71,25 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-071"/>
+    <h4>11.3 071 MariaDB     Date: 2023-08-07 Severity: Medium</h4>
+    <p>In MariaDB-10.11.4 (and MariaDB-10.6.14), a security vulnerability was
+    fixed that could allow for a denial of service. The vulnerability occurs
+    due to it being possible for the function spider_db_mbase::print_warnings
+    to dereference a null pointer, which will result in a crash. BLFS has moved
+    onto MariaDB-10.11.x for BLFS 12.0, and while upgrading and running
+    'mariadb-upgrade' will not result in any ill effects, MariaDB-10.6.14 has
+    been tested and is confirmed to work if you prefer to stay on the 10.6
+    series.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-47015">CVE-2022-47015</a>.</p>
+    <p>To fix this vulnerability, update to MariaDB-10.11.4 (or 10.6.14) using
+    the instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <p>If you upgrade to MariaDB-10.11 from MariaDB-10.6, make sure that you run
+    the <em>mariadb-upgrade</em> command.</p>
+
     <a id="sa-11.3-070"/>
     <h4>11.3 070 QtWebEngine Date: 2023-08-07 Severity: High</h4>
     <p>In QtWebEngine-5.15.15, fixes for seven Chromium security vulnerabilities
