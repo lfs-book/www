@@ -71,6 +71,32 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-073"/>
+    <h4>11.3 073 WebKitGTK+  Date: 2023-08-07 Severity: Critical</h4>
+    <p>In WebKitGTK+-2.41.6 (with a patch developed by the BLFS team applied),
+    several security vulnerabilities were fixed that could allow for remote code
+    execution, sensitive information disclosure, and bypasses of the Same Origin
+    Policy. These vulnerabilities have also been fixed in WebKitGTK-2.40.5 if
+    you prefer to stay on the 2.40 series. Some of these vulnerabilities can be
+    exploited while processing crafted web content, such as advertisements, and
+    can be exploited with no user interaction required.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38133">CVE-2023-38133</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38572">CVE-2023-38572</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38592">CVE-2023-38592</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38594">CVE-2023-38594</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38595">CVE-2023-38595</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38597">CVE-2023-38597</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38599">CVE-2023-38599</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38600">CVE-2023-38600</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38611">CVE-2023-38611</a>.</p>
+    <p>To fix this vulnerability, rebuild WebKitGTK+-2.41.6 with the patch
+    applied using the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+    <p>If you are on the WebKitGTK+-2.40.x series, you may prefer to update to
+    WebKitGTK+-2.40.5 instead.</p>
+
     <a id="sa-11.3-072"/>
     <h4>11.3 072 Seamonkey   Date: 2023-08-07 Severity: High</h4>
     <p>In Seamonkey-2.53.17, several security patches up to Firefox and
