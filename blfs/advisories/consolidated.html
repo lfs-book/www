@@ -71,6 +71,31 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-075"/>
+    <h4>11.3 075 Intel Microcode  Date: 2023-08-09  Severity: Medium</h4>
+    <p>In intel-microcode-20230808, three hardware vulnerabilities were fixed.
+    All of them may potentially allow information disclosure.  The first one
+    known as "Gather Data Sampling" affects Intel processors with AVX2
+    capability based on Skylake, Kaby Lake, Cascade Lake, Cooper Lake,
+    Ice Lake, or Tiger Lake microarchitectures (the latest 12th and 13th
+    generations of Core processors are not affected).  The second one
+    only affects Intel Xeon processors based on Cooper Lake
+    microarchitecture.  The third one affects Intel Xeon processors based
+    on Cooper Lake or Sapphire Rapids microarchitectures if SGX is utilized;
+    this is actually rated as "High" severity by Intel but LFS does not
+    support utilizing SGX so we still rated this advisory as "Medium".
+
+    These vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-40982">CVE-2022-40982</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23908">CVE-2023-23908</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-41804">CVE-2022-41804</a>.</p>
+
+    <p>If you are running the system on an affected processor, to fix these
+    vulnerabilitites, update to intel-microcode-20230808 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
     <a id="sa-11.3-074"/>
     <h4>11.3 074 rustc       Date: 2023-08-07 Severity: High</h4>
     <p>In rustc-1.71.1, a security vulnerability was fixed in the Cargo portion
