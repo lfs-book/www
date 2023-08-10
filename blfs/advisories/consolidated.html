@@ -98,12 +98,11 @@
     Note that the GDS fix will make "gathering" AVX2 and AVX512
     instructions much slower, so if you are building the system for a CPU
     affected by GDS with
-    <code>-mtune=</code> setting (or <code>-march=</code> setting which
-    implies <code>-mtune=</code>) in <code>CFLAGS</code> or
+    <code>-march=</code> setting in <code>CFLAGS</code> or
     <code>CXXFLAGS</code> (note that we do not encourage to do so at all),
     append
 <code>-mtune-ctrl=^use_gather_2parts,^use_gather_4parts,^use_gather</code>
-    after the <code>-mtune=</code> option to disable these
+    after the <code>-march=</code> option to disable these
     instructions.</p>
 
     <a id="sa-11.3-074"/>
