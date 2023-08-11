@@ -71,6 +71,28 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-077"/>
+    <h4>11.3 077 node.js          Date: 2023-08-11  Severity: High</h4>
+    <p>In node.js-18.17.1, three security vulnerabilities were fixed that could
+    allow for permission policy bypass via the Module._load function, the
+    module.constructor.createRequre function, and the process.binding function.
+    In the case of using Module._load and module.constructor.createRequire,
+    it's possible to bypass the policy mechanism and require modules outside of
+    the policy.json definition for a given module. In the case of the
+    process.binding function, it's possible to bpyass the policy mechanism by
+    requiring internal modules and eventually take advantage of
+    process.binding('spawn_sync') to run arbitrary code outside of the limits
+    defined in the policy.json file. Note that at this time, the policies are
+    experimental features of Node.js, but they are still enabled by default.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32002">CVE-2023-32002</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32006">CVE-2023-32006</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-32559">CVE-2023-32559</a>.</p>
+    <p>To fix these vulnerabilities, update to node.js-18.17.1 or later using
+    the instructions from
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
     <a id="sa-11.3-076"/>
     <h4>11.3 076 PostgreSQL       Date: 2023-08-11  Severity: High</h4>
     <p>In PostgreSQL-15.4, two security vulnerabilities were fixed that could
