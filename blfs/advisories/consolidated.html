@@ -71,6 +71,31 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-076"/>
+    <h4>11.3 076 PostgreSQL       Date: 2023-08-11  Severity: High</h4>
+    <p>In PostgreSQL-15.4, two security vulnerabilities were fixed that could
+    allow for SQL Injection when using extension scripts, and for security
+    policy bypasses when row security policies are in effect. In the case of
+    the SQL Injection vulnerability, this occurs when an extension script
+    uses the @extowner@, @extschema@, or @extschema:...@ tokens inside a
+    quoting construct, such as dollar quoting, or quotation marks. This
+    vulnerability allows an attacker having database-level CREATE privileges
+    to execute arbitrary code as the bootstrap superuser. This update disables
+    it by blocking the attack in the core server, so no modification of any
+    existing extensions is required. In the case of the policy bypass
+    vulnerability, PostgreSQL 15 introduced the MERGE command, which fails to
+    test new rows against row security policies defined for UPDATE and SELECT.
+    If UPDATE and SELECT policies forbid a row that INSERT policies do not,
+    a user could be allowed to store such rows, and further consequences are
+    possible depending on the application in use.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2023-39417">CVE-2023-39417</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2023-39418">CVE-2023-39418</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-15.4 or later using
+    the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-11.3-075"/>
     <h4>11.3 075 Intel Microcode  Date: 2023-08-09  Severity: Medium</h4>
     <p>In intel-microcode-20230808, three hardware vulnerabilities were fixed.
