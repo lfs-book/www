@@ -71,6 +71,42 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-078"/>
+    <h4>11.3 078 AMD Zen/Zen2/Zen3/Zen4 CPUs Date: 2023-08-14  Severity: Medium</h4>
+    <p>A side channel vulnerability in the AMD Zen/Zen2/Zen3/Zen4 CPUs
+    has been publicised with the name "Inception" or "Speculative Return
+    Stack Overflow" (SRSO).  This vulnerability may allow an attacker to
+    influence the return address prediction, causing speculative
+    execution at an attacker-controlled instruction pointer register,
+    potentially leading to information disclosure.  This vulnerability has
+    been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-20569">CVE-2023-20569</a>.
+    More details can be found at
+    <a href='https://comsec.ethz.ch/research/microarch/inception/'>the
+    home page for this vulnerability</a>.</p>
+    <p>To mitigate this vulnerability, update to Linux kernel 6.4.9 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>;
+    or 6.1.44 or later if you prefer to stick with the 6.1 LTS series
+    using the instructions for
+    <a href="../../lfs/view/11.3/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/11.3-systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.
+    The kernel update is enough to mitigate the issue for Zen/Zen2 CPUs.
+    For Zen3/Zen4 CPUs, the kernel update only partially mitigate the
+    issue and a full mitigation requires a microcode update besides the
+    kernel update.  For Zen3/Zen4 EPYC CPUs, update to
+    amd-microcode-20230808 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.
+    For Zen3/Zen4 non-EPYC CPUs, a microcode update is planned by AMD to
+    be shipped in this month (Aug 2023).  But we are not sure if the
+    update would be available for end users as a kernel-loadable microcode
+    file.  If a kernel-loadable microcode update is available, we'll
+    issue a new security advisory for it.  Otherwise, you'll need to
+    contact the vendor of your motherboard (or laptop) for a BIOS update
+    including the new microcode.</p>
+
     <a id="sa-11.3-077"/>
     <h4>11.3 077 node.js          Date: 2023-08-11  Severity: High</h4>
     <p>In node.js-18.17.1, three security vulnerabilities were fixed that could
