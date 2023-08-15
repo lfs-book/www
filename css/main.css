@@ -280,9 +280,7 @@ div.navbar {
 div.main {
 	position: absolute;
 	top: 140px;
-/* testing
-	left: 12.5em; */
-   left: 20em;
+	left: 14em; 
 	padding-right: 180px;
 }
 
