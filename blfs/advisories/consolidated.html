@@ -71,6 +71,22 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-080"/>
+    <h4>11.3 080 MIT Kerberos V5    Date: 2023-08-17  Severity: Medium</h4>
+    <!-- This includes krb5-1.21.1 -->
+    <p>In krb5-1.21.2, two security vulnerabilities were fixed that could allow
+    for crashes of the KDC process and of the kadm5 process. The KDC process
+    crash occurs due to a double-free in KDC's TGS processing, and the kadm5
+    process crash happens due to an uninitialized pointer being freed when
+    performing XDR parsing. These vulnerabilities can be exploited remotely.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-36054">CVE-2023-36054</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-39975">CVE-2023-39975</a>.</p>
+    <p>To fix these vulnerabilities, update to krb5-1.21.2 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5 (sysv)</a> or
+    <a href="../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5 (systemd)</a>.</p>
+
     <a id="sa-11.3-079"/>
     <h4>11.3 079 Screen             Date: 2023-08-17  Severity: Medium</h4>
     <p>In Screen-4.9.1, a security vulnerability was fixed that could allow for
