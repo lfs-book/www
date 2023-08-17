@@ -71,6 +71,19 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-079"/>
+    <h4>11.3 079 Screen             Date: 2023-08-17  Severity: Medium</h4>
+    <p>In Screen-4.9.1, a security vulnerability was fixed that could allow for
+    local users to send a privileged SIGHUP signal to any PID on the system,
+    which could cause a denial of service or disruption of the target process.
+    If you are on a multi-user system and use Screen, you should upgrade.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-24626">CVE-2023-24626</a>.</p>
+    <p>To fix this vulnerability, update to Screen-4.9.1 or later using the
+    instructions from
+    <a href="../view/svn/general/screen.html">Screen (sysv)</a> or
+    <a href="../view/systemd/general/screen.html">Screen (systemd)</a>.</p>
+
     <a id="sa-11.3-078"/>
     <h4>11.3 078 AMD Zen/Zen2/Zen3/Zen4 CPUs Date: 2023-08-14  Severity: Medium</h4>
     <p>A side channel vulnerability in the AMD Zen/Zen2/Zen3/Zen4 CPUs
