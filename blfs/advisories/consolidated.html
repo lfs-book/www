@@ -6419,10 +6419,12 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <p>To fix this, apply <a href="https://www.linuxfromscratch.org/patches/downloads/polkit/polkit-0.120-security_fix-1.patch">the patch</a>
     for polkit &gt;=0.114, &lt;=0.120, or
     <a href="https://www.linuxfromscratch.org/patches/downloads/polkit/polkit-0.113-cve_2021_4034_fix-1.patch">the rebased patch</a>
-    for polkit &gt;=0.92, &lt;=0.113 and rebuild polkit.  Or, if you don't
+    for polkit &gt;=0.92, &lt;=0.113 and rebuild polkit.  <del>Or, if you don't
     use the functionality of the <code>pkexec</code> command, you can unset
     the SUID bit on it with <code>chmod -s /usr/bin/pkexec</code>
-    as the <code>root</code> user, as a workaround.</p>
+    as the <code>root</code> user, as a workaround.</del>
+    (This is a bad idea because it can break laptop backlight control in
+    at least GNOME and XFCE, so striked out.)</p>
 
     <a id="sa-11.0-058"/>
     <h4>11.0 058 GnuTLS  Date: 2022-01-18 Severity: Low</h4>
