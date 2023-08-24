@@ -71,6 +71,30 @@
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
     -->
+    <a id="sa-11.3-082"/>
+    <h4>11.3 082 PHP                Date: 2023-08-23  Severity: Critical</h4>
+    <p>In PHP-8.2.9, two security vulnerabilities were fixed which could allow
+    for unauthorized disclosure of local files on a server, for remote code
+    execution, and for remotely exploitable denial of service. The unauthorized
+    disclosure of local files vulnerability occurs in the libxml module, which
+    allows for external entities to be loaded even if the server's configuration
+    does not have external entity loading enabled. This can occur when using
+    other modules that depend on libxml such as ImageMagick, where the state
+    of the libxml module is process-global. Note that the vulnerable state may
+    persist in the same process across many requests, continuing until the
+    process is shut down. In the case of the critical remote code execution
+    vulnerability, it occurs in the Phar module, and happens due to insufficient
+    length checking when reading PHAR directory entries leading to a stack
+    buffer overflow. If you use the libxml or Phar modules in PHP, it's
+    recommended that you upgrade to PHP-8.2.9 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-3823">CVE-2023-3823</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-3824">CVE-2023-3824</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.2.9 or later using the
+    instructions from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
     <a id="sa-11.3-081"/>
     <h4>11.3 081 Thunderbird        Date: 2023-08-23  Severity: High</h4>
     <p>In Thunderbird-115.1.1, several security vulnerabilities were fixed that
