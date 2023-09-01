@@ -4,6 +4,56 @@
    <div class="main">
       <h1>LFS News</h1>
          <dl class="newsItem">
+           <dt>LFS-12.0 Release</dt>
+           <dd><em>Bruce Dubbs - 2023/09/01</em>
+
+           <p>The Linux From Scratch community announces the release of LFS
+           Version 12.0.</p>
+
+           <p>Major changes include toolchain updates to binutils-2.41, gcc-13.2.0,
+           and glibc-2.38. In total, 38 packages were updated since the last
+           release. Extensive updates to the text through the book to
+           improve readability. 
+           The Linux kernel has been updated to version 6.4.12.</p>
+
+           <p>other significant changes include:</p>
+           <ul>
+             <li>Addition of libxcrypt as a separate package.
+                 Previously this package was included with glibc.</li>
+             <li>For the sysV version of the book, udev is now extracted 
+                 directly from the systemd tarball. This change also requires
+                 building the Python modules jinja and markupsafe.</li>
+             <li>The new package pkgconf is now used instead of pkg-config
+                 because the later packages is no longer maintained.</li>
+             <li>The new Python module flit-core was added as a new required
+                 dependency for the wheel module.</li>
+           </ul>
+
+           <p>Overall there have been 234 commits to LFS since the previous
+              stable version of the book.
+           </p>
+
+           <p>You can read the book
+              <a href="/lfs/view/12.0/">online</a>, or
+              <a href="/lfs/downloads/12.0/">download</a> to read locally.
+           </p>
+
+           <p>You can read the systemd version of the book online at
+              <a href="/lfs/view/12.0-systemd/">LFS-systemd</a>, or
+              <a href="/lfs/downloads/12.0-systemd/">download-systemd</a> to read locally.
+           </p>
+
+           <p>Please direct any comments about this release to the LFS
+              development team at <a
+              href="mailto:lfs-dev@lists.linuxfromscratch.org">
+              lfs-dev@lists.linuxfromscratch.org</a>.  Please note that
+              registration for the lfs-dev mailing list is required to avoid junk
+              email.
+           </p>
+           </dd>
+         </dl>
+
+         <dl class="newsItem">
            <dt>LFS-12.0-rc1 Release</dt>
            <dd><em>Bruce Dubbs - 2023/08/15</em>
 
