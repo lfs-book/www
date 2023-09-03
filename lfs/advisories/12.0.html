@@ -24,24 +24,24 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
-     <ul>
+<!-- <ul>
        <li>There are currently no known security vulnerabilities for LFS-12.0.</li>
-     </ul>
+</ul>-->
 
     <!-- Editors: do the consolidated file first, to get the next number.
          Checking what you have prepared is easier if you can create symlinks
          in the directory where you put the books' html so that you can see
          the LFS and BLFS advisories in your browser. -->
 
-<!--
+
     <p style="font-style: italic;">This page is in alphabetical order of packages,
     and if a package has multiple advisories the newer come first.</p>
 
     <p> The links at the end of each item point to fuller details which have
     links to the
-    development <!\-\- change to 'released' when links in consolidated are changed
-    after a release \-\->
-    books.</p>-->
+    development <!-- change to 'released' when links in consolidated are changed
+    after a release -->
+    books.</p>
 
     <!-- After a release, copy for next book version, leave just template stuff
      in that, and note
@@ -77,5 +77,16 @@
 
     <!\-\- End of PackageName -->
     <!-- End of template -->
+
+    <h3>Python3</h3>
+
+    <a id="sa-12.0-001"/>
+    <h4>12.0 001 Python3  Date: 2023-09-03  Severity: Medium</h4>
+    <p>In Python-3.11.5, a security vulnerability was fixed that
+    could allow to bypass TLS handshake in SSL sockets. Update
+    to python-3.11.5.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.0-001">12.0-001</a></p>
+
+<!-- end of Python3 -->
 
 <!--#include virtual="/common/footer.html" -->
