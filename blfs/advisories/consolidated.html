@@ -65,6 +65,55 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-004"/>
+    <h4>12.0 004 Glibc (LFS)              Date: 2023-09-12
+    Severity: Medium (only if no-aaaa is used in resolv.conf)</h4>
+    <p>After Glibc-2.38 release, a security vulnerability was fixed in the
+    DNS resolver that could allow a denial of service (crash) or
+    potentional information disclosure with a long DNS response if
+    <code>no-aaaa</code> is specified in <code>/etc/resolv.conf</code>.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4527">CVE-2023-4527</a>.
+    The affected Glibc releases are 2.36, 2.37, and 2.38.</p>
+    <p>The <code>/etc/resolv.conf</code> file created following
+    LFS General Network Configuration section
+    (<a href='../../lfs/view/12.0/chapter09/network.html'>sysv</a> or
+    <a href='../../lfs/view/12.0-systemd/chapter09/network.html'>systemd</a>)
+    does not contain <code>no-aaaa</code> so a by-the-book LFS installation
+    is not vulnerable.</p>
+    <p>If you are using <code>no-aaaa</code>, backup the system first,
+    then apply the fix for Glibc-2.36, 2.37, or 2.38 (<b>use the same
+    Glibc version as you've installed in LFS</b>) with the following
+    command:</p>
+    <pre><code>sed \
+  -E "/__res_context_search/\
+      {N;N;s/(search \(([^,]*,){6}[^,]*)NULL/\1\&amp;alt_dns_packet_buffer/}" \
+  -i resolv/nss_dns/dns-host.c</code></pre>
+    <p>and rebuild it with the instructions from
+    <a href='../../lfs/view/11.2/chapter08/glibc.html'>Glibc-2.36</a>
+    (with the <a href='#sa-11.2-075'>SA 11.2-075</a> patch applied),
+    <a href='../../lfs/view/11.3/chapter08/glibc.html'>Glibc-2.37</a>, or
+    <a href='../../lfs/view/12.0/chapter08/glibc.html'>Glibc-2.38</a>.
+    After testing the package with <code>make check</code>, instead of installing
+    it directly, perform a <code>DESTDIR</code> installation with
+    <code>make install DESTDIR=$PWD/dest</code>.  Now as the
+    <code>root</code> user, replace the library files containing the
+    DNS resolver:</p>
+    <pre><code>install -vm755 dest/usr/lib/libc.so.6 /usr/lib
+install -vm644 dest/usr/lib/libc.a    /usr/lib</code></pre>
+    <p>If the debug symbols for Glibc is stripped from the library files
+    and saved in a separate <code>libc.so.6.dbg</code> file (as
+    demonstrated in
+    <a href='../../lfs/view/12.0/chapter08/stripping.html'>Stripping</a>),
+    use the following commands instead to replace the library files and
+    the debug symbol file:</p>
+    <pre>objcopy --only-keep-debug dest/usr/lib/libc.so.6{,.dbg}
+strip   --strip-unneeded  dest/usr/lib/libc.{a,so.6}
+objcopy --add-gnu-debuglink=/usr/lib/libc.so.6.dbg dest/usr/lib/libc.so.6
+install -vm755 dest/usr/lib/libc.so.6         /usr/lib
+install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
+    <p>After the files are replaced, reboot the system immediately.</p>
+
     <a id="sa-12.0-003"/>
     <h4>12.0 003 Libwebp Date: 2023-09-13  Severity: Critical</h4>
     <p>Chromium and Apple have announced a Critical vulnerability in libwebp which
