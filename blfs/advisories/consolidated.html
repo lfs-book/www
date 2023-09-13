@@ -85,10 +85,10 @@
     then apply the fix for Glibc-2.36, 2.37, or 2.38 (<b>use the same
     Glibc version as you've installed in LFS</b>) with the following
     command:</p>
-    <pre><code>sed \
+    <pre>sed \
   -E "/__res_context_search/\
       {N;N;s/(search \(([^,]*,){6}[^,]*)NULL/\1\&amp;alt_dns_packet_buffer/}" \
-  -i resolv/nss_dns/dns-host.c</code></pre>
+  -i resolv/nss_dns/dns-host.c</pre>
     <p>and rebuild it with the instructions from
     <a href='../../lfs/view/11.2/chapter08/glibc.html'>Glibc-2.36</a>
     (with the <a href='#sa-11.2-075'>SA 11.2-075</a> patch applied),
@@ -99,8 +99,8 @@
     <code>make install DESTDIR=$PWD/dest</code>.  Now as the
     <code>root</code> user, replace the library files containing the
     DNS resolver:</p>
-    <pre><code>install -vm755 dest/usr/lib/libc.so.6 /usr/lib
-install -vm644 dest/usr/lib/libc.a    /usr/lib</code></pre>
+    <pre>install -vm755 dest/usr/lib/libc.so.6 /usr/lib
+install -vm644 dest/usr/lib/libc.a    /usr/lib</pre>
     <p>If the debug symbols for Glibc is stripped from the library files
     and saved in a separate <code>libc.so.6.dbg</code> file (as
     demonstrated in
@@ -2471,8 +2471,8 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <code>make install DESTDIR=$PWD/dest</code>.  Now as the
     <code>root</code> user, replace the library files containing the
     <code>syslog</code> function:</p>
-    <pre><code>install -vm755 dest/usr/lib/libc.so.6 /usr/lib
-install -vm644 dest/usr/lib/libc.a    /usr/lib</code></pre>
+    <pre>install -vm755 dest/usr/lib/libc.so.6 /usr/lib
+install -vm644 dest/usr/lib/libc.a    /usr/lib</pre>
     <p>If the debug symbols for Glibc is stripped from the library files
     and saved in a separate <code>libc.so.6.dbg</code> file (as
     demonstrated in
