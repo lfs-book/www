@@ -81,4 +81,20 @@
 
 <!-- end of Python3 -->
 
+    <h3>Thunderbird</h3>
+
+    <a id="sa-12.0-006"/>
+    <h4>12.0 006 Thunderbird              Date: 2023-09-14  Severity: Critical</h4>
+    <p>In Thunderbird-115.2.2, a critical security vulnerability in the bundled
+    libwebp was fixed which could allow for remote code execution when loading
+    a malicious HTML mail which contains a webp image embedded in it. The
+    version of Thunderbird shipped with BLFS 12.0 was configured to use the
+    bundled version of libwebp, however it has been changed in the development
+    book to use the system version of libwebp. It is recommended that you update
+    to the patched version of libwebp and that you upgrade Thunderbird
+    immediately to protect your system.
+    <a href="consolidated.html#sa-12.0-006">12.0-006</a></p>
+
+<!-- end of Thunderbird -->
+
 <!--#include virtual="/common/footer.html" -->
