@@ -54,6 +54,17 @@
     <p style="font-style: italic;">In LFS the only safe way to update Glibc is to
     build a new system.</p>
 
+    <h4>12.0 005 Glibc Date: 2023-09-13  Severity: Low</h4>
+
+    <p>In Glibc ?? (at least 2.17) through 2.38, there is a vulnerability in
+    getaddrinfo() which can lead to a denial of service with custom NSS
+    modules in <code>/etc/nsswitch.conf</code> and extremely rare
+    situations.</p>
+
+    <p>Please read the link to assess the severity of this for your use
+    case, and what action to take.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.0-005">12.0-005</a></p>
+
     <h4>12.0 004 Glibc Date: 2023-09-12  Severity: Medium</h4>
 
     <p>In Glibc-2.36, 2.37, and 2.38 there is a vulnerability in the DNS

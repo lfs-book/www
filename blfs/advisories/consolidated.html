@@ -65,6 +65,61 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-005"/>
+    <h4>12.0 005 Glibc (LFS)              Date: 2023-09-13  Severity: Low</h4>
+    <p>After Glibc-2.38 release, a use after free was fixed in the
+    getaddrinfo() function that could allow a denial of service (crash)
+    with custom NSS modules and extremely rare situation.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4806">CVE-2023-4806</a>.
+	Many Glibc releases (at least 2.17 through 2.38) are affected.</p>
+    <p>The <code>/etc/nsswitch.conf</code> file created following the
+    LFS instruction does not contain custom NSS modules, so a by-the-book
+    LFS installation is not vulnerable.</p>
+    <p>If you are using a custom <code>nsswitch.conf</code>, backup the
+    system first, then rebuild Glibc (<b>the same version as you've
+    installed in LFS</b>):
+    <ul>
+      <li>For Glibc-2.38, rebuild it with the instructions from
+        <a href='../../lfs/view/12.0/chapter08/glibc.html'>Glibc-2.38</a>,
+        but with the <code>glibc-2.38-memalign_fix.patch</code>
+        <b>replaced</b> by
+<a href='../../patches/downloads/glibc/glibc-2.38-upstream_fixes-1.patch'>
+  glibc-2.38-upstream_fixes-1.patch</a>.  This patch also includes
+	  the memalign fix <b>and</b> the CVE-2023-4527
+      (see <a href='#sa-12.0-004'/>SA 12.0-004</a>) fix;</li>
+      <li>For Glibc-2.36 or 2.37, rebuild it with the instructions from
+        <a href='../../lfs/view/11.2/chapter08/glibc.html'>Glibc-2.36</a>
+        or
+        <a href='../../lfs/view/11.3/chapter08/glibc.html'>Glibc-2.37</a>,
+        with
+<a href='../../patches/downloads/glibc/glibc-2.36-cve_2023_4806-1.patch'>
+  glibc-2.36-cve_2023_4806-1.patch</a> <b>and</b> the fixes provided in
+        <a href='#sa-12.0-004'>SA 12.0-004</a> and
+        <a href='#sa-11.2-075'>SA 11.2-075</a> (only for 2.36)
+        applied.</li>
+      <li>For Glibc-2.35 and earlier, no fix is available yet.  We will
+        update this advisory once the upstream provides a fix.</li>
+    </ul>
+    <p>After testing the package with <code>make check</code>, instead
+    of installing it directly, perform a <code>DESTDIR</code> installation
+    with <code>make install DESTDIR=$PWD/dest</code>.  Now as the
+    <code>root</code> user, replace the vulnerable library files:</p>
+    <pre>install -vm755 dest/usr/lib/libc.so.6 /usr/lib
+install -vm644 dest/usr/lib/libc.a    /usr/lib</pre>
+    <p>If the debug symbols for Glibc is stripped from the library files
+    and saved in a separate <code>libc.so.6.dbg</code> file (as
+    demonstrated in
+    <a href='../../lfs/view/12.0/chapter08/stripping.html'>Stripping</a>),
+    use the following commands instead to replace the library files and
+    the debug symbol file:</p>
+    <pre>objcopy --only-keep-debug dest/usr/lib/libc.so.6{,.dbg}
+strip   --strip-unneeded  dest/usr/lib/libc.{a,so.6}
+objcopy --add-gnu-debuglink=/usr/lib/libc.so.6.dbg dest/usr/lib/libc.so.6
+install -vm755 dest/usr/lib/libc.so.6         /usr/lib
+install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
+    <p>After the files are replaced, reboot the system immediately.</p>
+
     <a id="sa-12.0-004"/>
     <h4>12.0 004 Glibc (LFS)              Date: 2023-09-12
     Severity: Medium (only if no-aaaa is used in resolv.conf)</h4>
