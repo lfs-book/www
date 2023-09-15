@@ -558,14 +558,14 @@
           command.</p>
           <p>In LFS 10.0 through 11.3, there is another command as the
           workaround running <code>mkheaders</code> after installing Glibc
-          (Chapter 5).  This command has been removed in LFS 11.4.  Either
-          running this command building LFS 11.4 or later (likely because of
+          (Chapter 5).  This command has been removed in LFS 12.0.  Either
+          running this command building LFS 12.0 or later (likely because of
           a reuse of old scripts - note that such a reuse is strongly
           discouraged) or forgetting this command building LFS 10.0 through
           11.3 will also lead to this error message.</p>
           <p>If you've encountered this issue, untar the GCC tarball again
           and run the command at the bottom of GCC Pass 1 page to create
-          <code>limits.h</code>.  Then if you are building LFS 11.4 or
+          <code>limits.h</code>.  Then if you are building LFS 12.0 or
           later, run <code>rm -f
           $LFS/tools/lib/gcc/$LFS_TGT/*/include-fixed/limits.h</code> which
           would fix the issue in case you've mistakenly run the
