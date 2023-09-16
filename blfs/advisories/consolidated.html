@@ -113,7 +113,8 @@
     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-12.0-005"/>
-    <h4>12.0 005 Glibc (LFS)              Date: 2023-09-13  Severity: Low</h4>
+    <h4>12.0 005 Glibc (LFS)              Date: 2023-09-13
+    (Updated 2023-09-16)  Severity: Low</h4>
     <p>After Glibc-2.38 release, a use after free was fixed in the
     getaddrinfo() function that could allow a denial of service (crash)
     with custom NSS modules and extremely rare situation.
@@ -145,8 +146,22 @@
         <a href='#sa-12.0-004'>SA 12.0-004</a> and
         <a href='#sa-11.2-075'>SA 11.2-075</a> (only for 2.36)
         applied.</li>
-      <li>For Glibc-2.35 and earlier, no fix is available yet.  We will
-        update this advisory once the upstream provides a fix.</li>
+      <li>For Glibc-2.35, rebuild it with the instructions from
+        <a href='../../lfs/view/11.1/chapter08/glibc.html'>Glibc-2.35</a>
+        with
+<a href='../../patches/downloads/glibc/glibc-2.35-cve_2023_4806-1.patch'>
+  glibc-2.35-cve_2023_4806-1.patch</a> <b>and</b> the fixes provided in
+        <a href='#sa-11.0-069'>SA 11.0-069</a> applied.</li>
+      <li>For Glibc-2.34, rebuild it with the instructions from
+        <a href='../../lfs/view/11.0/chapter08/glibc.html'>Glibc-2.34</a>
+        with
+<a href='../../patches/downloads/glibc/glibc-2.34-cve_2023_4806-1.patch'>
+  glibc-2.34-cve_2023_4806-1.patch</a> <b>and</b> the fixes provided in
+        <a href='#sa-11.0-069'>SA 11.0-069</a> applied.</li>
+      <li>Glibc-2.33 and earlier are no longer supported by the upstream,
+        so no fix is available.  If a fix is really needed, rebuild LFS
+        following LFS 12.0 (or 12.0-systemd) with this advisory applied
+        for Chapter 8 Glibc.</li>
     </ul>
     <p>After testing the package with <code>make check</code>, instead
     of installing it directly, perform a <code>DESTDIR</code> installation
