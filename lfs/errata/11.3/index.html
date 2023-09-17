@@ -30,7 +30,11 @@
            <li>In e2fsprogs-1.47.0 test suite, the test named
            <code>m_assume_storage_prezeroed</code> is known to fail but the
            failure is not documented in the book.  Please ignore this
-           test failure.
+           test failure.</li>
+           <li><a href='https://gcc.gnu.org/PR65801'>A bug</a> of GCC 5.1
+           can cause GCC Pass 1 fail to build, so in the host system
+           requirements the minimal GCC version should be 5.2, instead of
+           5.1.</li>
          </ul>
 
 
