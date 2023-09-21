@@ -65,6 +65,26 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-010"/>
+    <h4>12.0 010 gstreamer                Date: 2023-09-21  Severity: High</h4>
+    <p>In gst-plugins-bad-1.22.6, three security vulnerabilities were fixed
+    that could allow for arbitrary code execution when processing MXF files or
+    H.265 videos. The two vulnerabilities that occur when processing MXF files
+    happen when opening a file with uncompressed video, or with AES3 audio. The
+    vulnerability with H.265 videos happens when parsing malformed H.265 video
+    streams. All three of these vulnerabilities have been classified as integer
+    overflows which lead to heap or stack overwrites. Because of the way
+    gstreamer plugins are handled, you will need to upgrade the entire gstreamer
+    stack to fix these vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-40474">CVE-2023-40474</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-40475">CVE-2023-40475</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-40476">CVE-2023-40476</a>.</p>
+    <p>To fix these vulnerabilities, update the gstreamer stack to 1.22.6 using
+    the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
     <a id="sa-12.0-009"/>
     <h4>12.0 009 CUPS                     Date: 2023-09-21  Severity: High</h4>
     <p>In CUPS-2.4.7, a security vulnerability was fixed that could allow for
