@@ -65,6 +65,25 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-011"/>
+    <h4>12.0 011 BIND                     Date: 2023-09-21  Severity: High</h4>
+    <p>In BIND-9.18.19, two security vulnerabilities were fixed that could
+    allow for a remotely-exploitable denial of service (crash of the named
+    server process). One of these vulnerabilities happens when processing
+    DNS-over-TLS queries, and occurs due to an assertion failure when
+    internal data structures are incorrectly reused under significant load.
+    The other vulnerability occurs when processing DNS queries, and can be
+    triggered by sending a specially crafted message over the control channel.
+    It will cause the packet parsing code to run out of available stack memory,
+    and thus cause the named server process to terminate unexpectedly.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-3341">CVE-2023-3341</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4236">CVE-2023-4236</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.18.19 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-12.0-010"/>
     <h4>12.0 010 gstreamer                Date: 2023-09-21  Severity: High</h4>
     <p>In gst-plugins-bad-1.22.6, three security vulnerabilities were fixed
