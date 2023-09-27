@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-016"/>
+    <h4>12.0 016 WebKitGTK+               Date: 2023-09-27  Severity: Critical</h4>
+    <p>In WebKitGTK+-2.42.1, a critical security vulnerability was fixed that
+    could lead to remote code execution when processing crafted web content.
+    The vulnerability was resolved with additional checks when processing
+    JavaScript. Apple is aware of reports that this vulnerability is being
+    actively exploited, and does not require any user interaction to exploit.
+    The BLFS team recommends that you update to WebKitGTK+-2.42.1 immediately
+    to protect your system.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-41993">CVE-2023-41993</a>.</p>
+    <p>To fix this vulnerability, update to WebKitGTK+-2.42.1 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK+ (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK+ (systemd)</a>.</p>
+
     <a id="sa-12.0-015"/>
     <h4>12.0 015 Thunderbird              Date: 2023-09-27  Severity: High</h4>
     <p>In Thunderbird-115.3.0, three security vulnerabilities were fixed that
