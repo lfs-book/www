@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-017"/>
+    <h4>12.0 017 libvpx               Date: 2023-09-29  Severity: High</h4>
+    <p>In libvpx-1.13.0, a security vulnerability has been found that
+    could lead to heap buffer overflow  if a maliciously crafted HTML page
+    is opened in a Web browser using libvpx for supporting VP8.  Google
+    is aware that an exploit for this vulnerability exists in the wild.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5217">CVE-2023-5217</a>.</p>
+    <p>To fix this vulnerability, update to (or rebuild) libvpx-1.13.0 with
+    <a href='../../patches/downloads/libvpx/libvpx-1.13.0-security_fix-1.patch'>
+      libvpx-1.13.0-security_fix-1.patch</a> applied, using the
+    instructions from
+    <a href="../view/svn/multimedia/libvpx.html">libvpx (sysv)</a> or
+    <a href="../view/systemd/multimedia/libvpx.html">libvpx (systemd)</a>.</p>
+
     <a id="sa-12.0-016"/>
     <h4>12.0 016 WebKitGTK+               Date: 2023-09-27  Severity: Critical</h4>
     <p>In WebKitGTK+-2.42.1, a critical security vulnerability was fixed that
