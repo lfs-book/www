@@ -65,6 +65,62 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-018"/>
+    <h4>12.0 018 Glibc (LFS)              Date: 2023-10-03  Severity: High</h4>
+    <p>After Glibc-2.38 release, a buffer overflow in the dynamic loader
+    that could allow a local privilege escalation has been found.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4911">CVE-2023-4911</a>.
+    Glibc-2.34, 2.35, 2.36, 2.37, and 2.38 are affected.</p>
+    <p>The team discovered this vulnerability has claimed that it's very
+    trivial to exploit, so any LFS system running the vulnerable Glibc
+    versions (LFS 11.0, 11.1, 11.2, 11.3, and 12.0) should be patched.</p>
+    <ul>
+      <li>For Glibc-2.38, rebuild it with the instructions from
+        <a href='../../lfs/view/12.0/chapter08/glibc.html'>Glibc-2.38</a>,
+        but with the <code>glibc-2.38-memalign_fix.patch</code>
+        <b>replaced</b> by
+<a href='../../patches/downloads/glibc/glibc-2.38-upstream_fixes-3.patch'>
+  glibc-2.38-upstream_fixes-3.patch</a>.  This patch also includes
+        the memalign fix, the CVE-2023-4527
+        (see <a href='#sa-12.0-004'>SA 12.0-004</a>) fix, <b>and</b>
+        the CVE-2023-4806
+        (see <a href='#sa-12.0-005'>SA 12.0-005</a>) fix.</li>
+      <li>For Glibc-2.34 to 2.37, rebuild it with the instructions from
+        <a href='../../lfs/view/11.0/chapter08/glibc.html'>Glibc-2.34</a>,
+        <a href='../../lfs/view/11.1/chapter08/glibc.html'>Glibc-2.35</a>,
+        <a href='../../lfs/view/11.2/chapter08/glibc.html'>Glibc-2.36</a>,
+        or
+        <a href='../../lfs/view/11.3/chapter08/glibc.html'>Glibc-2.37</a>,
+        with
+<a href='../../patches/downloads/glibc/glibc-2.34-cve_2023_4911-1.patch'>
+  glibc-2.34-cve_2023_4911-1.patch</a> <b>and</b> the fixes provided in
+        <a href='#sa-12.0-005'>SA 12.0-005</a>,
+        <a href='#sa-12.0-004'>SA 12.0-004</a> (for 2.34, 2.35, and 2.36),
+        <a href='#sa-11.2-075'>SA 11.2-075</a> (for 2.36), and
+        <a href='#sa-11.2-075'>SA 11.0-069</a> (for 2.34) applied.</li>
+    </ul>
+    <p>After testing the package with <code>make check</code>, instead
+    of installing it directly, perform a <code>DESTDIR</code> installation
+    with <code>make install DESTDIR=$PWD/dest</code>.  Now as the
+    <code>root</code> user, replace the vulnerable dynamic loader:</p>
+    <pre>install -vm755 dest/usr/lib/ld-linux* /usr/lib</pre>
+    <p>If the debug symbols for Glibc is stripped from the dynamic loader
+    and saved in a separate <code>ld-linux*.so.2.dbg</code> file (as
+    demonstrated in
+    <a href='../../lfs/view/12.0/chapter08/stripping.html'>Stripping</a>),
+    use the following commands instead to replace the library files and
+    the debug symbol file:</p>
+    <pre>ldso=$(echo /usr/lib/ld-linux*[^g])
+objcopy --only-keep-debug dest/${ldso}{,.dbg}
+strip   --strip-unneeded  dest/${ldso}
+objcopy --add-gnu-debuglink=${ldso}.dbg dest/${ldso}
+install -vm755 dest/${ldso}     /usr/lib
+install -vm644 dest/${ldso}.dbg /usr/lib</pre>
+<!-- no need to reboot, tunables are only processed during program startup
+    <p>After the files are replaced, reboot the system immediately.</p>
+-->
+
     <a id="sa-12.0-017"/>
     <h4>12.0 017 libvpx               Date: 2023-09-29  Severity: High</h4>
     <p>In libvpx-1.13.0, a security vulnerability has been found that
@@ -301,7 +357,7 @@
 
     <a id="sa-12.0-005"/>
     <h4>12.0 005 Glibc (LFS)              Date: 2023-09-13
-    (Updated 2023-09-16, 2023-09-24)  Severity: Low</h4>
+    (Updated 2023-09-16, 2023-09-24, 2023-10-03)  Severity: Low</h4>
     <p>After Glibc-2.38 release, a use after free was fixed in the
     getaddrinfo() function that could allow a denial of service (crash)
     with custom NSS modules and extremely rare situation.
@@ -337,8 +393,7 @@
         <a href='../../lfs/view/11.1/chapter08/glibc.html'>Glibc-2.35</a>
         with
 <a href='../../patches/downloads/glibc/glibc-2.35-cve_2023_4806-2.patch'>
-  glibc-2.35-cve_2023_4806-2.patch</a> <b>and</b> the fixes provided in
-        <a href='#sa-11.0-069'>SA 11.0-069</a> applied.</li>
+  glibc-2.35-cve_2023_4806-2.patch</a>.</li>
       <li>For Glibc-2.34, rebuild it with the instructions from
         <a href='../../lfs/view/11.0/chapter08/glibc.html'>Glibc-2.34</a>
         with
