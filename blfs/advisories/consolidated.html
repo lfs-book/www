@@ -109,7 +109,7 @@
     and saved in a separate <code>ld-linux*.so.2.dbg</code> file (as
     demonstrated in
     <a href='../../lfs/view/12.0/chapter08/stripping.html'>Stripping</a>),
-    use the following commands instead to replace the library files and
+    use the following commands instead to replace the dynamic loader and
     the debug symbol file:</p>
     <pre>ldso=$(echo /usr/lib/ld-linux*[^g])
 objcopy --only-keep-debug dest/${ldso}{,.dbg}
