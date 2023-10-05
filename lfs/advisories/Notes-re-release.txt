@@ -10,7 +10,7 @@ In LFS,
 
 1.2 For the previous link, change 'is released' to 'was released'.
 
-2. Copy the current 11.N.html for the new version, then edit it:
+2. Copy the current 12.N.html for the new version, then edit it:
 
 2.1 Increment the id (index.html links to this).
 
