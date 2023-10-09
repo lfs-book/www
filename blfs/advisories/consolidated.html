@@ -65,6 +65,32 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-019"/>
+    <h4>12.0 019 libX11                   Date: 2023-10-09  Severity: Medium</h4>
+    <p>In libX11-1.8.7, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crash), or for remote code
+    execution on systems where X11 is running as root or on systems with X11
+    Forwarding enabled. The first vulnerability can be triggered by connecting
+    to an X server that sends specially crafted replies to X11 protocol
+    requests. The X11 protocol request in question is the XkbGetMap request.
+    This vulnerability is classified as an out-of-bounds read, and was introduced
+    in X11R6.1 (released in March of 1996). The other two vulnerabilities happen
+    when opening or processing XPM images. One of them causes stack exhaustion
+    due to infinite recursion, and the other causes a heap buffer overflow due
+    to an integer overflow. Both of these have existed since X11R2 (February
+    1988). Note that you should update libXpm as well since there has been
+    additional hardening performed in that library because of these issues.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-43785">CVE-2023-43785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-43786">CVE-2023-43786</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-43787">CVE-2023-43787</a>.</p>
+    <p>Additional information can be found at
+    <a href="https://lists.x.org/archives/xorg-announce/2023-October/003424.html">Xorg Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to libX11-1.8.7 using the
+    instructions from
+    <a href="../view/svn/x/x7lib.html">Xorg Libraries (sysv)</a> or
+    <a href="../view/systemd/x/x7lib.html">Xorg Libraries (systemd)</a>.</p>
+
     <a id="sa-12.0-018"/>
     <h4>12.0 018 Glibc (LFS)              Date: 2023-10-03  Severity: High</h4>
     <p>After Glibc-2.38 release, a buffer overflow in the dynamic loader
