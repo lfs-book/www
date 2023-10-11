@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-023"/>
+    <h4>12.0 023 libnotify               Date: 2023-10-11  Severity: Low</h4>
+    <p>In libnotify-0.8.3, a security vulnerability was fixed that could allow
+    for a local user to crash an application running if certain parameters were
+    set when generating a notification. This primarily affects users who use
+    applications which use the Electron framework, such as Discord or Spotify.
+    This vulnerability has not been assigned a CVE, but more information can be
+    found at
+    <a href="https://gitlab.gnome.org/GNOME/libnotify/-/issues/34">libnotify Issue #34</a> and
+    <a href="https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.3.news">NEWS file</a>.</p>
+    <p>To fix this vulnerability, update to libnotify-0.8.3 or later using the
+    instructions from
+    <a href="../view/svn/x/libnotify.html">libnotify (sysv)</a> or
+    <a href="../view/systemd/x/libnotify.html">libnotify (systemd)</a>.</p>
+
     <a id="sa-12.0-022"/>
     <h4>12.0 022 nghttp2                 Date: 2023-10-11  Severity: High</h4>
     <p>In nghttp2-1.57.0, a security vulnerability in the HTTP/2 protocol was
