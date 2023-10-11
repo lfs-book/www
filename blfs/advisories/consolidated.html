@@ -65,8 +65,28 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-022"/>
+    <h4>12.0 022 nghttp2                 Date: 2023-10-11  Severity: High</h4>
+    <p>In nghttp2-1.57.0, a security vulnerability in the HTTP/2 protocol was
+    fixed that allows for a remotely exploitable denial of service attack.
+    This vulnerability is being exploited in the wild to trigger Distributed
+    Denial of Service attacks against various services. If you host a website
+    and have nghttp2 installed on your system, it is recommended that you
+    update your system to nghttp2-1.57.0 immediately. This issue has been named
+    "HTTP/2 Rapid Reset".
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-44487"/>CVE-2023-44487</a>.</p>
+    <p>Additional information can be found at
+    <a href="https://www.cisa.gov/news-events/alerts/2023/10/10/http2-rapid-reset-vulnerability-cve-2023-44487">United States Government Advisory</a>,
+    <a href="https://www.openwall.com/lists/oss-security/2023/10/10/6">oss-security Mailing List posting</a>, and
+    <a href="https://cloud.google.com/blog/products/identity-security/how-it-works-the-novel-http2-rapid-reset-ddos-attack">Google Blog Post</a>.</p>
+    <p>To fix this vulnerability, update to nghttp2-1.57.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/nghttp2.html">nghttp2 (sysv)</a> or
+    <a href="../view/systemd/basicnet/nghttp2.html">nghttp2 (systemd)</a>.</p>
+
     <a id="sa-12.0-021"/>
-    <h4>12.0 020 samba                   Date: 2023-10-11  Severity: High</h4>
+    <h4>12.0 021 samba                   Date: 2023-10-11  Severity: High</h4>
     <p>In samba-4.19.10, several security vulnerabilities were fixed that could
     allow for an attacker to trigger denial of service, crashing the service,
     or potentially compromising it.
