@@ -65,6 +65,57 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-030"/>
+    <h4>11.3 047 SpiderMonkey  Date: 2023-10-24  Severity: High</h4>
+    <p>In the Javascript code of firefox-115.4.0 there is a fix for a potentially
+    exploitable crash. Upstream rate this as Medium, But BLFS rates it as High
+    pending external analysis, see CVE-2023-5728 in
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-46/">mfsa-2023-46</a>.
+    Further details may appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5728">CVE-2023-5728</a>.</p>
+    <p>To fix this, update to SpiderMonkey-115.4.0 or later using the instructions for
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
+    <a id="sa-12.0-029"/>
+    <h4>12.0 029 Firefox  Date: 2023-10-24  Severity: High</h4>
+    <p>In firefox 115.4.0 six vulnerabilities applicable to linux users were fixed.
+    Upstream rate two of these as High, but two others could lead to a crash and
+    are therefore rated as High by BLFS until there is an external analysis.
+    Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-46">mfsa-2023-46</a>.
+    Details may appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5721">CVE-2023-5721</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5724">CVE-2023-5724</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5725">CVE-2023-5725</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5728">CVE-2023-5728</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5730">CVE-2023-5730</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5732">CVE-2023-5732</a>.</p>
+    <p>To fix these update to firefox-115.4.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-12.0-028"/>
+    <h4>12.0 028 Seamonkey                Date: 2023-10-24  Severity: High</h4>
+    <p>Seamonkey-2.53.17.1 ships an old version of libvpx with a different API
+    from current libvpx, preventing use of system libvpx. The recent public
+    vulnerability fixed in libvpx-1.13.1 has caused upstream to commit fixes
+    for several libvpx issues, but they have not yet been able to complete a new
+    release. The vulnerabilities include local information disclosure, resource
+    exhaustion, remote information disclosure, remote exploitation via heap
+    corruption, and a crash.</p>
+    <p>These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-9232">CVE-2019-9232</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-9325">CVE-2019-9325</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-9371">CVE-2019-9327</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-9433">CVE-2019-9433</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5217">CVE-2023-5217</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-44488">CVE-2023-44488</a>.</p>
+    <p>To fix these vulnerabilities, update to Seamonkey-2.53.17.1 plus the
+    consolidated_fixes-1.patch, ori to a later release, using the instructions from
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
     <a id="sa-12.0-027"/>
     <h4>12.0 027 Apache HTTPD           Date: 2023-10-07  Severity: Medium</h4>	
     <p>In httpd-2.4.58, three security vulnerabilities were fixed. More details at <a
