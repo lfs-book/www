@@ -66,8 +66,8 @@
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
     <a id="sa-12.0-032"/>
-    <h4>12.0 032 xorg-server  Date: 2023-10-28  Severity: High</h4>
-    <h4>12.0 032 xwayland     Date: 2023-10-28  Severity: High</h4>
+    <h4>12.0 032 xorg-server and xwayland Updated: 2023-10-29  Severity: High</h4>
+    <!--<h4>12.0 032 xwayland     Date: 2023-10-28  Severity: High</h4>-->
     <p>In xorg-server-21.1.9 and xwayland-23.2.2 a security vulnerability was 
     fixed due to an out-of-bounds write flaw. This issue occurs due to an 
     incorrect calculation of a buffer offset when copying data stored in the 
@@ -76,15 +76,16 @@
     escalation of privileges or denial of service.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5367">CVE-2023-5367</a>.</p>
-    <p>To fix this vulnerability, update to xorg-server-21.1.9 and xwayland-23.2.2
-    or later using the instructions from
-    <a href="../view/12.0/x/xorg-server.html">xorg-server (sysv)</a> or
-    <a href="../view/12.0-systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
-    <a href="../view/12.0/x/xwalyand.html">xwayland (sysv)</a> or
-    <a href="../view/12.0-systemd/x/xwayland.html">xwayland (systemd)</a>.</p>
+    <p>To fix this vulnerability, update to xorg-server-21.1.9 or later using
+    the instructions from
+    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>,
+    and update to xwayland-23.2.2 or later using the instructions from
+    <a href="../view/svn/x/xwalyand.html">xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">xwayland (systemd)</a>.</p>
 
     <a id="sa-12.0-031"/>
-    <h4>12.0 031 xorg-server  Date: 2023-10-28  Severity: Low</h4>
+    <h4>12.0 031 xorg-server  Updated: 2023-10-28  Severity: Low</h4>
     <p>In xorg-server-21.1.9 a security vulnerability was fixed that
     could allow an X server crash in a very specific and legacy configuration 
     (a multi-screen setup with multiple protocol screens, also known as Zaphod 
@@ -95,8 +96,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5380">CVE-2023-5380</a>.</p>
     <p>To fix this vulnerability, update to xorg-server-21.1.9 or later using
     the instructions from
-    <a href="../view/12.0/x/xorg-server.html">xorg-server (sysv)</a> or
-    <a href="../view/12.0-systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
 
     <a id="sa-12.0-030"/>
     <h4>12.0 030 SpiderMonkey  Date: 2023-10-24  Severity: High</h4>
