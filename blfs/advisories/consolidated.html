@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-034"/>
+    <h4>12.0 034 tracker-miners     Date: 2023-10-30 Severity: High</h4>
+    <p>In tracker-miners-3.6.1, a security vulnerability was fixed that allows
+    for a sandbox escape. This vulnerability will allow a maliciously crafted
+    file to execute code outside of the sandbox if the tracker-extract process
+    has been compromised by a vulnerability in another package. This particular
+    vulnerability has been exploited to allow for a 0-click RCE if libcue is
+    installed on the system, and was fixed by tightening the seccomp sandbox to
+    guard against several system calls being used. The initial implementation of
+    this update resulted in repeatable crashes with a SIGSYS on i686 systems, as
+    well as in certain circumstances on x86_64 systems, so the BLFS team has
+    created a patch to go with the update to tracker-miners-3.6.1.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5557">CVE-2023-5557</a>.</p>
+    <p>To fix this vulnerability, update to tracker-miners-3.6.1 and
+    tracker-3.6.0 using the instructions from
+    <a href="../view/svn/gnome/tracker3.html">Tracker (sysv)</a> and
+    <a href="../view/svn/gnome/tracker3-miners.html">Tracker-miners (sysv)</a>, or
+    <a href="../view/systemd/gnome/tracker3.html">Tracker (systemd)</a> and
+    <a href="../view/systemd/gnome/tracker3-miners.html">Tracker-miners (systemd)</a>.</p>
+
     <a id="sa-12.0-033"/>
     <h4>12.0 033 QtWebEngine Date: 2023-10-30 Severity: High</h4>
     <p>In QtWebEngine-5.15.16, fixes for eight Chromium security vulnerabilities
