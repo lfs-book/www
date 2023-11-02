@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-037"/>
+    <h4>12.0 037 Thunderbird              Date: 2023-11-02  Severity: High</h4>
+    <p>In Thunderbird-115.4.1, six security vulnerabilities were fixed that
+    could allow for remotely exploitable crashes, arbitrary code execution,
+    clickjacking, address bark spoofing, and for extensions to open arbitrary
+    URLs in the background. Most of these vulnerabilities are only applicable
+    to HTML mail, but the extensions vulnerability can allow for these URLs to
+    be opened without the user's knowledge and can happen anywhere in the
+    application.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5721">CVE-2023-5721</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5732">CVE-2023-5732</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5724">CVE-2023-5724</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5725">CVE-2023-5725</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5728">CVE-2023-5728</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5730">CVE-2023-5730</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.4.1 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-12.0-036"/>
     <h4>12.0 036 OpenJDK            Date: 2023-11-02  Severity: Medium</h4>
     <p>In OpenJDK-21.0.1, two security vulnerabilities were fixed that could
