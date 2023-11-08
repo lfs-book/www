@@ -65,6 +65,25 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-039"/>
+    <h4>12.0 039 FAAD2                    Date: 2023-11-08  Severity: High</h4>
+    <p>In FAAD2-2.11.0, two security vulnerabilities were fixed that could
+    allow for remote code execution or denial of service when processing MP4
+    files. These occur when using the mp4info command with zero-sample input
+    (or corrupted input), and also when using the wrong mp4 frame offset
+    calculations. Several additional memory safety problems (including integer
+    overflows, division by zero, and out-of-bounds accesses) were fixed in this
+    version as well, though they were not assigned CVEs.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38857">CVE-2023-38857</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38858">CVE-2023-38858</a>.</p>
+    <p>Additional information can be found from the release notes at
+    <a href="https://github.com/knik0/faad2/releases/tag/2.11.0">FAAD2-2.11.0 Release Notes</a>.</p>
+    <p>To fix these vulnerabilities, update to FAAD2-2.11.0 or later using the
+    instructions from
+    <a href="../view/svn/multimedia/faad2.html">FAAD2 (sysv)</a> or
+    <a href="../view/systemd/multimedia/faad2.html">FAAD2 (systemd)</a>.</p>
+
     <a id="sa-12.0-038"/>
     <h4>12.0 038 Exiv2                    Date: 2023-11-07  Severity: High</h4>
     <p>In Exiv2-0.28.1, a security vulnerability was fixed that could allow for
