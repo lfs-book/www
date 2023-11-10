@@ -65,6 +65,29 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-041"/>
+    <h4>12.0 041 PostgreSQL               Date: 2023-11-10  Severity: High</h4>
+    <p>In PostgreSQL-16.1 (and 15.5), three security vulnerabilities were fixed
+    that could allow for memory and information disclosure, arbitrary code
+    execution, signaling superuser processes, and denial of service. The memory
+    disclosure vulnerability happens in aggregate function calls when they
+    recieve 'unknown'-type arguments. The arbitrary code execution and another
+    memory disclosure vulnerability occurs due to a buffer overrun from an
+    integer overflow in array modification. This is due to a lack of overflow
+    checks. The superuser signaling vulnerability occurs when using third
+    party extensions when a user has the pg_cancel_backend role assigned to
+    them. Due to the arbitrary code execution and information disclosure
+    vulnerabilities, it is recommended you update your PostgreSQL servers
+    as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://www.postgresql.org/support/security/CVE-2023-5868/">CVE-2023-5868</a>,
+    <a href="https://www.postgresql.org/support/security/CVE-2023-5869/">CVE-2023-5869</a>, and
+    <a href="https://www.postgresql.org/support/security/CVE-2023-5870/">CVE-2023-5870</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-16.1 (or 15.5 if you
+    wish to stay on 15.x) using the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-12.0-040"/>
     <h4>12.0 040 GIMP                     Date: 2023-11-08  Severity: High</h4>
     <p>In GIMP-2.10.36, four security vulnerabilities were fixed that could
