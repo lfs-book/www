@@ -23,6 +23,10 @@
        Use make-ca-1.13, which provides the new certificate.</li>
        <li>In tuning-fontconfig, the default fonts were changed in
        fontconfig-2.14 from DejaVu to Noto.</li>
+       <li>In elogind, the <code>-Ddev-kvm-mode=0660</code> option should
+       be appended to the <code>meson</code> command so the elogind udev
+       rules will be consistent with the udevd configuration of
+       LFS 12.0.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
