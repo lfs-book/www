@@ -65,6 +65,30 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-043"/>
+    <h4>12.0 043 Intel Microcode  Date: 2023-11-15  Severity: High</h4>
+    <p>In intel-microcode-20231114, a vulnerability known as
+    "Redundant Prefix Issue" was fixed.  It may allow a local privilege
+    privilege, an information disclosure, and/or a denial of service on
+    Intel Xeon processors based on Ice Lake, Sapphire Rapids, or Rocket
+    Lake microarchitectures, or Intel Core, Pentium Gold, and Celeron
+    processors based on Tiger Lake, Alder Lake, Rocket Lake, or Raptor
+    Lake microarchitectures.  This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23583">CVE-2023-23583</a>.
+    More details can be found from the
+    <a href='https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00950.html'>Intel-SA-00950</a>, and
+    <a href='https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/redundant-prefix-issue.html'>the Intel technical paper</a>.
+
+    <p>If you are running the system on an affected processor, to fix this
+    vulnerability, update to intel-microcode-20231114 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.
+    For some affected processors this vulnerability has already been
+    fixed in a previous microcode release, read the Intel technical paper
+    (linked above) for the precice minimal microcode revision needed for
+    the fix.</p>
+
     <a id="sa-12.0-042"/>
     <h4>12.0 042 gstreamer                Date: 2023-11-14  Severity: High</h4>
     <p>In gst-plugins-bad-1.22.7, two security vulnerabilities were fixed that
