@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-044"/>
+    <!-- No "+" after "WebKitGTK in future entries
+         https://bugs.webkit.org/show_bug.cgi?id=264161  -->
+    <h4>12.0 044 WebKitGTK               Date: 2023-11-16  Severity: High</h4>
+    <p>In WebKitGTK-2.42.2, two security vulnerabilities were fixed.
+    While processing crafted Web content,  one of them could lead to a
+    denial of service and another one could lead to arbitrary code
+    execution.  NVD rates the arbitrary code execution issue as High
+    severity.  The BLFS team recommends that you update to
+    WebKitGTK-2.42.2 or later immediately to protect your system.
+    These vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-41983">CVE-2023-41983</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-42852">CVE-2023-42852</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.42.2 or later
+    using the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
     <a id="sa-12.0-043"/>
     <h4>12.0 043 Intel Microcode  Date: 2023-11-15  Severity: High</h4>
     <p>In intel-microcode-20231114, a vulnerability known as
