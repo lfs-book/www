@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-045"/>
+    <h4>12.0 045 GnuTLS                  Date: 2023-11-16  Severity: Medium</h4>
+    <p>In GnuTLS-3.8.2, a security vulnerability was fixed that could allow for
+    a timing side-channel attack. This vulnerability exists because response
+    times to malformed ciphertexts in RSA-PSK ClientKeyExchange differs from
+    response times of ciphertexts with correct PKCS#1 v1.5 padding. Only TLS
+    ciphertext processing is impacted. This could allow for extra information
+    gathering from what was originally intended to be disclosed.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5981">CVE-2023-5981</a>.</p>
+    <p>Additional information can be found at
+    <a href="https://gitlab.com/gnutls/gnutls/-/issues/1511">GnuTLS Issue #1511</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.8.2 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
     <a id="sa-12.0-044"/>
     <!-- No "+" after "WebKitGTK in future entries
          https://bugs.webkit.org/show_bug.cgi?id=264161  -->
