@@ -166,15 +166,17 @@
     <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
 
     <a id="sa-12.0-040"/>
-    <h4>12.0 040 GIMP                     Date: 2023-11-08  Severity: High</h4>
+    <h4>12.0 040 GIMP                     Updated: 2023-11-20  Severity: High</h4>
     <p>In GIMP-2.10.36, four security vulnerabilities were fixed that could
-    allow for arbitrary code execution or denial of service when processing
+    allow for remote code execution or denial of service when processing
     DDS, PSD, or PSP files. Limited details are available about these
     vulnerabilities, but exploitation is possible by opening a crafted file in
     GIMP.
-    These vulnerabilities have been assigned <em>ZDI-CAN-22093</em>,
-    <em>ZDI-CAN-22094</em>, <em>ZDI-CAN-22096</em>, and <em>ZDI-CAN-22097</em>,
-    but the advisories from ZDI are not public at this time.</p>
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-44441">CVE-2023-44441</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2023-44442">CVE-2023-44442</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2023-44443">CVE-2023-44443</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2023-44444">CVE-2023-44444</a>.</p>
     <p>To fix these vulnerabilities, update to GIMP-2.10.36 or later using the
     instructions from
     <a href="../view/svn/xsoft/gimp.html">GIMP (sysv)</a> or
