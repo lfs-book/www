@@ -65,6 +65,29 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-047"/>
+    <h4>12.0 047 Thunderbird             Date: 2023-11-22   Severity: High</h4>
+    <p>In Thunderbird-115.5.0, seven security vulnerabilities were fixed that
+    could allow for remote code execution, remotely exploitable crashes,
+    clickjacking when permission prompts are presented to the user, memory data
+    leakage onto a canvas, and for text to be copied into the primary selection
+    unexpectedly when running under X11. Note that the memory leakage issue is
+    dependent on graphics settings and drivers.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6204">CVE-2023-6204</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6205">CVE-2023-6205</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6206">CVE-2023-6206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6207">CVE-2023-6207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6208">CVE-2023-6208</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6209">CVE-2023-6209</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6212">CVE-2023-6212</a>.</p>
+    <p>More details about these vulnerabilities can be found at the
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-52/">Mozilla Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.5.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-12.0-046"/>
     <h4>12.0 046 Firefox  Date: 2023-11-21  Severity: High</h4>
     <p>In firefox 115.5.0 seven vulnerabilities were fixed.
