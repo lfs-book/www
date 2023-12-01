@@ -38,6 +38,17 @@
            <code>../rules.d/70-power-switch.rules</code> files should be
            removed before "Install the package" to avoid a conflict with
            BLFS elogind package.</li>
+           <li>Due to
+<a href="https://wiki.linuxfromscratch.org/lfs/ticket/5386">an oversight</a>
+           extracting udevd from systemd,
+           the udevd in LFS 12.0 does not name network devices with
+           physical characteristics.  This contradicts with the text
+           description in section 9.4.1.  If you needs the NIC naming
+           based on physical characteristics, create the
+           <code>/etc/systemd/network</code> directory and copy the
+           <code>systemd-254/network/99-default.link</code> file
+           (extracted from <code>systemd-254.tar.gz</code>) to
+           <code>/etc/systemd/network/99-default.link</code>.
          </ul>
 
 <!--#include virtual="/common/footer.html" -->
