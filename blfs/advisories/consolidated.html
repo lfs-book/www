@@ -65,6 +65,33 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-048"/>
+    <h4>12.0 048 QtWebEngine             Date: 2023-12-01   Severity: Critical</h4>
+    <p>In QtWebEngine-5.15.17, nine security vulnerabilities were fixed that
+    could allow for remotely exploitable crashes and remote code execution. One
+    of these vulnerabilities is under active exploitation and can be triggered
+    when rendering any web page that contains an image or other 2D content. The
+    other vulnerabilities may be triggered during navigation, VP8 encoding,
+    using ZIP files, when using site isolation capabilities, when using sites
+    that use the WebAudio API, and during garbage collection.
+    Because of the severity of the Skia vulnerability that can be triggered when
+    visiting web pages with images and other 2D content, it is recommended that
+    you update to QtWebEngine-5.15.17 immediately to protect your system.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6345">CVE-2023-6345</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5482">CVE-2023-5482</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5849">CVE-2023-5849</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-45853">CVE-2023-45853</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5218">CVE-2023-5218</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5217">CVE-2023-5217</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5996">CVE-2023-5996</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6112">CVE-2023-6112</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5997">CVE-2023-5997</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-5.15.17 or later
+    using the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.0-047"/>
     <h4>12.0 047 Thunderbird             Date: 2023-11-22   Severity: High</h4>
     <p>In Thunderbird-115.5.0, seven security vulnerabilities were fixed that
