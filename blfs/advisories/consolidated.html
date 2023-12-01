@@ -65,6 +65,18 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-51"/>
+    <h4>12.0 051 MariaDB Date: 2023-12-01 Severity: Medium</h4>
+    <p>In MariaDB-10.11.6, a security vulnerability was fixed that could 
+    allow for any attacker with network access to the server to effectively
+    DOS (crash through too many requests) the server.  
+    These have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-22084">CVE-2023-22084</a>.</p>
+    <p>To fix this, update to MariaDB-10.11.6 or later using the
+    instructions from the development book for
+    <a href="../view/systemd/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/svn/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
     <a id="sa-12.0-050"/>
     <h4>12.0 050 OpenSSL (LFS)           Date: 2023-12-01   Severity: Low</h4>
     <p>In OpenSSL-3.2.0, a security vulnerability was fixed that could allow for
