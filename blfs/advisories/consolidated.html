@@ -65,6 +65,106 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-047"/>
+    <h4>12.0 047 Thunderbird             Date: 2023-11-22   Severity: High</h4>
+    <p>In Thunderbird-115.5.0, seven security vulnerabilities were fixed that
+    could allow for remote code execution, remotely exploitable crashes,
+    clickjacking when permission prompts are presented to the user, memory data
+    leakage onto a canvas, and for text to be copied into the primary selection
+    unexpectedly when running under X11. Note that the memory leakage issue is
+    dependent on graphics settings and drivers.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6204">CVE-2023-6204</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6205">CVE-2023-6205</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6206">CVE-2023-6206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6207">CVE-2023-6207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6208">CVE-2023-6208</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6209">CVE-2023-6209</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6212">CVE-2023-6212</a>.</p>
+    <p>More details about these vulnerabilities can be found at the
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-52/">Mozilla Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.5.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.0-046"/>
+    <h4>12.0 046 Firefox  Date: 2023-11-21  Severity: High</h4>
+    <p>In firefox 115.5.0 seven vulnerabilities were fixed.
+    Upstream rate five of these as High.
+    Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-50">mfsa-2023-50</a>.
+    Details may appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6204">CVE-2023-6204</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6205">CVE-2023-6205</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6206">CVE-2023-6206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6207">CVE-2023-6207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6208">CVE-2023-6208</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6209">CVE-2023-6209</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6212">CVE-2023-6212</a>.</p>
+    <p>To fix these update to firefox-115.5.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-12.0-045"/>
+    <h4>12.0 045 GnuTLS                  Date: 2023-11-16  Severity: Medium</h4>
+    <p>In GnuTLS-3.8.2, a security vulnerability was fixed that could allow for
+    a timing side-channel attack. This vulnerability exists because response
+    times to malformed ciphertexts in RSA-PSK ClientKeyExchange differs from
+    response times of ciphertexts with correct PKCS#1 v1.5 padding. Only TLS
+    ciphertext processing is impacted. This could allow for extra information
+    gathering from what was originally intended to be disclosed.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5981">CVE-2023-5981</a>.</p>
+    <p>Additional information can be found at
+    <a href="https://gitlab.com/gnutls/gnutls/-/issues/1511">GnuTLS Issue #1511</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.8.2 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
+    <a id="sa-12.0-044"/>
+    <!-- No "+" after "WebKitGTK in future entries
+         https://bugs.webkit.org/show_bug.cgi?id=264161  -->
+    <h4>12.0 044 WebKitGTK               Date: 2023-11-16  Severity: High</h4>
+    <p>In WebKitGTK-2.42.2, two security vulnerabilities were fixed.
+    While processing crafted Web content,  one of them could lead to a
+    denial of service and another one could lead to arbitrary code
+    execution.  NVD rates the arbitrary code execution issue as High
+    severity.  The BLFS team recommends that you update to
+    WebKitGTK-2.42.2 or later immediately to protect your system.
+    These vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-41983">CVE-2023-41983</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-42852">CVE-2023-42852</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.42.2 or later
+    using the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-12.0-043"/>
+    <h4>12.0 043 Intel Microcode  Date: 2023-11-15  Severity: High</h4>
+    <p>In intel-microcode-20231114, a vulnerability known as
+    "Redundant Prefix Issue" was fixed.  It may allow a local privilege
+    privilege, an information disclosure, and/or a denial of service on
+    Intel Xeon processors based on Ice Lake, Sapphire Rapids, or Rocket
+    Lake microarchitectures, or Intel Core, Pentium Gold, and Celeron
+    processors based on Tiger Lake, Alder Lake, Rocket Lake, or Raptor
+    Lake microarchitectures.  This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23583">CVE-2023-23583</a>.
+    More details can be found from the
+    <a href='https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00950.html'>Intel-SA-00950</a>, and
+    <a href='https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/redundant-prefix-issue.html'>the Intel technical paper</a>.</p>
+
+    <p>If you are running the system on an affected processor, to fix this
+    vulnerability, update to intel-microcode-20231114 or later using the
+    instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.
+    For some affected processors this vulnerability has already been
+    fixed in a previous microcode release, read the Intel technical paper
+    (linked above) for the precice minimal microcode revision needed for
+    the fix.</p>
+
     <a id="sa-12.0-042"/>
     <h4>12.0 042 gstreamer                Date: 2023-11-14  Severity: High</h4>
     <p>In gst-plugins-bad-1.22.7, two security vulnerabilities were fixed that
@@ -107,15 +207,17 @@
     <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
 
     <a id="sa-12.0-040"/>
-    <h4>12.0 040 GIMP                     Date: 2023-11-08  Severity: High</h4>
+    <h4>12.0 040 GIMP                     Updated: 2023-11-20  Severity: High</h4>
     <p>In GIMP-2.10.36, four security vulnerabilities were fixed that could
-    allow for arbitrary code execution or denial of service when processing
+    allow for remote code execution or denial of service when processing
     DDS, PSD, or PSP files. Limited details are available about these
     vulnerabilities, but exploitation is possible by opening a crafted file in
     GIMP.
-    These vulnerabilities have been assigned <em>ZDI-CAN-22093</em>,
-    <em>ZDI-CAN-22094</em>, <em>ZDI-CAN-22096</em>, and <em>ZDI-CAN-22097</em>,
-    but the advisories from ZDI are not public at this time.</p>
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-44441">CVE-2023-44441</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2023-44442">CVE-2023-44442</a>,
+    <a href="https://access.redhat.com/security/cve/CVE-2023-44443">CVE-2023-44443</a>, and
+    <a href="https://access.redhat.com/security/cve/CVE-2023-44444">CVE-2023-44444</a>.</p>
     <p>To fix these vulnerabilities, update to GIMP-2.10.36 or later using the
     instructions from
     <a href="../view/svn/xsoft/gimp.html">GIMP (sysv)</a> or
