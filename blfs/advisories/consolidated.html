@@ -65,6 +65,26 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-050"/>
+    <h4>12.0 050 OpenSSL (LFS)           Date: 2023-12-01   Severity: Low</h4>
+    <p>In OpenSSL-3.2.0, a security vulnerability was fixed that could allow for
+    performance to be very slow when generating excessively long X9.42 DH keys,
+    as well as when checking excessively long X9.42 DH keys or parameters. This
+    happens because DH_ckeck_pub_key() does not perform size checking on P and Q
+    parameters. As a result of this, an application which uses the
+    DH_generate_key() or DH_check_pub_key() functions, and supplies a key or
+    parameters from outside sources, could be vulnerable to a Denial of Service
+    attack. Other impacted functions include DH_check_pub_key_ex(),
+    EVP_PKEY_public_check), and EVP_PKEY_generate(). Note that the OpenSSL pkey
+    command line application is also vulnerable when using the "-pubcheck"
+    option.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5678">CVE-2023-5678</a>.</p>
+    <p>To fix this vulnerability, update to OpenSSL-3.2.0 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+
     <a id="sa-12.0-049"/>
     <h4>12.0 049 Perl (LFS)              Date: 2023-12-01   Severity: Medium</h4>
     <p>In Perl-5.38.2, a security vulnerability was fixed that could allow for
@@ -73,10 +93,10 @@
     buffer overflow in a heap allocated buffer.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-47038">CVE-2023-47038</a>.</p>
-    <p>To fix this vulnerability, update to Perl-5.38.2 using the instructions
-    from the LFS book for
-    <a href="../../lfs/view/development/chapter08/perl.html">Perl-5.38.2 (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/perl.html">Perl-5.38.2 (systemd)</a>.</p>
+    <p>To fix this vulnerability, update to Perl-5.38.2 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/perl.html">Perl (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/perl.html">Perl (systemd)</a>.</p>
 
     <a id="sa-12.0-048"/>
     <h4>12.0 048 QtWebEngine             Date: 2023-12-01   Severity: Critical</h4>
