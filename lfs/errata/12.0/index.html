@@ -27,23 +27,25 @@
 
        <h2>Miscellaneous Errata</h2>
          <ul>
-           <li><a href='https://gcc.gnu.org/PR65801'>A bug</a> of GCC 5.1
-           can cause GCC Pass 1 fail to build, so in the host system
+           <li><a href='https://gcc.gnu.org/PR65801'>A bug</a> in GCC 5.1
+           can cause GCC Pass 1 to fail to build, so in the host system
            requirements the minimal GCC version should be 5.2, instead of
            5.1.</li>
+
            <li>If a package manager is used, in udev (from systemd-254)
            the <code>rules.d/70-uaccess.rules</code>,
            <code>rules.d/71-seat.rules</code>,
            <code>rules.d/73-seat-late.rules</code>, and
            <code>../rules.d/70-power-switch.rules</code> files should be
            removed before "Install the package" to avoid a conflict with
-           BLFS elogind package.</li>
+           the BLFS elogind package.</li>
+
            <li>Due to
 <a href="https://wiki.linuxfromscratch.org/lfs/ticket/5386">an oversight</a>
            extracting udevd from systemd,
            the udevd in LFS 12.0 does not name network devices with
-           physical characteristics.  This contradicts with the text
-           description in section 9.4.1.  If you needs the NIC naming
+           physical characteristics.  This contradicts the text
+           description in section 9.4.1.  If you need NIC naming
            based on physical characteristics, create the
            <code>/usr/lib/systemd/network</code> directory and copy the
            <code>systemd-254/network/99-default.link</code> file
