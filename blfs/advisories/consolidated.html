@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-053"/>
+    <h4>12.0 053 cURL Date: 2023-12-06   Severity: High</h4>
+    <p>In cURL-8.5.0 two security vulnerabilities were fixed; one that could allow
+    for curl cookies to be passed to another domain or site, thus allowing for
+    cookie hijacking; and another that deletes the HSTS data if curl is writing to 
+    a file with a long name, thus making subsequent requests unaware of the HSTS 
+    status.
+    These vulnerabilities have been assigned
+    <a href="https://curl.se/docs/CVE-2023-46218.html">CVE-2023-46218</a> and
+    <a href="https://curl.se/docs/CVE-2023-46219.html">CVE-2023-46219</a> and
+    <p>To fix these vulnerabilities, update to cURL-8.5.0 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-12.0-052"/>
     <h4>12.0 052 WebKitGTK               Date: 2023-12-06   Severity: Critical</h4>
     <p>In WebKitGTK-2.42.3, two security vulnerabilities were fixed that could
