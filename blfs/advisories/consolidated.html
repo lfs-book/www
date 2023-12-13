@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12-055"/>
+    <h4>12.0 055 xorg-server Date: 2023-12-13 Severity: High</h4>
+    <p>In xorg-server-21.1.9 and earlier, querying or changing XKB button
+    actions such as moving from a touchpad to a mouse can result in
+    out-of-bounds memory reads and writes. This may allow local privilege
+    escalation or possible remote code execution in cases where X11
+    forwarding is involved.
+    This has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6377">CVE-2023-6377</a>.</p>
+    <p>To fix this, update to xorg-server-21.1.10 or later using the
+    instructions from the development book for
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/svn/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+
+
     <a id="sa-12.0-054"/>
     <h4>12.0 054 Libreoffice             Date: 2023-12-08   Severity: Critical</h4>
     <p>In Libreoffice-7.6.4.1, a security vulnerability in the bundled copy of
