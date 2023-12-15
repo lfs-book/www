@@ -535,11 +535,11 @@
     <h3>Xorg-server</h3>
 
     <a id="sa-12.0-055"/>
-    <h4>12.0 055 xorg-server              Updated: 2023-12-13  Severity: High</h4>
-    <p>In xorg-server-21.1.9 and earlier a security vulnerability was fixed that
-    could allow local privilege escalation or possible remote code execution. 
-    X server crash in a very specific and legacy configuration.
-    Update to xorg-server-21.1.10
+    <h4>12.0 055 xorg-server              Updated: 2023-12-15  Severity: High</h4>
+    <p>In xorg-server-21.1.10, two security vulnerabilities were fixed that
+    could allow for privilege escalation and memory disclosure. If you are
+    using SSH X Forwarding, these vulnerabilities could be used for remote
+    code execution. Update to xorg-server-21.1.10
     <a href="consolidated.html#sa-12.0-055">12.0-055</a></p>
 
     <a id="sa-12.0-032"/>
@@ -559,6 +559,15 @@
 <!-- end of Xorg-server -->
 
     <h3>Xwayland</h3>
+
+    <a id="sa-12.0-056"/>
+    <h4>12.0 056 Xwayland                 Date: 2023-12-15     Severity: High</h4>
+    <p>In Xwayland-23.2.3, two security vulnerabilities were fixed due to
+    out-of-bounds reads and writes, leading to privilege escalation and
+    information disclosure. Update to Xwayland-23.2.3.
+    <a href="consolidated.html#sa-12.0-056">12.0-056</a></p>
+
+    <a id="sa-12.0-032"/>
     <h4>12.0 032 xwayland                 Updated: 2023-10-29  Severity: High</h4>
     <p>In xwayland-23.2.2 a security vulnerability was fixed due to an 
     out-of-bounds write flaw, leading to privilege escalation or denial
