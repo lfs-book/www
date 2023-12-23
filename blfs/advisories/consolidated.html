@@ -65,7 +65,20 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
-    <a id="sa-12.0-059"/>
+    <a id="sa-12.0-060"/>
+    <h4>12.0 060 ProFTPD Date: 2023-12-23  Severity: Critical</h4>
+    <p>In ProFTPD 1.3.8b, a critical level security vulnerability codenamed
+    Terrapin (SSH) was fixed. This could in theory allow for an attacker to 
+    downgrade the security within the SSH connection leading to a less secure
+    connection from the 'Man in the Middle' attack. This vulnerability has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-48795">CVE-2023-48975</a>.</p>
+    <p>To fix these vulnerabilities, update to ProFTPD-1.3.8b or later using
+    the instructions from
+    <a href="../view/svn/server/proftpd.html">ProFTPD (sysv)</a> or
+    <a href="../view/systemd/server/proftpd.html">ProFTPD (systemd)</a>.</p>
+    <a id="sa-12.0-060"/>
+
     <h4>12.0 059 Seamonkey    Date: 2023-12-20  Severity: High</h4>
     <p>In Seamonkey-2.53.18, several security vulnerabilities were fixed that
     could allow for clickjacking, address bar spoofing, crashes, extensions
