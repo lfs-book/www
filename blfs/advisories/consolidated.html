@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-062"/>
+    <h4>12.0 062 libssh2 Date: 2023-12-26  Severity: Critical</h4>
+    <p>In libssh2-1.11.0, a vulnerability has been discovered that allows for
+    silent encryption downgrades due to MITM attacks. This vulnerability has
+    been rated as Critical, and is also known as the "Terrapin" attack. Most
+    implementations of the SSH protocol are impacted and have to be updated
+    on both the client and server side. The libssh2 developers have fixed the
+    vulnerability, but have not done a new release yet. The BLFS team has
+    backported a patch with a fix for the vulnerability, and this advisory
+    will be updated once a new release is made. For more implementation, see
+    the OpenSSH and ProFTPd advisories listed below.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-48795">CVE-2023-48795</a>.</p>
+    <p>To fix this vulnerability, rebuild libssh2 with the patch in the book
+    using the instructions from
+    <a href="../view/svn/general/libssh2.html">libssh2 (sysv)</a> or
+    <a href="../view/systemd/general/libssh2.html">libssh2 (systemd)</a>.</p>
+
     <a id="sa-12.0-061"/>
     <h4>12.0 061 OpenSSH Date: 2023-12-26  Severity: Critical</h4>
     <p>In OpenSSH-9.6p1, two security vulnerabilities were fixed that could
