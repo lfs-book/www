@@ -65,6 +65,31 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-067"/>
+    <h4>12.0 067 Postfix      Date: 2023-12-29  Severity: Critical</h4>
+    <p>In Postfix-3.8.4 (as well as 3.7.9, 3.6.13, and 3.5.23), a security
+    vulnerability was fixed that allows for SMTP smuggling on public-facing
+    mail servers. Remote attackers can use a publicly available exploit to
+    inject email messages with a spoofed MAIL FROM address, which also allows
+    bypassing SPF protection mechanisms. Similar to Exim, this is also due to
+    a difference in the way Postfix handles line endings. If you maintain a
+    public-facing mail server which uses Postfix, it's highly recommended that
+    you update Postfix to 3.8.4 (or the other versions described above) as soon
+    as possible. Note that the feature that fixes this vulnerability must be
+    turned on with additional configuration.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51764">CVE-2023-51764</a>.</p>
+    <p>To fix this vulnerability, update to Postfix-3.8.4 or later using the
+    instructions from
+    <a href="../view/svn/server/postfix.html">Postfix (sysv)</a> or
+    <a href="../view/systemd/server/postfix.html">Postfix (systemd)</a>.</p>
+    <p>In addition to updating Postfix, you must also add the following lines
+    to your /etc/postfix/main.cf configuration file:</p>
+    <pre>smtpd_forbid_bare_newline = yes
+smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
+    <p>On systems running Postfix 3.7, 3.6, or 3.5, please update to Postfix
+    3.7.9, 3.6.13, or 3.5.23.</p>
+
     <a id="sa-12.0-066"/>
     <h4>12.0 066 Exim         Date: 2023-12-29  Severity: Critical</h4>
     <p>In Exim-4.97.1, a security vulnerability was fixed that allows for SMTP
