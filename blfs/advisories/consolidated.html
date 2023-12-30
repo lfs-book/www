@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-068"/>
+    <h4>12.0 068 systemd      Date: 2023-12-30  Severity: Medium</h4>
+    <p>A security vulnerability was found in systemd-resolved that could allow
+    systemd-resolved to accept records of DNSSEC-signed domains, even when they
+    have no signature. This would allow a man-in-the-middle attacker (or the
+    upstream DNS resolver) to manipulate DNS records in a way that the system
+    would accept them, even though they are invalid. The default settings for
+    systemd-resolved do not enable DNSSEC support though, so to be vulnerable,
+    you must have already enabled DNSSEC support in your system's configuration.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7008">CVE-2023-7008</a>.</p>
+    <p>If you have enabled DNSSEC support in systemd-resolved, you should
+    rebuild systemd using the instructions from
+    <a href="../view/systemd/general/systemd.html">systemd (systemd)</a>.</p>
+    <p>If you have not enabled DNSSEC support on your system, no action is
+    necessary.</p>
+
     <a id="sa-12.0-067"/>
     <h4>12.0 067 Postfix      Date: 2023-12-29  Severity: Critical</h4>
     <p>In Postfix-3.8.4 (as well as 3.7.9, 3.6.13, and 3.5.23), a security
