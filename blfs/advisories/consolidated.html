@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-066"/>
+    <h4>12.0 066 Exim         Date: 2023-12-27  Severity: Critical</h4>
+    <p>In Exim-4.97.1, a security vulnerability was fixed that allows for SMTP
+    smuggling in certain configurations. Remote attackers can use a publicly
+    available exploit to inject email messages with a spoofed MAIL FROM address,
+    which will allow bypassing the SPF protection mechanisms. This is due to a
+    difference in the way Exim (and other mail servers) handle line endings,
+    and affects most implementations of the SMTP protocol due to it being a
+    weakness in the SMTP standard itself.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51766">CVE-2023-51766</a>.</p>
+    <p>For more information, please see
+    <a href="https://sec-consult.com/blog/detail/smtp-smuggling-spoofing-e-mails-worldwide/">SMTP Smuggling Blog Post</a>.</p>
+    <p>To fix this vulnerability, update to Exim-4.97.1 or later using the
+    instructions from
+    <a href="../view/svn/server/exim.html">Exim (sysv)</a> or
+    <a href="../view/systemd/server/exim.html">Exim (systemd)</a>.</p>
+
     <a id="sa-12.0-065"/>
     <h4>12.0 065 gstreamer    Date: 2023-12-27  Severity: High</h4>
     <p>In gst-plugins-bad-1.22.8, a security vulnerability was fixed that could
