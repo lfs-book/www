@@ -40,7 +40,7 @@
         <li><a href="#dirty-sources">I didn't delete the source tree after my last attempt. Do I need to?</a></li>
         <li><a href="#perm-denied">I'm getting `/dev/null: Permission denied'</a></li>
         <li><a href="#sig11">signal 11 (internal error: Segmentation fault)</a></li>
-        <li><a href="#any-no-such-file">No such file or directory</a></li>
+        <li><a href="#chroot-no-such-file">"No such file or directory" trying to chroot</a></li>
         <li><a href="#configure-no-such-file">bash: ./configure: No such file or directory</a></li>
         <li><a href="#bad-interpreter-permission-denied">./configure: bad interpreter: Permission denied</a></li>
         <li><a href="#conf-guess-fail">configure can't guess my host type.</a></li>
@@ -431,21 +431,26 @@
           <p>If both bad memory and CPU overheating can be ruled out, see the
           long answer.</p>
         </dd>
-        <dt id="any-no-such-file">No such file or directory</dt>
+        <dt id="chroot-no-such-file">"No such file or directory" trying to chroot</dt>
         <dd>
-          <p>Examples of this error are:</p>
+          <p>Example of this error is:</p>
           <div class="cmd">
-            <p>/usr/bin/env: /bin/bash: No such file or directory<br />
-               gcc: No such file or directory</p>
+            <p>/usr/bin/env: /bin/bash: No such file or directory</p>
           </div>
-          <p>What happens is that the path to the dynamic linker path
+          <p>If you are sure $LFS/bin/bash exists,
+          what happens is likely that the path to the dynamic linker path
           embedded inside the executable is /lib64/ld-linux-x86-64.so.2
           (/lib/ld-linux.so.2 for 32-bit), and
           when one goes to run the binary inside the chroot where
           /lib64/ld-linux-x86-64.so.2 does not exist yet, the very unhelpful
           <code>No such file or directory</code> error message is shown.</p>
-          <p>Check if the symlink /lib64/ld-linux-x86-64.so.2 is broken.
-          For LFS 9.1 or older, it may indicate a typo in GCC Pass 2.</p>
+          <p>Check if the symlink $LFS/lib64/ld-linux-x86-64.so.2 (it should
+          target ../lib/ld-linux-x86-64.so.2, or ../lib/ld-linux.so.2 for
+          32-bit) and/or $LFS/lib (it should target usr/lib) are broken.
+          Note that these symlinks must be relative (i.e. it should be
+          ../lib/ld-linux-x86-64.so.2, <b>not</b>
+          $LFS/lib/ld-linux-x86-64-so.2) so they are still vaild in the
+          chroot environment.</p>
         </dd>
         <dt id="configure-no-such-file">bash: ./configure: No such file or directory</dt>
         <dd>
