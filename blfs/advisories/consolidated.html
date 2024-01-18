@@ -65,6 +65,20 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-073"/>
+    <h4>12.0 073 Linux-PAM Date: 2024-01-18  Severity: Medium</h4>
+    <p>In Linux-PAM-1.6.0, a security vulnerability was fixed that could allow
+    for a local denial of service (crash) when using the pam_namespace.so PAM
+    module. Note that a standard BLFS installation will not use this module,
+    so most systems are unaffected unless a user has added this module into the
+    system on their own. If you use this module, updating is recommended.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-22365">CVE-2024-22365</a>.</p>
+    <p>To fix this vulnerability, update to Linux-PAM-1.6.0 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/linux-pam.html">Linux-PAM (sysv)</a> or
+    <a href="../view/systemd/postlfs/linux-pam.html">Linux-PAM (systemd)</a>.</p>
+
     <a id="sa-12.0-072"/>
     <h4>12.0 072 Xwayland  Date: 2024-01-17  Severity: Medium</h4>
     <p>In Xwayland-23.2.4, four security vulnerabilities were fixed that
