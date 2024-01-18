@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-071"/>
+    <h4>12.0 071 xorg-server  Date: 2024-01-17  Severity: Medium</h4>
+    <p>In xorg-server-21.1.11, four security vulnerabilities were fixed that
+    could allow for crashes, privilege escalation, and remote code execution
+    on systems where X11 forwarding is in use. These vulnerabilities are
+    classified as heap buffer overflows and out-of-bounds memory accesses.
+    The heap buffer overflows occur in the DisableDevice(),
+    XISendDeviceHierarchyEvent(), DeviceFocusEvent(), and ProcXIQueryPointer()
+    functions, while the out-of-bounds memory access happens when reattaching
+    to a different master device.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6816">CVE-2023-6816</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0229">CVE-2024-0229</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21885">CVE-2024-21885</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21886">CVE-2024-21886</a>.</p>
+    <p>For more information, please see
+    <a href="https://lists.x.org/archives/xorg/2024-January/061525.html">X.Org Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to xorg-server-21.1.11 or later
+    using the instructions from
+    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+
     <a id="sa-12.0-070"/>
     <h4>12.0 070 GnuTLS       Date: 2024-01-17  Severity: Medium</h4>
     <p>In GnuTLS-3.8.3, two security vulnerabilities were fixed that could
