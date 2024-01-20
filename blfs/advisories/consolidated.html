@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-074"/>
+    <h4>12.0 074 OpenJDK Date: 2024-01-20  Severity: High</h4>
+    <p>In OpenJDK-21.0.2, five security vulnerabilities have been fixed in the
+    Hotspot and Security components that could allow for unauthorized creation,
+    modification, and deleation of data on a system, as well as for information
+    disclosure, denial of service, and remote code execution. Four of these
+    vulnerabilities are exploitable via the network, with no provileges required
+    and no user interaction required either. The fifth vulnerability is only
+    exploitable locally, and requires some privileges (though still without any
+    user interaction being required).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20918">CVE-2024-20918</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20952">CVE-2024-20952</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20919">CVE-2024-20919</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20921">CVE-2024-20921</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20945">CVE-2024-20945</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-21.0.2 (or use the
+    prebuilt Java binaries) using the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+
     <a id="sa-12.0-073"/>
     <h4>12.0 073 Linux-PAM Date: 2024-01-18  Severity: Medium</h4>
     <p>In Linux-PAM-1.6.0, a security vulnerability was fixed that could allow
