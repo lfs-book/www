@@ -65,10 +65,24 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-077"/>
+    <h4>12.0 077 Jinja2 (LFS)           Date: 2024-01-21   Severity: Medium</h4>
+    <p>In Jinja2-3.1.3, a security vulnerability in the XML attribute
+    filter was fixed that could allows a cross-site scripting attack if
+    you are running a service accepting user inputs and rendering them
+    with Jinja2. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-22195">CVE-2024-22195</a>.</p>
+    <p>To fix this vulnerability, update to Jinja2-3.1.3 using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/jinja2.html">Jinja2 (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/jinja2.html">Jinja2 (systemd)</a>.
+    Note that the <code>--upgrade</code> option must be passed to
+    <code>pip3 install</code> when upgrading a Python module.</p>
+
     <a id="sa-12.0-076"/>
     <h4>12.0 076 Ncurses (LFS)           Date: 2024-01-21   Severity: Medium</h4>
     <p>In Ncurses-6.4-20230520, a security vulnerability was fixed that
-    could allows local users to trigger security-relevant memory
+    could allow local users to trigger security-relevant memory
     corruption via malformed data in a terminfo database file found in
     $HOME/.terminfo or reached via the TERMINFO or TERM environment
     variable when Ncurses is used by a setuid application (for example
