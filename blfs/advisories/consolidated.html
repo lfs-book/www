@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-076"/>
+    <h4>12.0 076 Ncurses (LFS)           Date: 2024-01-21   Severity: Medium</h4>
+    <p>In Ncurses-6.4-20230520, a security vulnerability was fixed that
+    could allows local users to trigger security-relevant memory
+    corruption via malformed data in a terminfo database file found in
+    $HOME/.terminfo or reached via the TERMINFO or TERM environment
+    variable when Ncurses is used by a setuid application (for example
+    GNU Screen).  In theory a local privilege escalation is possible but
+    very difficult, and no such an attack has been really developed.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-29491">CVE-2023-29491</a>.</p>
+    <p>To fix this vulnerability, update to
+    <a href='https://anduin.linuxfromscratch.org/LFS/ncurses-6.4-20230520.tar.xz'>Ncurses-6.4-20230520</a> using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/ncurses.html">Ncurses (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/ncurses.html">Ncurses (systemd)</a>.</p>
+
     <a id="sa-12.0-075"/>
     <h4>12.0 075 Coreutils (LFS)           Date: 2024-01-21   Severity: Medium</h4>
     <p>In Coreutils-9.4, a security vulnerability was found in the split
