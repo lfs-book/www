@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-082"/>
+    <h4>12.0 082 GnuPG        Date: 2024-01-26  Severity: High</h4>
+    <p>In GnuPG-2.4.4, a security flaw was fixed where Smartcard generation was
+    keeping an unprotected backup copy of the key on disk. Upstream says that
+    all possibly affected users should check whether an unintended copy of a
+    Smartcard key exists and delete it. If you generated a key with the
+    <em>--edit-key</em> switch using either GnuPG-2.4.2, 2.4.3, or 2.2.42, please
+    look for an unprotected backup copy of the key with the
+    <em>gpg-card checkkeys</em> command. If you do not get any output, you are
+    not affected. If you do get output where the word 'clear' is mentioned for
+    a key, you should run <em>gpg-card checkkeys --delete-clear-copy</em> to
+    remove it.</p>
+    <p>For more information, please see the
+    <a href="https://gnupg.org/blog/20240125-smartcard-backup-key.html">GnuPG Security Advisory</a>.</p>
+    <p>Note that only users who have used GnuPG to generate a smartcard using
+    the <em>--edit-key</em> switch are affected.</p>
+    <p>To fix this vulnerability, update to GnuPG-2.4.4 or later, and then use
+    the instructions above to check for unprotected copies of keys. To update
+    GnuPG, use the instructions from
+    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+
     <a id="sa-12.0-081"/>
     <h4>12.0 081 gstreamer    Date: 2024-01-25  Severity: High</h4>
     <p>In gst-plugins-bad-1.22.9, a security vulnerability was fixed that could
