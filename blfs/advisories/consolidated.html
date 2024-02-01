@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-084"/>
+    <h4>12.0 084 cURL                    Date: 2024-02-01   Severity: Low</h4>
+    <p>In cURL-8.6.0, a security vulnerability was fixed that could allow for
+    an OCSP verification bypass due to TLS session reuse. This vulnerability
+    occurs because cURL inadvertently kept the SSL session ID for connections
+    in it's cache even when the verify status (OCSP stapling) test failed. A
+    subsequent transfer to the same hostname could then succeed if the session
+    ID cache was still fresh, which skips the verify status check. Note that
+    this issue is limited to only using TLS 1.2, using TLS 1.3 will not trigger
+    this problem.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2024-0853">CVE-2024-0853</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.6.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-12.0-083"/>
     <h4>12.0 083 OpenSSL (LFS)           Date: 2024-02-01   Severity: Low</h4>
     <p>In OpenSSL-3.2.1, two security vulnerabilities was fixed.  One of
