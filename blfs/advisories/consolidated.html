@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-083"/>
+    <h4>12.0 083 OpenSSL (LFS)           Date: 2024-02-01   Severity: Low</h4>
+    <p>In OpenSSL-3.2.1, two security vulnerabilities was fixed.  One of
+    them could cause applications loading files in the PKCS12 format from
+    untrusted sources to terminate abruptly.  Another could cause
+    applications checking the RSA public keys with the function
+    EVP_PKEY_public_check() to experience long delays.  Both may lead to a
+    Denial of Service if processing PKCS12 files or RSA public keys from
+    untrusted sources.
+    These vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0727">CVE-2024-0727</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6237">CVE-2023-6237</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.2.1 or later
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.  Note that CVE-2024-0727 also affects OpenSSL-1.1.1 and 1.0.2
+    series, but they are no longer publicly supported by the OpenSSL
+    developers.  So if you are still running a system with OpenSSL-1.1.1
+    or 1.0.2 and you want to get CVE-2024-0727 fixed, you need to update
+    to OpenSSL-3.2.1 and rebuild everything linked against OpenSSL.</p>
+
     <a id="sa-12.0-082"/>
     <h4>12.0 082 GnuPG        Date: 2024-01-26  Severity: High</h4>
     <p>In GnuPG-2.4.4, a security flaw was fixed where Smartcard generation was
