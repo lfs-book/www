@@ -51,9 +51,27 @@
 
     <h3>Glibc</h3>
 
-    <p style="font-style: italic;">In LFS the only safe way to update Glibc
+    <p style="font-style: italic;"><del>In LFS the only safe way to update Glibc
     is to build a new system, but reinstall the same Glibc version with
-    patches provided in security advisories should be safe.</p>
+    patches provided in security advisories should be safe.</del></p>
+
+    <p style="font-style: italic;">Updating Glibc on a running LFS system
+    requires extra precautions to avoid breaking the system.  The
+    precautions are documented in an "Important" box of the LFS book section
+    for Glibc.  Follow it strictly or you may render the system completely
+    unusable.</p>
+
+    <h4>12.0 085 Glibc Date: 2024-02-02  Severity: High</h4>
+
+    <p>In Glibc 2.38, 2.37, and 2.36 (if
+    <a href='../../blfs/advisories/consolidated.html#sa-11.2-075'>SA
+      11.2-075</a> has been applied), there are three vulnerabilities
+    in the <code>syslog</code> function and one of them can allow an
+    local privilege escalation.</p>
+
+    <p>Please read the link and fix the vulnerability immediately if you
+    are running LFS 11.2, 11.3, or 12.0.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.0-085">12.0-085</a></p>
 
     <h4>12.0 018 Glibc Date: 2023-10-03  Severity: High</h4>
 
