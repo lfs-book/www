@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-086"/>
+    <h4>12.0 086 sendmail                Date: 2024-02-02   Severity: Critical</h4>
+    <p>In sendmail-8.18.2, a security vulnerability was fixed that allows for
+    SMTP smuggling on publicly-accessible mail servers. Remote attackers can use
+    a publicly available exploit to inject email messages with a spoofed MAIL
+    FROM address, which also allows bypassing SPF protection mechanisms.
+    Similar to Exim and Postfix, this is also due to a difference in the way
+    Sendmail handles line endings. If you maintain a public-facing mail server
+    which uses Sendmail, it's highly recommended that you update Sendmail to
+    8.18.2 as soon as possible. The new settings that protect against this
+    security vulnerability are enabled by default.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51765">CVE-2023-51765</a>.</p>
+    <p>To fix this vulnerability, update to sendmail-8.18.2 or later using the
+    instructions from
+    <a href="../view/svn/server/sendmail.html">sendmail (sysv)</a> or
+    <a href="../view/systemd/server/sendmail.html">sendmail (systemd)</a>.</p>
+
     <a id="sa-12.0-085"/>
     <h4>12.0 085 Glibc (LFS)              Date: 2024-02-02  Severity: High</h4>
     <p>In Glibc-2.39, two heap buffer overflow vulnerabilities and one
