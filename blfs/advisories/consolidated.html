@@ -65,6 +65,25 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-089"/>
+    <h4>12.0 089 WebKitGTK              Date: 2024-02-05   Severity: Critical</h4>
+    <p>In WebKitGTK-2.42.5, three security vulnerabilities were fixed that could
+    allow for trivial remote code execution and for a webpage to fingerprint a
+    user. The remote code execution vulnerabilities occur due to type confusion
+    issues, and one of them is known to be exploited in the wild. Both of these
+    were handled with improved checks and memory handling. The fingerprinting
+    vulnerability was addressed with improved access restrictions. Due to the
+    remote code execution vulnerabilities it is highly recommended that you
+    update WebKitGTK immediately to protect your system.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23222">CVE-2024-23222</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23206">CVE-2024-23206</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23213">CVE-2024-23213</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.42.5 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
     <a id="sa-12.0-088"/>
     <h4>12.0 088 OpenLDAP               Date: 2024-02-05   Severity: High</h4>
     <p>In OpenLDAP-2.6.7, a security vulnerability was fixed that could allow
