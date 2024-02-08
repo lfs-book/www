@@ -281,7 +281,7 @@
     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="sa-12.0-078"/>
-    <h4>12.0 078 Postfix                Date: 2024-01-23   Severity: Critical</h4>
+    <h4>12.0 078 Postfix             Revised: 2024-01-23   Severity: Critical</h4>
     <p>In Postfix-3.8.5 (and 3.7.10, 3.6.14, and 3.5.24), improvements to the
     fix for <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51764">CVE-2023-51764</a>
     (SMTP smuggling) were made that allow for more compatibility with some
@@ -296,8 +296,13 @@
     <a href="../view/systemd/server/postfix.html">Postfix (systemd)</a>.</p>
     <p>In addition to updating Postfix, you must also add the following lines
     to your /etc/postfix/main.cf configuration file if you haven't yet:</p>
-    <pre>smtpd_forbid_bare_newline = yes
+    <pre>smtpd_forbid_bare_newline = normalize
 smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
+    <p>In postfix-3.8.5, the previous recommended value for smtpd_forbid_bare_newline
+    ('yes') is now an alias for 'normalize' to accomodate mailservers which include
+    bare newlines only in the message body. Alternatively, the value can now be
+    set to 'reject' to continue to reject such messages as happened with the
+    recommended 'yes' setting in 3.8.4.</p>
     <p>On systems running Postfix 3.7, 3.6, or 3.5, please update to Postfix
     3.7.10, 3.6.14, or 3.5.24.</p>
 
