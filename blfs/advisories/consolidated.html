@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-090"/>
+    <h4>12.0 090 PostgreSQL Updated: 2024-02-09 Severity: High</h4>
+    <p>In PostgreSQL-16.2 a vulnerability was fixed that could allow
+    for arbitrary command execution through luring a user into running
+    a command (check the CVE for the command).  Due to this it is highly
+    recommended to update to PostgreSQL on any older system.
+    The assigned CVE is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0985">CVE-2024-0985</a>.
+    Information about the issue can be found at:
+    <a href="https://www.postgresql.org/about/news/postgresql-162-156-1411-1314-and-1218-released-2807/">PostgreSQL's site</a>.</p>
+    <p>To fix this, update to PostgreSQL-16.2 or later using the
+    instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-12.0-089"/>
     <h4>12.0 089 WebKitGTK              Date: 2024-02-05   Severity: Critical</h4>
     <p>In WebKitGTK-2.42.5, three security vulnerabilities were fixed that could
