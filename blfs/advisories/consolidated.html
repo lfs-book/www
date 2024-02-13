@@ -65,8 +65,26 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-092"/>
+    <h4>12.0 092 Python3                Date: 2024-02-13  Severity: High</h4>
+    <p>In Python-3.12.2, a security vulnerability was fixed that could allow
+    for silent execution of arbitrary code via hidden *.pth files. *.pth files
+    are executed automatically, unlike normal Python files which need explicit
+    importing or passing as an argument to the Python interpreter. The issue
+    was fixed upstream by skipping *.pth files with names starting with a dot
+    (or the hidden file attribute on other systems).
+    This vulnerability has not been issued a CVE yet, but more details can be
+    found at
+    <a href="https://github.com/python/cpython/issues/113659">Github Issue 113659</a>.</p>
+    <p>To fix this vulnerability, update to Python-3.12.2 or later
+    using the instructions from
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+    <p>If you want to stay on Python-3.11.x, please update to Python-3.11.8
+    using the same instructions, substituting 3.12.2 for 3.11.8.</p>
+
     <a id="sa-12.0-091"/>
-    <h4>12.0 091 Expat (LFS)            Date: 2023-02-13  Severity: High</h4>
+    <h4>12.0 091 Expat (LFS)            Date: 2024-02-13  Severity: High</h4>
     <p>In Expat-2.6.0, a security vulnerability was fixed that could allow for
     a denial of service because many full reparsings are required in the case
     of a large token which requires multiple buffer fills. This is classified

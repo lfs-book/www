@@ -198,6 +198,17 @@
 
     <h3>Python3</h3>
 
+    <a id="sa-12.0-092"/>
+    <h4>12.0 092 Python3  Date: 2024-02-13  Severity: High</h4>
+    <p>In Python-3.12.2, a security vulnerability was fixed that could allow
+    for silent execution of arbitrary code via hidden *.pth files. *.pth files
+    are executed automatically, unlike normal Python files which need explicit
+    importing or passing as an argument to the Python interpreter. The issue
+    was fixed upstream by skipping *.pth files with names starting with a dot
+    (or the hidden file attribute on other systems). Update to Python-3.12.2
+    (or Python-3.11.8 if you prefer to stay on that series).
+    <a href="../../blfs/advisories/consolidated.html#sa-12.0-092">12.0-092</a></p>
+
     <a id="sa-12.0-001"/>
     <h4>12.0 001 Python3  Date: 2023-09-03  Severity: Medium</h4>
     <p>In Python-3.11.5, a security vulnerability was fixed that
