@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-094"/>
+    <h4>12.0 094 libuv                  Date: 2024-02-13  Severity: Medium</h4>
+    <p>In libuv-1.48.0, a security vulnerability was fixed that could allow for
+    attackers to craft payloads that resolve to unintended IP addresses, which
+    bypass developer checks. The vulnerability arises due to how the
+    'hostname_ascii' variable is handled in uv_getaddrinfo() and subsequently
+    the uv__idna_toascii() function. When the hostname exceeds 256 characters,
+    it gets truncated without a terminating null byte. As a result, attackers
+    may be able to access internal APIs for websites, and services that crawl
+    or cache these pages can be exposed to Server-Side Request Forgery if a
+    malicious user chooses a long vulnerable username.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24806">CVE-2024-24806</a>.</p>
+    <p>To fix this vulnerability, update to libuv-1.48.0 or later using the
+    instructions from
+    <a href="../view/svn/general/libuv.html">libuv (sysv)</a> or
+    <a href="../view/systemd/general/libuv.html">libuv (systemd)</a>.</p>
+
     <a id="sa-12.0-093"/>
     <h4>12.0 093 xdg-utils              Date: 2024-02-13  Severity: Medium</h4>
     <p>In xdg-utils-1.2.1, a security vulnerability was fixed that could allow
