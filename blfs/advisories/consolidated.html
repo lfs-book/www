@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-091"/>
+    <h4>12.0 091 Expat (LFS)            Date: 2023-02-13  Severity: High</h4>
+    <p>In Expat-2.6.0, a security vulnerability was fixed that could allow for
+    a denial of service because many full reparsings are required in the case
+    of a large token which requires multiple buffer fills. This is classified
+    as a quadratic runtime issue, and this issue is more comon when dealing
+    with compressed input. Note that applications which only call
+    XML_Parse/XML_ParseBuffer a single time are not affected.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52425">CVE-2023-52425</a>.</p>
+    <p>To fix this vulnerability, update to Expat-2.6.0 using the instructions
+    for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa-12.0-090"/>
     <h4>12.0 090 PostgreSQL Updated: 2024-02-09 Severity: High</h4>
     <p>In PostgreSQL-16.2 a vulnerability was fixed that could allow
