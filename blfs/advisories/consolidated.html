@@ -65,6 +65,29 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-095"/>
+    <h4>12.0 095 BIND                     Date: 2024-02-13  Severity: High</h4>
+    <p>In BIND-9.18.24, 6 security vulnerabilities were fixed that could allow for 
+    excessive CPU utilization or crashing when parsing large DNS packets;
+    Assertion failures when nxdomain-redirect is being used which could allow for crashing;
+    Assertion failures on recursive lookups when DNS64 and server-stale are enabled;
+    An out-of-memory exploit caused by specific recursive query patterns;
+    Extreme CPU utilization when attempting to validate DNSSEC (Keytrap);
+    An encryption protocol bug where when attempting to prepare a proof, 
+    high CPU utilization could cause a crash.
+
+    These vulnerabilities have been assigned
+    <a href="https://kb.isc.org/docs/cve-2023-4408">CVE-2023-4408</a>
+    <a href="https://kb.isc.org/docs/cve-2023-5517">CVE-2023-5517</a> 
+    <a href="https://kb.isc.org/docs/cve-2023-5679">CVE-2023-5679</a> 
+    <a href="https://kb.isc.org/docs/cve-2023-6156">CVE-2023-6156</a> 
+    <a href="https://kb.isc.org/docs/cve-2023-50387">CVE-2023-50387</a> 
+    <a href="https://kb.isc.org/docs/cve-2023-50868">CVE-2023-50868</a> 
+    <p>To fix these vulnerabilities, update to BIND-9.18.24 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-12.0-094"/>
     <h4>12.0 094 libuv                  Date: 2024-02-13  Severity: Medium</h4>
     <p>In libuv-1.48.0, a security vulnerability was fixed that could allow for
