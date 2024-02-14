@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-097"/>
+    <h4>12.0 097 wpa_supplicant           Date: 2024-02-13  Severity: High</h4>
+    <p>In wpa_supplicant-2.10, a security vulnerability was discovered that
+    could allow for an attacker to trick a victim into connecting to a malicious
+    clone of an enterprise WiFi network, and in turn allow them to intercept all
+    traffic. The BLFS developers have created a patch for this vulnerability
+    based upon an upstream fix.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52160">CVE-2023-52160</a>.</p>
+    <p>Additional details can be found at the
+    <a href="https://www.top10vpn.com/research/wifi-vulnerabilities/">Blog Post</a>
+    from the team of researchers who discovered the vulnerability, and a
+    <a href="https://www.phoronix.com/news/IWD-WPA-WiFi-Auth-Vulns">Phoronix</a>
+    article on the subject.</p>
+    <p>To fix this vulnerability, apply the patch using the instructions for
+    <a href="../view/svn/basicnet/wpa_supplicant.html">wpa_supplicant (sysv)</a> or
+    <a href="../view/systemd/basicnet/wpa_supplicant.html">wpa_supplicant (systemd)</a>.</p>
+
     <a id="sa-12.0-096"/>
     <h4>12.0 096 Unbound      Date: 2024-02-13  Severity: High</h4>
     <p>In Unbound-1.19.1, two security vulnerabilities were fixed that allow
