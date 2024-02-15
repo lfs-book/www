@@ -65,33 +65,843 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
-    <a id="sa-12-055"/>
+    <a id="sa-12.0-098"/>
+    <h4>12.0 098 Exiv2                    Date: 2024-02-13  Severity: Low</h4>
+    <p>In Exiv2-0.28.2, two security vulnerabilities were fixed that could
+    allow for a denial-of-service (application crash and excessive resource
+    consumption) when processing QuickTime Videos. The vulnerabilities occur
+    in the QuickTimeVideo::NikonTagsDecoder() and
+    QuickTimeVideo::multipleEntriesDecoder() functions, and can occur if Exiv2
+    is used to read the metadata of a crafted video file.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24826">CVE-2024-24826</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25112">CVE-2024-25112</a>.</p>
+    <p>To fix these vulnerabilities, update to Exiv2-0.28.2 or later using the
+    instructions for
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
+    <a id="sa-12.0-097"/>
+    <h4>12.0 097 wpa_supplicant           Date: 2024-02-13  Severity: High</h4>
+    <p>In wpa_supplicant-2.10, a security vulnerability was discovered that
+    could allow for an attacker to trick a victim into connecting to a malicious
+    clone of an enterprise WiFi network, and in turn allow them to intercept all
+    traffic. The BLFS developers have created a patch for this vulnerability
+    based upon an upstream fix.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52160">CVE-2023-52160</a>.</p>
+    <p>Additional details can be found at the
+    <a href="https://www.top10vpn.com/research/wifi-vulnerabilities/">Blog Post</a>
+    from the team of researchers who discovered the vulnerability, and a
+    <a href="https://www.phoronix.com/news/IWD-WPA-WiFi-Auth-Vulns">Phoronix</a>
+    article on the subject.</p>
+    <p>To fix this vulnerability, apply the patch using the instructions for
+    <a href="../view/svn/basicnet/wpa_supplicant.html">wpa_supplicant (sysv)</a> or
+    <a href="../view/systemd/basicnet/wpa_supplicant.html">wpa_supplicant (systemd)</a>.</p>
+
+    <a id="sa-12.0-096"/>
+    <h4>12.0 096 Unbound      Date: 2024-02-13  Severity: High</h4>
+    <p>In Unbound-1.19.1, two security vulnerabilities were fixed that allow
+    for DNSSEC verification to be exploited to crash an instance (Keytrap).  And an 
+    vulnerability in the NSEC3 existence proof could exhaust and crash the instance.
+    These vulnerabilities have been assigned
+    <a href="https://kb.isc.org/docs/cve-2023-50387">CVE-2023-50387</a>
+    <a href="https://kb.isc.org/docs/cve-2023-50868">CVE-2023-50868</a>.</p>
+    <p>To fix these vulnerabilities, update to Unbound-1.19.1 using the
+    instructions for
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+
+    <a id="sa-12.0-095"/>
+    <h4>12.0 095 BIND                     Date: 2024-02-13  Severity: High</h4>
+    <p>In BIND-9.18.24, 6 security vulnerabilities were fixed that could allow for 
+    excessive CPU utilization or crashing when parsing large DNS packets;
+    Assertion failures when nxdomain-redirect is being used which could allow for crashing;
+    Assertion failures on recursive lookups when DNS64 and server-stale are enabled;
+    An out-of-memory exploit caused by specific recursive query patterns;
+    Extreme CPU utilization when attempting to validate DNSSEC (Keytrap);
+    A bug where when attempting to prepare a proof, high CPU utilization could cause a crash.
+
+    These vulnerabilities have been assigned
+    <a href="https://kb.isc.org/docs/cve-2023-4408">CVE-2023-4408</a>
+    <a href="https://kb.isc.org/docs/cve-2023-5517">CVE-2023-5517</a>
+    <a href="https://kb.isc.org/docs/cve-2023-5679">CVE-2023-5679</a>
+    <a href="https://kb.isc.org/docs/cve-2023-6156">CVE-2023-6156</a>
+    <a href="https://kb.isc.org/docs/cve-2023-50387">CVE-2023-50387</a>
+    <a href="https://kb.isc.org/docs/cve-2023-50868">CVE-2023-50868</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.18.24 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+    <a id="sa-12.0-094"/>
+    <h4>12.0 094 libuv                  Date: 2024-02-13  Severity: Medium</h4>
+    <p>In libuv-1.48.0, a security vulnerability was fixed that could allow for
+    attackers to craft payloads that resolve to unintended IP addresses, which
+    bypass developer checks. The vulnerability arises due to how the
+    'hostname_ascii' variable is handled in uv_getaddrinfo() and subsequently
+    the uv__idna_toascii() function. When the hostname exceeds 256 characters,
+    it gets truncated without a terminating null byte. As a result, attackers
+    may be able to access internal APIs for websites, and services that crawl
+    or cache these pages can be exposed to Server-Side Request Forgery if a
+    malicious user chooses a long vulnerable username.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24806">CVE-2024-24806</a>.</p>
+    <p>To fix this vulnerability, update to libuv-1.48.0 or later using the
+    instructions from
+    <a href="../view/svn/general/libuv.html">libuv (sysv)</a> or
+    <a href="../view/systemd/general/libuv.html">libuv (systemd)</a>.</p>
+
+    <a id="sa-12.0-093"/>
+    <h4>12.0 093 xdg-utils              Date: 2024-02-13  Severity: Medium</h4>
+    <p>In xdg-utils-1.2.1, a security vulnerability was fixed that could allow
+    for attachments to be discretely added to emails sent via the 'xdg-email'
+    command. An attacker could send a victim a URI that automatically attaches
+    a sensitive file to an email, and if the user does not notice that the
+    attachment was added, this could result in sensitive information disclosure.
+    The vulnerability exists in the code that handles mailto: URIs.
+    This vulnerability has been issued
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27748">CVE-2020-27748</a>.</p>
+    <p>To fix this vulnerability, update to xdg-utils-1.2.1 or later using the
+    instructions from
+    <a href="../view/svn/xsoft/xdg-utils.html">xdg-utils (sysv)</a> or
+    <a href="../view/systemd/xsoft/xdg-utils.html">xdg-utils (systemd)</a>.</p>
+
+    <a id="sa-12.0-092"/>
+    <h4>12.0 092 Python3                Date: 2024-02-13  Severity: High</h4>
+    <p>In Python-3.12.2, a security vulnerability was fixed that could allow
+    for silent execution of arbitrary code via hidden *.pth files. *.pth files
+    are executed automatically, unlike normal Python files which need explicit
+    importing or passing as an argument to the Python interpreter. The issue
+    was fixed upstream by skipping *.pth files with names starting with a dot
+    (or the hidden file attribute on other systems).
+    This vulnerability has not been issued a CVE yet, but more details can be
+    found at
+    <a href="https://github.com/python/cpython/issues/113659">Github Issue 113659</a>.</p>
+    <p>To fix this vulnerability, update to Python-3.12.2 or later
+    using the instructions from
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+    <p>If you want to stay on Python-3.11.x, please update to Python-3.11.8
+    using the same instructions, substituting 3.12.2 for 3.11.8.</p>
+
+    <a id="sa-12.0-091"/>
+    <h4>12.0 091 Expat (LFS)            Date: 2024-02-13  Severity: High</h4>
+    <p>In Expat-2.6.0, a security vulnerability was fixed that could allow for
+    a denial of service because many full reparsings are required in the case
+    of a large token which requires multiple buffer fills. This is classified
+    as a quadratic runtime issue, and this issue is more comon when dealing
+    with compressed input. Note that applications which only call
+    XML_Parse/XML_ParseBuffer a single time are not affected.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52425">CVE-2023-52425</a>.</p>
+    <p>To fix this vulnerability, update to Expat-2.6.0 using the instructions
+    for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.
+    Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
+    <a id="sa-12.0-090"/>
+    <h4>12.0 090 PostgreSQL Updated: 2024-02-09 Severity: High</h4>
+    <p>In PostgreSQL-16.2 a vulnerability was fixed that could allow
+    for arbitrary command execution through luring a user into running
+    a command (check the CVE for the command).  Due to this it is highly
+    recommended to update to PostgreSQL on any older system.
+    The assigned CVE is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0985">CVE-2024-0985</a>.
+    Information about the issue can be found at:
+    <a href="https://www.postgresql.org/about/news/postgresql-162-156-1411-1314-and-1218-released-2807/">PostgreSQL's site</a>.</p>
+    <p>To fix this, update to PostgreSQL-16.2 or later using the
+    instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
+    <a id="sa-12.0-089"/>
+    <h4>12.0 089 WebKitGTK              Date: 2024-02-05   Severity: Critical</h4>
+    <p>In WebKitGTK-2.42.5, three security vulnerabilities were fixed that could
+    allow for trivial remote code execution and for a webpage to fingerprint a
+    user. The remote code execution vulnerabilities occur due to type confusion
+    issues, and one of them is known to be exploited in the wild. Both of these
+    were handled with improved checks and memory handling. The fingerprinting
+    vulnerability was addressed with improved access restrictions. Due to the
+    remote code execution vulnerabilities it is highly recommended that you
+    update WebKitGTK immediately to protect your system.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23222">CVE-2024-23222</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23206">CVE-2024-23206</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23213">CVE-2024-23213</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.42.5 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-12.0-088"/>
+    <h4>12.0 088 OpenLDAP               Date: 2024-02-05   Severity: High</h4>
+    <p>In OpenLDAP-2.6.7, a security vulnerability was fixed that could allow
+    for an attacker to malform an LDAP search query thereby giving them a higher
+    access mask than they should have. This vulnerability has been assigned
+    <a href="https://bugs.openldap.org/show_bug.cgi?id=10139">ITS#10139</a>.</p>
+    <p>To fix this vulnerability, update to OpenLDAP-2.6.7 using the
+    instructions from
+    <a href="../view/svn/server/openldap.html">OpenLDAP (sysv)</a> or
+    <a href="../view/systemd/server/openldap.html">OpenLDAP (systemd)</a>.</p>
+
+    <a id="sa-12.0-087"/>
+    <h4>12.0 087 libxml2                 Date: 2024-02-05   Severity: Medium</h4>
+    <p>In libxml2-2.12.5, a security vulnerability was fixed that could allow
+    for a denial-of-service (application crash) when using the XML Reader
+    interface with DTD validation and XInclude expansion enabled. The issue
+    occurs when processing a crafted XML document, and leads to a use-after-free
+    in xmlValidatePopElement.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25062">CVE-2024-25062</a>.</p>
+    <p>To fix this vulnerability, update to libxml2-2.12.5 using the
+    instructions from
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
+    <a id="sa-12.0-086"/>
+    <h4>12.0 086 sendmail                Date: 2024-02-02   Severity: Critical</h4>
+    <p>In sendmail-8.18.2, a security vulnerability was fixed that allows for
+    SMTP smuggling on publicly-accessible mail servers. Remote attackers can use
+    a publicly available exploit to inject email messages with a spoofed MAIL
+    FROM address, which also allows bypassing SPF protection mechanisms.
+    Similar to Exim and Postfix, this is also due to a difference in the way
+    Sendmail handles line endings. If you maintain a public-facing mail server
+    which uses Sendmail, it's highly recommended that you update Sendmail to
+    8.18.2 as soon as possible. The new settings that protect against this
+    security vulnerability are enabled by default.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51765">CVE-2023-51765</a>.</p>
+    <p>To fix this vulnerability, update to sendmail-8.18.2 or later using the
+    instructions from
+    <a href="../view/svn/server/sendmail.html">sendmail (sysv)</a> or
+    <a href="../view/systemd/server/sendmail.html">sendmail (systemd)</a>.</p>
+
+    <a id="sa-12.0-085"/>
+    <h4>12.0 085 Glibc (LFS)              Date: 2024-02-02  Severity: High</h4>
+    <p>In Glibc-2.39, two heap buffer overflow vulnerabilities and one
+    integer overflow vulnerability in the <code>syslog</code> function was
+    fixed.  All of them may result a denial of service (application
+    crash).  More seriously, one of the heap buffer overflow
+    vulnerabilities may allow a local privilege escalation with setuid
+    applications, and field tests have shown it can be successfully
+    exploited on various distros.</p>
+    <p>These vulnerablity has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6246">CVE-2023-6246</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6779">CVE-2023-6779</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6780">CVE-2023-6780</a>.
+    They affect Glibc 2.38, 2.37, and 2.36 (if a patch to fix
+    CVE-2022-39046 has been applied as
+    <a href='#sa-11.2-075'>SA 11.2-075</a> suggests).</p>
+    <p>To fix these vulnerabilities, update to Glibc-2.39 or later
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/glibc.html">Glibc (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/glibc.html">Glibc (systemd)</a>.
+    <b>To update Glibc safely on a running system, some extra precautions
+    are needed as documented in an "Important" box in the book section
+    for Glibc.  Follow it strictly or you may render the system completely
+    unusable.  YOU ARE WARNED.</b></p>
+
+    <a id="sa-12.0-084"/>
+    <h4>12.0 084 cURL                    Date: 2024-02-01   Severity: Low</h4>
+    <p>In cURL-8.6.0, a security vulnerability was fixed that could allow for
+    an OCSP verification bypass due to TLS session reuse. This vulnerability
+    occurs because cURL inadvertently kept the SSL session ID for connections
+    in it's cache even when the verify status (OCSP stapling) test failed. A
+    subsequent transfer to the same hostname could then succeed if the session
+    ID cache was still fresh, which skips the verify status check. Note that
+    this issue is limited to only using TLS 1.2, using TLS 1.3 will not trigger
+    this problem.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2024-0853">CVE-2024-0853</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.6.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-12.0-083"/>
+    <h4>12.0 083 OpenSSL (LFS)           Date: 2024-02-01   Severity: Low</h4>
+    <p>In OpenSSL-3.2.1, two security vulnerabilities was fixed.  One of
+    them could cause applications loading files in the PKCS12 format from
+    untrusted sources to terminate abruptly.  Another could cause
+    applications checking the RSA public keys with the function
+    EVP_PKEY_public_check() to experience long delays.  Both may lead to a
+    Denial of Service if processing PKCS12 files or RSA public keys from
+    untrusted sources.
+    These vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0727">CVE-2024-0727</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6237">CVE-2023-6237</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.2.1 or later
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.  Note that CVE-2024-0727 also affects OpenSSL-1.1.1 and 1.0.2
+    series, but they are no longer publicly supported by the OpenSSL
+    developers.  So if you are still running a system with OpenSSL-1.1.1
+    or 1.0.2 and you want to get CVE-2024-0727 fixed, you need to update
+    to OpenSSL-3.2.1 and rebuild everything linked against OpenSSL.</p>
+
+    <a id="sa-12.0-082"/>
+    <h4>12.0 082 GnuPG        Date: 2024-01-26  Severity: High</h4>
+    <p>In GnuPG-2.4.4, a security flaw was fixed where Smartcard generation was
+    keeping an unprotected backup copy of the key on disk. Upstream says that
+    all possibly affected users should check whether an unintended copy of a
+    Smartcard key exists and delete it. If you generated a key with the
+    <em>--edit-key</em> switch using either GnuPG-2.4.2, 2.4.3, or 2.2.42, please
+    look for an unprotected backup copy of the key with the
+    <em>gpg-card checkkeys</em> command. If you do not get any output, you are
+    not affected. If you do get output where the word 'clear' is mentioned for
+    a key, you should run <em>gpg-card checkkeys --delete-clear-copy</em> to
+    remove it.</p>
+    <p>For more information, please see the
+    <a href="https://gnupg.org/blog/20240125-smartcard-backup-key.html">GnuPG Security Advisory</a>.</p>
+    <p>Note that only users who have used GnuPG to generate a smartcard using
+    the <em>--edit-key</em> switch are affected.</p>
+    <p>To fix this vulnerability, update to GnuPG-2.4.4 or later, and then use
+    the instructions above to check for unprotected copies of keys. To update
+    GnuPG, use the instructions from
+    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+
+    <a id="sa-12.0-081"/>
+    <h4>12.0 081 gstreamer    Date: 2024-01-25  Severity: High</h4>
+    <p>In gst-plugins-bad-1.22.9, a security vulnerability was fixed that could
+    allow for remote code execution or crashes when processing AV1-encoded
+    video files with malformed streams. The vulnerability occurs due to a heap
+    buffer overflow. Note that this vulnerability can be exploited via a
+    web browser. Because of the way gstreamer plugins are handled, you will need
+    to upgrade the entire gstreamer stack to fix this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0444">CVE-2024-0444</a>.</p>
+    <p>To fix this vulnerability, update the gstreamer stack to 1.22.9 using
+    the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
+    <a id="sa-12.0-080"/>
+    <h4>12.0 080 Thunderbird  Date: 2024-01-24  Severity: High</h4>
+    <p>In Thunderbird-115.7.0, nine security vulnerabilities were fixed that
+    could allow for remotely exploitable crashes, arbitrary code execution,
+    HSTS policy bypasses, privilege escalation, permissions request bypassing,
+    phishing, and a bypass of the Content Security Policy if one is set. Most
+    of these vulnerabilities are only exploitable through HTML mail, but one
+    of the crash vulnerabilities can occur when attempting to list printers on
+    a system, and another vulnerability is exploitable when providing input
+    to a dialog box.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0741">CVE-2024-0741</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0742">CVE-2024-0742</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0746">CVE-2024-0746</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0747">CVE-2024-0747</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0749">CVE-2024-0749</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0750">CVE-2024-0750</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0751">CVE-2024-0751</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0753">CVE-2024-0753</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0755">CVE-2024-0755</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.7.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.0-079"/>
+    <h4>12.0 079 Firefox  Revised: 2024-02-08  Severity: High</h4>
+    <p>In firefox 115.7.0 nine vulnerabilities were fixed.
+    Upstream rate the vulnerability in Angle as High, but the previous
+    Angle vulnerability in <a
+    href="https://www.mozilla.org/en-US/security/advisories/mfsa2021-06">mfsa-2021-06</a>
+    was later amended to only apply to MS Windows where Angle is a backend for
+    Open GL so it appears that this one too will only apply to MS Windows,
+    Prevously, mozilla rated memory safety bugs as high impact, with this
+    release they now describe them as moderate impact. However, NVD has now
+    analysed that CVE and rates it as High severity.
+    Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2024-02">mfsa-2024-02</a>.
+    Details are at
+    <!-- 'may' because at time of writing most but not all are at nvd -->
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0741">CVE-2024-0741</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0742">CVE-2024-0742</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0746">CVE-2024-0746</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0747">CVE-2024-0747</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0749">CVE-2024-0749</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0750">CVE-2024-0750</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0751">CVE-2024-0751</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0753">CVE-2024-0753</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6755">CVE-2024-0755</a>.</p>
+    <p>To fix these update to firefox-115.7.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-12.0-078"/>
+    <h4>12.0 078 Postfix             Revised: 2024-01-23   Severity: Critical</h4>
+    <p>In Postfix-3.8.5 (and 3.7.10, 3.6.14, and 3.5.24), improvements to the
+    fix for <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51764">CVE-2023-51764</a>
+    (SMTP smuggling) were made that allow for more compatibility with some
+    existing SMTP clients and for better logging. In addition, patches are now
+    available for some unsupported versions of Postfix. For most users, the
+    fixes in Postfix-3.8.4 (and 3.7.9, 3.6.13, and 3.5.24) will be sufficient,
+    but if you encounter problems, upgrading to these improved versions is
+    highly recommended.</p>
+    <p>To apply the improved fix for the SMTP smuggling attack, update to
+    Postfix-3.8.5 or later using the instructions from
+    <a href="../view/svn/server/postfix.html">Postfix (sysv)</a> or
+    <a href="../view/systemd/server/postfix.html">Postfix (systemd)</a>.</p>
+    <p>In addition to updating Postfix, you must also add the following lines
+    to your /etc/postfix/main.cf configuration file if you haven't yet:</p>
+    <pre>smtpd_forbid_bare_newline = normalize
+smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
+    <p>In postfix-3.8.5, the previous recommended value for smtpd_forbid_bare_newline
+    ('yes') is now an alias for 'normalize' to accomodate mailservers which include
+    bare newlines only in the message body. Alternatively, the value can now be
+    set to 'reject' to continue to reject such messages as happened with the
+    recommended 'yes' setting in 3.8.4.</p>
+    <p>On systems running Postfix 3.7, 3.6, or 3.5, please update to Postfix
+    3.7.10, 3.6.14, or 3.5.24.</p>
+
+    <a id="sa-12.0-077"/>
+    <h4>12.0 077 Jinja2 (LFS)           Date: 2024-01-21   Severity: Medium</h4>
+    <p>In Jinja2-3.1.3, a security vulnerability in the XML attribute
+    filter was fixed that could allows a cross-site scripting attack if
+    you are running a service accepting user inputs and rendering them
+    with Jinja2. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-22195">CVE-2024-22195</a>.</p>
+    <p>To fix this vulnerability, update to Jinja2-3.1.3 using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/jinja2.html">Jinja2 (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/jinja2.html">Jinja2 (systemd)</a>.
+    Note that the <code>--upgrade</code> option must be passed to
+    <code>pip3 install</code> when upgrading a Python module.</p>
+
+    <a id="sa-12.0-076"/>
+    <h4>12.0 076 Ncurses (LFS)           Date: 2024-01-21   Severity: Medium</h4>
+    <p>In Ncurses-6.4-20230520, a security vulnerability was fixed that
+    could allow local users to trigger security-relevant memory
+    corruption via malformed data in a terminfo database file found in
+    $HOME/.terminfo or reached via the TERMINFO or TERM environment
+    variable when Ncurses is used by a setuid application (for example
+    GNU Screen).  In theory a local privilege escalation is possible but
+    very difficult, and no such an attack has been really developed.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-29491">CVE-2023-29491</a>.</p>
+    <p>To fix this vulnerability, update to
+    <a href='https://anduin.linuxfromscratch.org/LFS/ncurses-6.4-20230520.tar.xz'>Ncurses-6.4-20230520</a> using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/ncurses.html">Ncurses (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/ncurses.html">Ncurses (systemd)</a>.</p>
+
+    <a id="sa-12.0-075"/>
+    <h4>12.0 075 Coreutils (LFS)           Date: 2024-01-21   Severity: Medium</h4>
+    <p>In Coreutils-9.4, a security vulnerability was found in the split
+    program.  A heap overflow with user-controlled data of multiple
+    hundred bytes in length could occur, potentially leading to an
+    application crash and denial of service.  Coreutils-9.3 as provided
+    by LFS 12.0 is also affected.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0684">CVE-2024-0684</a>.</p>
+    <p>To fix this vulnerability, rebuild Coreutils-9.4 or 9.3 using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/coreutils.html">Coreutils-9.4 (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/coreutils.html">Coreutils-9.4 (systemd)</a>; or
+    <a href="../../lfs/view/12.0/chapter08/coreutils.html">Coreutils-9.3 (sysv)</a> or
+    <a href="../../lfs/view/12.0-systemd/chapter08/coreutils.html">Coreutils-9.3 (systemd)</a>; and make sure the following command is issued before
+    running the <code>autoreconf -fiv</code> command to fix up the code:</p>
+    <pre>sed -e '/n_out += n_hold/,+4 s|.*bufsize.*|//&amp;|' \
+    -i src/split.c</pre>
+
+    <a id="sa-12.0-074"/>
+    <h4>12.0 074 OpenJDK Date: 2024-01-20  Severity: High</h4>
+    <p>In OpenJDK-21.0.2, five security vulnerabilities have been fixed in the
+    Hotspot and Security components that could allow for unauthorized creation,
+    modification, and deleation of data on a system, as well as for information
+    disclosure, denial of service, and remote code execution. Four of these
+    vulnerabilities are exploitable via the network, with no provileges required
+    and no user interaction required either. The fifth vulnerability is only
+    exploitable locally, and requires some privileges (though still without any
+    user interaction being required).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20918">CVE-2024-20918</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20952">CVE-2024-20952</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20919">CVE-2024-20919</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20921">CVE-2024-20921</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20945">CVE-2024-20945</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-21.0.2 (or use the
+    prebuilt Java binaries) using the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+
+    <a id="sa-12.0-073"/>
+    <h4>12.0 073 Linux-PAM Date: 2024-01-18  Severity: Medium</h4>
+    <p>In Linux-PAM-1.6.0, a security vulnerability was fixed that could allow
+    for a local denial of service (crash) when using the pam_namespace.so PAM
+    module. Note that a standard BLFS installation will not use this module,
+    so most systems are unaffected unless a user has added this module into the
+    system on their own. If you use this module, updating is recommended.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-22365">CVE-2024-22365</a>.</p>
+    <p>To fix this vulnerability, update to Linux-PAM-1.6.0 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/linux-pam.html">Linux-PAM (sysv)</a> or
+    <a href="../view/systemd/postlfs/linux-pam.html">Linux-PAM (systemd)</a>.</p>
+
+    <a id="sa-12.0-072"/>
+    <h4>12.0 072 Xwayland  Date: 2024-01-17  Severity: Medium</h4>
+    <p>In Xwayland-23.2.4, four security vulnerabilities were fixed that
+    could allow for crashes and privilege escalation. These vulnerabilities are
+    classified as heap buffer overflows and out-of-bounds memory accesses.
+    The heap buffer overflows occur in the DisableDevice(),
+    XISendDeviceHierarchyEvent(), DeviceFocusEvent(), and ProcXIQueryPointer()
+    functions, while the out-of-bounds memory access happens when reattaching
+    to a different master device.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6816">CVE-2023-6816</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0229">CVE-2024-0229</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21885">CVE-2024-21885</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21886">CVE-2024-21886</a>.</p>
+    <p>For more information, please see
+    <a href="https://lists.x.org/archives/xorg/2024-January/061525.html">X.Org Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to Xwayland-23.2.4 or later
+    using the instructions from
+    <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
+    <a id="sa-12.0-071"/>
+    <h4>12.0 071 xorg-server  Date: 2024-01-17  Severity: Medium</h4>
+    <p>In xorg-server-21.1.11, four security vulnerabilities were fixed that
+    could allow for crashes, privilege escalation, and remote code execution
+    on systems where X11 forwarding is in use. These vulnerabilities are
+    classified as heap buffer overflows and out-of-bounds memory accesses.
+    The heap buffer overflows occur in the DisableDevice(),
+    XISendDeviceHierarchyEvent(), DeviceFocusEvent(), and ProcXIQueryPointer()
+    functions, while the out-of-bounds memory access happens when reattaching
+    to a different master device.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6816">CVE-2023-6816</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0229">CVE-2024-0229</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21885">CVE-2024-21885</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21886">CVE-2024-21886</a>.</p>
+    <p>For more information, please see
+    <a href="https://lists.x.org/archives/xorg/2024-January/061525.html">X.Org Security Advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to xorg-server-21.1.11 or later
+    using the instructions from
+    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+
+    <a id="sa-12.0-070"/>
+    <h4>12.0 070 GnuTLS       Date: 2024-01-17  Severity: Medium</h4>
+    <p>In GnuTLS-3.8.3, two security vulnerabilities were fixed that could
+    allow for a timing side-channel attack (leading to the leakage of sensitive
+    data), and for an application crash. The timing side-channel attack occurs
+    when response times to malformed ciphertexts in RSA-PSK ClientKeyExchange
+    differ from response times of ciphertexts with correct PKCS#1 v1.5 padding,
+    and allows for a remote attacker to perform a timing side-channel attack
+    during the RSA-PSK key exchange. This vulnerability is the result of an
+    incomplete fix for CVE-2023-5981. The other vulnerability allows for
+    a remote client or attacker to crash applications running GnuTLS because
+    of an assertion failure that occurs when verifying a certificate chain
+    with a cycle of cross signatures.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0553">CVE-2024-0553</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0567">CVE-2024-0567</a>.</p>
+    <p>To fix these vulnerabilities, update to GnuTLS-3.8.3 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
+    <a id="sa-12.0-069"/>
+    <h4>12.0 069 jasper       Date: 2024-01-12  Severity: High</h4>
+    <p>In jasper-4.1.2, a security vulnerability was fixed that could allow for
+    arbitrary code execution or crashes when processing a crafted image that
+    use the JPEG-2000 codec. This problem occurs when processing the ICC
+    profile, and is classified as an invalid memory write. There is a proof of
+    concept available to the public.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51257">CVE-2023-51257</a>.</p>
+    <p>To fix this vulnerability, update to jasper-4.1.2 or later using the
+    instructions from
+    <a href="../view/svn/general/jasper.html">jasper (sysv)</a> or
+    <a href="../view/systemd/general/jasper.html">jasper (systemd)</a>.</p>
+
+    <a id="sa-12.0-068"/>
+    <h4>12.0 068 systemd      Date: 2023-12-30  Severity: Medium</h4>
+    <p>A security vulnerability was found in systemd-resolved that could allow
+    systemd-resolved to accept records of DNSSEC-signed domains, even when they
+    have no signature. This would allow a man-in-the-middle attacker (or the
+    upstream DNS resolver) to manipulate DNS records in a way that the system
+    would accept them, even though they are invalid. The default settings for
+    systemd-resolved do not enable DNSSEC support though, so to be vulnerable,
+    you must have already enabled DNSSEC support in your system's configuration.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7008">CVE-2023-7008</a>.</p>
+    <p>If you have enabled DNSSEC support in systemd-resolved, you should
+    rebuild systemd using the instructions from
+    <a href="../view/systemd/general/systemd.html">systemd (systemd)</a>.</p>
+    <p>If you have not enabled DNSSEC support on your system, no action is
+    necessary.</p>
+
+    <a id="sa-12.0-067"/>
+    <h4>12.0 067 Postfix      Date: 2023-12-29  Severity: Critical</h4>
+    <p>In Postfix-3.8.4 (as well as 3.7.9, 3.6.13, and 3.5.23), a security
+    vulnerability was fixed that allows for SMTP smuggling on public-facing
+    mail servers. Remote attackers can use a publicly available exploit to
+    inject email messages with a spoofed MAIL FROM address, which also allows
+    bypassing SPF protection mechanisms. Similar to Exim, this is also due to
+    a difference in the way Postfix handles line endings. If you maintain a
+    public-facing mail server which uses Postfix, it's highly recommended that
+    you update Postfix to 3.8.4 (or the other versions described above) as soon
+    as possible. Note that the feature that fixes this vulnerability must be
+    turned on with additional configuration.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51764">CVE-2023-51764</a>.</p>
+    <p>To fix this vulnerability, update to Postfix-3.8.4 or later using the
+    instructions from
+    <a href="../view/svn/server/postfix.html">Postfix (sysv)</a> or
+    <a href="../view/systemd/server/postfix.html">Postfix (systemd)</a>.</p>
+    <p>In addition to updating Postfix, you must also add the following lines
+    to your /etc/postfix/main.cf configuration file:</p>
+    <pre>smtpd_forbid_bare_newline = yes
+smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
+    <p>On systems running Postfix 3.7, 3.6, or 3.5, please update to Postfix
+    3.7.9, 3.6.13, or 3.5.23.</p>
+
+    <a id="sa-12.0-066"/>
+    <h4>12.0 066 Exim         Date: 2023-12-29  Severity: Critical</h4>
+    <p>In Exim-4.97.1, a security vulnerability was fixed that allows for SMTP
+    smuggling in certain configurations. Remote attackers can use a publicly
+    available exploit to inject email messages with a spoofed MAIL FROM address,
+    which will allow bypassing the SPF protection mechanisms. This is due to a
+    difference in the way Exim (and other mail servers) handle line endings,
+    and affects most implementations of the SMTP protocol due to it being a
+    weakness in the SMTP standard itself.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51766">CVE-2023-51766</a>.</p>
+    <p>For more information, please see
+    <a href="https://sec-consult.com/blog/detail/smtp-smuggling-spoofing-e-mails-worldwide/">SMTP Smuggling Blog Post</a>.</p>
+    <p>To fix this vulnerability, update to Exim-4.97.1 or later using the
+    instructions from
+    <a href="../view/svn/server/exim.html">Exim (sysv)</a> or
+    <a href="../view/systemd/server/exim.html">Exim (systemd)</a>.</p>
+
+    <a id="sa-12.0-065"/>
+    <h4>12.0 065 gstreamer    Date: 2023-12-27  Severity: High</h4>
+    <p>In gst-plugins-bad-1.22.8, a security vulnerability was fixed that could
+    allow for remote code execution or crashes when processing AV1-encoded
+    video files with malformed streams. The vulnerability occurs due to a heap
+    buffer overflow. Note that this vulnerability can be exploited via a
+    web browser. Because of the way gstreamer plugins are handled, you will need
+    to upgrade the entire gstreamer stack to fix this vulnerability.
+    This vulnerability has not been assigned a CVE yet, but does have a ZDI CAN
+    number, which is ZDI-CAN-22300. More details can be found at
+    <a href="https://gstreamer.freedesktop.org/security/sa-2023-0011.html">Gstreamer Security Advisory</a>.</p>
+    <p>To fix this vulnerability, update the gstreamer stack to 1.22.8 using
+    the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
+    <a id="sa-12.0-064"/>
+    <h4>12.0 064 SpiderMonkey Date: 2023-12-27  Severity: High</h4>
+    <p>In SpiderMonkey/mozjs-115.6.0, a security vulnerability was fixed that
+    could allow for memory safety issues. This vulnerability could allow for
+    arbitrary code execution and crashes due to memory corruption. Note that
+    this vulnerability can only be exploited through a malicious JavaScript
+    file.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6864">CVE-2023-6864</a>.</p>
+    <p>To fix this vulnerability, update to SpiderMonkey-115.6.0 or later using
+    the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
+    <a id="sa-12.0-063"/>
+    <h4>12.0 063 Thunderbird  Date: 2023-12-26  Severity: High</h4>
+    <p>In Thunderbird-115.6.0, eleven security vulnerabilities were fixed that
+    could allow for remote code execution, exploitable crashes, sandbox escapes,
+    S/MIME signatures being accepted despite mismatching message dates,
+    undefined behavior, and for spoofed messages to be accepted when processing
+    PGP/MIME payloads.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50762">CVE-2023-50762</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50761">CVE-2023-50761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6856">CVE-2023-6856</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6857">CVE-2023-6857</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6858">CVE-2023-6858</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6859">CVE-2023-6859</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6860">CVE-2023-6860</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6861">CVE-2023-6861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6862">CVE-2023-6862</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6863">CVE-2023-6863</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6864">CVE-2023-6864</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.6.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.0-062"/>
+    <h4>12.0 062 libssh2 Date: 2023-12-26  Severity: Critical</h4>
+    <p>In libssh2-1.11.0, a vulnerability has been discovered that allows for
+    silent encryption downgrades due to MITM attacks. This vulnerability has
+    been rated as Critical, and is also known as the "Terrapin" attack. Most
+    implementations of the SSH protocol are impacted and have to be updated
+    on both the client and server side. The libssh2 developers have fixed the
+    vulnerability, but have not done a new release yet. The BLFS team has
+    backported a patch with a fix for the vulnerability, and this advisory
+    will be updated once a new release is made. For more implementation, see
+    the OpenSSH and ProFTPd advisories listed below.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-48795">CVE-2023-48795</a>.</p>
+    <p>To fix this vulnerability, rebuild libssh2 with the patch in the book
+    using the instructions from
+    <a href="../view/svn/general/libssh2.html">libssh2 (sysv)</a> or
+    <a href="../view/systemd/general/libssh2.html">libssh2 (systemd)</a>.</p>
+
+    <a id="sa-12.0-061"/>
+    <h4>12.0 061 OpenSSH Date: 2023-12-26  Severity: Critical</h4>
+    <p>In OpenSSH-9.6p1, two security vulnerabilities were fixed that could
+    allow for a MITM attack to cause a silent encryption downgrade, and for
+    arbitrary command injection in some circumstances (such as when using git
+    submodules). The MITM attack is rated as Critical and has been codenamed
+    the 'Terrapin' attack. In order to protect your system, both the client and
+    server side must be updated. Terrapin allows a remote attacker to inject
+    SSH messages both before and after key negotiation begins, and the problem
+    is in the ChaCha20-Poly1305 and the Encrypt-then-MAC implementations.
+    It is highly recommended that you update to OpenSSH-9.6p1 or later as soon
+    as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-48795">CVE-2023-48795</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51385">CVE-2023-51385</a>.
+    More details can be found at
+    <a href="https://terrapin-attack.com/">Terrapin Attack website</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSH-9.6p1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
+    <a id="sa-12.0-060"/>
+    <h4>12.0 060 ProFTPD Date: 2023-12-23  Severity: Critical</h4>
+    <p>In ProFTPD 1.3.8b, a critical level security vulnerability codenamed
+    Terrapin (SSH) was fixed. This could in theory allow for an attacker to 
+    downgrade the security within the SSH connection leading to a less secure
+    connection from the 'Man in the Middle' attack. This vulnerability has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-48795">CVE-2023-48975</a>.</p>
+    <p>To fix this vulnerability, update to ProFTPD-1.3.8b or later using
+    the instructions from
+    <a href="../view/svn/server/proftpd.html">ProFTPD (sysv)</a> or
+    <a href="../view/systemd/server/proftpd.html">ProFTPD (systemd)</a>.</p>
+
+    <a id="sa-12.0-059"/>
+    <h4>12.0 059 Seamonkey    Date: 2023-12-20  Severity: High</h4>
+    <p>In Seamonkey-2.53.18, several security vulnerabilities were fixed that
+    could allow for clickjacking, address bar spoofing, crashes, extensions
+    opening arbitrary URLs, out-of-bounds memory access, clipboard contents
+    stealing, and path traversal. These vulnerabilities are identical to the
+    ones solved in Firefox-115.4.0 and Firefox-115.5.0.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-5721">CVE-2023-5721</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-5732">CVE-2023-5732</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-5724">CVE-2023-5724</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-5725">CVE-2023-5725</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-5728">CVE-2023-5728</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-5730">CVE-2023-5730</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6204">CVE-2023-6204</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6205">CVE-2023-6205</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6206">CVE-2023-6206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6207">CVE-2023-6207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6208">CVE-2023-6208</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6209">CVE-2023-6209</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6212">CVE-2023-6212</a>.</p>
+    <p>To fix these vulnerabilities, update to Seamonkey-2.53.18 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+    <a id="sa-12.0-058"/>
+    <h4>12.0 058 WebKitGTK    Date: 2023-12-19  Severity: Medium</h4>
+    <p>In WebKitGTK-2.42.4, a security vulnerability was fixed that could allow
+    for an application crash when processing a large SVG image. The issue was
+    resolved with improved memory handling.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-42883">CVE-2023-42883</a>.</p>
+    <p>To fix this vulnerability, update to WebKitGTK-2.42.4 or later using the
+    instructions for
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-12.0-057"/>
+    <h4>12.0 057 Firefox  Date: 2023-12-19  Severity: High</h4>
+    <p>In firefox 115.6.0 eleven vulnerabilities were fixed.
+    Upstream rate three of these as High.
+    Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2023-54">mfsa-2023-54</a>.
+    Details may appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6856">CVE-2023-6856</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6857">CVE-2023-6857</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6858">CVE-2023-6858</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6859">CVE-2023-6859</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6860">CVE-2023-6860</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6861">CVE-2023-6861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6862">CVE-2023-6862</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6863">CVE-2023-6863</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6864">CVE-2023-6864</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6865">CVE-2023-6865</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6867">CVE-2023-6867</a>.</p>
+    <p>To fix these update to firefox-115.6.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+
+    <a id="sa-12.0-056"/>
+    <h4>12.0 056 Xwayland Date: 2023-12-15 Severity: High</h4>
+    <p>In Xwayland-23.2.2 and earlier, querying or changing XKB button
+    actions such as moving from a touchpad to a mouse can result in
+    out-of-bounds memory reads and writes. This may allow local privilege
+    escalation or possible remote code execution in cases where X11
+    forwarding is involved. Another security vulnerability was also fixed
+    that allows for information disclosure when something calls the
+    RRChangeOutputProperty and RRChangeProviderProperty functions.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6377">CVE-2023-6377</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6478">CVE-2023-6478</a>.</p>
+    <p>To fix this, update to Xwayland-23.2.3 or later using the
+    instructions from the development book for
+    <a href="../view/systemd/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/svn/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
+    <a id="sa-12.0-055"/>
     <h4>12.0 055 xorg-server Date: 2023-12-13 Severity: High</h4>
     <p>In xorg-server-21.1.9 and earlier, querying or changing XKB button
     actions such as moving from a touchpad to a mouse can result in
     out-of-bounds memory reads and writes. This may allow local privilege
     escalation or possible remote code execution in cases where X11
-    forwarding is involved.
-    This has been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6377">CVE-2023-6377</a>.</p>
+    forwarding is involved. Another security vulnerability was also fixed
+    that allows for information disclosure when something calls the
+    RRChangeOutputProperty and RRChangeProviderProperty functions.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6377">CVE-2023-6377</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6478">CVE-2023-6478</a>.</p>
     <p>To fix this, update to xorg-server-21.1.10 or later using the
     instructions from the development book for
     <a href="../view/systemd/x/xorg-server.html">xorg-server (sysv)</a> or
     <a href="../view/svn/x/xorg-server.html">xorg-server (systemd)</a>.</p>
 
-
     <a id="sa-12.0-054"/>
-    <h4>12.0 054 Libreoffice             Date: 2023-12-08   Severity: Critical</h4>
-    <p>In Libreoffice-7.6.4.1, a security vulnerability in the bundled copy of
-    Skia was fixed. This vulnerability is identical to the QtWebEngine/Chromium
-    vulnerability that allows for remote code execution by processing an image
-    that is too large for a buffer. In this case, the attack vector would be a
-    malicious image inside of a document. Updating to Libreoffice-7.6.4.1 is
-    recommended as soon as possible.
-    This vulnerability has been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6345">CVE-2023-6345</a>.</p>
-    <p>To fix this vulnerability, update to Libreoffice-7.6.4.1 or later using
-    the instructions from
+    <h4>12.0 054 Libreoffice             Updated: 2023-12-19   Severity: Critical</h4>
+    <p>In Libreoffice-7.6.4.1, three security vulnerabilites were fixed. One of
+    these was in in the bundled copy of Skia. This vulnerability is identical to
+    the QtWebEngine/Chromium vulnerability that allows for remote code execution
+    by processing an image that is too large for a buffer. In this case, the
+    attack vector would be a malicious image inside of a document. Additionally,
+    a security vulnerability was fixed that could allow for Gstreamer pipeline
+    injection due to improper input validation, and a security vulnerability
+    was fixed that could allow for arbitrary script execution when processing a
+    link's target. Both of these can be exploited when processing documents.
+    Updating to Libreoffice-7.6.4.1 is recommended as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2023-6345">CVE-2023-6345</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6185">CVE-2023-6185</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6186">CVE-2023-6186</a>.</p>
+    <p>To fix these vulnerabilities, update to Libreoffice-7.6.4.1 or later
+    using the instructions from
     <a href="../view/svn/xsoft/libreoffice.html">Libreoffice (sysv)</a> or
     <a href="../view/systemd/xsoft/libreoffice.html">Libreoffice (systemd)</a>.</p>
 
@@ -104,7 +914,7 @@
     status.
     These vulnerabilities have been assigned
     <a href="https://curl.se/docs/CVE-2023-46218.html">CVE-2023-46218</a> and
-    <a href="https://curl.se/docs/CVE-2023-46219.html">CVE-2023-46219</a> and
+    <a href="https://curl.se/docs/CVE-2023-46219.html">CVE-2023-46219</a>.</p>
     <p>To fix these vulnerabilities, update to cURL-8.5.0 or later using
     the instructions from
     <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
@@ -666,7 +1476,7 @@
 
     <a id="sa-12.0-021"/>
     <h4>12.0 021 samba                   Date: 2023-10-11  Severity: High</h4>
-    <p>In samba-4.19.10, several security vulnerabilities were fixed that could
+    <p>In samba-4.19.1, several security vulnerabilities were fixed that could
     allow for an attacker to trigger denial of service, crashing the service,
     or potentially compromising it.
     <a href="https://www.samba.org/samba/security/CVE-2023-3961.html">CVE-2023-3961</a>,

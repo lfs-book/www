@@ -60,7 +60,16 @@
     <a href="consolidated.html#sa-12.0-027">12.0-027</a></p>
 
 <!-- end of Apache HTTPD-->
+
     <h3>BIND</h3>
+
+    <a id="sa-12.0-095"/>
+    <h4>12.0 095 BIND                     Date: 2024-02-13  Severity: High</h4>
+    <p>In BIND-9.18.19, six security vulnerabilities were fixed that could,
+    among other things, crash the service through high CPU utilization, generate
+    out-of-memory errors that could allow BIND to read from other system memory
+    and others.  Update to BIND-9.18.24
+    <a href="consolidated.html#sa-12.0-095">12.0-095</a></p>
 
     <a id="sa-12.0-011"/>
     <h4>12.0 011 BIND                     Date: 2023-09-21  Severity: High</h4>
@@ -84,12 +93,18 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-12.0-084"/>
+    <h4>12.0 084 cURL                    Date: 2024-02-01   Severity: Low</h4>
+    <p>In cURL-8.6.0, a security vulnerability was fixed that could allow for
+    an OCSP verification bypass due to TLS session reuse. This vulnerability
+    only applies to connections that use TLS 1.2. Update to cURL-8.6.0.
+    <a href="consolidated.html#sa-12.0-084">12.0-084</a></p>
+
     <a id="sa-12.0-053"/>
     <h4>12.0 053 cURL                    Date: 2023-12-06  Severity: High</h4>
     <p>In cURL-8.5.0, two security vulnerabilities were fixed that could allow
     for cookie hijacking, and could delete HSTS data. Update to cURL-8.5.0.
     <a href="consolidated.html#sa-12.0-053">12.0-053</a></p>
-    <a id="sa-12.0-053"/>
 
     <h4>12.0 024 cURL                    Date: 2023-10-11  Severity: High</h4>
     <p>In cURL-8.4.0, two security vulnerabilities were fixed that could allow
@@ -108,6 +123,15 @@
 
     <h3>Exim</h3>
 
+    <a id="sa-12.0-066"/>
+    <h4>12.0 066 Exim  Date: 2023-12-29  Severity: Critical</h4>
+    <p>In Exim-4.97.1, a security vulnerability was fixed that allows for SMTP
+    smuggling in certain configurations. Remote attackers can use a publicly
+    available exploit to inject email messages with a spoofed MAIL FROM address,
+    which will allow bypassing the SPF protection mechanisms.
+    Update to Exim-4.97.1.
+    <a href="consolidated.html#sa-12.0-066">12.0-066</a></p>
+
     <a id="sa-12.0-025"/>
     <h4>12.0 025 Exim  Date: 2023-10-17  Severity: High</h4>
     <p>In exim 4.96.1 and 4.96.2 five vulnerabilities, three of which are
@@ -117,6 +141,13 @@
 <!-- end of Exim -->
 
     <h3>Exiv2</h3>
+
+    <a id="sa-12.0-098"/>
+    <h4>12.0 098 Exiv2                    Date: 2024-02-13  Severity: Low</h4>
+    <p>In Exiv2-0.28.2, two security vulnerabilities were fixed that could
+    allow for a denial-of-service (application crash and excessive resource
+    consumption) when processing QuickTime Videos. Update to Exiv2-0.28.2.
+    <a href="consolidated.html#sa-12.0-098">12.0-098</a></p>
 
     <a id="sa-12.0-038"/>
     <h4>12.0 038 Exiv2                    Date: 2023-11-07  Severity: High</h4>
@@ -140,6 +171,21 @@
 <!-- end of FAAD2 -->
 
     <h3>Firefox</h3>
+
+    <a id="sa-12.0-079"/>
+    <h4>12.0 079 Firefox  Revised: 2024-02-08  Severity: High</h4>
+    <p>In firefox 115.7.0 nine vulnerabilities were fixed.
+    Upstream rate the vulnerability in Angle as High, but Angle appears to
+    only be used on MS Windows. Prevously, mozilla rated memory safety bugs
+    as high impact, with this release they now describe them as moderate impact.
+    However, NVD has now analysed that CVE and rates it as High severity.
+    <a href="consolidated.html#sa-12.0-079">12.0-079</a></p>
+
+    <a id="sa-12.0-057"/>
+    <h4>12.0 057 Firefox  Date: 2023-12-19  Severity: High</h4>
+    <p>In firefox 115.6.0 eleven vulnerabilities were fixed.
+    Upstream rate three of these as High.
+    <a href="consolidated.html#sa-12.0-057">12.0-057</a></p>
 
     <a id="sa-12.0-046"/>
     <h4>12.0 046 Firefox  Date: 2023-11-21  Severity: High</h4>
@@ -173,7 +219,29 @@
 
 <!-- end of GIMP -->
 
+    <h3>GnuPG</h3>
+
+    <a id="sa-12.0-082"/>
+    <h4>12.0 082 GnuPG        Date: 2024-01-26  Severity: High</h4>
+    <p>In GnuPG-2.4.4, a security flaw was fixed where Smartcard generation was
+    keeping an unprotected backup copy of the key on disk. Upstream says that
+    all possibly affected users should check whether an unintended copy of a
+    Smartcard key exists and delete it. If you generated a Smartcard using
+    GnuPG-2.4.2, 2.4.3, or 2.2.42, please update to GnuPG-2.4.4 and follow
+    the instructions in the security advisory to check for and remove
+    the unprotected backup keys.
+    <a href="consolidated.html#sa-12.0-082">12.0-082</a></p>
+
+<!-- end of GnuPG -->
+
     <h3>GnuTLS</h3>
+
+    <a id="sa-12.0-070"/>
+    <h4>12.0 070 GnuTLS       Date: 2024-01-17  Severity: Medium</h4>
+    <p>In GnuTLS-3.8.3, two security vulnerabilities were fixed that could
+    allow for a timing side-channel attack (leading to the leakage of sensitive
+    data), and for an application crash. Update to GnuTLS-3.8.3 or later.
+    <a href="consolidated.html#sa-12.0-070">12.0-070</a></p>
 
     <a id="sa-12.0-045"/>
     <h4>12.0 045 GnuTLS                  Date: 2023-11-16  Severity: Medium</h4>
@@ -184,6 +252,21 @@
 <!-- end of GnuTLS -->
 
     <h3>gstreamer</h3>
+
+    <a id="sa-12.0-081"/>
+    <h4>12.0 081 gstreamer                Date: 2024-01-25  Severity: High</h4>
+    <p>In gst-plugins-bad-1.22.9, a security vulnerability was fixed that could
+    allow for remote code execution or crashes when processing AV1-encoded
+    video files with malformed streams. The vulnerability occurs due to a heap
+    buffer overflow. Update the gstreamer stack to 1.22.9.
+    <a href="consolidated.html#sa-12.0-081">12.0-081</a></p>
+
+    <a id="sa-12.0-065"/>
+    <h4>12.0 065 gstreamer                Date: 2023-12-27  Severity: High</h4>
+    <p>In gst-plugins-bad-1.22.8, a security vulnerability was fixed that could
+    allow for remote code execution or crashes when processing AV1-encoded
+    video files with malformed streams. Update the gstreamer stack to 1.22.8.
+    <a href="consolidated.html#sa-12.0-065">12.0-065</a></p>
 
     <a id="sa-12.0-042"/>
     <h4>12.0 042 gstreamer                Date: 2023-11-14  Severity: High</h4>
@@ -215,6 +298,17 @@
 
 <!-- end of Intel Microcode -->
 
+    <h3>jasper</h3>
+
+    <a id="sa-12.0-069"/>
+    <h4>12.0 069 jasper       Date: 2024-01-12  Severity: High</h4>
+    <p>In jasper-4.1.2, a security vulnerability was fixed that could allow for
+    arbitrary code execution or crashes when processing a crafted image that
+    use the JPEG-2000 codec. Update to jasper-4.1.2.
+    <a href="consolidated.html#sa-12.0-069">12.0-069</a></p>
+
+<!-- end of jasper -->
+
     <h3>libarchive</h3>
 
     <a id="sa-12.0-008"/>
@@ -240,16 +334,43 @@
     <h3>Libreoffice</h3>
 
     <a id="sa-12.0-054"/>
-    <h4>12.0 054 Libreoffice             Date: 2023-12-08   Severity: Critical</h4>
-    <p>In Libreoffice-7.6.4.1, a security vulnerability in the bundled copy of
-    Skia was fixed. This vulnerability is identical to the QtWebEngine/Chromium
-    vulnerability that allows for remote code execution by processing an image
-    that is too large for a buffer. In this case, the attack vector would be a
-    malicious image inside of a document. Updating to Libreoffice-7.6.4.1 is
-    recommended as soon as possible to protect your system.
+    <h4>12.0 054 Libreoffice             Updated: 2023-12-19   Severity: Critical</h4>
+    <p>In Libreoffice-7.6.4.1, three security vulnerabilites were fixed. One of
+    these was in in the bundled copy of Skia. This vulnerability is identical to
+    the QtWebEngine/Chromium vulnerability that allows for remote code execution
+    by processing an image that is too large for a buffer. In this case, the
+    attack vector would be a malicious image inside of a document. Additionally,
+    a security vulnerability was fixed that could allow for Gstreamer pipeline
+    injection due to improper input validation, and a security vulnerability
+    was fixed that could allow for arbitrary script execution when processing a
+    link's target. Both of these can be exploited when processing documents.
+    Updating to Libreoffice-7.6.4.1 is recommended as soon as possible.
     <a href="consolidated.html#sa-12.0-054">12.0-054</a></p>
 
 <!-- end of Libreoffice -->
+
+    <h3>libssh2</h3>
+
+    <a id="sa-12.0-062"/>
+    <h4>12.0 062 libssh2 Date: 2023-12-26  Severity: Critical</h4>
+    <p>In libssh2-1.11.0, a vulnerability has been discovered that allows for
+    silent encryption downgrades due to MITM attacks. This vulnerability has
+    been rated as Critical, and is also known as the "Terrapin" attack. Rebuild
+    libssh2 with the patch in the book as soon as possible.
+    <a href="consolidated.html#sa-12.0-062">12.0-062</a></p>
+
+<!-- end of libssh2 -->
+
+    <h3>libuv</h3>
+
+    <a id="sa-12.0-094"/>
+    <h4>12.0 094 libuv                  Date: 2024-02-13  Severity: Medium</h4>
+    <p>In libuv-1.48.0, a security vulnerability was fixed that could allow for
+    attackers to craft payloads that resolve to unintended IP addresses, which
+    bypass developer checks. Update to libuv-1.48.0.
+    <a href="consolidated.html#sa-12.0-094">12.0-094</a></p>
+
+<!-- end of libuv -->
 
     <h3>libX11</h3>
 
@@ -262,6 +383,19 @@
     <a href="consolidated.html#sa-12.0-019">12.0-019</a></p>
 
 <!-- end of libX11 -->
+
+    <h3>libxml2</h3>
+
+    <a id="sa-12.0-087"/>
+    <h4>12.0 087 libxml2                 Date: 2024-02-05   Severity: Medium</h4>
+    <p>In libxml2-2.12.5, a security vulnerability was fixed that could allow
+    for a denial-of-service (application crash) when using the XML Reader
+    interface with DTD validation and XInclude expansion enabled. The issue
+    occurs when processing a crafted XML document, and leads to a use-after-free
+    in xmlValidatePopElement. Update to libxml2-2.12.5.
+    <a href="consolidated.html#sa-12.0-087">12.0-087</a></p>
+
+<!-- end of libxml2 -->
 
     <h3>libXpm</h3>
 
@@ -295,6 +429,19 @@
     <a href="consolidated.html#sa-12.0-003">12.0-003</a></p>
 
 <!-- end of Libwebp -->
+
+    <h3>Linux-PAM</h3>
+
+    <a id="sa-12.0-073"/>
+    <h4>12.0 073 Linux-PAM Date: 2024-01-18  Severity: Medium</h4>
+    <p>In Linux-PAM-1.6.0, a security vulnerability was fixed that could allow
+    for a local denial of service (crash) when using the pam_namespace.so PAM
+    module. Note that a standard BLFS installation will not use this module,
+    so most systems are unaffected unless a user has added this module into the
+    system on their own. If you use this module, update to Linux-PAM-1.6.0.
+    <a href="consolidated.html#sa-12.0-073">12.0-073</a></p>
+
+<!-- end of Linux-PAM -->
 
     <h3>MariaDB</h3>
 
@@ -346,6 +493,17 @@
 
     <h3>OpenJDK</h3>
 
+    <a id="sa-12.0-074"/>
+    <h4>12.0 074 OpenJDK            Date: 2024-01-20  Severity: High</h4>
+    <p>In OpenJDK-21.0.2, five security vulnerabilities have been fixed in the
+    Hotspot and Security components that could allow for unauthorized creation,
+    modification, and deleation of data on a system, as well as for information
+    disclosure, denial of service, and remote code execution. Four of these
+    vulnerabilities require no privileges or user interaction, and are primarily
+    exploitable over the network. One is exploitable locally but requires some
+    privileges, though still no user interaction. Update to OpenJDK-21.0.2.
+    <a href="consolidated.html#sa-12.0-074">12.0-074</a></p>
+
     <a id="sa-12.0-036"/>
     <h4>12.0 036 OpenJDK            Date: 2023-11-02  Severity: Medium</h4>
     <p>In OpenJDK-21.0.1, two security vulnerabilities were fixed that could
@@ -356,6 +514,66 @@
 
 <!-- end of OpenJDK -->
 
+    <h3>OpenLDAP</h3>
+
+    <a id="sa-12.0-088"/>
+    <h4>12.0 088 OpenLDAP           Date: 2024-02-05  Severity: High</h4>
+    <p>In OpenLDAP-2.6.7, a security vulnerability was fixed that could allow
+    for an attacker to malform an LDAP search query thereby giving them a higher
+    access mask than they should have. Update to OpenLDAP-2.6.7 or later.
+    <a href="consolidated.html#sa-12.0-088">12.0-088</a></p>
+
+<!-- end of OpenLDAP -->
+
+    <h3>OpenSSH</h3>
+
+    <a id="sa-12.0-061"/>
+    <h4>12.0 061 OpenSSH Date: 2023-12-26  Severity: Critical</h4>
+    <p>In OpenSSH-9.6p1, two security vulnerabilities were fixed that could
+    allow for a MITM attack to cause a silent encryption downgrade, and for
+    arbitrary command injection in some circumstances (such as when using git
+    submodules). The MITM attack is rated as Critical and has been codenamed
+    the 'Terrapin' attack. Update to OpenSSH-9.6p1 or later.
+    <a href="consolidated.html#sa-12.0-061">12.0-061</a></p>
+
+<!-- end of OpenSSH -->
+
+    <h3>Postfix</h3>
+
+    <a id="sa-12.0-078"/>
+    <h4>12.0 078 Postfix                Date: 2024-01-23   Severity: Critical</h4>
+    <p>In Postfix-3.8.5 (and 3.7.10, 3.6.14, and 3.5.24), improvements to the
+    fix for <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51764">CVE-2023-51764</a>
+    (SMTP smuggling) were made that allow for more compatibility with some
+    existing SMTP clients and for better logging. In addition, patches are now
+    available for some unsupported versions of Postfix. For most users, the
+    fixes in Postfix-3.8.4 (and 3.7.9, 3.6.13, and 3.5.24) will be sufficient,
+    but if you encounter problems, upgrading to these improved versions is
+    highly recommended.
+    <a href="consolidated.html#sa-12.0-078">12.0-078</a>.</p>
+
+    <a id="sa-12.0-067"/>
+    <h4>12.0 067 Postfix      Date: 2023-12-29  Severity: Critical</h4>
+    <p>In Postfix-3.8.4 (as well as 3.7.9, 3.6.13, and 3.5.23), a security
+    vulnerability was fixed that allows for SMTP smuggling on public-facing
+    mail servers. Remote attackers can use a publicly available exploit to
+    inject email messages with a spoofed MAIL FROM address, which also allows
+    bypassing SPF protection mechanisms. Update to Postfix-3.8.4 (or one of
+    3.7.9, 3.6.13, and 3.5.23) as soon as possible if you operate a public
+    facing mail server, and apply the required configuration changes. See
+    <a href="consolidated.html#sa-12.0-067">12.0-067</a> for more details.</p>
+
+<!-- end of Postfix -->
+
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-12.0-090"/>
+    <h4>12.0 090 PostgreSQL               Date: 2024-02-09  Severity: High</h4>
+    <p>In PostgreSQL-16.2 a vulnerability was fixed that could allow
+    for arbitrary command execution through luring a user into running
+    a command (check the CVE for the command).  Due to this it is highly
+    recommended to update to PostgreSQL on any older system.
+    <a href="consolidated.html#sa-12.0-090">12.0-090</a></p>
     <h3>PostgreSQL</h3>
 
     <a id="sa-12.0-041"/>
@@ -370,7 +588,31 @@
 
 <!-- end of PostgreSQL -->
 
+    <h3>ProFTPD</h3>
+
+    <a id="sa-12.0-060"/>
+    <h4>12.0 060 ProFTPD                 Date: 2023-12-23  Severity: Critical</h4>
+    <p>In ProFTPD 1.3.8b the 'Terrapin' SSH vulnerability, was fixed.  This could
+    allow for an attacker to downgrade the connection to a lesser security level 
+    resulting in reduced security and allowing an attacker to login to a victim's 
+    client.  It is highly recommended to recommended to update ProFTPD as soon as 
+    possible due to the broad attack surface of this vulnerability.
+    <a href="consolidated.html#sa-12.0-060">12.0-060</a></p>
+
+<!-- end of ProFTPD -->
+
     <h3>Python3</h3>
+
+    <a id="sa-12.0-092"/>
+    <h4>12.0 092 Python3                Date: 2024-02-13  Severity: High</h4>
+    <p>In Python-3.12.2, a security vulnerability was fixed that could allow
+    for silent execution of arbitrary code via hidden *.pth files. *.pth files
+    are executed automatically, unlike normal Python files which need explicit
+    importing or passing as an argument to the Python interpreter. The issue
+    was fixed upstream by skipping *.pth files with names starting with a dot
+    (or the hidden file attribute on other systems). Update to Python-3.12.2,
+    or 3.11.8 if you prefer to stay on the 3.11.x series.
+    <a href="consolidated.html#sa-12.0-092">12.0-092</a></p>
 
     <a id="sa-12.0-001"/>
     <h4>12.0 001 Python3  Date: 2023-09-03  Severity: Medium</h4>
@@ -404,7 +646,7 @@
 
     <a id="sa-12.0-021"/>
     <h4>12.0 021 Samba                    Date: 2023-10-11  Severity: High</h4>
-    <p>In samba-4.19.10, several security vulnerabilities were fixed that could
+    <p>In samba-4.19.1, several security vulnerabilities were fixed that could
     allow for an attacker to trigger denial of service, crashing the service, 
     or potentially compromising it.
     Update to samba-4.19.1.
@@ -413,6 +655,14 @@
 <!-- end of Samba -->
 
     <h3>Seamonkey</h3>
+
+    <a id="sa-12.0-059"/>
+    <h4>12.0 059 Seamonkey    Date: 2023-12-20  Severity: High</h4>
+    <p>In Seamonkey-2.53.18, several security vulnerabilities were fixed that
+    could allow for clickjacking, address bar spoofing, crashes, extensions
+    opening arbitrary URLs, out-of-bounds memory access, clipboard contents
+    stealing, and path traversal. Update to Seamonkey-2.53.18.
+    <a href="consolidated.html#sa-12.0-059">12.0-059</a></p>
 
     <a id="sa-12.0-028"/>
     <h4>12.0 028 Seamonkey                Date: 2023-10-24  Severity: High</h4>
@@ -435,7 +685,28 @@
 
 <!-- end of Seamonkey -->
 
+    <h3>sendmail</h3>
+
+    <a id="sa-12.0-086"/>
+    <h4>12.0 086 sendmail                Date: 2024-02-02   Severity: Critical</h4>
+    <p>In sendmail-8.18.2, a security vulnerability was fixed that allows for
+    SMTP smuggling on publicly-accessible mail servers. Remote attackers can use
+    a publicly available exploit to inject email messages with a spoofed MAIL
+    FROM address, which also allows bypassing SPF protection mechanisms. Update
+    to sendmail-8.18.2 if you maintain a publicly-accessible mail server.
+    <a href="consolidated.html#sa-12.0-086">12.0-086</a></p>
+
+<!-- end of sendmail -->
+
     <h3>SpiderMonkey</h3>
+
+    <a id="sa-12.0-064"/>
+    <h4>12.0 064 SpiderMonkey  Date: 2023-12-27  Severity: High</h4>
+    <p>In SpiderMonkey/mozjs-115.6.0, a security vulnerability was fixed that
+    could allow for memory safety issues. This vulnerability could allow for
+    arbitrary code execution and crashes due to memory corruption. Update to
+    SpiderMonkey-115.6.0.
+    <a href="consolidated.html#sa-12.0-064">12.0-064</a></p>
 
     <a id="sa-12.0-030"/>
     <h4>12.0 030 SpiderMonkey  Date: 2023-10-24  Severity: High</h4>
@@ -446,7 +717,40 @@
 
 <!-- end of SpiderMonkey -->
 
+    <h3>systemd</h3>
+
+    <a id="sa-12.0-068"/>
+    <h4>12.0 068 systemd      Date: 2023-12-30  Severity: Medium</h4>
+    <p>A security vulnerability was found in systemd-resolved that could allow
+    systemd-resolved to accept records of DNSSEC-signed domains, even when they
+    have no signature. Note that you must have DNSSEC support enabled on your
+    system to be vulnerable to this vulnerability, and that support is not
+    turned enabled by default. If you do have DNSSEC support enabled, rebuild
+    systemd with the new 'sed' using the instructions from BLFS. If you do not
+    have DNSSEC support enabled, no action is necessary.
+    <a href="consolidated.html#sa-12.0-068">12.0-068</a></p>
+
+<!-- end of systemd -->
+
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.0-080"/>
+    <h4>12.0 080 Thunderbird  Date: 2024-01-24  Severity: High</h4>
+    <p>In Thunderbird-115.7.0, nine security vulnerabilities were fixed that
+    could allow for remotely exploitable crashes, arbitrary code execution,
+    HSTS policy bypasses, privilege escalation, permissions request bypassing,
+    phishing, and a bypass of the Content Security Policy if one is set. Update
+    to Thunderbird-115.7.0.
+    <a href="consolidated.html#sa-12.0-080">12.0-080</a></p>
+
+    <a id="sa-12.0-063"/>
+    <h4>12.0 063 Thunderbird              Date: 2023-12-26  Severity: High</h4>
+    <p>In Thunderbird-115.6.0, eleven security vulnerabilities were fixed that
+    could allow for remote code execution, exploitable crashes, sandbox escapes,
+    S/MIME signatures being accepted despite mismatching message dates,
+    undefined behavior, and for spoofed messages to be accepted when processing
+    PGP/MIME payloads. Update to Thunderbird-115.6.0.
+    <a href="consolidated.html#sa-12.0-063">12.0-063</a></p>
 
     <a id="sa-12.0-047"/>
     <h4>12.0 047 Thunderbird              Date: 2023-11-22   Severity: High</h4>
@@ -487,6 +791,17 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>Unbound</h3>
+
+    <a id="sa-12.0-096"/>
+    <h4>12.0 096 Unbound             Date: 2023-09-27  Severity: High</h4>
+    <p>In Unbound-1.19.1, two security vulnerabilities were fixed that
+    could allow for crashing the instance through CPU exhaustion
+    Update to Unbound-1.19.1.
+    <a href="consolidated.html#sa-12.0-096">12.0-096</a></p>
+
+<!-- end of Unbound -->
+
     <h3>tracker-miners</h3>
 
     <a id="sa-12.0-034"/>
@@ -502,6 +817,22 @@
 <!-- end of tracker-miners -->
 
     <h3>WebKitGTK</h3>
+
+    <a id="sa-12.0-089"/>
+    <h4>12.0 089 WebKitGTK              Date: 2024-02-05   Severity: Critical</h4>
+    <p>In WebKitGTK-2.42.5, three security vulnerabilities were fixed that could
+    allow for trivial remote code execution and for a webpage to fingerprint a
+    user. Due to the remote code execution vulnerabilities it is recommended
+    that you update WebKitGTK immediately to protect your system.
+    Update to WebKitGTK-2.42.5.
+    <a href="consolidated.html#sa-12.0-089">12.0-089</a></p>
+
+    <a id="sa-12.0-058"/>
+    <h4>12.0 058 WebKitGTK    Date: 2023-12-19  Severity: Medium</h4>
+    <p>In WebKitGTK-2.42.4, a security vulnerability was fixed that could allow
+    for an application crash when processing a large SVG image. The issue was
+    resolved with improved memory handling. Update to WebKitGTK-2.42.4 or later.
+    <a href="consolidated.html#sa-12.0-058">12.0-058</a></p>
 
     <a id="sa-12.0-052"/>
     <h4>12.0 052 WebKitGTK               Date: 2023-12-06   Severity: Critical</h4>
@@ -532,17 +863,50 @@
 
 <!-- end of WebKitGTK -->
 
+    <h3>wpa_supplicant</h3>
+
+    <a id="sa-12.0-097"/>
+    <h4>12.0 097 wpa_supplicant           Date: 2024-02-13  Severity: High</h4>
+    <p>In wpa_supplicant-2.10, a security vulnerability was discovered that
+    could allow for an attacker to trick a victim into connecting to a malicious
+    clone of an enterprise WiFi network, and in turn allow them to intercept all
+    traffic. The BLFS developers have created a patch for this vulnerability
+    based upon an upstream fix.
+    <a href="consolidated.html#sa-12.0-097">12.0-097</a></p>
+
+<!-- end of wpa_supplicant -->
+
+    <h3>xdg-utils</h3>
+
+    <a id="sa-12.0-093"/>
+    <h4>12.0 093 xdg-utils              Date: 2024-02-13  Severity: Medium</h4>
+    <p>In xdg-utils-1.2.1, a security vulnerability was fixed that could allow
+    for attachments to be discretely added to emails sent via the 'xdg-email'
+    command. Update to xdg-utils-1.2.1.
+    <a href="consolidated.html#sa-12.0-093">12.0-093</a></p>
+
+<!-- end of xdg-utils -->
+
     <h3>Xorg-server</h3>
 
+    <a id="sa-12.0-071"/>
+    <h4>12.0 071 xorg-server  Date: 2024-01-17  Severity: Medium</h4>
+    <p>In xorg-server-21.1.11, four security vulnerabilities were fixed that
+    could allow for crashes, privilege escalation, and remote code execution
+    on systems where X11 forwarding is in use. These vulnerabilities are
+    classified as heap buffer overflows and out-of-bounds memory accesses.
+    Update to xorg-server-21.1.11.
+    <a href="consolidated.html#sa-12.0-071">12.0-071</a></p>
+
     <a id="sa-12.0-055"/>
-    <h4>12.0 055 xorg-server              Updated: 2023-12-13  Severity: High</h4>
-    <p>In xorg-server-21.1.9 and earlier a security vulnerability was fixed that
-    could allow local privilege escalation or possible remote code execution. 
-    X server crash in a very specific and legacy configuration.
-    Update to xorg-server-21.1.10
+    <h4>12.0 055 xorg-server              Updated: 2023-12-15  Severity: High</h4>
+    <p>In xorg-server-21.1.10, two security vulnerabilities were fixed that
+    could allow for privilege escalation and memory disclosure. If you are
+    using SSH X Forwarding, these vulnerabilities could be used for remote
+    code execution. Update to xorg-server-21.1.10
     <a href="consolidated.html#sa-12.0-055">12.0-055</a></p>
 
-    <a id="sa-12.0-032"/>
+    <!--<a id="sa-12.0-032"/>-->
     <h4>12.0 032 xorg-server              Updated: 2023-10-29  Severity: High</h4>
     <p>In xorg-server-21.1.9 a security vulnerability was fixed due to an 
     out-of-bounds write flaw, leading to privilege escalation or denial of
@@ -559,6 +923,23 @@
 <!-- end of Xorg-server -->
 
     <h3>Xwayland</h3>
+
+    <a id="sa-12.0-072"/>
+    <h4>12.0 072 Xwayland  Date: 2024-01-17  Severity: Medium</h4>
+    <p>In Xwayland-23.2.4, four security vulnerabilities were fixed that
+    could allow for crashes and privilege escalation. These vulnerabilities are
+    classified as heap buffer overflows and out-of-bounds memory accesses.
+    Update to Xwayland-23.2.4.
+    <a href="consolidated.html#sa-12.0-072">12.0-072</a></p>
+
+    <a id="sa-12.0-056"/>
+    <h4>12.0 056 Xwayland                 Date: 2023-12-15     Severity: High</h4>
+    <p>In Xwayland-23.2.3, two security vulnerabilities were fixed due to
+    out-of-bounds reads and writes, leading to privilege escalation and
+    information disclosure. Update to Xwayland-23.2.3.
+    <a href="consolidated.html#sa-12.0-056">12.0-056</a></p>
+
+    <a id="sa-12.0-032"/>
     <h4>12.0 032 xwayland                 Updated: 2023-10-29  Severity: High</h4>
     <p>In xwayland-23.2.2 a security vulnerability was fixed due to an 
     out-of-bounds write flaw, leading to privilege escalation or denial
