@@ -69,8 +69,8 @@
     <h4>12.0 106 Procps (LFS)         Date: 2024-02-27  Severity: Low</h4>
     <p>In Procps-ng-4.0.4, one security vulnerability was fixed that might
     allow for a denial-of-service (application crash) when running
-    <code>ps -C</code> with untrusted inputs.  Only 32-bit systems are
-    affected.
+    <code>ps</code> with a very long value for the <code>-C</code> option.
+    Only 32-bit systems are affected.
     This vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4016">CVE-2023-4016</a>.</p>
     <p>You only need to fix this vulnerability if you are running a 32-bit
