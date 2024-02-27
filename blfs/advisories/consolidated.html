@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-106"/>
+    <h4>12.0 106 Procps (LFS)         Date: 2024-02-27  Severity: Low</h4>
+    <p>In Procps-ng-4.0.4, one security vulnerability was fixed that might
+    allow for a denial-of-service (application crash) when running
+    <code>ps -C</code> with untrusted inputs.  Only 32-bit systems are
+    affected.
+    This vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4016">CVE-2023-4016</a>.</p>
+    <p>You only need to fix this vulnerability if you are running a 32-bit
+    system where a service may invoke <code>ps -C</code> with some
+    unsanitized input.  In this case, update to Procps-ng-4.0.4 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter08/procps-ng.html">Procps (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/procps-ng.html">Procps (systemd)</a>.</p>
+
     <a id="sa-12.0-105"/>
     <h4>12.0 105 Thunderbird   Date: 2024-02-21  Severity: High</h4>
     <p>In Thunderbird-115.8.0, several security vulnerabilities were fixed that
