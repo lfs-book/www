@@ -65,6 +65,152 @@
 
     <h2>Items between the releases of the 12.0 and 12.1 books</h2>
 
+    <a id="sa-12.0-106"/>
+    <h4>12.0 106 Procps (LFS)         Date: 2024-02-27  Severity: Low</h4>
+    <p>In Procps-ng-4.0.4, one security vulnerability was fixed that might
+    allow for a denial-of-service (application crash) when running
+    <code>ps</code> with a very long value for the <code>-C</code> option.
+    Only 32-bit systems are affected.
+    This vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4016">CVE-2023-4016</a>.</p>
+    <p>You only need to fix this vulnerability if you are running a 32-bit
+    system where a service may invoke <code>ps -C</code> with some
+    unsanitized input.  In this case, update to Procps-ng-4.0.4 or later
+    using the instructions for
+    <a href="../../lfs/view/development/chapter08/procps-ng.html">Procps (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/procps-ng.html">Procps (systemd)</a>.</p>
+
+    <a id="sa-12.0-105"/>
+    <h4>12.0 105 Thunderbird   Date: 2024-02-21  Severity: High</h4>
+    <p>In Thunderbird-115.8.0, several security vulnerabilities were fixed that
+    could allow for spoofing, notifications being hidden, obscuring the
+    permissions dialog, unintentional permission granting, response header
+    injection, and for arbitrary code execution. These vulnerabilities are
+    similar to the ones that were resolved in Firefox.
+    These vulnerabilities were assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1546">CVE-2024-1546</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1547">CVE-2024-1547</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1548">CVE-2024-1548</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1549">CVE-2024-1549</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1550">CVE-2024-1550</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1551">CVE-2024-1551</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1553">CVE-2024-1553</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.8.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.0-104"/>
+    <h4>12.0 104 Firefox  Date: 2024-02-20  Severity: High</h4>
+    <p>In firefox 115.8.0 seven vulnerabilities were fixed.
+    Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2024-06">mfsa-2024-06</a>.
+    Details will appear at <!-- 2024-02-20 all received at nvd, not yet analyzed -->
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1546">CVE-2024-1546</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1547">CVE-2024-1547</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1548">CVE-2024-1548</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1549">CVE-2024-1549</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1550">CVE-2024-1550</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1551">CVE-2024-1551</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1553">CVE-2024-1553</a>.</p>
+    <p>To fix these update to firefox-115.8.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+
+    <a id="sa-12.0-103"/>
+    <h4>12.0 103 Qt6           Date: 2024-02-18  Severity: Critical</h4>
+    <p>In Qt6-6.6.2, two security vulnerabilities were fixed that could allow
+    for a denial of service and arbitrary code execution. One of these issues
+    occurs when loading KTX images, and is classified as a buffer overflow. The
+    other vulnerability is classified as an integer overflow and is in the
+    HTTP/2 implementation in QtBase. Due to the severity of the HTTP/2 issue,
+    it is recommended that you update this package immediately if you have it
+    installed.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51714">CVE-2023-51714</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25580">CVE-2024-25580</a>.</p>
+    <p>To fix these vulnerabilities, update to Qt6-6.6.2 or later using the
+    instructions from
+    <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a>.</p>
+
+    <a id="sa-12.0-102"/>
+    <h4>12.0 102 node.js       Date: 2024-02-17  Severity: High</h4>
+    <p>In node.js-20.11.1, eight vulnerabilities were fixed, some of
+    which could allow for an attacker to crash the server from resource
+    exhaustion, or will allow an attacker to do a DoS attack on a server, or
+    could allow for code injection into the server.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2024-21892">CVE-2024-21892</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2024-22019">CVE-2024-22019</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2024-21896">CVE-2024-21816</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2024-22017">CVE-2024-22017</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2024-46809">CVE-2024-46809</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2024-21891">CVE-2024-21891</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2024-21890">CVE-2024-21890</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2024-22025">CVE-2024-22025</a>.</p>
+    <p>To fix these vulnerabilities, update to node.js-20.11.1 or later using
+    the instructions from
+    <a href="../view/svn/general/nodejs.html">node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">node.js (systemd)</a>.</p>
+
+
+    <a id="sa-12.0-101"/>
+    <h4>12.0 101 Qt5                      Date: 2024-02-17  Severity: High</h4>
+    <p>In Qt5-5.15.12, a security vulnerability was discovered that could allow
+    for a buffer overflow when reading a crafted KTX image file. This issue
+    exists in qtbase, and will lead to a denial of service or possibly other
+    impacts when reading the crafted file in an application. The Qt5 developers
+    have released an official patch on their FTP site which has been adapted
+    for use in BLFS.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25580">CVE-2024-25580</a>.</p>
+    <p>For more information, please see the
+    <a href="https://www.qt.io/blog/security-advisory-potential-buffer-overflow-when-reading-ktx-images">Qt Security Advisory</a>.</p>
+    <p>To fix this vulnerability, rebuild Qt5 with the patch using the
+    instructions from
+    <a href="../view/svn/x/qt5.html">Qt5 (sysv)</a> or
+    <a href="../view/systemd/x/qt5.html">Qt5 (systemd)</a>.</p>
+    <p>If you prefer to use qt-alternate, please use the instructions from
+    <a href="../view/svn/x/qt5-alternate.html">qt5-alternate (sysv)</a> or
+    <a href="../view/systemd/x/qt5-alternate.html">qt5-alternate (systemd)</a>.</p>
+
+    <a id="sa-12.0-100"/>
+    <h4>12.0 100 NSS                      Date: 2024-02-16  Severity: Medium</h4>
+    <p>In NSS-3.98, a security vulnerability was fixed that could allow for
+    RSA cryptography information to be leaked, such as whether the high order
+    bits of the RSA decryption result are zero. This information can be used to
+    mount a Bleichenbacher or Manger attack against all RSA decryption
+    operations. It affects all padding modes and happens before any padding
+    operations. The vulnerability has been classified as a timing attack.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2023-5388">CVE-2023-5388</a>.</p>
+    <p>To fix this vulnerability, update to NSS-3.98 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/nss.html">NSS (sysv)</a> or
+    <a href="../view/systemd/postlfs/nss.html">NSS (systemd)</a>.</p>
+
+    <a id="sa-12.0-099"/>
+    <h4>12.0 099 ImageMagick  Date: 2024-02-15 Severity: Medium</h4>
+    <p>ImageMagick appears to have become its own CVE Numbering Authority.
+    The changelog between 7.1.1-15 and 7.1.1-28 at
+    <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md">ChangeLog.md</a>.
+    mentions at least two GHSA advisories, but those are either missing or
+    inaccessible.  The site's github security/advisories page contains nothing
+    for versions newer than 7.1.1-13.  There is one earlier CVE raised by RedHat
+    with a fix in 7.1.1-19, as well as several others without a git commit in
+    the links from NVD, so perhaps not agreed.
+    This known vulnerability has been assigned:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5341">CVE-2023-5341</a>.</p>
+    <p>Update to ImageMagick-7.1.1-28 or later using the instructions
+    for
+    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.
+    You may wish to review the above ChangeLog.md link from time to time, because
+    BLFS only updates this package if somebody becomes aware of a vulnerability, or
+    else before a BLFS release (because ImageMagick releases are so frequent).</p>
+
     <a id="sa-12.0-098"/>
     <h4>12.0 098 Exiv2                    Date: 2024-02-13  Severity: Low</h4>
     <p>In Exiv2-0.28.2, two security vulnerabilities were fixed that could

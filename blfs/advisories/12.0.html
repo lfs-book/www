@@ -172,6 +172,12 @@
 
     <h3>Firefox</h3>
 
+    <a id="sa-12.0-104"/>
+    <h4>12.0 104 Firefox  Date: 2024-02-20  Severity: High</h4>
+    <p>In firefox 115.8.0 seven vulnerabilities were fixed.
+    Upstream rate three of these as High.
+    <a href="consolidated.html#sa-12.0-104">12.0-104</a></p>
+
     <a id="sa-12.0-079"/>
     <h4>12.0 079 Firefox  Revised: 2024-02-08  Severity: High</h4>
     <p>In firefox 115.7.0 nine vulnerabilities were fixed.
@@ -284,6 +290,19 @@
     <a href="consolidated.html#sa-12.0-010">12.0-010</a></p>
 
 <!-- end of gstreamer -->
+
+    <h3>ImageMagick</h3>
+
+    <a id="sa-12.0-099"/>
+    <h4>12.0 099 ImageMagick  Date: 2024-02-15 Severity: Medium</h4>
+    <p>ImageMagick appears to have become its own CVE Numbering Authority.
+    The changelog between 7.1.1-15 and 7.1.1-28 at
+    <a href="https://github.com/ImageMagick/Website/blob/main/ChangeLog.md">ChangeLog.md</a>.
+    mentions at least two GHSA advisories, but those are either missing or
+    inaccessible.
+    <a href="consolidated.html#sa-12.0-099">12.0-099</a></p>
+
+<!-- end of ImageMagick -->
 
     <h3>Intel microcode</h3>
 
@@ -489,7 +508,26 @@
     as well as updating to node.js-18.18.2.
     <a href="consolidated.html#sa-12.0-026">12.0-026</a></p>
 
+    <a id="sa-12.0-102"/>
+    <h4>12.0 102 node.js          Date: 2024-02-17  Severity: High</h4>
+    <p>In node.js-20.11.1, eight vulnerabilities were fixed, some of
+    which were ranked high. Update to node.js-20.11.1.
+    <a href="consolidated.html#sa-12.0-102">12.0-102</a></p>
+
 <!-- end of node.js -->
+
+    <h3>NSS</h3>
+
+    <a id="sa-12.0-100"/>
+    <h4>12.0 100 NSS                      Date: 2024-02-16  Severity: Medium</h4>
+    <p>In NSS-3.98, a security vulnerability was fixed that could allow for
+    RSA cryptography information to be leaked, such as whether the high order
+    bits of the RSA decryption result are zero. This information can be used to
+    mount a Bleichenbacher or Manger attack against all RSA decryption
+    operations. Update to NSS-3.98.
+    <a href="consolidated.html#sa-12.0-100">12.0-100</a></p>
+
+<!-- end of NSS -->
 
     <h3>OpenJDK</h3>
 
@@ -623,6 +661,34 @@
 
 <!-- end of Python3 -->
 
+    <h3>Qt5</h3>
+
+    <a id="sa-12.0-101"/>
+    <h4>12.0 101 Qt5                      Date: 2024-02-17  Severity: High</h4>
+    <p>In Qt5-5.15.12, a security vulnerability was discovered that could allow
+    for a buffer overflow when reading a crafted KTX image file. This issue
+    exists in qtbase, and will lead to a denial of service or possibly other
+    impacts when reading the crafted file in an application. Rebuild Qt5 (or
+    qt5-alternate) with the patch.
+    <a href="consolidated.html#sa-12.0-101">12.0-101</a></p>
+
+<!-- end of Qt5 -->
+
+    <h3>Qt6</h3>
+
+    <a id="sa-12.0-103"/>
+    <h4>12.0 103 Qt6           Date: 2024-02-18  Severity: Critical</h4>
+    <p>In Qt6-6.6.2, two security vulnerabilities were fixed that could allow
+    for a denial of service and arbitrary code execution. One of these issues
+    occurs when loading KTX images, and is classified as a buffer overflow. The
+    other vulnerability is classified as an integer overflow and is in the
+    HTTP/2 implementation in QtBase. Due to the severity of the HTTP/2 issue,
+    it is recommended that you update this package immediately if you have it
+    installed. Update to Qt6-6.6.2.
+    <a href="consolidated.html#sa-12.0-103">12.0-103</a></p>
+
+    <!-- end of Qt6 -->
+
     <h3>QtWebEngine</h3>
 
     <a id="sa-12.0-048"/>
@@ -733,6 +799,14 @@
 <!-- end of systemd -->
 
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.0-105"/>
+    <h4>12.0 105 Thunderbird   Date: 2024-02-21  Severity: High</h4>
+    <p>In Thunderbird-115.8.0, several security vulnerabilities were fixed that
+    could allow for spoofing, notifications being hidden, obscuring the
+    permissions dialog, unintentional permission granting, response header
+    injection, and for arbitrary code execution. Update to Thunderbird-115.8.0.
+    <a href="consolidated.html#sa-12.0-105">12.0-105</a></p>
 
     <a id="sa-12.0-080"/>
     <h4>12.0 080 Thunderbird  Date: 2024-01-24  Severity: High</h4>

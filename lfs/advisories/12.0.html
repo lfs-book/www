@@ -196,6 +196,20 @@
 
  <!-- end of Perl -->
 
+    <h3>Procps</h3>
+
+    <a id="sa-12.0-106"/>
+    <h4>12.0 106 Procps (LFS)         Date: 2024-02-27  Severity: Low</h4>
+    <p>In Procps-ng-4.0.4, one security vulnerability was fixed that might
+    allow for a denial-of-service (application crash) when running
+    <code>ps</code> with a very long value for the <code>-C</code> option.
+    Only 32-bit systems are affected. Update to Procps-ng-4.0.4 or later if
+    running a service which may invoke <code>ps -C</code> with unsanitized
+    input on a 32-bit system.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.0-106">12.0-106</a></p>
+
+ <!-- end of Procps -->
+
     <h3>Python3</h3>
 
     <a id="sa-12.0-092"/>
