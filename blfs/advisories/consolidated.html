@@ -65,6 +65,20 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-006"/>
+    <h4>12.1 006 ghostscript     Date: 2024-03-09  Severity: High</h4>
+    <p>In ghostscript-10.03.0, a security vulnerability was fixed that could
+    allow for arbitrary code execution in the shipped fork of the tesseract
+    library used for OCR. From reading
+    <a href="https://ghostscript.com/blog/ocr.html">The gs blog re OCR</a>
+    it appears that ghostscript might need to be recompiled if OCR is to be
+    used. If that is true, the vulnerability will not apply to BLFS unless
+    you had followed those instructions.</p>
+    <p>To be certain of avoiding this vulnerability, update to
+    ghostscript-10.03.0 or later using the instructions from
+    <a href="../view/12.1/pst/gs.html">ghostscript (sysv)</a> or
+    <a href="../view/12.1-systemd/pst/gs.html">ghostscript (systemd)</a>.</p>
+
     <a id="sa-12.1-005"/>
     <h4>12.1 005 Seamonkey            Date: 2024-03-07  Severity: High</h4>
     <p>In Seamonkey-2.53.18.1, several security vulnerabilities were fixed that
