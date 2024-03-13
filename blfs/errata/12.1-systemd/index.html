@@ -7,24 +7,22 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
-     <ul>
-       <li>There are no current errata for blfs-12.0-systemd.</li>
-     </ul>
+<!-- <ul>
+       <li>There are no current errata for blfs-12.1.</li>
+     </ul>-->
 
-<!--
      <ul>
-       <li>The dependencies as published for libreoffice were incorrect.
-       Libreoffice no longer needs neon, serf, or apr - but needs libwebp
-       and libtiff to be installed.</li>
-       <li>Grilo is missing a dependency on libsoup3, which is necessary
-       to compile the package.</li>
-       <li>The option to enable ALSA in Thunderbird was incorrect. To resolve
-       this (if you want ALSA only), replace --disable-pulseaudio and
-       --enable-alsa with --enable-audio-backends=alsa.</li>
-       <li>In the "Configuring" section of libpwquality,  "gecoscheck" is 
-       misspelled as "geoscheck".</li>
+       <li>In asymptote the optional dependency on dvisvgm was not shown
+           because it no longer worked and it was unclear if it was still
+           supported (the documentation is hard to follow unless you have
+           used asymptote in a class). Eventually it became clear that the
+           problem was a change in ghostscript-10.02.1. Creation of svg
+           files from asymptote now works with asymptote-2.88, dvisvgm-3.2.2
+           and ghostscript-10.03.0 on those machines where the GPU is able
+           to produce 3D output from asymptote, although in rare case it
+           might need the maxtile command-line option to be used to specify
+           a size less than the monitor, e.g. -'maxtile 1023,768'.</li>
      </ul>
--->
 
      <h2>Known Security Vulnerabilities</h2>
      
