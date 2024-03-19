@@ -65,6 +65,31 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-008"/>
+    <h4>12.1 008 Firefox  Date: 2024-03-19  Severity: High</h4>
+    <p>In firefox 115.9.0 eight vulnerabilities applicable to linux X86 were fixed.
+    Details at
+    <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2024-13">mfsa-2024-13</a>.
+    Details will appear at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5388">CVE-2023-5388</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0743">CVE-2024-0743</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2608">CVE-2024-2608</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2610">CVE-2024-2610</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2611">CVE-2024-2611</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2612">CVE-2024-2612</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2614">CVE-2024-2614</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2616">CVE-2024-2616</a>.</p>
+    <p>The NSS vulnerabilities apply to the shipped version of nss which was updated
+    to 3.90.2. CVE-2023-5388 was fixed in nss-3.98 used in BLFS-12.1. The ticket for
+    CVE-2024-0743
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1867408">BMO-1867408</a>
+    is currently not public, but this is not listed among the vulnerabilities fixed
+    in firefox-124.0 (which shipped with included nss-3.98) and is therefore
+    assumed to not apply to BLFS where system-nss-3.98 was used.</p>
+    <p>To fix these update to firefox-115.9.0esr or later using the instructions for:
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+	
     <a id="sa-12.1-007"/>
     <h4>12.1 007 Unbound         Date: 2024-03-15  Severity: High</h4>
     <p>In Unbound-1.19.3, a security vulnerability was fixed that could
