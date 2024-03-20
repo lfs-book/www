@@ -65,6 +65,30 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-011"/>
+    <h4>12.1 011 Thunderbird      Date: 2024-03-20  Severity: High</h4>
+    <p>In Thunderbird-115.9.0, nine security vulnerabilities were fixed that
+    could allow for remote code execution, remotely exploitable crashes,
+    clickjacking (allowing a user to accidentally grant permissions), RSA
+    decryption timing attacks, content security bypasses, and arbitrary code
+    execution. Note that if you are using Thunderbird on a system with an
+    ARMv7-A CPU, updating to this version is critical due to an easily
+    exploitable vulnerability that allows for return registers to be overwrote.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0743">CVE-2024-0743</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0743">CVE-2024-2607</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2608">CVE-2024-2608</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2616">CVE-2024-2616</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5388">CVE-2024-5388</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2610">CVE-2024-2610</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2611">CVE-2024-2611</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2612">CVE-2024-2612</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2614">CVE-2024-2614</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.9.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-12.1-010"/>
     <h4>12.1 010 Expat (LFS)      Date: 2024-03-20  Severity: Medium</h4>
     <p>In Expat-2.6.2, a security vulnerability was fixed that could allow for
