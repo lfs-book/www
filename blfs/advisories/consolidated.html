@@ -65,6 +65,37 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-009"/>
+    <h4>12.1 009 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
+    <p>In intel-microcode-20240312, a mitigation for a hardware security
+    vulnerability known as RFDS, or Register File Data Sampling has been
+    provided.  This vulnerability may allow a malicious actor who can
+    locally execute code on a system to infer the values of secret data
+    which is otherwise protected by architectural mechanisms if the data
+    was previously stored in a register of some Intel Atom processors, or
+    an E core of the Intel Core, Pentium Gold, or Celeron processors based
+    on Alder Lake or Raptor Lake microarchitectures.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-28746">CVE-2023-28746</a>.</p>
+    <p>Note that the microcode update only provides the mitigation and
+    it must be enabled by the kernel to be really useful.  To mitigate
+    this vulnerability, update to intel-microcode-20240312 or later using
+    the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>,
+    <b>and</b> a latest kernel stable or 6.x LTS release (as at Mar. 20,
+    2024 they are 6.8.1, 6.7.10, 6.6.22, and 6.1.82; note that the
+    mitigation isn't available for 4.x or 5.x LTS releases) using the
+    instructions for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a> (consult an earlier version of the LFS book if you are
+    building 6.7.x or earlier) with <code>CONFIG_MITIGATION_RFDS</code>
+    enabled, and reboot the system.  After rebooting, run
+    <code>lscpu | grep 'Reg file data sampling'</code> to check if the
+    mitigation is in effect.  If it outputs nothing or the output contains
+    "Vulnerable", it means the mitigation is not correctly deployed and
+    you need to recheck.</p>
+
     <a id="sa-12.1-008"/>
     <h4>12.1 008 Firefox  Date: 2024-03-19  Severity: High</h4>
     <p>In firefox 115.9.0 eight vulnerabilities applicable to linux X86 were fixed.
