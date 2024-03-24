@@ -65,8 +65,8 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
-    <a id="sa-12.1-012"/>
-    <h4>12.1 012 Firefox  Date: 2024-03-22  Severity: Critical</h4>
+    <a id="sa-12.1-013"/>
+    <h4>12.1 013 Firefox  Date: 2024-03-22  Severity: Critical</h4>
     <p>In firefox 115.9.1 one critical vulnerability revealed at this week's
     pwn2own was fixed. Details at
     <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2024-16">mfsa-2024-16</a>.
@@ -75,6 +75,15 @@
     <p>To fix this update to firefox-115.9.1esr or later using the instructions for:
     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <h4>12.1 012 gnutls           Date: 2024-03-23  Severity: Medium</h4>
+    <p>In gnutls-3.8.4, two security vulnerabilities were fixed. One
+    fixed a bug where certtool crashed when verifying a certificate chain
+    with more than 16 certificates and the other fixes a side-channel in
+    the deterministic ECDSA.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28834">CVE-2024-28834</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28835">CVE-2024-28835</a>.
+    </p>
 
     <a id="sa-12.1-011"/>
     <h4>12.1 011 Thunderbird      Date: 2024-03-20  Severity: High</h4>
