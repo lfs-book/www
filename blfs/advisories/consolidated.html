@@ -65,6 +65,19 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-015"/>
+    <h4>12.1 015 Curl             Date: 2024-03-27  Severity: Medium</h4>
+    <p>In Curl-8.6.0 and older, if libcurl aborts a HTTP/2 server push
+    due to excessive headers, it will not free all memory. It will also
+    not report the error to the caller.
+
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2398">CVE-2024-2398</a>.</p>
+    <p>To fix it, update to Curl-8.7.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">Curl (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">Curl (systemd)</a>.</p>
+
     <a id="sa-12.1-014"/>
     <h4>12.1 014 Emacs            Date: 2024-03-26  Severity: High</h4>
     <p>In Emacs-29.3, four security vulnerabilities were fixed that could allow
