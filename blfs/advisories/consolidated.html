@@ -65,8 +65,8 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
-    <a id="sa-12.1-014"/>
-    <h4>12.1 014 Wireshark  Date: 2024-03-30  Severity: Medium</h4>
+    <a id="sa-12.1-016"/>
+    <h4>12.1 016 Wireshark  Date: 2024-03-30  Severity: Medium</h4>
     <p>In Wireshark 4.2.0 to 4.0.3 and 4.0.0 to 4.0.13 a T.38 dissector crash
     allows denial of service via packet injection or a crafted capture file.
     Details at
@@ -74,6 +74,37 @@
     <p>To fix this update to wireshark-4.2.4 or later using the instructions for:
     <a href="../view/svn/xsoft/wireshark.html">Wireshark (sysv)</a> or
     <a href="../view/systemd/xsoft/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-12.1-015"/>
+    <h4>12.1 015 Curl             Date: 2024-03-27  Severity: Medium</h4>
+    <p>In Curl-8.6.0 and older, if libcurl aborts a HTTP/2 server push
+    due to excessive headers, it will not free all memory. It will also
+    not report the error to the caller.
+
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2398">CVE-2024-2398</a>.</p>
+    <p>To fix it, update to Curl-8.7.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">Curl (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">Curl (systemd)</a>.</p>
+
+    <a id="sa-12.1-014"/>
+    <h4>12.1 014 Emacs            Date: 2024-03-26  Severity: High</h4>
+    <p>In Emacs-29.3, four security vulnerabilities were fixed that could allow
+    for arbitrary Lisp code execution, arbitrary code execution via displaying
+    a LaTeX preview for email attachments, and for untrusted content to be
+    displayed in Org mode and when processing emails. If you use Emacs for
+    displaying email or use the Org functionality for document editing,
+    formatting, or organizing, you should update to Emacs-29.3 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30205">CVE-2024-30205</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30204">CVE-2024-30204</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30203">CVE-2024-30203</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-30202">CVE-2024-30202</a>.</p>
+    <p>To fix these vulnerabilities, update to Emacs-29.3 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/emacs.html">Emacs (sysv)</a> or
+    <a href="../view/systemd/postlfs/emacs.html">Emacs (systemd)</a>.</p>
 
     <a id="sa-12.1-013"/>
     <h4>12.1 013 Firefox  Date: 2024-03-22  Severity: Critical</h4>
