@@ -65,6 +65,33 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-017"/>
+    <h4>12.1 017 Intel Microcode  Date: 2024-04-03  Severity: Medium</h4>
+    <p>In intel-microcode-20240312, two hardware vulnerabilities are
+    fixed.  One of them may allow denial of service via network access,
+    affecting Intel CPUs with family 6, models 191, 190, 183 (stepping 1
+    only, and except Xeon E processors), 154 (except Atom processors),
+    151, or 143 (except processors code named "Sapphire Rapids Edge
+    Enhanced").  Another may allow information disclosure via local
+    access, affecting Intel CPUs with family 6, models 191, 183, 154,
+    151, or 143 (except processors code named "Sapphire Rapids Edge
+    Enhanced").
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-39368">CVE-2023-39368</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38575">CVE-2023-38575</a>.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above.  If vulnerable, update to
+    intel-microcode-20240312 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>
+    to fix these vulnerabilities.</p>
+    <p>This microcode update also fixes CVE-2023-28746, CVE-2023-22655,
+    and CVE-2023-43490.  For CVE-2023-28746 (known as "RFDS") consult
+    <a href='#sa-12.1-009'>12.1-009</a>.  The other two vulnerabilites
+    only affect Intel SGX and TDX, and LFS does not support utilizing
+    them.</p>
+
     <a id="sa-12.1-016"/>
     <h4>12.1 016 Wireshark  Date: 2024-03-30  Severity: Medium</h4>
     <p>In Wireshark 4.2.0 to 4.0.3 and 4.0.0 to 4.0.13 a T.38 dissector crash
