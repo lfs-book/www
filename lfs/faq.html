@@ -415,14 +415,22 @@
           every time, you have a hardware problem. (If make, or whatever you're
           running, fails at the same place every time, then it is not
           hardware.)</p>
+          <p>First, do not overclock the CPU too much.  Note that with an
+          Intel "K" (unlocked) CPU, even the default configuration of the
+          motherboard is generally already overclocking so you may need to
+          even <b>step back</b> from the default especially when the CPU
+          is below the average: the individual difference among all CPUs
+          of a same model can make a significant effect on the overclocking
+          capability so buying an unlocked CPU is some sort of gambling.</p>
           <p>Assuming you're not overclocking, the most likely hardware problem
           is bad memory which you can check with Memtest86+ from <a
           href="https://www.memtest.org/">https://www.memtest.org/</a>.
           <p>CPU overheating is another common hardware problem.  Ensure the
           cooler is properly installed with thermal paste applied.  And,
           some coolers (especially all-in-one liquid coolers) cannot be
-          configured via BIOS and they need special software (for example,
-          <a href='https://github.com/liquidctl/liquidctl'>liquidctl</a> to set
+          configured via BIOS and they need kernel driver and/or special
+          software (for example,
+          <a href='https://github.com/liquidctl/liquidctl'>liquidctl</a>) to set
           the parameters correctly.  If such a cooler is not properly
           configured, it can run in a lower speed (or does not run at all).
           If the cooler is already running at full speed but the CPU still
