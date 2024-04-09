@@ -73,13 +73,13 @@
 
 <!-- end of c-ares -->
 
-    <h3>Curl</h3>
+    <h3>cURL</h3>
 
     <a id="sa-12.1-015"/>
-    <h4>12.1 015 Curl               Date: 2024-03-27  Severity: Medium</h4>
-    <p>In Curl-8.6.0, a security vulnerability was fixed that could allow
-	for a crash due to leaked memory after an aborted HTTP/2 server push.
-    Update to Curl-8.7.1
+    <h4>12.1 015 cURL               Date: 2024-03-27  Severity: Medium</h4>
+    <p>In cURL-8.7.1, a security vulnerability was fixed that could allow
+    for a crash due to leaked memory after an aborted HTTP/2 server push.
+    Update to cURL-8.7.1.
     <a href="consolidated.html#sa-12.1-015">12.1-015</a></p>
 
 <!-- end of curl -->
@@ -244,13 +244,27 @@
 
 <!-- end of Thunderbird -->
 
+
+    <h3>Unbound</h3>
+
+    <a id="sa-12.1-007"/>
+    <h4>12.1 007 Unbound               Date: 2024-03-15  Severity: High</h4>
+    <p>In Unbound-1.19.3, a security vulnerability was fixed that could
+    allow an attack to cause a denial of service attack (DoS) exploting
+    a code path that can lead to an infinite loop due to faulty code in
+    the feature that removes EDE records.
+    This vulnerability has been assigned
+    <a href="consolidated.html#sa-12.1-007">12.1-007</a></p>
+
+<!-- end of Unbound-->
+
     <h3>Wireshark</h3>
 
     <a id="sa-12.1-016"/>
     <h4>12.1 016 Wireshark            Date: 2024-03-30  Severity: Medium</h4>
-    <p>In Wireshark 4.2.0 to 4.0.3 and 4.0.0 to 4.0.13 a T.38 dissector crash
+    <p>In Wireshark 4.2.0 to 4.2.3 and 4.0.0 to 4.0.13 a T.38 dissector crash
     allows denial of service via packet injection or a crafted capture file.
-    This vulnerability has been assigned
+    Update to Wireshark-4.2.3.
     <a href="consolidated.html#sa-12.1-016">12.1-016</a></p>
 
 <!-- end of Wireshark-->
@@ -268,16 +282,4 @@
 
 <!-- end of Xorg-Server -->
 
-    <h3>Unbound</h3>
-
-    <a id="sa-12.1-007"/>
-    <h4>12.1 007 Unbound               Date: 2024-03-15  Severity: High</h4>
-    <p>In Unbound-1.19.3, a security vulnerability was fixed that could
-    allow an attack to cause a denial of service attack (DoS) exploting
-    a code path that can lead to an infinite loop due to faulty code in
-    the feature that removes EDE records.
-    This vulnerability has been assigned
-    <a href="consolidated.html#sa-12.1-007">12.1-007</a></p>
-
-<!-- end of Unbound-->
 <!--#include virtual="/common/footer.html" -->
