@@ -65,6 +65,54 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-024"/>
+    <!-- non-standard, because -dev has moved to Qt6 -->
+    <h4>12.1 024 QtWebEngine-5.15-20240403  Date: 2024-04-09  Severity: Critical</h4>
+    <p>In the QtWebEngine-5.15-20240403 snapshot 16 vulnerabilities, of which 2
+    were rated Critical by NVD, have been fixed.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0808">CVE-2024-0808</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0807">CVE-2024-0807</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0519">CVE-2024-0519</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0518">CVE-2024-0518</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0333">CVE-2024-0333</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0224">CVE-2024-0224</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0222">CVE-2024-0222</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7104">CVE-2023-7104</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7024">CVE-2023-7024</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6702">CVE-2023-6702</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6510">CVE-2023-6510</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6347">CVE-2023-6347</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1283">CVE-2023-1283</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1077">CVE-2023-1077</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1060">CVE-2023-1060</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1059">CVE-2023-1059</a>.</p>
+    <p>As always with QtWebEngine, the vulnerabilities originate in Google Chrome
+    and are later backported by Qt, who prioritise their newer branches.  BLFS
+    development has now moved to using Qt6 and what is there may change before our
+    next release. As a service to those who have installed QtWebEngine-5, the
+    following items are now available:
+    <ul>
+    <li>A tarball of the snapshot, with README.BUILD<br>
+    <a href=" https://anduin.linuxfromscratch.org/BLFS/qtwebengine/qtwebengine-5.15-20240403.tar.xz">qtwebengine-5.15-20240403.tar.xz</a><br>
+    size 310 MB md5sum e83b2ac629ae059c6ad0f02d67fb7998</li>
+    <li>A required patchset to enable it to build on BLFS<br>
+    <a href="https://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-5.15-20240403-build_fixes-1.patch">qtwebengine-5.15-20240403-build_fixes-1.patch</a><br>
+    size 106 KB md5sum f22e1753412936fbdd35dab0532e3f9e</li>
+    <li>A recommended patch to enable it to build against system ffmpeg-5 or
+    ffmpeg-6<br>
+    <a href="https://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-5.15-20240403-ffmpeg5_fixes-1.patch">qtwebengine-5.15-20240403-ffmpeg5_fixes-1.patch</a><br>
+    size 8.7 KB md5sum bfa30d1044f118d70164d0a04a76173e</li>
+    </ul></p>
+    <p>Qt-5.15.17 is expected to release this month (the BLFS-12.1 version was
+    an early snapshot). The final release of 5.15.18 is expected in October.  The
+    source is usually only ready to pull just before a planned upstream release
+    and it is unlikely there will be any further BLFS snapshots for 5.15. You
+    should plan to move to Qt-6.  In the meantime, the tarball linked above
+    contains a README.BUILD file detailing how to compile it (some of the details
+    have changed since BLFS-12.1) and the patches continue to document where they
+    came from, and what they are supposed to do.</p>
+
     <a id="sa-12.1-023"/>
     <h4>12.1 023 Apache HTTPD      Date: 2024-04-08  Severity: High</h4>
     <p>In httpd-2.4.59, three security vulnerabilities were fixed that could
