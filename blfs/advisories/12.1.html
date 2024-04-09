@@ -172,6 +172,19 @@
 
 <!-- end of Intel Microcode -->
 
+    <h3>nghttp2</h3>
+
+    <a id="sa-12.1-022"/>
+    <h4>12.1 022 nghttp2           Date: 2024-04-08  Severity: Medium</h4>
+    <p>In nghttp2-1.61.0, a security vulnerability was fixed that could allow
+    for an denial-of-service (excessive CPU usage and OOM crash) because nghttp2
+    continues reading an unbounded number of HTTP/2 CONTINUATION frames even
+    after a stream is reset to keep HPACK context in sync.
+    Update to nghttp2-1.61.0 or later especially if you host a server.
+    <a href="consolidated.html#sa-12.1-022">12.1-022</a></p>
+
+<!-- end of nghttp2 -->
+
     <h3>Node.js</h3>
 
     <a id="sa-12.1-019"/>
