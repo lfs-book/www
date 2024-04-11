@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-025"/>
+    <h4>12.1 025 QtWebEngine-6.6.3  Date: 2024-04-11  Severity: Critical</h4>
+    <p>The QtWebengine-6 releases do not provide any summary of bug fixes. The
+    Security Fixes (including CVEs) are listed in the appropriate git submodule,
+    but some of the 'Update Chromium' commits in the QtWebEngine-6 branches do
+    not specify which items were fixed and the submodule commits have many
+    varying dates (typically the original chromium commit date, unless it had to
+    be amended for Qt). The commits in QtWebEngine-6.6.3 include some rated as
+    Critical by NVD.  BLFS has now moved to QtWebEngine-6.7.0 which includes
+    similar commits.  This is expected to be the final advisory for QtWebEngine,
+    you should move to the latest version as soon as it is present in BLFS
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <a id="sa-12.0-047"/>
+
+	
     <a id="sa-12.1-024"/>
     <!-- non-standard, because -dev has moved to Qt6 -->
     <h4>12.1 024 QtWebEngine-5.15-20240403  Date: 2024-04-09  Severity: Critical</h4>
