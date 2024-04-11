@@ -699,6 +699,20 @@
           model, but lock another CPU at 800 MHz no matter if there is a
           workload running.  If you can't (or don't want to spend too much
           time to) find an ideal setting, use the "performance" governor.</p>
+          <p>On a modern Intel or AMD processor, the "energy performance
+          preference" may also have a significant impact on the performance
+          The default setting is usually "balance performance" which may
+          severely throttle down the performance, especially when the CPU
+          has many cores but only a few cores are utilized (for example,
+          when measuring the SBU with <code>make -j1</code> on a
+          Core i9-13900K). The easiest way to manange the energy performance
+          preference is via power-profiles-daemon, read
+          <a href='../blfs/view/svn/general/power-profiles-daemon.html'
+             >power-profiles-daemon (SysV)</a> or
+          <a href='../blfs/view/systemd/general/power-profiles-daemon.html'
+             >power-profiles-daemon (Systemd)</a> for how to install and
+          use it.  Alternatively you can try to change this setting via
+          the BIOS if a configuration entry is provided.</p>
         </dd>
       </dl>
 
