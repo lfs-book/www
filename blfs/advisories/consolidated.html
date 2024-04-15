@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-028"/>
+    <h4>12.1 028 FontForge          Date: 2024-04-15  Severity: Medium</h4>
+    <p>In FontForge-20230101, two security vulnerabilities were discovered that
+    could allow for Command Injection via malicious filenames and malicious
+    archives. The vulnerabilities were resolved via modifying the code to use
+    the g_spawn_sync/async() functions instead of the system() functions, which
+    causes commands to not be executed through a shell. Upstream has a patch
+    which the BLFS team has added into the book.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25081">CVE-2024-25081</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25082">CVE-2024-25082</a>.</p>
+    <p>To fix these vulnerabilities, apply the patch to FontForge and rebuild
+    the package using the instructions from
+    <a href="../view/svn/xsoft/fontforge.html">FontForge (sysv)</a> or
+    <a href="../view/systemd/xsoft/fontforge.html">FontForge (systemd)</a>.</p>
+
     <a id="sa-12.1-027"/>
     <h4>12.1 027 Seamonkey          Date: 2024-04-15  Severity: High</h4>
     <p>In Seamonkey-2.53.18.2, several security vulnerabilities were fixed
