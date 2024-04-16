@@ -28,6 +28,14 @@
            the Google API Key is set (if geolocation services were enabled).
            For Geoclue, follow the instructions in the book to configure it to
            use the Google Geolocation Service.</li>
+       <li>In Tuning Fontconfig, the information that KDE Plasma saves font
+           settings in ~/.config/fontconfig/fonts.conf seems incorrect and
+	   wrongly claimed that the same file, if installed, could override
+           that. Obviously a typo, but it appears that neither that file nor
+           /etc/fonts/local.conf have any effect on applications from either
+           KDE5 or KDE6. Fonts can be specified in the application's preferences
+           (e.g. Falkon, Konsole) as an alternative to using Plasma System
+           Settings.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
