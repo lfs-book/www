@@ -65,6 +65,42 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-029"/>
+    <h4>12.1 029 Linux Kernel (LFS)  Date: 2024-04-17  Severity: Medium</h4>
+    <p>In Linux-6.8.5, an insufficient mitigation against the hardware
+    vulnerability known as Branch History Injection, or BHI (see
+    <a href='#sa-11.1-011'>11.1-011</a> for details) on some Intel
+    processors was fixed.  This vulnerability may allow an sensitive
+    information leakage even if the BHI mitigation is deployed.
+    A demonstration has been made where an unprivileged user exploits
+    this vulnerability to get the content of <code>/etc/shadow</code>.
+    Read
+    <a href='https://download.vusec.net/projects/native-bhi'>the
+    homepage of this vulnerability</a> for the details.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2201">CVE-2024-2201</a>.</p>
+    <p>If you are running LFS on an Intel CPU affected by BHI, to fully
+    mitigate it, update to at least linux-6.8.5 (or 6.6.26, 6.1.85,
+    5.15.154 for older systems using LTS stable kernels) using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a> with the configuration option <code>SPECTRE_BHI_ON=y</code>,
+    and still keep unprivileged eBPF disabled following
+    <a href='#sa-11.1-011'>11.1-011</a>.  Then reboot and run
+    <code>lscpu | grep 'BHI'</code> to verify if the mitigation
+    is in-effect.  If the output contains "BHI: Vulnerable" or there is no
+    output at all, it means the mitigation is not correctly applied and
+    you need to recheck.</p>
+    <p>The mitigation may have a significant performance impact on some
+    kernel microbenchmarks, but it's unlikely to make any noticeable
+    difference for real workloads (for example building packages from
+    source).  And, if you are running LFS on an Intel processor based on
+    the Alder Lake or Catlow microarchitectures, the LFS editors recommend
+    to update to the latest Intel microcode using the instructions in
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>
+    to reduce the performance impact.</p>
+
     <a id="sa-12.1-028"/>
     <h4>12.1 028 FontForge          Date: 2024-04-15  Severity: Medium</h4>
     <p>In FontForge-20230101, two security vulnerabilities were discovered that
