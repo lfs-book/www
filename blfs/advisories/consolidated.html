@@ -65,28 +65,424 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-034"/>
+    <h4>12.1 034 Node.js            Date: 2024-04-20  Severity: Low</h4>
+    <p>In Node.js-20.12.2, a vulnerability was fixed on Windows where commands
+    could be injected through a Windows only argument library.  (B)LFS is
+    seemingly unaffected by this vulnerability but updating is still recommended
+    This vulnerability has been assigned
+    <a href="https://nodejs.org/en/blog/vulnerability/april-2024-security-releases-2">CVE-2024-27980</a>.</p>
+    <p>To (potentially) fix this update to Node.js-20.12.2 or later using the 
+    instructions for:
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
+
+    <a id="sa-12.1-033"/>
+    <h4>12.1 033 Thunderbird         Date: 2024-04-17  Severity: High</h4>
+    <p>In Thunderbird-115.10.0, eight security vulnerabilities were fixed that
+    could allow for arbitrary code execution, remotely exploitable denial of
+    service conditions (using HTTP/2 CONTINUATION frames), remotely exploitable
+    crashes, and clickjacking. Some of these vulnerabilities occur when using
+    the JIT compiler, but one of the vulnerabilities is 32-bit specific and
+    allows for an Integer Overflow when processing a crafted OpenType font.
+    Updating Thunderbird is recommended due to the HTTP/2 CONTINUATION attack,
+    since some HTML mails may use this protocol.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3852">CVE-2024-3852</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3854">CVE-2024-3854</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3857">CVE-2024-3857</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2609">CVE-2024-2609</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3859">CVE-2024-3859</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3861">CVE-2024-3861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3302">CVE-2024-3302</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3864">CVE-2024-3864</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.10.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.1-032"/>
+    <h4>12.1 032 Firefox             Date: 2024-04-17  Severity: High</h4>
+    <p>In Firefox-115.10.0esr, eight security vulnerabilities were fixed that
+    could allow for arbitrary code execution, remotely exploitable denial of
+    service conditions (using HTTP/2 CONTINUATION frames), remotely exploitable
+    crashes, and clickjacking. Some of these vulnerabilities occur when using
+    the JIT compiler, but one of the vulnerabilities is 32-bit specific and
+    allows for an Integer Overflow when processing a crafted OpenType font.
+    Updating Firefox is recommended due to the HTTP/2 CONTINUATION attack.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3852">CVE-2024-3852</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3854">CVE-2024-3854</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3857">CVE-2024-3857</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2609">CVE-2024-2609</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3859">CVE-2024-3859</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3861">CVE-2024-3861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3302">CVE-2024-3302</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3864">CVE-2024-3864</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-115.10.0esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-12.1-031"/>
+    <h4>12.1 031 SpiderMonkey        Date: 2024-04-17  Severity: High</h4>
+    <p>In SpiderMonkey/mozjs-115.10.0, three security vulnerabilities were
+    fixed in the JIT compiler which could allow for GetBoundName to return
+    the wrong object, for crashes after a mis-optimized switch statement,
+    and for incorrect JITting of arguments to lead for crashes during garbage
+    collection. This could allow for unexpected crashes in some applications.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3852">CVE-2024-3852</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3854">CVE-2024-3854</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3857">CVE-2024-3857</a>.</p>
+    <p>To fix these vulnerabilities, update to SpiderMonkey/mozjs-115.10.0 or
+    later using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
+    <a id="sa-12.1-030"/>
+    <h4>12.1 030 PHP                 Date: 2024-04-17  Severity: High</h4>
+    <p>In PHP-8.3.6, three security vulnerabilities were fixed that could allow
+    for insecure cookies to be set and thus a bypass of __Host/__Secure cookies,
+    as well as for an attacker to trivially compromise a victim's account if
+    a password is started with a null byte, and for an infinite loop when using
+    the mb_encode_mimeheader function with certain crafted inputs. If you use
+    PHP to run a website that accepts passwords, you should update immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2201">CVE-2024-2756</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3096">CVE-2024-3096</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2757">CVE-2024-2757</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.3.6 or later using the
+    instructions from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
+    <a id="sa-12.1-029"/>
+    <h4>12.1 029 Linux Kernel (LFS)  Date: 2024-04-17  Severity: Medium</h4>
+    <p>In Linux-6.8.5, an insufficient mitigation against the hardware
+    vulnerability known as Branch History Injection, or BHI (see
+    <a href='#sa-11.1-011'>11.1-011</a> for details) on some Intel
+    processors was fixed.  This vulnerability may allow an sensitive
+    information leakage even if the BHI mitigation is deployed.
+    A demonstration has been made where an unprivileged user exploits
+    this vulnerability to get the content of <code>/etc/shadow</code>.
+    Read
+    <a href='https://download.vusec.net/projects/native-bhi'>the
+    homepage of this vulnerability</a> for the details.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2201">CVE-2024-2201</a>.</p>
+    <p>If you are running LFS on an Intel CPU affected by BHI, to fully
+    mitigate it, update to at least linux-6.8.5 (or 6.6.26, 6.1.85,
+    5.15.154 for older systems using LTS stable kernels) using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a> with the configuration option <code>SPECTRE_BHI_ON=y</code>,
+    and still keep unprivileged eBPF disabled following
+    <a href='#sa-11.1-011'>11.1-011</a>.  Then reboot and run
+    <code>lscpu | grep 'BHI'</code> to verify if the mitigation
+    is in-effect.  If the output contains "BHI: Vulnerable" or there is no
+    output at all, it means the mitigation is not correctly applied and
+    you need to recheck.</p>
+    <p>The mitigation may have a significant performance impact on some
+    kernel microbenchmarks, but it's unlikely to make any noticeable
+    difference for real workloads (for example building packages from
+    source).  And, if you are running LFS on an Intel processor based on
+    the Alder Lake or Catlow microarchitectures, the LFS editors recommend
+    to update to the latest Intel microcode using the instructions in
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>
+    to reduce the performance impact.</p>
+
+    <a id="sa-12.1-028"/>
+    <h4>12.1 028 FontForge          Date: 2024-04-15  Severity: Medium</h4>
+    <p>In FontForge-20230101, two security vulnerabilities were discovered that
+    could allow for Command Injection via malicious filenames and malicious
+    archives. The vulnerabilities were resolved via modifying the code to use
+    the g_spawn_sync/async() functions instead of the system() functions, which
+    causes commands to not be executed through a shell. Upstream has a patch
+    which the BLFS team has added into the book.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25081">CVE-2024-25081</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25082">CVE-2024-25082</a>.</p>
+    <p>To fix these vulnerabilities, apply the patch to FontForge and rebuild
+    the package using the instructions from
+    <a href="../view/svn/xsoft/fontforge.html">FontForge (sysv)</a> or
+    <a href="../view/systemd/xsoft/fontforge.html">FontForge (systemd)</a>.</p>
+
+    <a id="sa-12.1-027"/>
+    <h4>12.1 027 Seamonkey          Date: 2024-04-15  Severity: High</h4>
+    <p>In Seamonkey-2.53.18.2, several security vulnerabilities were fixed
+    that could allow for remotely exploitable crashes, content spoofing,
+    cookie injection, arbitrary code execution, timing attacks, and content
+    security policy bypasses. These are the same vulnerabilities fixed in
+    Firefox and Thunderbird 115.8.0 and 115.9.0.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1546">CVE-2024-1546</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1547">CVE-2024-1547</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1548">CVE-2024-1548</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1549">CVE-2024-1549</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1550">CVE-2024-1550</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1551">CVE-2024-1551</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1553">CVE-2024-1553</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0743">CVE-2024-0743</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0743">CVE-2024-2607</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2608">CVE-2024-2608</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2616">CVE-2024-2616</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5388">CVE-2024-5388</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2610">CVE-2024-2610</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2611">CVE-2024-2611</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2612">CVE-2024-2612</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2614">CVE-2024-2614</a>.</p>
+    <p>To fix these vulnerabilities, update to Seamonkey-2.53.18.2 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+    <a id="sa-12.1-026"/>
+    <h4>12.1 026 QtWebEngine-6.6.3  Date: 2024-04-11  Severity: Critical</h4>
+    <p>The QtWebengine-6 releases do not provide any summary of bug fixes. The
+    Security Fixes (including CVEs) are listed in the appropriate git submodule,
+    but some of the 'Update Chromium' commits in the QtWebEngine-6 branches do
+    not specify which items were fixed and the submodule commits have many
+    varying dates (typically the original chromium commit date, unless it had to
+    be amended for Qt). The commits in QtWebEngine-6.6.3 include some rated as
+    Critical by NVD.  BLFS has now moved to QtWebEngine-6.7.0 which includes
+    similar commits.  This is expected to be the final advisory for QtWebEngine,
+    you should move to the latest version as soon as it is present in BLFS
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <h4>12.1 025 libarchive        Date: 2024-04-10  Severity: Medium</h4>
+    <p>In libarchive-3.7.3, a possible security vulnerability was fixed that
+    could allow for command injection via terminal escape sequences when
+    decompressing or viewing an archive. This vulnerability occurs when
+    reporting errors from libarchive's tar command.
+    No CVE has been assigned for this issue, but more details and a proof of
+    concept can be found in the comments of
+    <a href="https://github.com/libarchive/libarchive/pull/1609">Libarchive PR #1609</a>.</p>
+    <p>To fix this vulnerability, update to libarchive-3.7.3 or later using the
+    instructions from
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
+    <a id="sa-12.1-024"/>
+    <!-- non-standard, because -dev has moved to Qt6 -->
+    <h4>12.1 024 QtWebEngine-5.15-20240403  Date: 2024-04-09  Severity: Critical</h4>
+    <p>In the QtWebEngine-5.15-20240403 snapshot 16 vulnerabilities, of which 2
+    were rated Critical by NVD, have been fixed.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0808">CVE-2024-0808</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0807">CVE-2024-0807</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0519">CVE-2024-0519</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0518">CVE-2024-0518</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0333">CVE-2024-0333</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0224">CVE-2024-0224</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0222">CVE-2024-0222</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7104">CVE-2023-7104</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-7024">CVE-2023-7024</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6702">CVE-2023-6702</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6510">CVE-2023-6510</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-6347">CVE-2023-6347</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1283">CVE-2023-1283</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1077">CVE-2023-1077</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1060">CVE-2023-1060</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-1059">CVE-2023-1059</a>.</p>
+    <p>As always with QtWebEngine, the vulnerabilities originate in Google Chrome
+    and are later backported by Qt, who prioritise their newer branches.  BLFS
+    development has now moved to using Qt6 and what is there may change before our
+    next release. As a service to those who have installed QtWebEngine-5, the
+    following items are now available:<br/><br/>
+    A tarball of the snapshot, with README.BUILD<br/>
+    <a href=" https://anduin.linuxfromscratch.org/BLFS/qtwebengine/qtwebengine-5.15-20240403.tar.xz">qtwebengine-5.15-20240403.tar.xz</a><br/>
+    size 310 MB md5sum e83b2ac629ae059c6ad0f02d67fb7998<br/><br/>
+    A required patchset to enable it to build on BLFS<br/>
+    <a href="https://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-5.15-20240403-build_fixes-1.patch">qtwebengine-5.15-20240403-build_fixes-1.patch</a><br/>
+    size 106 KB md5sum f22e1753412936fbdd35dab0532e3f9e<br/><br/>
+    A recommended patch to enable it to build against system ffmpeg-5 or
+    ffmpeg-6<br/>
+    <a href="https://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-5.15-20240403-ffmpeg5_fixes-1.patch">qtwebengine-5.15-20240403-ffmpeg5_fixes-1.patch</a><br/>
+    size 8.7 KB md5sum bfa30d1044f118d70164d0a04a76173e</p>
+    <p>Qt-5.15.17 is expected to release this month (the BLFS-12.1 version was
+    an early snapshot). The final release of 5.15.18 is expected in October.  The
+    source is usually only ready to pull just before a planned upstream release
+    and it is unlikely there will be any further BLFS snapshots for 5.15. You
+    should plan to move to Qt-6.  In the meantime, the tarball linked above
+    contains a README.BUILD file detailing how to compile it (some of the details
+    have changed since BLFS-12.1) and the patches continue to document where they
+    came from, and what they are supposed to do.</p>
+
+    <a id="sa-12.1-023"/>
+    <h4>12.1 023 Apache HTTPD      Date: 2024-04-08  Severity: High</h4>
+    <p>In httpd-2.4.59, three security vulnerabilities were fixed that could
+    allow for denial-of-service and HTTP Response Splitting. One of these
+    vulnerabilities is the "HTTP/2 CONTINUATION attack", and allows for remotely
+    exploitable memory exhaustion. The HTTP Response Splitting vulnerabilities
+    occur due to bugs that allow an attacker to inject malicious response headers
+    due to faulty input validation, and that causes an HTTP desynchronization
+    attack. If you are running a web server, it is highly recommended to update
+    to httpd-2.4.59 immediately to protect yourself against the
+    "HTTP/2 CONTINUATION" attack.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38709">CVE-2023-38709</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24795">CVE-2024-24795</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-27316">CVE-2024-27316</a>.</p>
+    <p>Additional details can be found at
+    <a href="https://kb.cert.org/vuls/id/421644">CERT Vulnerability Note VU#421644</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.59 or later using the
+    instructions from
+    <a href="../view/svn/server/apache.html">Apache HTTPD (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
+
+    <a id="sa-12.1-022"/>
+    <h4>12.1 022 nghttp2           Date: 2024-04-08  Severity: Medium</h4>
+    <p>In nghttp2-1.61.0, a security vulnerability was fixed that could allow
+    for an denial-of-service (excessive CPU usage and OOM crash) because nghttp2
+    continues reading an unbounded number of HTTP/2 CONTINUATION frames even
+    after a stream is reset to keep HPACK context in sync. This vulnerability
+    was recently fixed in Node.js as well as httpd, and is a vulnerability in
+    the HTTP/2 standard itself. If you host a server, it's recommended that
+    you update this package immediately to protect yourself against DoS
+    attacks which are occuring in the wild. The issue was fixed in nghttp2
+    by limiting the number of CONTINUATION frames accepted per stream.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28182">CVE-2024-28182</a>.</p>
+    <p>Additional details can be found at
+    <a href="https://kb.cert.org/vuls/id/421644">CERT Vulnerability Note VU#421644</a>.</p>
+    <p>To fix this vulnerability, update to nghttp2-1.61.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/nghttp2.html">nghttp2 (sysv)</a> or
+    <a href="../view/systemd/basicnet/nghttp2.html">nghttp2 (systemd)</a>.</p>
+
+    <a id="sa-12.1-021"/>
+    <h4>12.1 021 Xwayland          Updated: 2024-04-12  Severity: High</h4>
+    <p>In Xwayland-23.2.5, three security vulnerabilities were fixed that
+    could allow for memory leakage, exploitable crashes (segmentation
+    faults), and arbitrary code execution to occur. The crash and memory leak
+    vulnerabilities are due to heap-based buffer over-reads in a variety of
+    functions, such as ProcXIGetSelectedEvents() and ProcXIPassiveGrabDevice().
+    Note that the vulnerabilities that use these functions require byte swapping
+    to occur, which is normally used on platforms where the byte order is not
+    the same between systems. The arbitrary code execution vulnerability occurs
+    in the ProcRenderAddGlyphs() function, and is due to a use-after-free. This
+    allows an attacker to send a crafted request that causes attacker-controlled
+    code to be executed. After the release of these updates, some regressions
+    were discovered, and it is thus recommended to use 23.2.6 instead.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31080">CVE-2024-31080</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31081">CVE-2024-31081</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31083">CVE-2024-31083</a>.</p>
+    <p>To fix these vulnerabilities, update to Xwayland-23.2.6 or later
+    using the instructions from
+    <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
+    <a id="sa-12.1-020"/>
+    <h4>12.1 020 Xorg-Server       Updated: 2024-04-12  Severity: High</h4>
+    <p>In Xorg-Server-21.1.12, four security vulnerabilities were fixed that
+    could allow for memory leakage, exploitable crashes (segmentation
+    faults), and arbitrary code execution to occur. The crash and memory leak
+    vulnerabilities are due to heap-based buffer over-reads in a variety of
+    functions, such as ProcXIGetSelectedEvents(), ProcXIPassiveGrabDevice(),
+    and ProcAppleDRICreatePixmap(). Note that the vulnerabilities that use
+    these functions require byte swapping to occur, which is normally used
+    on platforms where the byte order is not the same between systems. The
+    arbitrary code execution vulnerability occurs in the ProcRenderAddGlyphs()
+    function, and is due to a use-after-free. This allows an attacker to send
+    a crafted request that causes attacker-controlled code to be executed, and
+    can be exploited remotely on systems which have SSH X Forwarding enabled.
+    Regressions were found in the 21.1.12 update and it is thus recommended
+    to use 21.1.13 instead.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31080">CVE-2024-31080</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31081">CVE-2024-31081</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31082">CVE-2024-31082</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31083">CVE-2024-31083</a>.</p>
+    <p>To fix these vulnerabilities, update to Xorg-Server-21.1.13 or later
+    using the instructions from
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <p>If you have TigerVNC installed, you should rebuild it against
+    Xorg-Server-21.1.13 using the instructions from
+    <a href="../view/svn/xsoft/tigervnc.html">Tigervnc (sysv)</a> or
+    <a href="../view/systemd/xsoft/tigervnc.html">Tigervnc (systemd)</a>.</p>
+
+    <a id="sa-12.1-019"/>
+    <h4>12.1 019 Node.js           Date: 2024-04-07  Severity: High</h4>
+    <p>In Node.js-20.12.1, two vulnerabilities were fixed. One could allow
+    for a server crash via an assertion failure in the http server. And the other
+    could lead to "request smuggling" through obfuscating the content length of a 
+    request.
+    These vulnerabilties have been assigned
+    <a href="https://nodejs.org/en/blog/vulnerability/april-2024-security-releases">CVE-2024-27983</a>, and
+    <a href="https://nodejs.org/en/blog/vulnerability/april-2024-security-releases">CVE-2024-27982</a>.</p>
+    <p>To fix these update to Node.js 20.12.1 or later using the instructions for:
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+
+    <a id="sa-12.1-018"/>
+    <h4>12.1 018 Samba            Date: 2024-04-07  Severity: High</h4>
+    <p>In Samba-4.20.0, a vulnerability was fixed by updating the built in
+    version of MIT Kerberos 5 to a newer version. This vulnerability could allow
+    escalation of privileges through altering Privilege Attribute Certificate (PAC)
+    signatures.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-37967">CVE-2022-37967</a>.</p>
+    <p>To fix this update to Samba-4.20.0 or later using the instructions for:
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.
+    Or rebuild Samba --with-system-mitkrb5 option with an MIT Kerberos version newer
+    than 1.21 using the instructions for:
+    <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5 (sysv)</a> or
+    <a href="../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5 (systemd)</a>.</p>
+
+    <a id="sa-12.1-017"/>
+    <h4>12.1 017 Intel Microcode  Date: 2024-04-03  Severity: Medium</h4>
+    <p>In intel-microcode-20240312, two hardware vulnerabilities are
+    fixed.  One of them may allow denial of service via network access,
+    affecting Intel CPUs with family 6, models 191, 190, 183 (stepping 1
+    only, and except Xeon E processors), 154 (except Atom processors),
+    151, or 143 (except processors code named "Sapphire Rapids Edge
+    Enhanced").  Another may allow information disclosure via local
+    access, affecting Intel CPUs with family 6, models 191, 183, 154,
+    151, or 143 (except processors code named "Sapphire Rapids Edge
+    Enhanced").
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-39368">CVE-2023-39368</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38575">CVE-2023-38575</a>.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above.  If vulnerable, update to
+    intel-microcode-20240312 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>
+    to fix these vulnerabilities.</p>
+    <p>This microcode update also fixes CVE-2023-28746, CVE-2023-22655,
+    and CVE-2023-43490.  For CVE-2023-28746 (known as "RFDS") consult
+    <a href='#sa-12.1-009'>12.1-009</a>.  The other two vulnerabilites
+    only affect Intel SGX and TDX, and LFS does not support utilizing
+    them.</p>
+
     <a id="sa-12.1-016"/>
     <h4>12.1 016 Wireshark  Date: 2024-03-30  Severity: Medium</h4>
-    <p>In Wireshark 4.2.0 to 4.0.3 and 4.0.0 to 4.0.13 a T.38 dissector crash
+    <p>In Wireshark 4.2.0 to 4.2.3 and 4.0.0 to 4.0.13 a T.38 dissector crash
     allows denial of service via packet injection or a crafted capture file.
-    Details at
+    This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2955">CVE-2024-2955</a>.</p>
-    <p>To fix this update to wireshark-4.2.4 or later using the instructions for:
+    <p>To fix this update to Wireshark-4.2.4 or later using the instructions for:
     <a href="../view/svn/xsoft/wireshark.html">Wireshark (sysv)</a> or
     <a href="../view/systemd/xsoft/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="sa-12.1-015"/>
-    <h4>12.1 015 Curl             Date: 2024-03-27  Severity: Medium</h4>
-    <p>In Curl-8.6.0 and older, if libcurl aborts a HTTP/2 server push
+    <h4>12.1 015 cURL             Date: 2024-03-27  Severity: Medium</h4>
+    <p>In cURL-8.6.0 and older, if libcurl aborts a HTTP/2 server push
     due to excessive headers, it will not free all memory. It will also
     not report the error to the caller.
-
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2398">CVE-2024-2398</a>.</p>
-    <p>To fix it, update to Curl-8.7.1 or later using the
+    <p>To fix it, update to cURL-8.7.1 or later using the
     instructions from
-    <a href="../view/svn/basicnet/curl.html">Curl (sysv)</a> or
-    <a href="../view/systemd/basicnet/curl.html">Curl (systemd)</a>.</p>
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
 
     <a id="sa-12.1-014"/>
     <h4>12.1 014 Emacs            Date: 2024-03-26  Severity: High</h4>
@@ -240,7 +636,6 @@
     the instructions from
     <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
     <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
-    
 
     <a id="sa-12.1-006"/>
     <h4>12.1 006 ghostscript     Date: 2024-03-09  Severity: High</h4>

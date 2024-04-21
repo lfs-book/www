@@ -51,15 +51,18 @@
 
 <!-- end of PackageName -->
 
-<!--
+
     <h3>Apache HTTPD</h3>
 
-    <a id="sa-12.0-027"/>
-    <h4>12.0 027 Apache HTTPD           Date: 2023-10-07  Severity: Medium</h4>	
-    <p>In httpd-2.4.58, three security vulnerabilities were fixed. Update to
-    2.4.58.
-    <a href="consolidated.html#sa-12.0-027">12.0-027</a></p>
--->
+    <a id="sa-12.1-023"/>
+    <h4>12.1 023 Apache HTTPD      Date: 2024-04-08  Severity: High</h4>
+    <p>In httpd-2.4.59, three security vulnerabilities were fixed that could
+    allow for denial-of-service and HTTP Response Splitting. One of these
+    vulnerabilities is the "HTTP/2 CONTINUATION attack", and allows for remotely
+    exploitable memory exhaustion. Update to httpd-2.4.59 immediately to protect
+    yourself against the "HTTP/2 CONTINUATION" attack.
+    <a href="consolidated.html#sa-12.1-023">12.1-023</a></p>
+
 <!-- end of Apache HTTPD-->
 
     <h3>c-ares</h3>
@@ -73,13 +76,13 @@
 
 <!-- end of c-ares -->
 
-    <h3>Curl</h3>
+    <h3>cURL</h3>
 
     <a id="sa-12.1-015"/>
-    <h4>12.1 015 Curl               Date: 2024-03-27  Severity: Medium</h4>
-    <p>In Curl-8.6.0, a security vulnerability was fixed that could allow
-	for a crash due to leaked memory after an aborted HTTP/2 server push.
-    Update to Curl-8.7.1
+    <h4>12.1 015 cURL               Date: 2024-03-27  Severity: Medium</h4>
+    <p>In cURL-8.7.1, a security vulnerability was fixed that could allow
+    for a crash due to leaked memory after an aborted HTTP/2 server push.
+    Update to cURL-8.7.1.
     <a href="consolidated.html#sa-12.1-015">12.1-015</a></p>
 
 <!-- end of curl -->
@@ -98,7 +101,19 @@
 
 <!-- end of Emacs -->
 
-    <h3>firefox</h3>
+    <h3>Firefox</h3>
+
+    <a id="sa-12.1-032"/>
+    <h4>12.1 032 Firefox             Date: 2024-04-17  Severity: High</h4>
+    <p>In Firefox-115.10.0esr, eight security vulnerabilities were fixed that
+    could allow for arbitrary code execution, remotely exploitable denial of
+    service conditions (using HTTP/2 CONTINUATION frames), remotely exploitable
+    crashes, and clickjacking. Some of these vulnerabilities occur when using
+    the JIT compiler, but one of the vulnerabilities is 32-bit specific and
+    allows for an Integer Overflow when processing a crafted OpenType font.
+    Updating Firefox is recommended due to the HTTP/2 CONTINUATION attack.
+    Update to Firefox-115.10.0esr.
+    <a href="consolidated.html#sa-12.1-032">12.1-032</a></p>
 
     <a id="sa-12.1-013"/>
     <h4>12.1 013 Firefox  Date: 2024-03-22  Severity: Critical</h4>
@@ -113,6 +128,20 @@
     <a href="consolidated.html#sa-12.1-008">12.1-008</a></p>
 
 <!-- end of firefox -->
+
+    <h3>FontForge</h3>
+
+    <a id="sa-12.1-028"/>
+    <h4>12.1 028 FontForge          Date: 2024-04-15  Severity: Medium</h4>
+    <p>In FontForge-20230101, two security vulnerabilities were discovered that
+    could allow for Command Injection via malicious filenames and malicious
+    archives. The vulnerabilities were resolved via modifying the code to use
+    the g_spawn_sync/async() functions instead of the system() functions, which
+    causes commands to not be executed through a shell. Rebuild FontForge with
+    the patch using the instructions in the book.
+    <a href="consolidated.html#sa-12.1-028">12.1-028</a></p>
+
+<!-- end of FontForge -->
 
     <h3>ghostscript</h3>
 
@@ -151,6 +180,15 @@
 
     <h3>Intel microcode</h3>
 
+    <a id="sa-12.1-017"/>
+    <h4>12.0 043 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
+    <p>Intel microcode for some processors has been updated to fix two
+    hardware vulnerabilities which may allow a denial of service via remote
+    access, or an information disclosure via local access.  Read
+    <a href="consolidated.html#sa-12.1-017">12.1-017</a> for the list of
+    affected processors and how to update the microcode and the kernel to
+    mitigate the vulnerability.</p>
+
     <a id="sa-12.1-009"/>
     <h4>12.0 043 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
     <p>Intel microcode for some processors has been updated to
@@ -163,6 +201,48 @@
 
 <!-- end of Intel Microcode -->
 
+    <h3>libarchive</h3>
+
+    <a id="sa-12.1-025"/>
+    <h4>12.1 025 libarchive        Date: 2024-04-10  Severity: Medium</h4>
+    <p>In libarchive-3.7.3, a possible security vulnerability was fixed that
+    could allow for command injection via terminal escape sequences when
+    decompressing or viewing an archive. Update to libarchive-3.7.3.
+    <a href="consolidated.html#sa-12.1-025">12.1-025</a></p>
+
+<!-- end of libarchive -->
+
+    <h3>nghttp2</h3>
+
+    <a id="sa-12.1-022"/>
+    <h4>12.1 022 nghttp2           Date: 2024-04-08  Severity: Medium</h4>
+    <p>In nghttp2-1.61.0, a security vulnerability was fixed that could allow
+    for an denial-of-service (excessive CPU usage and OOM crash) because nghttp2
+    continues reading an unbounded number of HTTP/2 CONTINUATION frames even
+    after a stream is reset to keep HPACK context in sync.
+    Update to nghttp2-1.61.0 or later especially if you host a server.
+    <a href="consolidated.html#sa-12.1-022">12.1-022</a></p>
+
+<!-- end of nghttp2 -->
+
+    <h3>Node.js</h3>
+
+    <a id="sa-12.1-019"/>
+    <h4>12.1 019 Node.js              Date: 2024-04-07  Severity: High</h4>
+    <p>In Node.js-20.12.1, two security vulnerabilities were fixed that could allow
+    for a server crash or bad http requests through obfuscation of content length.
+    Update to Node.js-20.12.1 or later.
+    <a href="consolidated.html#sa-12.1-019">12.1-019</a></p>
+
+    <a id="sa-12.1-034"/>
+    <h4>12.1 034 Node.js              Date: 2024-04-20  Severity: Low</h4>
+    <p>In Node.js-20.12.2, a vulnerabilty was fixed where command injection could
+    be performed, so far this is only known to affect Windows hosts. Regardless
+    updating is advised.
+    <a href="consolidated.html#sa-12.1-034">12.1-034</a></p>
+
+<!-- end of Node.js -->
+
     <h3>OpenJPEG</h3>
 
     <a id="sa-12.1-003"/>
@@ -174,7 +254,63 @@
 
 <!-- end of OpenJPEG -->
 
+    <h3>PHP</h3>
+
+    <a id="sa-12.1-030"/>
+    <h4>12.1 030 PHP                 Date: 2024-04-17  Severity: High</h4>
+    <p>In PHP-8.3.6, three security vulnerabilities were fixed that could allow
+    for insecure cookies to be set and thus a bypass of __Host/__Secure cookies,
+    as well as for an attacker to trivially compromise a victim's account if
+    a password is started with a null byte, and for an infinite loop when using
+    the mb_encode_mimeheader function with certain crafted inputs. If you use
+    PHP to run a website that accepts passwords, you should update immediately.
+    Update to PHP-8.3.6.
+    <a href="consolidated.html#sa-12.1-030">12.1-030</a></p>
+
+<!-- end of PHP -->
+
+    <h3>QtWebEngine</h3>
+
+    <a id="sa-12.1-024"/>
+    <!-- non-standard, because -dev has moved to Qt6 -->
+    <h4>12.1 024 QtWebEngine-5.15-20240403  Date: 2024-04-09  Severity: Critical</h4>
+    <p>In the QtWebEngine-5.15-20240403 snapshot 16 vulnerabilities, of which 2
+    were rated Critical by NVD, have been fixed. The development books have moved
+    on to Qt6 and the build instructions have changed slightly. Either update to
+    current Qt6, or follow the instructions at
+    <a href="consolidated.html#sa-12.1-024">12.1-024</a></p>
+
+    <a id="sa-12.1-026"/>
+    <h4>12.1 026 QtWebEngine-6.6.3  Date: 2024-04-11  Severity: Critical</h4>
+    <p>The QtWebengine-6 releases do not provide any summary of bug fixes. The
+    6.6.3 and 6.7.0 releases each contain a similar set of fixes to security
+    bugs, some of which are rated as Critical.  In future, update to the latest
+    version once it is in BLFS.
+    <a href="consolidated.html#sa-12.1-026">12.1-026</a></p>
+
+<!-- end of QtWebEngine -->
+
+    <h3>Samba</h3>
+
+    <a id="sa-12.1-018"/>
+    <h4>12.1 018 Samba                Date: 2024-04-07  Severity: High</h4>
+    <p>In Samba-4.20.0 a security vulnerability was fixed that could allow
+    for privilege escalation through altering certificates. Update to
+    Samba-4.20.0.
+    <a href="consolidated.html#sa-12.1-018">12.1-018</a></p>
+
+<!-- end of Samba -->
+
     <h3>Seamonkey</h3>
+
+    <a id="sa-12.1-027"/>
+    <h4>12.1 027 Seamonkey          Date: 2024-04-15  Severity: High</h4>
+    <p>In Seamonkey-2.53.18.2, several security vulnerabilities were fixed
+    that could allow for remotely exploitable crashes, content spoofing,
+    cookie injection, arbitrary code execution, timing attacks, and content
+    security policy bypasses. These are the same vulnerabilities fixed in
+    Firefox and Thunderbird 115.8.0 and 115.9.0. Update to Seamonkey-2.53.18.2.
+    <a href="consolidated.html#sa-12.1-027">12.1-027</a></p>
 
     <a id="sa-12.1-005"/>
     <h4>12.1 005 Seamonkey            Date: 2024-03-07  Severity: High</h4>
@@ -190,7 +326,33 @@
 
 <!-- end of Seamonkey -->
 
+    <h3>SpiderMonkey</h3>
+
+    <a id="sa-12.1-031"/>
+    <h4>12.1 031 SpiderMonkey        Date: 2024-04-17  Severity: High</h4>
+    <p>In SpiderMonkey/mozjs-115.10.0, three security vulnerabilities were
+    fixed in the JIT compiler which could allow for GetBoundName to return
+    the wrong object, for crashes after a mis-optimized switch statement,
+    and for incorrect JITting of arguments to lead for crashes during garbage
+    collection. This could allow for unexpected crashes in some applications.
+    Update to SpiderMonkey/mozjs-115.10.0.
+    <a href="consolidated.html#sa-12.1-031">12.1-031</a></p>
+
+<!-- end of SpiderMonkey -->
+
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.1-033"/>
+    <h4>12.1 033 Thunderbird         Date: 2024-04-17  Severity: High</h4>
+    <p>In Thunderbird-115.10.0, eight security vulnerabilities were fixed that
+    could allow for arbitrary code execution, remotely exploitable denial of
+    service conditions (using HTTP/2 CONTINUATION frames), remotely exploitable
+    crashes, and clickjacking. Some of these vulnerabilities occur when using
+    the JIT compiler, but one of the vulnerabilities is 32-bit specific and
+    allows for an Integer Overflow when processing a crafted OpenType font.
+    Updating Thunderbird is recommended due to the HTTP/2 CONTINUATION attack,
+    since some HTML mails may use this protocol. Update to Thunderbird-115.10.0.
+    <a href="consolidated.html#sa-12.1-032">12.1-032</a></p>
 
     <a id="sa-12.1-011"/>
     <h4>12.1 011 Thunderbird      Date: 2024-03-20  Severity: High</h4>
@@ -213,16 +375,7 @@
 
 <!-- end of Thunderbird -->
 
-    <h3>Wireshark</h3>
 
-    <a id="sa-12.1-016"/>
-    <h4>12.1 016 Wireshark            Date: 2024-03-30  Severity: Medium</h4>
-    <p>In Wireshark 4.2.0 to 4.0.3 and 4.0.0 to 4.0.13 a T.38 dissector crash
-    allows denial of service via packet injection or a crafted capture file.
-    This vulnerability has been assigned
-    <a href="consolidated.html#sa-12.1-016">12.1-016</a></p>
-
-<!-- end of Wireshark-->
     <h3>Unbound</h3>
 
     <a id="sa-12.1-007"/>
@@ -235,4 +388,40 @@
     <a href="consolidated.html#sa-12.1-007">12.1-007</a></p>
 
 <!-- end of Unbound-->
+
+    <h3>Wireshark</h3>
+
+    <a id="sa-12.1-016"/>
+    <h4>12.1 016 Wireshark            Date: 2024-03-30  Severity: Medium</h4>
+    <p>In Wireshark 4.2.0 to 4.2.3 and 4.0.0 to 4.0.13 a T.38 dissector crash
+    allows denial of service via packet injection or a crafted capture file.
+    Update to Wireshark-4.2.3.
+    <a href="consolidated.html#sa-12.1-016">12.1-016</a></p>
+
+<!-- end of Wireshark-->
+
+    <h3>Xorg-Server</h3>
+
+    <a id="sa-12.1-020"/>
+    <h4>12.1 020 Xorg-Server       Updated: 2024-04-12  Severity: High</h4>
+    <p>In Xorg-Server-21.1.12, four security vulnerabilities were fixed that
+    could allow for memory leakage, exploitable crashes (segmentation
+    faults), and arbitrary code execution to occur. On systems where SSH X
+    Forwarding is enabled, this can lead to remote code execution.
+    Update to xorg-server-21.1.13. If you have TigerVNC installed, rebuild
+    it against xorg-server-21.1.13 as well.
+    <a href="consolidated.html#sa-12.1-020">12.1-020</a></p>
+
+<!-- end of Xorg-Server -->
+
+    <h3>Xwayland</h3>
+
+    <a id="sa-12.1-021"/>
+    <h4>12.1 021 Xwayland          Updated: 2024-04-12  Severity: High</h4>
+    <p>In Xwayland-23.2.5, three security vulnerabilities were fixed that
+    could allow for memory leakage, exploitable crashes (segmentation
+    faults), and arbitrary code execution to occur. Update to Xwayland-23.2.6.
+    <a href="consolidated.html#sa-12.1-021">12.1-021</a></p>
+
+<!-- end of Xwayland -->
 <!--#include virtual="/common/footer.html" -->

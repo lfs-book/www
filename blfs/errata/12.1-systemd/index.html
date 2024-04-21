@@ -22,6 +22,20 @@
            to produce 3D output from asymptote, although in rare case it
            might need the maxtile command-line option to be used to specify
            a size less than the monitor, e.g. -'maxtile 1023,768'.</li>
+       <li>At the end of March 2024, Mozilla sunset the Mozilla Location Service.
+           Firefox and Geoclue both need to be adapted to handle this. For
+           Firefox, rebuild it with the Mozilla API Key removed, and ensure
+           the Google API Key is set (if geolocation services were enabled).
+           For Geoclue, follow the instructions in the book to configure it to
+           use the Google Geolocation Service.</li>
+       <li>In Tuning Fontconfig, the information that KDE Plasma saves font
+           settings in ~/.config/fontconfig/fonts.conf seems incorrect and
+	   wrongly claimed that the same file, if installed, could override
+           that. Obviously a typo, but it appears that neither that file nor
+           /etc/fonts/local.conf have any effect on applications from either
+           KDE5 or KDE6. Fonts can be specified in the application's preferences
+           (e.g. Falkon, Konsole) as an alternative to using Plasma System
+           Settings.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
