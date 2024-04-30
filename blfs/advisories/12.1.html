@@ -203,6 +203,15 @@
 
     <h3>libarchive</h3>
 
+    <a id="sa-12.1-036"/>
+    <h4>12.1 036 libarchive         Date: 2024-04-30  Severity: High</h4>
+    <p>In libarchive-3.7.4, a security vulnerability was fixed that could
+    allow for remote code execution when processing a crafted RAR archive
+    due to an Out-Of-Bounds read. It happens in the RAR e8 filter, and occurs
+    when the archive is decompressed or when it is viewed.
+    Update to libarchive-3.7.4.
+    <a href="consolidated.html#sa-12.1-036">12.1-036</a></p>
+
     <a id="sa-12.1-025"/>
     <h4>12.1 025 libarchive        Date: 2024-04-10  Severity: Medium</h4>
     <p>In libarchive-3.7.3, a possible security vulnerability was fixed that
