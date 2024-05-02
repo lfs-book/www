@@ -415,13 +415,23 @@
           every time, you have a hardware problem. (If make, or whatever you're
           running, fails at the same place every time, then it is not
           hardware.)</p>
-          <p>First, do not overclock the CPU too much.  Note that with an
+          <p>First, do not overclock the CPU too much.  When you make an
+          overclock setting, you must stress test the system adequately to
+          make sure it's stable under different type of workloads
+          (single-core and multi-core, non-AVX and AVX, etc.).</p>
+          <p>Note that with an
           Intel "K" (unlocked) CPU, even the default configuration of the
           motherboard is generally already overclocking so you may need to
-          even <b>step back</b> from the default especially when the CPU
+          even "step back" from the default especially when the CPU
           is below the average: the individual difference among all CPUs
           of a same model can make a significant effect on the overclocking
-          capability so buying an unlocked CPU is some sort of gambling.</p>
+          capability so buying an unlocked CPU is some sort of gambling.
+          Especially, 13900K/KS and 14900K/KS are notorious for
+          stablity issues caused by such a "default overclocking setting."
+          Try to upgrade the BIOS for the "Intel Baseline Profile" switch
+          which will apply the non-overclocked Intel factory default
+          settings instead of the overclocked default from the motherboard
+          vender.</p>
           <p>Assuming you're not overclocking, the most likely hardware problem
           is bad memory which you can check with Memtest86+ from <a
           href="https://www.memtest.org/">https://www.memtest.org/</a>.
