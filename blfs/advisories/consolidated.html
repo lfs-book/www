@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-040"/>
+    <h4>12.1 040 libxml2            Date: 2024-05-22  Severity: Low</h4>
+    <p>In libxml2-2.12.7, a security vulnerability was fixed that could
+    allow for a buffer over-read when formatting error messages with
+    'xmllint --htmlout'. This only affects the xmllint utility, and the
+    vulnerability occurs in the xmlHTMLPrintFileContext() function in
+    xmllint.c. The xmllint utility will crash when processing a malicious file,
+    and upstream has thus rated the vulnerability as low.
+    This vulnerability has been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2024-34459.html">CVE-2024-34459</a>.</p>
+    <!-- Change to NVD once it's rated -->
+    <p>To fix this vulnerability, update to libxml2-2.12.7 or later using the
+    instructions from
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
     <a id="sa-12.1-039"/>
     <h4>12.1 039 gstreamer          Date: 2024-05-22  Severity: High</h4>
     <p>In gst-plugins-base-1.24.3, a security vulnerability was fixed that
