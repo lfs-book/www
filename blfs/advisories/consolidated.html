@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-042"/>
+    <h4>12.1 042 gdk-pixbuf         Date: 2024-05-22  Severity: High</h4>
+    <p>In gdk-pixbuf-2.42.12, a security vulnerability was fixed that could
+    allow for heap memory corruption (and thus arbitrary code execution or
+    a crash) when processing chunks in a crafted ANI file. ANI files are
+    Animated Cursors for Windows, but can be indexed by Tracker and can be
+    viewed in some applications.
+    This vulnerability has been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2022-48622.html">CVE-2022-48622</a>.</p>
+    <!-- Change to NVD once it's rated -->
+    <p>To fix this vulnerability, update to gdk-pixbuf-2.42.12 or later using
+    the instructions from
+    <a href="../view/svn/x/gdk-pixbuf.html">gdk-pixbuf (sysv)</a> or
+    <a href="../view/systemd/x/gdk-pixbuf.html">gdk-pixbuf (systemd)</a>.</p>
+
     <a id="sa-12.1-041"/>
     <h4>12.1 041 Wireshark          Date: 2024-05-22  Severity: Medium</h4>
     <p>In Wireshark-4.2.5, three security vulnerabilities were fixed that
@@ -79,6 +94,7 @@
     <a href="https://www.suse.com/security/cve/CVE-2024-4854.html">CVE-2024-4854</a>,
     <a href="https://www.suse.com/security/cve/CVE-2024-4853.html">CVE-2024-4853</a>, and
     <a href="https://www.suse.com/security/cve/CVE-2024-4855.html">CVE-2024-4855</a>.</p>
+    <!-- Change to NVD once it's rated -->
     <p>To fix these vulnerabilities, update to Wireshark-4.2.5 or later using
     the instructions from
     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
