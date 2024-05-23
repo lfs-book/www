@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-044"/>
+    <h4>12.1 044 glib2              Date: 2024-05-22  Severity: Medium</h4>
+    <p>In glib-2.80.2, a security vulnerability was fixed that could allow for
+    unicast spoofing to occur with services that use GDBus. This includes
+    several system services, including NetworkManager and others. This allows
+    for other users of a shared computer to send spoofed D-Bus signals which
+    a GDBus-based client will incorrectly interpret as having been sent by the
+    trusted system service, which will cause incorrect behavior with an
+    application-dependent impact.
+    This vulnerability has been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2024-34397.html">CVE-2024-34397</a>.</p>
+    <p>To fix this vulnerability, update to glib-2.80.2 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib2 (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib2 (systemd)</a>.</p>
+
     <a id="sa-12.1-043"/>
     <h4>12.1 043 ghostscript        Date: 2024-05-22  Severity: High</h4>
     <p>In ghostscript-10.03.1, five security vulnerabilities were fixed that
