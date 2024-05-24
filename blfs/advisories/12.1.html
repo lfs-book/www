@@ -242,8 +242,26 @@
 
     <h3>Intel microcode</h3>
 
+    <a id="sa-12.1-045"/>
+    <h4>12.1 045 Intel Microcode  Date: 2024-05-24  Severity: High</h4>
+    <p>In intel-microcode-20240514, four hardware vulnerabilities are
+    fixed.  One of them may allow for a denial of service when using Intel
+    Core Ultra processors that belong to the Meteor Lake platform due to
+    an invalid sequence of processor instructions. Another one of these
+    vulnerabilities allows for information disclosure in certain circumstances
+    due to race conditions in hardware logic. This impacts processors that
+    belong to the Meteor Lake (Intel Core Ultra family) as well as the Alder
+    Lake, Raptor Lake, and Arizona Beach processors. This includes the 12th
+    Generation family of Intel CPUs as well as the 13th Generation, the Intel
+    Core Processor N family, the Pentium Gold Processor Family, and the
+    Atom C Series of processors. The other security vulnerabilities impact
+    Intel Xeon Scalable servers with Trust Domain Extensions support. In this
+    case, an elevation of privileges may occur.
+    Update to intel-microcode-20240514 if your processor is affected.
+    <a href="consolidated.html#sa-12.1-045">12.1-045</a></p>
+
     <a id="sa-12.1-017"/>
-    <h4>12.0 043 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
+    <h4>12.1 017 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
     <p>Intel microcode for some processors has been updated to fix two
     hardware vulnerabilities which may allow a denial of service via remote
     access, or an information disclosure via local access.  Read
@@ -252,7 +270,7 @@
     mitigate the vulnerability.</p>
 
     <a id="sa-12.1-009"/>
-    <h4>12.0 043 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
+    <h4>12.1 009 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
     <p>Intel microcode for some processors has been updated to
     provide a mitigation for an hardware vulnerability known as RFDS, or
     Register File Data Sampling, which may allow an information disclosure
