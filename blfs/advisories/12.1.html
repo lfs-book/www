@@ -369,6 +369,22 @@
 
 <!-- end of PHP -->
 
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-12.1-048"/>
+    <h4>12.1 048 PostgreSQL         Date: 2024-05-29  Severity: Medium</h4>
+    <p>In PostgreSQL-16.3 (as well as 15.7 and 14.12), a security vulnerability
+    was fixed that could allow for an unprivileged database user to read most
+    common values and other statistics from CREATE STATISTICS commands executed
+    by other users. The most common values will reveal column values that the
+    eavesdropped could not otherwise read, or results of functions that they
+    cannot execute. Additional modifications are needed to existing databases.
+    Please see the advisory for more details. Update to PostgreSQL-16.3 (or
+    15.7 or 14.12) and run the commands at the end of the advisory.
+    <a href="consolidated.html#sa-12.1-048">12.1-048</a></p>
+
+<!-- end of PostgreSQL -->
+
     <h3>Qt6</h3>
 
     <a id="sa-12.1-046"/>
