@@ -65,6 +65,20 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-051"/>
+    <h4>12.1 051 SpiderMonkey       Date: 2024-05-31  Severity: High</h4>
+    <p>In SpiderMonkey-115.11.0, a security vulnerability was fixed that could
+    allow for arbitrary code execution when calling the IsDiamondPattern
+    function. This vulnerability was recently exploited in pdf.js, and allowed
+    for arbitrary JavaScript code execution when processing a crafted PDF file.
+    This vulnerability is relevant to two CVE numbers:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4367">CVE-2024-4367</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4777">CVE-2024-4777</a>.</p>
+    <p>To fix this vulnerability, update to SpiderMonkey-115.11.0 or later using
+    the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
     <a id="sa-12.1-050"/>
     <h4>12.1 050 WebKitGTK          Date: 2024-05-29  Severity: High</h4>
     <p>In WebKitGTK-2.42.2, a security vulnerability was fixed that could allow
