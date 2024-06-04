@@ -309,6 +309,20 @@
 
 <!-- end of libarchive -->
 
+    <h3>libvpx</h3>
+
+    <a id="sa-12.1-056"/>
+    <h4>12.1 056 libvpx             Date: 2024-06-04  Severity: Medium</h4>
+    <p>In libvpx-1.14.1, a security vulnerability was fixed that could allow
+    for integer overflows in the calculations of buffer sizes and offsets when
+    calling vpx_img_alloc() with a large value of the d_w, d_h, or align
+    parameters. This may result in invalid fields being returned in the
+    vpx_image_t struct, and can cause a denial of service or remote code
+    execution. Update to libvpx-1.14.1.
+    <a href="consolidated.html#sa-12.1-056">12.1-056</a></p>
+
+<!-- end of libvpx -->
+
     <h3>libxml2</h3>
 
     <a id="sa-12.1-040"/>
