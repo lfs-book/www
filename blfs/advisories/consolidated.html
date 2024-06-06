@@ -65,8 +65,370 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-056"/>
+    <h4>12.1 056 libvpx             Date: 2024-06-04  Severity: Medium</h4>
+    <p>In libvpx-1.14.1, a security vulnerability was fixed that could allow
+    for integer overflows in the calculations of buffer sizes and offsets when
+    calling vpx_img_alloc() with a large value of the d_w, d_h, or align
+    parameters. This may result in invalid fields being returned in the
+    vpx_image_t struct, and can cause a denial of service or remote code
+    execution.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5197">CVE-2024-5197</a>.</p>
+    <p>To fix this vulnerability, update to libvpx-1.14.1 or later using the
+    instructions from
+    <a href="../view/svn/multimedia/libvpx.html">libvpx (sysv)</a> or
+    <a href="../view/systemd/multimedia/libvpx.html">libvpx (systemd)</a>.</p>
+
+    <a id="sa-12.1-055"/>
+    <h4>12.1 055 plasma-workspace   Date: 2024-05-31  Severity: High</h4>
+    <p>In plasma-workspace-6.0.5.1 (and 5.27.11.1), a security vulnerability
+    was fixed that could allow unauthorized connections due to incorrectly
+    allowing connections via ICE on the same host as Plasma is running on.
+    This allows another user on the same machine to gain access to the session
+    manager, and can be exploited to execute arbitrary code execution in the
+    context of the current user on the next logon to the machine.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-36041">CVE-2024-36041</a>.</p>
+    <!-- Untested, I'll test on a 12.1 system soon.-->
+    <p>Because the development books have moved to Plasma 6, you should upgrade
+    to plasma-workspace-5.27.11.1 by downloading and manually installing it after
+    Plasma 5 if you are on BLFS 12.1.</p>
+    <p>If you are using the current development books, please update to
+    plasma-workspace-6.0.5.1 using the instructions from
+    <a href="../view/svn/kde/plasma-all.html">Plasma (sysv)</a> or
+    <a href="../view/systemd/kde/plasma-all.html">Plasma (systemd)</a>.</p>
+
+    <a id="sa-12.1-054"/>
+    <h4>12.1 054 MariaDB            Date: 2024-05-31  Severity: Medium</h4>
+    <p>In MariaDB-10.11.8, a security vulnerability was fixed that could allow
+    for unauthorized creation, modification, or deletion of data stored in a
+    MySQL instance. The vulnerability itself is difficult to exploit, but can
+    be performed locally with no special privileges required.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21096">CVE-2024-21096</a>.</p>
+    <p>To fix this vulnerability, update to MariaDB-10.11.8 or later using the
+    instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
+    <a id="sa-12.1-053"/>
+    <h4>12.1 053 Thunderbird        Date: 2024-05-31  Severity: High</h4>
+    <p>In Thunderbird-115.11.0, six security vulnerabilities were fixed that
+    could allow for arbitrary code execution, arbitrary JavaScript execution,
+    potential permissions bypasses, cross-origin reponse leakage, and crashes
+    when saving pages to PDFs. The arbitrary JavaScript execution vulnerability
+    is in PDF.js, and is known to be actively exploited.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4367">CVE-2024-4367</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4767">CVE-2024-4767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4768">CVE-2024-4768</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4769">CVE-2024-4769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4770">CVE-2024-4770</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4777">CVE-2024-4777</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-115.11.0 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.1-052"/>
+    <h4>12.1 052 Firefox            Date: 2024-05-31  Severity: High</h4>
+    <p>In Firefox-115.11.0esr, six security vulnerabilities were fixed that
+    could allow for arbitrary code execution, arbitrary JavaScript execution,
+    potential permissions bypasses, cross-origin reponse leakage, and crashes
+    when saving pages to PDFs. The arbitrary JavaScript execution vulnerability
+    is in PDF.js, and is known to be actively exploited.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4367">CVE-2024-4367</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4767">CVE-2024-4767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4768">CVE-2024-4768</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4769">CVE-2024-4769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4770">CVE-2024-4770</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4777">CVE-2024-4777</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-115.11.0esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-12.1-051"/>
+    <h4>12.1 051 SpiderMonkey       Date: 2024-05-31  Severity: High</h4>
+    <p>In SpiderMonkey-115.11.0, a security vulnerability was fixed that could
+    allow for arbitrary code execution when calling the IsDiamondPattern
+    function. This vulnerability was recently exploited in pdf.js, and allowed
+    for arbitrary JavaScript code execution when processing a crafted PDF file.
+    This vulnerability is relevant to two CVE numbers:
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4367">CVE-2024-4367</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4777">CVE-2024-4777</a>.</p>
+    <p>To fix this vulnerability, update to SpiderMonkey-115.11.0 or later using
+    the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
+    <a id="sa-12.1-050"/>
+    <h4>12.1 050 WebKitGTK          Date: 2024-05-29  Severity: High</h4>
+    <p>In WebKitGTK-2.42.2, a security vulnerability was fixed that could allow
+    for an attacker with arbitrary read and write capabilities to bypass
+    Pointer Authentication. The vulnerability was addressed with improved
+    checks, and is known to be exploited in the wild.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-27834">CVE-2024-27834</a>.</p>
+    <p>To fix this vulnerability, update to WebKitGTK-2.42.2 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-12.1-049"/>
+    <h4>12.1 049 OpenJDK            Date: 2024-05-29  Severity: High</h4>
+    <p>In OpenJDK-22.0.1, four security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) or for unauthorized
+    reading, modification, and deletion of data. These vulnerabilities are all
+    network exploitable with no authentication or user interaction required,
+    and they are in the Hotspot and Networking components.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21011">CVE-2024-21011</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21068">CVE-2024-21068</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21094">CVE-2024-21094</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21012">CVE-2024-21012</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-22.0.1 (or use the
+    prebuilt Java binaries) using the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+
+    <a id="sa-12.1-048"/>
+    <h4>12.1 048 PostgreSQL         Date: 2024-05-29  Severity: Medium</h4>
+    <p>In PostgreSQL-16.3 (as well as 15.7 and 14.12), a security vulnerability
+    was fixed that could allow for an unprivileged database user to read most
+    common values and other statistics from CREATE STATISTICS commands executed
+    by other users. The most common values will reveal column values that the
+    eavesdropped could not otherwise read, or results of functions that they
+    cannot execute. However, installing an unaffected version only fixes
+    fresh PostgreSQL installations, namely those created with the initdb utility
+    after installing that version. Because of this, modifications to any
+    databases that you may have will need to be run. These modifications are
+    described later in this advisory.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4317">CVE-2024-4317</a>.</p>
+    <p>To fix this vulnerability, update to PostgreSQL-16.3 (or 15.7 or 14.12)
+    using the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+    <p>After installing the new version of the package, existing databases will
+    need to be updated to fix the vulnerability, as well as the template
+    databases. The following commands assume that you are using the 'test'
+    database created in the book, so you will need to change the name for any
+    new databases that you have created. Run the following commands as the
+    root user.</p>
+<pre>echo "\i /usr/share/postgresql/fix-CVE-2024-4317.sql" | (su - postgres -c '/usr/bin/psql test')
+echo "ALTER DATABASE template0 WITH ALLOW_CONNECTIONS true;" | (su - postgres -c '/usr/bin/psql template0')
+echo "\i /usr/share/postgresql/fix-CVE-2024-4317.sql" | (su - postgres -c '/usr/bin/psql template0')
+echo "ALTER DATABASE template0 with ALLOW_CONNECTIONS false;" | (su - postgres -c '/usr/bin/psql template0')
+echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS true;" | (su - postgres -c '/usr/bin/psql template1')
+echo "\i /usr/share/postgresql/fix-CVE-2024-4317.sql" | (su - postgres -c '/usr/bin/psql template1')
+echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -c '/usr/bin/psql template1')</pre>
+
+    <a id="sa-12.1-047"/>
+    <h4>12.1 047 QtWebEngine        Date: 2024-05-24  Severity: Critical</h4>
+    <p>In QtWebEngine-6.7.1, seventeen security vulnerabilities were fixed that
+    could allow for remote code execution through crafted HTML pages, for a
+    remotely exploitable sandbox escape, for arbitrary reading/writing of files
+    via malicious HTML pages, for remotely exploitable crashes, content
+    security policy bypasses, and for sensitive information disclosure. Several
+    of these vulnerabilities have been exploited in the wild recently and it is
+    recommended that you update to this version of QtWebEngine immediately. If
+    you are still using a Qt5-based version of QtWebEngine, the BLFS team
+    recommends that you migrate to Qt6, the Qt6 version of QtWebEngine, and
+    the latest version of Falkon as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3516">CVE-2024-3516</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3157">CVE-2024-3157</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3159">CVE-2024-3159</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2887">CVE-2024-2887</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2885">CVE-2024-2885</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2626">CVE-2024-2626</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2625">CVE-2024-2625</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7104">CVE-2024-7104</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4060">CVE-2024-4060</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4058">CVE-2024-4058</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3840">CVE-2024-3840</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3914">CVE-2024-3914</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3837">CVE-2024-3837</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3839">CVE-2024-3839</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4761">CVE-2024-4671</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4368">CVE-2024-4368</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4331">CVE-2024-4331</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.7.1 using the
+    instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <a id="sa-12.1-046"/>
+    <h4>12.1 046 Qt6                Date: 2024-05-24  Severity: High</h4>
+    <p>In Qt6-6.7.1, two security vulnerabilities were resolved that could
+    allow for stack modification as well as for predictable encryption to
+    occur when using Network Authentication in Qt. The stack modification
+    vulnerability occurs in QtBase, and in some circumstances can allow
+    for a remote attacker to modify the state of an application while
+    running if the application uses QStringDecoder (and if an attacker
+    can tell the application to use a specific codec). The predictable
+    encryption vulnerability occurs because QAbstractOAuth only uses time
+    to seed the PRNG.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-33861">CVE-2024-33861</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-36048">CVE-2024-36048</a>.</p>
+    <p>To fix these vulnerabilities, update to Qt-6.7.1 or later using the
+    instructions from
+    <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a>.</p>
+
+    <a id="sa-12.1-045"/>
+    <h4>12.1 045 Intel Microcode  Date: 2024-05-24  Severity: High</h4>
+    <p>In intel-microcode-20240514, four hardware vulnerabilities are
+    fixed.  One of them may allow for a denial of service when using Intel
+    Core Ultra processors that belong to the Meteor Lake platform due to
+    an invalid sequence of processor instructions. Another one of these
+    vulnerabilities allows for information disclosure in certain circumstances
+    due to race conditions in hardware logic. This impacts processors that
+    belong to the Meteor Lake (Intel Core Ultra family) as well as the Alder
+    Lake, Raptor Lake, and Arizona Beach processors. This includes the 12th
+    Generation family of Intel CPUs as well as the 13th Generation, the Intel
+    Core Processor N family, the Pentium Gold Processor Family, and the
+    Atom C Series of processors. The other security vulnerabilities impact
+    Intel Xeon Scalable servers with Trust Domain Extensions support. In this
+    case, an elevation of privileges may occur.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-46103">CVE-2023-46103</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-45733">CVE-2023-45733</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-45745">CVE-2023-45745</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-47855">CVE-2023-47855</a>.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above.  If vulnerable, update to
+    intel-microcode-20240514 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>
+    to fix these vulnerabilities.</p>
+
+    <a id="sa-12.1-044"/>
+    <h4>12.1 044 glib2              Date: 2024-05-22  Severity: Medium</h4>
+    <p>In glib-2.80.2, a security vulnerability was fixed that could allow for
+    unicast spoofing to occur with services that use GDBus. This includes
+    several system services, including NetworkManager and others. This allows
+    for other users of a shared computer to send spoofed D-Bus signals which
+    a GDBus-based client will incorrectly interpret as having been sent by the
+    trusted system service, which will cause incorrect behavior with an
+    application-dependent impact.
+    This vulnerability has been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2024-34397.html">CVE-2024-34397</a>.</p>
+    <p>To fix this vulnerability, update to glib-2.80.2 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib2 (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib2 (systemd)</a>.</p>
+
+    <a id="sa-12.1-043"/>
+    <h4>12.1 043 ghostscript        Date: 2024-05-22  Severity: High</h4>
+    <p>In ghostscript-10.03.1, five security vulnerabilities were fixed that
+    could allow for crashes, shell injection, and remote code execution when
+    processing PostScript files (including print jobs). These vulnerabilities
+    can be exploited using a variety of drivers within GhostScript to send
+    print jobs, as well as when using GhostScript to convert and display
+    PostScript files.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-33869">CVE-2024-33869</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52722">CVE-2024-52722</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-33870">CVE-2024-33870</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-33871">CVE-2024-33871</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-29510">CVE-2024-29510</a>.</p>
+    <!-- Change to NVD once it's no longer reserved -->
+    <p>To fix these vulnerabilities, update to ghostscript-10.03.1 or later
+    using the instructions from
+    <a href="../view/svn/pst/gs.html">ghostscript (sysv)</a> or
+    <a href="../view/systemd/pst/gs.html">ghostscript (systemd)</a>.</p>
+
+    <a id="sa-12.1-042"/>
+    <h4>12.1 042 gdk-pixbuf         Date: 2024-05-22  Severity: High</h4>
+    <p>In gdk-pixbuf-2.42.12, a security vulnerability was fixed that could
+    allow for heap memory corruption (and thus arbitrary code execution or
+    a crash) when processing chunks in a crafted ANI file. ANI files are
+    Animated Cursors for Windows, but can be indexed by Tracker and can be
+    viewed in some applications.
+    This vulnerability has been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2022-48622.html">CVE-2022-48622</a>.</p>
+    <!-- Change to NVD once it's rated -->
+    <p>To fix this vulnerability, update to gdk-pixbuf-2.42.12 or later using
+    the instructions from
+    <a href="../view/svn/x/gdk-pixbuf.html">gdk-pixbuf (sysv)</a> or
+    <a href="../view/systemd/x/gdk-pixbuf.html">gdk-pixbuf (systemd)</a>.</p>
+
+    <a id="sa-12.1-041"/>
+    <h4>12.1 041 Wireshark          Date: 2024-05-22  Severity: Medium</h4>
+    <p>In Wireshark-4.2.5, three security vulnerabilities were fixed that
+    could allow for infinite loops when processing MONGO and ZigBee TLV
+    packets, as well as for crashes when editing crafted packets using the
+    'editcap' utility. In the 'editcap' utility, the vulnerabilities occur
+    when injecting secrets while writing multiple files, and when chopping
+    bytes from the beginning of a packet. If you use the 'editcap' utility
+    or process MONGO and ZigBee TLV packets, the BLFS team recommends
+    that you update Wireshark.
+    These vulnerabilities have been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2024-4854.html">CVE-2024-4854</a>,
+    <a href="https://www.suse.com/security/cve/CVE-2024-4853.html">CVE-2024-4853</a>, and
+    <a href="https://www.suse.com/security/cve/CVE-2024-4855.html">CVE-2024-4855</a>.</p>
+    <!-- Change to NVD once it's rated -->
+    <p>To fix these vulnerabilities, update to Wireshark-4.2.5 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-12.1-040"/>
+    <h4>12.1 040 libxml2            Date: 2024-05-22  Severity: Low</h4>
+    <p>In libxml2-2.12.7, a security vulnerability was fixed that could
+    allow for a buffer over-read when formatting error messages with
+    'xmllint --htmlout'. This only affects the xmllint utility, and the
+    vulnerability occurs in the xmlHTMLPrintFileContext() function in
+    xmllint.c. The xmllint utility will crash when processing a malicious file,
+    and upstream has thus rated the vulnerability as low.
+    This vulnerability has been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2024-34459.html">CVE-2024-34459</a>.</p>
+    <!-- Change to NVD once it's rated -->
+    <p>To fix this vulnerability, update to libxml2-2.12.7 or later using the
+    instructions from
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
+    <a id="sa-12.1-039"/>
+    <h4>12.1 039 gstreamer          Date: 2024-05-22  Severity: High</h4>
+    <p>In gst-plugins-base-1.24.3, a security vulnerability was fixed that
+    could allow for a heap-based buffer overflow in the EXIF image tag parser
+    when processing a certain malformed file. This would allow a malicious
+    third party to trigger a crash in the application, as well as achieve
+    code execution through heap manipulation. Because of the way gstreamer
+    is packaged, the entire stack must be updated to fix this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2024-4453.html">CVE-2024-4453</a>.</p>
+    <!-- Change to NVD once it's no longer reserved -->
+    <p>To fix this vulnerability, update the gstreamer stack to 1.24.3 using
+    the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
+    <a id="sa-12.1-038"/>
+    <h4>12.1 038 Git                Date: 2024-05-15  Severity: Medium</h4>
+    <p>In git-2.45.0, four security vulnerability were fixed that allowed
+    a maliciously crafted repository execute malicious code at cloning time and
+    create hardlinks to files outside the cloned repository.
+    These vulnerability have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-32002">CVE-2024-32002</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-32004">CVE-2024-32004</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-32020">CVE-2024-32020</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-32021">CVE-2024-32021</a>.</p>
+    <p>To fix these vulnerability, update to git-2.45.1 or later using
+    the instructions from
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
     <a id="sa-12.1-037"/>
-    <h4>12.1 037 Glibc (LFS)        Date: 2024-05-02  Severity: High</h4>
+    <h4>12.1 037 Glibc (LFS)        Date: 2024-05-02 (updated 2024-05-13)
+    Severity: High</h4>
     <p>In an iconv module of Glibc-2.39 and earlier, a security
     vulnerability was found which may allow a remote code execution via
     network services running on the system (an exploit via PHP-based web
@@ -85,8 +447,8 @@
     using the instructions from the LFS book for
     <a href="../../lfs/view/12.1/chapter08/glibc.html">Glibc (sysv)</a> or
     <a href="../../lfs/view/12.1-systemd/chapter08/glibc.html">Glibc (systemd)</a>,
-    but apply <a href='../../patches/downloads/glibc/glibc-2.39-upstream_fix-1.patch'>another patch</a> after applying
-    <code>glibc-2.39-fhs-2.patch</code>.
+    but apply <a href='../../patches/downloads/glibc/glibc-2.39-upstream_fix-2.patch'>another patch</a> after applying
+    <code>glibc-2.39-fhs-1.patch</code>.
     <b>To update Glibc from 2.38 or earlier to 2.39 safely on a running
     system, some extra precautions are needed as documented in an
     "Important" box in the book section for Glibc.  Follow it strictly or
@@ -141,7 +503,7 @@
     <p>To (potentially) fix this update to Node.js-20.12.2 or later using the 
     instructions for:
     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
 
     <a id="sa-12.1-033"/>
     <h4>12.1 033 Thunderbird         Date: 2024-04-17  Severity: High</h4>

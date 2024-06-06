@@ -103,6 +103,14 @@
 
     <h3>Firefox</h3>
 
+    <a id="sa-12.1-052"/>
+    <h4>12.1 052 Firefox            Date: 2024-05-31  Severity: High</h4>
+    <p>In Firefox-115.11.0esr, six security vulnerabilities were fixed that
+    could allow for arbitrary code execution, arbitrary JavaScript execution,
+    potential permissions bypasses, cross-origin reponse leakage, and crashes
+    when saving pages to PDFs. Update to Firefox-115.11.0esr.
+    <a href="consolidated.html#sa-12.1-052">12.1-052</a></p>
+
     <a id="sa-12.1-032"/>
     <h4>12.1 032 Firefox             Date: 2024-04-17  Severity: High</h4>
     <p>In Firefox-115.10.0esr, eight security vulnerabilities were fixed that
@@ -143,7 +151,28 @@
 
 <!-- end of FontForge -->
 
+    <h3>gdk-pixbuf</h3>
+
+    <a id="sa-12.1-042"/>
+    <h4>12.1 042 gdk-pixbuf         Date: 2024-05-22  Severity: High</h4>
+    <p>In gdk-pixbuf-2.42.12, a security vulnerability was fixed that could
+    allow for heap memory corruption (and thus arbitrary code execution or
+    a crash) when processing chunks in a crafted ANI file. ANI files are
+    Animated Cursors for Windows, but can be indexed by Tracker and can be
+    viewed in some applications. Update to gdk-pixbuf-2.42.12.
+    <a href="consolidated.html#sa-12.1-042">12.1-042</a></p>
+
+<!-- end of gdk-pixbuf -->
+
     <h3>ghostscript</h3>
+
+    <a id="sa-12.1-043"/>
+    <h4>12.1 043 ghostscript        Date: 2024-05-22  Severity: High</h4>
+    <p>In ghostscript-10.03.1, five security vulnerabilities were fixed that
+    could allow for crashes, shell injection, and remote code execution when
+    processing PostScript files (including print jobs).
+    Update to ghostscript-10.03.1.
+    <a href="consolidated.html#sa-12.1-043">12.1-043</a></p>
 
     <a id="sa-12.1-006"/>
     <h4>12.1 006 ghostscript     Date: 2024-03-09  Severity: High</h4>
@@ -166,6 +195,33 @@
 
 <!-- end of giflib -->
 
+    <h3>Git</h3>
+
+    <a id="sa-12.1-038"/>
+    <h4>12.1 038 Git                Date: 2024-05-15  Severity: Medium</h4>
+    <p>In git-2.45.0, four security vulnerability were fixed that allowed
+    a maliciously crafted repository execute malicious code at cloning time and
+    create hardlinks to files outside the cloned repository.
+    Update to git-2.45.1
+    <a href="consolidated.html#sa-12.1-038">12.1-038</a></p>
+
+<!-- end of Git -->
+    
+    <h3>glib2</h3>
+
+    <a id="sa-12.1-044"/>
+    <h4>12.1 044 glib2              Date: 2024-05-22  Severity: Medium</h4>
+    <p>In glib-2.80.2, a security vulnerability was fixed that could allow for
+    unicast spoofing to occur with services that use GDBus. This includes
+    several system services, including NetworkManager and others. This allows
+    for other users of a shared computer to send spoofed D-Bus signals which
+    a GDBus-based client will incorrectly interpret as having been sent by the
+    trusted system service, which will cause incorrect behavior with an
+    application-dependent impact. Update to glib-2.80.2.
+    <a href="consolidated.html#sa-12.1-044">12.1-044</a></p>
+
+<!-- end of glib2 -->
+
     <h3>gnutls</h3>
 
     <a id="sa-12.1-012"/>
@@ -178,10 +234,42 @@
 
 <!-- end of gnutls -->
 
+    <h3>gstreamer</h3>
+
+    <a id="sa-12.1-039"/>
+    <h4>12.1 039 gstreamer          Date: 2024-05-22  Severity: High</h4>
+    <p>In gst-plugins-base-1.24.3, a security vulnerability was fixed that
+    could allow for a heap-based buffer overflow in the EXIF image tag parser
+    when processing a certain malformed file. This would allow a malicious
+    third party to trigger a crash in the application, as well as achieve
+    code execution through heap manipulation. Update the gstreamer stack
+    to 1.24.3.
+    <a href="consolidated.html#sa-12.1-039">12.1-039</a></p>
+
+<!-- end of gstreamer -->
+
     <h3>Intel microcode</h3>
 
+    <a id="sa-12.1-045"/>
+    <h4>12.1 045 Intel Microcode  Date: 2024-05-24  Severity: High</h4>
+    <p>In intel-microcode-20240514, four hardware vulnerabilities are
+    fixed.  One of them may allow for a denial of service when using Intel
+    Core Ultra processors that belong to the Meteor Lake platform due to
+    an invalid sequence of processor instructions. Another one of these
+    vulnerabilities allows for information disclosure in certain circumstances
+    due to race conditions in hardware logic. This impacts processors that
+    belong to the Meteor Lake (Intel Core Ultra family) as well as the Alder
+    Lake, Raptor Lake, and Arizona Beach processors. This includes the 12th
+    Generation family of Intel CPUs as well as the 13th Generation, the Intel
+    Core Processor N family, the Pentium Gold Processor Family, and the
+    Atom C Series of processors. The other security vulnerabilities impact
+    Intel Xeon Scalable servers with Trust Domain Extensions support. In this
+    case, an elevation of privileges may occur.
+    Update to intel-microcode-20240514 if your processor is affected.
+    <a href="consolidated.html#sa-12.1-045">12.1-045</a></p>
+
     <a id="sa-12.1-017"/>
-    <h4>12.0 043 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
+    <h4>12.1 017 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
     <p>Intel microcode for some processors has been updated to fix two
     hardware vulnerabilities which may allow a denial of service via remote
     access, or an information disclosure via local access.  Read
@@ -190,7 +278,7 @@
     mitigate the vulnerability.</p>
 
     <a id="sa-12.1-009"/>
-    <h4>12.0 043 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
+    <h4>12.1 009 Intel Microcode  Date: 2024-03-20  Severity: Medium</h4>
     <p>Intel microcode for some processors has been updated to
     provide a mitigation for an hardware vulnerability known as RFDS, or
     Register File Data Sampling, which may allow an information disclosure
@@ -220,6 +308,42 @@
     <a href="consolidated.html#sa-12.1-025">12.1-025</a></p>
 
 <!-- end of libarchive -->
+
+    <h3>libvpx</h3>
+
+    <a id="sa-12.1-056"/>
+    <h4>12.1 056 libvpx             Date: 2024-06-04  Severity: Medium</h4>
+    <p>In libvpx-1.14.1, a security vulnerability was fixed that could allow
+    for integer overflows in the calculations of buffer sizes and offsets when
+    calling vpx_img_alloc() with a large value of the d_w, d_h, or align
+    parameters. This may result in invalid fields being returned in the
+    vpx_image_t struct, and can cause a denial of service or remote code
+    execution. Update to libvpx-1.14.1.
+    <a href="consolidated.html#sa-12.1-056">12.1-056</a></p>
+
+<!-- end of libvpx -->
+
+    <h3>libxml2</h3>
+
+    <a id="sa-12.1-040"/>
+    <h4>12.1 040 libxml2            Date: 2024-05-22  Severity: Low</h4>
+    <p>In libxml2-2.12.7, a security vulnerability was fixed that could
+    allow for a buffer over-read when formatting error messages with
+    'xmllint --htmlout'. Update to libxml2-2.12.7.
+    <a href="consolidated.html#sa-12.1-040">12.1-040</a></p>
+
+<!-- end of libxml2 -->
+
+    <h3>MariaDB</h3>
+
+    <a id="sa-12.1-054"/>
+    <h4>12.1 054 MariaDB            Date: 2024-05-31  Severity: Medium</h4>
+    <p>In MariaDB-10.11.8, a security vulnerability was fixed that could allow
+    for unauthorized creation, modification, or deletion of data stored in a
+    MySQL instance. Update to MariaDB-10.11.8.
+    <a href="consolidated.html#sa-12.1-054">12.1-054</a></p>
+
+<!-- end of MariaDB -->
 
     <h3>nghttp2</h3>
 
@@ -252,6 +376,20 @@
 
 <!-- end of Node.js -->
 
+    <h3>OpenJDK</h3>
+
+    <a id="sa-12.1-049"/>
+    <h4>12.1 049 OpenJDK            Date: 2024-05-29  Severity: High</h4>
+    <p>In OpenJDK-22.0.1, four security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) or for unauthorized
+    reading, modification, and deletion of data. These vulnerabilities are all
+    network exploitable with no authentication or user interaction required,
+    and they are in the Hotspot and Networking components.
+    Update to OpenJDK-22.0.1.
+    <a href="consolidated.html#sa-12.1-049">12.1-049</a></p>
+
+<!-- end of OpenJDK -->
+
     <h3>OpenJPEG</h3>
 
     <a id="sa-12.1-003"/>
@@ -278,7 +416,63 @@
 
 <!-- end of PHP -->
 
+    <h3>plasma-workspace</h3>
+
+    <a id="sa-12.1-055"/>
+    <h4>12.1 055 plasma-workspace   Date: 2024-05-31  Severity: High</h4>
+    <p>In plasma-workspace-6.0.5.1 (and 5.27.11.1), a security vulnerability
+    was fixed that could allow unauthorized connections due to incorrectly
+    allowing connections via ICE on the same host as Plasma is running on.
+    This allows another user on the same machine to gain access to the session
+    manager, and can be exploited to execute arbitrary code execution in the
+    context of the current user on the next logon to the machine.
+    Update to plasma-workspace-6.0.5.1 (or 5.27.11.1).
+    <a href="consolidated.html#sa-12.1-055">12.1-055</a></p>
+
+<!-- end of plasma-workspace -->
+
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-12.1-048"/>
+    <h4>12.1 048 PostgreSQL         Date: 2024-05-29  Severity: Medium</h4>
+    <p>In PostgreSQL-16.3 (as well as 15.7 and 14.12), a security vulnerability
+    was fixed that could allow for an unprivileged database user to read most
+    common values and other statistics from CREATE STATISTICS commands executed
+    by other users. The most common values will reveal column values that the
+    eavesdropped could not otherwise read, or results of functions that they
+    cannot execute. Additional modifications are needed to existing databases.
+    Please see the advisory for more details. Update to PostgreSQL-16.3 (or
+    15.7 or 14.12) and run the commands at the end of the advisory.
+    <a href="consolidated.html#sa-12.1-048">12.1-048</a></p>
+
+<!-- end of PostgreSQL -->
+
+    <h3>Qt6</h3>
+
+    <a id="sa-12.1-046"/>
+    <h4>12.1 046 Qt6                Date: 2024-05-24  Severity: High</h4>
+    <p>In Qt6-6.7.1, two security vulnerabilities were resolved that could
+    allow for stack modification as well as for predictable encryption to
+    occur when using Network Authentication in Qt. Update to Qt-6.7.1.
+    <a href="consolidated.html#sa-12.1-046">12.1-046</a>.</p>
+
+<!-- end of Qt6 -->
+
     <h3>QtWebEngine</h3>
+
+    <a id="sa-12.1-047"/>
+    <h4>12.1 047 QtWebEngine        Date: 2024-05-24  Severity: Critical</h4>
+    <p>In QtWebEngine-6.7.1, seventeen security vulnerabilities were fixed that
+    could allow for remote code execution through crafted HTML pages, for a
+    remotely exploitable sandbox escape, for arbitrary reading/writing of files
+    via malicious HTML pages, for remotely exploitable crashes, content
+    security policy bypasses, and for sensitive information disclosure. Several
+    of these vulnerabilities have been exploited in the wild recently and it is
+    recommended that you update to this version of QtWebEngine immediately. If
+    you are still using a Qt5-based version of QtWebEngine, the BLFS team
+    recommends that you migrate to Qt6, the Qt6 version of QtWebEngine, and
+    the latest version of Falkon as soon as possible. Update to QtWebEngine-6.7.1.
+    <a href="consolidated.html#sa-12.1-047">12.1-047</a></p>
 
     <a id="sa-12.1-024"/>
     <!-- non-standard, because -dev has moved to Qt6 -->
@@ -350,6 +544,13 @@
 
     <h3>SpiderMonkey</h3>
 
+    <a id="sa-12.1-051"/>
+    <h4>12.1 051 SpiderMonkey       Date: 2024-05-31  Severity: High</h4>
+    <p>In SpiderMonkey-115.11.0, a security vulnerability was fixed that could
+    allow for arbitrary code execution when calling the IsDiamondPattern
+    function. Update to SpiderMonkey-115.11.0.
+    <a href="consolidated.html#sa-12.1-051">12.1-051</a></p>
+
     <a id="sa-12.1-031"/>
     <h4>12.1 031 SpiderMonkey        Date: 2024-04-17  Severity: High</h4>
     <p>In SpiderMonkey/mozjs-115.10.0, three security vulnerabilities were
@@ -363,6 +564,14 @@
 <!-- end of SpiderMonkey -->
 
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.1-053"/>
+    <h4>12.1 053 Thunderbird        Date: 2024-05-31  Severity: High</h4>
+    <p>In Thunderbird-115.11.0, six security vulnerabilities were fixed that
+    could allow for arbitrary code execution, arbitrary JavaScript execution,
+    potential permissions bypasses, cross-origin reponse leakage, and crashes
+    when saving pages to PDFs. Update to Thunderbird-115.11.0.
+    <a href="consolidated.html#sa-12.1-053">12.1-053</a></p>
 
     <a id="sa-12.1-033"/>
     <h4>12.1 033 Thunderbird         Date: 2024-04-17  Severity: High</h4>
@@ -411,7 +620,28 @@
 
 <!-- end of Unbound-->
 
+    <h3>WebKitGTK</h3>
+
+    <a id="sa-12.1-050"/>
+    <h4>12.1 050 WebKitGTK          Date: 2024-05-29  Severity: High</h4>
+    <p>In WebKitGTK-2.42.2, a security vulnerability was fixed that could allow
+    for an attacker with arbitrary read and write capabilities to bypass
+    Pointer Authentication. The vulnerability was addressed with improved
+    checks, and is known to be exploited in the wild.
+    Update to WebKitGTK-2.42.2.
+    <a href="consolidated.html#sa-12.1-050">12.1-050</a></p>
+
+<!-- end of WebKitGTK -->
+
     <h3>Wireshark</h3>
+
+    <a id="sa-12.1-041"/>
+    <h4>12.1 041 Wireshark          Date: 2024-05-22  Severity: Medium</h4>
+    <p>In Wireshark-4.2.5, three security vulnerabilities were fixed that
+    could allow for infinite loops when processing MONGO and ZigBee TLV
+    packets, as well as for crashes when editing crafted packets using the
+    'editcap' utility. Update to Wireshark-4.2.5.
+    <a href="consolidated.html#sa-12.1-041">12.1-041</a></p>
 
     <a id="sa-12.1-016"/>
     <h4>12.1 016 Wireshark            Date: 2024-03-30  Severity: Medium</h4>
