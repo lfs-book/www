@@ -65,6 +65,18 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-058"/>
+    <h4>12.1 058 VLC                Date: 2024-06-07  Severity: High</h4>
+    <p>In VLC-3.0.21, a security vulnerability was fixed in it's implementation
+    of the MMS protocol that allows for an integer overflow to occur. When
+    playing a crafted stream, this can allow for a denial-of-service or other
+    impacts such as arbitrary code execution. This vulnerability has not been
+    assigned a CVE yet, but upstream has declared it as a security fix.</p>
+    <p>To fix this vulnerability, update to VLC-3.0.21 using the instructions
+    from
+    <a href="../view/svn/multimedia/vlc.html">VLC (sysv)</a> or
+    <a href="../view/systemd/multimedia/vlc.html">VLC (systemd)</a>.</p>
+
     <a id="sa-12.1-057"/>
     <h4>12.1 057 PHP                Date: 2024-06-07  Severity: Critical</h4>
     <p>In PHP-8.3.8, four security vulnerabilities were fixed that could allow
