@@ -65,6 +65,19 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-064"/>
+    <h4>12.1 064 SpiderMonkey       Date: 2024-06-12  Severity: High</h4>
+    <p>In SpiderMonkey-115.12.0, a security vulnerability was fixed that
+    could allow for a potentially exploitable crash if garbage collection
+    was triggered at the right time. The vulnerability occurs due to a
+    use-after-free during object transplant.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5688">CVE-2024-5688</a></p>
+    <p>To fix this vulnerability, update to SpiderMonkey-115.12.0 or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a></p>
+
     <a id="sa-12.1-063"/>
     <h4>12.1 063 Firefox            Date: 2024-06-12  Severity: High</h4>
     <p>In Firefox-115.12.0esr, seven security vulnerabilities were fixed that
