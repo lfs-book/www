@@ -76,6 +76,19 @@
 
 <!-- end of c-ares -->
 
+    <h3>CUPS</h3>
+
+    <a id="sa-12.1-062"/>
+    <h4>12.1 062 CUPS               Date: 2024-06-12  Severity: Medium</h4>
+    <p>In CUPS-2.4.9, a security vulnerability was fixed that could allow for
+    privilege escalation and allows for world-writable files in special
+    configurations. If a Listen option in the configuration files point to a
+    symbolic link, CUPS will perform an arbitrary chmod to 0140777 of that
+    location. Update to CUPS-2.4.9 if you use this configuration.
+    <a href="consolidated.html#sa-12.1-062">12.1-062</a></p>
+
+<!-- end of CUPS -->
+
     <h3>cURL</h3>
 
     <a id="sa-12.1-015"/>
