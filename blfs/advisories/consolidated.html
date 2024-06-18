@@ -65,6 +65,18 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-065"/>
+    <h4>12.1 065 cryptsetup        Date: 2024-06-18  Severity: High</h4>
+    <p>In cryptsetup-2.7.3, various security vulnerabilities, relating to
+    Opal based hardware encryption, were fixed. These vulnerabilities could
+    result in a drive being partially unencrypted or destroying the data on the
+    disk due to bad firmware on some drives.
+    These vulnerabilites have not been assigned any CVEs
+    <p>To fix these vulnerabilites, update to cryptsetup-2.7.3 or later
+    using the instructions from
+    <a href="../view/svn/postlfs/cryptsetup.html">cryptsetup (sysv)</a> or
+    <a href="../view/systemd/postlfs/cryptsetup.html">cryptsetup (systemd)</a></p>
+
     <a id="sa-12.1-064"/>
     <h4>12.1 064 SpiderMonkey       Date: 2024-06-12  Severity: High</h4>
     <p>In SpiderMonkey-115.12.0, a security vulnerability was fixed that
