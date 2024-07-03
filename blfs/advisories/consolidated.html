@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-066"/>
+    <h4>12.1 066 OpenSSH           Date: 2024-07-02  Severity: Critical</h4>
+    <p>In OpenSSH-9.8p1, a security vulnerability was fixed that could
+    allow for arbitrary remote code execution with root privileges through 
+    exploiting a race condition in the authentication functions. Thus bypassing 
+    all authentication. The vulnerability has already been proven to work on 
+    32-bit (i686) systems and is theoretically possible on 64-bit (x86_64) systems 
+    as well. 
+    This vulnerability is codenamed RegreSSHion and has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6387">CVE-2024-6387</a></p>
+    <p>To fix this vulnerability, either update to OpenSSH-9.8p1 or later
+    using the instructions from
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>,
+    or apply a temporary mitigation by setting LoginGraceTime to 0 in
+    /etc/ssh/sshd_config</p>
+
     <a id="sa-12.1-065"/>
     <h4>12.1 065 cryptsetup        Date: 2024-06-18  Severity: High</h4>
     <p>In cryptsetup-2.7.3, various security vulnerabilities, relating to
