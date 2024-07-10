@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-068"/>
+    <h4>12.1 068 OpenSSL (LFS)          Date: 2023-07-10  Severity: Low</h4>
+    <p>In OpenSSL-3.3.1, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crash, unbounded resource access,
+    and excessive time spent in a function) to occur. The application crash
+    occurs when using the SSL_free_buffers() function, and it causes a use after
+    free because it can access memory that has been previously freed in some
+    situations. The excessive time vulnerability occurs when checking DSA keys
+    and parameters. The unbounded resource access occurs with session handling
+    in TLS 1.3 connections.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2511">CVE-2024-2511</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4603">CVE-2024-4603</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4741">CVE-2024-4741</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.3.1 or later
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <p>If you are maintaining an older system, please use OpenSSL-3.1.6,
+    OpenSSL-3.2.2, or OpenSSL-3.0.14 instead, as those have the same fixes and were
+    released at the same time as this update.</p>
+
     <a id="sa-12.1-067"/>
     <h4>12.1 067 Apache HTTPD           Date: 2023-07-04  Severity: High</h4>	
     <p>In httpd-2.4.61, eight security vulnerabilities were fixed. More details at <a
@@ -1776,7 +1798,8 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     <p>To fix these vulnerabilities, update to OpenSSL-3.2.1 or later
     using the instructions from the LFS book for
     <a href="../../lfs/view/12.1/chapter08/openssl.html">OpenSSL (sysv)</a> or
-    <a href="../../lfs/view/12.1-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.  Note that CVE-2024-0727 also affects OpenSSL-1.1.1 and 1.0.2
+    <a href="../../lfs/view/12.1-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.
+    Note that CVE-2024-0727 also affects OpenSSL-1.1.1 and 1.0.2
     series, but they are no longer publicly supported by the OpenSSL
     developers.  So if you are still running a system with OpenSSL-1.1.1
     or 1.0.2 and you want to get CVE-2024-0727 fixed, you need to update
