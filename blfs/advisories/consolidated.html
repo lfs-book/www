@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-070"/>
+    <h4>12.1 070 QtWebEngine            Date: 2024-07-10  Severity: High</h4>
+    <p>In QtWebEngine-6.7.2, seven security vulnerabilities were fixed that
+    could allow for remote code execution. All of these issues occur in the
+    bundled version of Chromium, and happen in the WebRTC, Dawn, Media Session,
+    Streams API, and V8 components within Chromium. Several of these issues
+    are known to be actively exploited, so it is recommended that you update
+    as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5493">CVE-2024-5493</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5494">CVE-2024-5494</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5495">CVE-2024-5495</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5496">CVE-2024-5496</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5499">CVE-2024-5499</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5274">CVE-2024-5274</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4948">CVE-2024-4948</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.7.2 or later using
+    the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.1-069"/>
     <h4>12.1 069 Python3 (LFS and BLFS) Date: 2024-07-10  Severity: Medium</h4>
     <p>In Python-3.12.4, a security vulnerability was fixed that could allow
