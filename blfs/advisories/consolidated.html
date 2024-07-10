@@ -65,8 +65,28 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-069"/>
+    <h4>12.1 069 Python3 (LFS and BLFS) Date: 2024-07-10  Severity: Medium</h4>
+    <p>In Python-3.12.4, a security vulnerability was fixed that could allow
+    for incorrect information to be returned about whether certain IPv4 and
+    IPv6 addresses were designated as "globally reachable" or "private". This
+    occured due to inaccurate information from the IANA Special-Purpose Address
+    Registries. Note that this only impacts you if you use the "ipaddress"
+    Python module, included with the Python standard library. Python 3.12.4
+    fixes this by updating the information from the IANA Special-Purpose Address
+    Registry to the latest version.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4032">CVE-2024-4032</a>.</p>
+    <p>To fix this vulnerability, update to Python-3.12.4 or later using the
+    instructions from
+    <a href="../view/svn/general/python3.html">Python3 (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python3 (systemd)</a>.</p>
+    <p>If you are maintaining an older system, you will need to backport
+    <a href="https://github.com/python/cpython/pull/113179">CPython PR 113179</a>
+    to your version of Python and then rebuild it.</p>`
+
     <a id="sa-12.1-068"/>
-    <h4>12.1 068 OpenSSL (LFS)          Date: 2023-07-10  Severity: Low</h4>
+    <h4>12.1 068 OpenSSL (LFS)          Date: 2024-07-10  Severity: Low</h4>
     <p>In OpenSSL-3.3.1, three security vulnerabilities were fixed that could
     allow for a denial of service (application crash, unbounded resource access,
     and excessive time spent in a function) to occur. The application crash
@@ -88,7 +108,7 @@
     released at the same time as this update.</p>
 
     <a id="sa-12.1-067"/>
-    <h4>12.1 067 Apache HTTPD           Date: 2023-07-04  Severity: High</h4>	
+    <h4>12.1 067 Apache HTTPD           Date: 2024-07-04  Severity: High</h4>
     <p>In httpd-2.4.61, eight security vulnerabilities were fixed. More details at <a
     href="https://dlcdn.apache.org/httpd/CHANGES_2.4.60">Changes with Apache 2.4.60</a>.
     These vulnerabilities have been assigned
@@ -104,7 +124,6 @@
     the instructions from
     <a href="../view/svn/server/apache.html">Apache HTTPD (sysv)</a> or
     <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
-
 
     <a id="sa-12.1-066"/>
     <h4>12.1 066 OpenSSH           Date: 2024-07-02  Severity: Critical</h4>
