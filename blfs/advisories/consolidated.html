@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-071"/>
+    <h4>12.1 071 Emacs                  Date: 2024-07-10  Severity: High</h4>
+    <p>In Emacs-29.4, a security vulnerability was fixed that could allow
+    for arbitrary shell commands to be run while in Org mode (the built-in
+    email client). There is a public proof of concept available, and this
+    vulnerability is trivial to exploit. If you are using the Org mode in
+    Emacs, you need to update Emacs immediately.
+    No CVE has been assigned for this vulnerability, but details are
+    available at
+    <a href="https://seclists.org/oss-sec/2024/q2/296">oss-security posting</a>.</p>
+    <p>To fix this vulnerability, update to Emacs-29.4 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/emacs.html">Emacs (sysv)</a> or
+    <a href="../view/systemd/postlfs/emacs.html">Emacs (systemd)</a>.</p>
+
     <a id="sa-12.1-070"/>
     <h4>12.1 070 QtWebEngine            Date: 2024-07-10  Severity: High</h4>
     <p>In QtWebEngine-6.7.2, seven security vulnerabilities were fixed that
