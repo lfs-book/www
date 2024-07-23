@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-080"/>
+    <h4>12.1 080 BIND                   Date: 2024-07-23  Severity: High</h4>
+    <p>In BIND-9.18.28, four security vulnerabilities were fixed that could
+    allow for an attacker to remotely crash the DNS server. Note that this only
+    impacts the server, and not the utilities. One of these vulnerabilities is
+    in the SIG0 support, which was removed entirely in this release. All users
+    who run a publicly accessible DNS server are advised to upgrade to this
+    release as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://kb.isc.org/docs/cve-2024-0760">CVE-2024-0760</a>,
+    <a href="https://kb.isc.org/docs/cve-2024-1737">CVE-2024-1737</a>,
+    <a href="https://kb.isc.org/docs/cve-2024-1975">CVE-2024-1975</a>, and
+    <a href="https://kb.isc.org/docs/cve-2024-4076">CVE-2024-4076</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.18.28 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-12.1-079"/>
     <h4>12.1 079 vorbis-tools           Date: 2024-07-22  Severity: High</h4>
     <p>In vorbis-tools-1.4.2, a security vulnerability was discovered that can
