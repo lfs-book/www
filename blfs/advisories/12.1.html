@@ -122,6 +122,16 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-12.1-081"/>
+    <h4>12.1 081 cURL                   Date: 2024-07-24  Severity: Medium</h4>
+    <p>In cURL-8.9.0, a security vulnerability was fixed that could allow for
+    a crash that occurs when a server provides a specially crafted TLS
+    certificate. This occurs in the utf8asn1str() function in the ASN.1 parser.
+    Note that in some circumstances where the malloc implementation does not
+    detect this error, this could potentially allow for remote code execution.
+    Update to cURL-8.9.0.
+    <a href="consolidated.html#sa-12.1-081">12.1-081</a></p>
+
     <a id="sa-12.1-015"/>
     <h4>12.1 015 cURL               Date: 2024-03-27  Severity: Medium</h4>
     <p>In cURL-8.7.1, a security vulnerability was fixed that could allow
