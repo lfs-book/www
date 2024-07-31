@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-084"/>
+    <h4>12.1 084 cURL                   Date: 2024-07-31  Severity: Low</h4>
+    <p>In cURL-8.9.1, a security vulnerability was fixed that could allow for
+    a crash or potentially leaking the contents of heap memory to the
+    application when CURLINFO_CERTINFO is used. This occurs because libcurl's
+    GTime2str() function, which is used for parsing an ASN.1 Generalized Time
+    field, may return a -1 for the length of the time fraction, leading to a
+    strlen() call getting performed on a pointer to a heap buffer area that is
+    not NULL terminated. The default BLFS configuration is unaffected unless
+    you used GnuTLS as your TLS backend instead of OpenSSL.
+    This vulnerability has been assigned
+    <a href="https://curl.se/docs/CVE-2024-7264.html">CVE-2024-7264</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.9.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-12.1-083"/>
     <h4>12.1 083 libxml2                Date: 2024-07-25  Severity: Critical</h4>
     <p>In libxml2-2.13.3, a security vulnerability was fixed that could allow
