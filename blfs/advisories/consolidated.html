@@ -65,6 +65,19 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-085"/>
+    <h4>12.1 085 SpiderMonkey           Date: 2024-08-07  Severity: High</h4>
+    <p>In SpiderMonkey-115.14.0, a security vulnerability was fixed that could
+    allow for a remotely exploitable crash caused by a use-after-free when
+    unexpected marking work at the start of sweeping during garbage collection
+    occurs. The vulnerability was also fixed in Firefox and Thunderbird.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7527">CVE-2024-7527</a>.</p>
+    <p>To fix this vulnerability, update to SpiderMonkey-115.14.0 or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
     <a id="sa-12.1-084"/>
     <h4>12.1 084 cURL                   Date: 2024-07-31  Severity: Low</h4>
     <p>In cURL-8.9.1, a security vulnerability was fixed that could allow for
