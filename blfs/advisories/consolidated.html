@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-088"/>
+    <h4>12.1 088 PostgreSQL             Date: 2024-08-09  Severity: High</h4>
+    <p>In PostgreSQL-16.4, a security vulnerability was fixed that could allow
+    for relation replacement during pg_dump, which will execute arbitrary SQL
+    commands. An attacker able to create and drop non-temporary objects could
+    inject SQL code that would be executed by a concurrent pg_dump session with
+    the privileges of the role running pg_dump (often a superuser). The attack
+    involves replacing a sequence or similar object with a view or foreign table
+    that will execute malicious code. To prevent this, upstream has added a new
+    server parameter called "restrict_nonsystem_relation_kind" that can disable
+    expansion of non-builtin views, as well as access to foreign tables, and
+    upstream modified pg_dump to set it when available. Note that you must have
+    both pg_dump *and* the server it was dumped from updated to have this fix.
+    The issue is classified as a TOCTOU issue.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7348">CVE-2024-7348</a>.</p>
+    <p>To fix this vulnerability, update to PostgreSQL-16.4 (or 15.8, 14.13,
+    13.16, or 12.20) or later using the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-12.1-087"/>
     <h4>12.1 087 Thunderbird            Date: 2024-08-07  Severity: High</h4>
     <p>In Thunderbird-128.1.0esr, ten security vulnerabilities were fixed that
