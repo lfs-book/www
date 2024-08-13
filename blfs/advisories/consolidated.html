@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-090"/>
+    <h4>12.1 090 urllib3 (Python Module) Date: 2024-08-12 Severity: Medium</h4>
+    <p>In urllib3-2.2.2, two security vulnerabilities were fixed that could
+    allow for unintentional information disclosure via the 'Cookie' HTTP header,
+    and for the contents of HTTP request bodies to be unintentionally leaked
+    after redirects. These vulnerabilities are both difficult to exploit and
+    require several uncommon conditions to be set.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-45803">CVE-2023-45803</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-45804">CVE-2023-45804</a>.</p>
+    <p>To fix these vulnerabilities, update to urllib3-2.2.2 or later using the
+    instructions from
+    <a href="../view/svn/general/python-dependencies.html#urllib3">urllib3 (sysv)</a> or
+    <a href="../view/systemd/general/python-dependencies.html#urllib3">urllib3 (systemd)</a>.</p>
+
     <a id="sa-12.1-089"/>
     <h4>12.1 089 idna (Python Module)   Date: 2024-08-12  Severity: High</h4>
     <p>In idna-3.7, a security vulnerability was fixed that could allow for
