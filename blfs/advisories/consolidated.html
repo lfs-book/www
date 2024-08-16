@@ -65,6 +65,25 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-092"/>
+    <h4>12.1 092 Unbound          Date: 2024-08-18  Severity: Low</h4>
+    <p>In Unbound-1.21.0, three security vulnerabilities were fixed that could
+    allow for DNS Cache Poisoning attacks and remotely exploitable crashes. The
+    DNS Cache Poisoning attack is known as CacheFlush, while the CAMP attack
+    allows for remotely exploitable crashes on most DNS server implementations.
+    Only one CVE for these vulnerabilities has been issued, but two papers were
+    published on CAMP and CacheFlush.
+    This vulnerability has been assigned
+    <a href="https://www.cve.org/CVERecord?id=CVE-2024-43167">CVE-2024-43167</a>.</p>
+    <p>Additional information can be found in the papers from the 33rd USENIX
+    Security symposium. They can be found at
+    <a href="https://www.usenix.org/system/files/usenixsecurity24-duan.pdf">CAMP Paper</a> and
+    <a href="https://www.usenix.org/system/files/usenixsecurity24-afek.pdf">CacheFlush Paper</a>.</p>
+    <p>To fix these vulnerabilities, update to Unbound-1.21.0 or later using the
+    instructions from
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/xserver/unbound.html">Unbound (systemd)</a>.</p>
+
     <a id="sa-12.1-091"/>
     <h4>12.1 091 Intel Microcode  Date: 2024-08-16  Severity: High</h4>
     <p>In intel-microcode-20240813, four hardware vulnerabilities are
