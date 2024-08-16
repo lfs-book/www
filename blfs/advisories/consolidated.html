@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-093"/>
+    <h4>12.1 093 Dovecot          Date: 2024-08-16  Severity: High</h4>
+    <p>In Dovecot-2.3.19.1, two security vulnerabilities were fixed that could
+    allow for resource exhaustion when processing large email headers. One of
+    these issues happens when eeeessing very large email headers, while the
+    other issue occurs when there are a large number of Address headers in
+    particular. The large number of address headers issue was observed in a
+    customer's production environment, where it would take 18+ minutes to
+    process a single email. Upgrading Dovecot is highly recommended if you are
+    using Dovecot in a production environment.
+    These vulnerabilities have been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2024-23185.html">CVE-2024-23185</a> and
+    <a href="https://www.suse.com/security/cve/CVE-2024-23184.html">CVE-2023-23184</a>.</p>
+    <p>To fix these vulnerabilities, update to Dovecot-2.3.19.1 or later using
+    the instructions from
+    <a href="../view/svn/server/dovecot.html">Dovecot (sysv</a> or
+    <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
+
     <a id="sa-12.1-092"/>
     <h4>12.1 092 Unbound          Date: 2024-08-18  Severity: Low</h4>
     <p>In Unbound-1.21.0, three security vulnerabilities were fixed that could
