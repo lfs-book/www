@@ -65,6 +65,52 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-091"/>
+    <h4>12.1 091 Intel Microcode  Date: 2024-08-16  Severity: High</h4>
+    <p>In intel-microcode-20240813, four hardware vulnerabilities are
+    fixed.  The first one may allow a escalation of privilege when
+    using Intel 7th to 12th Generation Core processors, as well as many
+    Celeron, Pentium Gold, and Xeon processors; read
+    <a href='https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01083.html'>Intel-SA-01083</a> for the precise list of affected
+    processors.  The second one may allow a denial of service when using
+    Intel 3rd Generation Intel Xeon Scalable Processors
+    (using the microcode file 06-55-0b).  The third one may allow a
+    escalation of privilege on 3rd Generation Intel Xeon D Processor,
+    and 3rd, 4th, or 5th Generation Intel Xeon Scalable Processors
+    (with microcode files 06-6a-06, 06-6c-01, 06-8f-07, 06-8f-08, or
+    06-cf-02).  The fourth one may allow a escalation of privilege when
+    using Intel Core Ultra processors based on the Meteor Lake micro
+    architecture (using the microcode file 06-aa-04).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24853">CVE-2024-24853</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-25939">CVE-2024-25939</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24980">CVE-2024-24980</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-42667">CVE-2023-42667</a>.
+    The release note of this microcode release also mentions
+    CVE-2023-49141 (Intel-SA-01046) but it was already fixed with
+    intel-microcode-20240514.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above and in Intel-SA-01083.  If vulnerable, update to
+    intel-microcode-20240813 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>
+    to fix these vulnerabilities.</p>
+    <p>Note that the initial 20240813 release lacks the update for the
+    06-a5-03 microcode file and the release has been silently remade
+    without a version bump.  So if you are using this microcode file,
+    make sure the microcode revision is updated to 0xfc.  If it's updated
+    to 0xfa instead, you need to download the microcode again, and install
+    it again.</p>
+    <p>Also note that this microcode release does not contain the fix for
+    the notorious stability issue of the 13th and 14th Intel Core
+    processors.  Considering this issue can cause permanent CPU damage
+    under a heavy workload, the LFS editors recommend to update the BIOS to
+    a version embedding microcode revision 0x129 or later ASAP if you are
+    using a 13th or 14th Core processor (especially an i9), even if you are
+    not running a LFS system. As at now it's unsure if a future microcode
+    release can address the issue without a BIOS update.</p>
+
     <a id="sa-12.1-090"/>
     <h4>12.1 090 urllib3 (Python Module) Date: 2024-08-12 Severity: Medium</h4>
     <p>In urllib3-2.2.2, two security vulnerabilities were fixed that could
