@@ -415,25 +415,30 @@
           every time, you have a hardware problem. (If make, or whatever you're
           running, fails at the same place every time, then it is not
           hardware.)</p>
-          <p>First, do not overclock the CPU too much.  When you make an
+          <p>First note that the CPU may be broken itself.  Especially the
+          13th and 14th generation Intel Core processors have a notorious
+          stability issue.  Update the BIOS for the latest microcode
+          (revision 0x129 or later) and the "Intel Recommended Profile"
+          switch.  If you've already updated the BIOS and enabled this
+          switch, and ruled out the other possibilities causing the
+          Segmentation Fault but it still occurs, the CPU is likely already
+          permnantly damaged.  Contact Intel or the OEM for a replacement (or
+          if you are so unlucky that the OEM has already disappeared you'll
+          have to buy a new processor).</p>
+          <p>Do not overclock the CPU too much.  When you make an
           overclock setting, you must stress test the system adequately to
           make sure it's stable under different type of workloads
-          (single-core and multi-core, non-AVX and AVX, etc.).</p>
-          <p>Note that with an
-          Intel "K" (unlocked) CPU, even the default configuration of the
-          motherboard is generally already overclocking so you may need to
-          even "step back" from the default especially when the CPU
-          is below the average: the individual difference among all CPUs
-          of a same model can make a significant effect on the overclocking
-          capability so buying an unlocked CPU is some sort of gambling.
-          Especially, 13900K/KS and 14900K/KS are notorious for
-          stablity issues caused by such a "default overclocking setting."
-          Try to upgrade the BIOS for the "Intel Baseline Profile" switch
-          which will apply the non-overclocked Intel factory default
-          settings instead of the overclocked default from the motherboard
-          vender.</p>
+          (single-core and multi-core, non-AVX and AVX, etc.).
+          Note that with an Intel "K" (unlocked) CPU, even the default
+          configuration of the motherboard is often already overclocking so
+          you may need to even "step back" from the default especially when
+          the CPU is below the average: the individual difference among all
+          CPUs of a same model can make a significant effect on the
+          overclocking.  For the 13th and 14th generation Core processors use
+          the "Intel Recommended Profile" switch to disable such a
+          "default overclocking setting" as mentioned above.</p>
           <p>Assuming you're not overclocking, the most likely hardware problem
-          is bad memory which you can check with Memtest86+ from <a
+          is bad memory that you can check with Memtest86+ from <a
           href="https://www.memtest.org/">https://www.memtest.org/</a>.
           <p>CPU overheating is another common hardware problem.  Ensure the
           cooler is properly installed with thermal paste applied.  And,
@@ -444,8 +449,10 @@
           the parameters correctly.  If such a cooler is not properly
           configured, it can run in a lower speed (or does not run at all).
           If the cooler is already running at full speed but the CPU still
-          overheats, either upgrade the cooler, or downclock the CPU via
-          BIOS.</p>
+          overheats, either upgrade the cooler, or downclock the CPU
+          (setting a hard limit of the frequency, or decrease the
+          power/temporary limit where the CPU will start to downclock itself)
+          via the BIOS.</p>
           <p>If both bad memory and CPU overheating can be ruled out, see the
           long answer.</p>
         </dd>
