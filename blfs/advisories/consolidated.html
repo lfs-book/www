@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
+    <a id="sa-12.1-094"/>
+    <h4>12.1 094 p7zip            Date: 2024-08-20  Severity: High</h4>
+    <p>In p7zip-17.04, two security vulnerabilities were discovered that
+    could allow for remote code execution via buffer overflows and
+    out-of-bounds reads when processing NTFS volumes. The vulnerabilities
+    were patched by OpenSUSE, and the BLFS team has adapted their patch
+    for use in the book. If you process NTFS volumes using p7zip, it's
+    recommended that you rebuild p7zip with the patch now in the book
+    as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52168">CVE-2023-52168</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52169">CVE-2023-52169</a>.</p>
+    <p>To fix these vulnerabilities, apply the patch to p7zip using the
+    instructions from
+    <a href="../view/svn/general/p7zip.html">p7zip (sysv)</a> or
+    <a href="../view/systemd/general/p7zip.html">p7zip (systemd)</a>.</p>
+
     <a id="sa-12.1-093"/>
     <h4>12.1 093 Dovecot          Date: 2024-08-16  Severity: High</h4>
     <p>In Dovecot-2.3.19.1, two security vulnerabilities were fixed that could
