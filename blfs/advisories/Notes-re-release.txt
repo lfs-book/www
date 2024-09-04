@@ -25,8 +25,12 @@ In BLFS,
 2.4 Uncomment the 'There are currently no known security vulnerabilities for
     lfs-NN.N.' paragraph.
 
-3. In what has until now been the current NN.N html change the text in the first
-   non-italic paragraph to 'which have links to the released books'
+3. Edit what was previously the current NN.N html file:
+
+3.1 Change the text in the first non-italic paragraph to
+    'which have links to the released books'
+
+3.2 Remove "and the current development books" from the first <h2>
 
 4. consolidated.html:
 
