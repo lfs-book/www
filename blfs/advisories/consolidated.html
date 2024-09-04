@@ -65,14 +65,34 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-001"/>
+    <h4>12.2 001 libpcap          Date: 2024-09-04  Severity: Medium</h4>
+    <p>In libpcap-1.10.5, a security vulnerability was fixed that could allow
+    for a denial of service condition (application crash) when an application
+    uses the pcap_findalldevs_ex() function. One of the arguments can be a
+    filesystem path, which normally means a directory with input data files.
+    However, when the specified path cannot be used as a directory, the
+    function receives NULL from opendir(), but does not check the return value
+    and passes the NULL value to readdir(), which causes a NULL pointer
+    dereference. Note that the feature required for this, remote packet capture
+    support, is disabled by default.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8006">CVE-2024-8006</a>.</p>
+    <p>To fix this vulnerability, update to libpcap-1.10.5 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libpcap.html">libpcap (sysv)</a> or
+    <a href="../view/systemd/basicnet/libpcap.html">libpcap (systemd)</a>.</p>
+
+<!-- That didn't last long!
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
+-->
 
     <h2>Items between the releases of the 12.1 and 12.2 books</h2>
 
     <a id="sa-12.1-095"/>
     <h4>12.1 095 WebKitGTK        Date: 2024-09-04  Severity: Critical</h4>
-    In WebKitGTK-2.44.3, six security vulnerabilities were fixed that could
+    <p>In WebKitGTK-2.44.3, six security vulnerabilities were fixed that could
     allow for unexpected process crashes that are remotely exploitable. These
     issues are mostly due to out-of-bounds reads and use-after-free issues. One
     issue though allows a remote attacker to potentially exploit heap corruption
