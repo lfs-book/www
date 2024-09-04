@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-002"/>
+    <h4>12.2 002 apr              Date: 2024-09-04  Severity: Medium</h4>
+    <p>In apr-1.7.5, a security vulnerability was fixed that allows local users
+    to have read access to named shared memory segments, potentially revealing
+    sensitive application data. This occurs due to lax permissions being set by
+    the apr library at runtime. If you are using an application which uses apr
+    (e.g. subversion, serf, or Apache HTTPD) that also utilizes sensitive data,
+    it is highly recommended that you update apr as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-49582">CVE-2023-49582</a>.</p>
+    <p>To fix this vulnerability, update to apr-1.7.5 or later using the
+    instructions from
+    <a href="../view/svn/general/apr.html">apr (sysv)</a> or
+    <a href="../view/systemd/general/apr.html">apr (systemd)</a>.</p>
+
     <a id="sa-12.2-001"/>
     <h4>12.2 001 libpcap          Date: 2024-09-04  Severity: Medium</h4>
     <p>In libpcap-1.10.5, a security vulnerability was fixed that could allow

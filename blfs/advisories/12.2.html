@@ -51,6 +51,21 @@
 
 <!-- end of PackageName -->
 
+    <h3>apr</h3>
+
+    <a id="sa-12.2-002"/>
+    <h4>12.2 002 apr              Date: 2024-09-04  Severity: Medium</h4>
+    <p>In apr-1.7.5, a security vulnerability was fixed that allows local users
+    to have read access to named shared memory segments, potentially revealing
+    sensitive application data. This occurs due to lax permissions being set by
+    the apr library at runtime. If you are using an application which uses apr
+    (e.g. subversion, serf, or Apache HTTPD) that also utilizes sensitive data,
+    it is highly recommended that you update apr as soon as possible. Update
+    to apr-1.7.5.
+    <a href="consolidated.html#sa-12.2-002">12.2-002</a></p>
+
+<!-- end of apr -->
+
     <h3>libpcap</h3>
 
     <a id="sa-12.2-001"/>
