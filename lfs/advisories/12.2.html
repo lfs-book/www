@@ -3,10 +3,10 @@
 <!--#include virtual="/lfs/menu.html" -->
     <div class="main">
 
-    <h2>LFS Security Advisories for LFS 12.1 and the current development books.</h2>
+    <h2>LFS Security Advisories for LFS 12.2 and the current development books.</h2>
 
-    <a id="LFS12.1"/>
-    <p>LFS-12.1 was released on 2024-03-01</p>
+    <a id="LFS12.2"/>
+    <p>LFS-12.2 was released on 2024-09-01</p>
 
 <!--
     <h3>D-Bus (systemd only)</h3>
@@ -24,11 +24,9 @@
 
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
-<!--
     <ul>
-       <li>There are currently no known security vulnerabilities for LFS-12.1.</li>
+       <li>There are currently no known security vulnerabilities for LFS-12.2.</li>
     </ul>
--->
 
     <!-- Editors: do the consolidated file first, to get the next number.
          Checking what you have prepared is easier if you can create symlinks
@@ -71,20 +69,8 @@
     and denial of service.
     <a href="../../blfs/advisories/consolidated.html#sa-12.0-075">12.0-075</a></p>
     -->
-    
-    <h3>Expat</h3>
 
-    <a id="sa-12.1-010"/>
-    <h4>12.1 010 Expat (LFS)      Date: 2024-03-20  Severity: Medium</h4>
-    <p>In Expat-2.6.2, a security vulnerability was fixed that could allow for
-    denial of service via an XML Entity Expansion attack when there is isolated
-    use of external parsers (created using the XML_ExternalEntityParserCreate
-    function). The issue has been classified as a "billion laughs" attack,
-    also known as an XML bomb attack. Update to Expat-2.6.2.
-    <a href="../../blfs/advisories/consolidated.html#sa-12.1-010">12.1-010</a></p>
-
-<!-- end of Expat -->
-
+<!--
     <h3>Glibc</h3>
 
     <p style="font-style: italic;">Updating Glibc from an earlier version
@@ -103,43 +89,8 @@
 
     <p>Please read the link to fix these vulnerabilities:
     <a href="../../blfs/advisories/consolidated.html#sa-12.1-037">12.0-037</a></p>
+-->
 
 <!-- end of Glibc -->
 
-    <h3>Linux Kernel</h3>
-    <a id="sa-12.1-029"/>
-    <h4>12.1 029 Linux Kernel (LFS)  Date: 2024-04-17  Severity: Medium</h4>
-    <p>In Linux-6.8.5, an insufficient mitigation against the hardware
-    vulnerability known as Branch History Injection, or BHI
-    (see <a href='../../blfs/advisories/consolidated.html#sa-11.1-011'>11.1-011</a>
-    for details) on some Intel processors was fixed.  Read
-    <a href="../../blfs/advisories/consolidated.html#sa-12.1-029">12.1-029</a>
-    for how to fully mitigate BHI for affected Intel processors.</p>
-
-<!-- end of Linux Kernel -->
-
-    <h3>OpenSSL</h3>
-
-    <a id="sa-12.1-068"/>
-    <h4>12.1 068 OpenSSL (LFS)          Date: 2023-07-10  Severity: Low</h4>
-    <p>In OpenSSL-3.3.1, three security vulnerabilities were fixed that could
-    allow for a denial of service (application crash, unbounded resource access,
-    and excessive time spent in a function) to occur. Update to OpenSSL-3.3.1
-    (or 3.2.2, 3.1.6, or 3.0.14).
-    <a href="../../blfs/advisories/consolidated.html#sa-12.1-068">12.1-068</a></p>
-
-<!-- end of OpenSSL -->
-
-    <h3>Python3</h3>
-
-    <a id="sa-12.1-069"/>
-    <h4>12.1 069 Python3 (LFS and BLFS) Date: 2024-07-10  Severity: Medium</h4>
-    <p>In Python-3.12.4, a security vulnerability was fixed that could allow
-    for incorrect information to be returned about whether certain IPv4 and
-    IPv6 addresses were designated as "globally reachable" or "private". This
-    occured due to inaccurate information from the IANA Special-Purpose Address
-    Registries. Update to Python-3.12.4.
-    <a href="../../blfs/advisories/consolidated.html#sa-12.1-069">12.1-069</a></p>
-
-<!-- end of Python3 -->
 <!--#include virtual="/common/footer.html" -->
