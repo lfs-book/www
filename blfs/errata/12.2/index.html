@@ -11,6 +11,9 @@
        <li>In sysmon-qt, remove <code>cd src</code> from the instructions.</li>
        <li>In pulseaudio, <code>-D bluez=disable</code> should be
        <code>-D bluez=disabled</code>, i.e. missing a <code>d</code>.</li>
+       <li>In x265, the <code>-D GIT_ARCHETYPE=1</code> switch needs to be
+       passed to CMake in order to generate the shared library and pkg-config
+       file if Git is not installed.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
