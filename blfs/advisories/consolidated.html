@@ -65,6 +65,30 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-006"/>
+    <h4>12.2 006 Expat (LFS)      Date: 2024-09-17  Severity: Critical</h4>
+    <p>In Expat-2.6.3, three critical security vulnerabilities were fixed that
+    could allow for denial of service and arbitrary code execution. Two of the
+    issues only affect 32-bit installations of LFS, while one issue affects
+    all architectures. The highest priority security vulnerability causes
+    memory corruption, and achieveing arbitrary code execution with it is
+    trivial since XML_ParseBuffer will not notice that there is an issue with
+    arguments passed to it. The other two issues are the 32-bit specific
+    issues, and these are both classified as integer overflows. They occur in
+    the internal functions dtdCopy and nextScaffoldPart. The LFS team
+    recommends updating Expat as soon as possible to protect your system.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45490">CVE-2024-45490</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45491">CVE-2024-45491</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45492">CVE-2024-45492</a>.</p>
+    <p>To fix these vulnerabilities, update to Expat-2.6.3 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <p>Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa-12.2-005"/>
     <h4>12.2 005 Thunderbird      Date: 2024-09-06  Severity: Critical</h4>
     <p>In Thunderbird-128.2.0esr, eight security vulnerabilities were fixed that
