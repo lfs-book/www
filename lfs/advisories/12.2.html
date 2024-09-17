@@ -105,4 +105,18 @@
 
 <!-- end of Expat -->
 
+    <h3>OpenSSL</h3>
+
+    <a id="sa-12.2-007"/>
+    <h4>12.2 007 OpenSSL (LFS)    Date: 2024-09-17  Severity: Medium</h4>
+    <p>In OpenSSL-3.3.2, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) while performing certificate
+    name checks on X.509 certificates. Applications performing these checks may
+    attempt to read an invalid memory address, which will result in termination
+    of the program. This occurs when comparing the expected name with an
+    'otherName' subject alternative name in a certificate.
+    Update to OpenSSL-3.3.2.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.2-007">12.2-007</a></p>
+
+<!-- end of OpenSSL -->
 <!--#include virtual="/common/footer.html" -->
