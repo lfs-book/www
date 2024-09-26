@@ -65,6 +65,65 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-011"/>
+    <h4>12.2 011 Seamonkey        Date: 2024-09-26  Severity: Critical</h4>
+    <p>In Seamonkey-2.53.19, 37 security vulnerabilities were fixed that could
+    allow for remote code execution, decryption of data to plaintext (on Intel
+    Sandy Bridge machines), memory corruption, remotely exploitable application
+    crashes, cross-site scripting, sandbox escapes, information disclosure, and
+    bypass of the content security policy. The 0.0.0.0 day security issue is
+    also resolved in Seamonkey, though it has not been resolved in QtWebEngine
+    or Firefox yet. The 0.0.0.0 day vulnerability allows for localhost APIs to
+    be exploited by cross-site request forgery, and several proof of concept
+    exploits exist. Some examples of this attack being exploited include eBay
+    performing port scans on systems upon loading a page. The port scan was
+    performed via JavaScript. This update brings Seamonkey up to the level of
+    Firefox 115.14.0esr for security fixes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-29944">CVE-2024-29944</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3852">CVE-2024-3852</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3854">CVE-2024-3854</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3857">CVE-2024-3857</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2609">CVE-2024-2609</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3859">CVE-2024-3859</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3861">CVE-2024-3861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3302">CVE-2024-3302</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3864">CVE-2024-3864</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4367">CVE-2024-4367</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4767">CVE-2024-4767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4768">CVE-2024-4768</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4769">CVE-2024-4769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4770">CVE-2024-4770</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4777">CVE-2024-4777</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5702">CVE-2024-5702</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5688">CVE-2024-5688</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5690">CVE-2024-5690</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5691">CVE-2024-5691</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5693">CVE-2024-5693</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5696">CVE-2024-5696</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5700">CVE-2024-5700</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7652">CVE-2024-7652</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6601">CVE-2024-6601</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6602">CVE-2024-6602</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6603">CVE-2024-6603</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6604">CVE-2024-6604</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7519">CVE-2024-7519</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7521">CVE-2024-7521</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7522">CVE-2024-7522</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7524">CVE-2024-7524</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7525">CVE-2024-7525</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7526">CVE-2024-7526</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7527">CVE-2024-7527</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7529">CVE-2024-7529</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7531">CVE-2024-7531</a>.</p>
+    <p>For more information on the 0.0.0.0 day security vulnerability, please
+    visit <a href="https://www.oligo.security/blog/0-0-0-0-day-exploiting-localhost-apis-from-the-browser">
+    the Oligo Security blog post about the issue</a>.</p>
+    <p>To fix these vulnerabilities, update to Seamonkey-2.53.19 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
     <a id="sa-12.2-010"/>
     <h4>12.2 010 tiff             Date: 2024-09-20  Severity: High</h4>
     <p>In tiff-4.7.0, two security vulnerabilities were fixed that could allow
