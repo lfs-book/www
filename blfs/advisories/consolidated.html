@@ -65,6 +65,19 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-013"/>
+    <h4>12.2 013 cURL                   Date: 2024-09-27  Severity: High</h4>
+    <p>In cURL-8.10.0, a security vulnerability was fixed that, when
+    cURL is built with gnutls, could allow for a failure in OCSP stapling,
+    which means that an invalid server certificate might wrongly be considered 
+    valid instead of being treated as a bad certificate.
+    This vulnerability has been assigned
+    <a href="https://curl.se/docs/CVE-2024-8096.html">CVE-2024-8096</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.10.0 or later using the
+    instructions from
+    <a href="../view/12.2/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/12.2-systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-12.2-012"/>
     <h4>12.2 012 Ghostscript      Date: 2024-09-26  Severity: High</h4>
     <p>In Ghostscript-10.04.0, six security vulnerabilities were fixed that
