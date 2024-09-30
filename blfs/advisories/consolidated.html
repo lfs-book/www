@@ -65,6 +65,37 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-015"/>
+    <h4>12.2 015 Intel Microcode  Date: 2024-09-30  Severity: Medium</h4>
+    <p>In intel-microcode-20240910, two hardware vulnerabilities are
+    fixed. The first one may allow for information disclosure when using
+    3rd Generation Intel Xeon Scalable CPUs. For more information on this
+    vulnerability, please read
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01103.html">Intel-SA-01103</a>.
+    The second vulnerability may allow for a denial of service when using
+    10th-14th Generation Core processors, as well as the Intel Xeon D line
+    of processors and the 3rd Generation Intel Xeon Scalable processors.
+    For more details and a complete list of affected processors, please read
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01097.html">Intel-SA-01097</a>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23984">CVE-2024-23984</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24968">CVE-2024-24968</a>.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above and in Intel-SA-01097 and Intel-SA-01103.
+    If your system is vulnerable, update to intel-microcode-20240910 or later
+    using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+    <p>Also note that this microcode release does not contain the fix for
+    the notorious stability issue of the 13th and 14th Intel Core
+    processors.  Considering this issue can cause permanent CPU damage
+    under a heavy workload, the LFS editors recommend to update the BIOS to
+    a version embedding microcode revision 0x129 or later ASAP if you are
+    using a 13th or 14th Core processor (especially an i9), even if you are
+    not running a LFS system. The issue is not resolvable without a BIOS
+    update.</p>
+
     <a id="sa-12.2-014"/>
     <h4>12.2 014 PHP                    Date: 2024-09-30  Severity: Medium</h4>
     <p>In PHP-8.3.12, three security vulnerabilities were fixed that could allow
