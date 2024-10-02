@@ -65,6 +65,70 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-017"/>
+    <h4>12.2 017 QtWebEngine      Date: 2024-10-02  Severity: Critical</h4>
+    <p>In QtWebEngine-6.7.3, 45 security vulnerabilities were fixed that could
+    allow for remote code execution, sandbox escapes, information disclosure,
+    UI spoofing, policy bypasses, and arbitrary reading/writing of files on the
+    system. These can all be exploited by malicious extensions, malicious HTML
+    files, malicious PDF files, or in some cases malicious fonts. The issues
+    are all in the bundled copy of Chromium, and they impact the ANGLE, V8,
+    WebAudio, Frames, CSS, FedCM, Dawn, Loader, Navigation, Screen Capture,
+    WebAssembly, Swiftshader, CORS, Audio, PDFium, Skia, Permissions, Fonts,
+    and Scheduling components. Because of the amount of vulnerabilities and the
+    severity of them, all users who have this package installed should update
+    to QtWebEngine-6.7.3 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7532">CVE-2024-7532</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7550">CVE-2024-7550</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7536">CVE-2024-7536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7535">CVE-2024-7535</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6996">CVE-2024-6996</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7000">CVE-2024-7000</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6999">CVE-2024-6999</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6992">CVE-2024-6992</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6991">CVE-2024-6991</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6989">CVE-2024-6989</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6779">CVE-2024-6779</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6777">CVE-2024-6777</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6774">CVE-2024-6774</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6101">CVE-2024-6101</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6103">CVE-2024-6103</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5836">CVE-2024-5836</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6291">CVE-2024-6291</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6293">CVE-2024-6293</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6292">CVE-2024-6292</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6290">CVE-2024-6290</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5840">CVE-2024-5840</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5841">CVE-2024-5841</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5845">CVE-2024-5845</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5847">CVE-2024-5847</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5846">CVE-2024-5846</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5831">CVE-2024-5831</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5832">CVE-2024-5832</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8362">CVE-2024-8362</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8198">CVE-2024-8198</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8193">CVE-2024-8193</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7969">CVE-2024-7969</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7972">CVE-2024-7972</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7974">CVE-2024-7974</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7975">CVE-2024-7975</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7966">CVE-2024-7966</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7973">CVE-2024-7973</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7967">CVE-2024-7967</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7971">CVE-2024-7971</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7965">CVE-2024-7965</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8636">CVE-2024-8636</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8905">CVE-2024-8905</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5160">CVE-2024-5160</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5159">CVE-2024-5159</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5158">CVE-2024-5158</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-5157">CVE-2024-5157</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.7.3 or later using
+    the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.2-016"/>
     <h4>12.2 016 Qt6              Date: 2024-10-02  Severity: High</h4>
     <p>In Qt6-6.7.3, a security vulnerability was fixed in the HTTP/2 component
