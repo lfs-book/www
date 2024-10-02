@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-016"/>
+    <h4>12.2 016 Qt6              Date: 2024-10-02  Severity: High</h4>
+    <p>In Qt6-6.7.3, a security vulnerability was fixed in the HTTP/2 component
+    that could cause decisions regarding encryption on an established connection
+    to execute too early, because the encrypted() signal was not yet emitted
+    and processed. This could allow for data to accidentally end up unencrypted
+    when transmitted over HTTP/2 using an application that uses Qt. Qt was
+    updated to delay any communications whatsoever until encrypted() can be
+    processed for HTTP/2 only.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-39936">CVE-2024-39936</a>.</p>
+    <p>To fix this vulnerability, update to Qt6-6.7.3 or later using the
+    instructions from
+    <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a>.</p>
+
     <a id="sa-12.2-015"/>
     <h4>12.2 015 Intel Microcode  Date: 2024-09-30  Severity: Medium</h4>
     <p>In intel-microcode-20240910, two hardware vulnerabilities are
