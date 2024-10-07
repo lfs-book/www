@@ -65,6 +65,35 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="as-12.2-019"/>
+    <h4>12.2 019 xdg-desktop-portal Date: 2024-10-07  Severity: Critical</h4>
+    <p>In xdg-desktop-portal-1.18.4, a security vulnerability was fixed that
+    allows for a sandbox escape via the RequestBackground portal. This also
+    allows for arbitrary command execution, in some cases with privileges
+    escalated to root. This can occur when an attacker manipulates the
+    --command argument to the
+    org.freedesktop.portal.Background.RequestBackground interface, as the
+    commands are misinterpreted as options for Bubblewrap. This is known to
+    lead to unauthorized data access, system compromise, and in one case so
+    far, establishing persistence on a system. This update should be considered
+    urgent, especially if you are opening files provided by untrusted sources.
+    This update also requires an update to Bubblewrap at the same time to be
+    effective. There are proof of concept exploits that exist for several
+    GNOME and KDE applications.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/CVE-2024-32462"/>CVE-2024-32462</a>.</p>
+    <p>Note that most vulnerability websites track this as an issue in Flatpak.
+    BLFS does not carry Flatpak, but is vulnerable still because of
+    the flaw in xdg-desktop-portal.</p>
+    <p>To fix these vulnerabilities, update to Bubblewrap-0.10.0 or later using
+    the instructions from
+    <a href="../view/svn/general/bubblewrap.html">Bubblewrap (sysv)</a> or
+    <a href="../view/systemd/general/bubblewrap.html">Bubblewrap (systemd)</a>.</p>
+    <p>After this is done, update to xdg-desktop-portal-1.18.4 or later using
+    the instructions from
+    <a href="../view/svn/x/xdg-desktop-portal.html">xdg-desktop-portal (sysv)</a> or
+    <a href="../view/systemd/x/xdg-desktop-portal.html">xdg-desktop-portal (systemd)</a>.</p>
+
     <a id="sa-12.2-018"/>
     <h4>12.2 018 libgsf           Date: 2024-10-07  Severity: High</h4>
     <p>In libgsf-1.14.53, two security vulnerabilities were fxied that could
