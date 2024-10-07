@@ -278,6 +278,21 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>Unbound</h3>
+
+    <a id="sa-12.2-020"/>
+    <h4>12.2 020 Unbound          Date: 2024-10-07  Severity: Medium</h4>
+    <p>In Unbound-1.21.1, a security vulnerability was fixed that could allow
+    for a remotely exploitable denial of service. It can be exploited by the
+    attacker by querying Unbound for the specially crafted contents of a
+    malicious zone with very large RRsets. Before Unbound replies to the query,
+    it will try to apply name compression, which had no boundaries until this
+    update, and would lock the CPU until the packet was done compressing.
+    Update to Unbound-1.21.1.
+    <a href="consolidated.html#sa-12.2-020">12.2-020</a></p>
+
+<!-- end of Unbound -->
+
     <h3>xdg-desktop-portal</h3>
 
     <a id="as-12.2-019"/>
