@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-018"/>
+    <h4>12.2 018 libgsf           Date: 2024-10-07  Severity: High</h4>
+    <p>In libgsf-1.14.53, two security vulnerabilities were fxied that could
+    allow for arbitrary code execution when processing a malicious file in
+    compound document binary file format. Both of these issues are heap buffer
+    overflows caused by integer overflows. The issues can be exploited without
+    interaction if Tumbler (from XFCE) or tracker-miners (from GNOME) is
+    installed, as the only requirement is having a malicious file somewhere in
+    the user's home directory (such as via a drive-by download). Because of
+    this, it's highly recommended that you update libgsf immediately if you
+    have it installed. Both proof of concept exploits have also been made
+    public. Note that exploitation is also possible in BLFS via Gnumeric and
+    AbiWord, and CDF formats are commonly used in things like Microsoft Office
+    documents.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2024-42415">CVE-2024-42415</a> and
+    <a href="https://access.redhat.com/security/cve/CVE-2024-36474">CVE-2024-36474</a>.</p>
+    <p>To fix these vulnerabilities, update to libgsf-1.14.53 or later using
+    the instructions from
+    <a href="../view/svn/general/libgsf.html">libgsf (sysv)</a> or
+    <a href="../view/systemd/general/libgsf.html">libgsf (systemd)</a>.</p>
+
     <a id="sa-12.2-017"/>
     <h4>12.2 017 QtWebEngine      Date: 2024-10-02  Severity: Critical</h4>
     <p>In QtWebEngine-6.7.3, 45 security vulnerabilities were fixed that could
