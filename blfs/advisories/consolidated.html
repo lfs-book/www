@@ -65,6 +65,30 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-021"/>
+    <h4>12.2 021 WebKitGTK        Date: 2024-10-09  Severity: Critical</h4>
+    <p>In WebKitGTK-2.46.1, three security vulnerabilities were fixed that could
+    allow for universal cross site scripting, address bar spoofing, and
+    cross-origin data exfiltration. In addition,the 0.0.0.0 day security
+    vulnerability was fixed. The 0.0.0.0 day vulnerability allows for localhost
+    APIs to be exploited by cross-site request forgery, and several proof of
+    concept exploits exist. Some examples of this attack being exploited include
+    eBay performing port scans on systems upon loading a page. Note that when
+    you update WebKitGTK, you must update Epiphany to version 46.4 or later due
+    to key event handling changes in this version of WebKitGTK.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-40857">CVE-2024-40857</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-40866">CVE-2024-40866</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-44187">CVE-2024-44187</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.46.1 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+    <p>After this update is installed, you must update to Epiphany-46.4 or
+    later using the instructions from
+    <a href="../view/svn/xsoft/epiphany.html">Epiphany (sysv)</a> or
+    <a href="../view/systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
+
     <a id="sa-12.2-020"/>
     <h4>12.2 020 Unbound          Date: 2024-10-07  Severity: Medium</h4>
     <p>In Unbound-1.21.1, a security vulnerability was fixed that could allow
