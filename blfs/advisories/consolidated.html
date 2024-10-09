@@ -65,6 +65,33 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-022"/>
+    <h4>12.2 022 cups-filters     Date: 2024-10-09  Severity: Critical</h4>
+    <p>Several security vulnerabilities were discovered in libcupsfilters,
+    libppd, and cups-browsed, which have been chained together to allow for
+    remote code execution. There has not been a new upstream release, so the
+    BLFS team has developed patches. The vulnerabilities allow for information
+    leakage, remote code execution, and remotely exploitable crashes. These
+    vulnerabilities are currently being actively exploited. The vulnerabilities
+    require no user interaction to exploit, and they do not require any
+    authentication. If you run a CUPS server that is accessible from the
+    internet, or if you use a public WiFi network, you should apply the patches
+    immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47176">CVE-2024-47176</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47076">CVE-2024-47076</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47175">CVE-2024-47175</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47177">CVE-2024-47177</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47850">CVE-2024-47850</a>.</p>
+    <p>To fix these vulnerabilities, rebuild libppd, libcupsfilters, and
+    cups-browsed with the patches using the instructions from
+    <a href="../view/svn/pst/libppd.html">libppd (sysv)</a> or
+    <a href="../view/systemd/pst/libppd.html">libppd (systemd)</a>,
+    <a href="../view/svn/pst/libcupsfilters.html">libcupsfilters (sysv)</a> or
+    <a href="../view/systemd/pst/libcupsfilters.html">libcupsfilters (systemd)</a>, and
+    <a href="../view/svn/pst/cups-browsed.html">cups-browsed (sysv)</a> or
+    <a href="../view/systemd/pst/cups-browsed.html">cups-browsed (systemd)</a>.</p>
+
     <a id="sa-12.2-021"/>
     <h4>12.2 021 WebKitGTK        Date: 2024-10-09  Severity: Critical</h4>
     <p>In WebKitGTK-2.46.1, three security vulnerabilities were fixed that could
