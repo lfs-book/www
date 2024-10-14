@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-025"/>
+    <h4>12.2 025 QtWebEngine          Date: 2024-10-14  Severity: High</h4>
+    <p>In QtWebEngine-6.8.0, three security vulnerabilities were fixed that
+    could allow for remote code execution. These vulnerabilities occur in the
+    bundled copy of Chromium, and are in the Skia, V8, and Dawn components.
+    The Skia issue is due to an out-of-bounds write, the V8 issue is due to
+    type confusion leading to out-of-bounds memory access, and the Dawn issue
+    allows for heap corruption due to a use after free. If you have QtWebEngine
+    installed, it's highly recommended to update to this version.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9123">CVE-2024-9123</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9122">CVE-2024-9122</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9120">CVE-2024-9120</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.8.0 or later using
+    the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.2-024"/>
     <h4>12.2 024 Thunderbird          Date: 2024-10-09  Severity: High</h4>
     <p>In Thunderbird-128.3.0esr, twelve security updates were fixed that could
