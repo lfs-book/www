@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-027"/>
+    <h4>12.2 027 Spidermonkey         Date: 2024-10-21  Severity: Moderate</h4>
+    <p>In Spidermonkey-128.3.1esr, a security vulnerability was fixed that could
+    allow for memory corruption due to the JavaScript garbage collector
+    mis-coloring cross-compartment objects if an Out Of Memory condition was
+    detected at the right point between two passes. Note that if you do not
+    wish to upgrade to 128.3.1esr (and thus also update gjs), you can use
+    Spidermonkey-115.16.1esr.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8384">CVE-2024-8384</a>.</p>
+    <p>To fix this vulnerability, update to Spidermonkey-128.3.1esr or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">Spidermonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">Spidermonkey (systemd)</a>.</p>
+    <p>If you update this package, you need to update Gjs to gjs-1.82.0 or
+    later using the instructions from
+    <a href="../view/svn/gnome/gjs.html">Gjs (sysv)</a> or
+    <a href="../view/systemd/gnome/gjs.html">Gjs (systemd)</a>.</p>
+    <p>If you wish to stay on Spidermonkey-115, please update to
+    Spidermonkey-115.16.1esr instead using the same instructions as used in
+    BLFS 12.2. You do not need to update Gjs if you take this approach.</p>
+
     <a id="sa-12.2-026"/>
     <h4>12.2 026 Thunderbird          Date: 2024-10-18  Severity: Critical</h4>
     <p>In Thunderbird-128.3.2esr, a security vulnerability was fixed that could
