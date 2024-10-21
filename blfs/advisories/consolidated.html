@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-028"/>
+    <h4>12.2 028 Wireshark            Date: 2024-10-21  Severity: High</h4>
+    <p>In Wireshark-4.4.1, two security vulnerabilities were fixed that could
+    allow for denial of service conditions (application crashes) via capturing
+    faulty packets, or opening a crafted capture file. The issues occur in the
+    AppleTalk, RELOAD, and ITS packet dissectors. If you use any of these three
+    protocols, you should update Wireshark to prevent crashes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9780">CVE-2024-9780</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9781">CVE-2024-9781</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.4.1 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-12.2-027"/>
     <h4>12.2 027 Spidermonkey         Date: 2024-10-21  Severity: Moderate</h4>
     <p>In Spidermonkey-128.3.1esr, a security vulnerability was fixed that could
