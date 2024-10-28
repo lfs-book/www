@@ -314,9 +314,10 @@
           <p>Unix, DOS, and MacOS each use a different combination to end lines in text files:</p>
           <ul>
             <li>Unix: LF only. This is why when a Unix format text file is sent to a printer raw, it prints out<br />
-                &nbsp;&nbsp;like<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;stairs<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steps.<br /></li>
+<div class='cmd'>
+like</br>
+&nbsp;&nbsp;&nbsp;&nbsp;stairs</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steps.</div></li>
             <li>DOS: CRLF both. Which is why if you do "cat -v" on a DOS file
             you'll see a "^M" (control m is carriage return) at the end of each
             line. And that is why scripts don't work when written with
