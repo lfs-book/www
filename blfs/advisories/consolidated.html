@@ -65,9 +65,27 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-030"/>
+    <h4>12.2 030 Xwayland             Date: 2024-10-30  Severity: High</h4>
+    <p>In Xwayland-24.1.4, a security vulnerability was fixed that could allow
+    for denial of service. On systems where X is running as root, this can be
+    used to also cause local privilege escalation, but BLFS has notvrun the
+    X.org server as root since the introduction of elogind in BLFS 9.0.
+    The vulnerability occurs due to a heap buffer overflow in the
+    _XkbSetCompatMap function. The heap buffer overflow occurs because the
+    function attempts to resize the sym_interpret buffer, but only updates the
+    number rather than the size of the buffer. It can be triggered by providing
+    a modified bitmap to the server.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9632">CVE-2024-9632</a>.</p>
+    <p>To fix this vulnerability, update to Xwayland-24.1.4 or later using
+    the instructions from
+    <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
     <a id="sa-12.2-029"/>
-    <h4>12.2 029 xorg-server          Date: 2024-10-30  Severity: High</h4>
-    <p>In xorg-server-21.1.14, a security vulnerability was fixed that could
+    <h4>12.2 029 Xorg-Server          Date: 2024-10-30  Severity: High</h4>
+    <p>In Xorg-Server-21.1.14, a security vulnerability was fixed that could
     allow for denial of service or remote code execution (if the server is run
     over VNC or with SSH X Forwarding). On systems where X is running as root,
     this can be used to also cause local privilege escalation, but BLFS has not
@@ -79,10 +97,10 @@
     a modified bitmap to the server.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9632">CVE-2024-9632</a>.</p>
-    <p>To fix this vulnerability, update to xorg-server-21.1.14 or later using
+    <p>To fix this vulnerability, update to Xorg-Server-21.1.14 or later using
     the instructions from
-    <a href="../view/svn/x/xorg-server.html">xorg-server (sysv)</a> or
-    <a href="../view/systemd/x/xorg-server.html">xorg-server (systemd)</a>.</p>
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
     <p>In addition, if you have TigerVNC installed, upgrade TigerVNC to handle
     this vulnerability using the instructions from
     <a href="../view/svn/xsoft/tigervnc.html">TigerVNC (sysv)</a> or
