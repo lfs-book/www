@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-031"/>
+    <h4>12.2 031 mpg123               Date: 2024-10-30  Severity: High</h4>
+    <p>In mpg123-1.32.8, a security vulnerability was fixed that could allow
+    for a denial of service or arbitrary code execution when decoding streams
+    where output properties are changed, together with certain use of libmpg123.
+    The vulnerability needs seeking around in the stream (including scanning
+    it before actual decoding) to occur, but there are use cases where this
+    could apply, such as concatenating several MP3 files together with varying
+    formats or leading Info frames past the first track. This has been named
+    as "Frankenstein's Monster", and has been classified as a buffer overflow.
+    No CVE has been assigned for this vulnerability, but more details can be
+    found at the
+    <a href="https://seclists.org/oss-sec/2024/q4/45">oss-security mailing list</a>.</p>
+    <p>To fix this vulnerability, update to mpg123-1.32.8 or later using the
+    instructions from
+    <a href="../view/svn/multimedia/mpg123.html">mpg123 (sysv)</a> or
+    <a href="../view/systemd/multimedia/mpg123.html">mpg123 (systemd)</a>.</p>
+
     <a id="sa-12.2-030"/>
     <h4>12.2 030 Xwayland             Date: 2024-10-30  Severity: High</h4>
     <p>In Xwayland-24.1.4, a security vulnerability was fixed that could allow
