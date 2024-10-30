@@ -407,4 +407,20 @@
 
 <!-- end of xdg-desktop-portal -->
 
+    <h3>xorg-server</h3>
+
+    <a id="sa-12.2-029"/>
+    <h4>12.2 029 xorg-server          Date: 2024-10-30  Severity: High</h4>
+    <p>In xorg-server-21.1.14, a security vulnerability was fixed that could
+    allow for denial of service or remote code execution (if the server is run
+    over VNC or with SSH X Forwarding). On systems where X is running as root,
+    this can be used to also cause local privilege escalation, but BLFS has not
+    run the X.org server as root since the introduction of elogind in BLFS 9.0.
+    The vulnerability occurs due to a heap buffer overflow in the
+    _XkbSetCompatMap function. Update to xorg-server-21.1.14 and upgrade
+    TigerVNC if it is also installed.
+    <a href="consolidated.html#sa-12.2-029">12.2-029</a></p>
+
+<!-- end of xorg-server -->
+
 <!--#include virtual="/common/footer.html" -->
