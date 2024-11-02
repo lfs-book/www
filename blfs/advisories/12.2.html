@@ -95,6 +95,20 @@
 
 <!-- end of cURL-->
 
+    <h3>fetchmail</h3>
+
+    <a id="sa-12.2-035"/>
+    <h4>12.2 035 fetchmail            Date: 2024-11-02  Severity: Medium</h4>
+    <p>In fetchmail-6.5.0, a security vulnerability was resolved where users
+    could have another user's passwords due to insufficient permissions on
+    a user's .netrc file. This has been resolved by not allowing .netrc to
+    have any more than 0700 permissions if it contains passwords. If a .netrc
+    file does have more than 0700 permissions, fetchmail will now output a
+    warning and ignore the file. Update to fetchmail-6.5.0.
+    <a href="consolidated.html#sa-12.2-035">12.2-035</a></p>
+
+<!-- end of fetchmail -->
+
     <h3>Firefox</h3>
 
     <a id="sa-12.2-032"/>
@@ -162,7 +176,7 @@
 
     <h3>libarchive</h3>
 
-    <a id="as-12.2-034"/>
+    <a id="sa-12.2-034"/>
     <h4>12.2 034 libarchive           Date: 2024-11-02  Severity: Medium</h4>
     <p>In libarchive-3.7.7, three security vulnerabilities were fixed that
     could allow for a denial of service (out-of-memory condition or application
