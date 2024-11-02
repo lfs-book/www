@@ -160,7 +160,7 @@
     the same instructions.</p>
 
     <a id="sa-12.2-031"/>
-    <h4>12.2 031 mpg123               Date: 2024-10-30  Severity: High</h4>
+    <h4>12.2 031 mpg123               Updated: 2024-11-02  Severity: Medium</h4>
     <p>In mpg123-1.32.8, a security vulnerability was fixed that could allow
     for a denial of service or arbitrary code execution when decoding streams
     where output properties are changed, together with certain use of libmpg123.
@@ -169,8 +169,9 @@
     could apply, such as concatenating several MP3 files together with varying
     formats or leading Info frames past the first track. This has been named
     as "Frankenstein's Monster", and has been classified as a buffer overflow.
-    No CVE has been assigned for this vulnerability, but more details can be
-    found at the
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10573">CVE-2024-10573</a>,
+    and more details can be found at
     <a href="https://seclists.org/oss-sec/2024/q4/45">oss-security mailing list</a>.</p>
     <p>To fix this vulnerability, update to mpg123-1.32.8 or later using the
     instructions from
