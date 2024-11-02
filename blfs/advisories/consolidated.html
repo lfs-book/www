@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="as-12.2-034"/>
+    <h4>12.2 034 libarchive           Date: 2024-11-02  Severity: Medium</h4>
+    <p>In libarchive-3.7.7, three security vulnerabilities were fixed that
+    could allow for a denial of service (out-of-memory condition or application
+    crash) when processing crafted GZIP or TAR files. The gzip issue occurs when
+    processing a malformed gzip file inside of another gzip file, and the two
+    tar issues occur when processing headers and truncated tar archives.
+    These vulnerabilities have been documented upstream, but no CVEs have been
+    assigned for them. More details can be found at the release notes for this
+    package at
+    <a href="https://github.com/libarchive/libarchive/releases/tag/v3.7.7">libarchive 3.7.7 release notes</a>.</p>
+    <p>To fix these vulnerabilities, update to libarchive-3.7.7 or later using
+    the instructions from
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
     <a id="sa-12.2-033"/>
     <h4>12.2 033 Thunderbird          Date: 2024-10-30  Severity: High</h4>
     <p>In Thunderbird-128.4.0esr, ten security vulnerabilities were fixed that
