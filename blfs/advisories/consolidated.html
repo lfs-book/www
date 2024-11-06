@@ -65,6 +65,30 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-037"/>
+    <h4>12.2 037 OpenJDK              Date: 2024-11-05  Severity: Medium</h4>
+    <p>In OpenJDK-23.0.1, five security vulnerabilities were fixed that could
+    allow for a remote attacker (with no privileges required) to cause a denial
+    of service condition (application crash) or possibly write/delete/access
+    information on a system running a Java application. These vulnerabilities
+    occur in the Hotspot, Networking, Compiler, and Serialization components of
+    OpenJDK, but are rather challenging to exploit. Because of this, upstream
+    has primarily rated these vulnerabilities as Low, with one Medium severity.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21235">CVE-2024-21235</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21210">CVE-2024-21210</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21211">CVE-2024-21211</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21208">CVE-2024-21208</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-21217">CVE-2024-21217</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-23.0.1 or later using
+    the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>If you want to use the pre-built binaries, update to Java-23.0.1 using
+    the instructions from
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
     <a id="sa-12.2-036"/>
     <h4>12.2 036 WebKitGTK            Date: 2024-11-02  Severity: Medium</h4>
     <p>In WebKitGTK-2.46.3, two security vulnerabilities were fixed that could
