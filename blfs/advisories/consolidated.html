@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-040"/>
+    <h4>12.2 040 wget                 Date: 2024-11-10  Severity: High</h4>
+    <p>In wget-1.25.0, a security vulnerability was fixed that could allow for
+    server-side request forgery, phishing, data leakage, and man in the middle
+    attacks when using shorthand FTP URLs. The vulnerability occurs when a
+    semicolon is used in a FTP URL (which allows for skipping credentials).
+    The vulnerability can be complex to exploit, but does allow for a variety
+    of attacks to occur when successfully exploited, so it is rated High by
+    upstream. The issue was fixed by disallowing shorthand FTP URLs.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10524">CVE-2024-10524</a>.</p>
+    <p>To fix this vulnerability, update to wget-1.25.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/wget.html">wget (sysv)</a> or
+    <a href="../view/systemd/basicnet/wget.html">wget (systemd)</a>.</p>
+
     <a id="sa-12.2-039"/>
     <h4>12.2 039 cURL                 Date: 2024-11-07  Severity: Low</h4>
     <p>In cURL-8.11.0, a security vulnerability was fixed that could allow for
