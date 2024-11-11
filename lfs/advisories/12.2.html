@@ -95,6 +95,16 @@
 
     <h3>Expat</h3>
 
+    <a id="sa-12.2-041"/>
+    <h4>12.2 041 Expat (LFS)          Date: 2024-11-10  Severity: Medium</h4>
+    <p>In Expat-2.6.4, a security vulnerability was fixed that could allow for
+    a denial of service condition (application crash) when using the
+    XML_ResumeParser function due to a NULL pointer dereference. It was fixed
+    by not allowing XML_StopParser to stop or suspend an unstarted parser.
+    Note that an application may crash with an XML_ERROR_NOT_STARTED if an
+    exploitation is attempted. Update to Expat-2.6.4.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.2-041">12.2-041</a></p>
+
     <a id="sa-12.2-006"/>
     <h4>12.2 006 Expat (LFS)      Date: 2024-09-17  Severity: Critical</h4>
     <p>In Expat-2.6.3, three critical security vulnerabilities were fixed that
