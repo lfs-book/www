@@ -1,10 +1,10 @@
-<!--#set var="pageTitle" value="ALFS Project Homepage" -->
+<!--#set var="pageTitle" value="MLFS Project Homepage" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
     <div class="main">
      <h1>What is Automated Linux From Scratch?</h1>
      <p>Automated Linux From Scratch (ALFS) is a project that allows
-	building the LFS system automatically. It also allows building packages
+        building the LFS system automatically. It also allows building packages
         from the BLFS book, but that needs some manual intervention.
      </p>
 
@@ -15,73 +15,66 @@
 
      <p>The goal of ALFS is to <em>automate</em> the process of creating an
         LFS system.
-	It seeks to follow the book as closely as possible by directly
+        It seeks to follow the book as closely as possible by directly
         extracting instructions from the XML sources. This is the reason why
         it may also be used as a test of the current book instructions.
      </p>
 
      <h2>How is ALFS implemented?</h2>
      <p>
-	The official implementation of ALFS is called <em>jhalfs</em>.
-	It was originally created by Jeremy Huntwork, then developed and
-	maintained by Manuel Canales Esparcia, George Boudreau, Thomas
-	Pegg, and Pierre Labastie. It has become a light-weight, practical
+        The official implementation of ALFS is called <em>jhalfs</em>.
+        It was originally created by Jeremy Huntwork, then developed and
+        maintained by Manuel Canales Esparcia, George Boudreau, Thomas
+        Pegg, and Pierre Labastie. It has become a light-weight, practical
         method of automating an LFS build. It is a Bash shell script that
         makes use of Git and xsltproc to first download the XML sources
         of the Linux From Scratch book and then extract any necessary commands,
-	placing them into executable shell scripts. If you do not already
-	have the necessary source packages in place on your system, jhalfs
-	can fetch them. Finally, jhalfs generates a Makefile which will
-	control the execution of the shell scripts, allowing for recovery
-	if the build should encounter an error. A framework to use package
-	management has been added by Pierre Labastie. 
+        placing them into executable shell scripts. If you do not already
+        have the necessary source packages in place on your system, jhalfs
+        can fetch them. Finally, jhalfs generates a Makefile which will
+        control the execution of the shell scripts, allowing for recovery
+        if the build should encounter an error. A framework to use package
+        management has been added by Pierre Labastie. 
      </p>
 
      <p>Due to a lack of developers, jhalfs is maintained as a rolling release.
         It can be obtained by cloning the git repository:</p>
+     
      <div class="cmd">
-	<p>git clone https://git.linuxfromscratch.org/jhalfs.git jhalfs</p>
+     <p>git clone https://git.linuxfromscratch.org/jhalfs.git jhalfs</p>
      </div>
-<!--
-     <p>A fork of jhalfs, aiming at porting the scripts to Python, is hosted on
-        github:</p>
-     <div class="cmd">
-	     <p>git clone https://github.com/automate-lfs/jhalfs.git</p>
-     </div>
-     <p>To know what book versions are supported by each jhalfs version,
-        please see
-        <a href="https://wiki.linuxfromscratch.org/alfs/wiki/SupportedBooks">
-         https://wiki.linuxfromscratch.org/alfs/wiki/SupportedBooks</a>.</p>
--->
+     
      <p>An extension of ALFS aimed at automating the building
-	of packages in the BLFS book is now included in jhalfs. It
+        of packages in the BLFS book is now included in jhalfs. It
         still needs editing some scripts (about 1%), mainly when the book
         layout diverges from standard, but works rather well and
         most of the packages can be built automatically.</p>
 
-  <h2>History</h2>
+     <h2>History</h2>
      <p>Before jhalfs, an implementation named nALFS was developed. A more
-	ambitious project, named simply alfs was designed around 2004, but
-	was never pushed to completion.</p>
+        ambitious project, named simply alfs was designed around 2004, but
+        was never pushed to completion.</p>
+    
     <h3>nALFS</h3>
-     <p>The first ALFS implementation was nALFS by Neven Has. nALFS was a
-	small program written in C. It first parsed an XML profile that
-	contained information concerning the LFS build process into a series
-	of internal commands. It could then execute these at your discretion,
-	thus automating the compilation of LFS.</p>
+    <p>The first ALFS implementation was nALFS by Neven Has. nALFS was a
+       small program written in C. It first parsed an XML profile that
+       contained information concerning the LFS build process into a series
+       of internal commands. It could then execute these at your discretion,
+       thus automating the compilation of LFS.</p>
+    
     <h3>alfs</h3>
-     <p>There were many in-depth features that had been requested for ALFS
-	implementations. Because of this, development had been slated for
-	an entirely new build tool which would have been called alfs.
-	Eventually, the ease of
-	use of jhalfs ultimately pushed development of alfs to the bottom
-	of the stack.</p>
+    <p>There were many in-depth features that had been requested for ALFS
+       implementations. Because of this, development had been slated for
+       an entirely new build tool which would have been called alfs.
+       Eventually, the ease of
+       use of jhalfs ultimately pushed development of alfs to the bottom
+       of the stack.</p>
 
      <h2>Who's who:</h2>
      <ul>
         <li>Project Leader and Developper/Maintainer: Pierre Labastie</li>
         <li>Former Maintainer: Thomas Pegg</li>
-	<li>Former Developers(jhalfs): Jeremy Huntwork, George Boudreau</li>
+        <li>Former Developers(jhalfs): Jeremy Huntwork, George Boudreau</li>
         <li>Former Developer(jhalfs, blfs tools): Manuel Canales Esparcia</li>
      </ul>
 
