@@ -135,12 +135,12 @@ div.navbar {
   padding: 5px 20px;
 }
 
-#lfs:link, #lfs:visited, #blfs:link, #blfs:visited, #alfs:link, #alfs:visited, #clfs:link, #clfs:visited, #hlfs:link, #hlfs:visited, #hints:link, #hints:visited, #livecd:link, #livecd:visited, #patches:link, #patches:visited {
+#lfs:link, #lfs:visited, #blfs:link, #blfs:visited, #mlfs:link, #mlfs:visited, #alfs:link, #alfs:visited, #clfs:link, #clfs:visited, #hlfs:link, #hlfs:visited, #hints:link, #hints:visited, #livecd:link, #livecd:visited, #patches:link, #patches:visited {
   font-weight: bold;
   color: #777;
 }
 
-#lfs:hover, #lfsactive:hover, #alfs:hover, #alfsactive:hover, #blfs:hover, #blfsactive:hover, #clfs:hover, #hlfs:hover, #hlfsactive:hover, #hints:hover, #hintsactive:hover, #livecd:hover, #livecdactive:hover, #patches:hover, #patchesactive:hover { background-color: #ddd }
+#lfs:hover, #lfsactive:hover, #alfs:hover, #alfsactive:hover, #blfs:hover, #blfsactive:hover, #mlfs:hover, #mlfsactive:hover, #clfs:hover, #hlfs:hover, #hlfsactive:hover, #hints:hover, #hintsactive:hover, #livecd:hover, #livecdactive:hover, #patches:hover, #patchesactive:hover { background-color: #ddd }
 
 
 /* Project specfic left-hand menus       */
