@@ -194,6 +194,11 @@ div.navbar {
   color: white;
 }
 
+#mlfsmenulist a:hover {
+  background: #05c3f2;
+  color: white;
+}
+
 #hlfsmenulist a:hover {
   background: #fd7700;
   color: white;
