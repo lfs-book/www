@@ -228,6 +228,10 @@ div.navbar {
 #blfsactive:link, #blfsactive:visited {
   background: #a27700;
 }
+
+#mlfsactive:link, #mlfsactive:visited {
+  background: #05c3f2;
+}
 #hlfsactive:link, #hlfsactive:visited {
   background: #fd7700;
 }
