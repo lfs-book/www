@@ -9,7 +9,7 @@
       Multilib-LFS is a variant of the <a href="/lfs/view/development/">LFS book</a>.
       This variant builds a system which is able to execute 32-bit binaries.
     </p>
-  
+
     <p>
       That sounds trivial, but it isn't. Nowadays, nearly all CPUs in our
       computers are 64-bit, and most of them are Intel-compatible.
@@ -21,7 +21,7 @@
       The problem is that the binary format in which those instructions
       are stored differs.
     </p>
-  
+
     <p>
       Since this CPU architecture is there for decades now, there is also
       a lot of software written for it. Unfortunatly, some of this software
@@ -31,7 +31,7 @@
       the creater didn't want to release the source code. But the binaries
       where distributed.
     </p>
-  
+
     <p>
       Since the format of 64-bit and 32-bit binaries are different, those
       old software cannot be executed on modern systems. This is where
@@ -40,7 +40,7 @@
       on a 64-bit OS as well. This needs support by the kernel, but it needs
       also several other core libraries to be available in 32-bit versions.
     </p>
-  
+
     <p>
       But thats not all. There is another architecture which is somewhat
       between 32- and 64-bit. Its called x32. That is, the binaries operate
@@ -55,76 +55,55 @@
       in the instructions. In most cases, this extensions are repeatitions of
       the build instruction but just in another mode (m32 and/or mx32).
     </p>
-  
+
+    <h2>Why would I want an MLFS system?</h2>
+    <p>Usually, there is no need to run a multilib system. But there
+    might be circumstances which requires one:</p>
+
+    <h3>Old software only available as binary</h3>
+    <p>There might be software you want to use but that software is 32bit
+    and there are no sources available to recompile. Even when source
+    code is available it might not be possible to recompile because of
+    unresolvable dependencies to other (old) packages. A printer driver
+    only available as 32bit binary was one of the reasons to kick-off
+    the mlfs project.</p>
+
+    <h3>Other software requires multilib</h3>
+    <p>For virtualization (here <a href="https://www.virtualbox.org/">VirtualBox</a>) m32-multilib
+    is named as a prerequisite. When you want to install VirtualBox
+    on a LFS system to be your VM host, only four additional non-BLFS
+    packages are need. If you want to rebuild the 64bit and 32bit guest
+    additions a multilib OS is required to build them.</p>
+
     <h2>Read online</h2>
     <p>
       There are three versions of the Multilib-LFS online:
       <ul>
-        <li><a href="/~thomas/multilib-m32/">MLFS with m32 extensions</a> 
+        <li><a href="/~thomas/multilib-m32/">MLFS with m32 extensions</a>
            (probably what you want)</li>
         <li><a href="/~thomas/multilib-mx32/">MLFS with mx32 extensions</a></li>
         <li><a href="/~thomas/multilib/">MLFS including both extensions</a></li>
       </ul>
-    </p>
-  
-    <h2>Clone &amp; render the Multilib-LFS</h2>
-    <p>
-      MLFS can be obtained by cloning the git repository:
+      This books are created when the LFS trunk has been merged to
+      the multilib branch. That merge is currently done manually and
+      therefore, it might be a few days behind.
     </p>
 
-    <div class="cmd">
-      <p>
-        git clone --branch multilib https://git.linuxfromscratch.org/lfs.git mlfs
-      </p>
-    </div>
-  
-    <p>
-      You now should have a directory named <tt>mlfs</tt> which contains the
-      book source. For rendering it can be choosen which kind of extensions
-      should be included in the produced html. This is controlled by the
-      parameter <tt>ARCH</tt> which can be set to
-      <ul>
-        <li>ml_32<br>Include m32 extensions only</li>
-        <li>ml_x32<br>Include mx32 extensions only</li>
-        <li>ml_all<br>Include both, m32 and mx32</li>
-        <li>default<br>Include none</li>
-      </ul>
-      Leaving <tt>ARCH</tt> unset or set it to <tt>default</tt> will
-      produce a LFS book without any of the multilib extensions which
-      therefore should result in a book basically identical to the
-      'original' book.
-    </p>
-
-    <p>
-      If interested in m32 extensions only (the usual case), render the
-      book with:
-    </p>
-    
-    <div class="cmd">
-      <p>
-        cd mlfs &amp;&amp; make ARCH=ml_32
-      </p>
-    </div>
-    
-    <p>
-      Set the other parameter like <tt>REV</tt> and <tt>BASEDIR</tt> to
-      proper values.
-    </p>
-  
     <h2>Limitations</h2>
     <p>
       MLFS is hard to test except there are such old binaries available.
-      When such a binary is executable, it unfortunatly does not mean that
-      any other of those binaries will run, too. There might be BLFS
-      library packages required as dependencies in that particular multilib
-      environment. Neither MLFS nor BLFS covers that at the moment but
-      MLFS gives an idea how to build those multilib libraries.
+      When such a binary is executable, it unfortunatly does not mean
+      that any other of those binaries will run, too. There might be
+      BLFS library packages required as dependencies in that particular
+      multilib environment. Neither MLFS nor BLFS covers that at the
+      moment (there is no MBLFS) but MLFS should give an idea how to
+      build those multilib libraries.
     </p>
-  
+
     <h2>Thanks to</h2>
     <ul>
-      <li>William Feely who started a 
-          <a href="https://www.williamfeely.info/lfs-multilib/">similar project</a> 
+      <li>William Feely who started a
+          <a href="https://www.williamfeely.info/lfs-multilib/">similar project</a>
           a decade ago
       </li>
       <li>DJ Lucas, Xi Ruoyao, Douglas R. Reno and many others more</li>

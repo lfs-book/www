@@ -1,47 +1,68 @@
-<!--#set var="pageTitle" value="Download jhalfs" -->
+<!--#set var="pageTitle" value="Download mlfs" -->
 <!--#include virtual="header.html" -->
 <!--#include virtual="menu.html" -->
     <div class="main">
-      <h1>Download mhalfs</h1>
-      <h2>Obtain mhalfs</h2>
+      <h1>Download mlfs</h1>
 
-      <p>Under construction</p>
-<!--
-      <p>jhalfs is maintained as a rolling release. It can be obtained from
-         the git repository:</p>
-      <div class="cmd"><p>git clone
-         https://git.linuxfromscratch.org/jhalfs.git</p></div>
-      <h2>Packages required for jhalfs</h2>
-      <p>Before it can parse the LFS book for commands, jhalfs needs to have a
-         local copy of the book's XML source. Currently, jhalfs relies on <a
-         href="https://git-scm.com/">git</a> to ensure that it
-         has the most up-to-date version of the LFS Book. There are <a
-         href="/blfs/view/stable/general/git.html">build
-         instructions</a> in BLFS.</p>
-      <p>To extract the commands from the LFS book, jhalfs relies on xsltproc
-         from the <a href="http://xmlsoft.org/XSLT/">libxslt</a> package and
-         its dependencies.
-         There are <a href="/blfs/view/stable/general/libxslt.html">build
-         instructions</a> in BLFS.</p>
-      <p>The <a href="https://docbook.org/specs/docbook-4.5-spec.html">DocBook
-         XML DTD</a> and
-         <a href="https://cdn.docbook.org/release/xsl-nons/1.79.2/">DocBook
-         XSL stylesheets</a> are now needed for profiling the book. There are
-         build instructions for
-         <a href="/blfs/view/stable/pst/docbook.html">DocBook XML
-         DTD</a> and
-         <a href="/blfs/view/stable/pst/docbook-xsl.html">DocBook XSL
-         stylesheets</a> in BLFS.</p>
-      <p>If you want jhalfs to automatically download the source packages LFS
-         uses, you'll need to have <a
-         href="https://www.gnu.org/software/wget/wget.html">wget</a> installed.
-         There are <a href="/blfs/view/stable/basicnet/wget.html">build
-         instructions</a> in BLFS.</p>
+      <h2>Obtain mlfs</h2>
 
-      <p>Last but not least, jhalfs relies on <a
-         href="https://www.sudo.ws/">sudo</a> for running privileged
-         instructions. Again, <a href="/blfs/view/stable/postlfs/sudo.html">
-         build instructions</a> can be found in BLFS. The README file
-         has some advice on how to configure /etc/sudoers.</p>
--->
+      <p>mlfs is maintained as a rolling release, it is based on the
+      actual development version of the LFS book. Currently, there
+      are no releases and because it is based on the development
+      version, there might be hickups from time to time. mlfs is meant
+      for experienced users.</p>
+
+      <p>mlfs can be obtained from the git repository:</p>
+      <div class="cmd"><p>git clone --branch multilib
+         https://git.linuxfromscratch.org/lfs.git mlfs</p></div>
+      <p>It is recommended to give the name of the directory (here:
+        <tt>mlfs</tt>) to avoid clashes with other clones of the LFS
+        repository.</p>
+
+      <p>If there is a clone already, it can be used, too. In this
+        case checkout the multilib branch:</p>
+      <div class="cmd"><p>cd &lt;where-clone-is&gt; &amp;&amp;
+         git checkout multilib</p></div>
+
+
+      <h2>Rendering the mlfs book</h2>
+
+      <p>Rendering works the same way as it does with the LFS book.
+        The essential parameter <tt>REV</tt> and <tt>BASEDIR</tt>
+        should be set. In addition to the common parameters, mlfs
+        has introduced <em><tt>ARCH</tt></em> which specifies which
+        kind of extensions should be included in the produced html.
+        <tt>ARCH</tt> can be set to
+        <ul>
+          <li><tt>ml_32</tt>: Include m32 extensions only</li>
+          <li><tt>ml_x32</tt>: Include mx32 extensions only</li>
+          <li><tt>ml_all</tt>: Include both, m32 and mx32</li>
+          <li><tt>default</tt>: Include none</li>
+        </ul>
+        Leaving <tt>ARCH</tt> unset or set it to <tt>default</tt> will
+        produce a LFS book without any of the multilib extensions which
+        therefore should result in a book basically identical to the
+        'original' book.</p>
+
+      <p>Samples:
+        <ul>
+          <li>Init system: sysv, ML extension: m32<br>
+          <div class="cmd"><p>make BASEDIR=... REV=sysv ARCH=ml_32</p></div>
+          </li>
+          <li>Init system: systemd, ML extension: m32 and mx32<br>
+          <div class="cmd"><p>make BASEDIR=... REV=systemd ARCH=ml_all</p></div>
+          </li>
+        </ul>
+      </p>
+
+      <h2>Packages for mlfs</h2>
+
+      <p>As usual, mlfs has a list of packages and patches which you
+        should download. These are the same as in the LFS book with
+        currently following exceptions:
+        <ul>
+	  <li>Chapter 8: ISL is added to be used by the final gcc</li>
+        </ul>
+      </p>
+
 <!--#include virtual="/common/footer.html" -->
