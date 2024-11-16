@@ -133,6 +133,7 @@ div.navbar {
 #blfsactive:link, #blfsactive:visited, 
 #alfsactive:link, #alfsactive:visited, 
 #mlfsactive:link, #mlfsactive:visited,
+#glfsactive:link, #glfsactive:visited,
 #hintsactive:link, #hintsactive:visited, 
 #patchesactive:link, #patchesactive:visited {
   color: white;
@@ -144,6 +145,7 @@ div.navbar {
 #blfs:link, #blfs:visited, 
 #alfs:link, #alfs:visited, 
 #mlfs:link, #mlfs:visited, 
+#glfs:link, #glfs:visited, 
 #hints:link, #hints:visited, 
 #patches:link, #patches:visited {
   font-weight: bold;
@@ -154,6 +156,7 @@ div.navbar {
 #alfs:hover, #alfsactive:hover, 
 #blfs:hover, #blfsactive:hover, 
 #mlfs:hover, #mlfsactive:hover, 
+#glfs:hover, #glfsactive:hover, 
 #hints:hover, #hintsactive:hover, 
 #patches:hover, #patchesactive:hover { 
 background-color: #ddd;
