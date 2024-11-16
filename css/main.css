@@ -129,35 +129,35 @@ div.navbar {
   text-decoration: none;
 }
 
-#lfsactive:link, #lfsactive:visited, 
-#blfsactive:link, #blfsactive:visited, 
-#alfsactive:link, #alfsactive:visited, 
-#mlfsactive:link, #mlfsactive:visited,
-#glfsactive:link, #glfsactive:visited,
-#hintsactive:link, #hintsactive:visited, 
+#lfsactive:link,     #lfsactive:visited, 
+#blfsactive:link,    #blfsactive:visited, 
+#alfsactive:link,    #alfsactive:visited, 
+#mlfsactive:link,    #mlfsactive:visited,
+#glfsactive:link,    #glfsactive:visited,
+#hintsactive:link,   #hintsactive:visited, 
 #patchesactive:link, #patchesactive:visited {
   color: white;
   font-weight: bold;
   padding: 5px 20px;
 }
 
-#lfs:link, #lfs:visited, 
-#blfs:link, #blfs:visited, 
-#alfs:link, #alfs:visited, 
-#mlfs:link, #mlfs:visited, 
-#glfs:link, #glfs:visited, 
-#hints:link, #hints:visited, 
+#lfs:link,     #lfs:visited, 
+#blfs:link,    #blfs:visited, 
+#alfs:link,    #alfs:visited, 
+#mlfs:link,    #mlfs:visited, 
+#glfs:link,    #glfs:visited, 
+#hints:link,   #hints:visited, 
 #patches:link, #patches:visited {
   font-weight: bold;
   color: #777;
 }
 
-#lfs:hover, #lfsactive:hover, 
-#alfs:hover, #alfsactive:hover, 
-#blfs:hover, #blfsactive:hover, 
-#mlfs:hover, #mlfsactive:hover, 
-#glfs:hover, #glfsactive:hover, 
-#hints:hover, #hintsactive:hover, 
+#lfs:hover,     #lfsactive:hover, 
+#alfs:hover,    #alfsactive:hover, 
+#blfs:hover,    #blfsactive:hover, 
+#mlfs:hover,    #mlfsactive:hover, 
+#glfs:hover,    #glfsactive:hover, 
+#hints:hover,   #hintsactive:hover, 
 #patches:hover, #patchesactive:hover { 
 background-color: #ddd;
 }
@@ -247,18 +247,14 @@ background-color: #ddd;
 #blfsactive:link, #blfsactive:visited {
   background: #a27700;
 }
-
 #mlfsactive:link, #mlfsactive:visited {
   background: #05c3f2;
 }
-#hlfsactive:link, #hlfsactive:visited {
-  background: #fd7700;
+#glfsactive:link, #glfsactive:visited {
+  background: #5f700c;
 }
 #hintsactive:link, #hintsactive:visited {
   background: #8400ff;
-}
-#livecdactive:link, #livecdactive:visited {
-  background: red;
 }
 #patchesactive:link, #patchesactive:visited {
   background: #0c0470;
