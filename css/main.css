@@ -218,18 +218,13 @@ background-color: #ddd;
   color: white;
 }
 
-#hlfsmenulist a:hover {
-  background: #fd7700;
+#glfsmenulist a:hover {
+  background: #5f700c;
   color: white;
 }
 
 #hintsmenulist a:hover {
   background: #8400ff;
-  color: white;
-}
-
-#livecdmenulist a:hover {
-  background: red;
   color: white;
 }
 
