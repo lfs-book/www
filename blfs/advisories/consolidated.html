@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-046"/>
+    <h4>12.2 046 Wireshark            Date: 2024-11-25  Severity: Medium</h4>
+    <p>In Wireshark-4.4.2, two security vulnerabilities were fixed that could
+    allow for a denial of service condition (application crash and out-of-memory
+    condition) when dissecting FiveCo RAP and ECMP packets. These issues can
+    be exploited by crafted PCAP files, but users do not need to update if they
+    are not capturing packets that use either of those protocols.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11595">CVE-2024-11595</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11596">CVE-2024-11596</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.4.2 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-12.2-045"/>
     <h4>12.2 045 PHP                  Date: 2024-11-25  Severity: Critical</h4>
     <p>In PHP-8.4.1 (or 8.3.14), five security vulnerabilities were fixed that
