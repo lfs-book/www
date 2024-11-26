@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-047"/>
+    <h4>12.2 047 libsoup3             Date: 2024-11-25  Severity: High</h4>
+    <p>In libsoup-3.6.1, three security vulnerabilities were fixed that could
+    allow for HTTP Request Smuggling, arbitrary code execution, and remotely
+    exploitable crashes (and out-of-memory conditions). The HTTP Request
+    Smuggling vulnerability occurs because '\0' characters at the end of
+    header names are ignored in some configurations. The arbitrary code
+    execution vulnerability occurs in applications that perform conversion
+    to UTF-8 in soup_header_parse_param_list_strict due to a buffer overflow,
+    but note that input received over the network cannot trigger this (and thus
+    the issue is not exploitable remotely). The remotely exploitable crashes
+    (and out-of-memory conditions) are caused by an infinite loop during the
+    reading of certain patterns of WebSocket data from clients.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52530">CVE-2024-52530</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52531">CVE-2024-52531</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52532">CVE-2024-52532</a>.</p>
+    <p>To fix these vulnerabilities, update to libsoup-3.6.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libsoup3.html">libsoup (sysv)</a> or
+    <a href="../view/systemd/basicnet/libsoup3.html">libsoup (systemd)</a>.</p>
+
     <a id="sa-12.2-046"/>
     <h4>12.2 046 Wireshark            Date: 2024-11-25  Severity: Medium</h4>
     <p>In Wireshark-4.4.2, two security vulnerabilities were fixed that could
