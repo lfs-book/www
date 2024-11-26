@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-044"/>
+    <h4>12.2 044 PostgreSQL           Date: 2024-11-25  Severity: High</h4>
+    <p>In PostgreSQL-17.1, four security vulnerabilities were fixed that could
+    allow for users to complete unauthoried reads and modifications, for
+    man-in-the-middle attackers to send fabricated error messages, for SET ROLE
+    and SET SESSION AUTHORIZATION to be set to wrong user IDs, and for an
+    unprivileged database user to change sensitive process environment variables
+    to achieve arbitrary code execution. A proof of concept exploit exists for
+    the arbitrary code execution vulnerability, but note that it requires use of
+    the PostgreSQL PL/Perl functionality. The PostgreSQL-17.1 update introduced
+    some regressions relating to these security fixes that required a follow-up
+    release, and the BLFS team recommends using PostgreSQL-17.2 as a result.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10976">CVE-2024-10976</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10977">CVE-2024-10977</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10978">CVE-2024-10978</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10979">CVE-2024-10979</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-17.2 or later using
+    the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-12.2-043"/>
     <h4>12.2 043 glib                 Date: 2024-11-25  Severity: Critical</h4>
     <p>In glib-2.82.1, a security vulnerability was fixed that could allow for
