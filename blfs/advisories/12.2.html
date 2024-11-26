@@ -172,7 +172,21 @@
     exploited via a malicious print job. Update to Ghostscript-10.04.0.
     <a href="consolidated.html#sa-12.2-012">12.2-012</a></p>
 
- <!-- end of Ghostscript -->
+<!-- end of Ghostscript -->
+
+    <h3>glib</h3>
+
+    <a id="sa-12.2-043"/>
+    <h4>12.2 043 glib                 Date: 2024-11-25  Severity: Critical</h4>
+    <p>In glib-2.82.1, a security vulnerability was fixed that could allow for
+    a buffer overflow in the SOCKS4 proxy support within glib. The issue occurs
+    due to an off-by-one error and then buffer overflow because
+    SOCKS4_CONN_MSG_LEN in gio/gsocks4aproxy.c is not sufficient for a trailing
+    '\0' character that set_connect_msg() appends after a hostname.
+    Update to glib-2.82.1.
+    <a href="consolidated.html#sa-12.2-043">12.2-043</a>.</p>
+
+<!-- end of glib -->
 
     <h3>Intel Microcode</h3>
 

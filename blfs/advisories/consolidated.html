@@ -65,6 +65,20 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-043"/>
+    <h4>12.2 043 glib                 Date: 2024-11-25  Severity: Critical</h4>
+    <p>In glib-2.82.1, a security vulnerability was fixed that could allow for
+    a buffer overflow in the SOCKS4 proxy support within glib. The issue occurs
+    due to an off-by-one error and then buffer overflow because
+    SOCKS4_CONN_MSG_LEN in gio/gsocks4aproxy.c is not sufficient for a trailing
+    '\0' character that set_connect_msg() appends after a hostname.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52533">CVE-2024-52533</a>.</p>
+    <p>To fix this vulnerability, update to glib-2.82.1 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+
     <a id="sa-12.2-042"/>
     <h4>12.2 042 Thunderbird          Date: 2024-11-15  Severity: High</h4>
     <p>In Thunderbird-128.4.3esr, one security vulnerability was fixed that
