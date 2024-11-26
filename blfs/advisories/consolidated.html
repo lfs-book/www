@@ -65,6 +65,32 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-045"/>
+    <h4>12.2 045 PHP                  Date: 2024-11-25  Severity: Critical</h4>
+    <p>In PHP-8.4.1 (or 8.3.14), five security vulnerabilities were fixed that
+    could allow for remote code execution (when using the CLI interface to
+    SAPI), remote code execution when using LDAP on a 32-bit system,
+    unauthorized disclosure of MySQL query responses, remote code execution
+    when using the Firebird and dblib quoters, CRLF injection when configuring
+    a proxy in a stream context (leading to HTTP request smuggling attacks),
+    and for remotely exploitable crashes when using the
+    convert.quoted-printable-decode filter in a program. Proof of concept
+    exploits for these vulnerabilities were made public with the release of
+    the new versions of PHP. The vulnerabilities are in a variety of subsystems,
+    including Streams, PDO DBLIB, PDO Firebird, MySQLnd, LDAP, and the CLI, and
+    the BLFS team thus recommends updating PHP on any system that is used as a
+    server.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8932">CVE-2024-8932</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8929">CVE-2024-8929</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11236">CVE-2024-11236</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11234">CVE-2024-11234</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11233">CVE-2024-11233</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.4.1 (or 8.3.14) or later
+    using the instructions from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
     <a id="sa-12.2-044"/>
     <h4>12.2 044 PostgreSQL           Date: 2024-11-25  Severity: High</h4>
     <p>In PostgreSQL-17.1, four security vulnerabilities were fixed that could
