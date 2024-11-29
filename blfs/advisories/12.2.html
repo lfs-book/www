@@ -253,6 +253,20 @@
 
 <!-- end of libgsf -->
 
+    <h3>libjxl</h3>
+
+    <a id="sa-12.2-050"/>
+    <h4>12.2 050 libjxl               Date: 2024-11-29  Severity: High</h4>
+    <p>In libjxl-0.11.1, two security vulnerabilities were fixed that could
+    allow for arbitrary code execution or a denial of service condition (stack
+    exhaustion leading to an out-of-memory condition). Both of these issues can
+    be exploited by opening/loading a malicious JXL image, but the arbitrary
+    code execution problem can occur when calling JxlEncoderAddJPEGFrame to
+    encode a frame into a JXL file. Update to libjxl-0.11.1.
+    <a href="consolidated.html#sa-12.2-050">12.2-050</a></p>
+
+<!-- end of libjxl -->
+
     <h3>libpcap</h3>
 
     <a id="sa-12.2-001"/>
