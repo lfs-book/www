@@ -65,6 +65,38 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-052"/>
+    <h4>12.2 052 QtWebEngine          Date: 2024-12-04  Severity: Critical</h4>
+    <p>In QtWebEngine-6.8.1, seventeen security vulnerabilities were fixed that
+    could allow for remote code execution, unauthorized access to data, UI
+    spoofing, and remotely exploitable crashes. These vulnerabilities are in a
+    variety of subsystems in Chromium, including Mojo, Dawn, V8, Extensions,
+    DevTools, Navigation, Web Authentication, Paint, FileSystem, Blink, Media,
+    Views, and Serial; and all of them are exploitable via maliciously crafted
+    web pages (and in some cases, malicious advertisements on web pages).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9369">CVE-2024-9369</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10487">CVE-2024-10487</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10230">CVE-2024-10230</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10231">CVE-2024-10231</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10229">CVE-2024-10229</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9965">CVE-2024-9965</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9966">CVE-2024-9966</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9959">CVE-2024-9959</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9955">CVE-2024-9955</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9602">CVE-2024-9602</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9603">CVE-2024-9603</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11116">CVE-2024-11116</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11117">CVE-2024-11117</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11110">CVE-2024-11110</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11112">CVE-2024-11112</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11114">CVE-2024-11114</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10827">CVE-2024-10827</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.8.1 or later using
+    the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.2-051"/>
     <h4>12.2 051 WebKitGTK            Date: 2024-11-29  Severity: Critical</h4>
     <p>In WebKitGTK-2.46.4, two security vulnerabilities were fixed that could
