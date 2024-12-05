@@ -198,6 +198,26 @@
 
 <!-- end of glib -->
 
+    <h3>gstreamer</h3>
+
+    <a id="sa-12.2-053"/>
+    <h4>12.2 053 gstreamer            Date: 2024-12-04  Severity: Critical</h4>
+    <p>In the 1.24.10 release of the gstreamer stack, over 40 security
+    vulnerabilities were resolved. These issues occur in a variety of plugins,
+    including the MP4/MOV playback support, the ID3v2 tag parser, the JPEG
+    decoder, the WebM demuxer, the Vorbis decoder, the SSA subtitle parser,
+    the Opus decoder, the gdk-pixbuf decoder, the WAV parser, the AVI subtitle
+    parser, and the LRC subtitle parser, as well as in the gst-discoverer-1.0
+    utility. Because of the amount of these vulnerabilities as well as the
+    plugins that they impact, you should update the gstreamer stack immediately
+    if you have it installed. All of these issues can allow for crashes, but
+    many of them also allow for arbitrary code execution, or remote code
+    execution (in the context of using a web browser playing WebM/MP4/MOV
+    videos or WAV sounds on web pages). Update the gstreamer stack to 1.24.10.
+    <a href="consolidated.html#sa-12.2-053">12.2-053</a></p>
+
+<!-- end of gstreamer -->
+
     <h3>Intel Microcode</h3>
 
     <a id="sa-12.2-015"/>

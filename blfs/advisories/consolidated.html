@@ -65,6 +65,59 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-053"/>
+    <h4>12.2 053 gstreamer            Date: 2024-12-04  Severity: Critical</h4>
+    <p>In the 1.24.10 release of the gstreamer stack, over 40 security
+    vulnerabilities were resolved. These issues occur in a variety of plugins,
+    including the MP4/MOV playback support, the ID3v2 tag parser, the JPEG
+    decoder, the WebM demuxer, the Vorbis decoder, the SSA subtitle parser,
+    the Opus decoder, the gdk-pixbuf decoder, the WAV parser, the AVI subtitle
+    parser, and the LRC subtitle parser, as well as in the gst-discoverer-1.0
+    utility. Because of the amount of these vulnerabilities as well as the
+    plugins that they impact, you should update the gstreamer stack immediately
+    if you have it installed. All of these issues can allow for crashes, but
+    many of them also allow for arbitrary code execution, or remote code
+    execution (in the context of using a web browser playing WebM/MP4/MOV
+    videos or WAV sounds on web pages). Most of these vulnerabilities have
+    CVEs, but all of them have additional information from the GitHub Security
+    Lab.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47537">CVE-2024-47537</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47598">CVE-2024-47598</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47539">CVE-2024-47539</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47542">CVE-2024-47542</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47543">CVE-2024-47543</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47545">CVE-2024-47545</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47544">CVE-2024-47544</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47597">CVE-2024-47597</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47546">CVE-2024-47546</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47606">CVE-2024-47606</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47596">CVE-2024-47596</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47599">CVE-2024-47599</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47540">CVE-2024-47540</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47600">CVE-2024-47600</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47602">CVE-2024-47602</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47601">CVE-2024-47601</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47603">CVE-2024-47603</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47538">CVE-2024-47538</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47541">CVE-2024-47541</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47607">CVE-2024-47607</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47613">CVE-2024-47613</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47615">CVE-2024-47615</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47778">CVE-2024-47778</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47777">CVE-2024-47777</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47776">CVE-2024-47776</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47775">CVE-2024-47775</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47774">CVE-2024-47774</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47835">CVE-2024-47835</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47834">CVE-2024-47834</a>.</p>
+    <p>Additional information about these vulnerabilities can be found at
+    <a href="https://gstreamer.freedesktop.org/security/">Gstreamer Security Advisories</a>.</p>
+    <p>To fix these vulnerabilities, update the entire gstreamer stack to
+    1.24.10 by building through the packages starting with
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
     <a id="sa-12.2-052"/>
     <h4>12.2 052 QtWebEngine          Date: 2024-12-04  Severity: Critical</h4>
     <p>In QtWebEngine-6.8.1, seventeen security vulnerabilities were fixed that
