@@ -119,6 +119,16 @@
 
     <h3>Firefox</h3>
 
+    <a id="sa-12.2-048"/>
+    <h4>12.2 048 Firefox              Date: 2024-11-26  Severity: High</h4>
+    <p>In Firefox-128.5.0esr, six security vulnerabilities were fixed that
+    could allow for select list elements to be shown over another site (leading
+    to website spoofing), content security policy bypasses, cross-site
+    scripting, URL bar spoofing, remotely exploitable crashes, improper
+    keypress handling when executing files, and for remote code execution.
+    Update to Firefox-128.5.0esr (or 115.18.0esr).
+    <a href="consolidated.html#sa-12.2-048">12.2-048</a></p>
+
     <a id="sa-12.2-032"/>
     <h4>12.2 032 Firefox              Date: 2024-10-30  Severity: High</h4>
     <p>In Firefox-128.4.0esr, ten security vulnerabilities were fixed that
@@ -172,7 +182,41 @@
     exploited via a malicious print job. Update to Ghostscript-10.04.0.
     <a href="consolidated.html#sa-12.2-012">12.2-012</a></p>
 
- <!-- end of Ghostscript -->
+<!-- end of Ghostscript -->
+
+    <h3>glib</h3>
+
+    <a id="sa-12.2-043"/>
+    <h4>12.2 043 glib                 Date: 2024-11-25  Severity: Critical</h4>
+    <p>In glib-2.82.1, a security vulnerability was fixed that could allow for
+    a buffer overflow in the SOCKS4 proxy support within glib. The issue occurs
+    due to an off-by-one error and then buffer overflow because
+    SOCKS4_CONN_MSG_LEN in gio/gsocks4aproxy.c is not sufficient for a trailing
+    '\0' character that set_connect_msg() appends after a hostname.
+    Update to glib-2.82.1.
+    <a href="consolidated.html#sa-12.2-043">12.2-043</a>.</p>
+
+<!-- end of glib -->
+
+    <h3>gstreamer</h3>
+
+    <a id="sa-12.2-053"/>
+    <h4>12.2 053 gstreamer            Date: 2024-12-04  Severity: Critical</h4>
+    <p>In the 1.24.10 release of the gstreamer stack, over 40 security
+    vulnerabilities were resolved. These issues occur in a variety of plugins,
+    including the MP4/MOV playback support, the ID3v2 tag parser, the JPEG
+    decoder, the WebM demuxer, the Vorbis decoder, the SSA subtitle parser,
+    the Opus decoder, the gdk-pixbuf decoder, the WAV parser, the AVI subtitle
+    parser, and the LRC subtitle parser, as well as in the gst-discoverer-1.0
+    utility. Because of the amount of these vulnerabilities as well as the
+    plugins that they impact, you should update the gstreamer stack immediately
+    if you have it installed. All of these issues can allow for crashes, but
+    many of them also allow for arbitrary code execution, or remote code
+    execution (in the context of using a web browser playing WebM/MP4/MOV
+    videos or WAV sounds on web pages). Update the gstreamer stack to 1.24.10.
+    <a href="consolidated.html#sa-12.2-053">12.2-053</a></p>
+
+<!-- end of gstreamer -->
 
     <h3>Intel Microcode</h3>
 
@@ -229,6 +273,20 @@
 
 <!-- end of libgsf -->
 
+    <h3>libjxl</h3>
+
+    <a id="sa-12.2-050"/>
+    <h4>12.2 050 libjxl               Date: 2024-11-29  Severity: High</h4>
+    <p>In libjxl-0.11.1, two security vulnerabilities were fixed that could
+    allow for arbitrary code execution or a denial of service condition (stack
+    exhaustion leading to an out-of-memory condition). Both of these issues can
+    be exploited by opening/loading a malicious JXL image, but the arbitrary
+    code execution problem can occur when calling JxlEncoderAddJPEGFrame to
+    encode a frame into a JXL file. Update to libjxl-0.11.1.
+    <a href="consolidated.html#sa-12.2-050">12.2-050</a></p>
+
+<!-- end of libjxl -->
+
     <h3>libpcap</h3>
 
     <a id="sa-12.2-001"/>
@@ -241,6 +299,17 @@
     <a href="consolidated.html#sa-12.2-001">12.2-001</a></p>
 
 <!-- end of libpcap -->
+
+    <h3>libsoup3</h3>
+
+    <a id="sa-12.2-047"/>
+    <h4>12.2 047 libsoup3             Date: 2024-11-25  Severity: High</h4>
+    <p>In libsoup-3.6.1, three security vulnerabilities were fixed that could
+    allow for HTTP Request Smuggling, arbitrary code execution, and remotely
+    exploitable crashes (and out-of-memory conditions). Update to libsoup-3.6.1.
+    <a href="consolidated.html#sa-12.2-047">12.2-047</a></p>
+
+<!-- end of libsoup3 -->
 
     <h3>mpg123</h3>
 
@@ -273,6 +342,19 @@
 
     <h3>PHP</h3>
 
+    <a id="sa-12.2-045"/>
+    <h4>12.2 045 PHP                  Date: 2024-11-25  Severity: Critical</h4>
+    <p>In PHP-8.4.1 (or 8.3.14), five security vulnerabilities were fixed that
+    could allow for remote code execution (when using the CLI interface to
+    SAPI), remote code execution when using LDAP on a 32-bit system,
+    unauthorized disclosure of MySQL query responses, remote code execution
+    when using the Firebird and dblib quoters, CRLF injection when configuring
+    a proxy in a stream context (leading to HTTP request smuggling attacks),
+    and for remotely exploitable crashes when using the
+    convert.quoted-printable-decode filter in a program.
+    Update to PHP-8.4.1 (or 8.3.14).
+    <a href="consolidated.html#sa-12.2-045">12.2-045</a></p>
+
     <a id="sa-12.2-014"/>
     <h4>12.2 014 PHP                    Date: 2024-09-30  Severity: Medium</h4>
     <p>In PHP-8.3.12, three security vulnerabilities were fixed that could allow
@@ -286,6 +368,20 @@
     <a href="consolidated.html#sa-12.2-014">12.2-014</a></p>
 
 <!-- end of PHP -->
+
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-12.2-044"/>
+    <h4>12.2 044 PostgreSQL           Date: 2024-11-25  Severity: High</h4>
+    <p>In PostgreSQL-17.1, four security vulnerabilities were fixed that could
+    allow for users to complete unauthoried reads and modifications, for
+    man-in-the-middle attackers to send fabricated error messages, for SET ROLE
+    and SET SESSION AUTHORIZATION to be set to wrong user IDs, and for an
+    unprivileged database user to change sensitive process environment variables
+    to achieve arbitrary code execution. Update to PostgreSQL-17.2.
+    <a href="consolidated.html#sa-12.2-044">12.2-044</a></p>
+
+<!-- end of PostgreSQL -->
 
     <h3>Python3</h3>
 
@@ -312,6 +408,18 @@
     <a href="consolidated.html#sa-12.2-016">12.2-016</a></p>
 
 <!-- end of Qt6 -->
+
+    <a id="sa-12.2-052"/>
+    <h4>12.2 052 QtWebEngine          Date: 2024-12-04  Severity: Critical</h4>
+    <p>In QtWebEngine-6.8.1, seventeen security vulnerabilities were fixed that
+    could allow for remote code execution, unauthorized access to data, UI
+    spoofing, and remotely exploitable crashes. These vulnerabilities are in a
+    variety of subsystems in Chromium, including Mojo, Dawn, V8, Extensions,
+    DevTools, Navigation, Web Authentication, Paint, FileSystem, Blink, Media,
+    Views, and Serial; and all of them are exploitable via maliciously crafted
+    web pages (and in some cases, malicious advertisements on web pages).
+    Update to QtWebEngine-6.8.1.
+    <a href="consolidated.html#sa-12.2-052">12.2-052</a></p>
 
     <a id="sa-12.2-025"/>
     <h4>12.2 025 QtWebEngine          Date: 2024-10-14  Severity: High</h4>
@@ -400,12 +508,23 @@
 
     <h3>Thunderbird</h3>
 
+    <a id="sa-12.2-049"/>
+    <h4>12.2 049 Thunderbird          Date: 2024-11-26  Severity: High</h4>
+    <p>In Thunderbird-128.5.0esr, six security vulnerabilities were fixed that
+    could allow for select list elements to be shown over another site (leading
+    to website spoofing), content security policy bypasses, cross-site
+    scripting, URL bar spoofing, remotely exploitable crashes, improper
+    keypress handling when executing files, and for remote code execution.
+    Update to Thunderbird-128.5.0esr.
+    <a href="consolidated.html#sa-12.2-049">12.2-049</a></p>
+
     <a id="sa-12.2-042"/>
     <h4>12.2 033 Thunderbird          Date: 2024-11-15  Severity: High</h4>
     <p>In Thunderbird-128.4.3esr, one security vulnerability was fixed that
     could allow for messages encrypted with OpenPGP to be sent in plain text.
-    Update to 128.4.3.
+    Update to Thunderbird=128.4.3esr.
     <a href="consolidated.html#sa-12.2-042">12.2-042</a></p>
+
     <a id="sa-12.2-033"/>
     <h4>12.2 033 Thunderbird          Date: 2024-10-30  Severity: High</h4>
     <p>In Thunderbird-128.4.0esr, ten security vulnerabilities were fixed that
@@ -463,6 +582,17 @@
 
     <h3>WebKitGTK</h3>
 
+    <a id="sa-12.2-051"/>
+    <h4>12.2 051 WebKitGTK            Date: 2024-11-29  Severity: Critical</h4>
+    <p>In WebKitGTK-2.46.4, two security vulnerabilities were fixed that could
+    allow for remote code execution and cross site scripting attacks. These
+    issues can occur when processing maliciously crafted web content, and there
+    are numerous reports of the issues being exploited in the wild. They were
+    fixed with improved checks and improved state management. If you have
+    WebKitGTK installed, you need to update to 2.46.4 or later immediately.
+    Update to WebKitGTK-2.46.4.
+    <a href="consolidated.html#sa-12.2-051">12.2-051</a></p>
+
     <a id="sa-12.2-036"/>
     <h4>12.2 036 WebKitGTK            Date: 2024-11-02  Severity: Medium</h4>
     <p>In WebKitGTK-2.46.3, two security vulnerabilities were fixed that could
@@ -497,6 +627,16 @@
 <!-- end of wget -->
 
     <h3>Wireshark</h3>
+
+    <a id="sa-12.2-046"/>
+    <h4>12.2 046 Wireshark            Date: 2024-11-25  Severity: Medium</h4>
+    <p>In Wireshark-4.4.2, two security vulnerabilities were fixed that could
+    allow for a denial of service condition (application crash and out-of-memory
+    condition) when dissecting FiveCo RAP and ECMP packets. These issues can
+    be exploited by crafted PCAP files, but users do not need to update if they
+    are not capturing packets that use either of those protocols.
+    Update to Wireshark-4.4.2.
+    <a href="consolidated.html#sa-12.2-046">12.2-046</a></p>
 
     <a id="sa-12.2-028"/>
     <h4>12.2 028 Wireshark            Date: 2024-10-21  Severity: High</h4>
