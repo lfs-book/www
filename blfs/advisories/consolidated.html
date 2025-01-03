@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-054"/>
+    <h4>12.2 054 Python3 (LFS and BLFS) Date: 2025-01-03 Severity: Medium</h4>
+    <p>In Python 3.13.1 (and 3.12.8), three security vulnerabilities were fixed
+    that could allow for unauthorized command execution when spawning a virtual
+    environment, for filtering bypassses (because IPv4-mapped IPv6 addess
+    properties were highly inconsistent), and for pyrepl to read local files
+    unexpectedly (which is known to cause inconsistent behavior and arbitrary
+    code execution). This update has caused some issues with other packages,
+    namely Firefox and Thunderbird. If you install this security update, make
+    sure to use the instructions from the development book for Firefox and
+    Thunderbird (which include applying a patch to fix the build issues).
+    Only one of these vulnerabilities has been assigned a CVE. It has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2024-9287">CVE-2024-9287</a>.
+    Additional information about the other two vulnerabilities can be found at
+    <a href="https://github.com/python/cpython/issues/125140">Python Issue #125140</a> and
+    <a href="https://github.com/python/cpython/issues/122792">Python Issue #122792</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.13.1 (or 3.12.8 if you
+    are on 3.12.x) using the instructions from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
     <a id="sa-12.2-053"/>
     <h4>12.2 053 gstreamer            Date: 2024-12-04  Severity: Critical</h4>
     <p>In the 1.24.10 release of the gstreamer stack, over 40 security
