@@ -115,6 +115,21 @@
 
 <!-- end of Expat -->
 
+    <h3>Jinja2</h3>
+
+    <a id="sa-12.2-056"/>
+    <h4>12.2 056 Jinja2 (LFS)         Date: 2024-01-03  Severity: High</h4>
+    <p>In Jinja2-3.1.5, two security vulnerabilities were fixed that could
+    allow for sandbox escapes and execution of arbitrary Python code. One
+    of these issues happens due to an oversight in how the Jinja sandboxed
+    environment detects calls to str.format, and the other occurs due to a
+    bug in the Jinja2 compiler that allows an attacker which controls both
+    the content and filename of a template to execute arbitrary Python code
+    outside of the sandbox. Update to Jinja2-3.1.5.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.2-056">12.2-056</a></p>
+
+<!-- end of Jinja2 -->
+
     <h3>OpenSSL</h3>
 
     <a id="sa-12.2-007"/>
