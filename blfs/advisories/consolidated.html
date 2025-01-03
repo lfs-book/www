@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-059"/>
+    <h4>12.2 059 cURL                 Date: 2024-01-03  Severity: Low</h4>
+    <p>In cURL-8.11.1, a security vulnerability was fixed that could allow for
+    cURL to leak the password for hosts to redirected hosts under certain
+    conditions when being asked to use a .netrc file, and when also asked
+    to follow HTTP redirects. If you do not use a .netrc file, this vulnerability
+    does not affect you, and there is no reason to upgrade. If you do use one
+    though, please update to cURL-8.11.1.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11053">CVE-2024-11053</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.11.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-12.2-058"/>
     <h4>12.2 058 WebKitGTK            Date: 2024-01-03  Severity: High</h4>
     <p>In WebKitGTK-2.46.5, four security vulnerabilities were fixed that could

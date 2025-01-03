@@ -86,6 +86,16 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-12.2-059"/>
+    <h4>12.2 059 cURL                 Date: 2024-01-03  Severity: Low</h4>
+    <p>In cURL-8.11.1, a security vulnerability was fixed that could allow for
+    cURL to leak the password for hosts to redirected hosts under certain
+    conditions when being asked to use a .netrc file, and when also asked
+    to follow HTTP redirects. If you do not use a .netrc file, this vulnerability
+    does not affect you, and there is no reason to upgrade. If you do use one
+    though, please update to cURL-8.11.1.
+    <a href="consolidated.html#sa-12.2-059">12.2-059</a></p>
+
     <a id="sa-12.2-039"/>
     <h4>12.2 039 cURL                 Date: 2024-11-07  Severity: Low</h4>
     <p>In cURL-8.11.0, a security vulnerability was fixed that could allow for
