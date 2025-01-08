@@ -517,6 +517,18 @@
 
     <h3>Spidermonkey</h3>
 
+    <a id="sa-12.2-061"/>
+    <h4>12.2 061 Spidermonkey         Date: 2024-01-07  Severity: Medium</h4>
+    <p>In Spidermonkey-128.6.0esr, two security vulnerabilities were fixed that
+    could allow for a potentially explotiable crash or arbitrary code execution.
+    These occur when parsing a JavaScript module as JSON (which could allow
+    cross-compartment access, leading to arbitrary code execution), or when
+    segmenting specially crafted text (leading to memory corruption).
+    Note that if you do not wish to upgrade to 128.6.0esr (and thus also update gjs),
+    you can use Spidermonkey-115.19.0esr. Update to Spidermonkey-128.3.1esr
+    (or 115.19.0esr).
+    <a href="consolidated.html#sa-12.2-061">12.2-061</a></p>
+
     <a id="sa-12.2-027"/>
     <h4>12.2 027 Spidermonkey         Date: 2024-10-21  Severity: Moderate</h4>
     <p>In Spidermonkey-128.3.1esr, a security vulnerability was fixed that could

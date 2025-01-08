@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-061"/>
+    <h4>12.2 061 Spidermonkey         Date: 2024-01-07  Severity: Medium</h4>
+    <p>In Spidermonkey-128.6.0esr, two security vulnerabilities were fixed that
+    could allow for a potentially explotiable crash or arbitrary code execution.
+    These occur when parsing a JavaScript module as JSON (which could allow
+    cross-compartment access, leading to arbitrary code execution), or when
+    segmenting specially crafted text (leading to memory corruption).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0240">CVE-2025-0240</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0241">CVE-2025-0241</a>.</p>
+    <p>To fix this vulnerability, update to Spidermonkey-128.6.0esr or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">Spidermonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">Spidermonkey (systemd)</a>.</p>    <p>If you update this package, you need to update Gjs to gjs-1.82.0 or
+    later using the instructions from
+    <a href="../view/svn/gnome/gjs.html">Gjs (sysv)</a> or
+    <a href="../view/systemd/gnome/gjs.html">Gjs (systemd)</a>.</p>
+    <p>If you wish to stay on Spidermonkey-115, please update to
+    Spidermonkey-115.19.0esr instead using the same instructions as used in
+    BLFS 12.2. You do not need to update Gjs if you take this approach.</p>
+
     <a id="sa-12.2-060"/>
     <h4>12.2 060 Seamonkey            Date: 2024-01-07  Severity: Critical</h4>
     <p>In Seamonkey-2.53.20, 15 security vulnerabilities were fixed that
@@ -91,8 +112,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10459">CVE-2024-10459</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10463">CVE-2024-10463</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11694">CVE-2024-11694</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0238">CVE-2024-0238</a>, and
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0242">CVE-2024-0242</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0238">CVE-2025-0238</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0242">CVE-2025-0242</a>.</p>
     <p>To fix these vulnerabilities, update to Seamonkey-2.53.20 or later using
     the instructions from
     <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
