@@ -65,6 +65,40 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-065"/>
+    <h4>12.2 065 rsync                    Date: 2025-01-14  Severity: Critical</h4>
+    <p>In rsync-3.4.0, six security vulnerabilities were fixed that could allow
+    for remote code execution, information disclosure, arbitrary leaking of
+    files on an rsync client, path traversal (allowing a server to write files
+    to paths on a client outside of the intended destiation directory), and for
+    privilege escalation. This update should be considered URGENT, and needs to
+    be applied immediately to any system that has the rsync package installed,
+    regardless of if it is a server or a client. The most severe CVE can be
+    exploited on *any* rsync server, and the attacker only requires anonymous
+    read access to execute arbitrary code on the machine the server is running
+    on. The information leak happens when verifying file checksums, and allows
+    for uninitialized stack contents to be leaked one byte at a time. The
+    arbitrary leaking of client files vulnerability allows for any file from
+    the client to be exfiltrated when a client is uploading files to a server,
+    and the path traversal vulnerabilities occur when using the --safe-links or
+    --inc-recursive options, and the privilege escalation vulnerability occurs
+    due to a race condition that allows when handling symbolic links. There are
+    proof of concept exploits available as well which read SSH private keys from
+    a user's home directory on a client, and additional proof of concepts exist
+    which allow for ~/.bashrc to be overwritten for malicious code execution.
+    ALL users who have rsync installed need to update IMMEDIATELY.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12084">CVE-2024-12084</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12085">CVE-2024-12085</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12086">CVE-2024-12086</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12087">CVE-2024-12087</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12088">CVE-2024-12088</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12747">CVE-2024-12747</a>.</p>
+    <p>To fix these vulnerabilities, update to rsync-3.4.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
+    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+
     <a id="sa-12.2-064"/>
     <h4>12.2 064 Libreoffice              Date: 2025-01-08  Severity: Medium</h4>
     <p>In Libreoffice-24.8.4.2, two security vulnerabilities were fixed that
