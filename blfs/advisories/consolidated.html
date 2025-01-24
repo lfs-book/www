@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-069"/>
+    <h4>12.2 069 abseil-cpp               Date: 2025-01-24  Severity: High</h4>
+    <p>In abseil-cpp-20240722.1, a security vulnerability was fixed that could
+    allow for an out-of-bounds memory access (and subsequent crash) due to an
+    integer overflow that occurs when creating and resizing hash containers.
+    The vulnerability is hard to exploit, but occurs because there was no
+    upper boundary on size arguments with some methods in
+    absl::{flat,node}_hash_{set,map}. The vulernerability is hard to exploit
+    because container sizes are very rarely attacker controlled.
+    Upstream has not assigned a CVE for this vulnerability, but more details
+    can be found at the
+    <a href="https://github.com/abseil/abseil-cpp/commit/5a0e2cb5">upstream commit</a>.</p>
+    <p>To fix this vulnerability, update to abseil-cpp-20240722.1 or later
+    using the instructions from
+    <a href="../view/svn/general/abseil-cpp.html">abseil-cpp (sysv)</a> or
+    <a href="../view/systemd/general/abseil-cpp.html">abseil-cpp (systemd)</a>.</p>
+
     <a id="sa-12.2-068"/>
     <h4>12.2 068 Node.js                  Date: 2025-01-22  Severity: High</h4>
     <p>In Node.js-22.13.1, three security vulnerabilities were fixed that can
