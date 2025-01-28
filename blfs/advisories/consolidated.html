@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-070"/>
+    <h4>12.2 070 OpenJDK              Date: 2025-01-28  Severity: Medium</h4>
+    <p>In OpenJDK-23.0.2, a security vulnerability was fixed that could allow
+    for a remote attacker (with no privileges required) to write/delete/access
+    information on a system running a Java application. No user interaction is
+    required to exploit this vulnerability, but the attack complexity is high.
+    The vulnerability exists in the Hotspot component of OpenJDK.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21502">CVE-2025-21502</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-23.0.2 or later using
+    the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>If you want to use the pre-built binaries, update to Java-23.0.2 using
+    the instructions from
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
     <a id="sa-12.2-069"/>
     <h4>12.2 069 abseil-cpp               Date: 2025-01-24  Severity: High</h4>
     <p>In abseil-cpp-20240722.1, a security vulnerability was fixed that could
