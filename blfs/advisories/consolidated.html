@@ -65,6 +65,30 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-071"/>
+    <h4>12.2 071 BIND                 Date: 2025-02-01  Severity: High</h4>
+    <p>In BIND-9.20.5, two security vulnerabilities were fixed that could allow
+    for a denial of service condition causing severe performance degredations
+    and crashes. The first issue occurs due to DNS-over-HTTPS flooding, and it
+    was resolved by adjusting named to handle HTTP/2 data in smaller chunks and
+    throttling reading more chunks until the remote side acknowledges that it
+    has read the response data. It also throttles clients that send far too
+    many requests at once. The named server will also evaluate excessive
+    streams opened by clients that include no DNS data, and will log these
+    clients for an administrator to review them (as well as automatically
+    blocking them from sending more requests). The second issue occurs due to
+    a bug that could allow for many records in the additional section to
+    cause CPU exhaustion, and it was fixed by limiting additional section
+    processing for large RDATA sets (capping it at more than 13 names).
+    The issues only affect the BIND server and not the utilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11187">CVE-2024-11187</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12705">CVE-2024-12705</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.20.5 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-12.2-070"/>
     <h4>12.2 070 OpenJDK              Date: 2025-01-28  Severity: Medium</h4>
     <p>In OpenJDK-23.0.2, a security vulnerability was fixed that could allow
