@@ -71,7 +71,7 @@
     <a href="../../blfs/advisories/consolidated.html#sa-12.0-075">12.0-075</a></p>
     -->
 
-<!--
+
     <h3>Glibc</h3>
 
     <p style="font-style: italic;">Updating Glibc from an earlier version
@@ -80,17 +80,21 @@
     book section for Glibc.  Follow it strictly or you may render the
     system completely unusable.</p>
 
-    <h4>12.1 037 Glibc Date: 2024-05-02  Severity: High</h4>
+    <a id="sa-12.2-072"/>
+    <h4>12.2 072 Glibc (LFS)          Date: 2025-02-02    Severity: Medium</h4>
+    <p>In Glibc-2.41, a security vulnerability was fixed that could allow for
+    a buffer overflow when printing assertion failure messages. This can allow
+    for application crashes, or in some extreme cases, undefined behavior. The
+    only viable vector for explotation of this vulnerability is <b>local</b>,
+    and it must be a setuid program that has an existing bug which results in
+    the assertion failure. At this time, the LFS team (and upstream) are not
+    aware of any applications that may have this behavior, but users may have
+    custom setuid programs which can be exploited. Only LFS users who have
+    custom setuid programs installed are affected.</p>
 
-    <p>In Glibc 2.39 and earlier, there is a vulnerability in an iconv
-    module which may allow a remote code execution via network services
-    running on the system.  An exploit via PHP-based web applications has
-    been demonstrated.  And, there are four vulnerabilities in the Name
-    Service Cache Daemon (NSCD) of Glibc.</p>
+    <p>Please read the link to fix this vulnerability:
+    <a href="../../blfs/advisories/consolidated.html#sa-12.2-072">12.2-072</a></p>
 
-    <p>Please read the link to fix these vulnerabilities:
-    <a href="../../blfs/advisories/consolidated.html#sa-12.1-037">12.0-037</a></p>
--->
 
 <!-- end of Glibc -->
 

@@ -65,6 +65,34 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-072"/>
+    <h4>12.2 072 Glibc (LFS)          Date: 2025-02-02    Severity: Medium</h4>
+    <p>In Glibc-2.41, a security vulnerability was fixed that could allow for
+    a buffer overflow when printing assertion failure messages. This can allow
+    for application crashes, or in some extreme cases, undefined behavior. The
+    only viable vector for explotation of this vulnerability is <b>local</b>,
+    and it must be a setuid program that has an existing bug which results in
+    the assertion failure. At this time, the LFS team (and upstream) are not
+    aware of any applications that may have this behavior, but users may have
+    custom setuid programs which can be exploited. This issue occurs due to the
+    assert() function not allocating enoguh space for the assertion failure
+    message string and size information in some cases, which can lead to the
+    overflow if the message string size aligns to page size. For most users,
+    <b>updating glibc is NOT necessary</b>, but if you have a custom setuid
+    program installed, you should update glibc to version 2.41.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0395">CVE-2025-0395</a>.</p>
+    <p>To fix the iconv vulnerability, update to Glibc-2.41 or later
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/glibc.html">Glibc (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/glibc.html">Glibc (systemd)</a>.</p>
+    <p><b>To update Glibc from 2.40 or earlier to 2.41 safely on a running
+    system, some extra precautions are needed as documented in an
+    "Important" box in the book section for Glibc.  Follow it strictly or
+    you may render the system completely unusable.  YOU ARE WARNED.</b>
+    For LFS 12.0 and earlier, the update process will also disable and
+    remove NSCD to get rid of the NSCD vulnerabilities.</p>
+
     <a id="sa-12.2-071"/>
     <h4>12.2 071 BIND                 Date: 2025-02-01  Severity: High</h4>
     <p>In BIND-9.20.5, two security vulnerabilities were fixed that could allow
