@@ -175,6 +175,14 @@
 
     <h3>vim</h3>
 
+    <a id="sa-12.2-073"/>
+    <h4>12.2 073 vim (LFS and BLFS)       Date: 2025-02-02  Severity: Medium</h4>
+    <p>In vim-9.1.1071, a security vulnerability was fixed that could alllow
+    for a crash when the win_line() function is called in some extreme
+    circumstances. Note that a user must intentionally and explicitly feed
+    Vim binary data to exploit this vulnerability. Update to vim-9.1.1071.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.2-073">12.2-073</a></p>
+
     <a id="sa-12.2-067"/>
     <h4>12.2 067 vim (LFS and BLFS)       Date: 2025-01-14  Severity: Medium</h4>
     <p>In vim-9.1.1016, a security vulnerability was fixed that could allow for
@@ -182,7 +190,7 @@
     caused by a heap-based buffer overflow when using the :all command while
     visual mode is still active, because Vim does not end visual mode and will
     try to access beyond the end of a line in a buffer. The updated version of
-    Vim willl correctly reset visual mode before opening other windows and
+    Vim will correctly reset visual mode before opening other windows and
     buffers, and will also verify that it won't try to access a position if
     the position is greater than the corresponding buffer line.
     Update to vim-9.1.1016.
