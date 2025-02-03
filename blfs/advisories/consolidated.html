@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-074"/>
+    <h4>12.2 074 Qt6                      Date: 2025-02-02  Severity: Medium</h4>
+    <p>In Qt6-6.8.2, a security vulnerability was fixed which could allow for a
+    crash when a Bluetooth Low Energy device pairs and sends malformed
+    Bluetooth ATT commmands to the computer. Note that this impacts the
+    Bluetooth module within QtConnectivity (QLowEnergyController) in particular,
+    and users are only impacted if they use a Qt application to pair with a
+    malicious device. The malformed ATT commands allow for a remotely exploitable
+    crash, and the user must explicitly pair with the device first.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23050">CVE-2025-23050</a>.</p>
+    <p>To fix this vulnerability, update to Qt6-6.8.2 or later uisng the
+    instructions from
+    <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a>.</p>
+
     <a id="sa-12.2-073"/>
     <h4>12.2 073 vim (LFS and BLFS)       Date: 2025-02-02  Severity: Medium</h4>
     <p>In vim-9.1.1071, a security vulnerability was fixed that could alllow
