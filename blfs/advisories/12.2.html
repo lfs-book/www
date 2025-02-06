@@ -376,6 +376,22 @@
 
 <!-- end of libsoup3 -->
 
+    <h3>libtasn1</h3>
+
+    <a id="sa-12.2-077"/>
+    <h4>12.2 077 libtasn1                 Date: 2025-02-06  Severity: Medium</h4>
+    <p>In libtasn1-4.20.0, a security vulnerability was fixed that could allow
+    for a denial of service (application crash and timeout) when processing
+    certificates. When an input DER data contains a large number of SEQUENCE OF
+    or SET OF elements, decoding the data and launching a specific element in it
+    will take a quadratic amount of time to complete. This can be utilized by a
+    remote attacker for a denial fo service attack by presenting a malicious
+    certificate to the network peer. This can impact any application which uses
+    libtasn1 for certificate parsing and validation. Update to libtasn1-4.20.0.
+    <a href="consolidated.html#sa-12.2-077">12.2-077</a></p>
+
+<!-- end of libtasn1 -->
+
     <h3>MariaDB</h3>
 
     <a id="sa-12.2-076"/>
