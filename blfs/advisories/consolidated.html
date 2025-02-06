@@ -2774,6 +2774,11 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     system, some extra precautions are needed as documented in an
     "Important" box in the book section for Glibc.  Follow it strictly or
     you may render the system completely unusable.  YOU ARE WARNED.</b>
+    You also need to follow <a href='../../lfs/errata/12.1/index.html'>an
+    errata for the upgrading process</a> if
+    you are upgrading a LFS 11.3 or earlier system where
+    GCC is not configured with the <code>--disable-fixincludes</code>
+    option, or many packages may fail to build.
     For LFS 12.0 and earlier, the update process will also disable and
     remove NSCD to get rid of the NSCD vulnerabilities.</p>
 

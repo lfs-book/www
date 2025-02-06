@@ -31,6 +31,16 @@
            and test/tty/tty.sh are known to fail but they are not noted
            in the book.  They can be suppressed by redirecting the standard
            input when running the test suite.</li>
+           <li>In the Glibc upgradation process described in
+             8.5 Glibc-2.39, if you are upgrading on LFS &lt; 12.0
+             (where GCC is not configured with the
+             <code>--disable-fixincludes</code> option),
+             you need to remove the so-called "fixed" headers after
+             upgrading Glibc and rebooting, by issuing
+             <code>rm -rfv $(dirname
+               $(gcc -print-libgcc-file-name))/include-fixed/*</code>
+             as the <code>root</code> user.  Otherwise many packages may fail
+             to build.</li>
          </ul>
 
 <!--#include virtual="/common/footer.html" -->
