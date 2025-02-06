@@ -110,6 +110,24 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-12.2-078"/>
+    <h4>12.2 078 cURL                     Date: 2025-02-06  Severity: Low</h4>
+    <p>In cURL-8.12.0, two security vulnerabilities were fixed that could allow
+    for denial of service condition (application crash) and for credential leaks
+    in exceptionally rare circumstances. The denial of service vulnerability
+    requires a 64-bit system built with eventfd support and the non-standard
+    --enable-threaded-resolver option being passed to configure, which is not
+    in the default configuration for BLFS. If you have built cURL with the
+    --enable-threaded-resolver option on a 64-bit system though, you should
+    update immediately. The credential leaks rely off a .netrc file being
+    used while cURL is configured to follow HTTP redirects, and also where
+    the .netrc file as a default entry with no username or password specified.
+    If you don't use a .netrc file with a default entry with no username or
+    password specified, or if you haven't built cURL with the non-standard
+    --enable-threaded-resolver option, there is no need to upgrade. If either
+    of those conditions are true though, update to cURL-8.12.0.
+    <a href="consolidated.html#sa-12.2-078">12.2-078</a></p>
+
     <a id="sa-12.2-059"/>
     <h4>12.2 059 cURL                 Date: 2025-01-03  Severity: Low</h4>
     <p>In cURL-8.11.1, a security vulnerability was fixed that could allow for
