@@ -376,6 +376,24 @@
 
 <!-- end of libsoup3 -->
 
+    <h3>MariaDB</h3>
+
+    <a id="sa-12.2-076"/>
+    <h4>12.2 076 MariaDB                  Date: 2025-02-06  Severity: Medium</h4>
+    <p>In MariaDB-11.4.5, a security vulnerabiliy was fixed that could allow
+    for a remote attacker with high privileges to cause a denial of service (
+    hang and frequently repeatable crash) of the mariadb server. Note that this
+    vulnerability, while extremely easy to exploit, requires the attacker to 
+    have network access to the server, which is disabled by default in the
+    configuration provided by BLFS. However, if you have deviated from the book
+    by commenting the "skip-networking" flag in /etc/mariadb/my.cnf, you may be
+    affected by this vulnerability. Update to MariaDB-11.4.5, or 10.11.11 if you
+    wish to stay on the MariaDB-10.11.x series. Pay special attention to the
+    instructions for this package as they have changed significantly.
+    <a href="consolidated.html#sa-12.2-076">12.2-076</a></p>
+
+<!-- end of MariaDB -->
+
     <h3>mpg123</h3>
 
     <a id="sa-12.2-031"/>

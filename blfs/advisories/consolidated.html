@@ -65,6 +65,32 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-076"/>
+    <h4>12.2 076 MariaDB                  Date: 2025-02-06  Severity: Medium</h4>
+    <p>In MariaDB-11.4.5, a security vulnerabiliy was fixed that could allow
+    for a remote attacker with high privileges to cause a denial of service (
+    hang and frequently repeatable crash) of the mariadb server. Note that this
+    vulnerability, while extremely easy to exploit, requires the attacker to
+    have network access to the server, which is disabled by default in the
+    configuration provided by BLFS. However, if you have deviated from the book
+    by commenting the "skip-networking" flag in /etc/mariadb/my.cnf, you may be
+    affected by this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21490">CVE-2025-21490</a>.</p>
+    <p>To fix this vulnerability, update to MariaDB-11.4.5 or later using the
+    instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <p>If you are upgrading from a previous major version of MariaDB, you will
+    need to run the "mariadb-upgrade" command after you have upgraded this
+    package. In addition, you should follow the instructions from the
+    development books carefully, as the flags passed to CMake regarding paths
+    have been changed significantly.</p>
+    <p>If you wish to stay on the previous major version of MariaDB, please
+    upgrade to MariaDB-10.11.11 instead, but note that BLFS 12.3 will be
+    shipping with MariaDB-11.4.x and we will not support the 10.11 series
+    after BLFS 12.3 is released.</p>
+
     <a id="sa-12.2-075"/>
     <h4>12.2 075 QtWebEngine              Date: 2025-02-02  Severity: High</h4>
     <p>In QtWebEngine-6.8.2, nine security vulnerabilities were fixed which
