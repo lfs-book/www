@@ -65,6 +65,48 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-079"/>
+    <h4>12.2 079 Thunderbird              Date: 2025-02-06  Severity: Critical</h4>
+    <p>In Thunderbird-128.7.0esr, eleven security vulnerabilities were fixed
+    that could allow for remotely exploitable crashes, remote code execution,
+    memory corruption, privacy leaks, certificate validation issues, automatic
+    launching of web pages within Thunderbird, and for email address spoofing.
+    The crashes happen when processing XSLT data, using the custom Highlight
+    API, generating WebAssembly code, processing PKCS#7 certificates, and
+    opening crafted mails. The remote code execution issues occur when opening
+    crafted mails as well. The privacy leaks occur because private browsing tabs
+    could've been accidentally opened in normal browsing windows. The
+    certificate validation issues occur because certificate length was not
+    properly checked when a certificate was added to a certificate store. The
+    launching of web pages in Thunderbird issue occurs because the Thunderbird
+    Address Book URI fields are not sanitized, and attackers can generate and
+    export address book entries that, when a user imports them, can open a web
+    page within Thunderbird and execute JavaScript. The spoofing issue occurs
+    because Thunderbird displayed an incorrect sender address if the From field
+    of an email used invalid group name syntax, similar to CVE-2024-40940. This
+    particular vulnerability can be used to cause phishing attacks, where an
+    unsuspecting user who doesn't look at mail headers can be tricked into
+    thinking that the mail came from a legitimate source (including the correct
+    domain name for a service), even though the email was not sent from that
+    address. All users who have Thunderbird installed are recommended to update
+    it <b>immediately</b> because of this issue in particular.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1009">CVE-2025-1009</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1010">CVE-2025-1010</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1011">CVE-2025-1011</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1012">CVE-2025-1012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11704">CVE-2024-11704</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1013">CVE-2025-1013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1014">CVE-2025-1014</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1015">CVE-2025-1015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0510">CVE-2025-0510</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1016">CVE-2025-1016</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1017">CVE-2025-1017</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-128.7.0esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-12.2-078"/>
     <h4>12.2 078 cURL                     Date: 2025-02-06  Severity: Low</h4>
     <p>In cURL-8.12.0, two security vulnerabilities were fixed that could allow
