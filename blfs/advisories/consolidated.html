@@ -271,7 +271,7 @@
     the assertion failure. At this time, the LFS team (and upstream) are not
     aware of any applications that may have this behavior, but users may have
     custom setuid programs which can be exploited. This issue occurs due to the
-    assert() function not allocating enoguh space for the assertion failure
+    assert() function not allocating enough space for the assertion failure
     message string and size information in some cases, which can lead to the
     overflow if the message string size aligns to page size. For most users,
     <b>updating glibc is NOT necessary</b>, but if you have a custom setuid
