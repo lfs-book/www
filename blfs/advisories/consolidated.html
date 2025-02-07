@@ -163,7 +163,7 @@
     certificates. When an input DER data contains a large number of SEQUENCE OF
     or SET OF elements, decoding the data and launching a specific element in it
     will take a quadratic amount of time to complete. This can be utilized by a
-    remote attacker for a denial fo service attack by presenting a malicious
+    remote attacker for a denial of service attack by presenting a malicious
     certificate to the network peer. This can impact any application which uses
     libtasn1 for certificate parsing and validation. A temporary workaround
     suggested by upstream is to use resource control mechanisms such as cgroups
