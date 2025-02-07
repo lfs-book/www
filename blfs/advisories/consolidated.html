@@ -65,6 +65,29 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-080"/>
+    <h4>12.2 080 Firefox                  Date: 2025-02-06  Severity: Critical</h4>
+    <p>In Firefox-128.7.0esr, nine security vulnerabilities were fixed that
+    could allow for remote code execution, memory corruption, remotely
+    exploitable crashes, invalid certificate validation, and for potentially
+    opening private browsing tabs in normal browsing windows. The certificate
+    validation issue in particular occurs due to the length of a certificate
+    added to the certificate store not being checked properly.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1009">CVE-2025-1009</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1010">CVE-2025-1010</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1011">CVE-2025-1011</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1012">CVE-2025-1012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11704">CVE-2024-11704</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1013">CVE-2025-1013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1014">CVE-2025-1014</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1016">CVE-2025-1016</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1017">CVE-2025-1017</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-128.7.0esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
     <a id="sa-12.2-079"/>
     <h4>12.2 079 Thunderbird              Date: 2025-02-06  Severity: Critical</h4>
     <p>In Thunderbird-128.7.0esr, eleven security vulnerabilities were fixed
