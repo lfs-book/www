@@ -65,6 +65,576 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-079"/>
+    <h4>12.2 079 Thunderbird              Date: 2025-02-06  Severity: Critical</h4>
+    <p>In Thunderbird-128.7.0esr, eleven security vulnerabilities were fixed
+    that could allow for remotely exploitable crashes, remote code execution,
+    memory corruption, privacy leaks, certificate validation issues, automatic
+    launching of web pages within Thunderbird, and for email address spoofing.
+    The crashes happen when processing XSLT data, using the custom Highlight
+    API, generating WebAssembly code, processing PKCS#7 certificates, and
+    opening crafted mails. The remote code execution issues occur when opening
+    crafted mails as well. The privacy leaks occur because private browsing tabs
+    could've been accidentally opened in normal browsing windows. The
+    certificate validation issues occur because certificate length was not
+    properly checked when a certificate was added to a certificate store. The
+    launching of web pages in Thunderbird issue occurs because the Thunderbird
+    Address Book URI fields are not sanitized, and attackers can generate and
+    export address book entries that, when a user imports them, can open a web
+    page within Thunderbird and execute JavaScript. The spoofing issue occurs
+    because Thunderbird displayed an incorrect sender address if the From field
+    of an email used invalid group name syntax, similar to CVE-2024-40940. This
+    particular vulnerability can be used to cause phishing attacks, where an
+    unsuspecting user who doesn't look at mail headers can be tricked into
+    thinking that the mail came from a legitimate source (including the correct
+    domain name for a service), even though the email was not sent from that
+    address. All users who have Thunderbird installed are recommended to update
+    it <b>immediately</b> because of this issue in particular.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1009">CVE-2025-1009</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1010">CVE-2025-1010</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1011">CVE-2025-1011</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1012">CVE-2025-1012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11704">CVE-2024-11704</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1013">CVE-2025-1013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1014">CVE-2025-1014</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1015">CVE-2025-1015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0510">CVE-2025-0510</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1016">CVE-2025-1016</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1017">CVE-2025-1017</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-128.7.0esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.2-078"/>
+    <h4>12.2 078 cURL                     Date: 2025-02-06  Severity: Low</h4>
+    <p>In cURL-8.12.0, two security vulnerabilities were fixed that could allow
+    for denial of service condition (application crash) and for credential leaks
+    in exceptionally rare circumstances. The denial of service vulnerability
+    occurs due to libcurl closing the same eventfd file descriptor twice when
+    taking down a connection channel after having completed a threaded name
+    resolve. There are several conditions that must be true to exploit this
+    vulnerability, including the use of a 64-bit system, cURL being built with
+    the --enable-threaded-resolver option, and that eventfd is used in the cURL
+    build. This can lead to strange crashes in many different applications, but
+    BLFS users must pass --enable-threaded-resolver to cURL's configure script
+    to be affected by it. The credential leak vulnerability is very similar to
+    CVE-2024-11053, and requires the use of a .netrc file for credentials,
+    following HTTP redirects, while the .netrc file has a default entry that
+    omits both the username and the password for a service. Most users will not
+    be affected by this, and a default entry omitting the username and password
+    fields is a rare misconfiguration.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0665">CVE-2025-0665</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0167">CVE-2025-0167</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.12.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-12.2-077"/>
+    <h4>12.2 077 libtasn1                 Date: 2025-02-06  Severity: Medium</h4>
+    <p>In libtasn1-4.20.0, a security vulnerability was fixed that could allow
+    for a denial of service (application crash and timeout) when processing
+    certificates. When an input DER data contains a large number of SEQUENCE OF
+    or SET OF elements, decoding the data and launching a specific element in it
+    will take a quadratic amount of time to complete. This can be utilized by a
+    remote attacker for a denial fo service attack by presenting a malicious
+    certificate to the network peer. This can impact any application which uses
+    libtasn1 for certificate parsing and validation. A temporary workaround
+    suggested by upstream is to use resource control mechanisms such as cgroups
+    to help avoid excessive usage of CPU time, but the BLFS team recommends
+    updating libtasn1 instead.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12133">CVE-2024-12133</a>.</p>
+    <p>To fix this vulnerability, update to libtasn1-4.20.0 or later using the
+    instructions from
+    <a href="../view/svn/general/libtasn1.html">libtasn1 (sysv)</a> or
+    <a href="../view/systemd/general/libtasn1.html">libtasn1 (systemd)</a>.</p>
+
+    <a id="sa-12.2-076"/>
+    <h4>12.2 076 MariaDB                  Date: 2025-02-06  Severity: Medium</h4>
+    <p>In MariaDB-11.4.5, a security vulnerabiliy was fixed that could allow
+    for a remote attacker with high privileges to cause a denial of service (
+    hang and frequently repeatable crash) of the mariadb server. Note that this
+    vulnerability, while extremely easy to exploit, requires the attacker to
+    have network access to the server, which is disabled by default in the
+    configuration provided by BLFS. However, if you have deviated from the book
+    by commenting the "skip-networking" flag in /etc/mariadb/my.cnf, you may be
+    affected by this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21490">CVE-2025-21490</a>.</p>
+    <p>To fix this vulnerability, update to MariaDB-11.4.5 or later using the
+    instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <p>If you are upgrading from a previous major version of MariaDB, you will
+    need to run the "mariadb-upgrade" command after you have upgraded this
+    package. In addition, you should follow the instructions from the
+    development books carefully, as the flags passed to CMake regarding paths
+    have been changed significantly.</p>
+    <p>If you wish to stay on the previous major version of MariaDB, please
+    upgrade to MariaDB-10.11.11 instead, but note that BLFS 12.3 will be
+    shipping with MariaDB-11.4.x and we will not support the 10.11 series
+    after BLFS 12.3 is released.</p>
+
+    <a id="sa-12.2-075"/>
+    <h4>12.2 075 QtWebEngine              Date: 2025-02-02  Severity: High</h4>
+    <p>In QtWebEngine-6.8.2, nine security vulnerabilities were fixed which
+    could allow for remote code execution, arbitrary code execution in a
+    sandbox, privilege escalation, and sensitive system information disclosure.
+    These vulnerabilities occur in the Compositing, V8, Metrics, Navigation,
+    Fenced Frames, Extensions, Tracing, and Skia components of the bundled
+    copy of Chromium. All of these issues can be exploited via maliciously
+    crafted web content (including pages and embedded videos).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12694">CVE-2024-12694</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12693">CVE-2024-12693</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0611">CVE-2025-0611</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0437">CVE-2025-0437</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0447">CVE-2025-0447</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0441">CVE-2025-0441</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0443">CVE-2025-0443</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0438">CVE-2025-0438</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0436">CVE-2025-0436</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.8.2 or later using
+    the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <a id="sa-12.2-074"/>
+    <h4>12.2 074 Qt6                      Date: 2025-02-02  Severity: Medium</h4>
+    <p>In Qt6-6.8.2, a security vulnerability was fixed which could allow for a
+    crash when a Bluetooth Low Energy device pairs and sends malformed
+    Bluetooth ATT commmands to the computer. Note that this impacts the
+    Bluetooth module within QtConnectivity (QLowEnergyController) in particular,
+    and users are only impacted if they use a Qt application to pair with a
+    malicious device. The malformed ATT commands allow for a remotely exploitable
+    crash, and the user must explicitly pair with the device first.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23050">CVE-2025-23050</a>.</p>
+    <p>To fix this vulnerability, update to Qt6-6.8.2 or later uisng the
+    instructions from
+    <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a>.</p>
+
+    <a id="sa-12.2-073"/>
+    <h4>12.2 073 vim (LFS and BLFS)       Date: 2025-02-02  Severity: Medium</h4>
+    <p>In vim-9.1.1071, a security vulnerability was fixed that could allow
+    for a crash when the win_line() function is called in some extreme
+    circumstances. In order to exploit the vulnerability, a user has to be
+    in silent Ex mode (-s -e), and binary characters have to be fed to vim that
+    cause the screen to scroll. This will cause a screen redraw to be triggered
+    even though no screen is present, and thus the ScreenLines pointer is
+    accessed even though the variable is not allocated. The vulnerability was
+    fixed by skipping the redraw attempt by testing whether the ScreenLines
+    pointer is NULL. Note that the impact is medium because the user must
+    intentionally and explicitly feed binary data to vim while also in ex mode.
+    The vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24014">CVE-2025-24014</a>.</p>
+    <p>To fix this vulnerability, update to vim-9.1.1071 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
+    <a id="sa-12.2-072"/>
+    <h4>12.2 072 Glibc (LFS)          Date: 2025-02-02    Severity: Medium</h4>
+    <p>In Glibc-2.41, a security vulnerability was fixed that could allow for
+    a buffer overflow when printing assertion failure messages. This can allow
+    for application crashes, or in some extreme cases, undefined behavior. The
+    only viable vector for exploitation of this vulnerability is <b>local</b>,
+    and it must be a setuid program that has an existing bug which results in
+    the assertion failure. At this time, the LFS team (and upstream) are not
+    aware of any applications that may have this behavior, but users may have
+    custom setuid programs which can be exploited. This issue occurs due to the
+    assert() function not allocating enoguh space for the assertion failure
+    message string and size information in some cases, which can lead to the
+    overflow if the message string size aligns to page size. For most users,
+    <b>updating glibc is NOT necessary</b>, but if you have a custom setuid
+    program installed, you should update glibc to version 2.41.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0395">CVE-2025-0395</a>.</p>
+    <p>To fix the iconv vulnerability, update to Glibc-2.41 or later
+    using the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/glibc.html">Glibc (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/glibc.html">Glibc (systemd)</a>.</p>
+    <p><b>To update Glibc from 2.40 or earlier to 2.41 safely on a running
+    system, some extra precautions are needed as documented in an
+    "Important" box in the book section for Glibc.  Follow it strictly or
+    you may render the system completely unusable.  YOU ARE WARNED.</b>
+    For LFS 12.0 and earlier, the update process will also disable and
+    remove NSCD to get rid of the NSCD vulnerabilities.</p>
+
+    <a id="sa-12.2-071"/>
+    <h4>12.2 071 BIND                 Date: 2025-02-01  Severity: High</h4>
+    <p>In BIND-9.20.5, two security vulnerabilities were fixed that could allow
+    for a denial of service condition causing severe performance degredations
+    and crashes. The first issue occurs due to DNS-over-HTTPS flooding, and it
+    was resolved by adjusting named to handle HTTP/2 data in smaller chunks and
+    throttling reading more chunks until the remote side acknowledges that it
+    has read the response data. It also throttles clients that send far too
+    many requests at once. The named server will also evaluate excessive
+    streams opened by clients that include no DNS data, and will log these
+    clients for an administrator to review them (as well as automatically
+    blocking them from sending more requests). The second issue occurs due to
+    a bug that could allow for many records in the additional section to
+    cause CPU exhaustion, and it was fixed by limiting additional section
+    processing for large RDATA sets (capping it at more than 13 names).
+    The issues only affect the BIND server and not the utilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11187">CVE-2024-11187</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12705">CVE-2024-12705</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.20.5 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+    <a id="sa-12.2-070"/>
+    <h4>12.2 070 OpenJDK              Date: 2025-01-28  Severity: Medium</h4>
+    <p>In OpenJDK-23.0.2, a security vulnerability was fixed that could allow
+    for a remote attacker (with no privileges required) to write/delete/access
+    information on a system running a Java application. No user interaction is
+    required to exploit this vulnerability, but the attack complexity is high.
+    The vulnerability exists in the Hotspot component of OpenJDK.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21502">CVE-2025-21502</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-23.0.2 or later using
+    the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>If you want to use the pre-built binaries, update to Java-23.0.2 using
+    the instructions from
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
+    <a id="sa-12.2-069"/>
+    <h4>12.2 069 abseil-cpp               Date: 2025-01-24  Severity: High</h4>
+    <p>In abseil-cpp-20240722.1, a security vulnerability was fixed that could
+    allow for an out-of-bounds memory access (and subsequent crash) due to an
+    integer overflow that occurs when creating and resizing hash containers.
+    The vulnerability is hard to exploit, but occurs because there was no
+    upper boundary on size arguments with some methods in
+    absl::{flat,node}_hash_{set,map}. The vulernerability is hard to exploit
+    because container sizes are very rarely attacker controlled.
+    Upstream has not assigned a CVE for this vulnerability, but more details
+    can be found at the
+    <a href="https://github.com/abseil/abseil-cpp/commit/5a0e2cb5">upstream commit</a>.</p>
+    <p>To fix this vulnerability, update to abseil-cpp-20240722.1 or later
+    using the instructions from
+    <a href="../view/svn/general/abseil-cpp.html">abseil-cpp (sysv)</a> or
+    <a href="../view/systemd/general/abseil-cpp.html">abseil-cpp (systemd)</a>.</p>
+
+    <a id="sa-12.2-068"/>
+    <h4>12.2 068 Node.js                  Date: 2025-01-22  Severity: High</h4>
+    <p>In Node.js-22.13.1, three security vulnerabilities were fixed that can
+    allow for malicious use of a reinstated constructor, a denial of service
+    via a memory leak, and tampering with requests to backend APIs.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-22150">CVE-2025-22150</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23083">CVE-2025-23083</a>, and
+    <a href="https://www.tenable.com/cve/CVE-2025-23085">CVE-2025-23085</a>.</p>
+    <p>To fix these vulnerabilities, update to Node.js-22.13.1 or later using
+    the instructions from
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+    <p>In addition, if you have libuv installed and wish to migrate to the 22
+    series of Node.js, upgrade to a newer version of libuv using the
+    instructions from
+    <a href="../view/svn/general/libuv.html">libuv (sysv)</a> or
+    <a href="../view/systemd/general/libuv.html">libuv (systemd)</a>.</p>
+    <p>Alternatively, if you do not want to upgrade libuv or want to stay on the
+    old LTS series, update to Node.js-20.18.2 using the same instructions, just
+    with downloading the other version.</p>
+
+    <a id="sa-12.2-067"/>
+    <h4>12.2 067 vim (LFS and BLFS)       Date: 2025-01-14  Severity: Medium</h4>
+    <p>In vim-9.1.1016, a security vulnerability was fixed that could allow for
+    a crash or arbitrary code execution when using visual mode. The issue is
+    caused by a heap-based buffer overflow when using the :all command while
+    visual mode is still active, because Vim does not end visual mode and will
+    try to access beyond the end of a line in a buffer. The updated version of
+    Vim willl correctly reset visual mode before opening other windows and
+    buffers, and will also verify that it won't try to access a position if
+    the position is greater than the corresponding buffer line.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-22134">CVE-2025-22134</a>.</p>
+    <p>To fix this vulnerability, update to vim-9.1.1016 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
+    <a id="sa-12.2-066"/>
+    <h4>12.2 066 git                      Date: 2025-01-14  Severity: Low</h4>
+    <p>In git-2.48.1, two security vulnerabilities were fixed that could allow
+    for users to be mislead into typing in passwords for trusted sites, which
+    could be sent to untrusted sites instead. This happens because Git used to
+    print unsanitized URLs when asking for credentials, which (in submodules
+    and recursive clones) could allow for users to be susceptible to crafted
+    URLs. The other vulnerability occurs because Git used to pass on Carriage
+    Returns via the credential protocol to credential helpers, some of which
+    may use line-reading functions that interpret Carriage Returns as line
+    endings. You should update Git if you use it to checkout repositories with
+    submodules in them.
+    These vulnerabiliities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-50349">CVE-2024-50349</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52006">CVE-2024-52006</a>.</p>
+    <p>To fix these vulnerabilities, update to git-2.48.1 or later using the
+    instructions from
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a>.</p>
+
+    <a id="sa-12.2-065"/>
+    <h4>12.2 065 rsync                    Date: 2025-01-14  Severity: Critical</h4>
+    <p>In rsync-3.4.0, six security vulnerabilities were fixed that could allow
+    for remote code execution, information disclosure, arbitrary leaking of
+    files on an rsync client, path traversal (allowing a server to write files
+    to paths on a client outside of the intended destiation directory), and for
+    privilege escalation. This update should be considered URGENT, and needs to
+    be applied immediately to any system that has the rsync package installed,
+    regardless of if it is a server or a client. The most severe CVE can be
+    exploited on *any* rsync server, and the attacker only requires anonymous
+    read access to execute arbitrary code on the machine the server is running
+    on. The information leak happens when verifying file checksums, and allows
+    for uninitialized stack contents to be leaked one byte at a time. The
+    arbitrary leaking of client files vulnerability allows for any file from
+    the client to be exfiltrated when a client is uploading files to a server,
+    and the path traversal vulnerabilities occur when using the --safe-links or
+    --inc-recursive options, and the privilege escalation vulnerability occurs
+    due to a race condition that allows when handling symbolic links. There are
+    proof of concept exploits available as well which read SSH private keys from
+    a user's home directory on a client, and additional proof of concepts exist
+    which allow for ~/.bashrc to be overwritten for malicious code execution.
+    ALL users who have rsync installed need to update IMMEDIATELY.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12084">CVE-2024-12084</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12085">CVE-2024-12085</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12086">CVE-2024-12086</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12087">CVE-2024-12087</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12088">CVE-2024-12088</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12747">CVE-2024-12747</a>.</p>
+    <p>To fix these vulnerabilities, update to rsync-3.4.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
+    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+
+    <a id="sa-12.2-064"/>
+    <h4>12.2 064 Libreoffice              Date: 2025-01-08  Severity: Medium</h4>
+    <p>In Libreoffice-24.8.4.2, two security vulnerabilities were fixed that
+    could allow for unauthorized information disclosure and for arbitrary
+    writing of files to the filesystem. The information disclosure vulnerability
+    occurs when URLs are constructed which expand environment variables or INI
+    file values. These could be exfiltrated to a remote server when opening a
+    document containing these links. The issue was fixed by removing the
+    expansion feature from document hosted URLs. The arbitrary file write
+    vulnerability occurs because of a path traversal issue, but only files with
+    a .ttf file extension can be written. It can be exploited by a crafted
+    document with embedded font file path names within it.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12426">CVE-2024-12426</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12425">CVE-2024-12425</a>.</p>
+    <p>To fix these vulnerabilities, update to Libreoffice-24.8.4.2 or later
+    using the instructions from
+    <a href="../view/svn/xsoft/libreoffice.html">Libreoffice (sysv)</a> or
+    <a href="../view/systemd/xsoft/libreoffice.html">Libreoffice (systemd)</a>.</p>
+
+    <a id="sa-12.2-063"/>
+    <h4>12.2 063 Thunderbird              Date: 2025-01-08  Severity: High</h4>
+    <p>In Thunderbird-128.6.0esr, seven security vulnerabilities were fixed that
+    could allow for potentially exploitable crashes, remote code execution,
+    ALPN validation failures when using redirects with Alt-Svc, and for
+    privilege escalation attacks when using WebChannel APIs (also known as a
+    confused deputy attack).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0237">CVE-2025-0237</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0238">CVE-2025-0238</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0239">CVE-2025-0239</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0240">CVE-2025-0240</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0241">CVE-2025-0241</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0242">CVE-2025-0242</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0243">CVE-2025-0243</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-128.6.0esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.2-062"/>
+    <h4>12.2 062 Firefox              Date: 2025-01-08  Severity: High</h4>
+    <p>In Firefox-128.6.0esr, seven security vulnerabilities were fixed that
+    could allow for potentially exploitable crashes, remote code execution,
+    ALPN validation failures when using redirects with Alt-Svc, and for
+    privilege escalation attacks when using WebChannel APIs (also known as a
+    confused deputy attack).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0237">CVE-2025-0237</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0238">CVE-2025-0238</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0239">CVE-2025-0239</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0240">CVE-2025-0240</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0241">CVE-2025-0241</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0242">CVE-2025-0242</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0243">CVE-2025-0243</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-128.6.0esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-12.2-061"/>
+    <h4>12.2 061 Spidermonkey         Date: 2025-01-08  Severity: Medium</h4>
+    <p>In Spidermonkey-128.6.0esr, two security vulnerabilities were fixed that
+    could allow for a potentially explotiable crash or arbitrary code execution.
+    These occur when parsing a JavaScript module as JSON (which could allow
+    cross-compartment access, leading to arbitrary code execution), or when
+    segmenting specially crafted text (leading to memory corruption).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0240">CVE-2025-0240</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0241">CVE-2025-0241</a>.</p>
+    <p>To fix these vulnerabilities, update to Spidermonkey-128.6.0esr or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">Spidermonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">Spidermonkey (systemd)</a>.</p>    <p>If you update this package, you need to update Gjs to gjs-1.82.0 or
+    later using the instructions from
+    <a href="../view/svn/gnome/gjs.html">Gjs (sysv)</a> or
+    <a href="../view/systemd/gnome/gjs.html">Gjs (systemd)</a>.</p>
+    <p>If you wish to stay on Spidermonkey-115, please update to
+    Spidermonkey-115.19.0esr instead using the same instructions as used in
+    BLFS 12.2. You do not need to update Gjs if you take this approach.</p>
+
+    <a id="sa-12.2-060"/>
+    <h4>12.2 060 Seamonkey            Date: 2025-01-08  Severity: Critical</h4>
+    <p>In Seamonkey-2.53.20, fifteen security vulnerabilities were fixed that
+    could allow for remote code execution, unauthorized information disclosure,
+    applications to be mistakenly opened, remotely exploitable crashes, sandbox
+    escapes, access to PDF and JSON objects as well as video frames cross
+    origin, permission leaks, content security policy bypasses, and cross-site
+    scripting exposure. One of these vulnerabilities is known to be exploited
+    in the wild. This brings Seamonkey up to date with the security issues
+    fixed in Firefox 128.6.0/115.19.0. If you are using Seamonkey, you should
+    update to this version immediately. Please pay special attention to the
+    build instructions as some options and dependencies were changed.
+    These vulnerabilities were assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8381">CVE-2024-8381</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8382">CVE-2024-8382</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8383">CVE-2024-8383</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8384">CVE-2024-8384</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9392">CVE-2024-9392</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9393">CVE-2024-9393</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9394">CVE-2024-9394</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9401">CVE-2024-9401</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-9680">CVE-2024-9680</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10458">CVE-2024-10458</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10459">CVE-2024-10459</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10463">CVE-2024-10463</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11694">CVE-2024-11694</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0238">CVE-2025-0238</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0242">CVE-2025-0242</a>.</p>
+    <p>To fix these vulnerabilities, update to Seamonkey-2.53.20 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+
+    <a id="sa-12.2-059"/>
+    <h4>12.2 059 cURL                 Date: 2025-01-03  Severity: Low</h4>
+    <p>In cURL-8.11.1, a security vulnerability was fixed that could allow for
+    cURL to leak the password for hosts to redirected hosts under certain
+    conditions when being asked to use a .netrc file, and when also asked
+    to follow HTTP redirects. If you do not use a .netrc file, this vulnerability
+    does not affect you, and there is no reason to upgrade. If you do use one
+    though, please update to cURL-8.11.1.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11053">CVE-2024-11053</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.11.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-12.2-058"/>
+    <h4>12.2 058 WebKitGTK            Date: 2025-01-03  Severity: High</h4>
+    <p>In WebKitGTK-2.46.5, four security vulnerabilities were fixed that could
+    allow for remotely exploitable crashes and remote code execution. All four
+    of the issues were resolved with improved checks and memory handling, and
+    the issues are exploitable with maliciously crafted web content.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-54479">CVE-2024-54479</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-54502">CVE-2024-54502</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-54505">CVE-2024-54505</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-54508">CVE-2024-54508</a>.</p>
+    <p>To fix this vulnerability, update to WebKitGTK-2.46.5 or later using the
+    instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-12.2-057"/>
+    <h4>12.2 057 Thunderbird          Date: 2025-01-03  Severity: Medium</h4>
+    <p>In Thunderbird-128.5.2esr, a security vulnerability was fixed which
+    could allow for client-side path traversal when using the Matrix chatroom
+    functionality in Thunderbird's chat client. The vulnerability occurs when
+    using malicious MXC URIs, and allows a malicious room member to issue
+    arbirtary authenticated GET requests to the client's homeserver (in this
+    context, that would be Thunderbird). If you use the Matrix chatroom
+    functionality, you should update Thunderbird.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-50336">CVE-2024-50336</a>.</p>
+    <p>To fix this vulnerability, update to Thunderbird-128.5.2esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.2-056"/>
+    <h4>12.2 056 Jinja2 (LFS)         Date: 2025-01-03  Severity: High</h4>
+    <p>In Jinja2-3.1.5, two security vulnerabilities were fixed that could
+    allow for sandbox escapes and execution of arbitrary Python code. One
+    of these issues happens due to an oversight in how the Jinja sandboxed
+    environment detects calls to str.format, and the other occurs due to a
+    bug in the Jinja2 compiler that allows an attacker which controls both
+    the content and filename of a template to execute arbitrary Python code
+    outside of the sandbox.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-56201">CVE-2024-56201</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-56326">CVE-2024-56326</a>.</p>
+    <p>To fix these vulnerabilities, update to Jinja2-3.1.5 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/jinja2.html">Jinja2 (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/jinja2.html">Jinja2 (systemd)</a>.</p>
+
+    <a id="sa-12.2-055"/>
+    <h4>12.2 055 Subversion           Date: 2025-01-03  Severity: Low</h4>
+    <p>In Subversion-1.14.5, a security vulnerability was fixed that could
+    allow for a denial of service when a revision property which contains
+    control characters is committed to a repository. This is a repeat of
+    CVE-2013-1968, and only affects the mod_dav_svn module (which you would
+    use to allow access to a repository over HTTP). Local repositories, and
+    those served by svnserve, are unaffected. The disruption can also allow
+    for repository corruption, but it will take some time as a full dump/load
+    cycle will be required depending on the corruption.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-46901">CVE-2024-46901</a>.</p>
+    <p>To fix this vulnerability, update to Subversion-1.14.5 or later using
+    the instructions from
+    <a href="../view/svn/general/subversion.html">Subversion (sysv)</a> or
+    <a href="../view/systemd/general/subversion.html">Subversion (systemd)</a>.</p>
+
+    <a id="sa-12.2-054"/>
+    <h4>12.2 054 Python3 (LFS and BLFS) Date: 2025-01-03 Severity: Medium</h4>
+    <p>In Python 3.13.1 (and 3.12.8), three security vulnerabilities were fixed
+    that could allow for unauthorized command execution when spawning a virtual
+    environment, for filtering bypassses (because IPv4-mapped IPv6 addess
+    properties were highly inconsistent), and for pyrepl to read local files
+    unexpectedly (which is known to cause inconsistent behavior and arbitrary
+    code execution). This update has caused some issues with other packages,
+    namely Firefox and Thunderbird. If you install this security update, make
+    sure to use the instructions from the development book for Firefox and
+    Thunderbird (which include applying a patch to fix the build issues).
+    Only one of these vulnerabilities has been assigned a CVE. It has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/cve-2024-9287">CVE-2024-9287</a>.
+    Additional information about the other two vulnerabilities can be found at
+    <a href="https://github.com/python/cpython/issues/125140">Python Issue #125140</a> and
+    <a href="https://github.com/python/cpython/issues/122792">Python Issue #122792</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.13.1 (or 3.12.8 if you
+    are on 3.12.x) using the instructions from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
     <a id="sa-12.2-053"/>
     <h4>12.2 053 gstreamer            Date: 2024-12-04  Severity: Critical</h4>
     <p>In the 1.24.10 release of the gstreamer stack, over 40 security
@@ -2318,6 +2888,11 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     system, some extra precautions are needed as documented in an
     "Important" box in the book section for Glibc.  Follow it strictly or
     you may render the system completely unusable.  YOU ARE WARNED.</b>
+    You also need to follow <a href='../../lfs/errata/12.1/index.html'>an
+    errata for the upgrading process</a> if
+    you are upgrading a LFS 11.3 or earlier system where
+    GCC is not configured with the <code>--disable-fixincludes</code>
+    option, or many packages may fail to build.
     For LFS 12.0 and earlier, the update process will also disable and
     remove NSCD to get rid of the NSCD vulnerabilities.</p>
 

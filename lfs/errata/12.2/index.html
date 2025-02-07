@@ -27,7 +27,16 @@
 
        <h2>Miscellaneous Errata</h2>
          <ul>
-           <li>There are no current errata items for LFS 12.2.</li>
+           <li>In the Glibc upgradation process described in
+             8.5 Glibc-2.40, if you are upgrading on LFS &lt; 12.0
+             (where GCC is not configured with the
+             <code>--disable-fixincludes</code> option),
+             you need to remove the so-called "fixed" headers after
+             upgrading Glibc and rebooting, by issuing
+             <code>rm -rfv $(dirname
+               $(gcc -print-libgcc-file-name))/include-fixed/*</code>
+             as the <code>root</code> user.  Otherwise many packages may fail
+             to build.</li>
          </ul>
 
 <!--#include virtual="/common/footer.html" -->

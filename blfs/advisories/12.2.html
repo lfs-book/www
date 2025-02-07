@@ -51,6 +51,18 @@
 
 <!-- end of PackageName -->
 
+    <h3>abseil-cpp</h3>
+
+    <a id="sa-12.2-069"/>
+    <h4>12.2 069 abseil-cpp               Date: 2025-01-24  Severity: High</h4>
+    <p>In abseil-cpp-20240722.1, a security vulnerability was fixed that could
+    allow for an out-of-bounds memory access (and subsequent crash) due to an
+    integer overflow that occurs when creating and resizing hash containers.
+    Update to abseil-cpp-20240722.1.
+    <a href="consolidated.html#sa-12.2-069">12.2-069</a></p>
+
+<!-- end of abseil-cpp -->
+
     <h3>apr</h3>
 
     <a id="sa-12.2-002"/>
@@ -65,6 +77,18 @@
     <a href="consolidated.html#sa-12.2-002">12.2-002</a></p>
 
 <!-- end of apr -->
+
+    <h3>BIND</h3>
+
+    <a id="sa-12.2-071"/>
+    <h4>12.2 071 BIND                 Date: 2025-02-01  Severity: High</h4>
+    <p>In BIND-9.20.5, two security vulnerabilities were fixed that could allow
+    for a denial of service condition causing severe performance degredations
+    and crashes. This only impacts the server component of BIND.
+    Update to BIND-9.20.5.
+    <a href="consolidated.html#sa-12.2-071">12.1-071</a></p>
+
+<!-- end of BIND -->
 
     <h3>cups-filters</h3>
 
@@ -85,6 +109,34 @@
 <!-- end of cups-filters -->
 
     <h3>cURL</h3>
+
+    <a id="sa-12.2-078"/>
+    <h4>12.2 078 cURL                     Date: 2025-02-06  Severity: Low</h4>
+    <p>In cURL-8.12.0, two security vulnerabilities were fixed that could allow
+    for denial of service condition (application crash) and for credential leaks
+    in exceptionally rare circumstances. The denial of service vulnerability
+    requires a 64-bit system built with eventfd support and the non-standard
+    --enable-threaded-resolver option being passed to configure, which is not
+    in the default configuration for BLFS. If you have built cURL with the
+    --enable-threaded-resolver option on a 64-bit system though, you should
+    update immediately. The credential leaks rely off a .netrc file being
+    used while cURL is configured to follow HTTP redirects, and also where
+    the .netrc file as a default entry with no username or password specified.
+    If you don't use a .netrc file with a default entry with no username or
+    password specified, or if you haven't built cURL with the non-standard
+    --enable-threaded-resolver option, there is no need to upgrade. If either
+    of those conditions are true though, update to cURL-8.12.0.
+    <a href="consolidated.html#sa-12.2-078">12.2-078</a></p>
+
+    <a id="sa-12.2-059"/>
+    <h4>12.2 059 cURL                 Date: 2025-01-03  Severity: Low</h4>
+    <p>In cURL-8.11.1, a security vulnerability was fixed that could allow for
+    cURL to leak the password for hosts to redirected hosts under certain
+    conditions when being asked to use a .netrc file, and when also asked
+    to follow HTTP redirects. If you do not use a .netrc file, this vulnerability
+    does not affect you, and there is no reason to upgrade. If you do use one
+    though, please update to cURL-8.11.1.
+    <a href="consolidated.html#sa-12.2-059">12.2-059</a></p>
 
     <a id="sa-12.2-039"/>
     <h4>12.2 039 cURL                 Date: 2024-11-07  Severity: Low</h4>
@@ -118,6 +170,15 @@
 <!-- end of fetchmail -->
 
     <h3>Firefox</h3>
+
+    <a id="sa-12.2-062"/>
+    <h4>12.2 062 Firefox              Date: 2025-01-08  Severity: High</h4>
+    <p>In Firefox-128.6.0esr, seven security vulnerabilities were fixed that
+    could allow for potentially exploitable crashes, remote code execution,
+    ALPN validation failures when using redirects with Alt-Svc, and for
+    privilege escalation attacks when using WebChannel APIs (also known as a
+    confused deputy attack). Update to Firefox-128.6.0 (or 115.19.0esr).
+    <a href="consolidated.html#sa-12.2-062">12.2-062</a></p>
 
     <a id="sa-12.2-048"/>
     <h4>12.2 048 Firefox              Date: 2024-11-26  Severity: High</h4>
@@ -183,6 +244,17 @@
     <a href="consolidated.html#sa-12.2-012">12.2-012</a></p>
 
 <!-- end of Ghostscript -->
+
+    <h3>git</h3>
+
+    <a id="sa-12.2-066"/>
+    <h4>12.2 066 git                      Date: 2025-01-14  Severity: Low</h4>
+    <p>In git-2.48.1, two security vulnerabilities were fixed that could allow
+    for users to be mislead into typing in passwords for trusted sites, which
+    could be sent to untrusted sites instead. Update to git-2.48.1.
+    <a href="consolidated.html#sa-12.2-066">12.2-066</a></p>
+
+<!-- end of git -->
 
     <h3>glib</h3>
 
@@ -300,6 +372,17 @@
 
 <!-- end of libpcap -->
 
+    <h3>Libreoffice</h3>
+
+    <a id="sa-12.2-064"/>
+    <h4>12.2 064 Libreoffice              Date: 2025-01-08  Severity: Medium</h4>
+    <p>In Libreoffice-24.8.4.2, two security vulnerabilities were fixed that
+    could allow for unauthorized information disclosure and for arbitrary
+    writing of files to the filesystem. Update to Libreoffice-24.8.4.2.
+    <a href="consolidated.html#sa-12.2-064">12.2-064</a></p>
+
+<!-- end of Libreoffice -->
+
     <h3>libsoup3</h3>
 
     <a id="sa-12.2-047"/>
@@ -310,6 +393,40 @@
     <a href="consolidated.html#sa-12.2-047">12.2-047</a></p>
 
 <!-- end of libsoup3 -->
+
+    <h3>libtasn1</h3>
+
+    <a id="sa-12.2-077"/>
+    <h4>12.2 077 libtasn1                 Date: 2025-02-06  Severity: Medium</h4>
+    <p>In libtasn1-4.20.0, a security vulnerability was fixed that could allow
+    for a denial of service (application crash and timeout) when processing
+    certificates. When an input DER data contains a large number of SEQUENCE OF
+    or SET OF elements, decoding the data and launching a specific element in it
+    will take a quadratic amount of time to complete. This can be utilized by a
+    remote attacker for a denial fo service attack by presenting a malicious
+    certificate to the network peer. This can impact any application which uses
+    libtasn1 for certificate parsing and validation. Update to libtasn1-4.20.0.
+    <a href="consolidated.html#sa-12.2-077">12.2-077</a></p>
+
+<!-- end of libtasn1 -->
+
+    <h3>MariaDB</h3>
+
+    <a id="sa-12.2-076"/>
+    <h4>12.2 076 MariaDB                  Date: 2025-02-06  Severity: Medium</h4>
+    <p>In MariaDB-11.4.5, a security vulnerabiliy was fixed that could allow
+    for a remote attacker with high privileges to cause a denial of service (
+    hang and frequently repeatable crash) of the mariadb server. Note that this
+    vulnerability, while extremely easy to exploit, requires the attacker to 
+    have network access to the server, which is disabled by default in the
+    configuration provided by BLFS. However, if you have deviated from the book
+    by commenting the "skip-networking" flag in /etc/mariadb/my.cnf, you may be
+    affected by this vulnerability. Update to MariaDB-11.4.5, or 10.11.11 if you
+    wish to stay on the MariaDB-10.11.x series. Pay special attention to the
+    instructions for this package as they have changed significantly.
+    <a href="consolidated.html#sa-12.2-076">12.2-076</a></p>
+
+<!-- end of MariaDB -->
 
     <h3>mpg123</h3>
 
@@ -328,7 +445,30 @@
 
 <!-- end of mpg123 -->
 
+    <h3>Node.js</h3>
+
+    <a id="sa-12.2-068"/>
+    <h4>12.2 068 Node.js              Updated: 2025-01-22  Severity: High</h4>
+    <p>In Node.js-22.13.1, three security vulnerabilities were fixed that can
+    allow for malicious use of a reinstated constructor, a denial of service
+    via a memory leak, and tampering with requests to backend APIs.
+    Update to Node.js-22.13.1 and upgrade libuv if it is also installed.
+    Alternatively, update to Node.js-20.18.2.
+    <a href="consolidated.html#sa-12.2-068">12.2-068</a></p>
+
+<!-- end of Node.js -->
+
     <h3>OpenJDK</h3>
+
+    <a id="sa-12.2-070"/>
+    <h4>12.2 070 OpenJDK              Date: 2025-01-28  Severity: Medium</h4>
+    <p>In OpenJDK-23.0.2, a security vulnerability was fixed that could allow
+    for a remote attacker (with no privileges required) to write/delete/access
+    information on a system running a Java application. No user interaction is
+    required to exploit this vulnerability, but the attack complexity is high.
+    The vulnerability exists in the Hotspot component of OpenJDK.
+    Update to OpenJDK-23.0.2.
+    <a href="consolidated.html#sa-12.2-070">12.2-070</a></p>
 
     <a id="sa-12.2-037"/>
     <h4>12.2 037 OpenJDK              Date: 2024-11-05  Severity: Medium</h4>
@@ -385,6 +525,17 @@
 
     <h3>Python3</h3>
 
+    <a id="sa-12.2-054"/>
+    <h4>12.2 054 Python3 (LFS and BLFS) Date: 2025-01-03 Severity: Medium</h4>
+    <p>In Python 3.13.1 (and 3.12.8), three security vulnerabilities were fixed
+    that could allow for unauthorized command execution when spawning a virtual
+    environment, for filtering bypassses (because IPv4-mapped IPv6 addess
+    properties were highly inconsistent), and for pyrepl to read local files
+    unexpectedly (which is known to cause inconsistent behavior and arbitrary
+    code execution). Update to Python-3.13.1 (or Python 3.12.8 if you are on
+    the 3.12 series).
+    <a href="consolidated.html#sa-12.2-054">12.2-054</a></p>
+
     <a id="sa-12.2-008"/>
     <h4>12.2 008 Python3 (LFS and BLFS) Date: 2024-09-17  Severity: High</h4>
     <p>In Python-3.12.6, three security vulnerabilities were fixed that could
@@ -397,6 +548,17 @@
 
     <h3>Qt6</h3>
 
+    <a id="sa-12.2-074"/>
+    <h4>12.2 074 Qt6                      Date: 2025-02-02  Severity: Medium</h4>
+    <p>In Qt6-6.8.2, a security vulnerability was fixed which could allow for a
+    crash when a Bluetooth Low Energy device pairs and sends malformed
+    Bluetooth ATT commmands to the computer. Note that this impacts the
+    Bluetooth module within QtConnectivity (QLowEnergyController) in particular,
+    and users are only impacted if they use a Qt application to pair with a
+    malicious device. Update to Qt6-6.8.2 if you use a Bluetooth Low Energy
+    device with a Qt application.
+    <a href="consolidated.html#sa-12.2-074">12.2-074</a></p>
+
     <a id="sa-12.2-016"/>
     <h4>12.2 016 Qt6              Date: 2024-10-02  Severity: High</h4>
     <p>In Qt6-6.7.3, a security vulnerability was fixed in the HTTP/2 component
@@ -408,6 +570,16 @@
     <a href="consolidated.html#sa-12.2-016">12.2-016</a></p>
 
 <!-- end of Qt6 -->
+
+    <a id="sa-12.2-075"/>
+    <h4>12.2 075 QtWebEngine              Date: 2025-02-02  Severity: High</h4>
+    <p>In QtWebEngine-6.8.2, nine security vulnerabilities were fixed which
+    could allow for remote code execution, arbitrary code execution in a
+    sandbox, privilege escalation, and sensitive system information disclosure.
+    These vulnerabilities occur in the Compositing, V8, Metrics, Navigation,
+    Fenced Frames, Extensions, Tracing, and Skia components of the bundled
+    copy of Chromium. Update to QtWebEngine-6.8.2.
+    <a href="consolidated.html#sa-12.2-075">12.2-075</a></p>
 
     <a id="sa-12.2-052"/>
     <h4>12.2 052 QtWebEngine          Date: 2024-12-04  Severity: Critical</h4>
@@ -459,7 +631,36 @@
 
 <!-- end of Ruby -->
 
+    <h3>rsync</h3>
+
+    <a id="sa-12.2-065"/>
+    <h4>12.2 065 rsync                    Date: 2025-01-14  Severity: Critical</h4>
+    <p>In rsync-3.4.0, six security vulnerabilities were fixed that could allow
+    for remote code execution, information disclosure, arbitrary leaking of
+    files on an rsync client, path traversal (allowing a server to write files
+    to paths on a client outside of the intended destiation directory), and for
+    privilege escalation. ALL users who have rsync need to update to 3.4.0
+    IMMEDIATELY regardless of whether they use it as a client or server.
+    <a href="consolidated.html#sa-12.2-065">12.2-065</a></p>
+
+<!-- end of rsync -->
+
     <h3>Seamonkey</h3>
+
+    <a id="sa-12.2-060"/>
+    <h4>12.2 060 Seamonkey            Date: 2025-01-08  Severity: Critical</h4>
+    <p>In Seamonkey-2.53.20, fifteen security vulnerabilities were fixed that
+    could allow for remote code execution, unauthorized information disclosure,
+    applications to be mistakenly opened, remotely exploitable crashes, sandbox
+    escapes, access to PDF and JSON objects as well as video frames cross
+    origin, permission leaks, content security policy bypasses, and cross-site
+    scripting exposure. One of these vulnerabilities is known to be exploited
+    in the wild. This brings Seamonkey up to date with the security issues
+    fixed in Firefox 128.6.0/115.19.0. If you are using Seamonkey, you should
+    update to this version immediately. Please pay special attention to the
+    build instructions as some options and dependencies were changed.
+    Update to Seamonkey-2.53.20.
+    <a href="consolidated.html#sa-12.2-060">12.2-060</a></p>
 
     <a id="sa-12.2-011"/>
     <h4>12.2 011 Seamonkey        Date: 2024-09-26  Severity: Critical</h4>
@@ -481,6 +682,18 @@
 
     <h3>Spidermonkey</h3>
 
+    <a id="sa-12.2-061"/>
+    <h4>12.2 061 Spidermonkey         Date: 2025-01-08  Severity: Medium</h4>
+    <p>In Spidermonkey-128.6.0esr, two security vulnerabilities were fixed that
+    could allow for a potentially explotiable crash or arbitrary code execution.
+    These occur when parsing a JavaScript module as JSON (which could allow
+    cross-compartment access, leading to arbitrary code execution), or when
+    segmenting specially crafted text (leading to memory corruption).
+    Note that if you do not wish to upgrade to 128.6.0esr (and thus also update gjs),
+    you can use Spidermonkey-115.19.0esr. Update to Spidermonkey-128.3.1esr
+    (or 115.19.0esr).
+    <a href="consolidated.html#sa-12.2-061">12.2-061</a></p>
+
     <a id="sa-12.2-027"/>
     <h4>12.2 027 Spidermonkey         Date: 2024-10-21  Severity: Moderate</h4>
     <p>In Spidermonkey-128.3.1esr, a security vulnerability was fixed that could
@@ -492,6 +705,19 @@
     <a href="consolidated.html#sa-12.2-027">12.2-027</a></p>
 
 <!-- end of Spidermonkey -->
+
+    <h3>Subversion</h3>
+
+    <a id="sa-12.2-055"/>
+    <h4>12.2 055 Subversion           Date: 2025-01-03  Severity: Low</h4>
+    <p>In Subversion-1.14.5, a security vulnerability was fixed that could
+    allow for a denial of service when a revision property which contains
+    control characters is committed to a repository. This is a repeat of
+    CVE-2013-1968, and only affects the mod_dav_svn module (which you would
+    use to allow access to a repository over HTTP). Update to Subversion-1.14.5.
+    <a href="consolidated.html#sa-12.2-055">12.2-055</a></p>
+
+<!-- end of Subversion -->
 
     <h3>tiff</h3>
 
@@ -507,6 +733,40 @@
 <!-- end of tiff -->
 
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.2-079"/>
+    <h4>12.2 079 Thunderbird              Date: 2025-02-06  Severity: Critical</h4>
+    <p>In Thunderbird-128.7.0esr, eleven security vulnerabilities were fixed
+    that could allow for remotely exploitable crashes, remote code execution,
+    memory corruption, privacy leaks, certificate validation issues, automatic
+    launching of web pages within Thunderbird, and for email address spoofing.
+    Because of the email address spoofing vulnerability and how severe the
+    impact can be (phishing emails will appear legitimate and can identify
+    themselves as though they came from a legitimate source, but unless a user
+    checks the email headers, they won't know it was sent elsewhere), all users
+    who have Thunderbird installed are advised to update it immediately.
+    Update to Thundebrird-128.7.0esr.
+    <a href="consolidated.html#sa-12.2-079">12.2-079</a></p>
+
+    <a id="sa-12.2-063"/>
+    <h4>12.2 063 Thunderbird              Date: 2025-01-08  Severity: High</h4>
+    <p>In Thunderbird-128.6.0esr, seven security vulnerabilities were fixed that
+    could allow for potentially exploitable crashes, remote code execution,
+    ALPN validation failures when using redirects with Alt-Svc, and for
+    privilege escalation attacks when using WebChannel APIs (also known as a
+    confused deputy attack). Update to Thunderbird-128.6.0esr.
+    <a href="consolidated.html#sa-12.2-063">12.2-063</a></p>
+
+    <a id="sa-12.2-057"/>
+    <h4>12.2 057 Thunderbird          Date: 2025-01-03  Severity: Medium</h4>
+    <p>In Thunderbird-128.5.2esr, a security vulnerability was fixed which
+    could allow for client-side path traversal when using the Matrix chatroom
+    functionality in Thunderbird's chat client. The vulnerability occurs when
+    using malicious MXC URIs, and allows a malicious room member to issue
+    arbirtary authenticated GET requests to the client's homeserver (in this
+    context, that would be Thunderbird). If you use the Matrix chatroom
+    functionality, you should update Thunderbird to 128.5.2esr.
+    <a href="consolidated.html#sa-12.2-057">12.2-057</a></p>
 
     <a id="sa-12.2-049"/>
     <h4>12.2 049 Thunderbird          Date: 2024-11-26  Severity: High</h4>
@@ -580,7 +840,41 @@
 
 <!-- end of Unbound -->
 
+    <h3>vim</h3>
+
+    <a id="sa-12.2-073"/>
+    <h4>12.2 073 vim (LFS and BLFS)       Date: 2025-02-02  Severity: Medium</h4>
+    <p>In vim-9.1.1071, a security vulnerability was fixed that could allow
+    for a crash when the win_line() function is called in some extreme
+    circumstances. Note that a user must intentionally and explicitly feed
+    Vim binary data to exploit this vulnerability. Update to vim-9.1.1071.
+    <a href="consolidated.html#sa-12.2-073">12.2-073</a></p>
+
+    <a id="sa-12.2-067"/>
+    <h4>12.2 067 vim (LFS and BLFS)       Date: 2025-01-14  Severity: Medium</h4>
+    <p>In vim-9.1.1016, a security vulnerability was fixed that could allow for
+    a crash or arbitrary code execution when using visual mode. The issue is
+    caused by a heap-based buffer overflow when using the :all command while
+    visual mode is still active, because Vim does not end visual mode and will
+    try to access beyond the end of a line in a buffer. The updated version of
+    Vim will correctly reset visual mode before opening other windows and
+    buffers, and will also verify that it won't try to access a position if
+    the position is greater than the corresponding buffer line.
+    Update to vim-9.1.1016.
+    <a href="consolidated.html#sa-12.2-067">12.2-067</a></p>
+
+<!-- end of vim -->
+
     <h3>WebKitGTK</h3>
+
+    <a id="sa-12.2-058"/>
+    <h4>12.2 058 WebKitGTK            Date: 2025-01-03  Severity: High</h4>
+    <p>In WebKitGTK-2.46.5, four security vulnerabilities were fixed that could
+    allow for remotely exploitable crashes and remote code execution. All four
+    of the issues were resolved with improved checks and memory handling, and
+    the issues are exploitable with maliciously crafted web content.
+    Update to WebKitGTK-2.46.5.
+    <a href="consolidated.html#sa-12.2-058">12.2-068</a></p>
 
     <a id="sa-12.2-051"/>
     <h4>12.2 051 WebKitGTK            Date: 2024-11-29  Severity: Critical</h4>
