@@ -65,6 +65,20 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-081"/>
+    <h4>12.2 081 GnuTLS                   Date: 2025-02-09  Severity: Medium</h4>
+    <p>In GnuTLS-3.8.9, a security vulnerability was fixed that could allow for
+    a potential denial of service to occur when handling certificates with a
+    very large number of name constraints. This is a follow up of the libtasn1
+    update, and users who have updated to libtasn1-4.20.0 should also update to
+    this version of GnuTLS for additional protection.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12243">CVE-2024-12243</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.8.9 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
     <a id="sa-12.2-080"/>
     <h4>12.2 080 Firefox                  Date: 2025-02-06  Severity: Critical</h4>
     <p>In Firefox-128.7.0esr, nine security vulnerabilities were fixed that
