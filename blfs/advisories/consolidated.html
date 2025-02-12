@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-084"/>
+    <h4>12.2 084 Unzip                    Date: 2025-02-12  Severity: Low</h4>
+    <p>In unzip-6.0-consolidated_fixes-1.patch, a null pointer dereference
+    is triggered and causes a SIGSEGV. The bug appears to be located in
+    the code responsible for handling Unicode strings. This allows an
+    attacker to perform a denial of service and possibly opens up other
+    attack vectors.  As the unzip package is no longer maintained, we
+    switched BLFS development to use bsdunzip from the libarchive package
+    as a replacement.  This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4217">CVE-2021-4217</a>.</p>
+    <p>To fix this vulnerability, install libarchive and replace unzip
+    with a symlink to bsdunzip, using the instructions for
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.
+    Note that xarchiver is not compatible with bsdunzip, so if you are
+    using xarchiver for handling zip files, you'll also need to disable
+    the "Prefer unzip for zip files" option in the "Action =&gt;
+    Preferences" dialog, and install 7zip using the instructions for
+    <a href="../view/svn/general/7zip.html">7zip (sysv)</a> or
+    <a href="../view/systemd/general/7zip.html">7zip (systemd)</a>.</p>
+
     <a id="sa-12.2-083"/>
     <h4>12.2 083 Intel Microcode          Date: 2025-02-11  Severity: High</h4>
     <p>In intel-microcode-20250211, twelve total security vulnerabilities were
