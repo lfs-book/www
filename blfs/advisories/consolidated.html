@@ -65,6 +65,74 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-083"/>
+    <h4>12.2 083 Intel Microcode          Date: 2025-02-11  Severity: High</h4>
+    <p>In intel-microcode-20250211, twelve total security vulnerabilities were
+    fixed. The first of these vulnerabilities allows for a privileged user to
+    cause a denial of service via local access on 12th-generation Intel Core
+    CPUs and higher and the 4th/5th generation of Intel Xeon Scalable CPUs.
+    It is caused by an error related to improper finite state machines in the
+    hardware logic on those processors. The next of these vulnerabilities
+    allows for a potential denial of service due to an issue with the EDECCSSA
+    user leaf function in the Intel Software Guard Extensions on some 8th, 9th,
+    and 11th generation Intel CPUs, as well as the 3rd generation Intel Xeon
+    Scalable processors, the Xeon D processors, and the 4th generation of Intel
+    Xeon CPUs (belonging to the Eagle Stream family). The next eight of the
+    vulnerabilities allow for privilege escalation, denial of service, and
+    information disclosure due to severe flaws in the UEFI firmware for the
+    12th and 13th generation Intel Core CPUs, the Core Ultra family of CPUs,
+    the Xeon Processor D family, the 3rd Generation Intel Xeon family, the
+    Pentium Silver, Celeron J, and Celeron N series of chips, the Pentium Gold
+    family, the 1st-4th generation of Intel Xeon Scalable CPUs, the Core X
+    series CPUs, the Xeon-W 2100/2200/2400/3400 series of CPUs, the Atom
+    C5000 and P5000 series of CPUs, and the Atom Processor X series of CPUs.
+    If you are running an affected chip from the families listed above, you
+    should update your microcode as soon as possible. The next vulnerability
+    allows for a denial of service in the 13th and 14th generation of Intel
+    CPUs, where improper handling of physical or environmental conditions
+    in some of these processors may allow an authenticated user to cause
+    a crash. The final security vulnerability impacts the 4th Generation Intel
+    Xeon series of CPUs, the Xeon W workstation processor line, the 5th
+    generation of Intel Xeon Scalable procesors, the Sierra Forest Xeon with
+    6 E-Cores, and the Atom P9600 processor, and it allows for a denial of
+    service caused by invalid sequences of processor instructions when using
+    Intel Data Streaming Accelerator. Upgrading the microcode, or system
+    firmware, on systems with an 8th-generation Intel CPU or higher is
+    recommended to resolve these security vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31068">CVE-2024-31068</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-36293">CVE-2024-36293</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-43758">CVE-2023-43758</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34440">CVE-2023-34440</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24582">CVE-2024-24582</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-29214">CVE-2024-29214</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28127">CVE-2024-28127</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-39279">CVE-2024-39279</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31157">CVE-2024-31157</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28047">CVE-2024-28047</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-39355">CVE-2024-39355</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-37020">CVE-2024-37020</a>.</p>
+    <p>Additional information can be found in the Intel security advisories
+    themselves:
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01166.html">Intel-SA-01166
+    (CVE-2024-31068)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01213.html">Intel-SA-01213
+    (CVE-2024-36293)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01139.html">Intel-SA-01139
+    (CVE-2023-43758, CVE-2023-34440, CVE-2024-24582, CVE-2024-29214,
+    CVE-2024-28127, CVE-2024-39279, CVE-2024-31157, and CVE-2024-28047)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01228.html">Intel-SA-01228
+    (CVE-2024-39355)</a>, and
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01194.html">Intel-SA-01194
+    (CVE-2024-37020).</a>.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above and in Intel-SA-01166, Intel-SA-01213, Intel-SA-01139,
+    Intel-SA-01228, and Intel-SA-01194. If your system is vulnerable, update to
+    intel-microcode-20250211 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
     <a id="sa-12.2-082"/>
     <h4>12.2 082 WebKitGTK                Date: 2025-02-09  Severity: Critical</h4>
     <p>In WebKitGTK-2.46.6, four security vulnerabilities were fixed that could
