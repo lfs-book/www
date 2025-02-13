@@ -65,6 +65,175 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-086"/>
+    <h4>12.2 086 Python3 (LFS and BLFS)   Date: 2025-02-12  Severity: High</h4>
+    <p>In Python-3.13.2 (and 3.12.9), five security vulnerabilities were fixed
+    that could allow for hostnames to not be flagged as incorrect when using
+    urlparse, for denial of service conditions (memory exhaustion and crashes)
+    when processing Unicode characters, using the asyncio module, or when
+    using the imaplib module to connect to a malicious server, and for email
+    header spoofing when using the email module. Only two of the five
+    vulnerabilities were assigned CVEs.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0938">CVE-2025-0938</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12254">CVE-2024-12254</a>.</p>
+    <p>Information about the vulnerabilities not assigned CVEs can be found at
+    the following bug reports:
+    <a href="https://github.com/python/cpython/issues/126108">PySys_AddWarnOptionUnicode bug report</a>,
+    <a href="https://github.com/python/cpython/issues/80222">email header spoofing bug report</a>, and
+    <a href="https://github.com/python/cpython/issues/119511">imaplib vulnerability bug report</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.13.2 (or 3.12.9 if you
+    are on 3.12.x) using the instructions from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
+    <a id="sa-12.2-085"/>
+    <h4>12.2 085 OpenSSL (LFS)            Date: 2025-02-12  Severity: High</h4>
+    <p>In OpenSSL-3.4.1 (and 3.3.3), two security vulnerabilities were fixed
+    that could allow for a timing side-channel attack while computing ECDSA
+    signatures (which allows for exfitration of a private key in an ECDSA
+    signature), and for RFC7250 handshakes with unauthenticated servers to not
+    be aborted as expected. This issue causes clients which use RFC7250 Raw
+    Public Keys (RPKs) to be vulnerable to man-in-the-middle attacks because
+    server authentication failures are not detected by clients, and then data
+    can be transmitted in plain text. Note that by default, RPKs are disabled
+    in both TLS clients and TLS servers.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-13176">CVE-2024-13176</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12797">CVE-2024-12797</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.4.1 (or 3.3.3) using
+    the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <p>Note that if you upgrade OpenSSL to a new minor version
+    (for example, from 3.3.2 to 3.4.1 or from 3.1.4 to 3.3.3), you will
+    need to rebuild OpenSSH if it is installed and it's earlier than the
+    9.4p1 release; if you upgrade OpenSSL from 1.x to 3.x, you will need
+    to rebuild everything linked against OpenSSL (including OpenSSH).</p>
+
+    <a id="sa-12.2-084"/>
+    <h4>12.2 084 Unzip                    Date: 2025-02-12  Severity: Low</h4>
+    <p>In unzip-6.0-consolidated_fixes-1.patch, a null pointer dereference
+    is triggered and causes a SIGSEGV. The bug appears to be located in
+    the code responsible for handling Unicode strings. This allows an
+    attacker to perform a denial of service and possibly opens up other
+    attack vectors.  As the unzip package is no longer maintained, we
+    switched BLFS development to use bsdunzip from the libarchive package
+    as a replacement.  This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-4217">CVE-2021-4217</a>.</p>
+    <p>To fix this vulnerability, install libarchive and replace unzip
+    with a symlink to bsdunzip, using the instructions for
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.
+    Note that xarchiver is not compatible with bsdunzip, so if you are
+    using xarchiver for handling zip files, you'll also need to disable
+    the "Prefer unzip for zip files" option in the "Action =&gt;
+    Preferences" dialog, and install 7zip using the instructions for
+    <a href="../view/svn/general/7zip.html">7zip (sysv)</a> or
+    <a href="../view/systemd/general/7zip.html">7zip (systemd)</a>.</p>
+
+    <a id="sa-12.2-083"/>
+    <h4>12.2 083 Intel Microcode          Date: 2025-02-11  Severity: High</h4>
+    <p>In intel-microcode-20250211, twelve total security vulnerabilities were
+    fixed. The first of these vulnerabilities allows for a privileged user to
+    cause a denial of service via local access on 12th-generation Intel Core
+    CPUs and higher and the 4th/5th generation of Intel Xeon Scalable CPUs.
+    It is caused by an error related to improper finite state machines in the
+    hardware logic on those processors. The next of these vulnerabilities
+    allows for a potential denial of service due to an issue with the EDECCSSA
+    user leaf function in the Intel Software Guard Extensions on some 8th, 9th,
+    and 11th generation Intel CPUs, as well as the 3rd generation Intel Xeon
+    Scalable processors, the Xeon D processors, and the 4th generation of Intel
+    Xeon CPUs (belonging to the Eagle Stream family). The next eight of the
+    vulnerabilities allow for privilege escalation, denial of service, and
+    information disclosure due to severe flaws in the UEFI firmware for the
+    12th and 13th generation Intel Core CPUs, the Core Ultra family of CPUs,
+    the Xeon Processor D family, the 3rd Generation Intel Xeon family, the
+    Pentium Silver, Celeron J, and Celeron N series of chips, the Pentium Gold
+    family, the 1st-4th generation of Intel Xeon Scalable CPUs, the Core X
+    series CPUs, the Xeon-W 2100/2200/2400/3400 series of CPUs, the Atom
+    C5000 and P5000 series of CPUs, and the Atom Processor X series of CPUs.
+    If you are running an affected chip from the families listed above, you
+    should update your microcode as soon as possible. The next vulnerability
+    allows for a denial of service in the 13th and 14th generation of Intel
+    CPUs, where improper handling of physical or environmental conditions
+    in some of these processors may allow an authenticated user to cause
+    a crash. The final security vulnerability impacts the 4th Generation Intel
+    Xeon series of CPUs, the Xeon W workstation processor line, the 5th
+    generation of Intel Xeon Scalable procesors, the Sierra Forest Xeon with
+    6 E-Cores, and the Atom P9600 processor, and it allows for a denial of
+    service caused by invalid sequences of processor instructions when using
+    Intel Data Streaming Accelerator. Upgrading the microcode, or system
+    firmware, on systems with an 8th-generation Intel CPU or higher is
+    recommended to resolve these security vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31068">CVE-2024-31068</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-36293">CVE-2024-36293</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-43758">CVE-2023-43758</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-34440">CVE-2023-34440</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24582">CVE-2024-24582</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-29214">CVE-2024-29214</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28127">CVE-2024-28127</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-39279">CVE-2024-39279</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31157">CVE-2024-31157</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28047">CVE-2024-28047</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-39355">CVE-2024-39355</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-37020">CVE-2024-37020</a>.</p>
+    <p>Additional information can be found in the Intel security advisories
+    themselves:
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01166.html">Intel-SA-01166
+    (CVE-2024-31068)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01213.html">Intel-SA-01213
+    (CVE-2024-36293)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01139.html">Intel-SA-01139
+    (CVE-2023-43758, CVE-2023-34440, CVE-2024-24582, CVE-2024-29214,
+    CVE-2024-28127, CVE-2024-39279, CVE-2024-31157, and CVE-2024-28047)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01228.html">Intel-SA-01228
+    (CVE-2024-39355)</a>, and
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01194.html">Intel-SA-01194
+    (CVE-2024-37020).</a>.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above and in Intel-SA-01166, Intel-SA-01213, Intel-SA-01139,
+    Intel-SA-01228, and Intel-SA-01194. If your system is vulnerable, update to
+    intel-microcode-20250211 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
+    <a id="sa-12.2-082"/>
+    <h4>12.2 082 WebKitGTK                Date: 2025-02-09  Severity: Critical</h4>
+    <p>In WebKitGTK-2.46.6, four security vulnerabilities were fixed that could
+    allow for a maliciously crafted webpage to fingerprint a user, for command
+    injection when copying URLs from the Web Inspector, for denial of service,
+    and unexpected process crashes. The user fingerprinting was resolved with
+    improved access restrictions to the filesystem, and the URL copying issue
+    was fixed with improved handling of files. The denial of service and
+    unexpected process crashing issues were fixed with improved memory
+    handling and state management.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24143">CVE-2025-24143</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24150">CVE-2025-24150</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24158">CVE-2025-24158</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24162">CVE-2025-24162</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.46.6 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-12.2-081"/>
+    <h4>12.2 081 GnuTLS                   Date: 2025-02-09  Severity: Medium</h4>
+    <p>In GnuTLS-3.8.9, a security vulnerability was fixed that could allow for
+    a potential denial of service to occur when handling certificates with a
+    very large number of name constraints. This is a follow up of the libtasn1
+    update, and users who have updated to libtasn1-4.20.0 should also update to
+    this version of GnuTLS for additional protection.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12243">CVE-2024-12243</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.8.9 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
     <a id="sa-12.2-080"/>
     <h4>12.2 080 Firefox                  Date: 2025-02-06  Severity: Critical</h4>
     <p>In Firefox-128.7.0esr, nine security vulnerabilities were fixed that

@@ -279,6 +279,19 @@
 
 <!-- end of glib -->
 
+    <h3>GnuTLS</h3>
+
+    <a id="sa-12.2-081"/>
+    <h4>12.2 081 GnuTLS                   Date: 2025-02-09  Severity: Medium</h4>
+    <p>In GnuTLS-3.8.9, a security vulnerability was fixed that could allow for
+    a potential denial of service to occur when handling certificates with a
+    very large number of name constraints. This is a follow up of the libtasn1
+    update, and users who have updated to libtasn1-4.20.0 should also update to
+    this version of GnuTLS for additional protection. Update to GnuTLS-3.8.9.
+    <a href="consolidated.html#sa-12.2-081">12.2-081</a></p>
+
+<!-- end of GnTLS -->
+
     <h3>gstreamer</h3>
 
     <a id="sa-12.2-053"/>
@@ -300,6 +313,26 @@
 <!-- end of gstreamer -->
 
     <h3>Intel Microcode</h3>
+
+    <a id="sa-12.2-083"/>
+    <h4>12.2 083 Intel Microcode          Date: 2025-02-11  Severity: High</h4>
+    <p>In intel-microcode-20250211, twelve total security vulnerabilities were
+    fixed. Some of these vulnerabilities impact the 8th-14th generation of
+    Intel Core CPUs, the Core Ultra family, the Xeon D series of processors,
+    the Celeron/Atom/Pentium processors, and the Xeon Scalable family of CPUs.
+    These issues can allow for denial of service, information disclosure,
+    and privilege escalation depending on the vulnerability. If you are using
+    an Intel chip that is 8th-generation of later, it is highly recommended
+    that you update the microcode to intel-microcode-20250211 or later.
+    Please read the following Intel security advisories for more information:
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01166.html">Intel-SA-01166</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01213.html">Intel-SA-01213</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01139.html">Intel-SA-01139</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01228.html">Intel-SA-01228</a>, and
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01194.html">Intel-SA-01194</a>.</p>
+    To check if you are impacted and for instructions on updating the microcode,
+    please see the security advisory.
+    <a href="consolidated.html#sa-12.2-083">12.2-083</a></p>
 
     <a id="sa-12.2-015"/>
     <h4>12.2 015 Intel Microcode  Date: 2024-09-30  Severity: Medium</h4>
@@ -533,6 +566,18 @@
 <!-- end of PostgreSQL -->
 
     <h3>Python3</h3>
+
+    <a id="sa-12.2-086"/>
+    <h4>12.2 086 Python3 (LFS and BLFS)   Date: 2025-02-12  Severity: High</h4>
+    <p>In Python-3.13.2 (and 3.12.9), five security vulnerabilities were fixed
+    that could allow for hostnames to not be flagged as incorrect when using
+    urlparse, for denial of service conditions (memory exhaustion and crashes)
+    when processing Unicode characters, using the asyncio module, or when
+    using the imaplib module to connect to a malicious server, and for email
+    header spoofing when using the email module. Only two of the five
+    vulnerabilities were assigned CVEs. Update to Python-3.13.2 (or
+    Python-3.12.9 if you are on the 3.12 series).
+    <a href="consolidated.html#sa-12.2-086">12.2-086</a></p>
 
     <a id="sa-12.2-054"/>
     <h4>12.2 054 Python3 (LFS and BLFS) Date: 2025-01-03 Severity: Medium</h4>
@@ -849,6 +894,20 @@
 
 <!-- end of Unbound -->
 
+    <h3>Unzip</h3>
+
+    <a id="sa-12.2-084"/>
+    <h4>12.2 084 Unzip                Date: 2025-02-12  Severity: Low</h4>
+    <p>In unzip-6.0-consolidated_fixes-1.patch, a security vulnerability
+    was discovered that could allow for a crash and possibly opening other
+    attack vectors.  As a response to the flaws (including this
+    vulnerability but not only it) in the unmaintained unzip package,
+    we've removed the package from the BLFS book and started to use a
+    symlink to bsdunzip from the libarchive package as a replacement.
+    <a href="consolidated.html#sa-12.2-084">12.2-084</a></p>
+
+<!-- end of Unzip -->
+
     <h3>vim</h3>
 
     <a id="sa-12.2-073"/>
@@ -875,6 +934,18 @@
 <!-- end of vim -->
 
     <h3>WebKitGTK</h3>
+
+    <a id="sa-12.2-082"/>
+    <h4>12.2 082 WebKitGTK                Date: 2025-02-09  Severity: Critical</h4>
+    <p>In WebKitGTK-2.46.6, four security vulnerabilities were fixed that could
+    allow for a maliciously crafted webpage to fingerprint a user, for command
+    injection when copying URLs from the Web Inspector, for denial of service,
+    and unexpected process crashes. The user fingerprinting was resolved with
+    improved access restrictions to the filesystem, and the URL copying issue
+    was fixed with improved handling of files. The denial of service and
+    unexpected process crashing issues were fixed with improved memory
+    handling and state management. Update to WebKitGTK-2.46.6.
+    <a href="consolidated.html#sa-12.2-082">12.2-082</a></p>
 
     <a id="sa-12.2-058"/>
     <h4>12.2 058 WebKitGTK            Date: 2025-01-03  Severity: High</h4>

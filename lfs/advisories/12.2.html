@@ -137,6 +137,19 @@
 
     <h3>OpenSSL</h3>
 
+    <a id="sa-12.2-085"/>
+    <h4>12.2 085 OpenSSL (LFS)            Date: 2025-02-12  Severity: High</h4>
+    <p>In OpenSSL-3.4.1 (and 3.3.3), two security vulnerabilities were fixed
+    that could allow for a timing side-channel attack while computing ECDSA
+    signatures (which allows for exfitration of a private key in an ECDSA
+    signature), and for RFC7250 handshakes with unauthenticated servers to not
+    be aborted as expected. This can allow for man-in-the-middle attacks, but
+    note that RFC7250 support is not enabled by default in either TLS clients
+    or TLS servers. Update to OpenSSL-3.4.1 (or 3.3.3), but note that if you
+    update from 3.3.x to 3.4.x, you will need to rebuild OpenSSH if you have
+    it instaled.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.2-085">12.2-085</a></p>
+
     <a id="sa-12.2-007"/>
     <h4>12.2 007 OpenSSL (LFS)    Date: 2024-09-17  Severity: Medium</h4>
     <p>In OpenSSL-3.3.2, a security vulnerability was fixed that could allow
@@ -151,6 +164,18 @@
 <!-- end of OpenSSL -->
 
     <h3>Python3</h3>
+
+    <a id="sa-12.2-086"/>
+    <h4>12.2 086 Python3 (LFS and BLFS)   Date: 2025-02-12  Severity: High</h4>
+    <p>In Python-3.13.2 (and 3.12.9), five security vulnerabilities were fixed
+    that could allow for hostnames to not be flagged as incorrect when using
+    urlparse, for denial of service conditions (memory exhaustion and crashes)
+    when processing Unicode characters, using the asyncio module, or when
+    using the imaplib module to connect to a malicious server, and for email
+    header spoofing when using the email module. Only two of the five
+    vulnerabilities were assigned CVEs. Update to Python-3.13.2 (or
+    Python-3.12.9 if you are on the 3.12 series).
+    <a href="../../blfs/advisories/consolidated.html#sa-12.2-086">12.2-086</a></p>
 
     <a id="sa-12.2-054"/>
     <h4>12.2 054 Python3 (LFS and BLFS) Date: 2025-01-03 Severity: Medium</h4>
