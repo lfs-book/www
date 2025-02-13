@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-085"/>
+    <h4>12.2 085 OpenSSL (LFS)            Date: 2025-02-12  Severity: High</h4>
+    <p>In OpenSSL-3.4.1 (and 3.3.3), two security vulnerabilities were fixed
+    that could allow for a timing side-channel attack while computing ECDSA
+    signatures (which allows for exfitration of a private key in an ECDSA
+    signature), and for RFC7250 handshakes with unauthenticated servers to not
+    be aborted as expected. This issue causes clients which use RFC7250 Raw
+    Public Keys (RPKs) to be vulnerable to man-in-the-middle attacks because
+    server authentication failures are not detected by clients, and then data
+    can be transmitted in plain text. Note that by default, RPKs are disabled
+    in both TLS clients and TLS servers.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-13176">CVE-2024-13176</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12797">CVE-2024-12797</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.4.1 (or 3.3.3) using
+    the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <p>Note that if you upgrade to OpenSSL-3.4.x from OpenSSL-3.3.x, you will
+    need to rebuild OpenSSH if it is installed.</p>
+
     <a id="sa-12.2-084"/>
     <h4>12.2 084 Unzip                    Date: 2025-02-12  Severity: Low</h4>
     <p>In unzip-6.0-consolidated_fixes-1.patch, a null pointer dereference
