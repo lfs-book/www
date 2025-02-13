@@ -105,8 +105,11 @@
     the instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
     <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
-    <p>Note that if you upgrade to OpenSSL-3.4.x from OpenSSL-3.3.x, you will
-    need to rebuild OpenSSH if it is installed.</p>
+    <p>Note that if you upgrade OpenSSL to a new minor version
+    (for example, from 3.3.2 to 3.4.1 or from 3.1.4 to 3.3.3), you will
+    need to rebuild OpenSSH if it is installed and it's earlier than the
+    9.4p1 release; if you upgrade OpenSSL from 1.x to 3.x, you will need
+    to rebuild everything linked against OpenSSL (including OpenSSH).</p>
 
     <a id="sa-12.2-084"/>
     <h4>12.2 084 Unzip                    Date: 2025-02-12  Severity: Low</h4>
