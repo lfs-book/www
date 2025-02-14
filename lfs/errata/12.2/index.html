@@ -33,10 +33,18 @@
              <code>--disable-fixincludes</code> option),
              you need to remove the so-called "fixed" headers after
              upgrading Glibc and rebooting, by issuing
-             <code>rm -rfv $(dirname
-               $(gcc -print-libgcc-file-name))/include-fixed/*</code>
+<div class='cmd'>
+DIR=$(dirname $(gcc -print-libgcc-file-name))</br>
+[ -e $DIR/include/limits.h ] || mv $DIR/include{-fixed,}/limits.h</br>
+[ -e $DIR/include/syslimits.h ] || mv $DIR/include{-fixed,}/syslimits.h</br>
+rm -rfv $(dirname $(gcc -print-libgcc-file-name))/include-fixed/*</br></div>
              as the <code>root</code> user.  Otherwise many packages may fail
              to build.</li>
+           <li>We've issued a previous version of the errata above, which
+             is incorrect.  If you've already followed the old errata,
+             issue <code>$(dirname $(gcc -print-prog-name=cc1))/install-tools/mkheaders</code> as the <code>root</code> user to regenerate the
+             <code>limits.h</code> and <code>syslimits.h</code> files,
+             then follow the new errata.</li>
          </ul>
 
 <!--#include virtual="/common/footer.html" -->
