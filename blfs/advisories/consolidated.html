@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-094"/>
+    <h4>12.2 094 Exim                     Date; 2025-02-27  Severity: High</h4>
+    <p>In Exim-4.98.1, a security vulnerability was fixed that could allow for
+    remote SQL injection. Note that this vulnerability does <em>not</em> affect
+    the default BLFS configuration. In order for this vulnerability to be
+    exploited, Exim must be built using SQLite as it's database engine, and
+    the runtime configuration must enable ETRN and enforce ETRN serialization.
+    If you changed the configuration to enable all three of these conditions,
+    you should update to Exim-4.98.1 immediately. For all other users, there is
+    no reason to upgrade.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26794">CVE-2025-26794</a>.</p>
+    <p>To fix this vulnerability, update to Exim-4.98.1 or later using the
+    instructions from
+    <a href="../view/svn/server/exim.html">Exim (sysv)</a> or
+    <a href="../view/systemd/server/exim.html">Exim (systemd)</a>.</p>
+
     <a id="sa-12.2-093"/>
     <h4>12.2 093 OpenSSH                  Date: 2025-02-27  Severity: Medium</h4>
     <p>In OpenSSH-9.9p2, two security vulnerabilities were fixed that could

@@ -168,6 +168,22 @@
 
 <!-- end of Emacs -->
 
+    <h3>Exim</h3>
+
+    <a id="sa-12.2-094"/>
+    <h4>12.2 094 Exim                     Date; 2025-02-27  Severity: High</h4>
+    <p>In Exim-4.98.1, a security vulnerability was fixed that could allow for
+    remote SQL injection. Note that this vulnerability does <em>not</em> affect
+    the default BLFS configuration. In order for this vulnerability to be
+    exploited, Exim must be built using SQLite as it's database engine, and
+    the runtime configuration must enable ETRN and enforce ETRN serialization.
+    If you changed the configuration to enable all three of these conditions,
+    you should update to Exim-4.98.1 immediately. For all other users, there is
+    no reason to upgrade.
+    <a href="consolidated.html#sa-12.2-094">12.2-094</a></p>
+
+<!-- end of Exim -->
+
     <h3>fetchmail</h3>
 
     <a id="sa-12.2-035"/>
