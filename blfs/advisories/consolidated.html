@@ -65,6 +65,20 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-096"/>
+    <h4>12.2 096 Exiv2                    Date: 2025-02-27  Severity: Medium</h4>
+    <p>In Exiv2-0.28.5, a security vulnerability was fixed that could allow for
+    arbitrary code execution when a user runs Exiv2 on a crafted TIFF image
+    file. The issue occurs due to a heap buffer overflow, and it is only
+    triggered when writing metadata to an image. The vulnerability occurs in
+    the TiffSubIfd() function.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26623">CVE-2025-26623</a>.</p>
+    <p>To fix this vulnerability, update to Exiv2-0.28.5 or later using the
+    instructions from
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
     <a id="sa-12.2-095"/>
     <h4>12.2 095 libxml2                  Date: 2025-02-27  Severity: High</h4>
     <p>In libxml2-2.13.6, three security vulnerabilities were fixed that could
