@@ -65,6 +65,37 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-091"/>
+    <h4>12.2 091 Xorg-Server              Date: 2025-02-27  Severity; High</h4>
+    <p>In Xorg-Server-21.1.16, eight security vulnerabilities were fixed that
+    could allow for denial of service or arbitrary code execution. If you are
+    using SSH X Forwarding or TigerVNC server, these vulnerabilities can allow
+    for remote code execution. These issues occur due to a use-after-free of
+    the root cursor, a buffer overflow in the XkbVModMaskText() function, a
+    heap buffer overflow in the XkbWriteKeySyms() function, a buffer overflow
+    in the XkbChangeTypesOfKey() function, an out-of-bounds write in the
+    CreatePointerBarrierClient() function, the usage of an uninitialized pointer
+    in the compRedirectWindow() function, a use-after-free in the
+    PlayReleasedEvents() function, and a use-after-free in the SyncInitTrigger()
+    function.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26594">CVE-2025-26594</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26595">CVE-2025-26595</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26596">CVE-2025-26596</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26597">CVE-2025-26597</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26598">CVE-2025-26598</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26599">CVE-2025-26599</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26600">CVE-2025-26600</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26601">CVE-2025-26601</a>.</p>
+    <p>To fix these vulnerabilities, update to Xorg-Server-21.1.16 or later
+    using the instructions from
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <p>In addition, if you have TigerVNC installed, upgrade TigerVNC to handle
+    these vulnerabilities using the instructions from
+    <a href="../view/svn/xsoft/tigervnc.html">TigerVNC (sysv)</a> or
+    <a href="../view/systemd/xsoft/tigervnc.html">TigerVNC (systemd)</a>.</p>
+
     <a id="sa-12.2-090"/>
     <h4>12.2 090 Emacs                    Date: 2025-02-27  Severity: Critical</h4>
     <p>In Emacs-30.1, two security vulnerabilities were fixed that could allow
