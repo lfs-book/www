@@ -1022,6 +1022,17 @@
 
     <h3>Wireshark</h3>
 
+    <a id="sa-12.2-089"/>
+    <h4>12.2 089 Wireshark                Date: 2025-02-27  Severity: High</h4>
+    <p>In Wireshark-4.4.4, a security vulnerability was fixed that could allow
+    for a denial of service condition (remotely exploitable crash) when processing
+    Bundle Protocol or CBOR packets using the Bundle Protocol and CBOR
+    dissectors. Note that this vulnerability is exploitable via packet injection
+    or crafted capture files, but if you are not using either of these protocols
+    on your network, or processing untrusted capture files, there is no need
+    to upgrade Wireshark. Update to Wireshark-4.4.4.
+    <a href="consolidated.html#sa-12.2-089">12.2-089</a></p>
+
     <a id="sa-12.2-046"/>
     <h4>12.2 046 Wireshark            Date: 2024-11-25  Severity: Medium</h4>
     <p>In Wireshark-4.4.2, two security vulnerabilities were fixed that could

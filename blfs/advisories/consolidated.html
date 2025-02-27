@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-089"/>
+    <h4>12.2 089 Wireshark                Date: 2025-02-27  Severity: High</h4>
+    <p>In Wireshark-4.4.4, a security vulnerability was fixed that could allow
+    for a denial of service condition (remotely exploitable crash) when processing
+    Bundle Protocol or CBOR packets using the Bundle Protocol and CBOR
+    dissectors. Note that this vulnerability is exploitable via packet injection
+    or crafted capture files, but if you are not using either of these protocols
+    on your network, or processing untrusted capture files, there is no need
+    to upgrade Wireshark.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1492">CVE-2025-1492</a>.</p>
+    <p>To fix this vulnerability, update to Wireshark-4.4.4 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-12.2-088"/>
     <h4>12.2 088 PostgreSQL               Date: 2025-02-27  Severity: High</h4>
     <p>In PostgreSQL-17.3, a security vulnerability was fixed that allows for
