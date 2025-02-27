@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-090"/>
+    <h4>12.2 090 Emacs                    Date: 2025-02-27  Severity: Critical</h4>
+    <p>In Emacs-30.1, two security vulnerabilities were fixed that could allow
+    for shell injection and arbitrary code execution. The first vulnerability
+    occurs in the man.el function, which could allow a remote unauthenticated
+    attacker to execute arbitrary shell commands on a vulnerable system. The
+    other vulnerability occurs when a user invokes elisp-completion-at-point
+    (for code completion) on untrusted Emacs Lisp source code, which can trigger
+    unsafe Lisp macro expansion that allows for attackers to execute arbitrary
+    code. However, this is also exploitable if a user chooses to enable
+    on-the-fly diagnostics that byte compile untrusted Emacs Lisp source code.
+    If you use Emacs, it's highly recommended that you update this package due
+    to the man.el vulnerability.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1244">CVE-2025-1244</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53920">CVE-2024-53920</a>.</p>
+    <p>To fix these vulnerabilities, update to Emacs-30.1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/emacs.html">Emacs (sysv)</a> or
+    <a href="../view/systemd/postlfs/emacs.html">Emacs (systemd)</a>.</p>
+
     <a id="sa-12.2-089"/>
     <h4>12.2 089 Wireshark                Date: 2025-02-27  Severity: High</h4>
     <p>In Wireshark-4.4.4, a security vulnerability was fixed that could allow
