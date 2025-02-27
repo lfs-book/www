@@ -65,6 +65,31 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-088"/>
+    <h4>12.2 088 PostgreSQL               Date: 2025-02-27  Severity: High</h4>
+    <p>In PostgreSQL-17.3, a security vulnerability was fixed that allows for
+    SQL injection and arbitrary code execution. The issue occurs because of how
+    PostgreSQL's string escaping routines handle invalid UTF-8 characters, in
+    combination with how invalid byte sequences within the invalid UTF-8
+    characters are processed by the 'psql' utility. If you use PostgreSQL
+    as a database server (rather than just the client utilities), it is
+    imperative that you update your server immediately to fix the issue. This
+    vulnerability was responsible for a recent compromise of the United States
+    Treasury. The initial version of this update (v17.3) introduced a regression
+    that broke string length handling routines, so the BLFS development team
+    waited to upgrade until PostgreSQL-17.4 was released. As a result, users
+    should use this version instead.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1094">CVE-2025-1094</a>.</p>
+    <p>Additional information has been released by Rapid7, who was the group
+    who reported the vulnerability to the PostgreSQL team. This can be found at
+    <a href="https://www.rapid7.com/blog/post/2025/02/13/cve-2025-1094-postgresql-psql-sql-injection-fixed/">
+    Rapid7 PostgreSQL Advisory</a>.</p>
+    <p>To fix this vulnerability, update to PostgreSQL-17.4 or later using the
+    instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
     <a id="sa-12.2-087"/>
     <h4>12.2 087 vim (LFS and BLFS)       Date: 2025-02-27  Severity: Medium</h4>
     <p>In vim-9.1.1115, a security vulnerability was fixed that could allow for

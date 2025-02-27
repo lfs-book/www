@@ -553,6 +553,18 @@
 
     <h3>PostgreSQL</h3>
 
+    <a id="sa-12.2-088"/>
+    <h4>12.2 088 PostgreSQL               Date: 2025-02-27  Severity: High</h4>
+    <p>In PostgreSQL-17.3, a security vulnerability was fixed that allows for
+    SQL injection and arbitrary code execution. The issue occurs because of how
+    PostgreSQL's string escaping routines handle invalid UTF-8 characters, in
+    combination with how invalid byte sequences within the invalid UTF-8
+    characters are processed by the 'psql' utility. If you use PostgreSQL
+    as a database server (rather than just the client utilities), it is
+    imperative that you update your server immediately to fix the issue.
+    Update to PostgreSQL-17.4 (due to a regression in 17.3).
+    <a href="consolidated.html#sa-12.2-088">12.2-088</a></p>
+
     <a id="sa-12.2-044"/>
     <h4>12.2 044 PostgreSQL           Date: 2024-11-25  Severity: High</h4>
     <p>In PostgreSQL-17.1, four security vulnerabilities were fixed that could
