@@ -155,6 +155,48 @@
 
 <!-- end of cURL-->
 
+    <h3>Emacs</h3>
+
+    <a id="sa-12.2-090"/>
+    <h4>12.2 090 Emacs                    Date: 2025-02-27  Severity: Critical</h4>
+    <p>In Emacs-30.1, two security vulnerabilities were fixed that could allow
+    for shell injection and arbitrary code execution. The first vulnerability
+    occurs in the man.el function, which could allow a remote unauthenticated
+    attacker to execute arbitrary shell commands on a vulnerable system.
+    Update to Emacs-30.1.
+    <a href="consolidated.html#sa-12.2-090">12.2-090</a></p>
+
+<!-- end of Emacs -->
+
+    <h3>Exim</h3>
+
+    <a id="sa-12.2-094"/>
+    <h4>12.2 094 Exim                     Date: 2025-02-27  Severity: High</h4>
+    <p>In Exim-4.98.1, a security vulnerability was fixed that could allow for
+    remote SQL injection. Note that this vulnerability does <em>not</em> affect
+    the default BLFS configuration. In order for this vulnerability to be
+    exploited, Exim must be built using SQLite as it's database engine, and
+    the runtime configuration must enable ETRN and enforce ETRN serialization.
+    If you changed the configuration to enable all three of these conditions,
+    you should update to Exim-4.98.1 immediately. For all other users, there is
+    no reason to upgrade.
+    <a href="consolidated.html#sa-12.2-094">12.2-094</a></p>
+
+<!-- end of Exim -->
+
+    <h3>Exiv2</h3>
+
+    <a id="sa-12.2-096"/>
+    <h4>12.2 096 Exiv2                    Date: 2025-02-27  Severity: Medium</h4>
+    <p>In Exiv2-0.28.5, a security vulnerability was fixed that could allow for
+    arbitrary code execution when a user runs Exiv2 on a crafted TIFF image
+    file. The issue occurs due to a heap buffer overflow, and it is only
+    triggered when writing metadata to an image. The vulnerability occurs in
+    the TiffSubIfd() function. Update to Exiv2-0.28.5.
+    <a href="consolidated.html#sa-12.2-096">12.2-096</a></p>
+
+<!-- end of Exiv2 -->
+
     <h3>fetchmail</h3>
 
     <a id="sa-12.2-035"/>
@@ -452,6 +494,22 @@
 
 <!-- end of libtasn1 -->
 
+    <h3>libxml2</h3>
+
+    <a id="sa-12.2-095"/>
+    <h4>12.2 095 libxml2                  Date: 2025-02-27  Severity: High</h4>
+    <p>In libxml2-2.13.6, three security vulnerabilities were fixed that could
+    allow for remote code execution, arbitrary code execution, and denial of
+    service conditions (application crashes). These occur due to a stack buffer
+    overflow, a use after free, and a NULL pointer dereference, and they happen
+    in the xmlSnprintfElements, xmlSchemaItemListAdd, and xmlPatMatch function.
+    Due to the severity of the vulnerabilities, it is highly recommended that
+    you update to libxml2-2.13.6 immediately regardless of the context that it
+    is used in.
+    <a href="consolidated.html#sa-12.2-095">12.2-095</a></p>
+
+<!-- end of libxml2 -->
+
     <h3>MariaDB</h3>
 
     <a id="sa-12.2-076"/>
@@ -522,6 +580,19 @@
 
 <!-- end of OpenJDK -->
 
+    <h3>OpenSSH</h3>
+
+    <a id="sa-12.2-093"/>
+    <h4>12.2 093 OpenSSH                  Date: 2025-02-27  Severity: Medium</h4>
+    <p>In OpenSSH-9.9p2, two security vulnerabilities were fixed that could
+    allow for a man-in-the-middle attack to impersonate any server when the
+    VerifyHostKeyDNS option is enabled, and for a denial of service condition
+    (memory exhaustion) related to the handling of SSH2_MSG_PING packets.
+    Update to OpenSSH-9.9p2.
+    <a href="consolidated.html#sa-12.2-093">12.2-093</a></p>
+
+<!-- end of OpenSSH -->
+
     <h3>PHP</h3>
 
     <a id="sa-12.2-045"/>
@@ -552,6 +623,18 @@
 <!-- end of PHP -->
 
     <h3>PostgreSQL</h3>
+
+    <a id="sa-12.2-088"/>
+    <h4>12.2 088 PostgreSQL               Date: 2025-02-27  Severity: High</h4>
+    <p>In PostgreSQL-17.3, a security vulnerability was fixed that allows for
+    SQL injection and arbitrary code execution. The issue occurs because of how
+    PostgreSQL's string escaping routines handle invalid UTF-8 characters, in
+    combination with how invalid byte sequences within the invalid UTF-8
+    characters are processed by the 'psql' utility. If you use PostgreSQL
+    as a database server (rather than just the client utilities), it is
+    imperative that you update your server immediately to fix the issue.
+    Update to PostgreSQL-17.4 (due to a regression in 17.3).
+    <a href="consolidated.html#sa-12.2-088">12.2-088</a></p>
 
     <a id="sa-12.2-044"/>
     <h4>12.2 044 PostgreSQL           Date: 2024-11-25  Severity: High</h4>
@@ -910,6 +993,14 @@
 
     <h3>vim</h3>
 
+    <a id="sa-12.2-087"/>
+    <h4>12.2 087 vim (LFS and BLFS)       Date: 2025-02-27  Severity: Medium</h4>
+    <p>In vim-9.1.1115, a security vulnerability was fixed that could allow for
+    a heap use-after-free when redireting the output of ':display' to a
+    register rather than a variable or a file. If you use this functionality,
+    update to vim-9.1.1122.
+    <a href="consolidated.html#sa-12.2-087">12.2-087</a></p>
+
     <a id="sa-12.2-073"/>
     <h4>12.2 073 vim (LFS and BLFS)       Date: 2025-02-02  Severity: Medium</h4>
     <p>In vim-9.1.1071, a security vulnerability was fixed that could allow
@@ -1002,6 +1093,17 @@
 
     <h3>Wireshark</h3>
 
+    <a id="sa-12.2-089"/>
+    <h4>12.2 089 Wireshark                Date: 2025-02-27  Severity: High</h4>
+    <p>In Wireshark-4.4.4, a security vulnerability was fixed that could allow
+    for a denial of service condition (remotely exploitable crash) when processing
+    Bundle Protocol or CBOR packets using the Bundle Protocol and CBOR
+    dissectors. Note that this vulnerability is exploitable via packet injection
+    or crafted capture files, but if you are not using either of these protocols
+    on your network, or processing untrusted capture files, there is no need
+    to upgrade Wireshark. Update to Wireshark-4.4.4.
+    <a href="consolidated.html#sa-12.2-089">12.2-089</a></p>
+
     <a id="sa-12.2-046"/>
     <h4>12.2 046 Wireshark            Date: 2024-11-25  Severity: Medium</h4>
     <p>In Wireshark-4.4.2, two security vulnerabilities were fixed that could
@@ -1040,6 +1142,17 @@
 
     <h3>Xorg-Server</h3>
 
+    <a id="sa-12.2-091"/>
+    <h4>12.2 091 Xorg-Server              Date: 2025-02-27  Severity; High</h4>
+    <p>In Xorg-Server-21.1.16, eight security vulnerabilities were fixed that
+    could allow for denial of service or arbitrary code execution. If you are
+    using SSH X Forwarding or TigerVNC server, these vulnerabilities can allow
+    for remote code execution. These issues occur due to a variety of buffer
+    overflows, use-after-frees, out-of-bounds writes, and the usage of an
+    uninitialized pointer. Update to Xorg-Server-21.1.16 and upgrade TigerVNC
+    if you have it installed.
+    <a href="consolidated.html#sa-12.2-091">12.2-091</a></p>
+
     <a id="sa-12.2-029"/>
     <h4>12.2 029 Xorg-Server          Date: 2024-10-30  Severity: High</h4>
     <p>In Xorg-Server-21.1.14, a security vulnerability was fixed that could
@@ -1055,6 +1168,14 @@
 <!-- end of xorg-server -->
 
     <h3>Xwayland</h3>
+
+    <a id="sa-12.2-092"/>
+    <h4>12.2 092 Xwayland                 Date: 2025-02-27  Severity; High</h4>
+    <p>In Xwayland-24.1.6, eight security vulnerabilities were fixed that could
+    allow for denial of service or arbitrary code execution. These issues occur
+    due to a variety of buffer overflows, use-after-frees, out-of-bounds writes,
+    and the usage of an uninitialized pointer. Update to Xwayland-24.1.6.
+    <a href="consolidated.html#sa-12.2-092">12.2-092</a></p>
 
     <a id="sa-12.2-030"/>
     <h4>12.2 030 Xwayland             Date: 2024-10-30  Severity: High</h4>

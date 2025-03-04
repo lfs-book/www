@@ -65,6 +65,212 @@
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
+    <a id="sa-12.2-096"/>
+    <h4>12.2 096 Exiv2                    Date: 2025-02-27  Severity: Medium</h4>
+    <p>In Exiv2-0.28.5, a security vulnerability was fixed that could allow for
+    arbitrary code execution when a user runs Exiv2 on a crafted TIFF image
+    file. The issue occurs due to a heap buffer overflow, and it is only
+    triggered when writing metadata to an image. The vulnerability occurs in
+    the TiffSubIfd() function.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26623">CVE-2025-26623</a>.</p>
+    <p>To fix this vulnerability, update to Exiv2-0.28.5 or later using the
+    instructions from
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
+    <a id="sa-12.2-095"/>
+    <h4>12.2 095 libxml2                  Date: 2025-02-27  Severity: High</h4>
+    <p>In libxml2-2.13.6, three security vulnerabilities were fixed that could
+    allow for remote code execution, arbitrary code execution, and denial of
+    service conditions (application crashes). The first vulnerability occurs
+    due to a stack buffer overflow in the xmlSnprintfElements function, and
+    the second vulnerability occurs due to a use-after-free in the
+    xmlSchemaItemListAdd function. The last vulnerability occurs due to
+    a NULL pointer dereference in the xmlPatMatch function when performing
+    compilation of an explicit child axis. Because of the severity of the two
+    code execution vulnerabilities, it is highly recommended that all users
+    update libxml2 immediately regardless of the context that it is used in.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24928">CVE-2025-24928</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-56171">CVE-2024-56171</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27113">CVE-2025-27113</a>.</p>
+    <p>To fix these vulnerabilities, update to libxml2-2.13.6 or later using
+    the instructions from
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
+    <a id="sa-12.2-094"/>
+    <h4>12.2 094 Exim                     Date: 2025-02-27  Severity: High</h4>
+    <p>In Exim-4.98.1, a security vulnerability was fixed that could allow for
+    remote SQL injection. Note that this vulnerability does <em>not</em> affect
+    the default BLFS configuration. In order for this vulnerability to be
+    exploited, Exim must be built using SQLite as it's database engine, and
+    the runtime configuration must enable ETRN and enforce ETRN serialization.
+    If you changed the configuration to enable all three of these conditions,
+    you should update to Exim-4.98.1 immediately. For all other users, there is
+    no reason to upgrade.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26794">CVE-2025-26794</a>.</p>
+    <p>To fix this vulnerability, update to Exim-4.98.1 or later using the
+    instructions from
+    <a href="../view/svn/server/exim.html">Exim (sysv)</a> or
+    <a href="../view/systemd/server/exim.html">Exim (systemd)</a>.</p>
+
+    <a id="sa-12.2-093"/>
+    <h4>12.2 093 OpenSSH                  Date: 2025-02-27  Severity: Medium</h4>
+    <p>In OpenSSH-9.9p2, two security vulnerabilities were fixed that could
+    allow for a man-in-the-middle attack to impersonate any server when the
+    VerifyHostKeyDNS option is enabled, and for a denial of service condition
+    (memory exhaustion) related to the handling of SSH2_MSG_PING packets.
+    The first vulnerabiltiy is very complex to exploit as it requires the
+    attacker to exhaust the client's memory resources first, but if that
+    happens, OpenSSH will not properly verify the server's host key.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26465">CVE-2025-26465</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26466">CVE-2025-26466</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSH-9.9p2 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
+    <a id="sa-12.2-092"/>
+    <h4>12.2 092 Xwayland                 Date: 2025-02-27  Severity; High</h4>
+    <p>In Xwayland-24.1.6, eight security vulnerabilities were fixed that
+    could allow for denial of service or arbitrary code execution. These issues
+    occur due to a use-after-free of the root cursor, a buffer overflow in the
+    XkbVModMaskText() function, a heap buffer overflow in the XkbWriteKeySyms()
+    function, a buffer overflow in the XkbChangeTypesOfKey() function, an
+    out-of-bounds write in the CreatePointerBarrierClient() function, the usage
+    of an uninitialized pointer in the compRedirectWindow() function, a
+    use-after-free in the PlayReleasedEvents() function, and a use-after-free
+    in the SyncInitTrigger() function.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26594">CVE-2025-26594</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26595">CVE-2025-26595</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26596">CVE-2025-26596</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26597">CVE-2025-26597</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26598">CVE-2025-26598</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26599">CVE-2025-26599</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26600">CVE-2025-26600</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26601">CVE-2025-26601</a>.</p>
+    <p>To fix these vulnerabilities, update to Xwayland-24.1.6 or later
+    using the instructions from
+    <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
+    <a id="sa-12.2-091"/>
+    <h4>12.2 091 Xorg-Server              Date: 2025-02-27  Severity; High</h4>
+    <p>In Xorg-Server-21.1.16, eight security vulnerabilities were fixed that
+    could allow for denial of service or arbitrary code execution. If you are
+    using SSH X Forwarding or TigerVNC server, these vulnerabilities can allow
+    for remote code execution. These issues occur due to a use-after-free of
+    the root cursor, a buffer overflow in the XkbVModMaskText() function, a
+    heap buffer overflow in the XkbWriteKeySyms() function, a buffer overflow
+    in the XkbChangeTypesOfKey() function, an out-of-bounds write in the
+    CreatePointerBarrierClient() function, the usage of an uninitialized pointer
+    in the compRedirectWindow() function, a use-after-free in the
+    PlayReleasedEvents() function, and a use-after-free in the SyncInitTrigger()
+    function.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26594">CVE-2025-26594</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26595">CVE-2025-26595</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26596">CVE-2025-26596</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26597">CVE-2025-26597</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26598">CVE-2025-26598</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26599">CVE-2025-26599</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26600">CVE-2025-26600</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26601">CVE-2025-26601</a>.</p>
+    <p>To fix these vulnerabilities, update to Xorg-Server-21.1.16 or later
+    using the instructions from
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <p>In addition, if you have TigerVNC installed, upgrade TigerVNC to handle
+    these vulnerabilities using the instructions from
+    <a href="../view/svn/xsoft/tigervnc.html">TigerVNC (sysv)</a> or
+    <a href="../view/systemd/xsoft/tigervnc.html">TigerVNC (systemd)</a>.</p>
+
+    <a id="sa-12.2-090"/>
+    <h4>12.2 090 Emacs                    Date: 2025-02-27  Severity: Critical</h4>
+    <p>In Emacs-30.1, two security vulnerabilities were fixed that could allow
+    for shell injection and arbitrary code execution. The first vulnerability
+    occurs in the man.el function, which could allow a remote unauthenticated
+    attacker to execute arbitrary shell commands on a vulnerable system. The
+    other vulnerability occurs when a user invokes elisp-completion-at-point
+    (for code completion) on untrusted Emacs Lisp source code, which can trigger
+    unsafe Lisp macro expansion that allows for attackers to execute arbitrary
+    code. However, this is also exploitable if a user chooses to enable
+    on-the-fly diagnostics that byte compile untrusted Emacs Lisp source code.
+    If you use Emacs, it's highly recommended that you update this package due
+    to the man.el vulnerability.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1244">CVE-2025-1244</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53920">CVE-2024-53920</a>.</p>
+    <p>To fix these vulnerabilities, update to Emacs-30.1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/emacs.html">Emacs (sysv)</a> or
+    <a href="../view/systemd/postlfs/emacs.html">Emacs (systemd)</a>.</p>
+
+    <a id="sa-12.2-089"/>
+    <h4>12.2 089 Wireshark                Date: 2025-02-27  Severity: High</h4>
+    <p>In Wireshark-4.4.4, a security vulnerability was fixed that could allow
+    for a denial of service condition (remotely exploitable crash) when processing
+    Bundle Protocol or CBOR packets using the Bundle Protocol and CBOR
+    dissectors. Note that this vulnerability is exploitable via packet injection
+    or crafted capture files, but if you are not using either of these protocols
+    on your network, or processing untrusted capture files, there is no need
+    to upgrade Wireshark.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1492">CVE-2025-1492</a>.</p>
+    <p>To fix this vulnerability, update to Wireshark-4.4.4 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-12.2-088"/>
+    <h4>12.2 088 PostgreSQL               Date: 2025-02-27  Severity: High</h4>
+    <p>In PostgreSQL-17.3, a security vulnerability was fixed that allows for
+    SQL injection and arbitrary code execution. The issue occurs because of how
+    PostgreSQL's string escaping routines handle invalid UTF-8 characters, in
+    combination with how invalid byte sequences within the invalid UTF-8
+    characters are processed by the 'psql' utility. If you use PostgreSQL
+    as a database server (rather than just the client utilities), it is
+    imperative that you update your server immediately to fix the issue. This
+    vulnerability was responsible for a recent compromise of the United States
+    Treasury. The initial version of this update (v17.3) introduced a regression
+    that broke string length handling routines, so the BLFS development team
+    waited to upgrade until PostgreSQL-17.4 was released. As a result, users
+    should use this version instead.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1094">CVE-2025-1094</a>.</p>
+    <p>Additional information has been released by Rapid7, who was the group
+    who reported the vulnerability to the PostgreSQL team. This can be found at
+    <a href="https://www.rapid7.com/blog/post/2025/02/13/cve-2025-1094-postgresql-psql-sql-injection-fixed/">
+    Rapid7 PostgreSQL Advisory</a>.</p>
+    <p>To fix this vulnerability, update to PostgreSQL-17.4 or later using the
+    instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+
+    <a id="sa-12.2-087"/>
+    <h4>12.2 087 vim (LFS and BLFS)       Date: 2025-02-27  Severity: Medium</h4>
+    <p>In vim-9.1.1115, a security vulnerability was fixed that could allow for
+    a heap use-after-free when redireting the output of ':display' to a
+    register rather than a variable or a file. When this occurs, vim will free
+    the register content before storing the new content data in the register.
+    After that, vim will free the content while shortly after trying to access
+    it, which causes the use-after-free to occur. It has been fixed by skipping
+    any output to register zero when trying to redirect to the clipboard
+    registers '*' or '+'. If you are redirecting the output of ':display' to
+    a register, it's highly recommended that you update vim, but there is no
+    need to if you are not using this function.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26603">CVE-2025-26603</a>.</p>
+    <p>To fix this vulnerability, update to vim-9.1.1122 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
     <a id="sa-12.2-086"/>
     <h4>12.2 086 Python3 (LFS and BLFS)   Date: 2025-02-12  Severity: High</h4>
     <p>In Python-3.13.2 (and 3.12.9), five security vulnerabilities were fixed
