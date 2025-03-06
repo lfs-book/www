@@ -8,7 +8,10 @@
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
      <ul>
-       <li>There are no current errata for blfs-12.3-systemd.</li>
+<!--       <li>There are no current errata for blfs-12.3-systemd.</li> -->
+       <li>In LLVM-19.1.7, if compiler-rt is built, many (more than a
+       hundred) cfi tests are known to fail because they want the gold
+       linker that we've removed from LFS.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
