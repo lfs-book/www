@@ -200,6 +200,18 @@
 
     <h3>vim</h3>
 
+    <a id="sa-12.2-097"/>
+    <h4>12.2 097 vim (LFS and BLFS)       Date: 2025-03-07  Severity: High</h4>
+    <p>In vim-9.1.1166, a security vulnerability was fixed that allows for
+    code execution when viewing crafted tar files using vim. This functionality
+    is very commonly used by LFS and BLFS users who are viewing TAR files to
+    examine changelogs for new packages. Upstream classifies the issue as
+    <em>HIGH</em> severity, and for LFS and BLFS users who use vim to view tar
+    files, this update should be considered urgent. Note that LFS/BLFS 12.3
+    shipped with this update, so users of those versions of LFS/BLFS are not
+    impacted by this vulnerability. Update to vim-9.1.1166.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.2-097">12.2-097</a></p>
+
     <a id="sa-12.2-087"/>
     <h4>12.2 087 vim (LFS and BLFS)       Date: 2025-02-27  Severity: Medium</h4>
     <p>In vim-9.1.1115, a security vulnerability was fixed that could allow for
