@@ -65,8 +65,29 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-001"/>
+    <h4>12.3 001 Spidermonkey             Date: 2025-03-07  Severity: High</h4>
+    <p>In Spidermonkey-128.8.0, two security vulnerabilities were fixed that
+    could allow for arbitrary code execution (due to type confusion), as well as
+    arbitrary code execution due to unexpected garbage collection occuring
+    during Regular Expression bailout processing. The unexpected garbage
+    collection vulnerability can also result in inconsistent results and
+    crashes, while the type confusion vulnerability only occurs when using a
+    64-bit CPU. The type confusion issue occurs due to JIT corruption of WASM
+    i32 return values, where they can pick up bits from leftover memory and
+    they will thus get treated as a different type.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1933">CVE-2025-1933</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1934">CVE-2025-1934</a>.</p>
+    <p>To fix these vulnerabilities, update to Spidermonkey-128.8.0 or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">Spidermonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">Spidermonkey (systemd)</a>.</p>
+
+    <!--
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
+    -->
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
