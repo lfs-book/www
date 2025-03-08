@@ -80,12 +80,19 @@
 
     <h2>Read online</h2>
     <p>
-      There are three versions of the Multilib-LFS online:
+      There are three versions of the Multilib-LFS online for <tt>sysv</tt>:
       <ul>
-        <li><a href="/~thomas/multilib-m32/">MLFS with m32 extensions</a>
+        <li><a href="/~thomas/multilib-m32/">MLFS-sysv with m32 extensions</a>
            (probably what you want)</li>
-        <li><a href="/~thomas/multilib-mx32/">MLFS with mx32 extensions</a></li>
-        <li><a href="/~thomas/multilib/">MLFS including both extensions</a></li>
+        <li><a href="/~thomas/multilib-mx32/">MLFS-sysv with mx32 extensions</a></li>
+        <li><a href="/~thomas/multilib/">MLFS-sysv including both extensions</a></li>
+      </ul>
+      and three versions for <tt>systemd</tt>
+      <ul>
+        <li><a href="/~thomas/multilib-systemd-m32/">MLFS-systemd with m32 extensions</a>
+           (probably what you want if you like systemd)</li>
+        <li><a href="/~thomas/multilib-systemd-mx32/">MLFS-systemd with mx32 extensions</a></li>
+        <li><a href="/~thomas/multilib-systemd/">MLFS-systemd including both extensions</a></li>
       </ul>
       These books are created when the LFS trunk has been merged to
       the multilib branch. That merge is currently done manually and
@@ -93,15 +100,26 @@
     </p>
 
     <h2>Limitations</h2>
-    <p>
-      MLFS is hard to test unless there are old binaries available to use.
-      When such a binary is executable, it unfortunatly does not mean
-      that any other of those binaries will run, too. There might be
-      BLFS library packages required as dependencies in that particular
-      multilib environment. Neither MLFS nor BLFS covers that at the
-      moment (there is no MBLFS) but MLFS should give the user an idea on how
-      to build multilib versions of libraries.
-    </p>
+    <ul>
+      <li>
+        MLFS is hard to test unless there are old binaries available to use.
+        When such a binary is executable, it unfortunatly does not mean
+        that any other of those binaries will run, too. There might be
+        BLFS library packages required as dependencies in that particular
+        multilib environment. Neither MLFS nor BLFS covers that at the
+        moment (there is no MBLFS) but MLFS should give the user an idea on how
+        to build multilib versions of libraries.
+      </li>
+      <li>
+        MLFS is available for <tt>sysv</tt> and <tt>systemd</tt> as usual
+        (<tt>REV=sysv</tt> or <tt>REV=systemd</tt> as parameter to the make
+        command. See <a href="download.html">Download</a>).
+        Note that the systemd variant is currently maintained on a "best guess"
+        basis. That means that the systemd related instructions are
+        <i>not</i> tested. If you notice errors in that instructions, let me
+        know.
+      </li>
+    </ul>
 
     <h2>Thanks to</h2>
     <ul>
