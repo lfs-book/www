@@ -8,20 +8,14 @@
     <p>
       Gaming Linux From Scratch, which is based on the
       <a href="/blfs/view/svn/">BLFS book</a>, helps you install gaming
-      support software, like Steam or Wine, on a new LFS system.
+      support software, like Steam or Wine, on a new x86_64 LFS system.
     </p>
 
     <p>
-      This process can be pretty involved, especially if you are using an
-      x86_64 CPU. When it comes to gaming, Steam is the most popular choice.
-      On Linux, Steam itself is a 32-bit binary that cannot be compiled due
-      to unavailability of source code.
-      That means you will need to emulate it on an x86_64 CPU. If you are
-      using a 32-bit CPU, Steam does work, but CEF
-      (<a href="https://github.com/chromiumembedded/cef">Chromium Embedded Framework</a>)
-      sandboxing will not. This is a feature Steam uses for the store page, as
-      Steam uses Chromium. The sandboxing feature can be disabled by passing an
-      option when running Steam.
+      This process can be pretty involved. When it comes to gaming, Steam is
+      the most popular choice. On Linux, Steam itself is a 32-bit binary that
+      cannot be compiled due to unavailability of source code. That means you
+      will need to emulate it on an x86_64 CPU.
     </p>
 
     <p>
@@ -33,10 +27,10 @@
     </p>
 
     <p>
-      In both cases, if you are using an x86_64 CPU, installing 32-bit software
-      for compatibilty with 32-bit software is the best move. A lot of
-      games are still 32-bit. Even if you plan to just use Wine, which can be
-      compiled for 64-bit, a lot of Windows software are also 32-bit only.
+      In both cases, installing 32-bit software for compatibilty with 32-bit
+      software is the best move. A lot of games are still 32-bit. Even if you
+      plan to just use Wine, which can be compiled for only 64-bit if you wish,
+      a lot of Windows software are 32-bit only.
     </p>
 
     <p>
@@ -45,11 +39,6 @@
       Steam. <a href="/~thomas/multilib-m32/">MLFS with m32 extensions</a> is
       the recommended choice to save disk usage and build times. x32-bit at
       present time is not very useful for Steam or Wine.
-    </p>
-
-    <p>
-      If you are on a 32-bit CPU, you won't need to bother with MLFS and can
-      install LFS normally.
     </p>
 
 
