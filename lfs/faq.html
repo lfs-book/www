@@ -659,8 +659,8 @@ like</br>
           as a module. If you compiled the network driver as a module, then
           also adjust /etc/modules.conf to alias the network card module as
           eth0; for example: <code>alias eth0 8139too</code>. If you don't know
-          which network card you have, you can use <code>dmesg</code>,
-          /proc/pci or <code>lspci</code> to find out.</p>
+          which network card you have, you can use <code>dmesg</code> or
+          <code>lspci</code> to find out.</p>
           <p>And, udev may rename your network devices.  For example, eth0
           may be renamed to enp4s0.  You can run <code>ip link</code>
           command after booting the LFS system, and examine the output to
