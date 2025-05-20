@@ -65,6 +65,30 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-006"/>
+    <h4>12.3 006 Expat (LFS)              Date: 2025-05-20  Severity: High</h4>
+    <p>In Expat-2.7.1, a security vulnerability was fixed that could result in
+    a crash from chaining a large number of entities. The crash is caused by a
+    stack overflow, and it was resolved by fixing the usage of recursion for
+    general entities in character data, general entities in attribute data, and
+    parameter entities. The crash is very easy to trigger. The vulnerability
+    was fixed in 2.7.0, but 2.7.0 introduced major regressions that caused all
+    calls to the XML_GetCurrentByteCount, XML_GetCurrentByteIndex,
+    XML_GetCurrentColumnNumber, XML_GetCurrentLineNumber, and the
+    XML_GetInputContext functions to cause application crashes anytime those
+    functions were called (which was originally spotted by the XML::Parser
+    Perl module's test suite). All users are encouraged to update to Expat-2.7.1
+    as soon as possible due to how easy this vulnerability is to trigger.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-8176">CVE-2024-8176</a>.</p>
+    <p>To fix these vulnerabilities, update to Expat-2.7.1 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <p>Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa.12.3-005"/>
     <h4>12.3 005 PHP                      Date: 2025-03-14  Severity: Medium</h4>
     <p>In PHP-8.4.5, seven security vulnerabilities were fixed that could allow
