@@ -130,6 +130,22 @@
 
 <!-- end of PHP -->
 
+    <h3>Qt6</h3>
+
+    <a id="sa-12.3-011"/>
+    <h4>12.3 011 Qt6                      Date: 2025-05-20  Severity: Low</h4>
+    <p>In Qt-6.9.0, a security vulnerability has been fixed that
+    could allow for a heap buffer overflow when passing an incorrectly formatted
+    Markdown file to QTextMarkdownImporter. The only known impacts at this time
+    are application crashes. Updating Qt6 to 6.9.0 can be risky and requires
+    some package rebuilds due to the usage of private API that was changed in
+    Qt 6.9.0, but the BLFS team has tested it and if you want to take the risk,
+    update to Qt 6.9.0. A patch is also available for Qt 6.8 but has not been
+    tested by the BLFS team.
+    <a href="consolidated.html#sa-12.3-011">12.3-011</a></p>
+
+<!-- end of Qt6 -->
+
     <h3>Spidermonkey</h3>
 
     <a id="sa-12.3-001"/>

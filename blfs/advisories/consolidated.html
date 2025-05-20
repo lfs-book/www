@@ -65,6 +65,49 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-011"/>
+    <h4>12.3 011 Qt6                      Date: 2025-05-20  Severity: Low</h4>
+    <p>In Qt-6.9.0, a security vulnerability has been fixed that
+    could allow for a heap buffer overflow when passing an incorrectly formatted
+    Markdown file to QTextMarkdownImporter. The only known impacts at this time
+    are application crashes. Upgrading Qt6 to 6.9.0 on an existing system can
+    cause some impacts with applications, so the BLFS team suggests considering
+    the risk before updating to Qt6-6.9.0. Qt6-6.9.0 changes some private API
+    that causes build issues with libportal as well as with some packages in KDE.
+    If you apply this update on an existing system, you will need to rebuild
+    libportal and KDE Plasma, as well as qcoro and qca (which is standard when
+    reinstalling Qt). If you have LXQt installed with the minimal set
+    of Plasma components, you will need to reinstall the layer-shell-qt package.
+    However, there is an alternative for users who want the vulnerability fix
+    and are willing to stay on Qt 6.8. Qt has published a patch for this
+    vulnerability which should apply to the 6.8 series, but it has not been
+    tested by the BLFS team. The only method tested by the BLFS team has been
+    the upgrade to Qt 6.9.0.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-3512">CVE-2025-3512</a>.</p>
+    <p>To fix this vulnerability, update to Qt6-6.9.0 or later using the
+    instructions from
+    <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a>.</p>
+    <p>Alternatively, you can apply the patch from Qt, which can be found at
+    <a href="https://download.qt.io/official_releases/qt/6.8/CVE-2025-3512-qtbase-6.8.diff">Qt CVE-2025-3512 Patch for 6.8</a>
+    and then rebuild Qt, but this has not been tested by the BLFS team.</p>
+    <p>If you decide to update to Qt-6.9.0, rebuild the following packages if
+    you have them installed:</p>
+    <ul>
+       <li><a href="../view/svn/general/qca.html">Qca (sysv)</a> or
+           <a href="../view/systemd/general/qca.html">Qca (systemd)</a></li>
+       <li><a href="../view/svn/general/qcoro.htmL">qcoro (sysv)</a> or
+           <a href="../view/systemd/general/qcoro.html">qcoro (systemd)</a></li>
+       <li><a href="../view/svn/general/libportal.html">libportal (sysv)</a> or
+           <a href="../view/systemd/general/libportal.html">libportal (systemd)</a></li>
+       <li><a href="../view/svn/kde/plasma-all.html">Plasma (sysv)</a> or
+           <a href="../view/systemd/kde/plasma-all.html">Plasma (systemd)</a></li>
+       <li>For minimal LXQt installations:
+           <a href="../view/svn/lxqt/lxqt-layer-shell-qt.html">layer-shell-qt for LXQt (sysv)</a> or
+           <a href="../view/systemd/lxqt/lxqt-layer-shell-qt.html">layer-shell-qt for LXQt (systemd)</a>.</li>
+    </ul>
+
     <a id="sa-12.3-010"/>
     <h4>12.3 010 Mercurial                Date: 2025-05-20  Severity: Medium</h4>
     <p>In Mercurial-7.0.1, a security vulnerability was fixed that could
