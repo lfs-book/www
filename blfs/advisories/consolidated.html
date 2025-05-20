@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-013"/>
+    <h4>12.3 013 lxml (Python Module)     Date: 2025-05-20  Severity: High</h4>
+    <p>In lxml-5.4.0, the bundled copies of libxml2 and libxslt were updated
+    to fix five security vulnerabilities. These vulnerabilities are known to
+    cause crashes and arbitrary code execution when processing XML and XSLT
+    documents. The issues occur due to heap-based buffer under reads, stack
+    buffer overflows, out-of-bounds memory accesses, and use-after-free issues.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-55549">CVE-2024-55549</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24855">CVE-2025-24855</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32414">CVE-2025-32414</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32415">CVE-2025-32415</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24928">CVE-2025-24938</a>.</p>
+    <p>To fix these vulnerabilities, update to lxml-5.4.0 or later using the
+    instructions from
+    <a href="../view/svn/general/python-modules.html#lxml">lxml (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#lxml">lxml (systemd)</a>.</p>
+
     <a id="sa-12.3-012"/>
     <h4>12.3 012 QtWebEngine              Date: 2025-05-20  Severity: Critical</h4>
     <p>In QtWebEngine-6.9.0, fifteen security vulnerabilities were fixed that
