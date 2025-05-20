@@ -65,6 +65,42 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-007"/>
+    <h4>12.3 007 WebKitGTK                Date: 2025-05-20  Severity: Critical</h4>
+    <p>In WebKitGTK-2.48.2, sixteen security vulnerabilities were fixed that
+    could result in unexpected process crashes, cross-origin data exfiltration,
+    memory corruption, cross-site scripting attacks, type confusion (on ARM
+    architectures), and sandbox escapes. The sandbox escape vulnerability is
+    known to be exploited in the wild, and it is thus recommended that users
+    update WebKitGTK immediately. However, caution needs to be taken if you are
+    on a 32-bit system, or a 64-bit machine with less than 16GB of RAM. If you
+    are on such a system, you are very likely going to run out of memory while
+    compiling. If that occurs, add the CMake options described in the Important
+    section to prevent the system from running out of memory. Performance will
+    be impacted slightly, but not to a level where it is noticable during
+    normal browsing activities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-44192">CVE-2024-44192</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-54467">CVE-2024-54467</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24201">CVE-2025-24201</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-54551">CVE-2025-54551</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24208">CVE-2025-24208</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24209">CVE-2024-25209</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24213">CVE-2025-24213</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24216">CVE-2025-24216</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24264">CVE-2025-24264</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30427">CVE-2025-30427</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24223">CVE-2025-24223</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-31204">CVE-2025-31204</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-31205">CVE-2025-31205</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-31206">CVE-2025-31206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-31215">CVE-2025-31215</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-31257">CVE-2025-31257</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.48.2 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
     <a id="sa-12.3-006"/>
     <h4>12.3 006 Expat (LFS)              Date: 2025-05-20  Severity: High</h4>
     <p>In Expat-2.7.1, a security vulnerability was fixed that could result in
