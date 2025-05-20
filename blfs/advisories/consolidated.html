@@ -65,6 +65,46 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-012"/>
+    <h4>12.2 012 QtWebEngine              Date: 2025-05-20  Severity: Critical</h4>
+    <p>In QtWebEngine-6.9.0, fifteen security vulnerabilities were fixed that
+    could allow for sensitive system data exfiltration, user interface spoofing,
+    remote code execution, arbitrary code execution, and sandbox escapes. The
+    vulnerabilities are in a variety of components in the bundled version of
+    Chromium, including GPU, 7-zip, Network, V8, Browser UI, DevTools, Media,
+    Media Stream, PDFium, WebRTC, and Inspector. All users who have QtWebEngine
+    installed should update to this version regardless of the context that they
+    use it in. However, note that a patch is required to fix a regression, and
+    you must update Falkon afterwards to make it compatible with the regression
+    fix. The regression has to do with GPU Acceleration. The WebRTC issue is
+    known to be exploited in the wild.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11477">CVE-2024-11477</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1426">CVE-2025-1426</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1006">CVE-2025-1006</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0999">CVE-2025-0999</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0996">CVE-2025-0996</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0998">CVE-2025-0998</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0762">CVE-2025-0762</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1919">CVE-2025-1919</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1921">CVE-2025-1921</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1918">CVE-2025-1918</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24201">CVE-2025-24201</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-2136">CVE-2025-2136</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0434">CVE-2025-0434</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0445">CVE-2025-0445</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0995">CVE-2025-0995</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.9.0 (with the patch)
+    using the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <p>After installing this version of QtWebEngine, you need to update Falkon
+    using the instructions from
+    <a href="../view/svn/xsoft/falkon.html">Falkon (sysv)</a> or
+    <a href="../view/systemd/xsoft/falkon.html">Falkon (systemd)</a>. The latest
+    version of Falkon is known to build without modifications on a BLFS 12.3
+    system.</p>
+
     <a id="sa-12.3-011"/>
     <h4>12.3 011 Qt6                      Date: 2025-05-20  Severity: Low</h4>
     <p>In Qt-6.9.0, a security vulnerability has been fixed that
