@@ -89,7 +89,22 @@
 
 <!-- end of libarchive -->
 
+    <h3>libxml2</h3>
+
+    <a id="sa-12.3-014"/>
+    <h4>12.3 014 libxml2                  Date: 2025-05-20  Severity: High</h4>
+    <p>In libxml2-2.14.2 (and 2.13.8), two security vulnerabilities were fixed
+    that could result in a denial of service (application crash) or arbitrary
+    code execution when processing XML documents. Update to libxml2-2.13.8.
+    The BLFS team does <em>not</em> recommend updating systems to the libxml2-2.14
+    series because the 2.14 series is ABI incompatible with 2.13, and in
+    addition to rebuilding all packages that use libxml2, the libxkbcommon
+    and localsearch packages will also need to be updated.</p>
+
+<!-- end of libxml2 -->
+
     <h3>libxslt</h3>
+
     <a id="sa-12.3-004"/>
     <h4>12.3 004 libxslt                  Date: 2025-03-14  Severity: High</h4>
     <p>In libxslt-1.1.43, two security vulnerabilities were fixed which could

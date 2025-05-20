@@ -65,6 +65,33 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-014"/>
+    <h4>12.3 014 libxml2                  Date: 2025-05-20  Severity: High</h4>
+    <p>In libxml2-2.14.2 (and 2.13.8), two security vulnerabilities were fixed
+    that could result in a denial of service (application crash) or arbitrary
+    code execution when processing XML documents. One of the issues occurs in
+    the xmlSchemalDCFillNodeTables function in xmlschemas.c, and results in a
+    heap-based buffer under read. To exploit that vulnerability, a crafted XML
+    document must be validated against an XML schea with certain identity
+    constraints (or a crafted XML schema must be used). The other vulnerability
+    is in the Python API and can result in out-of-bounds memory access due to an
+    incorrect return value. It occurs in the xmlPythonFileRead and the
+    xmlPythonFileReadRaw functions because of a difference between bytes and
+    characters.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32414">CVE-2025-32414</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32415">CVE-2025-32415</a>.</p>
+    <p>To fix these vulnerabilities, update to libxml2-2.13.8 or later using the
+    instructions from
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+    <p>While users can update to libxml2-2.14, it is ABI incompatible with the
+    libxml2-2.13 series as shipped in BLFS 12.3 and will need many packages to
+    be recompiled, which is why the BLFS team recommends staying on the 2.13
+    series. If upgrading to the libxml2-2.14 series, you will need to update to
+    several packages from the development version of BLFS, including localsearch
+    and libxkbcommon.</p>
+
     <a id="sa-12.3-013"/>
     <h4>12.3 013 lxml (Python Module)     Date: 2025-05-20  Severity: High</h4>
     <p>In lxml-5.4.0, the bundled copies of libxml2 and libxslt were updated
