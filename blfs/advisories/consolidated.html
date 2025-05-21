@@ -65,6 +65,32 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-034"/>
+    <h4>12.3 034 Firefox                  Date: 2025-05-20  Severity: Critical</h4>
+    <p>In Firefox-128.10.1esr (and 128.9.0/128.10.0), nine security vulnerabilities
+    were fixed that could allow for remote code execution, URL bar spoofing, sandbox
+    escapes, and unsafe attribute access (leading to out-of-bounds memory access
+    and memory corruption). Most of these vulnerabilities are exploitable via
+    standard web browsing, and two of the remote code execution vulnerabilities
+    are known to be exploited in the wild. The two remote code execution
+    vulnerabilities mentioned were demonostrated at the Vancouver Pwn2Own
+    conference. All users who have Firefox installed must urgently update to
+    Firefox-128.10.1esr to protect their system.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-3028">CVE-2025-3028</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-3029">CVE-2025-3029</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-3030">CVE-2025-3030</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4083">CVE-2025-4083</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4087">CVE-2025-4087</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4091">CVE-2025-4091</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4093">CVE-2025-4093</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4918">CVE-2025-4918</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4919">CVE-2025-4919</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-128.10.1esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
     <a id="sa-12.3-033"/>
     <h4>12.3 033 Spidermonkey             Date: 2025-05-20  Severity: Critical</h4>
     <p>In Spidermonkey-128.10.1, two critical security vulnerabilities were fixed
