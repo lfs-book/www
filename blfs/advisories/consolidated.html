@@ -65,6 +65,33 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-032"/>
+    <h4>12.3 032 Gimp                     Date: 2025-05-20  Severity: High</h4>
+    <p>In Gimp-3.0.4, a security vulnerability was fixed that could allow
+    for remote code execution when processing a crafted .ICO file. The
+    vulnerability appears to have been introduced in an early release candidate
+    for gimp3, and is caused by an integer overflow. No CVE has been assigned
+    yet, but there is a Zero Day Initiative ID assigned to the vulnerability.
+    Users who update to Gimp-3.0.4 will also need to update babl and gegl to
+    their latest versions before updating to Gimp-3.0.4.
+    This vulnerability has been assigned
+    <a href="https://gitlab.gnome.org/GNOME/gimp/-/issues/13910">ZDI-CAN-26752</a>.</p>
+    <p>Once the CVE ID is assigned by Trend Micro's Zero Day Initiative, the
+    security advisory will be updated to include it. Because of the severity
+    (given that it is an RCE), the BLFS team has chosen to file the advisory
+    prior to that portion of the CVE process completing, since all of the data
+    is already public.</p>
+    <p>To fix this vulnerability, first update to babl-0.1.114 or later using the
+    instructions from
+    <a href="../view/svn/general/babl.html">babl (sysv)</a> or
+    <a href="../view/systemd/general/babl.html">babl (systemd)</a>.</p>
+    <p>Next, update to gegl-0.4.62 or later using the instructions from
+    <a href="../view/svn/general/gegl.html">gegl (sysv)</a> or
+    <a href="../view/systemd/general/gegl.html">gegl (systemd)</a>.</p>
+    <p>Finally, update to Gimp-3.0.4 or later using the instructions from
+    <a href="../view/svn/xsoft/gimp.html">Gimp (sysv)</a> or
+    <a href="../view/systemd/xsoft/gimp.html">Gimp (systemd)</a>.</p>
+
     <a id="sa-12.3-031"/>
     <h4>12.3 031 OpenJDK                  Date: 2025-05-20  Severity: High</h4>
     <p>In OpenJDK-24.0.1, three security vulnerabilities were fixed that could
