@@ -597,7 +597,7 @@
     code execution when processing XML documents. One of the issues occurs in
     the xmlSchemalDCFillNodeTables function in xmlschemas.c, and results in a
     heap-based buffer under read. To exploit that vulnerability, a crafted XML
-    document must be validated against an XML schea with certain identity
+    document must be validated against an XML schema with certain identity
     constraints (or a crafted XML schema must be used). The other vulnerability
     is in the Python API and can result in out-of-bounds memory access due to an
     incorrect return value. It occurs in the xmlPythonFileRead and the
