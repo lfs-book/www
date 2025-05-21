@@ -65,6 +65,42 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-022"/>
+    <h4>12.3 022 libsoup2                 Date: 2025-05-20  Severity: Critical</h4>
+    <p>In libsoup-2.74.3, fourteen security vulnerabilities were discovered that
+    could allow for remotely exploitable crashes, remote code execution, HTTP
+    Request Smuggling, and memory corruption. These are very similar to the
+    vulnerabilities fixed in the recent libsoup3 update, however it includes
+    fixes for several vulnerabilities that are specific to libsoup2. Because of
+    the security vulnerabilities in libsoup2, and the fact that the only packages
+    in BLFS that require it are abandoned, the BLFS team has archived libsoup2
+    as well as consumers such as AbiWord and libgdata. However, the BLFS team
+    has also developed a patch for libsoup2 to fix these known vulnerabilities
+    for users who have libsoup2 installed. At this time though, we will not be
+    producing further patches for this package to fix further issues after BLFS
+    12.4 is released, and we recommend that all users who have libsoup2 installed
+    discontinue usage of the library. as well as libgdata and AbiWord.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52530">CVE-2024-52530</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52531">CVE-2024-52531</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52532">CVE-2024-52532</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-2784">CVE-2025-2784</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32050">CVE-2025-32050</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32052">CVE-2025-32052</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32053">CVE-2025-32053</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32906">CVE-2025-32906</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32909">CVE-2025-32909</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32910">CVE-2025-32910</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32911">CVE-2025-32911</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32912">CVE-2025-32912</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32914">CVE-2025-32914</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-46420">CVE-2024-46420</a>.</p>
+    <p>To fix these vulnerabilities, rebuild libsoup2 with the
+    <a href="../../patches/downloads/libsoup/libsoup-2.74.3-security_fixes-1.patch">libsoup-2.74.3-security_fixes-1.patch</a>
+    patch combined with the instructions from
+    <a href="../view/svn/basicnet/libsoup.html">libsoup (sysv)</a> or
+    <a href="../view/systemd/basicnet/libsoup.html">libsoup (systemd)</a>.</p>
+
     <a id="sa-12.3-021"/>
     <h4>12.3 021 libsoup3                 Date: 2025-05-20  Severity: Critical</h4>
     <p>In libsoup-3.6.5, ten security vulnerabilities were fixed that could

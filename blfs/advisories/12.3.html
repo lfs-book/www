@@ -115,6 +115,28 @@
 
 <!-- end of libarchive -->
 
+    <h3>libsoup2</h3>
+
+    <a id="sa-12.3-022"/>
+    <h4>12.3 022 libsoup2                 Date: 2025-05-20  Severity: Critical</h4>
+    <p>In libsoup-2.74.3, fourteen security vulnerabilities were discovered that
+    could allow for remotely exploitable crashes, remote code execution, HTTP
+    Request Smuggling, and memory corruption. These are very similar to the
+    vulnerabilities fixed in the recent libsoup3 update, however it includes
+    fixes for several vulnerabilities that are specific to libsoup2. Because of
+    the security vulnerabilities in libsoup2, and the fact that the only packages
+    in BLFS that require it are abandoned, the BLFS team has archived libsoup2
+    as well as consumers such as AbiWord and libgdata. However, the BLFS team
+    has also developed a patch for libsoup2 to fix these known vulnerabilities
+    for users who have libsoup2 installed. At this time though, we will not be
+    producing further patches for this package to fix further issues after BLFS
+    12.4 is released, and we recommend that all users who have libsoup2 installed
+    discontinue usage of the library. as well as libgdata and AbiWord. If you
+    are using libsoup2, use the instructions in the advisory to apply the patch
+    and fix the vulnerabilities.</p>
+
+<!-- end of libsoup2 -->
+
     <h3>libsoup3</h3>
 
     <a id="sa-12.3-021"/>
