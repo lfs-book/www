@@ -65,6 +65,36 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-021"/>
+    <h4>12.3 021 libsoup3                 Date: 2025-05-20  Severity: Critical</h4>
+    <p>In libsoup-3.6.5, ten security vulnerabilities were fixed that could
+    allow for remotely exploitable crashes, remote code execution, and memory
+    corruption. These happen in a variety of functions inside of libsoup3,
+    including append_param_quoted(), sniff_unknown(), sniff_feed_or_html(),
+    soup_headers_parse_request(), sniff_mp4(), soup_auth_digest_authenticate(),
+    and soup_message_headers_get_content_disposition(). The issues occur due to
+    a variety of problems, but include integer overflows, segmentation faults,
+    heap buffer over reads, out-of-bounds reads, NULL pointer dereferences,
+    and double frees. It's highly recommended that all users update to the
+    latest version of libsoup as soon as possible, and stay tuned to the
+    security advisories for further updates as there are many more CVEs that
+    have not yet been resolved upstream as of the time of this advisory.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32050">CVE-2025-32050</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32051">CVE-2025-32051</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32052">CVE-2025-32052</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32053">CVE-2025-32053</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32906">CVE-2025-32906</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32909">CVE-2025-32909</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32910">CVE-2025-32910</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32911">CVE-2025-32911</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32912">CVE-2025-32912</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32913">CVE-2025-32913</a>.</p>
+    <p>To fix these vulnerabilities, update to libsoup-3.6.5 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libsoup3.html">libsoup (sysv)</a> or
+    <a href="../view/systemd/basicnet/libsoup3.html">libsoup (systemd)</a>.</p>
+
     <a id="sa-12.3-020"/>
     <h4>12.3 020 Yelp                     Date: 2025-05-20  Severity: High</h4>
     <p>In Yelp-42.2, a security vulnerability was found that allows help
