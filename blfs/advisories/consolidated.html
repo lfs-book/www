@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-024"/>
+    <h4>12.3 024 Epiphany                 Date: 2025-05-20  Severity: High</h4>
+    <p>In Epiphany-48.1, a security vulnerability was fixed that allows websites
+    to trigger URL handlers with no user interaction or warning. If the handler
+    application that is called is vulnerable, remote code execution is possible
+    under the user's current context. Before this release, the browser did not
+    warn users or prevent external URL handler applications from opening without
+    a user's permission. The original release of Epiphany-48.1 introduced two
+    regressions that occured when opening Incognito windows and also when
+    opening downloaded files, so the BLFS team recommends updating to Epiphany
+    48.3 instead of 48.1.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2025-3839">CVE-2025-3839</a>.</p>
+    <p>To fix this vulnerability, update to Epiphany-48.3 or later using the
+    instructions from
+    <a href="../view/svn/xsoft/epiphany.html">Epiphany (sysv)</a> or
+    <a href="../view/systemd/xsoft/epiphany.html">Epiphany (systemd)</a>.</p>
+
     <a id="sa-12.3-023"/>
     <h4>12.3 023 giflib                   Date: 2025-05-20  Severity: High</h4>
     <p>In giflib-5.2.2, several security vulnerabilities were discovered. Only
