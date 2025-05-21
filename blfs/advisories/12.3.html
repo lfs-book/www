@@ -104,6 +104,19 @@
 
 <!-- end of Firefox -->
 
+    <h3>giflib</h3>
+
+    <a id="sa-12.3-023"/>
+    <h4>12.3 023 giflib                   Date: 2025-05-20  Severity: High</h4>
+    <p>In giflib-5.2.2, several security vulnerabilities were discovered. Only
+    one of them has a functional patch, and the BLFS team has adopted a patch
+    from the OpenMandriva team to resolve the issue. The issue is a heap buffer
+    overflow in the gif2rgb utility, that causes a crash and has a chance to
+    cause arbitrary code execution. Rebuild giflib with the security fixes patch.
+    <a href="consolidated.html#sa-12.3-023">12.3-023</a></p>
+
+<!-- end of giflib -->
+
     <h3>libarchive</h3>
 
     <a id="sa-12.3-008"/>

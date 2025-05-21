@@ -65,6 +65,26 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-023"/>
+    <h4>12.3 023 giflib                   Date: 2025-05-20  Severity: High</h4>
+    <p>In giflib-5.2.2, several security vulnerabilities were discovered. Only
+    one of them has a functional patch, and the BLFS team has adopted a patch
+    from the OpenMandriva team to resolve the issue. The issue is a heap buffer
+    overflow in the gif2rgb utility, that causes a crash and has a chance to
+    cause arbitrary code execution. In addition to the several other issues,
+    this vulnerability has been assigned four different individual CVEs, which
+    are known as
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-28506">CVE-2022-28506</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-48161">CVE-2023-48161</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45993">CVE-2024-45993</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-31344">CVE-2025-31344</a>.</p>
+    <p>Please keep an eye out for future security advisories for giflib as more
+    of the vulnerabilities in this package are resolved.</p>
+    <p>To fix the four vulnerabilities, rebuild giflib with the patch that the
+    BLFS team has developed using the instructions from
+    <a href="../view/svn/general/giflib.html">giflib (sysv)</a> or
+    <a href="../view/systemd/general/giflib.html">giflib (systemd)</a>.</p>
+
     <a id="sa-12.3-022"/>
     <h4>12.3 022 libsoup2                 Date: 2025-05-20  Severity: Critical</h4>
     <p>In libsoup-2.74.3, fourteen security vulnerabilities were discovered that
