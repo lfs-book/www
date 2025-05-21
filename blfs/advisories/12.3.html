@@ -373,6 +373,24 @@
 
 <!-- end of QtWebEngine -->
 
+    <h3>Screen</h3>
+
+    <a id="sa-12.3-030"/>
+    <h4>12.3 030 Screen                   Date: 2025-05-20  Severity: High</h4>
+    <p>In Screen-5.0.1, five security vulnerabilities were fixed that could
+    allow for a reliable local privilege escalation to root, for leaking of
+    file existence information, for TTY hijacking while attaching to a multi
+    user session, for race conditions when sending signals, and for PTYs to
+    be created world-writable. A serious buffer overflow bug caused by
+    a bad strncpy() was also fixed in this release. Because the default
+    configuration of Screen in BLFS is setuid-root, all systems with Screen
+    installed are impacted by these vulnerabilities, some dating back to
+    Screen releases all the way back to 2025. If you have Screen installed,
+    please update to Screen-5.0.1 immediately.
+    <a href="consolidated.html#sa-12.3-030">12.3-030</a></p>
+
+<!-- end of Screen -->
+
     <h3>Spidermonkey</h3>
 
     <a id="sa-12.3-001"/>
