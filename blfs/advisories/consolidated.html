@@ -65,6 +65,66 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-029"/>
+    <h4>12.3 029 intel-microcode          Date: 2025-05-20  Severity: Medium</h4>
+    <p>In intel-microcode-20250512, eight processor-level security issues were
+    addressed. six of the security vulnerabilities allow for information
+    disclosure, and two allow for denial of service. The first information
+    disclosure vulnerability can allow exposure of sensitive information in
+    shared microarchitectural structures during Transient Execution, and it
+    can allow authenticated users to enable information disclosure via local
+    access. This affects the 8th, 9th, 10th, and 11th generation Intel Core
+    processor family, the Intel Xeon W processor family, the Intel Core X-series
+    processor family, several 11th-generation Core i3s and Celerons, the
+    Xeon E-2300 processor family, the Xeon W-1300 processor family, the
+    3rd generation Intel Xeon Scalable Processor family, and the Intel Xeon E
+    processor family. The second information disclosure vulnerability occurs
+    due to exposure of sensitive information caused by shared microarchitectural
+    predictor states that influence transient execution for some Intel Core
+    and Atom processors. This includes the 8th, 9th, 10th, 11th, 12th, 13th, and
+    14th generations of Intel Core CPUs, the Atom P6000 family, the Core Ultra
+    family, the 2nd and 3rd Generation Intel Xeon Scalable processor family,
+    the Intel Xeon E processor family, the Intel Pentium Gold family, some
+    Intel Celeron processors, and the Intel Xeon 6 processor family. As always,
+    it's recommended to check if your specific CPU is impacted by using the
+    information at the end of this advisory. The next information disclosure
+    vulnerability impacts the Intel Core Ultra family, and alllows for
+    unauthenticated users to enable information disclosure due to incorrect
+    behavior. Authenticated users can also gain access to information due to
+    incorrect initialization of a resource in the branch prediction unit on
+    these CPUS. The denial of service vulnerability happens due to insufficient
+    resource pools in the core management mechanism of some Intel processors,
+    as well as uncaught exceptions in the core management mechanism. This
+    set of vulnerabilities impacts the 12th, 13th, and 14th generation of
+    Intel CPUs as well as the 4th and 5th generation of Intel Xeon processors,
+    the Core Ultra processors (series 1 and 2), the Xeon W processor family,
+    the Xeon E processor family, and the Xeon CPU Max series of processors.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28956">CVE-2024-28956</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20103">CVE-2025-20103</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-43420">CVE-2024-43420</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24495">CVE-2025-24495</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20623">CVE-2025-20623</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45332">CVE-2024-45332</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20012">CVE-2025-20012</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20054">CVE-2025-20054</a>.</p>
+    <p>Additional information about these vulnerabilities can be found at
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01153.html">INTEL-SA-01153
+    (CVE-2024-28956)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/INTEL-SA-01247.html">INTEL-SA-01247
+    (CVE-2024-43420, CVE-2025-20623, and CVE-2024-45332)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/INTEL-SA-01322.html">INTEL-SA-01322
+    (CVE-2025-24495 and CVE-2025-20012)</a>, and
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/INTEL-SA-01244.html">INTEL-SA-01244
+    (CVE-2025-20103 and CVE-2025-20054)</a>.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above and in INTEL-SA-01153, INTEL-SA-01247, INTEL-SA-01322,
+    and INTEL-SA-01244. If your system is vulnerable, update to
+    intel-microcode-20250512 or later using the instructions for
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
     <a id="sa-12.3-028"/>
     <h4>12.3 028 PostgreSQL               Date: 2025-05-20  Severity: Medium</h4>
     <p>In PostgreSQL-17.5, a security vulnerability was fixed that can allow for
