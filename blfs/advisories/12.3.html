@@ -291,6 +291,19 @@
 
 <!-- end of PHP -->
 
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-12.3-028"/>
+    <h4>12.3 028 PostgreSQL               Date: 2025-05-20  Severity: Medium</h4>
+    <p>In PostgreSQL-17.5, a security vulnerability was fixed that can allow for
+    a database input provider to achieve temporary denial of service on any
+    platform where a 1-byte over-read can trigger process termination. Both
+    libpq and the database server are impacted, so it is possible for client
+    applications to crash as well. Update to PostgreSQL-17.5.
+    <a href="consolidated.html#sa-12.3-028">12.3-028</a></p>
+
+<!-- end of PostgreSQL -->
+
     <h3>Python</h3>
 
     <a id="sa-12.3-018"/>

@@ -65,6 +65,25 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-028"/>
+    <h4>12.3 028 PostgreSQL               Date: 2025-05-20  Severity: Medium</h4>
+    <p>In PostgreSQL-17.5, a security vulnerability was fixed that can allow for
+    a database input provider to achieve temporary denial of service on any
+    platform where a 1-byte over-read can trigger process termination. The issue
+    occurs when performing GB18030 encoding validation, and is classified as a
+    buffer over-read. It affects both libpq and the database server, so client
+    applications are also impacted as well as the server component. Note that
+    in order for this vulnerability to be exploited, the text must fail
+    validation.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4207">CVE-2025-4207</a>.</p>
+    <p>To fix this vulnerability, update to PostgreSQL-17.5 or later using the
+    instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+    <p>For users on older versions of PostgreSQL, versions 16.9, 15.13, 14.18,
+    and 13.21 are available for previous release branches.</p>
+
     <a id="sa-12.3-027"/>
     <h4>12.3 027 LibreOffice              Date: 2025-05-20  Severity: Critical</h4>
     <p>In LibreOffice-25.2.2.2, a security vulnerability was fixed that allows
