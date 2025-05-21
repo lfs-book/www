@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-016"/>
+    <h4>12.3 016 c-ares                   Date: 2025-05-20  Severity: High</h4>
+    <p>In c-ares-1.34.5, a security vulnerability was fixed that could allow
+    a crash when processing DNS queries where a DNS Cookie Failure occurs,
+    where an upstream server does not properly support EDNS, or possibly on
+    TCP queries if the remote server closed the connection immediately after
+    a response. The crash occurs due to a use after free issue in the
+    read_answers() function in c-ares, and is theoretically exploitable by
+    a remote attacker if the attacker floods the target with ICMP UNREACHABLE
+    packets, but they must control the upstream nameserver. The attack
+    vector is network, but the attack complexity is high.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-31498">CVE-2025-31498</a>.</p>
+    <p>To fix this vulnerability, update to c-ares-1.34.5 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/c-ares.html">c-ares (sysv)</a> or
+    <a href="../view/systemd/basicnet/c-ares.html">c-ares (systemd)</a>.</p>
+
     <a id="sa-12.3-015"/>
     <h4>12.3 015 Exempi                   Date: 2025-05-20  Severity: Medium</h4>
     <p>In Exempi-2.6.6, five security vulnerabilities were fixed that could
