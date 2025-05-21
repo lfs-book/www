@@ -65,6 +65,22 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-026"/>
+    <h4>12.3 026 gstreamer                Date: 2025-05-20  Severity: High</h4>
+    <p>In gst-plugins-bad-1.26.1, a security vulnerability was fixed that can
+    allow for a crash or remote code execution when processing malformed
+    streams in a video file using the H.265 codec. The issue is caused by
+    a stack buffer overflow that occurs when processing slice headers.
+    This vulnerability has been assigned
+    <a href="https://www.cve.org/CVERecord?id=CVE-2025-3887">CVE-2025-3887</a>,
+    but the information on it is still reserved. A better source of information
+    is the
+    <a href="https://gstreamer.freedesktop.org/security/sa-2025-0001.html">Gstreamer Security Advisory</a>.</p>
+    <p>To fix this vulnerability, update the gstreamer stack to 1.26.1 using
+    the instructions starting at
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
     <a id="sa-12.3-025"/>
     <h4>12.3 025 ghostscript              Date: 2025-05-20  Severity: Critical</h4>
     <p>In ghostscript-10.05.0, nine security vulnerabilities were fixed that
