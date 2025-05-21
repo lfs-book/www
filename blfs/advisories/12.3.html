@@ -268,4 +268,20 @@
     <a href="consolidated.html#sa-12.3-007">12.3-007</a></p>
 
 <!-- end of WebKitGTK -->
+
+    <h3>Yelp</h3>
+
+    <a id="sa-12.3-020"/>
+    <h4>12.3 020 Yelp                     Date: 2025-05-20  Severity: High</h4>
+    <p>In Yelp-42.2, a security vulnerability was found that allows help 
+    documents to execute arbitrary JavaScript, and also read arbitrary files
+    on the disk. Upstream has not released a patched version to fix this issue,
+    but the BLFS team has adopted patches from upstream to resolve this issue.
+    There is a public exploit and writeup available demonstrating the ability 
+    to read a user's SSH Private Key via a crafted help document, and thus
+    <em>ALL BLFS USERS WHO HAVE YELP INSTALLED SHOULD APPLY THE PATCHES AS SOON
+    AS POSSIBLE</em>. Rebuild yelp and yelp-xsl with the security patches.
+    <a href="consolidated.html#sa-12.3-020">12.3-020</a></p>
+
+<!-- end of Yelp -->
 <!--#include virtual="/common/footer.html" -->
