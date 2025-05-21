@@ -65,6 +65,31 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-025"/>
+    <h4>12.3 025 ghostscript              Date: 2025-05-20  Severity: Critical</h4>
+    <p>In ghostscript-10.05.0, nine security vulnerabilities were fixed that
+    could result in remote code execution or arbitrary file accesses. The
+    arbitrary file execution vulnerability occurs due to issues with
+    truncated paths with invalid UTF-8 characters. The remainder of the issues
+    occur due to buffer overflows in various contexts, including processing
+    PDF files, serializing fonts, utilising the BJ10V, DOCXWRITE TXTWRITE, and
+    NPDL devices, and when converting glyphs to Unicode. All users who have
+    Ghostscript installed are encouraged to update as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27835">CVE-2025-27835</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27832">CVE-2025-27832</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27831">CVE-2025-27831</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27836">CVE-2025-27836</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27830">CVE-2025-27830</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27833">CVE-2025-27833</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-46646">CVE-2025-46646</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27837">CVE-2025-27837</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27834">CVE-2025-27834</a>.</p>
+    <p>To fix these vulnerabilities, update to ghostscript-10.05.0 or later
+    using the instructions from
+    <a href="../view/svn/pst/gs.html">ghostscript (sysv)</a> or
+    <a href="../view/systemd/pst/gs.html">ghostscript (systemd)</a>.</p>
+
     <a id="sa-12.3-024"/>
     <h4>12.3 024 Epiphany                 Date: 2025-05-20  Severity: High</h4>
     <p>In Epiphany-48.1, a security vulnerability was fixed that allows websites
