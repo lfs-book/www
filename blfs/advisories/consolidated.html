@@ -65,6 +65,33 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-018"/>
+    <h4>12.3 018 Python (LFS and BLFS)    Date: 2025-05-20  Severity: Medium</h4>
+    <p>In Python-3.13.3, two security vulnerabilities were fixed that could allow
+    for email header spoofing and a denial-of-service (unbounded memory usage).
+    In addition, another vulnerability was resolved after this release of Python
+    that can cause a crash when using the unicode_escape encoding or an error
+    handler when decoding bytes using the bytes.decode() function. The email
+    header spoofing vulnerability occurs when calling the as_bytes function
+    with the policy=default parameter, and requires the email message to be
+    pre-encoded with RFC 2047 prior to calling the function. The unbounded
+    memory usage issue occurs when writing temporary files with the
+    tempfile.SpooledTemporaryFile.writelines() file, and occurs because the
+    writelines() function only checks whether it should roll over after the
+    entire lines iterator is exhausted - leading to massive memory consumption.
+    Only one of these vulnerabilities has been assigned a CVE, and that is the
+    bytes.decode() unicode_escape use-after-free vulnerability. That has been
+    assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4516">CVE-2025-4516</a>.</p>
+    <p>More details can be found on the other vulnerabilities by visiting the
+    bug reports on Github:
+    <a href="https://github.com/python/cpython/issues/127371">Unbounded growth in SpooledTemporaryFile.writelines()</a> and
+    <a href="https://github.com/python/cpython/issues/121284">email: invalid RFC 2047 address header after refolding</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.13.3 or later and apply
+    the patch from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+
     <a id="sa-12.3-017"/>
     <h4>12.3 017 Perl (LFS)               Date: 2025-05-20  Severity: High</h4>
     <p>In Perl-5.40.2, a security vulnerability was fixed that could allow for
