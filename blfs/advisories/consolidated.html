@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-033"/>
+    <h4>12.3 033 Spidermonkey             Date: 2025-05-20  Severity: Critical</h4>
+    <p>In Spidermonkey-128.10.1, two critical security vulnerabilities were fixed
+    that could allow for an attacker to read and write out of bounds memory
+    through executing malicious JavaScript. The first of these vulnerabilities
+    occurs when using 'promise' objects, while the other vulnerability happens
+    due to confusing array index on a JavaScript object. These attacks have
+    been demonstrated to achieve remote code execution and JavaScript
+    manipulation at the Vancouver Pwn2Own conference. All users who have
+    Spidermonkey installed urgently need to update it on their systems.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4918">CVE-2025-4918</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4919">CVE-2025-4919</a>.</p>
+    <p>To fix these vulnerabilities, update to Spidermonkey-128.10.1 or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">Spidermonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">Spidermonkey (systemd)</a>.</p>
+
     <a id="sa-12.3-032"/>
     <h4>12.3 032 Gimp                     Date: 2025-05-20  Severity: High</h4>
     <p>In Gimp-3.0.4, a security vulnerability was fixed that could allow
