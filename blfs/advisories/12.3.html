@@ -143,7 +143,7 @@
     <h3>ghostscript</h3>
 
     <a id="sa-12.3-025"/>
-    <h4>12.3 025 ghostscript              Date: 2025-05-20  Severity: Critical</h4>
+    <h4>12.3 025 ghostscript              Updated: 2025-05-28  Severity: Critical</h4>
     <p>In ghostscript-10.05.0, nine security vulnerabilities were fixed that
     could result in remote code execution or arbitrary file accesses. The
     arbitrary file execution vulnerability occurs due to issues with
@@ -151,9 +151,15 @@
     occur due to buffer overflows in various contexts, including processing
     PDF files, serializing fonts, utilising the BJ10V, DOCXWRITE TXTWRITE, and
     NPDL devices, and when converting glyphs to Unicode. All users who have
-    Ghostscript installed are encouraged to update as soon as possible.
-    Update to ghostscript-10.05.0.
+    Ghostscript installed are encouraged to update as soon as possible. At the
+    time of this advisory, the book had ghostscript-10.05.1 but it was not known
+    that an additional security vulnerability was fixed in 10.05.1. The issue
+    allows for passwords to be stored in plaintext in encrypted PDF files.
+    Update to ghostscript-10.05.1.
     <a href="consolidated.html#sa-12.3-025">12.3-025</a></p>
+    <p><em>Updated on 2025-05-28 to include information about CVE-2025-48708,
+    which was already fixed in the book when this advisory was filed, though
+    the vulnerability was not known at the time.</em></p>
 
 <!-- end of ghostscript -->
 
