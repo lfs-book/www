@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-037"/>
+    <h4>12.3 037 libarchive               Date: 2025-05-28  Severity: High</h4>
+    <p>In libarchive-3.8.0, five security vulnerabilities were fixed that could
+    allow for crashes and memory corruption when processing RAR archives, TAR
+    archives, and WARC archives. The issues are due to heap buffer overflows,
+    signed integer overflows, and double-frees. No CVEs have been assigned, but
+    more information can be found in the Github bug reports located at:
+    <a href="https://github.com/libarchive/libarchive/pull/2584">rar: Do not skip past EOF while reading (#2854)</a>,
+    <a href="https://github.com/libarchive/libarchive/pull/2598">rar: Fix double free with over 4 billion nodes (#2598)</a>,
+    <a href="https://github.com/libarchive/libarchive/pull/2598">rar: Fix heap-buffer-overflow</a>,
+    <a href="https://github.com/libarchive/libarchive/pull/2568">warc: Prevent signed integer overflow</a>, and
+    <a href="https://github.com/libarchive/libarchive/pull/2588">tar: fix overflow in build_ustar_entry</a>.</p>
+    <p>To fix these vulnerabilities, update to libarchive-3.8.0 or later using
+    the instructions from
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
     <a id="sa.12.3-036"/>
     <h4>12.3 036 Bind                     Date: 2025-05-24  Severity: High</h4>
     <p>When an incoming DNS protocol message includes a Transaction Signature
