@@ -432,7 +432,7 @@
     <a href="../view/systemd/general/giflib.html">giflib (systemd)</a>.</p>
 
     <a id="sa-12.3-022"/>
-    <h4>12.3 022 libsoup2                 Date: 2025-05-20  Severity: Critical</h4>
+    <h4>12.3 022 libsoup2                 Updated: 2025-05-28  Severity: Critical</h4>
     <p>In libsoup-2.74.3, fourteen security vulnerabilities were discovered that
     could allow for remotely exploitable crashes, remote code execution, HTTP
     Request Smuggling, and memory corruption. These are very similar to the
@@ -445,7 +445,9 @@
     for users who have libsoup2 installed. At this time though, we will not be
     producing further patches for this package to fix further issues after BLFS
     12.4 is released, and we recommend that all users who have libsoup2 installed
-    discontinue usage of the library. as well as libgdata and AbiWord.
+    discontinue usage of the library. as well as libgdata and AbiWord. Users who
+    have libsoup2 installed and also have gst-plugins-good installed should
+    rebuild gst-plugins-good with -Dsoup-version=3.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52530">CVE-2024-52530</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52531">CVE-2024-52531</a>,
@@ -466,6 +468,9 @@
     patch combined with the instructions from
     <a href="../view/svn/basicnet/libsoup.html">libsoup (sysv)</a> or
     <a href="../view/systemd/basicnet/libsoup.html">libsoup (systemd)</a>.</p>
+    <p><em>Updated on 2025-05-28 to add additional text about rebuilding
+    gst-plugins-good with -Dsoup-version=3. Thanks goes to Rainer Fiebig
+    for the information!</em></p>
 
     <a id="sa-12.3-021"/>
     <h4>12.3 021 libsoup3                 Date: 2025-05-20  Severity: Critical</h4>
