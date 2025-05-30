@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-041"/>
+    <h4>12.3 041 gstreamer                Date: 2025-05-30  Severity: Medium</h4>
+    <p>In gst-plugins-base and gst-plugins-good 1.26.2, five security
+    vlnerabilitities were resolved that could allow for remotely exploitable
+    denial of service (application crashes) or information disclosure. The
+    vulnerabilities occur when processing SubRip or TMPlayer format subtitles,
+    as well as when reading crafted MOV and MP4 files. The issues are caused by
+    stack buffer overflows, out-of-bounds reads, and NULL pointer dereferences.
+    The MOV and MP4 vulnerabilties can be exploited remotely in contexts such
+    as web browsers.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47807">CVE-2025-47807</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47808">CVE-2025-47808</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47219">CVE-2025-47219</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47183">CVE-2025-47183</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47806">CVE-2025-47806</a>.</p>
+    <p>To fix this vulnerability, update the gstreamer stack to 1.26.2 using
+    the instructions starting at
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
     <a id="sa.12.3-040"/>
     <h4>12.3 040 ISC Kea (DHCP Server)    Date: 2025-05-24  Severity: High</h4>
     <p>A series of flaws has been made public (along with an update of the
