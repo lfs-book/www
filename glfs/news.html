@@ -9,6 +9,23 @@
        be aware of are reported here.</p>
 
     <dl class="newsItem">
+      <dt>AMDGPU PRO page deprecated, removal before GLFS 12.4</dt>
+      <dd><em>Zeckma - 2025/05/31</em>
+        <p>AMDGPU PRO had a niche use case: the AMD Media Framework, or AMF,
+        used for encoding and decoding, for use with a small selection of
+        workstation applications on Linux.</p>
+        <p>AMD in their newest release of AMDGPU PRO has removed the OpenGL,
+        Vulkan, and AMF drivers and urged people to use the Mesa and VA-API
+        driver stack instead.</p>
+        <p>Thus, since its usecase no longer exists for LFS, the page for it in
+        GLFS is now considered deprecated. It will be removed right before the
+        release of GLFS 12.4. As AMD has said, please move to Mesa and VA-API.
+        Performance for both is better than AMDGPU PRO's previous offerings.
+        Like with AMF, FFmpeg has (better) support for VA-API.</p>
+      </dd>
+    </dl>
+
+    <dl class="newsItem">
       <dt>GLFS 12.3 has been released!</dt>
       <dd><em>Zeckma - 2025/03/05</em>
         <p>The GLFS team is proud to present version 12.3 of Gaming Linux From
