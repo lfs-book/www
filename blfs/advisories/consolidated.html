@@ -65,6 +65,23 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-045"/>
+    <h4>12.3 045 MariaDB                  Date: 2025-06-02  Severity: Medium</h4>
+    <p>In MariaDB-11.4.7, five security vulnerabilities were fixed that could
+    allow for unauthorized access to data within MySQL databases, as well as for
+    remotely exploitable crashes. Users who have MariaDB installed as more than
+    a build dependency should update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30722">CVE-2025-30722</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30693">CVE-2025-30693</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52970">CVE-2023-52790</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52969">CVE-2023-52969</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52971">CVE-2023-52971</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-11.4.7 or later using the
+    instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+
     <a id="sa-12.3-044"/>
     <h4>12.3 044 systemd (LFS and BLFS)   Date: 2025-06-02  Severity: Medium</h4>
     <p>In systemd-257.6, a security vulnerability was fixed that allows an
@@ -80,7 +97,7 @@
     <a href="https://seclists.org/oss-sec/2025/q2/183">Qualys Security Advisory</a>.</p>
     <p>To fix these vulnerabilities, update to systemd-257.6 or later using the
     instructions from
-    <a href="../view/systemd/general.html">systemd</a>.</p>
+    <a href="../view/systemd/general/systemd.html">systemd</a>.</p>
     <p>Users can alternatively upgrade older systems to systemd-256.16 or later.
     At the same time, users should also upgrade the Linux Kernel on these
     systems to 6.12.31 or higher because the fix for the vulnerability depends
