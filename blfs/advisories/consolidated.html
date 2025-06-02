@@ -65,6 +65,21 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-043"/>
+    <h4>12.3 043 coreutils (LFS)          Date: 2025-06-02  Severity: Medium</h4>
+    <p>In coreutils-9.6, a security vulnerability was discovered that could
+    allow for a denial of service (application crash) or leakage of sensitive
+    data when using the 'sort' utility. The vulnerability is vulnerable to a
+    heap buffer under-read. LFS 12.3 shipped with coreutils-9.6, but it was
+    later upgraded to 9.7 in the developmenet version of the book. Both versions
+    are affected by this vulnerability.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5278">CVE-2025-5278</a>.</p>
+    <p>To fix this vulnerability, update to coreutils-9.7 with the patch using
+    the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/coreutils.html">coreutils (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/coreutils.html">coreutils (systemd)</a>.</p>
+
     <a id="sa-12.3-042"/>
     <h4>12.3 042 Perl (LFS)               Date: 2025-06-02  Severity: Medium</h4>
     <p>In Perl-5.40.2, a security vulnerability was discovered that could allow
