@@ -65,6 +65,31 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-047"/>
+    <h4>12.3 047 Python (LFS and BLFS)    Date: 2025-06-04  Severity: Critical</h4>
+    <p>In Python-3.13.4, five security vulnerabilities were fixed that could
+    allow for a denial of service when processing long IPv6 addresses, and for
+    tarfile extraction filters to be bypassed using crafted symlinks and hard
+    links. The extraction filter bypasses allow attackers to write arbitrary
+    files onto a user's filesystem when decompressing a tar file using the
+    'tarfile' python module. This also officially fixes the unicode-escape
+    vulnerability that was fixed in the security patch that we previously had
+    for Python 3.13.3.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4517">CVE-2025-4517</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4330">CVE-2025-4330</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4138">CVE-2025-4138</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12718">CVE-2024-12718</a>.</p>
+    <p>Additional information about the IPv6 vulnerability can be found at
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12718">the bug report for
+    the vulnerability</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.13.4 or later using the
+    instructions from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <p>If you are still on Python 3.12, update to Python-3.12.11 using the
+    same instructons.</p>
+
     <a id="sa-12.3-046"/>
     <h4>12.3 046 QtWebEngine              Date: 2025-06-03  Severity: Critical</h4>
     <p>In QtWebEngine-6.9.1, nineteen security advisories were fixed that could

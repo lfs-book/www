@@ -132,6 +132,16 @@
 
     <h3>Python</h3>
 
+    <a id="sa-12.3-047"/>
+    <h4>12.3 047 Python (LFS and BLFS)    Date: 2025-06-04  Severity: Critical</h4>
+    <p>In Python-3.13.4, five security vulnerabilities were fixed that could
+    allow for a denial of service when processing long IPv6 addresses, and for
+    tarfile extraction filters to be bypassed using crafted symlinks and hard
+    links. The extraction filter bypasses allow attackers to write arbitrary
+    files onto a user's filesystem when decompressing a tar file using the
+    'tarfile' python module. Update to Python-3.13.4.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-047">12.3-047</a></p>
+
     <a id="sa-12.3-018"/>
     <h4>12.3 018 Python (LFS and BLFS)    Date: 2025-05-20  Severity: Medium</h4>
     <p>In Python-3.13.3, two security vulnerabilities were fixed that could allow
