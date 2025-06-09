@@ -547,6 +547,23 @@
 
 <!-- end of QtWebEngine -->
 
+    <h3>Samba</h3>
+
+    <a id="sa-12.3-052"/>
+    <h4>12.3 052 Samba                    Date: 2025-06-09  Severity: Medium</h4>
+    <p>In Samba-4.22.2, a security vulnerability was fixed that could allow for
+    file shares to be exposed to clients until client computers disconnect from
+    an SMB server and reconnect again. The problem occurs because the smbd
+    service daemon did not pick up group membership changes when it reset an
+    expired SMB session. This however only affects Kerberos authentication,
+    which is not part of the standard BLFS configuration. Users who are using
+    the standard BLFS configuration are not impacted, nor are they impacted if
+    they are just using the client side components of Samba. Update to
+    Samba-4.22.2 if you are using Kerberos in your server's configuration.
+    <a href="consolidated.html#sa-12.3-052">12.3-052</a></p>
+
+<!-- end of Samba -->
+
     <h3>Screen</h3>
 
     <a id="sa-12.3-030"/>
