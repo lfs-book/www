@@ -65,6 +65,27 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="as-12.3-050"/>
+    <h4>12.3 050 File::Find::Rule         Date: 2025-06-09  Severity: High</h4>
+    <p>In File::Find::Rule-0.35, a security vulnerability was fixed that could
+    allow for arbitrary code execution when 'grep()' encounters a maliciously
+    crated file name. A file handle is opened with the 2 argument form of
+    'open()', which allows an attacker provided filename to provide the MODE
+    parameter to open(), turning the filename into a command to be executed.
+    There is a proof of concept available to demonstrate how the vulnerability
+    can be exploited. Users who have File::Find;:Rule installed should update
+    to 0.35.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2011-10007">CVE-2011-10007</a>.</p>
+    <p>More details about the vulnerability can be found at the
+    <a href="https://www.openwall.com/lists/oss-security/2025/06/05/4">oss-security post</a>.</p>
+    <p>To fix this vulnerability, update to File::Find::Rule-0.35 or later
+    using the instructions from
+    <a href="../view/svn/general/perl-deps.html#perl-file-find-rule">File::Find::Rule (sysv)</a> or
+    <a href="../view/svn/general/perl-deps.html#perl-file-find-rule">File::Find::Rule (systemd)</a>.</p>
+    <p>Alternatively, users can use 'cpan to update the module, using:
+    <em>cpan -i File::Find::Rule</em> as the root user.</p>
+
     <a id="sa-12.3-049"/>
     <h4>12.3 049 Wireshark                Date: 2025-06-09  Severity: High</h4>
     <p>In Wireshark-4.4.7, a security vulnerability was fixed that could allow
