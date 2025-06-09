@@ -99,7 +99,7 @@
     <a href="../view/svn/multimedia/libvpx.html">libvpx (sysv)</a> or
     <a href="../view/systemd/multimedia/libvpx.html">libvpx (systemd)</a>.</p>
     <p>After upgrading libvpx, users will need to reinstall the following
-    packages on their system:
+    packages on their system:</p>
     <ul>
       <li>ffmpeg</li>
       <li>VLC</li>
@@ -107,7 +107,7 @@
       <li>xine-lib</li>
       <li>Thunderbird</li>
       <li>Firefox</li>
-    </ul></p>
+    </ul>
 
     <a id="sa-12.3-050"/>
     <h4>12.3 050 File::Find::Rule         Date: 2025-06-09  Severity: High</h4>
@@ -315,7 +315,7 @@
     <a id="sa.12.3-040"/>
     <h4>12.3 040 ISC Kea (DHCP Server)    Date: 2025-05-24  Severity: High</h4>
     <p>A series of flaws has been made public (along with an update of the
-    server software) by ISC.
+    server software) by ISC.</p>
     <ul>
     <li><a href="https://kb.isc.org/docs/cve-2025-32801">CVE-2025-32801</a><br/>
       Loading a malicious hook library can lead to local privilege escalation</li>
@@ -324,7 +324,7 @@
     <li><a href="https://kb.isc.org/docs/cve-2025-32803">CVE-2025-32803</a><br/>
       Insecure file permissions can result in confidential information leakage</li>
     </ul>
-    The first two are fixed by the upgrade to at least version 2.6.3. The third
+    <p>The first two are fixed by the upgrade to at least version 2.6.3. The third
     one is should be fixed by proper configuration so that data (lease files) and
     logs are stored in directories which can be made not world-readable.</p>
     <p>To fix these vulnerabilities, update to kea-2.6.3 or later using the
