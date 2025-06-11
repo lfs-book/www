@@ -65,6 +65,24 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-053"/>
+    <h4>12.3 053 Thunderbird              Date: 2025-06-11  Severity: High</h4>
+    <p>In Thunderbird-128.11.1esr, a security vulnerability was fixed that
+    could allow for credential linkage, exaughsting disk usage, and downloading
+    files unsolicted by using crafted HTML mailbox:/// links. This was the same
+    vulnerability that was claimed to be fixed in Thunderbird-128.10.2esr. Due
+    to different code landing, the vulnerability was never fixed until this
+    release. This vulnerability is rated as high and was unfixed for 22 days.
+    Update immediately.
+    The CVE that was claimed to be fixed was assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-3877">CVE-2025-3877</a>
+    but has been rejected. The new assignment is
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5986">CVE-2025-5986</a>.</p>
+    <p>To fix this vulnerability, update to Thunderbird-128.11.1esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
     <a id="sa-12.3-052"/>
     <h4>12.3 052 Samba                    Date: 2025-06-09  Severity: Medium</h4>
     <p>In Samba-4.22.2, a security vulnerability was fixed that could allow for
