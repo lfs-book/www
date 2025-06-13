@@ -563,6 +563,21 @@
 
 <!-- end of QtWebEngine -->
 
+    <h3>Requests (Python Module)</h3>
+
+    <a id="sa-12.3-055"/>
+    <h4>12.3 055 Requests (Python Module) Date: 2025-06-13  Severity: Medium</h4>
+    <p>In Requests-2.32.4, a security vulnerability was fixed where a crafted
+    URL and trusted environment can retrieve credentials from the wrong hostname
+    from a .netrc file. Users who do not have a ~/.netrc file with credentials
+    are not impacted by this vulnerability, and there is no reason for them to
+    update to this version. If you do have a ~/.netrc file though, you should
+    update to Requests-2.32.4 immediately, as the workaround requires modifying
+    every requests session to specify "trust_env=False".
+    <a href="consolidated.html#sa-12.3-055">12.3-055</a></p>
+
+<!-- end of Requests (Python Module) -->
+
     <h3>Samba</h3>
 
     <a id="sa-12.3-052"/>
