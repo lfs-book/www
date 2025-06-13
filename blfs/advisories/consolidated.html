@@ -65,6 +65,35 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-054"/>
+    <h4>12.3 054 Konsole                  Date: 2025-06-13  Severity: Critical</h4>
+    <p>In Konsole-25.04.2, a security vulnerability was fixed that allows for
+    attackers to trick users into executing arbitrary code with a malicious
+    link. The vulnerability occurs because Konsole allows loading URLs from
+    various scheme handlers (such as telnet://), but it does not check first
+    to see if the program to handle the scheme is present. If it isn't present,
+    it will execute 'bash' instead, allowing for arbitrary code execution.
+    One of the BLFS team members developed a proof of concept that works on
+    BLFS as the rlogin utility is no longer installed on LFS systems, being
+    disabled from inetutils (but still supported by Konsole). There are two
+    ways to fix this: updating to Konsole-25.04.2, or removing the
+    $KF6_PREFIX/share/applications/ktelnetservice6.desktop file. The BLFS
+    team recommends updating the package and it has been tested and confirmed
+    to work on BLFS 12.3 systems. The telnet://, rlogin://, and ssh:// backends
+    are impacted, and you are vulnerable if any one of those three programs are
+    not present on your system.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49091">CVE-2025-49091</a>.</p>
+    <p>More information can be found from the write-up at
+    <a href="https://seclists.org/oss-sec/2025/q2/242">oss-security</a>.</p>
+    <p>To fix this vulnerability, update to Konsole-25.04.2 or later using
+    the instructions from
+    <a href="../view/svn/kde/konsole.html">Konsole (sysv)</a> or
+    <a href="../view/systemd/kde/konsole.html">Konsole (systemd)</a>.</p>
+    <p>Alternatively, you can remove the telnet service by removing the
+    <em>$KF6_PREFIX/share/applications/ktenletservice6.desktop</em> file from
+    your system.</p>
+
     <a id="sa-12.3-053"/>
     <h4>12.3 053 Thunderbird              Date: 2025-06-11  Severity: High</h4>
     <p>In Thunderbird-128.11.1esr, a security vulnerability was fixed that

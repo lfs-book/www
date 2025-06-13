@@ -292,6 +292,22 @@
 
 <!-- end of kea dhcp server -->
 
+    <h3>Konsole</h3>
+
+    <a id="sa-12.3-054"/>
+    <h4>12.3 054 Konsole                  Date: 2025-06-13  Severity: Critical</h4>
+    <p>In Konsole-25.04.2, a security vulnerability was fixed that allows for
+    attackers to trick users into executing arbitrary code with a malicious
+    link. The vulnerability occurs because Konsole allows loading URLs from
+    various scheme handlers (such as telnet://), but it does not check first
+    to see if the program to handle the scheme is present. If it isn't present,
+    it will execute 'bash' instead, allowing for arbitrary code execution.
+    Update to Konsole-25.04.2, or remove the telnet service for Konsole by
+    removing the <em>$KF6_PREFIX/share/applications/ktelnetservice6.desktop</em>
+    file from your system.</p>
+
+<!-- end of Konsole -->
+
     <h3>libarchive</h3>
 
     <a id="sa-12.3-037"/>
