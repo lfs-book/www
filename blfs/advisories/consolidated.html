@@ -65,6 +65,31 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-061"/>
+    <h4>12.3 061 Linux-PAM                Date: 2026-06-22  Severity: High</h4>
+    <p>In Linux-PAM-1.7.1, two security vulnerabilities were fixed that could
+    allow for privilege escalation and for unauthorized access to systems. The
+    unauthorized access to systems vulnerability occurs in the pam_access module,
+    where certain rules in it's configuration file are mistakenly treated as
+    hostnames. Attackers can leverage that vulnerability to trick the system by
+    pretending to be a trusted hostname, and thus gain access to systems where
+    they are not supposed to have access to. This especially poses a risk for
+    systems that rely on pam_access to control who can access certain services
+    or terminals in a multi-user system. The privilege escalation vulnerability
+    is much more serious and is being chained with vulnerabilities in udisks
+    and libblockdev to achieve privilege escalation to root. There are detailed
+    proof of concept exploits as well as in-depth documentation about exploiting
+    this chain of vulnerabilities, and this vulnerability was disclosed by the
+    French government. <em>All users who have Linux-PAM installed on their
+    systems should update immediately.</em>
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10963">CVE-2024-10963</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6020">CVE-2025-6020</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-PAM-1.7.1 or later using
+    the instructions from
+    <a href="../view/svn/postlfs/linux-pam.html">Linux-PAM (sysv)</a> or
+    <a href="../view/systemd/postlfs/linux-pam.html">Linux-PAM (systemd)</a>.</p>
+
     <a id="sa-12.3-060"/>
     <h4>12.3 060 libxml2                  Date: 2025-06-21  Severity: High</h4>
     <p>In libxml2-2.14.4, a security vulnerability was fixed that could allow
