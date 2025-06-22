@@ -8,12 +8,12 @@
     <a id="LFS12.3"/>
     <p>LFS-12.3 was released on 2025-03-05</p>
 
-     <!-- Editors: Do not remove this entry, just comment it out. -->
-
+     <!-- Editors: Do not remove this entry, just comment it out.
 
     <ul>
        <li>There are currently no known security vulnerabilities for LFS-12.3.</li>
     </ul>
+-->
 
     <!-- Editors: do the consolidated file first, to get the next number.
          Checking what you have prepared is easier if you can create symlinks
@@ -85,4 +85,96 @@
 
 <!-- end of Glibc -->
 
+    <h3>coreutils</h3>
+
+    <a id="sa-12.3-043"/>
+    <h4>12.3 043 coreutils (LFS)          Date: 2025-06-02  Severity: Medium</h4>
+    <p>In coreutils-9.6, a security vulnerability was discovered that could
+    allow for a denial of service (application crash) or leakage of sensitive
+    data when using the 'sort' utility. The vulnerability is vulnerable to a
+    heap buffer under-read. Update to coreutils-9.7 with the patch.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-043">12.3-043</a></p>
+
+<!-- end of coreutils -->
+
+    <h3>Expat</h3>
+
+    <a id="sa-12.3-006"/>
+    <h4>12.3 006 Expat (LFS)              Date: 2025-05-20  Severity: High</h4>
+    <p>In Expat-2.7.1, a security vulnerability was fixed that could result in
+    a crash from chaining a large number of entities. The crash is caused by a
+    stack overflow, and it was resolved by fixing the usage of recursion for
+    general entities in character data, general entities in attribute data, and
+    parameter entities. Update to Expat-2.7.1 as soon as possible.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-006">12.3-006</a></p>
+
+<!-- end of Expat -->
+
+    <h3>Perl</h3>
+
+    <a id="sa-12.3-042"/>
+    <h4>12.3 042 Perl (LFS)               Date: 2025-06-02  Severity: Medium</h4>
+    <p>In Perl-5.40.2, a security vulnerability was discovered that could allow
+    for a race condition where file operations may target unintended paths.
+    The vulnerability is known to cause arbitrary code execuction as well as
+    loading files from unexpected locations. Rebuild Perl-5.40.2 with the patch.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-042">12.3-042</a></p>
+
+    <a id="sa-12.3-017"/>
+    <h4>12.3 017 Perl (LFS)               Date: 2025-05-20  Severity: High</h4>
+    <p>In Perl-5.40.2, a security vulnerability was fixed that could allow for
+    a denial of service or arbitrary code execution when transliterating
+    non-ASCII bytes. The vulnerability is caused by a heap buffer overflow,
+    and a subsequent out-of-bounds write. Update to Perl-5.40.2.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-017">12.3-017</a></p>
+
+<!-- end of Perl -->
+
+    <h3>Python</h3>
+
+    <a id="sa-12.3-047"/>
+    <h4>12.3 047 Python (LFS and BLFS)    Date: 2025-06-04  Severity: Critical</h4>
+    <p>In Python-3.13.4, five security vulnerabilities were fixed that could
+    allow for a denial of service when processing long IPv6 addresses, and for
+    tarfile extraction filters to be bypassed using crafted symlinks and hard
+    links. The extraction filter bypasses allow attackers to write arbitrary
+    files onto a user's filesystem when decompressing a tar file using the
+    'tarfile' python module. Update to Python-3.13.4.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-047">12.3-047</a></p>
+
+    <a id="sa-12.3-018"/>
+    <h4>12.3 018 Python (LFS and BLFS)    Date: 2025-05-20  Severity: Medium</h4>
+    <p>In Python-3.13.3, two security vulnerabilities were fixed that could allow
+    for email header spoofing and a denial-of-service (unbounded memory usage).
+    In addition, another vulnerability was resolved after this release of Python
+    that can cause a crash when using the unicode_escape encoding or an error
+    handler when decoding bytes using the bytes.decode() function. Update to
+    Python-3.13.3 and apply the patch for the bytes.decode() vulnerability.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-018">12.3-018</a></p>
+
+<!-- end of Python -->
+
+    <h3>systemd</h3>
+
+    <a id="sa-12.3-044"/>
+    <h4>12.3 044 systemd (LFS and BLFS)   Date: 2025-06-02  Severity: Medium</h4>
+    <p>In systemd-257.6, a security vulnerability was fixed that allows an
+    attacker to force SUID processes to crash and allows them to replace the
+    program with a non-SUID binary to access the original privileged process's
+    coredump. This allows the attacker to read extremely sensitive data, such
+    as /etc/shadow content. Update to systemd-257.6.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-044">12.3-044</a></p>
+
+<!-- end of systemd -->
+
+    <h3>xz</h3>
+
+    <a id="sa-12.3-019"/>
+    <h4>12.3 019 xz (LFS)                 Date: 2025-05-20  Severity: High</h4>
+    <p>In xz-5.8.1, a security vulnerability was fixed that could allow for
+    invalid input when decompressing an XZ file to cause a denial of service
+    or potentially arbitrary code execution. Update to xz-5.8.1.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-019">12.3-019</a></p>
+
+<!-- end of xz -->
 <!--#include virtual="/common/footer.html" -->

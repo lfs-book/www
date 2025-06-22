@@ -8,12 +8,12 @@
     <a id="BLFS12.3"/>
     <p>BLFS-12.3 was released on 2025-03-05</p>
 
-     <!-- Editors: Do not remove this entry, just comment it out. -->
+     <!-- Editors: Do not remove this entry, just comment it out.
 
      <ul>
        <li>There are currently no known security vulnerabilities for BLFS-12.3.</li>
      </ul>
-
+-->
 
     <!-- Editors: do the consolidated file first, to get the next number -->
 
@@ -51,7 +51,113 @@
 
 <!-- end of PackageName -->
 
+    <h3>Bind</h3>
+
+    <a id="sa-12.3-036"/>
+    <h4>12.3 036 Bind                     Date: 2025-05-24  Severity: High</h4>
+    <p>A fix has been made ISC Bind server software which prevents a stop
+    of the server in case of malformed data in a TSIG transaction. It is
+    recommended to upgrade to at least 9.20.9 as soon as possible.
+    <a href="consolidated.html#sa-12.3-036">12.3-036</a></p>
+
+<!-- end of Bind -->
+
+    <h3>c-ares</h3>
+
+    <a id="sa-12.3-016"/>
+    <h4>12.3 016 c-ares                   Date: 2025-05-20  Severity: High</h4>
+    <p>In c-ares-1.34.5, a security vulnerability was fixed that could allow
+    a crash when processing DNS queries where a DNS Cookie Failure occurs,
+    where an upstream server does not properly support EDNS, or possibly on
+    TCP queries if the remote server closed the connection immediately after
+    a response. Update to c-ares-1.34.5.
+    <a href="consolidated.html#sa-12.3-016">12.3-016</a></p>
+
+<!-- end of c-ares -->
+
+    <h3>cURL</h3>
+
+    <a id="sa-12.3-048"/>
+    <h4>12.3 048 cURL                     Date: 2025-06-04  Severity: Low</h4>
+    <p>In cURL-8.14.1, a security vulnerability was fixed that could allow for
+    an infinite loop to occur when processing a maliciously crafted WebSocket
+    packet. Upstream has stated that there is no way to exit an affected program
+    other than by killing the process. Update to cURL-8.14.1.
+    <a href="consolidated.html#sa-12.3-048">12.3-048</a></p>
+
+<!-- end of cURL -->
+
+    <h3>Epiphany</h3>
+
+    <a id="sa-12.3-024"/>
+    <h4>12.3 024 Epiphany                 Date: 2025-05-20  Severity: High</h4>
+    <p>In Epiphany-48.1, a security vulnerability was fixed that allows websites
+    to trigger URL handlers with no user interaction or warning. If the handler
+    application that is called is vulnerable, remote code execution is possible
+    under the user's current context. Update to Epiphany-48.3.
+    <a href="consolidated.html#sa-12.3-024">12.3-024</a></p>
+
+<!-- end of Epiphany -->
+
+    <h3>Exempi</h3>
+
+    <a id="sa-12.3-015"/>
+    <h4>12.3 015 Exempi                   Date: 2025-05-20  Severity: Medium</h4>
+    <p>In Exempi-2.6.6, five security vulnerabilities were fixed that could
+    allow for denial of service (application crashes) or for information
+    disclosure of sensitive memory when processing crafted XMP metadata. The
+    issues are all caused by out-of-bounds reads in the Adobe XMP Toolkit SDK
+    that comes bundled with Exempi. Update to Exempi-2.6.6.
+    <a href="consolidated.html#sa-12.3-015">12.3-015</a></p>
+
+<!-- end of Exempi -->
+
+    <h3>Exim</h3>
+
+    <a id="sa-12.3-009"/>
+    <h4>12.3 009 Exim                     Date: 2025-05-20  Severity: High</h4>
+    <p>In Exim-4.98.2, a security vulnerability was fixed that could allow users
+    with command line access to the server to cause privilege escalation. The
+    issue occurs due to a use-after-free. Update to Exim-4.98.2.
+    <a href="consolidated.html#sa-12.3-009">12.3-009</a></p>
+
+<!-- end of Exim -->
+
+    <h3>File::Find::Rule</h3>
+
+    <a id="sa-12.3-050"/>
+    <h4>12.3 050 File::Find::Rule         Date: 2025-06-09  Severity: High</h4>
+    <p>In File::Find::Rule-0.35, a security vulnerability was fixed that could
+    allow for arbitrary code execution when 'grep()' encounters a maliciously
+    crated file name. Update to File::Find::Rule-0.35.
+    <a href="consolidated.html#sa-12.3-050">12.3-050</a></p>
+
+<!-- end of File::Find::Rule -->
+
     <h3>Firefox</h3>
+
+    <a id="sa-12.3-038"/>
+    <h4>12.3 038 Firefox                  Date: 2025-05-28  Severity: Critical</h4>
+    <p>In Firefox-128.11.0esr, seven security vulnerabilities were fixed that could
+    allow for remotely exploitable crashes, memory corruption, remote code
+    execution, cross-origin information leakage, local code execution through
+    the "Copy as cURL" command, and for clickjacking to trick users into leaking
+    saved payment card details. One of the vulnerabilities is rated as Critical,
+    and thus all users should update immediately. Update to Firefox-128.11.0esr.
+    <a href="consolidated.html#sa-12.3-038">12.3-038</a></p>
+
+    <a id="sa-12.3-034"/>
+    <h4>12.3 034 Firefox                  Date: 2025-05-20  Severity: Critical</h4>
+    <p>In Firefox-128.10.1esr (and 128.9.0/128.10.0), nine security vulnerabilities
+    were fixed that could allow for remote code execution, URL bar spoofing, sandbox
+    escapes, and unsafe attribute access (leading to out-of-bounds memory access
+    and memory corruption). Most of these vulnerabilities are exploitable via
+    standard web browsing, and two of the remote code execution vulnerabilities
+    are known to be exploited in the wild. The two remote code execution
+    vulnerabilities mentioned were demonostrated at the Vancouver Pwn2Own
+    conference. All users who have Firefox installed must urgently update to
+    Firefox-128.10.1esr to protect their system.
+    <a href="consolidated.html#sa-12.3-034">12.3-034</a></p>
 
     <a id="sa-12.3-002"/>
     <h4>12.3 002 Firefox                  Date: 2025-03-07  Severity: Critical</h4>
@@ -67,7 +173,256 @@
 
 <!-- end of Firefox -->
 
+    <h3>ghostscript</h3>
+
+    <a id="sa-12.3-025"/>
+    <h4>12.3 025 ghostscript              Updated: 2025-05-28  Severity: Critical</h4>
+    <p>In ghostscript-10.05.0, nine security vulnerabilities were fixed that
+    could result in remote code execution or arbitrary file accesses. The
+    arbitrary file execution vulnerability occurs due to issues with
+    truncated paths with invalid UTF-8 characters. The remainder of the issues
+    occur due to buffer overflows in various contexts, including processing
+    PDF files, serializing fonts, utilising the BJ10V, DOCXWRITE TXTWRITE, and
+    NPDL devices, and when converting glyphs to Unicode. All users who have
+    Ghostscript installed are encouraged to update as soon as possible. At the
+    time of this advisory, the book had ghostscript-10.05.1 but it was not known
+    that an additional security vulnerability was fixed in 10.05.1. The issue
+    allows for passwords to be stored in plaintext in encrypted PDF files.
+    Update to ghostscript-10.05.1.
+    <a href="consolidated.html#sa-12.3-025">12.3-025</a></p>
+    <p><em>Updated on 2025-05-28 to include information about CVE-2025-48708,
+    which was already fixed in the book when this advisory was filed, though
+    the vulnerability was not known at the time.</em></p>
+
+<!-- end of ghostscript -->
+
+    <h3>giflib</h3>
+
+    <a id="sa-12.3-023"/>
+    <h4>12.3 023 giflib                   Date: 2025-05-20  Severity: High</h4>
+    <p>In giflib-5.2.2, several security vulnerabilities were discovered. Only
+    one of them has a functional patch, and the BLFS team has adopted a patch
+    from the OpenMandriva team to resolve the issue. The issue is a heap buffer
+    overflow in the gif2rgb utility, that causes a crash and has a chance to
+    cause arbitrary code execution. Rebuild giflib with the security fixes patch.
+    <a href="consolidated.html#sa-12.3-023">12.3-023</a></p>
+
+<!-- end of giflib -->
+
+    <h3>Gimp</h3>
+
+    <a id="sa-12.3-032"/>
+    <h4>12.3 032 Gimp                     Date: 2025-05-20  Severity: High</h4>
+    <p>In Gimp-3.0.4, a security vulnerability was fixed that could allow
+    for remote code execution when processing a crafted .ICO file. The
+    vulnerability appears to have been introduced in an early release candidate
+    for gimp3, and is caused by an integer overflow. Update to Gimp-3.0.4, but
+    note that you must update babl to 0.1.114 and gegl to 0.4.62 first.
+    <a href="consolidated.html#sa-12.3-032">12.3-032</a></p>
+
+<!-- end of Gimp -->
+
+    <h3>gstreamer</h3>
+
+    <a id="sa-12.3-041"/>
+    <h4>12.3 041 gstreamer                Date: 2025-05-30  Severity: Medium</h4>
+    <p>In gst-plugins-base and gst-plugins-good 1.26.2, five security
+    vlnerabilitities were resolved that could allow for remotely exploitable
+    denial of service (application crashes) or information disclosure. The
+    vulnerabilities occur when processing SubRip or TMPlayer format subtitles,
+    as well as when reading crafted MOV and MP4 files. Update the gstreamer
+    stack to 1.26.2.
+    <a href="consolidated.html#sa-12.3-041">12.3-041</a></p>
+
+    <a id="sa-12.3-026"/>
+    <h4>12.3 026 gstreamer                Date: 2025-05-20  Severity: High</h4>
+    <p>In gst-plugins-bad-1.26.1, a security vulnerability was fixed that can
+    allow for a crash or remote code execution when processing malformed
+    streams in a video file using the H.265 codec. The issue is caused by
+    a stack buffer overflow that occurs when processing slice headers.
+    Update to gstreamer-1.26.1.
+    <a href="consolidated.html#sa-12.3-026">12.3-026</a></p>
+
+<!-- end of gstreamer -->
+
+    <h3>intel-microcode</h3>
+
+    <a id="sa-12.3-029"/>
+    <h4>12.3 029 intel-microcode          Date: 2025-05-20  Severity: Medium</h4>
+    <p>In intel-microcode-20250512, eight processor-level security issues were
+    addressed. Six of the security vulnerabilities allow for information
+    disclosure, and two allow for denial of service. These vulnerabilities
+    impact the 8th, 9th, 10th, 11th, 12th, 13th, and 14th Generation of Intel
+    Core CPUs as well as some Intel Atom, Celeron, and Pentium models. They
+    also impact the Xeon E and D series of CPUs, the Xeon Max series of CPUs,
+    the Core Ultra series, and some Intel Xeon Scalable CPUs. For more
+    information, please consult the Intel Security Adivisories:
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01153.html">INTEL-SA-01153
+    (CVE-2024-28956)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/INTEL-SA-01247.html">INTEL-SA-01247
+    (CVE-2024-43420, CVE-2025-20623, and CVE-2024-45332)</a>,
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/INTEL-SA-01322.html">INTEL-SA-01322
+    (CVE-2025-24495 and CVE-2025-20012)</a>, and
+    <a href="https://www.intel.com/content/www/us/en/security-center/advisory/INTEL-SA-01244.html">INTEL-SA-01244
+    (CVE-2025-20103 and CVE-2025-20054)</a>.</p>
+    <p>To check if you are impacted and update your system, please follow the
+    instructions in the advisory.
+    <a href="consolidated.html#sa-12.3-029">12.3-029</a></p>
+
+<!-- end of intel-microcode -->
+
+    <h3>Kea DHCP server</h3>
+
+    <a id="sa-12.3-040"/>
+    <h4>12.3 040 Kea DHCP server          Date: 2025-05-28  Severity: High</h4>
+
+    <p>Three security flaws has been made public by ISC. Two of them are
+    fixed by upgrading to version 2.6.3 or above and one is fixed by proper
+    configuration and setup. For more information, check the ISC
+    Security Adivisories:</p>
+    <a href="https://kb.isc.org/docs/cve-2025-32801">CVE-2025-32801</a>: 
+      Loading a malicious hook library can lead to local privilege escalation<br/>
+    <a href="https://kb.isc.org/docs/cve-2025-32802">CVE-2025-32802</a>: 
+      Insecure handling of file paths allows multiple local attacks<br/>
+    <a href="https://kb.isc.org/docs/cve-2025-32803">CVE-2025-32803</a>:
+      Insecure file permissions can result in confidential information leakage<br/>
+    </p>
+    <p>If you have Kea installed, see details at
+      <a href="consolidated.html#sa-12.3-040">12.3-040</a></p>
+
+<!-- end of kea dhcp server -->
+
+    <h3>Konsole</h3>
+
+    <a id="sa-12.3-054"/>
+    <h4>12.3 054 Konsole                  Date: 2025-06-13  Severity: Critical</h4>
+    <p>In Konsole-25.04.2, a security vulnerability was fixed that allows for
+    attackers to trick users into executing arbitrary code with a malicious
+    link. The vulnerability occurs because Konsole allows loading URLs from
+    various scheme handlers (such as telnet://), but it does not check first
+    to see if the program to handle the scheme is present. If it isn't present,
+    it will execute 'bash' instead, allowing for arbitrary code execution.
+    Update to Konsole-25.04.2, or remove the telnet service for Konsole by
+    removing the <em>$KF6_PREFIX/share/applications/ktelnetservice6.desktop</em>
+    file from your system.</p>
+
+<!-- end of Konsole -->
+
+    <h3>libarchive</h3>
+
+    <a id="sa-12.3-037"/>
+    <h4>12.3 037 libarchive               Date: 2025-05-28  Severity: High</h4>
+    <p>In libarchive-3.8.0, five security vulnerabilities were fixed that could
+    allow for crashes and memory corruption when processing RAR archives, TAR
+    archives, and WARC archives. The issues are due to heap buffer overflows,
+    signed integer overflows, and double-frees. Update to libarchive-3.8.0.
+    <a href="consolidated.html#sa-12.3-037">12.3-037</a></p>
+
+    <a id="sa-12.3-008"/>
+    <h4>12.3 008 libarchive               Date: 2025-05-20  Severity: Medium</h4>
+    <p>In libarchive-3.7.9, three security vulnerabilities were fixed that could
+    allow for denial of service (application crashes) or potential memory
+    corruption when processing ZIP or TAR archives. Update to libarchive-3.7.9.
+    <a href="consolidated.html#sa-12.3-008">12.3-008</a></p>
+
+<!-- end of libarchive -->
+
+    <h3>LibreOffice</h3>
+
+    <a id="sa-12.3-027"/>
+    <h4>12.3 027 LibreOffice              Date: 2025-05-20  Severity: Critical</h4>
+    <p>In LibreOffice-25.2.2.2, a security vulnerability was fixed that allows
+    for PDF signature forgery when using the adbe.pkcs7.sha1 SubFilter. The bug
+    causes invalid signatures to be accepted as valid, and the vulnerability
+    has been rated Critical by NVD as it meets the criteria of "Improper
+    Verification of Cryptographic Signature" and "PDF Signature Spoofing by
+    Improper Validation". All users who use LibreOffice to open PDFs should
+    update to LibreOffice-25.2.2.2 or later, as this could allow for phishing.
+    Update to Libreoffice-25.2.2.2.
+    <a href="consolidated.html#sa-12.3-027">12.3-027</a></p>
+
+<!-- end of LibreOffice -->
+
+    <h3>libsoup2</h3>
+
+    <a id="sa-12.3-022"/>
+    <h4>12.3 022 libsoup2                 Updated: 2025-05-28  Severity: Critical</h4>
+    <p>In libsoup-2.74.3, fourteen security vulnerabilities were discovered that
+    could allow for remotely exploitable crashes, remote code execution, HTTP
+    Request Smuggling, and memory corruption. These are very similar to the
+    vulnerabilities fixed in the recent libsoup3 update, however it includes
+    fixes for several vulnerabilities that are specific to libsoup2. Because of
+    the security vulnerabilities in libsoup2, and the fact that the only packages
+    in BLFS that require it are abandoned, the BLFS team has archived libsoup2
+    as well as consumers such as AbiWord and libgdata. However, the BLFS team
+    has also developed a patch for libsoup2 to fix these known vulnerabilities
+    for users who have libsoup2 installed. At this time though, we will not be
+    producing further patches for this package to fix further issues after BLFS
+    12.4 is released, and we recommend that all users who have libsoup2 installed
+    discontinue usage of the library. as well as libgdata and AbiWord. If you
+    are using libsoup2, use the instructions in the advisory to apply the patch
+    and fix the vulnerabilities.</p>
+    <p><em>Updated on 2025-05-28 to add additional text about rebuilding
+    gst-plugins-good with -Dsoup-version=3. Thanks goes to Rainer Fiebig
+    for the information!</em></p>
+
+<!-- end of libsoup2 -->
+
+    <h3>libsoup3</h3>
+
+    <a id="sa-12.3-021"/>
+    <h4>12.3 021 libsoup3                 Date: 2025-05-20  Severity: Critical</h4>
+    <p>In libsoup-3.6.5, ten security vulnerabilities were fixed that could
+    allow for remotely exploitable crashes, remote code execution, and memory
+    corruption. All users who have libsoup3 installed should update to
+    libsoup-3.6.5 as soon as possible, and keep an eye on the security
+    advisories to monitor for new updates as there are many CVEs still yet
+    unresolved upstream.
+    <a href="consolidated.html#sa-12.3-021">12.3-021</a></p>
+
+<!-- end of libsoup3 -->
+
+    <h3>libvpx</h3>
+
+    <a id="sa-12.3-051"/>
+    <h4>12.3 051 libvpx                   Date: 2025-06-09  Severity: Medium</h4>
+    <p>In libvpx-1.15.2, a security vulnerability was fixed that could allow
+    for arbitrary code execution when processing VP8 and VP9 files, or for a
+    denial of service (application crash). Update to libvpx-1.15.2, but also
+    rebuild the packages listed in the security advisory.
+    <a href="consolidated.html#sa-12.3-051">12.3-051</a></p>
+
+<!-- end of libvpx -->
+
+    <h3>libxml2</h3>
+
+    <a id="sa-12.3-060"/>
+    <h4>12.3 060 libxml2                  Date: 2025-06-21  Severity: High</h4>
+    <p>In libxml2-2.14.4, a security vulnerability was fixed that could allow
+    for a denial of service or memory corruption when an application uses the
+    xmlBuildQName() function. Only one package in BLFS is known to use this
+    functionality, and that is PHP. Users who have Wine installed are also
+    impacted as it makes heavy usage of this function. If you use PHP or Wine,
+    update to libxml2-2.14.4 or apply the patch the BLFS developers have made
+    available for libxml2-2.13.8. The patch method is recommended for BLFS 12.3
+    users since updating to libxml2-2.14 will require several fixes and a
+    rebuild of all packages that use libxml2.</p>
+
+    <a id="sa-12.3-014"/>
+    <h4>12.3 014 libxml2                  Date: 2025-05-20  Severity: High</h4>
+    <p>In libxml2-2.14.2 (and 2.13.8), two security vulnerabilities were fixed
+    that could result in a denial of service (application crash) or arbitrary
+    code execution when processing XML documents. Update to libxml2-2.13.8.
+    The BLFS team does <em>not</em> recommend updating systems to the libxml2-2.14
+    series because the 2.14 series is ABI incompatible with 2.13, and in
+    addition to rebuilding all packages that use libxml2, the libxkbcommon
+    and localsearch packages will also need to be updated.
+    <a href="consolidated.html#sa-12.3-014">12.3-014</a></p>
+
+<!-- end of libxml2 -->
+
     <h3>libxslt</h3>
+
     <a id="sa-12.3-004"/>
     <h4>12.3 004 libxslt                  Date: 2025-03-14  Severity: High</h4>
     <p>In libxslt-1.1.43, two security vulnerabilities were fixed which could
@@ -77,6 +432,57 @@
     <a href="consolidated.html#sa-12.3-004">12.3-004</a></p>
 
 <!-- end of libxslt -->
+
+    <h3>lxml (Python Module)</h3>
+
+    <a id="sa-12.3-013"/>
+    <h4>12.3 013 lxml (Python Module)     Date: 2025-05-20  Severity: High</h4>
+    <p>In lxml-5.4.0, the bundled copies of libxml2 and libxslt were updated
+    to fix five security vulnerabilities. These vulnerabilities are known to
+    cause crashes and arbitrary code execution when processing XML and XSLT
+    documents. Update to lxml-5.4.0.
+    <a href="consolidated.html#sa-12.3-013">12.3-013</a></p>
+
+<!-- end of lxml (Python Module) -->
+
+    <h3>MariaDB</h3>
+
+    <a id="sa-12.3-045"/>
+    <h4>12.3 045 MariaDB                  Date: 2025-06-02  Severity: Medium</h4>
+    <p>In MariaDB-11.4.7, five security vulnerabilities were fixed that could
+    allow for unauthorized access to data within MySQL databases, as well as for
+    remotely exploitable crashes. Users who have MariaDB installed as more than
+    a build dependency should update. Update to MariaDB-11.4.7.
+    <a href="consolidated.html#sa-12.3-045">12.3-045</a></p>
+
+<!-- end of MariaDB -->
+
+    <h3>Mercurial</h3>
+
+    <a id="sa-12.3-010"/>
+    <h4>12.3 010 Mercurial                Date: 2025-05-20  Severity: Medium</h4>
+    <p>In Mercurial-7.0.1, a security vulnerability was fixed that could
+    allow for cross-site scripting through the web interface (hgweb). A default
+    installation of Mercurial on BLFS is <em>NOT</em> vulnerable as the system
+    must be configured to use the 'hgweb' program, and the BLFS configuration
+    does not enable this functionality. If you are using hgweb though, please
+    update to Mercurial-7.0.1 as soon as possible. Otherwise, there is no need
+    to install this update.
+    <a href="consolidated.html#sa-12.3-010">12.3-010</a></p>
+
+<!-- end of Mercurial -->
+
+    <h3>OpenJDK</h3>
+
+    <a id="sa-12.3-031"/>
+    <h4>12.3 031 OpenJDK                  Date: 2025-05-20  Severity: High</h4>
+    <p>In OpenJDK-24.0.1, three security vulnerabilities were fixed that could
+    allow for remote code execution, arbitrary code execution, and unauthorized
+    data modification. No user interaction or privileges are required to exploit
+    these vulnerabilities. Update to OpenJDK-24.0.1.
+    <a href="consolidated.html#sa-12.3-031">12.3-031</a></p>
+
+<!-- end of OpenJDK -->
 
     <h3>PHP</h3>
 
@@ -93,7 +499,145 @@
 
 <!-- end of PHP -->
 
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-12.3-028"/>
+    <h4>12.3 028 PostgreSQL               Date: 2025-05-20  Severity: Medium</h4>
+    <p>In PostgreSQL-17.5, a security vulnerability was fixed that can allow for
+    a database input provider to achieve temporary denial of service on any
+    platform where a 1-byte over-read can trigger process termination. Both
+    libpq and the database server are impacted, so it is possible for client
+    applications to crash as well. Update to PostgreSQL-17.5.
+    <a href="consolidated.html#sa-12.3-028">12.3-028</a></p>
+
+<!-- end of PostgreSQL -->
+
+    <h3>Python</h3>
+
+    <a id="sa-12.3-047"/>
+    <h4>12.3 047 Python (LFS and BLFS)    Date: 2025-06-04  Severity: Critical</h4>
+    <p>In Python-3.13.4, five security vulnerabilities were fixed that could
+    allow for a denial of service when processing long IPv6 addresses, and for
+    tarfile extraction filters to be bypassed using crafted symlinks and hard
+    links. The extraction filter bypasses allow attackers to write arbitrary
+    files onto a user's filesystem when decompressing a tar file using the
+    'tarfile' python module. Update to Python-3.13.4.
+    <a href="consolidated.html#sa-12.3-047">12.3-047</a></p>
+
+    <a id="sa-12.3-018"/>
+    <h4>12.3 018 Python (LFS and BLFS)    Date: 2025-05-20  Severity: Medium</h4>
+    <p>In Python-3.13.3, two security vulnerabilities were fixed that could allow
+    for email header spoofing and a denial-of-service (unbounded memory usage).
+    In addition, another vulnerability was resolved after this release of Python
+    that can cause a crash when using the unicode_escape encoding or an error
+    handler when decoding bytes using the bytes.decode() function. Update to
+    Python-3.13.3 and apply the patch for the bytes.decode() vulnerability.
+    <a href="consolidated.html#sa-12.3-018">12.3-018</a></p>
+
+<!-- end of Python -->
+
+    <h3>Qt6</h3>
+
+    <a id="sa-12.3-011"/>
+    <h4>12.3 011 Qt6                      Date: 2025-05-20  Severity: Low</h4>
+    <p>In Qt-6.9.0, a security vulnerability has been fixed that
+    could allow for a heap buffer overflow when passing an incorrectly formatted
+    Markdown file to QTextMarkdownImporter. The only known impacts at this time
+    are application crashes. Updating Qt6 to 6.9.0 can be risky and requires
+    some package rebuilds due to the usage of private API that was changed in
+    Qt 6.9.0, but the BLFS team has tested it and if you want to take the risk,
+    update to Qt 6.9.0. A patch is also available for Qt 6.8 but has not been
+    tested by the BLFS team.
+    <a href="consolidated.html#sa-12.3-011">12.3-011</a></p>
+
+<!-- end of Qt6 -->
+
+    <h3>QtWebEngine</h3>
+
+    <a id="sa-12.3-046"/>
+    <h4>12.3 046 QtWebEngine              Date: 2025-06-03  Severity: Critical</h4>
+    <p>In QtWebEngine-6.9.1, nineteen security advisories were fixed that could
+    allow for remote code execution, information retrieval about peripherals,
+    malicious extension installation, file restriction bypasses, same origin
+    policy bypasses, remotely exploitable privilege escalation, remotely
+    exploitable sandbox escapes, cross origin information leakage, and for
+    access control bypasses. Update to QtWebEngine-6.9.1.
+    <a href="consolidated.html#sa-12.3-046">12.3-046</a></p>
+
+    <a id="sa-12.3-012"/>
+    <h4>12.3 012 QtWebEngine              Date: 2025-05-20  Severity: Critical</h4>
+    <p>In QtWebEngine-6.9.0, fifteen security vulnerabilities were fixed that
+    could allow for sensitive system data exfiltration, user interface spoofing,
+    remote code execution, arbitrary code execution, and sandbox escapes. All
+    users who have QtWebEngine installed should update to QtWebEngine-6.9.0 as
+    one of the vulnerabilities is known to be exploited in the wild.
+    <a href="consolidated.html#sa-12.3-012">12.3-012</a></p>
+
+<!-- end of QtWebEngine -->
+
+    <h3>Requests (Python Module)</h3>
+
+    <a id="sa-12.3-055"/>
+    <h4>12.3 055 Requests (Python Module) Date: 2025-06-13  Severity: Medium</h4>
+    <p>In Requests-2.32.4, a security vulnerability was fixed where a crafted
+    URL and trusted environment can retrieve credentials from the wrong hostname
+    from a .netrc file. Users who do not have a ~/.netrc file with credentials
+    are not impacted by this vulnerability, and there is no reason for them to
+    update to this version. If you do have a ~/.netrc file though, you should
+    update to Requests-2.32.4 immediately, as the workaround requires modifying
+    every requests session to specify "trust_env=False".
+    <a href="consolidated.html#sa-12.3-055">12.3-055</a></p>
+
+<!-- end of Requests (Python Module) -->
+
+    <h3>Samba</h3>
+
+    <a id="sa-12.3-052"/>
+    <h4>12.3 052 Samba                    Date: 2025-06-09  Severity: Medium</h4>
+    <p>In Samba-4.22.2, a security vulnerability was fixed that could allow for
+    file shares to be exposed to clients until client computers disconnect from
+    an SMB server and reconnect again. The problem occurs because the smbd
+    service daemon did not pick up group membership changes when it reset an
+    expired SMB session. This however only affects Kerberos authentication,
+    which is not part of the standard BLFS configuration. Users who are using
+    the standard BLFS configuration are not impacted, nor are they impacted if
+    they are just using the client side components of Samba. Update to
+    Samba-4.22.2 if you are using Kerberos in your server's configuration.
+    <a href="consolidated.html#sa-12.3-052">12.3-052</a></p>
+
+<!-- end of Samba -->
+
+    <h3>Screen</h3>
+
+    <a id="sa-12.3-030"/>
+    <h4>12.3 030 Screen                   Updated: 2025-05-28  Severity: High</h4>
+    <p>In Screen-5.0.1, five security vulnerabilities were fixed that could
+    allow for a reliable local privilege escalation to root, for leaking of
+    file existence information, for TTY hijacking while attaching to a multi
+    user session, for race conditions when sending signals, and for PTYs to
+    be created world-writable. A serious buffer overflow bug caused by
+    a bad strncpy() was also fixed in this release. Because the default
+    configuration of Screen in BLFS is setuid-root, all systems with Screen
+    installed are impacted by these vulnerabilities, some dating back to
+    Screen releases all the way back to 2025. If you have Screen installed,
+    please update to Screen-5.0.1 immediately.
+    <a href="consolidated.html#sa-12.3-030">12.3-030</a></p>
+    <p><em>Updated on 2025-05-28 to include the correct CVE number for the last
+    vulnerability.</em></p>
+
+<!-- end of Screen -->
+
     <h3>Spidermonkey</h3>
+
+    <a id="sa-12.3-033"/>
+    <h4>12.3 033 Spidermonkey             Date: 2025-05-20  Severity: Critical</h4>
+    <p>In Spidermonkey-128.10.1, two critical security vulnerabilities were fixed
+    that could allow for an attacker to read and write out of bounds memory
+    through executing malicious JavaScript. These vulnerabilities were shown
+    at Vancouver Pwn2Own to achieve remote code execution and JavaScript
+    manipulation. All users with Spidermonkey installed need to update to
+    128.10.1 urgently.
+    <a href="consolidated.html#sa-12.3-033">12.3-033</a></p>
 
     <a id="sa-12.3-001"/>
     <h4>12.3 001 Spidermonkey             Date: 2025-03-07  Severity: High</h4>
@@ -106,7 +650,58 @@
 
 <!-- end of Spidermonkey -->
 
+    <h3>systemd</h3>
+
+    <a id="sa-12.3-044"/>
+    <h4>12.3 044 systemd (LFS and BLFS)   Date: 2025-06-02  Severity: Medium</h4>
+    <p>In systemd-257.6, a security vulnerability was fixed that allows an
+    attacker to force SUID processes to crash and allows them to replace the
+    program with a non-SUID binary to access the original privileged process's
+    coredump. This allows the attacker to read extremely sensitive data, such
+    as /etc/shadow content. Update to systemd-257.6.
+    <a href="coonsolidated.html#sa-12.3-044">12.3-044</a></p>
+
+<!-- end of systemd -->
+
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.3-053"/>
+    <h4>12.3 053 Thunderbird              Date: 2025-06-11  Severity: High</h4>
+    <p>In Thunderbird-128.11.1esr, a security vulnerability was fixed that
+    could allow for credential linkage, exaughsting disk usage, and downloading
+    files unsolicted by using crafted HTML mailbox:/// links. This was the same
+    vulnerability that was claimed to be fixed in Thunderbird-128.10.2esr. Due
+    to different code landing, the vulnerability was never fixed until this
+    release. This vulnerability is rated as high and was unfixed for 22 days.
+    Update immediately to Thunderbird-128.11.1esr.
+    <a href="consolidated.html#sa-12.3-053">12.3-053</a></p>
+
+    <a id="sa-12.3-039"/>
+    <h4>12.3 039 Thunderbird              Date: 2025-05-28  Severity: Critical</h4>
+    <p>In Thunderbird-128.11.0esr, seven security vulnerabilities were fixed that
+    could allow for remotely exploitable crashes, memory corruption, remote code
+    execution, cross-origin information leakage, local code execution through
+    the "Copy as cURL" command, and for clickjacking to trick users into leaking
+    saved payment card details. One of the vulnerabilities is rated as Critical,
+    and thus all users should update immediately. Update to Thunderbird-128.11.0esr.
+    <a href="consolidated.html#sa-12.3-039">12.3-039</a></p>
+
+    <a id="sa-12.3-035"/>
+    <h4>12.3 035 Thunderbird              Date: 2025-05-20  Severity: Critical</h4>
+    <p>In Thunderbird-128.10.2esr (as well as 128.9.1, 128.9.2, 128.10.0,
+    and 128.10.1), eighteen security vulnerabilities were fixed that could
+    allow for remote code execution, URL bar spoofing, arbitrary code execution,
+    leaks of hashed Window credentials, information disclosure of the directory
+    listing of /tmp, UI misrepresentation of attachment URLs, sandbox escapes,
+    remotely exploitable crashes, unsafe attribute accesses (leading to memory
+    corruption and out-of-bounds memory access), sender spoofing (leading to
+    extremely trivial phishing attacks), unsolicited file downloads, disk space
+    exhaustion, credential leakage to remote attackers via compromised emails
+    and attachments, JavaScript execution via spoofed PDF attachments,
+    and tracking links in attachments bypassing remote content blocking.
+    All users who have Thunderbird installed need to update to
+    Thunderbird-128.10.2esr urgently to protect their systems.
+    <a href="consolidated.html#sa-12.3-035">12.3-035</a></p>
 
     <a id="sa-12.3-003"/>
     <h4>12.3 003 Thunderbird              Date: 2025-03-07  Severity: Critical</h4>
@@ -121,4 +716,88 @@
     <a href="consolidated.html#sa-12.3-003">12.3-003</a></p>
 
 <!-- end of Thunderbird -->
+
+    <h3>WebKitGTK</h3>
+
+    <a id="sa-12.3-007"/>
+    <h4>12.3 007 WebKitGTK                Date: 2025-05-20  Severity: Critical</h4>
+    <p>In WebKitGTK-2.48.2, sixteen security vulnerabilities were fixed that
+    could result in unexpected process crashes, cross-origin data exfiltration,
+    memory corruption, cross-site scripting attacks, type confusion (on ARM
+    architectures), and sandbox escapes. The sandbox escape vulnerability is
+    known to be exploited in the wild, and it is thus recommended that users
+    update WebKitGTK immediately. Update to WebKitGTK-2.48.2.
+    <a href="consolidated.html#sa-12.3-007">12.3-007</a></p>
+
+<!-- end of WebKitGTK -->
+
+    <h3>Wireshark</h3>
+
+    <a id="sa-12.3-049"/>
+    <h4>12.3 049 Wireshark                Date: 2025-06-09  Severity: High</h4>
+    <p>In Wireshark-4.4.7, a security vulnerability was fixed that could allow
+    for a crash due to a buffer overflow while processing crafted packets. The
+    crash occurs with many dissectors as it impacts the common Columns module
+    built into Wireshark. Update to Wireshark-4.4.7.
+    <a href="consolidated.html#sa-12.3-049">12.3-049</a></p>
+
+<!-- end of Wireshark -->
+
+    <h3>Xorg-Server</h3>
+
+    <a id="sa-12.3-058"/>
+    <h4>12.3 058 Xorg-Server              Date: 2025-06-20  Severity; Medium</h4>
+    <p>In Xorg-Server-21.1.18, a security vulnerability was fixed that
+    could allow for an integer overflow. It's to ensure that a CVE that was
+    supposedly fixed in the last release is properly fixed. Update to
+    Xorg-Server-21.1.18.
+    <a href="consolidated.html#sa-12.3-058">12.3-058</a></p>
+
+    <a id="sa-12.3-056"/>
+    <h4>12.3 056 Xorg-Server              Date: 2025-06-17  Severity; Medium</h4>
+    <p>In Xorg-Server-21.1.17, six security vulnerabilities were fixed that
+    could allow for out of bounds reads, integer overflows, old data reads, and
+    a client being able to cause another client to hang. Many of these come
+    from extensions and many of them are very old vulnerabilites, some as old
+    as X11R6. Update to Xorg-Server-21.1.17.
+    <a href="consolidated.html#sa-12.3-056">12.3-056</a></p>
+
+<!-- end of Xorg-Server -->
+
+    <h3>Xwayland</h3>
+
+    <a id="sa-12.3-059"/>
+    <h4>12.3 059 Xwayland                 Date: 2025-06-20  Severity; Medium</h4>
+    <p>In Xwayland-24.1.8, a security vulnerability was fixed that
+    could allow for an integer overflow. It's to ensure that a CVE that was
+    supposedly fixed in the last release is properly fixed. Update to
+    Xwayland-24.1.8.
+    <a href="consolidated.html#sa-12.3-059">12.3-059</a></p>
+
+    <a id="sa-12.3-057"/>
+    <h4>12.3 057 Xwayland                 Date: 2025-06-17  Severity; Medium</h4>
+    <p>In Xwayland-24.1.7, six security vulnerabilities were fixed that
+    could allow for out of bounds reads, integer overflows, old data reads, and
+    a client being able to cause another client to hang. Many of these come
+    from extensions and many of them are very old vulnerabilites, some as old
+    as X11R6. Update to Xwayland-24.1.7.
+    <a href="consolidated.html#sa-12.3-057">12.3-057</a></p>
+
+<!-- end of Xwayland -->
+
+    <h3>Yelp</h3>
+
+    <a id="sa-12.3-020"/>
+    <h4>12.3 020 Yelp                     Date: 2025-05-20  Severity: High</h4>
+    <p>In Yelp-42.2, a security vulnerability was found that allows help 
+    documents to execute arbitrary JavaScript, and also read arbitrary files
+    on the disk. Upstream has not released a patched version to fix this issue,
+    but the BLFS team has adopted patches from upstream to resolve this issue.
+    There is a public exploit and writeup available demonstrating the ability 
+    to read a user's SSH Private Key via a crafted help document, and thus
+    <em>ALL BLFS USERS WHO HAVE YELP INSTALLED SHOULD APPLY THE PATCHES AS SOON
+    AS POSSIBLE</em>. Rebuild yelp and yelp-xsl with the security patches.
+    <a href="consolidated.html#sa-12.3-020">12.3-020</a></p>
+
+<!-- end of Yelp -->
 <!--#include virtual="/common/footer.html" -->
