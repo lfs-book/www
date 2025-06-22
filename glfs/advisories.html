@@ -1,0 +1,94 @@
+<!--#set var="pageTitle" value="GLFS Advisories" -->
+<!--#include virtual="header.html" -->
+<!--#include virtual="menu.html" -->
+    <div class="main">
+    <h1>GLFS Advisories</h1>
+
+    <p>This page covers advisories, notably in relation with security and
+    changes that may have broken earlier versions of the book.</p>
+
+    <p>For security, most of the packages in GLFS are in BLFS, and GLFS for the
+    most part gets the same updates as BLFS gets. Thus, you should check the
+    BLFS advisories linked in each section. This page covers GLFS-specific
+    issues, or when the BLFS issues hit GLFS the hardest.</p>
+
+    <p style="font-style: italic;">This page is ordered like the Changelog of the
+    book, with newest items first.</p>
+
+    <h2>12.3 to 12.4</h2>
+    <h3>Broken changes</h3>
+
+    <a id="glfs-brk-12.3-004"/>
+    <h4>glfs-brk-12.3-004: Git (Date: June 10th, 2025)</h4>
+    <p>Git has been removed from GLFS. All downloading instructions now rely on
+    the wget package when pages instruct the user to download files in bulk.
+    No package in GLFS depends on Git otherwise, and no lib32 installation
+    instructions have been present for it as the package does not provide
+    libraries. Follow BLFS for updates to Git.</p>
+
+    <a id="glfs-brk-12.3-003"/>
+    <h4>glfs-brk-12.3-003: libxml2 (Date: April 3rd, 2025)</h4>
+    <p>libxml2-2.13 has upgraded to libxml2-2.14, which has broken ABI. While
+    you can reinstall every package that uses libxml2, or do a complete
+    upgrade, you can instead opt to apply patches which fix security issues
+    without breaking ABI. The patches will be linked in the BLFS
+    advisories.</p>
+
+    <a id="glfs-brk-12.3-002"/>
+    <h4>glfs-brk-12.3-002: 32-bit CPU Support (Date: March 25th, 2025)</h4>
+    <p>Support for 32-bit CPUs (ix86) has been removed from GLFS. This is
+    because there is no testing being done for 32-bit by the GLFS development
+    team due to lack of proper hardware. Another big reason is Steam and its
+    CEF sandboxing is unclear on how to properly bypass and what happens
+    beyond that point. Regardless, beyond Steam, the normal installation
+    instructions generally work on 32-bit hardware; you just will be on your
+    own to work around the edge cases.</p>
+
+    <a id="glfs-brk-12.3-001"/>
+    <h4>glfs-brk-12.3-001: luit (Date: March 5th, 2025)</h4>
+    <p>The luit package has been removed from GLFS as no packages in the book
+    used it. It had no lib32 installation instructions, so feel free to follow
+    BLFS for updates to the luit package.</p>
+
+    <h3>Security Advisories</h3>
+    <p>Please read <a href="/blfs/advisories/12.3.html">BLFS 12.3 Security
+    Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
+    Consolidated Security Advisories</a> for more packages that aren't covered
+    here.</p>
+
+    <a id="glfs-sa-12.3-002"/>
+    <h4>glfs-sa-12.3-002: NVIDIA - Rating: High (Date: June 21st, 2025)</h4>
+    <p>In NVIDIA-575.64, a security vulnerability was fixed that could allow
+    for a use-after-free in the kernel for pre-Turing NVIDIA GPUs. NVIDIA has
+    not reserved a CVE for the vulnerability. Furthermore, it has became clear
+    that NVIDIA does not often document security fixes in the changelogs of the
+    NVIDIA drivers, leading to many security fixes being unnoticed by the GLFS
+    development team. We will now be looking at the <a
+    href="https://www.nvidia.com/en-us/product-security/">NVIDIA Product
+    Security</a> resource. Consider all previous drivers to have security
+    vulnerabilities and update to NVIDIA-575.64 or any of the latest revisions
+    of the other 3 latest major versions (570, 565, and 560) immediately.</p>
+    <p>To do so, follow the <a
+    href="https://glfs-book.github.io/glfs/shareddeps/nvidia.html">GLFS NVIDIA
+    installation page</a>. Ensure you download the latest install script and
+    manifest file if you previously downloaded them to ensure
+    compatibility.</p>
+
+    <a id="glfs-sa-12.3-001"/>
+    <h4>glfs-sa-12.3-001: libxml2 and Wine - Rating: High (Date: June 21st, 2025)</h4>
+    <p><a href="/blfs/advisories/consolidated.html#sa-12.3-060">BLFS SA 12.3
+    060</a> covers a vulnerability with libxml2-2.14.4. This vulnerability is
+    not exploitable in many packages as it is only able to be used in the
+    xmlBuildQName() function. However, one of the packages that does make use
+    of that function is the Wine package. If you are using Wine, you should fix
+    the vulnerability by doing one of two things: either upgrade libxml2 to
+    2.14.4, or reinstall libxml2-1.13.8 with a patch.</p>
+    <p>To upgrade to libxml2-2.14.4, follow the <a
+    href="https://glfs-book.github.io/glfs/shareddeps/libxml2.html">GLFS
+    libxml2 installation page</a> which does not differ for SysVinit/Systemd
+    versions of the book.</p>
+    <p>To reinstall libxml2-2.13.8 with the patch, download <a
+    href="https://linuxfromscratch.org/patches/downloads/libxml2/libxml2-2.13.8-security_fixes-1.patch">this
+    patch</a> and apply it before configuration, then reinstall the package.</p>
+
+<!--#include virtual="/common/footer.html" -->
