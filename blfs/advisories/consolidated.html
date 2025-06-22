@@ -266,8 +266,8 @@
     <a id="sa-12.3-053"/>
     <h4>12.3 053 Thunderbird              Date: 2025-06-11  Severity: High</h4>
     <p>In Thunderbird-128.11.1esr, a security vulnerability was fixed that
-    could allow for credential linkage, exaughsting disk usage, and downloading
-    files unsolicted by using crafted HTML mailbox:/// links. This was the same
+    could allow for credential linkage, disk usage exhaustion, and unsolicited
+    file downloads by using crafted HTML mailbox:/// links. This was the same
     vulnerability that was claimed to be fixed in Thunderbird-128.10.2esr. Due
     to different code landing, the vulnerability was never fixed until this
     release. This vulnerability is rated as high and was unfixed for 22 days.
@@ -329,7 +329,7 @@
     <h4>12.3 050 File::Find::Rule         Date: 2025-06-09  Severity: High</h4>
     <p>In File::Find::Rule-0.35, a security vulnerability was fixed that could
     allow for arbitrary code execution when 'grep()' encounters a maliciously
-    crated file name. A file handle is opened with the 2 argument form of
+    crafted file name. A file handle is opened with the 2 argument form of
     'open()', which allows an attacker provided filename to provide the MODE
     parameter to open(), turning the filename into a command to be executed.
     There is a proof of concept available to demonstrate how the vulnerability
@@ -401,7 +401,7 @@
 
     <a id="sa-12.3-046"/>
     <h4>12.3 046 QtWebEngine              Date: 2025-06-03  Severity: Critical</h4>
-    <p>In QtWebEngine-6.9.1, nineteen security advisories were fixed that could
+    <p>In QtWebEngine-6.9.1, nineteen security vulnerabilities were fixed that could
     allow for remote code execution, information retrieval about peripherals,
     malicious extension installation, file restriction bypasses, same origin
     policy bypasses, remotely exploitable privilege escalation, remotely
@@ -523,7 +523,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47219">CVE-2025-47219</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47183">CVE-2025-47183</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47806">CVE-2025-47806</a>.</p>
-    <p>To fix this vulnerability, update the gstreamer stack to 1.26.2 using
+    <p>To fix these vulnerabilities, update the gstreamer stack to 1.26.2 using
     the instructions starting at
     <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
     <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
