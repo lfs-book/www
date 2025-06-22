@@ -396,6 +396,18 @@
 
     <h3>libxml2</h3>
 
+    <a id="sa-12.3-060"/>
+    <h4>12.3 060 libxml2                  Date: 2025-06-21  Severity: High</h4>
+    <p>In libxml2-2.14.4, a security vulnerability was fixed that could allow
+    for a denial of service or memory corruption when an application uses the
+    xmlBuildQName() function. Only one package in BLFS is known to use this
+    functionality, and that is PHP. Users who have Wine installed are also
+    impacted as it makes heavy usage of this function. If you use PHP or Wine,
+    update to libxml2-2.14.4 or apply the patch the BLFS developers have made
+    available for libxml2-2.13.8. The patch method is recommended for BLFS 12.3
+    users since updating to libxml2-2.14 will require several fixes and a
+    rebuild of all packages that use libxml2.</p>
+
     <a id="sa-12.3-014"/>
     <h4>12.3 014 libxml2                  Date: 2025-05-20  Severity: High</h4>
     <p>In libxml2-2.14.2 (and 2.13.8), two security vulnerabilities were fixed
