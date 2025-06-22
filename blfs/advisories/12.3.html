@@ -749,6 +749,24 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>udisks</h3>
+
+    <a id="sa-12.3-063"/>
+    <h4>12.3 063 udisks                   Date: 2026-06-22  Severity: High</h4>
+    <p>In udisks-2.10.1, a security vulnerability was discovered that can allow
+    for local privilege escalation attacks when chained together with libblockdev
+    and Linux-PAM. The vulnerability occurs because udisks does not always mount
+    filesystems with the 'nosuid,nodev' parameters, which can allow users to
+    escalate their privileges on systems with SUID executables, and this is not
+    supposed to be the default behavior for filesystems mounted via udisks. A
+    detailed proof-of-concept exploit is available with comprehensive exploit
+    documentation. The BLFS developers have implemented a sed to work around
+    the problem. <em>If you have udisks installed on your system, you should
+    rebuild udisks with the sed command in the book immediately.</em>
+    <a href="consolidated.html#sa-12.3-063">12.3-063</a></p>
+
+<!-- end of udisks -->
+
     <h3>WebKitGTK</h3>
 
     <a id="sa-12.3-007"/>
