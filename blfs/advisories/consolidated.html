@@ -981,7 +981,7 @@
     <a href="../view/systemd/basicnet/libsoup3.html">libsoup (systemd)</a>.</p>
 
     <a id="sa-12.3-020"/>
-    <h4>12.3 020 Yelp                     Date: 2025-05-20  Severity: High</h4>
+    <h4>12.3 020 Yelp                     Updated: 2025-06-22  Severity: High</h4>
     <p>In Yelp-42.2, a security vulnerability was found that allows help
     documents to execute arbitrary JavaScript, and also read arbitrary files
     on the disk. Upstream has not released a patched version to fix this issue,
@@ -992,14 +992,20 @@
     AS POSSIBLE</em>. The patches resolve the issue by implementing a Content
     Security Policy through some calls to WebKit that prevents the JavaScript
     code from being executed.
+    [Updated 2025-06-22]: Upstream has now released updates for yelp-xsl and
+    yelp. Users should update to yelp-xsl-42.4 and yelp-42.3 if they haven't
+    already applied patches to fix this vulnerability.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-3155">CVE-2025-3155</a>.</p>
-    <p>To fix this vulnerability, apply the patches to Yelp and yelp-xsl and
-    rebuild them using the instructions from
+    <p>To fix this vulnerability, update to yelp-xsl-42.4 and yelp-42.3 using
+    the instructions from
     <a href="../view/svn/gnome/yelp-xsl.html">yelp-xsl (sysv)</a> and
     <a href="../view/svn/gnome/yelp.html">yelp (svn)</a>, or
     <a href="../view/systemd/gnome/yelp-xsl.html">yelp-xsl (systemd)</a> or
     <a href="../view/syetemd/gnome/yelp.html">yelp (systemd)</a>.</p>
+    <p><em>Updated on 2025-06-22 to include details about yelp-xsl-42.4 and
+    yelp-42.3, which fix this vulnerability. Users should use these versions
+    now instead of using the patches.</em></p>
 
     <a id="sa-12.3-019"/>
     <h4>12.3 019 xz (LFS)                 Date: 2025-05-20  Severity: High</h4>
