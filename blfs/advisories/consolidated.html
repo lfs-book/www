@@ -65,6 +65,100 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-064"/>
+    <h4>12.3 064 Firefox                  Date: 2025-06-26  Severity: High</h4>
+    <p>In Firefox-140.0esr, ten security vulnerabilities were fixed that
+    could allow for use-after-free attacks, exposure of persistent UUIDs,
+    Content Security Policy restriction can be bypassed, incorrect parsing
+    leading to allowing embedded of YouTube, ignorance of the
+    Content-Disposition header, DNS request leakage outside a configured SOCKS
+    proxy, singage of a challenge with an invalid TLS certificate, clickjacking
+    via the HTTPS-only exception, Save as action in Devtools not santizing the
+    downloaded files extensions, and exploitable memory safety bugs. Two of the
+    vulnerabilities are rated as High.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6424">CVE-2025-6424</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6425">CVE-2025-6425</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6427">CVE-2025-6427</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6429">CVE-2025-6429</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6430">CVE-2025-6430</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6432">CVE-2025-6432</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6433">CVE-2025-6433</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6434">CVE-2025-6434</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6435">CVE-2025-6435</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6436">CVE-2025-6436</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-140.0esr or later
+    using the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <p>Alternatively, if you have not compiled ICU-76.1 or above, you can stay
+    on the 128 ESR series and upgrade to Firefox-128.12.0esr.</p>
+
+    <a id="sa-12.3-063"/>
+    <h4>12.3 063 udisks                   Date: 2026-06-22  Severity: High</h4>
+    <p>In udisks-2.10.1, a security vulnerability was discovered that can allow
+    for local privilege escalation attacks when chained together with libblockdev
+    and Linux-PAM. The vulnerability occurs because udisks does not always mount
+    filesystems with the 'nosuid,nodev' parameters, which can allow users to
+    escalate their privileges on systems with SUID executables, and this is not
+    supposed to be the default behavior for filesystems mounted via udisks. A
+    detailed proof-of-concept exploit is available with comprehensive exploit
+    documentation. The BLFS developers have implemented a sed to work around
+    the problem. <em>If you have udisks installed on your system, you should
+    rebuild udisks with the sed command in the book immediately.</em> This is
+    part of
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6019">CVE-2025-6019</a>.</p>
+    <p>To fix this vulnerability, rebuild udisks-2.10.1 with the sed using the
+    instructions from
+    <a href="../view/svn/general/udisks2.html">udisks (sysv)</a> or
+    <a href="../view/systemd/general/udisks2.html">udisks (systemd)</a>.</p>
+
+    <a id="sa-12.3-062"/>
+    <h4>12.3 062 libblockdev              Date: 2026-06-22  Severity: High</h4>
+    <p>In libblockdev-3.3.1, a security vulnerability was fixed that could
+    allow for local privilege escalation. The vulnerability occurs due to a bug
+    in udisks, and both packages need to be adjusted to fix the vulnerability.
+    The "allow_active" setting in Polkit permits a physically present user to
+    take certain actions based on the session type. This can be worked around
+    by an attacker abusing a flaw in Linux-PAM (which was fixed in Linux-PAM-1.7.1)
+    to convince udisks to call libblockdev and not mount a filesystem with the
+    'nosuid,nodev' options - which allows for SUID programs to be run, giving
+    a remote attacker (in the case of the exploit chain that combines this with
+    vulnerabilities in udisks and Linux-PAM) root access to your system. <em>If
+    you have libblockdev on your system, you should update to libblockdev-3.3.1
+    immediately.</em>
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6019">CVE-2025-6019</a>.</p>
+    <p>To fix this vulnerability, update to libblockdev-3.3.1 using the
+    instructions from
+    <a href="../view/svn/general/libblockdev.html">libblockdev (sysv)</a> or
+    <a href="../view/systemd/general/libblockdev.html">libblockdev (systemd)</a>.</p>
+
+    <a id="sa-12.3-061"/>
+    <h4>12.3 061 Linux-PAM                Date: 2026-06-22  Severity: High</h4>
+    <p>In Linux-PAM-1.7.1, two security vulnerabilities were fixed that could
+    allow for privilege escalation and for unauthorized access to systems. The
+    unauthorized access to systems vulnerability occurs in the pam_access module,
+    where certain rules in it's configuration file are mistakenly treated as
+    hostnames. Attackers can leverage that vulnerability to trick the system by
+    pretending to be a trusted hostname, and thus gain access to systems where
+    they are not supposed to have access to. This especially poses a risk for
+    systems that rely on pam_access to control who can access certain services
+    or terminals in a multi-user system. The privilege escalation vulnerability
+    is much more serious and is being chained with vulnerabilities in udisks
+    and libblockdev to achieve privilege escalation to root. There are detailed
+    proof of concept exploits as well as in-depth documentation about exploiting
+    this chain of vulnerabilities, and this vulnerability was disclosed by the
+    French government. <em>All users who have Linux-PAM installed on their
+    systems should update immediately.</em>
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-10963">CVE-2024-10963</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6020">CVE-2025-6020</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-PAM-1.7.1 or later using
+    the instructions from
+    <a href="../view/svn/postlfs/linux-pam.html">Linux-PAM (sysv)</a> or
+    <a href="../view/systemd/postlfs/linux-pam.html">Linux-PAM (systemd)</a>.</p>
+
     <a id="sa-12.3-060"/>
     <h4>12.3 060 libxml2                  Date: 2025-06-21  Severity: High</h4>
     <p>In libxml2-2.14.4, a security vulnerability was fixed that could allow
@@ -201,8 +295,8 @@
     <a id="sa-12.3-053"/>
     <h4>12.3 053 Thunderbird              Date: 2025-06-11  Severity: High</h4>
     <p>In Thunderbird-128.11.1esr, a security vulnerability was fixed that
-    could allow for credential linkage, exaughsting disk usage, and downloading
-    files unsolicted by using crafted HTML mailbox:/// links. This was the same
+    could allow for credential linkage, disk usage exhaustion, and unsolicited
+    file downloads by using crafted HTML mailbox:/// links. This was the same
     vulnerability that was claimed to be fixed in Thunderbird-128.10.2esr. Due
     to different code landing, the vulnerability was never fixed until this
     release. This vulnerability is rated as high and was unfixed for 22 days.
@@ -264,7 +358,7 @@
     <h4>12.3 050 File::Find::Rule         Date: 2025-06-09  Severity: High</h4>
     <p>In File::Find::Rule-0.35, a security vulnerability was fixed that could
     allow for arbitrary code execution when 'grep()' encounters a maliciously
-    crated file name. A file handle is opened with the 2 argument form of
+    crafted file name. A file handle is opened with the 2 argument form of
     'open()', which allows an attacker provided filename to provide the MODE
     parameter to open(), turning the filename into a command to be executed.
     There is a proof of concept available to demonstrate how the vulnerability
@@ -336,7 +430,7 @@
 
     <a id="sa-12.3-046"/>
     <h4>12.3 046 QtWebEngine              Date: 2025-06-03  Severity: Critical</h4>
-    <p>In QtWebEngine-6.9.1, nineteen security advisories were fixed that could
+    <p>In QtWebEngine-6.9.1, nineteen security vulnerabilities were fixed that could
     allow for remote code execution, information retrieval about peripherals,
     malicious extension installation, file restriction bypasses, same origin
     policy bypasses, remotely exploitable privilege escalation, remotely
@@ -458,7 +552,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47219">CVE-2025-47219</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47183">CVE-2025-47183</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47806">CVE-2025-47806</a>.</p>
-    <p>To fix this vulnerability, update the gstreamer stack to 1.26.2 using
+    <p>To fix these vulnerabilities, update the gstreamer stack to 1.26.2 using
     the instructions starting at
     <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
     <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
@@ -981,7 +1075,7 @@
     <a href="../view/systemd/basicnet/libsoup3.html">libsoup (systemd)</a>.</p>
 
     <a id="sa-12.3-020"/>
-    <h4>12.3 020 Yelp                     Date: 2025-05-20  Severity: High</h4>
+    <h4>12.3 020 Yelp                     Updated: 2025-06-22  Severity: High</h4>
     <p>In Yelp-42.2, a security vulnerability was found that allows help
     documents to execute arbitrary JavaScript, and also read arbitrary files
     on the disk. Upstream has not released a patched version to fix this issue,
@@ -992,14 +1086,20 @@
     AS POSSIBLE</em>. The patches resolve the issue by implementing a Content
     Security Policy through some calls to WebKit that prevents the JavaScript
     code from being executed.
+    [Updated 2025-06-22]: Upstream has now released updates for yelp-xsl and
+    yelp. Users should update to yelp-xsl-42.4 and yelp-42.3 if they haven't
+    already applied patches to fix this vulnerability.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-3155">CVE-2025-3155</a>.</p>
-    <p>To fix this vulnerability, apply the patches to Yelp and yelp-xsl and
-    rebuild them using the instructions from
+    <p>To fix this vulnerability, update to yelp-xsl-42.4 and yelp-42.3 using
+    the instructions from
     <a href="../view/svn/gnome/yelp-xsl.html">yelp-xsl (sysv)</a> and
     <a href="../view/svn/gnome/yelp.html">yelp (svn)</a>, or
     <a href="../view/systemd/gnome/yelp-xsl.html">yelp-xsl (systemd)</a> or
     <a href="../view/syetemd/gnome/yelp.html">yelp (systemd)</a>.</p>
+    <p><em>Updated on 2025-06-22 to include details about yelp-xsl-42.4 and
+    yelp-42.3, which fix this vulnerability. Users should use these versions
+    now instead of using the patches.</em></p>
 
     <a id="sa-12.3-019"/>
     <h4>12.3 019 xz (LFS)                 Date: 2025-05-20  Severity: High</h4>

@@ -129,12 +129,28 @@
     <h4>12.3 050 File::Find::Rule         Date: 2025-06-09  Severity: High</h4>
     <p>In File::Find::Rule-0.35, a security vulnerability was fixed that could
     allow for arbitrary code execution when 'grep()' encounters a maliciously
-    crated file name. Update to File::Find::Rule-0.35.
+    crafted file name. Update to File::Find::Rule-0.35.
     <a href="consolidated.html#sa-12.3-050">12.3-050</a></p>
 
 <!-- end of File::Find::Rule -->
 
     <h3>Firefox</h3>
+
+    <a id="sa-12.3-064"/>
+    <h4>12.3 064 Firefox                  Date: 2025-06-26  Severity: High</h4>
+    <p>In Firefox-140.0esr, ten security vulnerabilities were fixed that
+    could allow for use-after-free attacks, exposure of persistent UUIDs,
+    Content Security Policy restriction can be bypassed, incorrect parsing
+    leading to allowing embedded of YouTube, ignorance of the
+    Content-Disposition header, DNS request leakage outside a configured SOCKS
+    proxy, singage of a challenge with an invalid TLS certificate, clickjacking
+    via the HTTPS-only exception, Save as action in Devtools not santizing the
+    downloaded files extensions, and exploitable memory safety bugs. Two of the
+    vulnerabilities are rated as High.
+    <p>Update to Firefox-140.0esr. Alternatively, if you have not installed
+    ICU-76.1 or later, you can stay on the 128 ESR series and upgrade to
+    Firefox-128.12.0esr.
+    <a href="consolidated.html#sa-12.3-064">12.3-064</a></p>
 
     <a id="sa-12.3-038"/>
     <h4>12.3 038 Firefox                  Date: 2025-05-28  Severity: Critical</h4>
@@ -286,7 +302,7 @@
       Insecure handling of file paths allows multiple local attacks<br/>
     <a href="https://kb.isc.org/docs/cve-2025-32803">CVE-2025-32803</a>:
       Insecure file permissions can result in confidential information leakage<br/>
-    </p>
+
     <p>If you have Kea installed, see details at
       <a href="consolidated.html#sa-12.3-040">12.3-040</a></p>
 
@@ -326,6 +342,22 @@
     <a href="consolidated.html#sa-12.3-008">12.3-008</a></p>
 
 <!-- end of libarchive -->
+
+    <h3>libblockdev</h3>
+
+    <a id="sa-12.3-062"/>
+    <h4>12.3 062 libblockdev              Date: 2026-06-22  Severity: High</h4>
+    <p>In libblockdev-3.3.1, a security vulnerability was fixed that could
+    allow for local privilege escalation. The vulnerability occurs due to a bug
+    in udisks, and both packages need to be adjusted to fix the vulnerability.
+    The vulnerability is part of a chain with Linux-PAM and udisks which allows
+    for remote attackers to achieve local privilege escalation, and a detailed
+    proof of concept exploit and details are now publicly available. <em>All
+    users who have libblockdev installed should update to libblockdev-3.3.1
+    immediately to protect their systems.</em>
+    <a href="consolidated.html#sa-12.3-062">12.3-062</a></p>
+
+<!-- end of libblockdev -->
 
     <h3>LibreOffice</h3>
 
@@ -432,6 +464,22 @@
     <a href="consolidated.html#sa-12.3-004">12.3-004</a></p>
 
 <!-- end of libxslt -->
+
+    <h3>Linux-PAM</h3>
+
+    <a id="sa-12.3-061"/>
+    <h4>12.3 061 Linux-PAM                Date: 2026-06-22  Severity: High</h4>
+    <p>In Linux-PAM-1.7.1, two security vulnerabilities were fixed that could
+    allow for privilege escalation and for unauthorized access to systems. The
+    privilege escalation vulnerability was disclosed by the French government,
+    and detailed proof of concept exploits and exploitiation information are
+    available for using this vulnerability in a chain with libblockdev and
+    udisks to achieve privilege escalation. <em>All users who have Linux-PAM
+    installed should update to Linux-PAM-1.7.1 immedately to protect their
+    systems.</em>.
+    <a href="consolidated.html#sa-12.3-061">12.3-061</a></p>
+
+<!-- end of Linux-PAM -->
 
     <h3>lxml (Python Module)</h3>
 
@@ -556,7 +604,7 @@
 
     <a id="sa-12.3-046"/>
     <h4>12.3 046 QtWebEngine              Date: 2025-06-03  Severity: Critical</h4>
-    <p>In QtWebEngine-6.9.1, nineteen security advisories were fixed that could
+    <p>In QtWebEngine-6.9.1, nineteen security vulnerabilities were fixed that could
     allow for remote code execution, information retrieval about peripherals,
     malicious extension installation, file restriction bypasses, same origin
     policy bypasses, remotely exploitable privilege escalation, remotely
@@ -668,8 +716,8 @@
     <a id="sa-12.3-053"/>
     <h4>12.3 053 Thunderbird              Date: 2025-06-11  Severity: High</h4>
     <p>In Thunderbird-128.11.1esr, a security vulnerability was fixed that
-    could allow for credential linkage, exaughsting disk usage, and downloading
-    files unsolicted by using crafted HTML mailbox:/// links. This was the same
+    could allow for credential linkage, disk space exhaustion, and unsolicited
+    file downloads by using crafted HTML mailbox:/// links. This was the same
     vulnerability that was claimed to be fixed in Thunderbird-128.10.2esr. Due
     to different code landing, the vulnerability was never fixed until this
     release. This vulnerability is rated as high and was unfixed for 22 days.
@@ -716,6 +764,24 @@
     <a href="consolidated.html#sa-12.3-003">12.3-003</a></p>
 
 <!-- end of Thunderbird -->
+
+    <h3>udisks</h3>
+
+    <a id="sa-12.3-063"/>
+    <h4>12.3 063 udisks                   Date: 2026-06-22  Severity: High</h4>
+    <p>In udisks-2.10.1, a security vulnerability was discovered that can allow
+    for local privilege escalation attacks when chained together with libblockdev
+    and Linux-PAM. The vulnerability occurs because udisks does not always mount
+    filesystems with the 'nosuid,nodev' parameters, which can allow users to
+    escalate their privileges on systems with SUID executables, and this is not
+    supposed to be the default behavior for filesystems mounted via udisks. A
+    detailed proof-of-concept exploit is available with comprehensive exploit
+    documentation. The BLFS developers have implemented a sed to work around
+    the problem. <em>If you have udisks installed on your system, you should
+    rebuild udisks with the sed command in the book immediately.</em>
+    <a href="consolidated.html#sa-12.3-063">12.3-063</a></p>
+
+<!-- end of udisks -->
 
     <h3>WebKitGTK</h3>
 
@@ -788,7 +854,7 @@
     <h3>Yelp</h3>
 
     <a id="sa-12.3-020"/>
-    <h4>12.3 020 Yelp                     Date: 2025-05-20  Severity: High</h4>
+    <h4>12.3 020 Yelp                     Updated: 2025-06-22  Severity: High</h4>
     <p>In Yelp-42.2, a security vulnerability was found that allows help 
     documents to execute arbitrary JavaScript, and also read arbitrary files
     on the disk. Upstream has not released a patched version to fix this issue,
@@ -796,8 +862,11 @@
     There is a public exploit and writeup available demonstrating the ability 
     to read a user's SSH Private Key via a crafted help document, and thus
     <em>ALL BLFS USERS WHO HAVE YELP INSTALLED SHOULD APPLY THE PATCHES AS SOON
-    AS POSSIBLE</em>. Rebuild yelp and yelp-xsl with the security patches.
+    AS POSSIBLE</em>. Update to yelp-42.3 and yelp-xsl-42.4.
     <a href="consolidated.html#sa-12.3-020">12.3-020</a></p>
+    <p><em>Updated on 2025-06-22 to include details about yelp-xsl-42.4 and
+    yelp-42.3, which fix this vulnerability. Users should use these versions
+    now instead of using the patches.</em></p>
 
 <!-- end of Yelp -->
 <!--#include virtual="/common/footer.html" -->
