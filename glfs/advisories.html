@@ -56,6 +56,25 @@
     Consolidated Security Advisories</a> for more packages that aren't covered
     here.</p>
 
+    <a id="glfs-sa-12.3-003"/>
+    <h4>glfs-sa-12.3-003: Fontconfig - Rating: Medium (Date: July 3rd, 2025)</h4>
+    <p>In Fontconfig-2.17.1, a heap buffer overflow was fixed that was
+    introduced in 2.17.0. When compiled with santized addresses, it will cause
+    fc-cache to bail out when using the -f option when regenerating the font
+    cache. If a font is malformed as a result of this early bail, Steam will
+    crash, which is why it is mentioned in this advisories page. Upstream has
+    not treated it as a security vulnerability and thus have not reserved a CVE
+    or any security ticket with any authority. Since it can affect GLFS users
+    directly and other issues of its ilk are considered security
+    vulnerabilities, we consider this a vulnerability as well. This issue may
+    not harm you, but if you are on Fontconfig-2.17.0, you should consider
+    updating to Fontconfig-2.17.1 to avoid font recaching bailing via fc-cache
+    which can cause Steam to crash. This is not needed for the 2.16 series.</p>
+    <p>To upgrade to Fontconfig-2.17.1, follow the <a
+    href="https://glfs-book.github.io/glfs/shareddeps/fontconfig.html">GLFS
+    Fontconfig installation page</a> which does not differ for SysVinit/Systemd
+    versions of the book.</p>
+
     <a id="glfs-sa-12.3-002"/>
     <h4>glfs-sa-12.3-002: NVIDIA - Rating: High (Date: June 21st, 2025)</h4>
     <p>In NVIDIA-575.64, a security vulnerability was fixed that could allow
