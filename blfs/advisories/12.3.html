@@ -698,6 +698,21 @@
 
 <!-- end of Spidermonkey -->
 
+    <h3>sudo</h3>
+
+    <a id="sa-12.3-065"/>
+    <h4>12.3 065 sudo                     Date: 2025-07-02  Severity: Critical</h4>
+    <p>In sudo-1.9.17p1, two security vulnerabilities were fixed that could
+    allow for Local Privilege Escalation. The first vulnerability affects the
+    'host' option, and requires that a hostname is specified in a sudoers rule
+    to exploit. The other vulnerability affects the chroot functionality. The
+    default BLFS sudoers configuration is not affected, but if you have made
+    any modifications to /etc/sudoers to use hostnames or CHROOT, you should
+    update your system to sudo-1.9.17p1 immediately.
+    <a href="consolidated.html#sa-12.3-065">12.3-065</a></p>
+
+<!-- end of sudo -->
+
     <h3>systemd</h3>
 
     <a id="sa-12.3-044"/>

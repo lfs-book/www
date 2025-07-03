@@ -65,6 +65,36 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-065"/>
+    <h4>12.3 065 sudo                     Date: 2025-07-02  Severity: Critical</h4>
+    <p>In sudo-1.9.17p1, two security vulnerabilities were fixed that could
+    allow for Local Privilege Escalation. The first vulnerability affects the
+    'host' option, and requires that a hostname is specified in a sudoers rule
+    to exploit. The '--host' option was only intended to be used with '--list',
+    so that users can list their privileges on a host other than the current
+    machine. However, due to a bug it was not restricted to listing privileges
+    and can be utilized to perform Local Privilege Escalation depending on rules
+    present in /etc/sudoers. The other vulnerability allows an attacker to
+    leverage sudo's -R/--chroot option to run arbitrary commands if the sudoers
+    file allows for the chroot option to work. It's possible to trick sudo to
+    load an arbitrary shared library by creating a /etc/nsswitch.conf file
+    under the user-specified root directory - however note that this again
+    requires non-standard configuration (chroot support) to be enabled. Default
+    installations of sudo on BLFS are not affected, but if you have customized
+    sudoers to add chroot support or to utilize hostnames, you should update
+    to sudo-1.9.17p1 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32462">CVE-2025-32462</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32463">CVE-2025-32463</a>.</p>
+    <p>Additional information about these vulnerabilities can be found at
+    <a href="https://www.sudo.ws/security/advisories/host_any/">the --host security advisory</a>
+    and the
+    <a href="https://www.sudo.ws/security/advisories/chroot_bug/">chroot security advisory</a>.</p>
+    <p>To fix these vulnerabilities, update to sudo-1.9.17p1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/sudo.html">sudo (sysv)</a> or
+    <a href="../view/systemd/postlfs/sudo.html">sudo (systemd)</a>.</p>
+
     <a id="sa-12.3-064"/>
     <h4>12.3 064 Firefox                  Date: 2025-06-26  Severity: High</h4>
     <p>In Firefox-140.0esr, ten security vulnerabilities were fixed that
