@@ -65,6 +65,31 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-069"/>
+    <h4>12.3 069 git                      Date: 2025-07-10  Severity: Critical</h4>
+    <p>In git-2.50.1, four security vulnerabilities were fixed that could allow
+    for arbitrary code execution, for files to be created elsewhere on the
+    filesystem without a user's knowledge, for submodules to unintentionally
+    execute scripts when checking out a module, and for protocol injection
+    when cloning repositories from the internet (when a CDN is configured by
+    the remote server). Two of these vulnerabilities affect Git as a whole,
+    while the other two only impact Gitk. <em>ALL</em> users are encouraged
+    to upgrade git if they have it installed.
+    These vulnerabilities have been assigned
+    <a href="https://www.tenable.com/cve/CVE-2025-27613">CVE-2025-27613</a>,
+    <a href="https://www.tenable.com/cve/CVE-2025-27614">CVE-2025-27614</a>,
+    <a href="https://www.tenable.com/cve/CVE-2025-48384">CVE-2025-48384</a>, and
+    <a href="https://www.tenable.com/cve/CVE-2025-48385">CVE-2025-48385</a>.</p>
+    <p>Additional information about these vulnerabilities can be found at the
+    <a href="https://lore.kernel.org/git/xmqq5xg2wrd1.fsf@gitster.g">Git Release Announcement</a>,
+    <a href="https://windowsforum.com/threads/cve-2025-27614-critical-gitk-vulnerability-and-its-impact-on-dev-security.372740/#post-924680">
+    Microsoft blog post on one of the Gitk vulnerabilities</a>, and
+    <a href="https://github.blog/open-source/git/git-security-vulnerabilities-announced-6/">Github blog post</a>.</p>
+    <p>To fix these vulnerabilities, update to git-2.50.1 or later
+    using the instructions from
+    <a href="../view/svn/general/git.html">git (sysv)</a> or
+    <a href="../view/systemd/general/git.html">git (systemd)</a></p>
+
     <a id="sa-12.3-068"/>
     <h4>12.3 068 PHP                      Date: 2025-07-10  Severity: High</h4>
     <p>In PHP-8.4.10, three security vulnerabilities were fixed that could allow
