@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-068"/>
+    <h4>12.3 068 PHP                      Date: 2025-07-10  Severity: High</h4>
+    <p>In PHP-8.4.10, three security vulnerabilities were fixed that could allow
+    for a remotely exploitable denial of service, SQL Injection, and for Server
+    Side Request Forgery. The SQL Injection issue impacts servers which use the
+    PGSQL extension, and it occurs because the extension does not check for
+    errors while escaping. This is identical to the security issue in PostgreSQL
+    from February 2025, and the PHP component was fixed in this release. The
+    Server Side Request Forgery occurs in the Standard library when processing
+    hostnames, as fsockopen() doesn't regard NULL bytes in hostnames. The
+    remotely exploitable denial of service problem occurs in the SOAP module,
+    and it occurs due to a NULL pointer dereference that occurs when processing
+    large XML namespace prefixes (greater than 2GB in size).
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2025-1735">CVE-2025-1735</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2025-6491">CVE-2025-6491</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2025-1220">CVE-2025-1220</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.4.10 or later using the
+    instructions from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+
     <a id="sa-12.3-067"/>
     <h4>12.3 067 Thunderbird              Date: 2025-07-03  Severity: High</h4>
     <p>In Thunderbird-140.0esr, ten security vulnerabilities were fixed that
