@@ -65,6 +65,35 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-076"/>
+    <h4>12.3 076 Apache HTTPD             Date: 2025-07-17  Severity: Critical</h4>
+    <p>In httpd-2.4.64, seven security vulnerabilties were fixed that could
+    allow for a denial of service (server crash) when using HTTP/2, for a
+    man-in-the-middle attack to hijack an HTTP session via a TLS upgrade when
+    using the mod_ssl module, for a remotely-exploitable crash when using the
+    mod_proxy_http2 module, for access control bypasses when using the mod_ssl
+    module with multiple virtual hosts, for remote injection of escape characters
+    into error logs when using the mod_ssl module, for server side request
+    forgery when using the mod_headers module to set the Content-Type header,
+    and for HTTP response splitting. The HTTP response splitting vulnerability
+    is a repeat of CVE-2023-38709 because the patch included in httpd-2.4.59
+    did not actually resolve the vulnerability. Several of these vulnerabilities
+    require unusual configurations, but if you are using mod_ssl, mod_proxy_http2,
+    or the mod_headers module, or HTTP/2 support, you should update to
+    this version immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53020">CVE-2025-53020</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49812">CVE-2025-49812</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49630">CVE-2025-49630</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23048">CVE-2025-23048</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-47252">CVE-2024-47252</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-43204">CVE-2024-43204</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-42516">CVE-2024-42516</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.64 or later using the
+    instructions from
+    <a href="../view/svn/server/apache.html">Apache HTTPD (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
+
     <a id="sa-12.3-075"/>
     <h4>12.3 075 Unbound                  Date: 2025-07-17  Severity: High</h4>
     <p>In Unbound-1.23.1, a security vulnerability was fixed that could allow
