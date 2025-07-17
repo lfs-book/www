@@ -65,6 +65,25 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-071"/>
+    <h4>12.3 071 poppler                  Date: 2025-07-16  Severity: Medium</h4>
+    <p>In poppler-25.06.0, a security vulnerability was fixed that could allow
+    for a denial of service (application crash), or potentially arbitrary code
+    execution. The problem occurs because of the usage of 'std::atomic_int' for
+    reference counting, and it is possible to overflow the reference count
+    because it is only 32 bits. This bug is classified as a use-after-free.
+    Upstream and the individual that discovered the vulnerability have noted
+    that while there is a chance for arbitrary code execution, the risk is very
+    low as it took as long as 12 hours for them to trigger.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52886">CVE-2025-52886</a>.</p>
+    <p>Additional information about this vulnerability can be found at
+    <a href="https://securitylab.github.com/advisories/GHSL-2025-054_poppler/">the GitHub Security Lab advisory</a>.</p>
+    <p>To fix this vulnerability, update to poppler-25.06.0 or later using the
+    instructions from
+    <a href="../view/svn/general/poppler.html">poppler (sysv)</a> or
+    <a href="../view/systemd/general/poppler.html">poppler (systemd)</a>.</p>
+
     <a id="sa-12.3-070"/>
     <h4>12.3 070 GnuTLS                   Date: 2025-07-10  Severity: Medium</h4>
     <p>In GnuTLS-3.8.10, four security vulnerabilities were fixed that could
