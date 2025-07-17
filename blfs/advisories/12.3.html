@@ -467,6 +467,20 @@
 
     <h3>libxml2</h3>
 
+    <a id="sa-12.3-073"/>
+    <h4>12.3 073 libxml2                  Date: 2025-07-17  Severity: Critical</h4>
+    <p>In libxml2-2.14.5, four security vulnerabilities were fixed that could
+    allow for denial of service and arbitrary code execution when processing a
+    crafted XML file. One of the vulnerabilities affects the xmllint utility,
+    and is a stack buffer overflow. The others affect functionality in the
+    Schematron component, and are type confusion, null pointer dereference, and
+    heap use after free vulnerabilities. All users are recommended to update to
+    libxml2-2.14.5 or apply the patch mentioned in the advisory immediately.
+    Users who are on BLFS 12.3 are recommended to use the patch as you will
+    need to apply several fixes to different packages and you will need to
+    rebuild all packages which use libxml2.
+    <a href="consolidated.html#sa-12.3-073">12.3-073</a></p>
+
     <a id="sa-12.3-060"/>
     <h4>12.3 060 libxml2                  Date: 2025-06-21  Severity: High</h4>
     <p>In libxml2-2.14.4, a security vulnerability was fixed that could allow
@@ -477,7 +491,8 @@
     update to libxml2-2.14.4 or apply the patch the BLFS developers have made
     available for libxml2-2.13.8. The patch method is recommended for BLFS 12.3
     users since updating to libxml2-2.14 will require several fixes and a
-    rebuild of all packages that use libxml2.</p>
+    rebuild of all packages that use libxml2.
+    <a href="consolidated.html#sa-12.3-060">12.3-060</a></p>
 
     <a id="sa-12.3-014"/>
     <h4>12.3 014 libxml2                  Date: 2025-05-20  Severity: High</h4>
