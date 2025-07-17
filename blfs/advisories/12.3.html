@@ -903,6 +903,21 @@
 
 <!-- end of udisks -->
 
+    <h3>Unbound</h3>
+
+    <a id="sa-12.3-075"/>
+    <h4>12.3 075 Unbound                  Date: 2025-07-17  Severity: High</h4>
+    <p>In Unbound-1.23.1, a security vulnerability was fixed that could allow
+    for DNS cache poisoning attacks in some configurations. This attack has
+    been called the Rebirthday Attack. The standard BLFS configuration is not
+    impacted as we do not pass the '--enable-subnet' option to configure when
+    building Unbound. However, users who have passed this option to configure
+    are affected. Update to Unbound-1.23.1 if you passed this option to
+    configure.
+    <a href="consolidated.html#sa-12.3-075">12.3-075</a></p>
+
+<!-- end of Unbound -->
+
     <h3>vim</h3>
 
     <a id="sa-12.3-072"/>
