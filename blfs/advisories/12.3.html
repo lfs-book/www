@@ -873,6 +873,21 @@
 
 <!-- end of udisks -->
 
+    <h3>vim</h3>
+
+    <a id="sa-12.3-072"/>
+    <h4>12.3 072 vim (LFS and BLFS)       Date: 2025-07-16  Severity: Medium</h4>
+    <!-- Upstream marked as Low, NVD and Github marked as Medium -->
+    <p>In vim-9.1.1552, two security vulnerabilities were fixed that could allow
+    for path traveral when using the tar.vim and zip.vim plugins to view a
+    malicious TAR or ZIP file. It is possible for vim to extract arbitrary
+    files into directories on the system if a relative path is used within
+    the TAR/ZIP file, which can be used to place files necessary to exploit
+    other vulnerabilities on the system. Update to vim-9.1.1552.
+    <a href="consolidated.html#sa-12.3-072">12.3-071</a></p>
+
+<!-- end of vim -->
+
     <h3>WebKitGTK</h3>
 
     <a id="sa-12.3-007"/>
