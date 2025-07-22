@@ -65,6 +65,37 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-080"/>
+    <h4>12.3 080 Firefox                  Date: 2025-07-22  Severity: High</h4>
+    <p>In Firefox-140.1.0, fourteen security vulnerabilities were fixed that
+    could allow for writing a partial return value to the stack on 64-bit
+    systems, large branch tables leading to truncated instructions, URLs being
+    executed on object and embed tags via JavaScript, cirmcumventing CORS via
+    DNS rebinding, nameless cookies shadowing secure cookies, potential code
+    execution via the "Copy as cURL" command, incorrect URL stripping in CSP
+    reports, XSLT documents bypassing CSP, CSP frame-src not being correctly
+    enforced for paths, search terms persiting in the URL bar, incorrectly
+    handling closed generators via JavaScript, and various memory safety bugs.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8027">CVE-2025-8027</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8028">CVE-2025-8028</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8029">CVE-2025-8029</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8030">CVE-2025-8030</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8031">CVE-2025-8031</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8032">CVE-2025-8032</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8033">CVE-2025-8033</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8034">CVE-2025-8034</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8035">CVE-2025-8035</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8036">CVE-2025-8036</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8037">CVE-2025-8037</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8038">CVE-2025-8038</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8039">CVE-2025-8039</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8040">CVE-2025-8040</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-140.1.0 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
     <a id="sa-12.3-079"/>
     <h4>12.3 079 SpiderMonkey             Date: 2025-07-22  Severity: High</h4>
     <p>In SpiderMonkey-128.13.0, a security vulnerability was fixed that could
