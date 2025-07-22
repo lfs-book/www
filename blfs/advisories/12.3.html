@@ -810,25 +810,33 @@
 
 <!-- end of Screen -->
 
-    <h3>Spidermonkey</h3>
+    <h3>SpiderMonkey</h3>
+
+    <a id="sa-12.3-079"/>
+    <h4>12.3 079 SpiderMonkey             Date: 2025-07-22  Severity: High</h4>
+    <p>In SpiderMonkey-128.13.0, a security vulnerability was fixed that could
+    allow for writing a 32-bit value on a 64-bit platform. 64 bits are read for
+    the value which would be out of bounds on the stack. On 32-bit platforms,
+    this would not happen. Update to SpiderMonkey-128.13.0.
+    <a href="consolidated.html#sa-12.3-079">12.3-079</a></p>
 
     <a id="sa-12.3-033"/>
-    <h4>12.3 033 Spidermonkey             Date: 2025-05-20  Severity: Critical</h4>
-    <p>In Spidermonkey-128.10.1, two critical security vulnerabilities were fixed
+    <h4>12.3 033 SpiderMonkey             Date: 2025-05-20  Severity: Critical</h4>
+    <p>In SpiderMonkey-128.10.1, two critical security vulnerabilities were fixed
     that could allow for an attacker to read and write out of bounds memory
     through executing malicious JavaScript. These vulnerabilities were shown
     at Vancouver Pwn2Own to achieve remote code execution and JavaScript
-    manipulation. All users with Spidermonkey installed need to update to
+    manipulation. All users with SpiderMonkey installed need to update to
     128.10.1 urgently.
     <a href="consolidated.html#sa-12.3-033">12.3-033</a></p>
 
     <a id="sa-12.3-001"/>
-    <h4>12.3 001 Spidermonkey             Date: 2025-03-07  Severity: High</h4>
-    <p>In Spidermonkey-128.8.0, two security vulnerabilities were fixed that
+    <h4>12.3 001 SpiderMonkey             Date: 2025-03-07  Severity: High</h4>
+    <p>In SpiderMonkey-128.8.0, two security vulnerabilities were fixed that
     could allow for arbitrary code execution (due to type confusion), as well as
     arbitrary code execution due to unexpected garbage collection occuring
     during Regular Expression bailout processing. Note that the type confusion
-    vulnerability only impacts 64-bit CPUs. Update to Spidermonkey-128.8.0.
+    vulnerability only impacts 64-bit CPUs. Update to SpiderMonkey-128.8.0.
     <a href="consolidated.html#sa-12.3-001">12.3-001</a></p>
 
 <!-- end of Spidermonkey -->
