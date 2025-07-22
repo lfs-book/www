@@ -98,12 +98,12 @@
 
     <a id="sa-12.3-079"/>
     <h4>12.3 079 SpiderMonkey             Date: 2025-07-22  Severity: High</h4>
-    <p>In SpiderMonkey-128.13.0, a security vulnerability was fixed that could
-    allow for writing a 32-bit value on a 64-bit platform. 64 bits are read for
-    the value which would be out of bounds on the stack. On 32-bit platforms,
-    this would not happen.
-    This vulnerability has been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8027">CVE-2025-8027</a>.</p>
+    <p>In SpiderMonkey-128.13.0, two security vulnerabilities were fixed that
+    could allow for writing a partial return value to the stack on 64-bit
+    systems and incorrectly handling closed generators.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8027">CVE-2025-8027</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8033">CVE-2025-8033</a>.</p>
     <p>To fix these vulnerability, update to SpiderMonkey-128.13.0 or later
     using the instructions from
     <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or

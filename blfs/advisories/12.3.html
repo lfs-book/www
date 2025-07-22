@@ -830,10 +830,10 @@
 
     <a id="sa-12.3-079"/>
     <h4>12.3 079 SpiderMonkey             Date: 2025-07-22  Severity: High</h4>
-    <p>In SpiderMonkey-128.13.0, a security vulnerability was fixed that could
-    allow for writing a 32-bit value on a 64-bit platform. 64 bits are read for
-    the value which would be out of bounds on the stack. On 32-bit platforms,
-    this would not happen. Update to SpiderMonkey-128.13.0.
+    <p>In SpiderMonkey-128.13.0, two security vulnerabilities were fixed that
+    could allow for writing a partial return value to the stack on 64-bit
+    systems and incorrectly handling closed generators.
+    Update to SpiderMonkey-128.13.0.
     <a href="consolidated.html#sa-12.3-079">12.3-079</a></p>
 
     <a id="sa-12.3-033"/>
