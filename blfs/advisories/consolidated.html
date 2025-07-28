@@ -65,6 +65,42 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-084"/>
+    <h4>12.3 084 OpenJDK                  Date: 2025-07-28  Severity: High</h4>
+    <p>In OpenJDK-24.0.2, give security vulnerabilities were fixed that could
+    allow for remote code execution, remote information disclosure, and also
+    remotely exploitable denial of service. One of the vulnerabilties is trivial
+    to exploit, but the other four vulnerabilities have a high attack complexity.
+    The vulnerabilities are in the Networking, 2D, JSSE, and Compiler components.
+    None of the exploits require any user interaction or authentication to
+    exploit, and the most serious of the vulnerabilities is the low complexity
+    remote code execution vulnerability in the Networking component. All users
+    who have OpenJDK installed should update to OpenJDK-24.0.2 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50059">CVE-2025-50059</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30749">CVE-2025-30749</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-50106">CVE-2025-50106</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30754">CVE-2025-30754</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30752">CVE-2025-30752</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-24.0.2 or later using
+    the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>If you want to use the pre-built binaries, update to Java-24.0.2 using
+    the instructions from
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+    <p><em>The below information only applies to users who did not update to
+    OpenJDK-24.0.1.</em></p>
+    <p>If you install LibreOffice or Fop after this update, you must update to
+    LibreOffice-25.2.3.2 and Fop-2.11 to resolve issues with Java 24's removal
+    of the Java Security Manager API. Links to both pages can be found here:
+    <a href="../view/svn/xsoft/libreoffice.html">LibreOffice (sysv)</a> or
+    <a href="../view/systemd/xsoft/libreoffice.html">LibreOffice (systemd)</a>, and
+    <a href="../view/svn/pst/fop.html">Fop (sysv)</a> or
+    <a href="../view/systemd/pst/fop.html">Fop (systemd)</a>.</p>
+    <p>The above updates have been tested against a BLFS 12.3 system.</p>
+
     <a id="sa-12.3-083"/>
     <h4>12.3 083 Qt6                      Date: 2025-07-27  Severity: Low</h4>
     <p>In Qt-6.9.1, a security vulnerability was discovered that can allow for
