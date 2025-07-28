@@ -65,6 +65,38 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-083"/>
+    <h4>12.3 083 Qt6                      Date: 2025-07-27  Severity: Low</h4>
+    <p>In Qt-6.9.1, a security vulnerability was discovered that can allow for
+    a denial of service when processing a specially crafted ICC profile. The
+    crash occurs when an ICC profile causes a value outside of the expected
+    range to QColorTransferGenericFunction, and this can be exploited by
+    an application using QColorSpace::fromICCProfile to set color profiles.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5992">CVE-2025-5992</a>.</p>
+    <p>To fix this vulnerability, update to Qt-6.9.1 and apply the patch in
+    the book using the instructions from
+    <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a>.</p>
+    <p>Alternatively, you can apply the patch from Qt, which can be found at
+    <a href="https://download.qt.io/official_releases/qt/6.8/CVE-2025-5992-qtbase-6.8.patch">Qt CVE-2025-5992 Patch for 6.8</a>
+    and then rebuild Qt, but this has not been tested by the BLFS team.</p>
+    <p>If you decide to update to Qt-6.9.1, rebuild the following packages
+    if you have them installed:</p>
+    <ul>
+       <li><a href="../view/svn/general/qca.html">Qca (sysv)</a> or
+           <a href="../view/systemd/general/qca.html">Qca (systemd)</a></li>
+       <li><a href="../view/svn/general/qcoro.htmL">qcoro (sysv)</a> or
+           <a href="../view/systemd/general/qcoro.html">qcoro (systemd)</a></li>
+       <li><a href="../view/svn/general/libportal.html">libportal (sysv)</a> or
+           <a href="../view/systemd/general/libportal.html">libportal (systemd)</a></li>
+       <li><a href="../view/svn/kde/plasma-all.html">Plasma (sysv)</a> or
+           <a href="../view/systemd/kde/plasma-all.html">Plasma (systemd)</a></li>
+       <li>For minimal LXQt installations:
+           <a href="../view/svn/lxqt/lxqt-layer-shell-qt.html">layer-shell-qt for LXQt (sysv)</a> or
+           <a href="../view/systemd/lxqt/lxqt-layer-shell-qt.html">layer-shell-qt for LXQt (systemd)</a>.</li>
+    </ul>
+
     <a id="sa-12.3-082"/>
     <h4>12.3 082 Apache HTTPD             Date: 2025-07-27  Severity: Medium</h4>
     <p>In httpd-2.4.65, a security vulnerability was resolved that causes all

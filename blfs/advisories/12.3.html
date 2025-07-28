@@ -733,6 +733,20 @@
 
     <h3>Qt6</h3>
 
+    <a id="sa-12.3-083"/>
+    <h4>12.3 083 Qt6                      Date: 2025-07-27  Severity: Low</h4>
+    <p>In Qt-6.9.1, a security vulnerability was discovered that can allow for
+    a denial of service when processing a specially crafted ICC profile. The
+    crash occurs when an ICC profile causes a value outside of the expected
+    range to QColorTransferGenericFunction, and this can be exploited by
+    an application using QColorSpace::fromICCProfile to set color profiles.
+    The only known impacts at this time are application crashes. Updating Qt6
+    to 6.9.1 can be risky and requires some package rebuilds due to the usage
+    of private API that was changed in Qt 6.9.1, but the BLFS team has tested
+    it and if you want to take the risk, update to Qt 6.9.0. A patch is also
+    available for Qt 6.8 but has not been tested by the BLFS team.
+    <a href="consolidated.html#sa-12.3-083">12.3-083</a></p>
+
     <a id="sa-12.3-011"/>
     <h4>12.3 011 Qt6                      Date: 2025-05-20  Severity: Low</h4>
     <p>In Qt-6.9.0, a security vulnerability has been fixed that
