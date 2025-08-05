@@ -65,6 +65,31 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-085"/>
+    <h4>12.3 085 glibc (LFS)              Date: 2025-08-05  Severity: Medium</h4>
+    <p>In glibc-2.42, a security vulnerability was fixed that can allow for
+    a double free when using the regcomp() function. The double free can be
+    accomplished by a malloc failure or by using an interposed malloc that
+    injects random malloc failures, and the double free is known to cause
+    buffer manipulation depending on how the regex passed to regcomp is
+    constructed. All versions from glibc-2.4 to 2.41 are known to be affected.
+    The vulnerability can cause denial of service or arbitrary code execution.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8058">CVE-2025-8058</a>.</p>
+    <p>To fix this vulnerability, there are two options. One is updating to
+    glibc-2.42 using the instructions from the LFS book at
+    <a href="../../lfs/view/development/chapter08/glibc.html">Glibc (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/glibc.html">Glibc (systemd)</a>.</p>
+    <p><em>IF YOU UPDATE GLIBC, PLEASE FOLLOW THE INSTRUCTIONS IN THAT PAGE
+    ABOUT UPDATING GLIBC VERY CAREFULLY.</em></p>
+    <p>Alternatively, a commit was pushed to the release/2.41 branch upstream
+    that is known to fix the issue. If you apply the patch below, ignore the
+    conflict that occurs because of the NEWS file. It has been reported to work
+    by other distributions and verified by an editor. The patch can be found at
+    <a href="https://sourceware.org/cgit/glibc/patch/?id=1e16d0096d80a6e12d5bfa8e0aafdd13c47efd65">glibc-2.41 regcomp patch</a>.</p>
+    <p><em>IF YOU APPLY THE PATCH AND REBUILD, PLEASE ALSO FOLLOW THE UPDATE
+    INSTRUCTIONS CAREFULLY TO PREVENT A BROKEN SYSTEM.</em></p>
+
     <a id="sa-12.3-084"/>
     <h4>12.3 084 OpenJDK                  Date: 2025-07-28  Severity: High</h4>
     <p>In OpenJDK-24.0.2, give security vulnerabilities were fixed that could

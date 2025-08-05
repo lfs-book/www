@@ -58,7 +58,6 @@
     -->
 
 
-<!--
     <h3>Glibc</h3>
 
     <p style="font-style: italic;">Updating Glibc from an earlier version
@@ -67,21 +66,19 @@
     book section for Glibc.  Follow it strictly or you may render the
     system completely unusable.</p>
 
-    <a id="sa-12.2-072"/>
-    <h4>12.2 072 Glibc (LFS)          Date: 2025-02-02    Severity: Medium</h4>
-    <p>In Glibc-2.41, a security vulnerability was fixed that could allow for
-    a buffer overflow when printing assertion failure messages. This can allow
-    for application crashes, or in some extreme cases, undefined behavior. The
-    only viable vector for exploitation of this vulnerability is <b>local</b>,
-    and it must be a setuid program that has an existing bug which results in
-    the assertion failure. At this time, the LFS team (and upstream) are not
-    aware of any applications that may have this behavior, but users may have
-    custom setuid programs which can be exploited. Only LFS users who have
-    custom setuid programs installed are affected.</p>
+    <a id="sa-12.3-085"/>
+    <h4>12.3 085 glibc (LFS)              Date: 2025-08-05  Severity: Medium</h4>
+    <p>In glibc-2.42, a security vulnerability was fixed that can allow for
+    a double free when using the regcomp() function. The double free can be
+    accomplished by a malloc failure or by using an interposed malloc that
+    injects random malloc failures, and the double free is known to cause
+    buffer manipulation depending on how the regex passed to regcomp is
+    constructed. All versions from glibc-2.4 to 2.41 are known to be affected.
+    This can cause arbitrary code execution or a denial of service.
 
     <p>Please read the link to fix this vulnerability:
-    <a href="../../blfs/advisories/consolidated.html#sa-12.2-072">12.2-072</a></p>
--->
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-085">12.3-085</a></p>
+
 
 <!-- end of Glibc -->
 
