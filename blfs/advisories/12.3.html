@@ -53,6 +53,17 @@
 
     <h3>7zip</h3>
 
+    <a id="sa-12.3-089"/>
+    <h4>12.3 089 7zip                     Date: 2025-08-10  Severity: High</h4>
+    <p>In 7zip-25.01, a security vulnerability was fixed that could allow for
+    arbitrary file writes when extracting a crafted file. The reporter of the
+    vulnerability has also noted that depending on the location, it is possible
+    for arbitrary code execution to occur because of this, and they have
+    published a proof of concept that overwrites a user's ~/.bashrc. Note that
+    this vulnerability can be exploited by extracting any kind of file that 7zip
+    supports, and it is not limited to just *.7z files. Update to 7zip-25.01.
+    <a href="consolidated.html#sa-12.3-089">12.3-089</a></p>
+
     <a id="sa-12.3-078"/>
     <h4>12.3 078 7zip                     Date: 2025-07-22  Severity: Medium</h4>
     <p>In 7zip-25.00, two security vulnerabilities were fixed that could allow
