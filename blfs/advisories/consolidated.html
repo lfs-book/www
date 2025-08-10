@@ -65,6 +65,37 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-088"/>
+    <h4>12.3 088 Python (LFS and BLFS)    Date: 2025-08-10  Severity: High</h4>
+    <p>In Python-3.13.6, four security vulnerabilities were fixed in the
+    HTML Parser functionality that can allow for cross-site scripting, denial
+    of service (unbounded resource consumption), and for hidden HTML code to
+    be processed. These vulnerabilities mostly occur because the previous
+    versions of Python did not adhere to the HTML 5 standard correctly. Patches
+    have been made upstream to previous versions of Python, but no new releases
+    have been made at the time of this advisory. If you are using an older
+    version of Python, please use the patches linked at the end of this
+    advisory. No CVEs have been assigned for these vulnerabilities, though they
+    have been requested by the Python security team.</p>
+    <p>To fix these vulnerabilities, update to Python-3.13.6 or later using
+    the instructions from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <p>If you are on an older version of Python, please apply the following
+    patches from upstream to your version of Python and then rebuild it:</p>
+    <ul>
+      <li><a href="https://github.com/python/cpython/pull/136268">Python PR#136268</a></li>
+      <li><a href="https://github.com/python/cpython/pull/136919">Python PR#136919</a></li>
+      <li><a href="https://github.com/python/cpython/pull/136273">Python PR#136273</a></li>
+      <li><a href="https://github.com/python/cpython/pull/135483">Python PR#135483</a></li>
+      <li><a href="https://github.com/python/cpython/pull/136986">Python PR#136986</a></li>
+      <li><a href="https://github.com/python/cpython/pull/137171">Python PR#137171</a></li>
+    </ul>
+    <p>Please note that the above patches are designed to work with Python 3.12,
+    and that the tarfile vulnerability fix covered in SA-12.3-087 is included
+    in the list. Additional patches may be available for Python versions back
+    to Python-3.9, but these have not been tested by the BLFS team.</p>
+
     <a id="sa-12.3-087"/>
     <h4>12.3 087 Python (LFS and BLFS)    Date: 2025-08-05  Severity: High</h4>
     <p>A security vulnerability was discovered in Python-3.13.5 that can allow
