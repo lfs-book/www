@@ -747,6 +747,17 @@
 
     <h3>PostgreSQL</h3>
 
+    <a id="sa-12.3-093"/>
+    <h4>12.3 093 PostgreSQL           Date: 2025-08-16  Severity: High</h4>
+    <p>In PostgreSQL-17.6, three security vulnerabilities were fixed that could
+    allow for optimizer statistics to expose sampled data within a view,
+    partition, or a child table; and for arbitrary code execution in the psql
+    client when using the pg_dump command. All users who have PostgreSQL
+    installed for anything other than satisfying a build dependency are advised
+    to upgrade to PostgreSQL-17.6. Alternatively, users on older versions of
+    PostgreSQL can upgrade to 16.10, 15.14, 14.19, or 13.22.
+    <a href="consolidated.html#sa-12.3-093">12.3-093</a></p>
+
     <a id="sa-12.3-028"/>
     <h4>12.3 028 PostgreSQL               Date: 2025-05-20  Severity: Medium</h4>
     <p>In PostgreSQL-17.5, a security vulnerability was fixed that can allow for
