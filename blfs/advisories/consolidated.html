@@ -65,8 +65,27 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-092"/>
+    <h4>12.3 092 ImageMagick          Date: 2025-08-16  Severity: High</h4>
+    <p>In ImageMagick-7.1.2-1, five security vulnerabilities were fixed that
+    could allow for arbitrary code execution and crashes when processing
+    PNG and MNG images. These vulnerabilities occur due to undefined behavior,
+    stack buffer overflows, integer overflows, and heap buffer overflows. If
+    you use ImageMagick to perform operations on untrusted MNG or PNG files,
+    you should update to this version immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53101">CVE-2025-53101</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55160">CVE-2025-55160</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55154">CVE-2025-55154</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55005">CVE-2025-55005</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55004">CVE-2025-55004</a>.</p>
+    <p>To fix these vulnerabilities, update to ImageMagick-7.1.2-1 or later
+    using the instructions from
+    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+
     <a id="sa-12.3-091"/>
-    <h4>12.2 091 Seamonkey            Date: 2025-08-15  Severity: Critical</h4>
+    <h4>12.3 091 Seamonkey            Date: 2025-08-15  Severity: Critical</h4>
     <p>In Seamonkey-2.53.21, sixteen security vulnerabilites were fixed that
     could allow for use-after-free operations in XSLT, Custom Highlight,
     WebTransportChild, XSLTProcessor, during concurrent delazification, and
