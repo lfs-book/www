@@ -65,6 +65,57 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-094"/>
+    <h4>12.3 094 intel-microcode      Date: 2025-08-20  Severity: High</h4>
+    <p>In intel-microcode-20250812, nine security vulnerabilities were fixed
+    that could allow for privilege escalation or for a denial of service
+    (application crash). The first privilege escalation vulnerability affects
+    all Intel Core CPUs from the 12th generation onwards, as well as some CPUs
+    from the Intel Pentium Gold and Celeron families. The Core i9-1900HX is
+    also listed as affected, and the Intel Core 9 series as well as Core
+    Series 1, 2, and U series are also affected. The Xeon E, Core Ultra,
+    4th/5th Generation Xeon Scalable, Platinum, Gold, Silver, and Bronze
+    series of CPUs, the Xeon CPU Max series processor, and the Xeon W-2400
+    and W-3400 processors are also impacted. The rest of the privilege
+    escalation and denial of service vulnerabilities affect the 4th, 5th,
+    and 6th generation of Intel Xeon Scalable CPUs and the W-2400/W-3400
+    CPUs. Several functionality issues with the 13th generation Intel CPUs
+    and later were also resolved in this update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20109">CVE-2025-20109</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-22840">CVE-2025-22840</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-22839">CVE-2025-22839</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-22889">CVE-2025-22889</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20053">CVE-2025-20053</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24305">CVE-2025-24305</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21090">CVE-2025-21090</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26403">CVE-2025-26403</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32086">CVE-2025-32086</a>.</p>
+    <p>Additional information about these vulnerabilities can be found at the
+    Intel Security Advisories:
+    <ul>
+       <li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01249.html">
+              INTEL-SA-01249 (CVE-2025-20109)</a></li>
+       <li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01308.html">
+              INTEL-SA-01308 (CVE-2025-22840)</a></li>
+       <li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01310.html">
+              INTEL-SA-01310 (CVE-2025-22839)</a></li>
+       <li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01311.html">
+              INTEL-SA-01311 (CVE-2025-22889)</a></li>
+       <li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01313.html">
+              INTEL-SA-01313 (CVE-2025-20053, CVE-2025-24305, and CVE-2025-21090)</a></li>
+       <li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01367.html">
+              INTEL-SA-01367 (CVE-2025-26403 and CVE-2025-32086)</a></li>
+    </ul>.</p>
+    <p>Check if your CPU is affected by running <code>lscpu</code> and
+    comparing the outputted family, model, and stepping values with the
+    values provided above and in INTEL-SA-01249, INTEL-SA-01308, INTEL-SA-01310,
+    INTEL-SA-01311, INTEL-SA-01313, and INTEL-SA-01244. If your system is
+    vulnerable, update to intel-microcode-20250812 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
+    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+
     <a id="sa-12.3-093"/>
     <h4>12.3 093 PostgreSQL           Date: 2025-08-16  Severity: High</h4>
     <p>In PostgreSQL-17.6, three security vulnerabilities were fixed that could
