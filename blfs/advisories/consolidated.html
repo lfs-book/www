@@ -65,6 +65,28 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-096"/>
+    <h4>12.3 096 SpiderMonkey         Date: 2025-08-21  Severity: Medium</h4>
+    <p>In SpiderMonkey-140.2.0esr, a security vulnerability was fixed that could
+    allow for uninitialized memory access, which can lead to a denial of service
+    (application crash). In order to use SpiderMonkey-140 with the version of
+    gjs used in BLFS 12.3, you must update to gjs-1.84.2 with the
+    spidermonkey_140 patch that is currently in the development version of BLFS.
+    Alternatively, you can update to SpiderMonkey-128.14.0esr.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9181">CVE-2025-9181</a>.</p>
+    <p>To fix this vulnerability, update to SpiderMonkey-140.2.0esr or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+    <p>After installing SpiderMonkey-140.2.0esr, you must update gjs as well
+    with the patch to allow gjs to use the SpiderMonkey-140 series using the
+    instructions from
+    <a href="../view/svn/gnome/gjs.html">gjs (sysv)</a> or
+    <a href="../view/systemd/gnome/gjs.html">gjs (systemd)</a>.</p>
+    <p>Alternatively, you can update to SpiderMonkey-128.14.0esr with no changes
+    to the instructions necessary.</p>
+
     <a id="sa-12.3-095"/>
     <h4>12.3 095 Thunderbird          Date: 2025-08-21  Severity: High</h4>
     <p>In Thunderbird-140.2.0esr, seven security vulnerabilities were fixed that
@@ -84,8 +106,8 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9185">CVE-2025-9185</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-140.2.0esr or later
     using the instructions from
-    <a href="../view/svn/xsoft/firefox.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
     <p>Alternatively, if you wish to stay on the 128 ESR series, you should
     update to Thunderbird-128.14.0esr using the same instructions.</p>
 
