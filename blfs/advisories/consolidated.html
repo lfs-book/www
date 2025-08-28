@@ -65,6 +65,17 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-098"/>
+    <h4>12.3 098 Kea DHCP             Date: 2025-08-27  Severity: High</h4>
+    <p>In Kea-3.0.1 a vulnerability was fixed which could lead to a
+    denial of service (assertion abort) sending a malicious request to Kea.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40779">CVE-2025-40779</a>.</p>
+    <p>To fix this vulnerability, update to Kea-3.0.1 or later
+    using the instructions from
+    <a href="../view/svn/server/kea.html">Kea DHCP Server (sysv)</a> or
+    <a href="../view/systemd/server/kea.html">Kea DHCP Server (systemd)</a>.</p>
+
     <a id="sa-12.3-097"/>
     <h4>12.3 097 SpiderMonkey         Date: 2025-08-21  Severity: Medium</h4>
     <p>In SpiderMonkey-140.2.0esr, a security vulnerability was fixed that could
@@ -352,7 +363,7 @@
     taken if you are on a 32-bit system, or a 64-bit machine with less than
     16GB of RAM. If you are on such a system, you are very likely going to run
     out of memory while compiling. If that occurs, add the CMake options
-    described in the Important section to prevent the system from running out 
+    described in the Important section to prevent the system from running out
     of memory. Performance will be impacted slightly, but not to a level where
     it is noticable during normal browsing activities.
     These vulnerabilities have been assigned
@@ -1356,7 +1367,7 @@
     <li><a href="https://kb.isc.org/docs/cve-2025-32801">CVE-2025-32801</a><br/>
       Loading a malicious hook library can lead to local privilege escalation</li>
     <li><a href="https://kb.isc.org/docs/cve-2025-32802">CVE-2025-32802</a><br/>
-      Insecure handling of file paths allows multiple local attacks</li>  
+      Insecure handling of file paths allows multiple local attacks</li>
     <li><a href="https://kb.isc.org/docs/cve-2025-32803">CVE-2025-32803</a><br/>
       Insecure file permissions can result in confidential information leakage</li>
     </ul>
@@ -4218,7 +4229,7 @@
     <h4>12.2 013 cURL                   Date: 2024-09-27  Severity: High</h4>
     <p>In cURL-8.10.0, a security vulnerability was fixed that, when
     cURL is built with gnutls, could allow for a failure in OCSP stapling,
-    which means that an invalid server certificate might wrongly be considered 
+    which means that an invalid server certificate might wrongly be considered
     valid instead of being treated as a bad certificate.
     This vulnerability has been assigned
     <a href="https://curl.se/docs/CVE-2024-8096.html">CVE-2024-8096</a>.</p>
@@ -4877,13 +4888,13 @@
     <h4>12.1 075 Node.js                Date: 2024-07-14  Severity: Medium</h4>
     <p>In Node.js 20.15.1 three security vulnerabilities (on Linux) were fixed
     that could allow for changing the owner or permissions of a file when using the
-    --allow-fs-write or --allow-fs-read flags; and bypass the security of data imports 
+    --allow-fs-write or --allow-fs-read flags; and bypass the security of data imports
     from the url bar, allowing for arbitrary code execution.
     These vulnerabilites have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-20220">CVE-2024-20220</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-36137">CVE-2024-36137</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-22018">CVE-2024-22018</a>.</p>
-    <p>To fix these update to Node.js-20.15.1 or later using the 
+    <p>To fix these update to Node.js-20.15.1 or later using the
     instructions for:
     <a href="../view/12.2/general/nodejs.html">Node.js (sysv)</a> or
     <a href="../view/12.2-systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
@@ -5043,11 +5054,11 @@
     <a id="sa-12.1-066"/>
     <h4>12.1 066 OpenSSH           Date: 2024-07-02  Severity: Critical</h4>
     <p>In OpenSSH-9.8p1, a security vulnerability was fixed that could
-    allow for arbitrary remote code execution with root privileges through 
-    exploiting a race condition in the authentication functions. Thus bypassing 
-    all authentication. The vulnerability has already been proven to work on 
-    32-bit (i686) systems and is theoretically possible on 64-bit (x86_64) systems 
-    as well. 
+    allow for arbitrary remote code execution with root privileges through
+    exploiting a race condition in the authentication functions. Thus bypassing
+    all authentication. The vulnerability has already been proven to work on
+    32-bit (i686) systems and is theoretically possible on 64-bit (x86_64) systems
+    as well.
     This vulnerability is codenamed RegreSSHion and has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6387">CVE-2024-6387</a>.</p>
     <p>To fix this vulnerability, either update to OpenSSH-9.8p1 or later
@@ -5636,7 +5647,7 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     seemingly unaffected by this vulnerability but updating is still recommended
     This vulnerability has been assigned
     <a href="https://nodejs.org/en/blog/vulnerability/april-2024-security-releases-2">CVE-2024-27980</a>.</p>
-    <p>To (potentially) fix this update to Node.js-20.12.2 or later using the 
+    <p>To (potentially) fix this update to Node.js-20.12.2 or later using the
     instructions for:
     <a href="../view/12.2/general/nodejs.html">Node.js (sysv)</a> or
     <a href="../view/12.2-systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
@@ -5974,7 +5985,7 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     <h4>12.1 019 Node.js           Date: 2024-04-07  Severity: High</h4>
     <p>In Node.js-20.12.1, two vulnerabilities were fixed. One could allow
     for a server crash via an assertion failure in the http server. And the other
-    could lead to "request smuggling" through obfuscating the content length of a 
+    could lead to "request smuggling" through obfuscating the content length of a
     request.
     These vulnerabilties have been assigned
     <a href="https://nodejs.org/en/blog/vulnerability/april-2024-security-releases">CVE-2024-27983</a>, and
@@ -6187,13 +6198,13 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     <p>To fix these update to firefox-115.9.0esr or later using the instructions for:
     <a href="../view/12.2/xsoft/firefox.html">Firefox (sysv)</a> or
     <a href="../view/12.2-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
-	
+
     <a id="sa-12.1-007"/>
     <h4>12.1 007 Unbound         Date: 2024-03-15  Severity: High</h4>
     <p>In Unbound-1.19.3, a security vulnerability was fixed that could
     allow an attack to cause a denial of service attack (DoS) exploting
     a code path that can lead to an infinite loop due to faulty code in
-    the feature that removes EDE records. 
+    the feature that removes EDE records.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-1931">CVE-2024-1931</a>.</p>
     <p>To fix this vulnerability, update to Unbound-1.19.3 or later using
@@ -6502,7 +6513,7 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     <a id="sa-12.0-096"/>
     <h4>12.0 096 Unbound      Date: 2024-02-13  Severity: High</h4>
     <p>In Unbound-1.19.1, two security vulnerabilities were fixed that allow
-    for DNSSEC verification to be exploited to crash an instance (Keytrap).  And an 
+    for DNSSEC verification to be exploited to crash an instance (Keytrap).  And an
     vulnerability in the NSEC3 existence proof could exhaust and crash the instance.
     These vulnerabilities have been assigned
     <a href="https://kb.isc.org/docs/cve-2023-50387">CVE-2023-50387</a>
@@ -6514,7 +6525,7 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
 
     <a id="sa-12.0-095"/>
     <h4>12.0 095 BIND                     Date: 2024-02-13  Severity: High</h4>
-    <p>In BIND-9.18.24, 6 security vulnerabilities were fixed that could allow for 
+    <p>In BIND-9.18.24, 6 security vulnerabilities were fixed that could allow for
     excessive CPU utilization or crashing when parsing large DNS packets;
     Assertion failures when nxdomain-redirect is being used which could allow for crashing;
     Assertion failures on recursive lookups when DNS64 and server-stale are enabled;
@@ -7180,7 +7191,7 @@ smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
     <a id="sa-12.0-060"/>
     <h4>12.0 060 ProFTPD Date: 2023-12-23  Severity: Critical</h4>
     <p>In ProFTPD 1.3.8b, a critical level security vulnerability codenamed
-    Terrapin (SSH) was fixed. This could in theory allow for an attacker to 
+    Terrapin (SSH) was fixed. This could in theory allow for an attacker to
     downgrade the security within the SSH connection leading to a less secure
     connection from the 'Man in the Middle' attack. This vulnerability has been
     assigned
@@ -7308,8 +7319,8 @@ smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
     <h4>12.0 053 cURL Date: 2023-12-06   Severity: High</h4>
     <p>In cURL-8.5.0 two security vulnerabilities were fixed; one that could allow
     for curl cookies to be passed to another domain or site, thus allowing for
-    cookie hijacking; and another that deletes the HSTS data if curl is writing to 
-    a file with a long name, thus making subsequent requests unaware of the HSTS 
+    cookie hijacking; and another that deletes the HSTS data if curl is writing to
+    a file with a long name, thus making subsequent requests unaware of the HSTS
     status.
     These vulnerabilities have been assigned
     <a href="https://curl.se/docs/CVE-2023-46218.html">CVE-2023-46218</a> and
@@ -7338,9 +7349,9 @@ smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
 
     <a id="sa-12.0-051"/>
     <h4>12.0 051 MariaDB Updated: 2023-12-06 Severity: Medium</h4>
-    <p>In MariaDB-10.11.6, a security vulnerability was fixed that could 
+    <p>In MariaDB-10.11.6, a security vulnerability was fixed that could
     allow for any attacker with network access to the server to effectively
-    DOS (crash through too many requests) the server.  
+    DOS (crash through too many requests) the server.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-22084">CVE-2023-22084</a>.</p>
     <p>To fix this vulnerability, update to MariaDB-10.11.6 or later using the
@@ -7639,9 +7650,9 @@ smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
     <a id="sa-12.0-035"/>
     <h4>12.0 035 OpenSSL            Date: 2023-11-01  Severity: Medium</h4>
     <p>In openssl-3.1.4, a security vulnerability was fixed that
-    could lead to potential truncation or overruns during the initialization 
-    of some symmetric ciphers. This can result in non-uniqueness, which could 
-    result in loss of confidentiality for some cipher modes. 
+    could lead to potential truncation or overruns during the initialization
+    of some symmetric ciphers. This can result in non-uniqueness, which could
+    result in loss of confidentiality for some cipher modes.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5363">CVE-2023-5363</a>.</p>
     <p>To fix this vulnerability, update to openssl-3.1.4 or later
@@ -7692,11 +7703,11 @@ smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
     <a id="sa-12.0-032"/>
     <h4>12.0 032 xorg-server and xwayland Updated: 2023-10-29  Severity: High</h4>
     <!--<h4>12.0 032 xwayland     Date: 2023-10-28  Severity: High</h4>-->
-    <p>In xorg-server-21.1.9 and xwayland-23.2.2 a security vulnerability was 
-    fixed due to an out-of-bounds write flaw. This issue occurs due to an 
-    incorrect calculation of a buffer offset when copying data stored in the 
-    heap in the XIChangeDeviceProperty function in Xi/xiproperty.c and in 
-    RRChangeOutputProperty function in randr/rrproperty.c, allowing for possible 
+    <p>In xorg-server-21.1.9 and xwayland-23.2.2 a security vulnerability was
+    fixed due to an out-of-bounds write flaw. This issue occurs due to an
+    incorrect calculation of a buffer offset when copying data stored in the
+    heap in the XIChangeDeviceProperty function in Xi/xiproperty.c and in
+    RRChangeOutputProperty function in randr/rrproperty.c, allowing for possible
     escalation of privileges or denial of service.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5367">CVE-2023-5367</a>.</p>
@@ -7711,10 +7722,10 @@ smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
     <a id="sa-12.0-031"/>
     <h4>12.0 031 xorg-server  Updated: 2023-10-28  Severity: Low</h4>
     <p>In xorg-server-21.1.9 a security vulnerability was fixed that
-    could allow an X server crash in a very specific and legacy configuration 
-    (a multi-screen setup with multiple protocol screens, also known as Zaphod 
-    mode) if the pointer is warped from within a window on one screen to the 
-    root window of the other screen and if the original window is destroyed 
+    could allow an X server crash in a very specific and legacy configuration
+    (a multi-screen setup with multiple protocol screens, also known as Zaphod
+    mode) if the pointer is warped from within a window on one screen to the
+    root window of the other screen and if the original window is destroyed
     followed by another window being destroyed.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-5380">CVE-2023-5380</a>.</p>
@@ -7775,7 +7786,7 @@ smtpd_forbid_bare_newline_exclusions = $mynetworks</pre>
     <a href="../view/12.1-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
     <a id="sa-12.0-027"/>
-    <h4>12.0 027 Apache HTTPD           Date: 2023-10-07  Severity: Medium</h4>	
+    <h4>12.0 027 Apache HTTPD           Date: 2023-10-07  Severity: Medium</h4>
     <p>In httpd-2.4.58, three security vulnerabilities were fixed. More details at <a
     href="https://httpd.apache.org/security/vulnerabilities_24.html">Apache 2.4 Vulnerabilities</a>
     and further explanation of the mitigations from updating to nghttp2-1.57.0 at <a
@@ -8985,7 +8996,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <h4>11.3 058 nghttp2    Date: 2023-07-19  Severity: Low</h4>
     <p>In nghttp2-1.55.1, a security vulnerability was fixed that could
     allow for denial of service through memory exhaustion.
-    This vulnerability has been assigned: 
+    This vulnerability has been assigned:
     <a href="https://github.com/envoyproxy/envoy/security/advisories/GHSA-jfxv-29pc-x22r">wnpa-sec-2023-22</a>.</p>
     <p>To fix this vulnerability, update to nghttp2-1.55.1 or later using
     the instructions from
@@ -8999,7 +9010,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     These can occur when using a malformed packet trace file or by injecting a
     malformed packet onto the wire.  These vulnerabilities cause a crash or
     cause Wireshark to go into an infinite loop.  These vulnerabilities have
-    been assigned: 
+    been assigned:
     <a href="https://www.wireshark.org/security/wnpa-sec-2023-21">wnpa-sec-2023-21</a> and
     <a href="https://www.wireshark.org/security/wnpa-sec-2023-22">wnpa-sec-2023-22</a>.</p>
     <p>To fix these vulnerabilities, update to Wireshark-4.0.7 or later using
@@ -9498,7 +9509,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     These can occur when using a malformed packet trace file or by injecting a
     malformed packet onto the wire.  These vulnerabilities cause a crash or
     cause Wireshark to go into an infinite loop.  These vulnerabilities have
-    been assigned: 
+    been assigned:
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2855">CVE-2023-2855</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-2857">CVE-2023-2857</a>,
     <a href="https://www.wireshark.org/security/wnpa-sec-2023-14.html">wnpa-sec-2023-14</a>,
@@ -9617,7 +9628,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     1.17.0.</p>
     <p>To fix this using texlive-source-2023 reinstall using the security-fixes-1
     patch and applying a sed to mtxrun.lua (if you use ConTeXt) following the
-    instructions from 
+    instructions from
     <a href="../view/12.0/pst/texlive.html">texlive (sysv)</a> or
     <a href="../view/12.0-systemd/pst/texlive.html">texlive (systemd)</a>.
     Unfortunately, you will need to reinstall any of asymptote, biber, dvisvgm or
@@ -11635,7 +11646,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <h4>11.2 028 OpenJDK                Date: 2022-10-31  Severity: Medium</h4>
     <p>In OpenJDK-19.0.1, five security vulnerabilities were fixed that could
     allow an unauthenticated attacker with network access via Kerberos, HTTP,
-    or (more difficult) other protocols, to compromise a Java VM, 
+    or (more difficult) other protocols, to compromise a Java VM,
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21618">CVE-2022-21618</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-21619">CVE_2022-21619</a>,
@@ -13413,8 +13424,8 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a id="sa-11.1-041"/>
     <h4>11.1 041 Thunderbird  Date: 2022-05-13 Severity: High</h4>
     <p>In Thunderbird-91.9.0, several security vulnerabilities were fixed.
-    In general, these flaws cannot be exploited through email in the 
-    Thunderbird product because scripting is disabled when reading mail, 
+    In general, these flaws cannot be exploited through email in the
+    Thunderbird product because scripting is disabled when reading mail,
     but are potentially risks in browser or browser-like contexts.
     It is recommended that you update as soon as possible.
     These vulnerabilities have been assigned
@@ -15661,7 +15672,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     Manager (FPM) in it's default configuration. In this case, a remote attacker
     can execute code on your server as the root process or escalate to root
     through Apache HTTPD due to a memory access problem in PHP FPM. This
-    vulnerability has existed for the last 10 years, and there is a 
+    vulnerability has existed for the last 10 years, and there is a
     proof-of-concept and a demo exploit available. If you have php-fpm installed
     on your system and have the daemon started/enabled, you should update as
     soon as possible. This vulnerability has been assigned
@@ -15923,7 +15934,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a id="sa-11.0-006"/>
     <h4>11.0 006 Apache HTTPD  Updated: 2021-12-13  Severity: Critical</h4>
     <!--CVE-2021-39275 is now rated 9.8/10 CRITICAL -->
-    <p>Several 
+    <p>Several
     <a href="https://httpd.apache.org/security/vulnerabilities_24.html">vulnerabilities</a>
     in the Apache web server have been found, one of which is rated high:
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40438/">CVE-2021-40438</a>.
@@ -16023,7 +16034,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     The node-tar module was also affected by a symbolic link attack that could
     allow symlinks in a tarball to escape into the filesystem and overwrite (or
     create) files in attacker-controlled locations. Both node-tar and Arborist
-    are included with Node.js. 
+    are included with Node.js.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37701">CVE-2021-37701</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-37712">CVE-2021-37712</a>,
@@ -16434,7 +16445,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     result in a Denial Of Service. Note that successful exploitation requires
     MariaDB to be listening for requests over TCP/IP ports, and not via local
     applications. Successful exploitation can result in the ability to cause a
-    hang or frequently repeatable crash of the MariaDB process. 
+    hang or frequently repeatable crash of the MariaDB process.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2389">CVE-2021-2389</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-2372">CVE-2021-2372</a>.</p>
@@ -16768,7 +16779,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a id="sa-10.1-069"/>
     <h4>10.1 069 PHP       Date: 2021-07-01 Severity: Moderate</h4>
     <p>In PHP-8.0.8, two security vulnerabilities were fixed. One of them could
-    lead to a buffer overflow and thus remote code execution when using a 
+    lead to a buffer overflow and thus remote code execution when using a
     Firebird database, and the other could allow for remote attackers to redirect
     servers to arbitrary URLs via a SSRF bypass in FILTER_VALIDATE_URL. These
     options are rather uncommon, which is why these vulnerabilities are rated
@@ -16836,7 +16847,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     plaintext after a STARTTLS connection is initiated, the commands
     are run as part of the TLS session. These can be used to redirect
     mail, passwords, and other user variables to an attacker controlled
-    address. 
+    address.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29157">CVE-2021-29157</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33515">CVE-2021-33515</a>.</p>
@@ -16856,7 +16867,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30510">CVE-2021-30510</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-30508">CVE-2021i-30508</a>.</p>
     <p>To fix these, update to the BLFS 20210401 git tarball with instructions
-    for installing that as 5.15.2 to match Qt5 <em> plus the				
+    for installing that as 5.15.2 to match Qt5 <em> plus the
     <a href="http://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-20210401-upstream_fixes-2.patch">qtwebengine-20210401-upstream_fixes-2.patch</a></em>
     (or update to a later version) using the instructions at
     <a href="../view/11.0/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
@@ -16917,16 +16928,16 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     that uses WPA or WPA2 with the TKIP data-confidentiality protocol. Another
     vulnerability in the ath10k driver allows for a remote attacker to
     inject arbitrary packets since the plaintext QoS header in a packet is not
-    required to be authenticated under thw WPA, WPA2, WPA3, or WEP standard. 
+    required to be authenticated under thw WPA, WPA2, WPA3, or WEP standard.
     Another vulnerability in the wireless stack allows for arbitrary network
     packets to be injected and for the exfiltration of user data regardless of
     whether any encryption is in place, and fragments are not cleared from memory
-    after reconnecting to a network. 
+    after reconnecting to a network.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3564">CVE-2021-3564</a>,
     <a href="https://cert.civis.net/cgi-bin/skdb.pl/cvename/CVE-2021-28691.html">CVE-2021-28691</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24587">CVE-2020-24587</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26141">CVE-2020-26141</a>, 
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26141">CVE-2020-26141</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24588">CVE-2020-24588</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-26145">CVE-2020-26145</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-24586">CVE-2020-24586</a>.</p>
@@ -17087,7 +17098,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a id="sa-10.1-051"/>
     <h4>10.1 051 cURL       Date: 2021-05-26 Severity: Critical</h4>
     <p>In cURL-7.77.0, three security vulnerabilities were fixed. The first one
-    only applies to Windows systems and is therefore irrelevant to LFS. The 
+    only applies to Windows systems and is therefore irrelevant to LFS. The
     second vulnerability allows the stack to be disclosed to a remote attacker
     while a TELNET session is in progress. The third vulnerability, which is
     rated as high, allows for remote code execution on HTTPS sessions. The
@@ -17111,7 +17122,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <h4>10.1 050 libX11     Date: 2021-05-19 Severity: Critical</h4>
     <p>In libX11-1.7.1, a security vulnerability was fixed that allows through
     command injection through the libX11 API protocol. This vulnerability exists
-    in the XLookupColor function, intended for server-side color lookup. 
+    in the XLookupColor function, intended for server-side color lookup.
     The flaw consists of a client being allowed to send color names with a name
     longer than the maximum size allowed, and also the maximum packet size for
     normalized packets. This then allows for the X server authorization process
@@ -17140,7 +17151,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     In the default PostgreSQL configuration, any authenticated database user
     can create the prerequisite objects and complete this attack at will.
     Users lacking the CREATE and TEMPORARY privileges on all databases and the
-    CREATE privilege on all schemas cannot exploit this attack. 
+    CREATE privilege on all schemas cannot exploit this attack.
     These vulnerabilities have been assigned
     <a href="https://www.postgresql.org/support/security/CVE-2021-32028/">CVE-2021-32028</a>,
     <a href="https://www.postgresql.org/support/security/CVE-2021-32029/">CVE-2021-32029</a>, and
@@ -17188,7 +17199,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29458">CVE-2021-29458</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29470">CVE-2021-29470</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29473">CVE-2021-29473</a>.</p>
-    <p>To fix these, apply the 
+    <p>To fix these, apply the
     <a href="http://www.linuxfromscratch.org/patches/downloads/exiv2/exiv2-0.27.3-security_fixes-1.patch">exiv2-0.27.3-security_fixes-1.patch</a>
     (or update to a later version) using the instructions at
     <a href="../view/11.0/general/exiv2.html">Exiv2 (sysv)</a>, or
@@ -17213,7 +17224,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     integrity.
     This vulnerability has been assigned
     <a href="https://www.samba.org/samba/security/CVE-2021-20254.html">CVE-2021-20254</a>.</p>
-    <p>To fix this vulnerability, update to Samba-4.14.4 or later using the 
+    <p>To fix this vulnerability, update to Samba-4.14.4 or later using the
     instructions for
     <a href="../view/11.0/basicnet/samba.html">Samba (sysv)</a> or
     <a href="../view/11.0-systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
@@ -17238,7 +17249,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     excessive memory and CPU consumption when using the MS-WSP packet dissector.
     This vulnerability could be exploited via a malformed packet, either by
     placing the malformed packet onto the wire while Wireshark is capturing
-    packets, or by convincing someone to read a malformed packet trace file. 
+    packets, or by convincing someone to read a malformed packet trace file.
     This vulnerability could allow a remote attacker to run the system out of
     memory, and thus can cause a denial of service.
     This vulnerability has been assigned
@@ -17320,7 +17331,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     Of these, two were rated as critical and at least one other rated as high
     has public exploit code available.
     <p>To fix these, update to the BLFS 20210401 git tarball with instructions
-    for installing that as 5.15.2 to match Qt5 <em> plus the				
+    for installing that as 5.15.2 to match Qt5 <em> plus the
     <a href="http://www.linuxfromscratch.org/patches/downloads/qtwebengine/qtwebengine-20210401-upstream_fixes-1.patch">qtwebengine-20210401-upstream_fixes-1.patch</a></em>
     (or update to a later version) using the instructions at
     <a href="../view/11.0/x/qtwebengine.html">QtWebEngine (sysv)</a>, or
@@ -17331,7 +17342,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <p>In ruby-3.0.1, a security vulnerability was fixed that could lead to
     improper generation of XML files, including malicious code. This has been
     classified as a "XML round-trip vulnerability". The ruby developers suggest
-    upgrading the REXML gem if updating Ruby on your system is not feasible. 
+    upgrading the REXML gem if updating Ruby on your system is not feasible.
     This can be done by executing "gem upgrade rexml". The fixed gem has been
     bundled with ruby-3.0.1.
     This vulnerability has been assigned
@@ -17347,10 +17358,10 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     vulnerabilities can allow for local privilege escalation, remote code
     execution, arbitrary code execution in the context of the Exim user,
     command injection, modification of mails, modification/deletion of files,
-    and more. Ten of these vulnerabilities can be exploited remotely, while the 
+    and more. Ten of these vulnerabilities can be exploited remotely, while the
     other eleven can be exploited locally. If you have any systems running Exim,
     this is considered an urgent matter. There are multiple exploits available
-    in the wild for these vulnerabilities. 
+    in the wild for these vulnerabilities.
     These vulnerabilities have been assigned
     CVE-2020-28007, CVE-2020-28008, CVE-2020-28014, CVE-2021-27216,
     CVE-2020-28011, CVE-2020-28010, CVE-2020-28013, CVE-2020-28016,
@@ -17358,7 +17369,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     CVE-2020-28017, CVE-2020-28020, CVE-2020-28023, CVE-2020-28021,
     CVE-2020-28022, CVE-2020-28026, CVE-2020-28019, CVE-2020-28024,
     CVE-2020-28018, and CVE-2020-28025.
-    Additional information can be found at 
+    Additional information can be found at
     <a href="https://blog.qualys.com/vulnerabilities-research/2021/05/04/21nails-multiple-vulnerabilities-in-exim-mail-server">
     Qualys Security Blog - 21Nails: Multiple Critical Vulnerabilities in Exim Mail Server</a>.</p>
     <p>To fix these vulnerabilities, update to Exim-4.94.2 or higher as soon as
@@ -17370,9 +17381,9 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <h4>10.1 037 BIND         Date: 2021-05-01  Severity: High</h4>
     <p>In BIND-9.16.15, three security vulnerabilities were fixed that could
     result in crashes and remote code execution on 32-bit platforms. One
-    security vulnerability is rated as Medium, while the other two 
-    (one of which leads to remote code execution on 32-bit platforms, and 
-    crashes on 64-bit platforms) are rated as High. 
+    security vulnerability is rated as Medium, while the other two
+    (one of which leads to remote code execution on 32-bit platforms, and
+    crashes on 64-bit platforms) are rated as High.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25214">CVE-2021-25214</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-25215">CVE-2021-25215</a>,
@@ -17447,9 +17458,9 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a id="sa-10.1-031"/>
     <h4>10.1 031 librsvg    Date: 2021-04-14 Severity: Medium</h4>
     <p>A security vulnerability was fixed in librsvg-2.50.4 that applied to one
-    of the rust crates involved with building the librsvg library. This 
-    vulnerability existed within the generic-array crate, and allowed for 
-    variables to stick around for longer than their expected lifetime. This 
+    of the rust crates involved with building the librsvg library. This
+    vulnerability existed within the generic-array crate, and allowed for
+    variables to stick around for longer than their expected lifetime. This
     could lead to memory corruption scenarios.
     This vulnerability has been assigned
     <a href="https://rustsec.org/advisories/RUSTSEC-2020-0146.html">RUSTSEC-2020-0146</a>.</p>
@@ -17490,7 +17501,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <p>A security vulnerability was found in Avahi that could allow an infinite
     loop to be triggered when an attacker writes a long line to
     /run/avahi-daemon/socket. The event used to signal the termination of a
-    client connection was not correctly handled. 
+    client connection was not correctly handled.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3468">CVE-2021-3468</a>.</p>
     <p>To fix this, apply a sed to Avahi using the instructions in
@@ -17499,8 +17510,8 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
 
     <a id="sa-10.1-027"/>
     <h4>10.1 027 Thunderbird  Updated: 2021-04-11  Severity: Medium</h4>
-    <p>Three security vulnerabilities were fixed in Thunderbird-78.9.1. All 
-    three of them affect systems that have OpenPGP keys configured for 
+    <p>Three security vulnerabilities were fixed in Thunderbird-78.9.1. All
+    three of them affect systems that have OpenPGP keys configured for
     encrypted email. These vulnerabilities have been rated Moderate, and have
     been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23991">CVE-2021-23991</a>,
@@ -17704,9 +17715,9 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a id="sa-10.1-015"/>
     <h4>10.1 015 WebKitGTK   Date: 2021-03-28  Severity: Critical</h4>
     <p>In WebKitGTK-2.30.6, seven security vulnerabilities were fixed that
-    could lead to arbitrary code execution, improper data deletion, 
+    could lead to arbitrary code execution, improper data deletion,
     sandbox escapes, and access to a ports on restricted servers. One of the
-    vulnerabilities has an exploit in the wild and is being actively 
+    vulnerabilities has an exploit in the wild and is being actively
     exploited. These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27918">CVE-2020-27918</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-29623">CVE-2020-29623</a>,
@@ -17779,14 +17790,14 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <p>In Apache PDFBox-2.0.23, two security vulnerabilities were fixed. One of
     the vulnerabilities could lead to infinite loops when loading input files,
     and the other one may result in an OutOfMemory exception while loading an
-    input file. Both of these issues are classified as Denial-of-Service 
+    input file. Both of these issues are classified as Denial-of-Service
     vulnerabilities.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27906">CVE-2021-27906</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27807">CVE-2021-27807</a>.</p>
     <p>To fix these, update the supplemental JAR files in fop to 2.0.23 or update
     to a later version using the instructions in
-    <a href="../view/11.0/pst/fop.html">fop (sysv)</a> or 
+    <a href="../view/11.0/pst/fop.html">fop (sysv)</a> or
     <a href="../view/11.0-systemd/pst/fop.html">fop (systemd)</a>.</p>
 
     <a id="sa-10.1-009"/>
@@ -17818,7 +17829,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <h4>10.1 007 Gstreamer Updated: 2021-03-21 Severity: High</h4>
     <p>In gstreamer-1.18.4 (including plugins), five high severity security
     vulnerabilities were fixed. Two of them were in gst-plugins-good, one in
-    gst-plugins-ugly, one in gst-libav, and one in gst-plugins-base. Upon 
+    gst-plugins-ugly, one in gst-libav, and one in gst-plugins-base. Upon
     successful exploitation, these vulnerabilities can lead to application
     crashes and arbitrary code execution.
     More details can be found at
@@ -17868,7 +17879,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <h4>10.1 004 GnuTLS  Date: 2021-03-12  Severity: Low</h4>
     <p>The client sending a "key_share" or "pre_share_key" extension may
     result in dereferencing a pointer no longer valid after realloc().
-    These has been assigned 
+    These has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20231">CVE-2021-20231</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-20232">CVE-2021-20232</a>.
     The details can be found at
@@ -17935,12 +17946,12 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
 
     <a id="sa-10.0-101"/>
     <h4>10.0 101 node.js Date: 2021-02-26 Severity: High</h4>
-    <p>Node.JS-14.16.0 fixed three security vulnerabilities. One of them is a 
+    <p>Node.JS-14.16.0 fixed three security vulnerabilities. One of them is a
     denial of service vulnerability (resource exhaustion via HTTP2 protocols),
     another is a DNS rebinding attack, and a third is an integer overflow.
     These vulnerabilities have been assigned CVE-2021-22883, CVE-2021-22884,
     and CVE-2021-23840. The CVEs are not available at NVD yet, but more
-    information can be found at 
+    information can be found at
     <a href="https://nodejs.org/en/blog/vulnerability/february-2021-security-releases/">
     February 2021 Security Releases</a>.</p>
     <p>To fix these, update to Node.JS-14.16.0 or later using the instructions in
@@ -17984,7 +17995,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
 
     <a id="sa-10.0-097"/>
     <h4>10.0 097 Python (LFS and BLFS) Date: 2021-02-22 Severity: Critical</h4>
-    <p>Python-3.9.2 contained two security fixes, one rated as 9.8 CRITICAL, 
+    <p>Python-3.9.2 contained two security fixes, one rated as 9.8 CRITICAL,
     and the other marked as Medium. The critical vulnerability can result in
     remote code execution in some Python-based programs, and the Medium-level
     vulnerability can result in web cache poisoning.
@@ -18000,7 +18011,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <a id="sa-10.0-096"/>
     <h4>10.0 096 Screen       Date: 2021-02-19 Severity: Critical</h4>
     <p>In Screen-4.8.0, a security vulnerability was fixed that allows for a
-    crash via usage of certain UTF-8 characters. The vulnerability was 
+    crash via usage of certain UTF-8 characters. The vulnerability was
     originally found exploited via Minecraft servers, and is currently being
     exploited in the wild. The vulnerability can also allow shell injection.
     <!-- NVD marked it as Critical -->
@@ -18016,7 +18027,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <h4>10.0 095 OpenSSL (LFS) Date: 2021-02-19 Severity: High</h4>
     <p>In OpenSSL-1.1.1j, two security vulnerabilities were fixed that could
     lead to a potential denial-of-service attack due to integer overflows
-    and null pointer derefererences. 
+    and null pointer derefererences.
     These have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23841">CVE-2021-23841</a> and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-23840">CVE-2021-23840</a>.
@@ -18075,13 +18086,13 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     and additional information may be found at
     <a href="https://webkitgtk.org/security/WSA-2021-0001.html">WSA-2021-0001</a>.</p>
     <p>To fix this, update to at least WebKitGTK-2.30.5 using the instructions in
-    <a href="../view/10.1/x/webkitgtk.html">WebKitGTK (sysv)</a> or 
+    <a href="../view/10.1/x/webkitgtk.html">WebKitGTK (sysv)</a> or
     <a href="../view/10.1-systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
 
     <a id="sa-10.0-090"/>
     <h4>10.0 090 PostgreSQL   Date: 2021-02-12 Severity: Medium</h4>
     <p>In PostgreSQL-13.2, two vulnerabilities were fixed that could lead to
-    unauthorized users leaking information from a database. One of them 
+    unauthorized users leaking information from a database. One of them
     relates to users with the UPDATE privilege but without the SELECT privilege,
     and the other relates to users who have SELECT privileges for only a single
     column being able to read all columns of the table.
@@ -18097,7 +18108,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     <p>In gnome-autoar-0.2.4, a security vulnerability was found that
     allows for directory traversal during extraction of an archive due to
     a lack of proper checks for whether a file's parent is a symlink to a
-    directory outside of the intended extraction location. 
+    directory outside of the intended extraction location.
     This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-36241">CVE-2020-36241</a>.</p>
     <p>To fix this, update to at least gnome-autoar-0.3.0 using the instructions in
@@ -18111,7 +18122,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     originally discovered in 'Screen', but was found to affect xterm as well.
     The vulnerability was originally found exploited via Minecraft servers,
     so as a result of it's exploitation in the wild, BLFS has decided to
-    apply a severity of Medium to this vulnerability. 
+    apply a severity of Medium to this vulnerability.
     This has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-26937">CVE-2021-26937</a>.</p>
     <p>To fix this, update to at least xterm-366 using the instructions in

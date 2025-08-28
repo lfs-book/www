@@ -483,6 +483,18 @@
 
     <h3>Kea DHCP server</h3>
 
+    <a id="sa-12.3-098"/>
+    <h4>12.3 098 Kea DHCP server          Date: 2025-08-27  Severity: High</h4>
+
+    <p>A security issue has been made public by ISC. It is fixed by
+    upgrading to 3.0.1 or later. For more information, check the ISC
+    Security Adivisories:</p>
+    <a href="https://kb.isc.org/docs/cve-2025-40779">CVE-2025-40779</a>:
+      Denial of service by sending a request directly to Kea<br/>
+
+    <p>If you have Kea installed, see details at
+      <a href="consolidated.html#sa-12.3-098">12.3-098</a></p>
+
     <a id="sa-12.3-040"/>
     <h4>12.3 040 Kea DHCP server          Date: 2025-05-28  Severity: High</h4>
 
@@ -490,9 +502,9 @@
     fixed by upgrading to version 2.6.3 or above and one is fixed by proper
     configuration and setup. For more information, check the ISC
     Security Adivisories:</p>
-    <a href="https://kb.isc.org/docs/cve-2025-32801">CVE-2025-32801</a>: 
+    <a href="https://kb.isc.org/docs/cve-2025-32801">CVE-2025-32801</a>:
       Loading a malicious hook library can lead to local privilege escalation<br/>
-    <a href="https://kb.isc.org/docs/cve-2025-32802">CVE-2025-32802</a>: 
+    <a href="https://kb.isc.org/docs/cve-2025-32802">CVE-2025-32802</a>:
       Insecure handling of file paths allows multiple local attacks<br/>
     <a href="https://kb.isc.org/docs/cve-2025-32803">CVE-2025-32803</a>:
       Insecure file permissions can result in confidential information leakage<br/>
@@ -1293,11 +1305,11 @@
 
     <a id="sa-12.3-020"/>
     <h4>12.3 020 Yelp                     Updated: 2025-06-22  Severity: High</h4>
-    <p>In Yelp-42.2, a security vulnerability was found that allows help 
+    <p>In Yelp-42.2, a security vulnerability was found that allows help
     documents to execute arbitrary JavaScript, and also read arbitrary files
     on the disk. Upstream has not released a patched version to fix this issue,
     but the BLFS team has adopted patches from upstream to resolve this issue.
-    There is a public exploit and writeup available demonstrating the ability 
+    There is a public exploit and writeup available demonstrating the ability
     to read a user's SSH Private Key via a crafted help document, and thus
     <em>ALL BLFS USERS WHO HAVE YELP INSTALLED SHOULD APPLY THE PATCHES AS SOON
     AS POSSIBLE</em>. Update to yelp-42.3 and yelp-xsl-42.4.
