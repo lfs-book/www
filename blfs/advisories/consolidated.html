@@ -65,6 +65,20 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-098"/>
+    <h4>12.3 098 MIT Kerberos V5      Date: 2025-08-31  Severity: High</h4>
+    <p>In krb5-1.22.1, a security vulnerability was fixed that causes GSS MIC
+    verification to pass in all circumstances, even if the data provided is
+    incorrect. There are very few details available about this vulnerability,
+    but if you are running a Kerberos server, it's highly recommended that you
+    update to this version immediately to prevent an authentication bypass.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-57736">CVE-2025-57736</a>.</p>
+    <p>To fix this vulnerability, update to krb5-2.22.1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5 (sysv)</a> or
+    <a href="../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5 (systemd)</a>.</p>
+
     <a id="sa-12.3-097"/>
     <h4>12.3 097 SpiderMonkey         Date: 2025-08-21  Severity: Medium</h4>
     <p>In SpiderMonkey-140.2.0esr, a security vulnerability was fixed that could
