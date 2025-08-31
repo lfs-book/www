@@ -9,6 +9,94 @@
        be aware of are reported here.</p>
 
     <dl class="newsItem">
+      <dt>GLFS 12.4 has been released!</dt>
+      <dd><em>Zeckma - 2025/08/31</em>
+
+        <p>
+          The GLFS team is proud to present version 12.4 of Gaming Linux From
+          Scratch. This version includes over 100 packages beyond the base
+          Linux From Scratch and Multilib Linux From Scratch books to enable
+          execution of gaming support software. It has had over 190 updates
+          since 12.3, as well as many additions, removals, shifting,
+          combinations, and text and formatting changes.
+        </p><p>
+          Previously removed packages that were in the book before 12.3
+          released have been reintroduced back into the book, those being
+          libglvnd and NVIDIA. Along with the addition of libglvnd, special
+          care has been made to explain differences between libglvnd's
+          libOpenGL and Mesa's libGL, and to support both vendors. Most
+          support has come from the way of Supplemental LFS, hosting
+          installation instructions of packages such as OBS and Hyprland.
+          Further package additions include SQLite, Python3 rebuild against
+          SQLite, Speex, and NVIDIA EGL Libraries.
+        </p><p>
+          However, some packages have been removed. Some were removed because
+          they served no use for GLFS or belonged in a different book and thus
+          have been moved. Those that already have installation instructions
+          elsewhere and served no use are libFS from Xorg Libraries, luit, and
+          Git. The package that isn't needed, but has no instruction
+          elsewhere, is AMDGPU PRO. Its use case has been replaced by Mesa's
+          AMDGPU Gallium3D, Vulkan, and VA-API drivers. Those that got moved
+          were seatd and xcb-util-errors, which both have been moved to
+          Supplemental LFS as no package in GLFS requires them.
+        </p><p>
+          Several refactors have also been made. In some cases, this means
+          packages are moved to other chapters to be more coherent, other times
+          packages are combined into a single page for ease of installation,
+          and all else fall out of those pages. For packages combining into a
+          single page, all gst packages like gstreamer, gst-plugins-bad, and
+          gst-libav have all been combined into a GStreamer Suite page, whereas
+          Vulkan-Headers, Vulkan-Loader, SPIRV-Headers, SPIRV-Tools, and
+          glslang have been combined into a Vulkan-SDK page. Special care has
+          been made to properly address what BLFS packages each page would be
+          the equivalent of. libevdev and libinput has been moved out of the
+          main X11 chapter, and Xorg Input Drivers by extension, as they are
+          used by Wayland compositors pretty frequently. XCB Utils had
+          xcb-util-errors moved to SLFS and proceeded to be moved to Basic X11
+          Software, again as they are sometimes used by Wayland compositors.
+        </p><p>
+          Support for 32-bit CPUs has also been removed due to a lack of
+          testing. This does not mean that 32-bit libraries are no longer being
+          built, otherwise Steam would fail to work. However, Steam is not
+          tested on 32-bit CPUs, thus it is not supported on such platforms.
+          Therefore, only x86_64 CPUs are supported in GLFS.
+        </p><p>
+          Some other miscellaneous changes have been made. While not
+          technically a package addition, it adds only a single library and
+          some headers from an existing package, GBM From Mesa. Instructions
+          for it alone have been made so that NVIDIA users would not have to
+          install Mesa drivers they won't need. NVIDIA only needs libgbm from
+          Mesa. A smaller change is the color scheme has been adjusted to have
+          a more purple look. libglvnd has also been preferred over Mesa's
+          libGL in the book, although there is still support for the Mesa
+          vendor. libglvnd is what most binaries on Linux build against, and
+          many build systems ask for it explicitly, so users are highly
+          encouraged to use it when daily driving an LFS or MLFS + GLFS system.
+          Various efforts have been made to link external packages to
+          Supplemental LFS if applicable, such as Mesa-Demos. This book and
+          BLFS have also made changes to better accommodate GNOME on NVIDIA
+          systems, while Supplemental LFS has offered some duplicate packages
+          to fix building with libglvnd, such as GLU. SLFS also now has SDL3,
+          so any package in GLFS that depends on SDL2 will link to both SDL2 in
+          the book and sdl2-compat. Lastly, documentation and explanations have
+          greatly improved since 12.3, such as drilling down exactly what
+          MinGW-w64 is and why Wine wants it, to discussing GLES v1, v2, and v3
+          and if you want it or not whilst providing the options to completely
+          disable such support.
+        </p>
+
+        <p>This is a coordinated release with GLFS-12.4-systemd.</p>
+        <p>You can read the 12.4 version via
+           <a href="/glfs/download.html">download.</a>
+        </p>
+        <p>MLFS-12.4 rendering instructions are in the book.</p>
+        <p>For any issues, please direct them to the
+           <a href="https://github.com/glfs-book/glfs/issues">issue tracker</a>.
+        </p>
+      </dd>
+    </dl>
+
+    <dl class="newsItem">
       <dt>Advisories now available</dt>
       <dd><em>Zeckma - 2025/06/22</em>
         <p>Advisories for broken changes and security issues are now provided
