@@ -908,6 +908,25 @@
 
     <h3>QtWebEngine</h3>
 
+    <a id="sa-12.3-100"/>
+    <h4>12.3 100 QtWebEngine          Date: 2025-08-31  Severity: Critical</h4>
+    <p>In QtWebEngine-6.9.2, 21 security vulnerabilities were fixed that can
+    allow for sandbox escapes, unauthorized user information disclosure, cross
+    origin information leakage, remote code execution, user interface spoofing,
+    arbitrary file read/writes, arbitrary code execution, and bypass of the
+    Content Security Policy (if one is enforced). Several of these
+    vulnerabilities are extremely severe, but two of them are known to be
+    actively exploited in the wild and are often chained together. These are the
+    sandbox escape and arbitrary file read/write vulnerabilities, which attackers
+    will leverage to implant or read files in a protected area of a user's
+    filesystem, since the sandbox is supposed to tie QtWebEngine to only being
+    able to operate in certain directories on the system. The sandbox escape
+    vulnerability being actively exploited significantly amplifies the severity
+    of all vulnerabilities fixed here. <em>ALL USERS WHO HAVE QTWEBENGINE
+    INSTALLED MUST UPDATE TO 6.9.2 AS SOON AS POSSIBLE, EVEN IF THEY ARE ONLY
+    USING IT AS A BUILD DEPENDENCY.</em> Update to QtWebEngine-6.9.2.
+    <a href="consolidated.html#sa-12.3-100">12.3-100</a></p>
+
     <a id="sa-12.3-046"/>
     <h4>12.3 046 QtWebEngine              Date: 2025-06-03  Severity: Critical</h4>
     <p>In QtWebEngine-6.9.1, nineteen security vulnerabilities were fixed that could

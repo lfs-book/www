@@ -65,6 +65,53 @@
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
+    <a id="sa-12.3-100"/>
+    <h4>12.3 100 QtWebEngine          Date: 2025-08-31  Severity: Critical</h4>
+    <p>In QtWebEngine-6.9.2, 21 security vulnerabilities were fixed that can
+    allow for sandbox escapes, unauthorized user information disclosure, cross
+    origin information leakage, remote code execution, user interface spoofing,
+    arbitrary file read/writes, arbitrary code execution, and bypass of the
+    Content Security Policy (if one is enforced). These vulnerabilities occur
+    in a variety of different components in Chromium, including libvpx, BFCache,
+    V8, Background Fetch, FileSystemAccess API, Compositing, ANGLE, WebGPU,
+    WebRTC, DevTools, Loader, Profiler, Blink, DOM, Filesystems, Cast, and
+    Extensions. Several of these vulnerabilities are extremely severe, but two
+    of them are known to be actively exploited in the wild and are often chained
+    together. These are the sandbox escape and arbitrary file read/write
+    vulnerabilities, which attackers will leverage to implant or read files in
+    a protected area of a user's filesystem, since the sandbox is supposed to
+    tie QtWebEngine to only being able to operate in certain directories on
+    the system. The sandbox escape vulnerability being actively exploited
+    significantly amplifies the severity of all vulnerabilities fixed here.
+    <em>ALL USERS WHO HAVE QTWEBENGINE INSTALLED MUST UPDATE TO 6.9.2 AS SOON
+    AS POSSIBLE, EVEN IF THEY ARE ONLY USING IT AS A BUILD DEPENDENCY.</em>
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5283">CVE-2025-5283</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5281">CVE-2025-5281</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5280">CVE-2025-5280</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5064">CVE-2025-5064</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5065">CVE-2025-5065</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5063">CVE-2025-5063</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8010">CVE-2025-8010</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6558">CVE-2025-6558</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-7657">CVE-2025-7657</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-7656">CVE-2025-7656</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6554">CVE-2025-6554</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6557">CVE-2025-6557</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6556">CVE-2025-6556</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6192">CVE-2025-6192</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6191">CVE-2025-6191</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5068">CVE-2025-5068</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5419">CVE-2025-5419</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8582">CVE-2025-8582</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8580">CVE-2025-8580</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8578">CVE-2025-8578</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8576">CVE-2025-8576</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.9.2 or later using
+    the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.3-099"/>
     <h4>12.3 099 udisks               Date: 2025-08-31  Severity: High</h4>
     <p>In udisks-2.10.2, a security vulnerability was fixed that could allow
