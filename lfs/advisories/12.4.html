@@ -1,0 +1,88 @@
+<!--#set var="pageTitle" value="LFS 12.4 Security Advisories" -->
+<!--#include virtual="/lfs/header.html" -->
+<!--#include virtual="/lfs/menu.html" -->
+    <div class="main">
+
+    <h2>LFS Security Advisories for LFS 12.4.</h2>
+
+    <a id="LFS12.4"/>
+    <p>LFS-12.4 was released on 2025-09-01</p>
+
+    <!-- Editors: Do not remove this entry, just comment it out. -->
+
+    <ul>
+       <li>There are currently no known security vulnerabilities for LFS-12.4.</li>
+    </ul>
+
+    <!-- Editors: do the consolidated file first, to get the next number.
+         Checking what you have prepared is easier if you can create symlinks
+         in the directory where you put the books' html so that you can see
+         the LFS and BLFS advisories in your browser. -->
+
+
+    <p style="font-style: italic;">This page is in alphabetical order of packages,
+    and if a package has multiple advisories the newer come first.</p>
+
+    <p> The links at the end of each item point to fuller details which have
+    links to the
+    development <!-- change to 'released' when links in consolidated are changed
+    after a release -->
+    books.</p>
+
+    <!-- After a release, copy for next book version, leave just template stuff
+     in that, and note
+     that later advisories will be in the [next release] version -->
+
+    <!-- Editors - do the consolidated page first, to get the next advisory number -->
+
+   <!-- start of template
+
+    <h3>PackageName</h3>
+
+    <h4>11.2 NNN PackageName (LFS)  Date: 2022-09-01  Severity: Low</h4>
+    <p>Breif details here. See
+    <a href=i"../../blfs/advisories/consolidated.html#sa-11.2-NNN">11.2-NNN</a></p>
+
+    <!\-\- End of PackageName -->
+    <!-- End of template -->
+
+<!--
+    <h3>Glibc</h3>
+
+    <p style="font-style: italic;">Updating Glibc from an earlier version
+    on a running LFS system requires extra precautions to avoid breaking the
+    system.  The precautions are documented in an "Important" box of the LFS
+    book section for Glibc.  Follow it strictly or you may render the
+    system completely unusable.</p>
+
+    <a id="sa-12.3-085"/>
+    <h4>12.3 085 glibc (LFS)              Date: 2025-08-05  Severity: Medium</h4>
+    <p>In glibc-2.42, a security vulnerability was fixed that can allow for
+    a double free when using the regcomp() function. The double free can be
+    accomplished by a malloc failure or by using an interposed malloc that
+    injects random malloc failures, and the double free is known to cause
+    buffer manipulation depending on how the regex passed to regcomp is
+    constructed. All versions from glibc-2.4 to 2.41 are known to be affected.
+    This can cause arbitrary code execution or a denial of service.</p>
+
+    <p>Please read the link to fix this vulnerability:
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-085">12.3-085</a></p>
+-->
+
+<!-- end of Glibc -->
+
+<!--
+    <h3>coreutils</h3>
+
+    <a id="sa-12.3-043"/>
+    <h4>12.3 043 coreutils (LFS)          Date: 2025-06-02  Severity: Medium</h4>
+    <p>In coreutils-9.6, a security vulnerability was discovered that could
+    allow for a denial of service (application crash) or leakage of sensitive
+    data when using the 'sort' utility. The vulnerability is vulnerable to a
+    heap buffer under-read. Update to coreutils-9.7 with the patch.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.3-043">12.3-043</a></p>
+-->
+
+<!-- end of coreutils -->
+
+<!--#include virtual="/common/footer.html" -->
