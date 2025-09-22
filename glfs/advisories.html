@@ -22,6 +22,23 @@
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
     Consolidated Security Advisories</a> for such packages.</p>
 
+    <a id="glfs-brk-12.4-003"/>
+    <h4>glfs-brk-12.4-003: GBM (Date: September 11th, 2025)</h4>
+    <p>
+      GLFS provides instructions to install libgbm, a frontend that loads a
+      given backend. This avoids having to install Mesa if a user is installing
+      a driver outside it that provides nearly everything that's needed. This
+      library was installed from the Mesa project, finetuned to install the
+      least amount of files possible. GLFS has since switched to installing the
+      libgbm package outside of Mesa. It's a package that was ripped out of
+      Mesa to avoid unneeded dependencies, build targets, and build time.
+      Installation of certain header files, like for declaring the DRI
+      interface needed by Xorg-Server, has been moved to pages installing
+      drivers outside of Mesa, like NVIDIA. As with GBM from Mesa, you can pick
+      between libgbm or Mesa without consequence. libgbm can replace Mesa's
+      libgbm with no issues, being ABI compatible.
+    </p>
+
     <a id="glfs-brk-12.4-002"/>
     <h4>glfs-brk-12.4-002: Mesa OpenGL (Date: September 8th, 2025)</h4>
     <p>GLFS used to support Mesa's core OpenGL libraries (libGL, libGLX,
