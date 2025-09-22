@@ -12,32 +12,17 @@
     </p>
 
     <p>
-      This process can be pretty involved. When it comes to gaming, Steam is
-      the most popular choice. On Linux, Steam itself is a 32-bit binary that
-      cannot be compiled due to unavailability of source code. That means you
-      will need to emulate it on an x86_64 CPU.
-    </p>
-
-    <p>
-      The next option is Wine. It can allow you to run any Windows
-      software, like games, without the need for any specialized launchers. It
-      is useful beyond games. A possible usecase is using the Windows version
-      of a package via Wine if the Linux version is not working or has a notable
-      issue interfering with your workflow.
-    </p>
-
-    <p>
-      In both cases, installing 32-bit software for compatibilty with 32-bit
-      software is the best move. A lot of games are still 32-bit. Even if you
-      plan to just use Wine, which can be compiled for only 64-bit if you wish,
-      a lot of Windows software are 32-bit only.
+      Steam is a video game and software store-front and launcher. Wine
+      emulates Windows software. Steam requires 32-bit software as the core of
+      it is 32-bit. With Wine, it doesn't require 32-bit software as it can be
+      built for 64-bit only, but a lot of Windows software is 32-bit only.
     </p>
 
     <p>
       <a href="/mlfs">MLFS</a> is therefore a strongly recommended
-      prerequisuite for this book. It is recommended for Wine and required for
-      Steam. <a href="/~thomas/multilib-m32/">MLFS with m32 extensions</a> is
-      the recommended choice to save disk usage and build times. x32-bit at
+      prerequisuite for this book.
+      <a href="/~thomas/multilib-m32/">MLFS with m32 extensions</a> is
+      the recommended choice to save disk usage and build times. mx32-bit at
       present time is not very useful for Steam or Wine.
     </p>
 
