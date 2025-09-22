@@ -15,6 +15,19 @@
     <p style="font-style: italic;">This page is ordered like the Changelog of the
     book, with newest items first.</p>
 
+    <h2>12.4 to 12.5</h2>
+    <h3>Broken changes</h3>
+    <p>Packages removed from GLFS that are in BLFS may have gotten security
+    updates. Read <a href="/blfs/advisories/12.4.html">BLFS 12.4 Security
+    Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
+    Consolidated Security Advisories</a> for such packages.</p>
+
+    <a id="glfs-brk-12.4-001"/>
+    <h4>glfs-brk-12.4-001: PCRE2, SQLite3, Python3 (Date: September 4th, 2025)</h4>
+    <p>PCRE2, SQLite3, and Python3 have been removed from GLFS. All of them are
+    now in Multilib LFS and have proper lib32 instructions if applicable. Go to
+    MLFS for updates to those packages.</p>
+
     <h2>12.3 to 12.4</h2>
     <h3>Broken changes</h3>
     <p>Packages removed from GLFS that are in BLFS may have gotten security
