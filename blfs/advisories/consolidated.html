@@ -64,6 +64,22 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-009"/>
+    <h4>12.4 009 OpenJPEG     Date: 2025-09-30  Severity: Critical</h4>
+    <p>In OpenJPEG-2.5.4, a security vulnerability was fixed that could allow
+    for remote code execution when processing a crafted JPEG2000 file. The issue
+    occurs due to an unbounded out-of-bounds write, which can occur when the
+    data stream p_stream is too short, and p_image is not initialized. This occurs
+    when processing the header of a crafted image. Note that the vulnerability was
+    originally rated as Medium, but was upgraded to Critical once it was analyzed
+    by NVD.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-54874">CVE-2025-54874</a>.</p>
+    <p>To fix this vulnerability, update to OpenJPEG-2.5.4 or later using the
+    instructions from
+    <a href="../view/svn/general/openjpeg2.html">OpenJPEG (sysv)</a> or
+    <a href="../view/systemd/general/openjpeg2.html">OpenJPEG (systemd)</a>.</p>
+
     <a id="sa-12.4-008"/>
     <h4>12.4 008 cURL         Date: 2025-09-30  Severity: Low</h4>
     <p>In cURL-8.16.0, two security vulnerabilities were fixed that could allow
