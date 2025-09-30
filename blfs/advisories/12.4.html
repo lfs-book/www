@@ -64,6 +64,21 @@
 
 <!-- end of Firefox -->
 
+    <h3>PCRE2</h3>
+
+    <a id="sa-12.4-004"/>
+    <h4>12.4 004 PCRE2        Date: 2025-09-29  Severity: Medium</h4>
+    <p>In PCRE2-10.46, a security vulnerability was fixed that can allow for
+    information disclosure and a denial-of-service (application crash) when
+    processing a crafted regular expression. This occurs when using the *ACCEPT
+    and *scs: pattern features together, and upstream has noted that the issue
+    can be used to escalate the severity of other security vulnerabilities in
+    a system. Update to PCRE2-10.46, keeping in mind the note in the advisory
+    about using the BLFS instructions since this package has been moved to LFS.
+    <a href="consolidated.html#12.4-005">12.4-005</a></p>
+
+<!-- end of PCRE2 -->
+
     <h3>SpiderMonkey</h3>
 
     <a id="sa-12.4-002"/>
