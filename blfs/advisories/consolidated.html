@@ -64,6 +64,30 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-005"/>
+    <h4>12.4 005 Expat (LFS)  Date: 2025-09-30  Severity: High</h4>
+    <p>In Expat-2.7.3, a security vulnerability was fixed that can allow for
+    a denial of service (system out-of-memory condition) when parsing a XML
+    document. The issue is known to be exploited easily and reliably. It was fixed
+    by preventing the usage of disproportional amounts of dynamic memory within
+    an Expat parser context. Upstream provides an example where a ~250KiB in size
+    document could cause allocation of ~800MiB from the heap - which amplifies
+    memory consumed by a factor of 3,300. Documents that go past a x100
+    amplification factor are now rejected with an out-of-memory error. Upstream
+    also notes that a layer of compression around the XML can significantly
+    decrease the minimum attack payload size. Because Expat is used in many
+    contexts, including ones where untrusted input can be processed (such as in
+    a web browser), updating to Expat-2.7.3 is recommended for all users.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59375">CVE-2025-59375</a>.</p>
+    <p>To fix these vulnerability, update to Expat-2.7.3 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <p>Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa-12.4-004"/>
     <h4>12.4 004 PCRE2        Date: 2025-09-29  Severity: Medium</h4>
     <p>In PCRE2-10.46, a security vulnerability was fixed that can allow for
