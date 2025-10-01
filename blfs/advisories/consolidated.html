@@ -64,6 +64,21 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-011"/>
+    <h4>12.4 011 Wireshark    Date: 2025-09-30  Severity: Low</h4>
+    <p>In Wireshark-4.4.9, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when processing a crafted SSH
+    packet. This can occur both during live packet captures and when reading
+    a previously saved PCAP file. If you are using Wireshark to dissect SSH
+    packets, updating Wireshark is recommended. If you're not using Wireshark
+    to read SSH packets though, there is no need to apply this update.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9817">CVE-2025-9817</a>.</p>
+    <p>To fix this vulnerability, update to Wireshark-4.4.9 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-12.4-010"/>
     <h4>12.4 010 Exiv2        Date: 2025-09-30  Severity: Low</h4>
     <p>In Exiv2-0.28.7, two security vulnerability were fixed that could allow
