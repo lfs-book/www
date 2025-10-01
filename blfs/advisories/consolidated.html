@@ -64,6 +64,27 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-010"/>
+    <h4>12.4 010 Exiv2        Date: 2025-09-30  Severity: Low</h4>
+    <p>In Exiv2-0.28.7, two security vulnerability were fixed that could allow
+    for a denial of service (application crash and quadratic resource consumption)
+    when processing EPS files and parsing ICC profiles in JPEG images. The EPS
+    vulnerability occurs due to an out-of-bounds read when calling the
+    Exiv2::EpsImage::writeMetadata() function. The vulnerability can only be
+    exploited when writing metadata to a crafted file, which is done much less
+    frequently than reading metadata. Note that an attacker would also need to
+    convince a user to add extra command-line arguments to the exiv2 command in
+    order to successfully trigger the issue. The ICC profile parsing vulnerability
+    occurs due to a quadratic algorithm in jpegBase::readMetadata(), which is
+    used to read the metadata of a JPEG file.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-54080">CVE-2025-54080</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55304">CVE-2025-55304</a>.</p>
+    <p>To fix these vulnerabilities, update to Exiv2-0.28.7 or later using the
+    instructions from
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
     <a id="sa-12.4-009"/>
     <h4>12.4 009 OpenJPEG     Date: 2025-09-30  Severity: Critical</h4>
     <p>In OpenJPEG-2.5.4, a security vulnerability was fixed that could allow
