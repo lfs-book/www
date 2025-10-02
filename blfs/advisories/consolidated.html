@@ -64,6 +64,37 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-012"/>
+    <h4>12.4 012 OpenSSL (LFS) Date: 2025-10-01 Severity: Medium</h4>
+    <p>In OpenSSL-3.5.4, three security vulnerabilities were fixed that could
+    allow for denial of service (application crashes), arbitrary code execution,
+    and private key recovery on ARM64 platforms. One of the denial of service
+    can occur when using the HTTP client API functions, where the 'no_proxy'
+    variable has been set and the host portion of the authority component
+    of the HTTP URL is an IPv6 address. This can also affect the OCSP client
+    functions and Certificate Management Protocol client implementation in
+    OpenSSL. The other denial of service vulnerability (which can also
+    allow for arbitrary code execution) can occur when an application is
+    trying to decrypt CMS messages encrypted using password based encryption.
+    The issue triggers an out-of-bounds read and write. Though the consequences
+    of a successful exploit of the vulnerability can be severe, the chances of
+    an attacker being able to perform it is low, and password-based encryption
+    support in CMS messages is rarely used - which is why upstream marked it
+    as Medium. The private key recovery on ARM64 platforms occurs due to a
+    timing side-channel attack in the SM2 algorithm implementation on ARM64.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9230">CVE-2025-9230</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9231">CVE-2025-9231</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9232">CVE-2025-9232</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.5.4 (or 3.4.3) using
+    the instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+<!-- <p>If you upgrade to OpenSSL-3.5.4 on a BLFS 12.4 system, you must rebuild
+    OpenSSH due to a bug in the version of OpenSSL that LFS 12.4 shipped with
+    that causes OpenSSH to think that it was built against a pre-release version
+    of OpenSSL.</p> -->
+
     <a id="sa-12.4-011"/>
     <h4>12.4 011 Wireshark    Date: 2025-09-30  Severity: Low</h4>
     <p>In Wireshark-4.4.9, a security vulnerability was fixed that could allow
