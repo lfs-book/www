@@ -64,6 +64,37 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-013"/>
+    <h4>12.4 013 QtWebEngine   Date: 2025-10-02 Severity: Critical</h4>
+    <p>In QtWebEngine-6.9.3, fifteen security vulnerabilities were fixed that
+    could allow for remote code execution, information leakage, and content
+    security policy bypasses. At least three of these vulnerabilities are known
+    to be under active exploitation, and users are advised to update
+    QtWebEngine <em>immediately</em>, even if it is only used as a build
+    dependency. The vulnerabilities are in the libaom, OpenJPEG, V8, File
+    Picker, ANGLE, Extensions, Serviceworker, Mojo, Dawn, and WebRTC components
+    within the bundled copy of Chromium.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8879">CVE-2025-8879</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8880">CVE-2025-8880</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8881">CVE-2025-8881</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8901">CVE-2025-8901</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9866">CVE-2025-9866</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10200">CVE-2025-10200</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10201">CVE-2025-10201</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10500">CVE-2025-10500</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10501">CVE-2025-10501</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10502">CVE-2025-10502</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10585">CVE-2025-10585</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-54874">CVE-2025-54874</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10891">CVE-2025-10891</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10892">CVE-2025-10892</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10890">CVE-2025-10890</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.9.3 or later using
+    the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.4-012"/>
     <h4>12.4 012 OpenSSL (LFS) Date: 2025-10-01 Severity: Medium</h4>
     <p>In OpenSSL-3.5.4, three security vulnerabilities were fixed that could
