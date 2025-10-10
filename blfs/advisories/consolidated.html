@@ -64,6 +64,22 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-018"/>
+    <h4>12.4 018 OpenSSH       Date: 2025-10-10 Severity: Low</h4>
+    <p>In OpenSSH-10.1p1, a security vulnerability was fixed that could allow
+    for remote code execution in some configurations. Only users who have
+    modified the default configuration in BLFS and set ProxyCommand are
+    vulnerable to the issue, and the issue occurs because OpenSSH allowed
+    control characters in usernames that originate from untrusted sources.
+    If you haven't modified the default BLFS configuration, there is no
+    need to upgrade.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61984">CVE-2025-61984</a>.</p>
+    <p>To fix this vulnerability, update to OpenSSH-10.1p1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
     <a id="sa-12.4-017"/>
     <h4>12.4 017 fetchmail     Date: 2025-10-10 Severity: Medium</h4>
     <p>In fetchmail-6.5.6, a security vulnerability was fixed that could cause
