@@ -64,6 +64,23 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-017"/>
+    <h4>12.4 017 fetchmail     Date: 2025-10-10 Severity: Medium</h4>
+    <p>In fetchmail-6.5.6, a security vulnerability was fixed that could cause
+    a denial of service (application crash) when authenticating using the SMTP
+    client. The vulnerability occurs due to a failure to validate network input
+    in some configurations. Note that for this vulnerability to be exploitable,
+    a user must have the esmtpname and esmtppassword options configured, as well
+    as the plugout and mda options to be inactive. This particular configuration
+    is rather uncommon, but if you have fetchmail installed with this
+    configuration and are experiencing crashes, update to fetchmail-6.5.6 or later.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61962">CVE-2025-61962</a>.</p>
+    <p>To fix this vulnerability, update to fetchmail-6.5.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/fetchmail.html">fetchmail (sysv)</a> or
+    <a href="../view/systemd/basicnet/fetchmail.html">fetchmail (systemd)</a>.</p>
+
     <a id="sa-12.4-016"/>
     <h4>12.4 016 GIMP          Date: 2025-10-10 Severity: High</h4>
     <p>In GIMP-3.0.6, six security vulnerabilities were fixed that could allow
