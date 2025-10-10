@@ -15,6 +15,8 @@
     <p style="font-style: italic;">This page is ordered like the Changelog of the
     book, with newest items first.</p>
 
+    <br/>
+
     <h2>12.4 to 12.5</h2>
     <h3>Broken changes</h3>
     <p>Packages removed from GLFS that are in BLFS may have gotten security
@@ -55,6 +57,40 @@
     <p>PCRE2, SQLite3, and Python3 have been removed from GLFS. All of them are
     now in Multilib LFS and have proper lib32 instructions if applicable. Go to
     MLFS for updates to those packages.</p>
+
+    <br/>
+
+    <h3>Security Advisories</h3>
+    <p>Please read <a href="/blfs/advisories/12.4.html">BLFS 12.4 Security
+    Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
+    Consolidated Security Advisories</a> for more packages that aren't covered
+    here.</p>
+
+    <a id="glfs-sa-12.4-001"/>
+    <h4>glfs-sa-12.4-001: NVIDIA - Rating: High (Date: October 10th, 2025)</h4>
+    <p>In NVIDIA-580.95.05, 8 security vulnerabilities were fixed that could
+    allow for arbitrary code exectution (ACE), denial of service, privilege
+    escalation, data tampering, and information disclosure.
+    These security vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23280">CVE-2025-23280</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23282">CVE-2025-23282</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23300">CVE-2025-23300</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23309">CVE-2025-23309</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23330">CVE-2025-23330</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23332">CVE-2025-23332</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23345">CVE-2025-23345</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23347">CVE-2025-23347</a>.
+    Update to NVIDIA-580.95.05 or any of the latest revisions
+    of the major versions r570 (570.195.03) and r535 (535.274.02)
+    immediately.</p>
+    <p>To do so, follow the <a
+    href="https://glfs-book.github.io/glfs/shareddeps/nvidia.html">GLFS NVIDIA
+    installation page</a>. Ensure you download the latest install script and
+    manifest file if you previously downloaded them to ensure
+    compatibility. SysVinit and Systemd instructions differ slightly. Render
+    a copy for the Systemd edition.</p>
+
+    <br/>
 
     <h2>12.3 to 12.4</h2>
     <h3>Broken changes</h3>
@@ -123,6 +159,8 @@
     <p>The luit package has been removed from GLFS as no packages in the book
     used it. It had no lib32 installation instructions, so feel free to follow
     BLFS for updates to the luit package.</p>
+
+    <br/>
 
     <h3>Security Advisories</h3>
     <p>Please read <a href="/blfs/advisories/12.3.html">BLFS 12.3 Security
