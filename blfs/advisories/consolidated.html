@@ -64,6 +64,32 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-020"/>
+    <h4>12.4 020 poppler       Date: 2025-10-14 Severity: Medium</h4>
+    <p>In poppler-25.10.0, a security vulnerability was fixed that could
+    allow for a denial-of-service (application crash) when processing a
+    crafted PDF file. This occurs due to a use-after-free, and is due to
+    a common issue that occurs when using raw pointers with elements of
+    a 'std::vector', where dangling pointers can occur when the vector is
+    resized. The vulnerability is in the StructTreeRoot class, particularly in
+    the parseNumberTreeNode function.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52885">CVE-2025-52885</a>.</p>
+    <p>To fix this vulnerability, update to poppler-25.10.0 or later using the
+    instructions in
+    <a href="../view/svn/general/poppler.html">poppler (sysv)</a> or
+    <a href="../view/systemd/general/poppler.html">poppler (systemd)</a>.</p>
+    <p>Two packages in BLFS 12.4 are known to have issues with later versions of
+    poppler at the time of this advisory. Inkscape is known to need a patch with
+    poppler-25.09.0 (which also carries over to 25.10.0). If you are building
+    Inkscape after installing this security update, please follow the instructions
+    from
+    <a href="../view/svn/xsoft/inkscape.html">Inkscape (sysv)</a> or
+    <a href="../view/systemd/xsoft/inkscape.html">Inkscape (systemd)</a>.
+    There is also a known build problem with Libreoffice, but that has not been
+    addressed yet due to other priorities regarding security updates. The advisory
+    will be updated once a fix is present in the book.</p>
+
     <a id="sa-12.4-019"/>
     <h4>12.4 019 Ruby          Date: 2025-10-10 Severity: High</h4>
     <p>In Ruby-3.4.7, a security vulnerability was fixed that could allow
