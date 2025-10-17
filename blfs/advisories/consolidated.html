@@ -64,6 +64,22 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-024"/>
+    <h4>12.4 024 libarchive  Date: 2025-10-17  Severity: Medium</h4>
+    <p>In libarchive-3.8.2, a security vulnerability was fixed that could allow
+    for a malicious TAR file to cause a denial of service (application crash) or
+    possibly other impacts when the contents of the TAR file is listed with a
+    verbose value of '2'. An example provided by upstream is that a 100-byte
+    buffer may not be sufficient for a custom locale. The function impacted
+    is list_item_verbose() inside of tar/util.c. Users who are using libarchive
+    to process TAR files should upgrade to this version of libarchive.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-25724">CVE-2025-25724</a>.</p>
+    <p>To fix this vulnerability, update to libarchive-3.8.2 or later using the
+    instructions from
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
     <a id="sa-12.4-023"/>
     <h4>12.4 023 Thunderbird Date: 2025-10-16  Severity: High</h4>
     <p>In Thunderbird-140.4.0esr, 8 security vulnerabilities have been fixed
@@ -81,7 +97,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11714">CVE-2025-11714</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11715">CVE-2025-11715</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-140.4.0esr or later
-    using the instructions for
+    using the instructions from
     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
     <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
@@ -103,7 +119,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11714">CVE-2025-11714</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11715">CVE-2025-11715</a>.</p>
     <p>To fix these vulnerabilities, update to Firefox-140.4.0esr or later
-    using the instructions for
+    using the instructions from
     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
     <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
