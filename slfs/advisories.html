@@ -10,4 +10,24 @@
     <p style="font-style: italic;">This page is ordered like the Changelog of the
     book, with newest items first.</p>
 
+    <h2>12.4 to 12.5</h2>
+    <h3>Security Advisories</h3>
+
+    <a id="slfs-sa-12.4-001"/>
+    <h4>slfs-sa-12.4-001: OpenJDK-17 - Rating: High (Date: October 23rd, 2025)</h4>
+    <p>In OpenJDK-17.0.17-ga, two security vulnerabilties were fixed that could
+    allow for exploitation of APIs via multiple network protocols, leading to
+    creation, modification, and deletion of data. This is especially an issue
+    with Minecraft servers, as an affected JDK version will have elevated
+    privileges because of calls to mods/modpacks. These vulnerabilities affect
+    other major JDK versions. If you have multiple OpenJDK versions built,
+    update all of them if there is an update present.
+    These security vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53057">CVE-2025-53057</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53066">CVE-2025-53066</a>.</p>
+    <p>To update to OpenJDK-17.0.17-ga, follow the
+    <a href="https://glfs-book.github.io/slfs/general/openjdk.html">OpenJDK
+    installation page</a>. SysVinit and Systemd instructions for the page do
+    not differ. The Java page also has the new version.</p>
+
 <!--#include virtual="/common/footer.html" -->
