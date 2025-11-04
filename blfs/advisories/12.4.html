@@ -71,6 +71,20 @@
 
 <!-- end of BIND -->
 
+    <h3>brotli</h3>
+
+    <a id="sa-12.4-027"/>
+    <h4>12.4 027 brotli      Date: 2025-11-04  Severity: Low</h4>
+    <p>In brotli-1.2.0, some security mitigations were put into place that allow
+    for mitigation of unexpectedly large output. This was done by adding in the
+    Decompressor::can_accept_more_data method and the optional
+    output_buffer_limit argument into the Decompressor::process method. Note
+    that this is rated as Low because there is no CVE assigned and this change
+    only affects the Python bindings to brotli, which are not commonly used.
+    If you are using the Python bindings to brotli, update to brotli-1.2.0.</p>
+
+<!-- end of brotli -->
+
     <h3>CUPS</h3>
 
     <a id="sa-12.4-006"/>
