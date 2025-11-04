@@ -345,6 +345,21 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>Unbound</h3>
+
+    <a id="sa-12.4-026"/>
+    <h4>12.4 026 Unbound     Date: 2025-11-04  Severity: Medium</h4>
+    <p>In Unbound-1.24.1, a security vulnerability was fixed that could allow
+    for cache poisoning attacks. The vulnerability occurs because promiscuous
+    NS RRSets that complement DNS replies in the authority section can be used
+    to trick resolvers into updating their delegation information for the zone.
+    Unbound fixed this by scrubbing unsolicited NS RRSets as well as their
+    respective address records from replies, which mitigates this possibility.
+    Update to Unbound-1.24.1 if you are currently using it.
+    <a href="consolidated.html#sa-12.4-026">12.4-026</a></p>
+
+<!-- end of Unbound -->
+
     <h3>Wireshark</h3>
 
     <a id="sa-12.4-011"/>

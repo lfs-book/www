@@ -64,6 +64,25 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-026"/>
+    <h4>12.4 026 Unbound     Date: 2025-11-04  Severity: Medium</h4>
+    <p>In Unbound-1.24.1, a security vulnerability was fixed that could allow
+    for cache poisoning attacks. The vulnerability occurs because promiscuous
+    NS RRSets that complement DNS replies in the authority section can be used
+    to trick resolvers into updating their delegation information for the zone.
+    Usually these RRSets are used to update the resolver's knowledge of a DNS
+    zone's name servers, but if a malicious attacker is able to attach such
+    records into a reply, the attacker would poison Unbound's cache for the
+    delegation point. Unbound fixed this by scrubbing unsolicited NS RRSets
+    as well as their respective address records from replies, which mitigates
+    this possibility.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11411">CVE-2025-11411</a>.</p>
+    <p>To fix this vulnerability, update to Unbound-1.24.1 or later using the
+    instructions from
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+
     <a id="sa-12.4-025"/>
     <h4>12.4 025 BIND        Date: 2025-11-04  Severity: Critical</h4>
     <p>In BIND-9.20.15, three security vulnerabilities were fixed that could
