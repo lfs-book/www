@@ -52,6 +52,25 @@
 
 <!-- end of PackageName -->
 
+    <h3>BIND</h3>
+
+    <a id="sa-12.4-025"/>
+    <h4>12.4 025 BIND        Date: 2025-11-04  Severity: Critical</h4>
+    <p>In BIND-9.20.15, three security vulnerabilities were fixed that could
+    allow for resource exhaustion as well as cache poisoning attacks. The
+    resource exhaustion vulnerability occurs when querying for records which
+    have a specially crafted zone that contains malformed DNSKEY records. The
+    first cache poisoning vulnerability occurs because BIND is too lenient when
+    accepting records from answers, which allows attackers to trivially inject
+    forged data into the cache. The other cache poisoning vulnerability occurs
+    due to a weakness in the PRNG that is used, which allows attackers to predict
+    the source port and query ID that BIND will use. Users who use the BIND server
+    should update to BIND-9.20.15 immediately, but if you are just using the
+    client utilities, there is no reason to upgrade.
+    <a href="consolidated.html#sa-12.4-025">12.4-025</a></p>
+
+<!-- end of BIND -->
+
     <h3>CUPS</h3>
 
     <a id="sa-12.4-006"/>
