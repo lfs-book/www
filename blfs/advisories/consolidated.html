@@ -64,6 +64,40 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-028"/>
+    <h4>12.4 028 Xorg-Server Date: 2025-11-04  Severity: High</h4>
+    <p>In Xorg-Server-21.1.20, three security vulnerabilities were fixed that
+    could allow for arbitrary code execution or denial of service when using
+    the X11 Present extension, when removing the Xkb resources for a client,
+    and when using the XkbSetCompatMap() function. The X11 Present
+    vulnerability occurs when processing and adding the notifications after
+    presenting a pixmap, because a dangling pointer may be left in the error
+    code path of the XPresentNotify function. This causes a use after free
+    whenever the notification structures are eventually destroyed, causing
+    memory corruption and a subsequent crash. The Xkb client resource
+    vulnerability occurs when removing the Xkb resources for a client.
+    The XkbRemoveResourceClient() function will free the XkbInterest data
+    associated with a device, but won't actually remove the resource
+    associated with it. This causes the resource delete function to
+    trigger a use-after-free when the client is terminated. The vulnerability
+    in the XkbSetCompatMap() function is due to a value overflow, because the
+    XkbCompatMap structure stores some values using an unsigned short, but it
+    fails to check if the sum of the input data might overflow the maximum
+    value. Note that these vulnerabilities can be exploited via TigerVNC as
+    well as SSH X Forwarding, where these vulnerabilities change from arbitrary
+    code execution problems to remote code execution issues.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2025-62229">CVE-2025-62229</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2025-62230">CVE-2025-62230</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2025-62231">CVE-2025-62231</a>.</p>
+    <p>To fix these vulnerabilities, update to Xorg-Server-21.1.20 or later
+    using the instructions from
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <p><em>NOTICE TO TIGERVNC USERS:</em> If you have the TigerVNC server
+    configured, you should rebuild TigerVNC with Xorg-Server-21.1.20 or later
+    to protect your systems against these vulnerabilities as well.</p>
+
     <a id="sa-12.4-027"/>
     <h4>12.4 027 brotli      Date: 2025-11-04  Severity: Low</h4>
     <p>In brotli-1.2.0, some security mitigations were put into place that allow
