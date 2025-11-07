@@ -64,6 +64,38 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-032"/>
+    <h4>12.4 032 Samba        Date: 2025-11-07  Severity: Critical</h4>
+    <p>In Samba-4.23.3, two security vulnerabilities were fixed that could
+    allow for uninitialized memory disclosure and for command injection in
+    some configurations. Note that the default BLFS configuration is <em>NOT</em>
+    affected, but some obscure configurations may be. The command injection
+    vulnerability is rated as Critical and can occur if a configuration has
+    a WINS server hook script configured. The WINS server used by the Active
+    Directory Domain Controller did not validate user names passed to the WINS
+    hook program, and it passed them by inserting them into a string run by
+    a shell. However, for a system to be affected by this vulnerability, the
+    following conditions must be true:</p>
+    <ul>
+       <li>Samba must be configured to run as an Active Directory Domain
+           Controller. The default BLFS configuration is setup for file and
+           print sharing only due to the complexity of configuring Samba as
+           a domain controller.</li>
+       <li>The domain controller must have WINS support enabled.</li>
+       <li>The domain controller must have the 'wins hook' parameter set in
+           the smb.conf file.</li>
+    </ul>
+    <p>The uninitialized memory disclosure vulnerability occurs when a server
+    has the streams_xattr VFS object enabled. This is not set in the default
+    BLFS configuration, but may be in some users who have high performance needs.
+    These vulnerabilities have been assigned
+    <a href="https://www.samba.org/samba/security/CVE-2025-10230.html">CVE-2025-10230</a> and
+    <a href="https://www.samba.org/samba/security/CVE-2025-9640.html">CVE-2025-9640</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.23.3 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
     <a id="sa-12.4-031"/>
     <h4>12.4 031 Dovecot      Date: 2025-11-07  Severity: High</h4>
     <p>In Dovecot-2.4.2, a security vulnerability was fixed that could allow

@@ -343,6 +343,24 @@
 
 <!-- end of Ruby -->
 
+    <h3>Samba</h3>
+
+    <a id="sa-12.4-032"/>
+    <h4>12.4 032 Samba        Date: 2025-11-07  Severity: Critical</h4>
+    <p>In Samba-4.23.3, two security vulnerabilities were fixed that could
+    allow for uninitialized memory disclosure and for command injection in
+    some configurations. Note that the default BLFS configuration is <em>NOT</em>
+    affected, but some obscure configurations may be. If your configuration
+    includes a domain controller with the WINS server enabled <em>and</em> the
+    "wins hook" option set, you need to update your server immediately. If your
+    configuration has the streams_xattr VFS object enabled in it's configuration,
+    you also need to update your server immediately. If you are not using either
+    of these configurations, there is no need to update. Otherwise, update to
+    Samba-4.23.3.
+    <a href="consolidated.html#sa-12.4-032">12.4-032</a></p>
+
+<!-- end of Samba -->
+
     <h3>Seamonkey</h3>
 
     <a id="sa-12.4-030"/>
