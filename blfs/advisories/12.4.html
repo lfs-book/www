@@ -114,6 +114,24 @@
 
 <!-- end of cURL -->
 
+    <h3>Dovecot</h3>
+
+    <a id="sa-12.4-031"/>
+    <h4>12.4 031 Dovecot      Date: 2025-11-07  Severity: High</h4>
+    <p>In Dovecot-2.4.2, a security vulnerability was fixed that could allow
+    for users to access other users' mail in certain situations. This occurs
+    because of a problem with authentication caching, where the first lookup
+    would be cached for all lookups across the server. This is because the
+    cache key was "%u", which no longer expands to the same as "${user}".
+    This does not affect the standard BLFS configuration as authentication
+    caching is disabled, but if you run a server which has auth cache
+    enabled, you should update your server to this version of Dovecot
+    immediately. Alternatively, you can disable authentication caching. If you
+    use a server with an affected configuration, update to Dovecot-2.4.2.
+    <a href="consolidated.html#sa-12.4-031">12.4-031</a></p>
+
+<!-- end of Dovecot -->
+
     <h3>Exiv2</h3>
 
     <a id="sa-12.4-010"/>

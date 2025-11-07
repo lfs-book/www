@@ -64,8 +64,26 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-031"/>
+    <h4>12.4 031 Dovecot      Date: 2025-11-07  Severity: High</h4>
+    <p>In Dovecot-2.4.2, a security vulnerability was fixed that could allow
+    for users to access other users' mail in certain situations. This occurs
+    because of a problem with authentication caching, where the first lookup
+    would be cached for all lookups across the server. This is because the
+    cache key was "%u", which no longer expands to the same as "${user}".
+    This does not affect the standard BLFS configuration as authentication
+    caching is disabled, but if you run a server which has auth cache
+    enabled, you should update your server to this version of Dovecot
+    immediately. Alternatively, you can disable authentication caching.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30189">CVE-2025-30189</a>.</p>
+    <p>To fix this vulnerability, update to Dovecot-2.4.2 or later using the
+    instructions from
+    <a href="../view/svn/server/dovecot.html">Dovecot (sysv)</a> or
+    <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
+
     <a id="sa-12.4-030"/>
-    <h4>12.4 030 Seamonkey     Updated: 2025-11-07  Severity: Critical</h4>
+    <h4>12.4 030 Seamonkey    Updated: 2025-11-07  Severity: Critical</h4>
     <p>In Seamonkey-2.53.22, 18 security vulnerabilities were fixed that
     could allow for incorrect error handling of script execution, local code
     execution, double-free and use-after-free operations leading to memory
