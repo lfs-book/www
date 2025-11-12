@@ -64,6 +64,38 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-034"/>
+    <h4>12.4 034 libsoup      Date: 2025-11-12  Severity: High</h4>
+    <p>There have been several security vulnerabilities found in libsoup-3.6.5.
+    No new release has been made upstream, but the BLFS team has developed a
+    patch to fix the vulnerabilities for which there are patches available.
+    These vulnerabilities can allow for a remotely exploitable denial of service
+    (excessive memory consumption and crashes), for cookie expiration logic
+    to be bypassed (leading to unintended or persistent cookie behavior), for
+    information disclosure in some circumstances, and for arbitrary code
+    execution. The vulnerabilities occur in a variety of different functions
+    and features of libsoup, including the multipart support, the HTTP/2
+    server, WebSockets support, and more. All users who have libsoup3 installed
+    are recommended to rebuild libsoup with the patch as soon as possible.
+    In addition to the security vulnerabilities, a fix for a potential deadlock
+    when using gstreamer has been resolved as well.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12105">CVE-2025-12105</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4948">CVE-2025-4948</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4945">CVE-2025-4945</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4969">CVE-2025-4969</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4476">CVE-2025-4476</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32914">CVE-2025-32914</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32908">CVE-2025-32908</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32907">CVE-2025-32907</a>.</p>
+    <p>To fix these vulnerabilities, rebuild libsoup with the patch using the
+    instructions from
+    <a href="../view/svn/basicnet/libsoup3.html">libsoup (sysv)</a> or
+    <a href="../view/systemd/basicnet/libsoup3.html">libsoup (systemd)</a>.</p>
+    <p>Note that an incoming update to Epiphany will include some support for
+    mitigating one of the unresolved vulnerabilities. Users should update to
+    Epiphany-49.0 or later once it is available in BLFS.</p>
+
     <a id="sa-12.4-033"/>
     <h4>12.4 033 cURL         Date: 2025-11-12  Severity: Medium</h4>
     <p>In cURL-8.17.0, a security vulnerability was fixed that could allow for

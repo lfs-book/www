@@ -275,6 +275,24 @@
 
 <!-- end of libarchive -->
 
+    <h3>libsoup</h3>
+
+    <a id="sa-12.4-034"/>
+    <h4>12.4 034 libsoup      Date: 2025-11-12  Severity: High</h4>
+    <p>There have been several security vulnerabilities found in libsoup-3.6.5.
+    No new release has been made upstream, but the BLFS team has developed a
+    patch to fix the vulnerabilities for which there are patches available.
+    These vulnerabilities can allow for a remotely exploitable denial of service
+    (excessive memory consumption and crashes), for cookie expiration logic
+    to be bypassed (leading to unintended or persistent cookie behavior), for
+    information disclosure in some circumstances, and for arbitrary code
+    execution. Rebuild libsoup-3.6.5 with the patch, and also update to
+    Epiphany-49.0 or later when available to mitigate one of the unresolved
+    vulnerabilities.
+    <a href="consolidated.html#sa-12.4-034">12.4-034</a></p>
+
+<!-- end of libsoup -->
+
     <h3>OpenJPEG</h3>
 
     <a id="sa-12.4-009"/>
