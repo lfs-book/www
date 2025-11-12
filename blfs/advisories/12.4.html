@@ -103,6 +103,19 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-12.4-033"/>
+    <h4>12.4 033 cURL         Date: 2025-11-12  Severity: Medium</h4>
+    <p>In cURL-8.17.0, a security vulnerability was fixed that could allow for
+    a path traversal vulnerability when using the 'wcurl' utility with a URL
+    containing percent-encoded slashes (/ or \). Using percent encoded slashes
+    can trick wcurl into saving the output file outside of the current
+    directory, potentially allowing for attackers to place files in a different
+    place on a user's system without their knowledge. However, this only affects
+    users who are using the 'wcurl' utility - users who are just using libcurl
+    as a build dependency or the 'curl' utility are not impacted. If you are
+    using the 'wcurl' utility, update to cURL-8.17.0.
+    <a href="consolidated.html#sa-12.4-033">12.4-033</a></p>
+
     <a id="sa-12.4-008"/>
     <h4>12.4 008 cURL         Updated: 2025-11-04  Severity: Low</h4>
     <p>In cURL-8.16.0, two security vulnerabilities were fixed that could allow

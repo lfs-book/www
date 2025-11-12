@@ -64,6 +64,25 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-033"/>
+    <h4>12.4 033 cURL         Date: 2025-11-12  Severity: Medium</h4>
+    <p>In cURL-8.17.0, a security vulnerability was fixed that could allow for
+    a path traversal vulnerability when using the 'wcurl' utility with a URL
+    containing percent-encoded slashes (/ or \). Using percent encoded slashes
+    can trick wcurl into saving the output file outside of the current
+    directory, potentially allowing for attackers to place files in a different
+    place on a user's system without their knowledge. However, this only affects
+    users who are using the 'wcurl' utility - users who are just using libcurl
+    as a build dependency or the 'curl' utility are not impacted. If you are
+    unable to update cURL, a temporary workaround is to pass the
+    '--no-decode-filename' option  to the 'wcurl' command any time it is run.
+    This vulnerability has been assigned
+    <a href="https://curl.se/docs/CVE-2025-11563.html">CVE-2025-11563</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.17.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-12.4-032"/>
     <h4>12.4 032 Samba        Date: 2025-11-07  Severity: Critical</h4>
     <p>In Samba-4.23.3, two security vulnerabilities were fixed that could
