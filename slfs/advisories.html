@@ -11,6 +11,25 @@
     book, with newest items first.</p>
 
     <h2>12.4 to 12.5</h2>
+    <h3>Broken changes</h3>
+    <p>Packages removed from SLFS that are in BLFS may have gotten security
+    updates. Read <a href="/blfs/advisories/12.4.html">BLFS 12.4 Security
+    Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
+    Consolidated Security Advisories</a> for such packages.</p>
+
+    <a id="slfs-brk-12.4-001"/>
+    <h4>slfs-brk-12.4-001: SDL3 (Date: November 18th, 2025)</h4>
+    <p>SLFS used to provide instructions for installing SDL3 and sdl2-compat.
+       This was done as a reference implementation of what it may look like
+       when it'd inevitably land in BLFS. Eventually, other packages like
+       the Dolphin emulator required SDL3, so it became a necessary part of
+       SLFS. Now, BLFS has SDL3 and instructions for sdl2-compat. SLFS has thus
+       removed the instructions for installing SDL3 and sdl2-compat. GLFS has
+       followed suit with BLFS. Please go to BLFS or GLFS for updates to SDL3
+       and sdl2-compat.</p>
+
+    <br/>
+
     <h3>Security Advisories</h3>
 
     <a id="slfs-sa-12.4-001"/>
