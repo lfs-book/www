@@ -64,6 +64,46 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-035"/>
+    <h4>12.4 035 Qt6          Date: 2025-11-22  Severity: Critical</h4>
+    <p>Twenty-three security vulnerabilities were fixed in Qt6-6.10.1 and
+    QtWebEngine-6.10.1 that could allow for buffer overflows for both the stack
+    and heap, heap corruption, object corruption, out-of-bounds memory read
+    access, remote privilege escalation, remote read and write files on the
+    filesystem, remote denial of service, remote code execution, domain
+    spoofing, use-after-free operations, information leakage, and sandbox
+    escapes. One of these is actively exploited. Most of the vulnerabilities
+    affect QtWebEngine, but there are some components in Qt6 that are affected
+    by some of the vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6021">CVE-2025-6021</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6965">CVE-2025-6965</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10728">CVE-2025-10728</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10729">CVE-2025-10729</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11206">CVE-2025-11206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11207">CVE-2025-11207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11216">CVE-2025-11216</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11219">CVE-2025-11219</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11458">CVE-2025-11458</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11460">CVE-2025-11460</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11756">CVE-2025-11756</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12036">CVE-2025-12036</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12385">CVE-2025-12385</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12429">CVE-2025-12429</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12432">CVE-2025-12432</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12433">CVE-2025-12433</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12438">CVE-2025-12438</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12441">CVE-2025-12441</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12443">CVE-2025-12443</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12726">CVE-2025-12726</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13042">CVE-2025-13042</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13223">CVE-2025-13223</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24928">CVE-2025-24928</a>.</p>
+    <p>Users are advised to fix these vulnerabilities <em>immediately</em> by
+    updating to Qt6-6.10.1 and QtWebEngine-6.10.1 or later, using the
+    instructions from <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.4-034"/>
     <h4>12.4 034 libsoup      Date: 2025-11-12  Severity: High</h4>
     <p>There have been several security vulnerabilities found in libsoup-3.6.5.
