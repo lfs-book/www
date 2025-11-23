@@ -64,6 +64,19 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-039"/>
+    <h4>12.4 039 rsync        Date: 2025-11-22  Severity: Medium</h4>
+    <p>In rsync-3.4.1, a security vulnerability was fixed that could allow
+    for a out-of-bounds heap buffer read through a negative array index.
+    This can happen by a client acting as the reciever of an rsync file
+    transfer who has read access to the remote rsync module.
+    This vulnerability has been assigned as
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10158">CVE-2025-10158</a>.</p>
+    <p>To fix this vulnerability, update to rsync-3.4.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
+    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+
     <a id="sa-12.4-038"/>
     <h4>12.4 038 GnuTLS        Date: 2025-11-22  Severity: Low</h4>
     <p>In GnuTLS-3.8.11, a security vulnerability was fixed that could allow
