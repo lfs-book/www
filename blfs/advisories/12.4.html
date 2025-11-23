@@ -81,11 +81,21 @@
     output_buffer_limit argument into the Decompressor::process method. Note
     that this is rated as Low because there is no CVE assigned and this change
     only affects the Python bindings to brotli, which are not commonly used.
-    If you are using the Python bindings to brotli, update to brotli-1.2.0.</p>
+    If you are using the Python bindings to brotli, update to brotli-1.2.0.
+    <a href="consolidated.html#sa-12.4-027">12.4-027</a></p>
 
 <!-- end of brotli -->
 
     <h3>CUPS</h3>
+
+    <a id="sa-12.4-041"/>
+    <h4>12.4 041 cups-filters and libcupsfilters  Date: 2025-11-22  Severity: Medium</h4>
+    <p>A couple of patches for cups-filters-2.0.1 and libcupsfilters-2.1.1 fixes
+    three security vulnerabilities that could allow for heap buffer overflows
+    and out-of-bounds read access. Rebuild cups-filters-2.0.1 and
+    libcupsfilters-2.1.1 with the security patches listed on each page
+    as described in the consolidated advisory.
+    <a href="consolidated.html#sa-12.4-041">12.4-041</a></p>
 
     <a id="sa-12.4-006"/>
     <h4>12.4 006 CUPS         Date: 2025-09-30  Severity: High</h4>
