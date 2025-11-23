@@ -64,6 +64,21 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-037"/>
+    <h4>12.4 037 libarchive    Date: 2025-11-22  Severity: High</h4>
+    <p>In libarchive-3.8.3, three security vulnerabilities were fixed that
+    could allow for temporary file creation in an improper directory and buffer
+    overruns.
+    These vulnerabilities have not been assigned anywhere, but have Github
+    pull requests associated with them:
+    <a href="https://github.com/libarchive/libarchive/pull/2753">PR #2753</a>,
+    <a href="https://github.com/libarchive/libarchive/pull/2768">PR #2768</a>, and
+    <a href="https://github.com/libarchive/libarchive/pull/2769">PR #2769</a>.</p>
+    <p>To fix these vulnerabilities, update to libarchive-3.8.3 or later using
+    the instructions from
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
     <a id="sa-12.4-036"/>
     <h4>12.4 036 Wireshark    Date: 2025-11-22  Severity: Low</h4>
     <p>In Wireshark-4.6.1, two security vulnerabilities were fixed that could
@@ -13637,7 +13652,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     has misconfigured Dovecot with multiple password databases. The BLFS
     Editors have developed a patch to remediate this vulnerability.
     This vulnerability has been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30550 (not yet available)">CVE-2022-30550</a>.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30550">CVE-2022-30550</a>.
     More details can be found at
     <a href="https://seclists.org/oss-sec/2022/q3/33">oss-security posting</a>.</p>
     <p>To fix this vulnerability, rebuild Dovecot-2.3.19.1 with the patch using
