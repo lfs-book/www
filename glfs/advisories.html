@@ -24,6 +24,29 @@
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
     Consolidated Security Advisories</a> for such packages.</p>
 
+    <a id="glfs-brk-12.4-004"/>
+    <h4>glfs-brk-12.4-004: VDPAU (Date: November 24th, 2025)</h4>
+    <p>VDPAU support has been cut in Mesa-25.3.x, removing most of the VDPAU
+       drivers out there. The main reason for this is that the benefits of
+       VDPAU are minor and is restricted to X11 only. It has been superceded by
+       VA-API which is window-system independent and offers more benefits. It
+       is a logical step to cut VDPAU, given how most of the drivers are now
+       gone. However, NVIDIA technically has a VDPAU driver, but no VA-API
+       driver in the NVIDIA runfile. There is a VA-API NVIDIA driver in a
+       separate package (NVIDIA-VA-API-Driver) that provides decoding support
+       for multiple codecs and has been added to GLFS. It uses NVDEC as the
+       backend without requiring the CUDA NVCC compiler, leading to a simple
+       installation. Because of this, and how most GPUs have a VA-API driver,
+       VDPAU support has been cut in general from GLFS. This means the libvdpau
+       and libvdpau-va-gl packages are no longer offered in the book and VA-API
+       is preferred. For NVIDIA, CUDA is still offered in SLFS for packages
+       that want explicit control, like FFmpeg and OBS-Studio, and will not be
+       axed anytime soon. Part of this overall change is that nv-codec-headers
+       (ffnvcodec) has been moved from SLFS into GLFS to satisfy a dependency
+       for NVIDIA-VA-API-Driver. In any case, it was decided that users will
+       want to install nv-codec-headers (ffnvcodec) anyway for a plethora of
+       reasons.</p>
+
     <a id="glfs-brk-12.4-003"/>
     <h4>glfs-brk-12.4-003: GBM (Date: September 11th, 2025)</h4>
     <p>GLFS provides instructions to install libgbm, a frontend that loads a
