@@ -64,6 +64,224 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-047"/>
+    <h4>12.4 047 libpng  Date: 2025-12-04  Severity: High</h4>
+    <p>In libpng-1.6.52, a security vulnerability was fixed that could
+    allow for heap buffer over-reads. This vulnerability, unlike previous
+    libpng vulnerabilities, doesn't need a malformed PNG file to be triggered;
+    instead, a valid image can trigger the issue.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66293">CVE-2025-66293</a>.</p>
+    <p>To fix this vulnerability, update to libpng-1.6.52 using the
+    instructions from <a href="../view/svn/general/libpng.html">libpng
+    (sysv)</a> or <a href="../view/systemd/general/libpng.html">libpng
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-046"/>
+    <h4>12.4 046 SpiderMonkey  Date: 2025-12-02  Severity: High</h4>
+    <p>In SpiderMonkey from Firefox-140.5.0esr, a security vulnerability was
+    fixed that could allow for incorrect boundary conditions in the
+    JavaScript WebAssembly component.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13016">CVE-2025-13016</a>.</p>
+    <p>To fix this vulnerability, update to SpiderMonkey from
+    Firefox-140.5.0esr using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
+    <a id="sa-12.4-045"/>
+    <h4>12.4 045 Firefox  Date: 2025-12-02  Severity: High</h4>
+    <p>In Firefox-140.5.0esr, nine security vulnerabilities were fixed that
+    could allow for race conditions, incorrect boundary conditions in the
+    JavaScript WebAssembly component, same-origin policy bypassing, mitigation
+    bypassing, use-after-free operations, and spoofing.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13012">CVE-2025-13012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13013">CVE-2025-13013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13014">CVE-2025-13014</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13015">CVE-2025-13015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13016">CVE-2025-13016</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13017">CVE-2025-13017</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13018">CVE-2025-13018</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13019">CVE-2025-13019</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13020">CVE-2025-13020</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-140.5.0esr using the
+    instructions from <a href="../view/svn/xsoft/firefox.html">Firefox
+    (sysv)</a> or <a href="../view/systemd/xsoft/firefox.html">Firefox
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-044"/>
+    <h4>12.4 044 Thunderbird  Date: 2025-12-02  Severity: High</h4>
+    <p>In Thunderbird-140.5.0esr, nine security vulnerabilities were fixed that
+    could allow for race conditions, incorrect boundary conditions in the
+    JavaScript WebAssembly component, same-origin policy bypassing, mitigation
+    bypassing, use-after-free operations, and spoofing.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13012">CVE-2025-13012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13013">CVE-2025-13013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13014">CVE-2025-13014</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13015">CVE-2025-13015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13016">CVE-2025-13016</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13017">CVE-2025-13017</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13018">CVE-2025-13018</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13019">CVE-2025-13019</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13020">CVE-2025-13020</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-140.5.0esr using the
+    instructions from <a href="../view/svn/xsoft/thunderbird.html">Thunderbird
+    (sysv)</a> or <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-043"/>
+    <h4>12.4 043 libpng  Date: 2025-12-02  Severity: High</h4>
+    <p>In libpng-1.6.51, four security vulnerabilities were fixed that could
+    allow for heap buffer over-reads, overflows, and out-of-bounds reads.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64505">CVE-2025-64505</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64506">CVE-2025-64506</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64720">CVE-2025-64720</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-65018">CVE-2025-65018</a>.</p>
+    <p>To fix these vulnerabilities, update to libpng-1.6.51 using the
+    instructions from <a href="../view/svn/general/libpng.html">libpng
+    (sysv)</a> or <a href="../view/systemd/general/libpng.html">libpng
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-042"/>
+    <h4>12.4 042 CUPS  Date: 2025-12-02  Severity: Medium</h4>
+    <p>In CUPS-2.4.15, two security vulnerabilities were fixed that could allow
+    for local denial of services and an unresponsive cupsd process.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-58436">CVE-2025-58436</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61915">CVE-2025-61915</a>.</p>
+    <p>To fix these vulnerabilities, update to CUPS-2.4.15 using the instructions
+    from <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+
+    <a id="sa-12.4-041"/>
+    <h4>12.4 041 cups-filters and libcupsfilters  Date: 2025-11-22  Severity: Medium</h4>
+    <p>A couple of patches for cups-filters-2.0.1 and libcupsfilters-2.1.1 fixes
+    three security vulnerabilities that could allow for heap buffer overflows
+    and out-of-bounds read access.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-57812">CVE-2025-57812</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64503">CVE-2025-64503</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64524">CVE-2025-64524</a>.</p>
+    <p>To fix these vulnerabilities, rebuild cups-filters-2.0.1 and
+    libcupsfilters-2.1.1 with the security patches listed on each page
+    using the instructions from
+    <a href="../view/svn/pst/cups-filters.html">cups-filters (sysv)</a> or
+    <a href="../view/systemd/pst/cups-filters.html">cups-filters (systemd)</a> and
+    <a href="../view/svn/pst/libcupsfilters.html">libcupsfilters (sysv)</a> or
+    <a href="../view/systemd/pst/libcupsfilters.html">libcupsfilters (systemd)</a>.</p>
+
+    <a id="sa-12.4-040"/>
+    <h4>12.4 040 PostgreSQL   Date: 2025-11-22  Severity: Medium</h4>
+    <p>In PostgreSQL-18.1, two security vulnerabilities were fixed that could
+    allow for a check for the schema CREATE privilege being skipped and
+    undersized allocations via integer wraparounds.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12817">CVE-2025-12817</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12818">CVE-2025-12818</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-18.1 using the
+    instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.
+    If you are on PostgreSQL-17 and don't want to update your database to 18.x,
+    update to PostgreSQL-17.7 instead using the instructions from
+    <a href="../view/12.4/server/postgresql.html">PostgreSQL (12.4 sysv)</a> or
+    <a href="../view/12.4-systemd/server/postgresql.html">PostgreSQL (12.4 systemd)</a>.</p>
+
+    <a id="sa-12.4-039"/>
+    <h4>12.4 039 rsync        Date: 2025-11-22  Severity: Medium</h4>
+    <p>A patch for rsync-3.4.1 fixes a security vulnerability that could allow
+    for a out-of-bounds heap buffer read through a negative array index.
+    This can happen by a client acting as the reciever of an rsync file
+    transfer who has read access to the remote rsync module.
+    This vulnerability has been assigned as
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10158">CVE-2025-10158</a>.</p>
+    <p>To fix this vulnerability, rebuild rsync-3.4.1 with the security patch
+    using the instructions from
+    <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
+    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+
+    <a id="sa-12.4-038"/>
+    <h4>12.4 038 GnuTLS        Date: 2025-11-22  Severity: Low</h4>
+    <p>In GnuTLS-3.8.11, a security vulnerability was fixed that could allow
+    for a stack overwrite. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9820">CVE-2025-9820</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.8.11 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
+    <a id="sa-12.4-037"/>
+    <h4>12.4 037 libarchive    Date: 2025-11-22  Severity: High</h4>
+    <p>In libarchive-3.8.3, three security vulnerabilities were fixed that
+    could allow for temporary file creation in an improper directory and buffer
+    overruns.
+    These vulnerabilities have not been assigned anywhere, but have Github
+    pull requests associated with them:
+    <a href="https://github.com/libarchive/libarchive/pull/2753">PR #2753</a>,
+    <a href="https://github.com/libarchive/libarchive/pull/2768">PR #2768</a>, and
+    <a href="https://github.com/libarchive/libarchive/pull/2769">PR #2769</a>.</p>
+    <p>To fix these vulnerabilities, update to libarchive-3.8.3 or later using
+    the instructions from
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
+    <a id="sa-12.4-036"/>
+    <h4>12.4 036 Wireshark    Date: 2025-11-22  Severity: Low</h4>
+    <p>In Wireshark-4.6.1, two security vulnerabilities were fixed that could
+    allow for crashes in the BPv7 and Kafka dissectors.
+    These vulnerabilities have been assigned
+    <a href="https://www.wireshark.org/security/wnpa-sec-2025-05.html">wnpa-sec-2025-05</a> and
+    <a href="https://www.wireshark.org/security/wnpa-sec-2025-06.html">wnpa-sec-2025-06</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.6.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-12.4-035"/>
+    <h4>12.4 035 Qt6          Date: 2025-11-22  Severity: Critical</h4>
+    <p>In Qt6-6.10.1 and QtWebEngine-6.10.1, twenty-three security
+    vulnerabilities were fixed in that could allow for buffer overflows for
+    both the stack and heap, heap corruption, object corruption, out-of-bounds
+    memory read access, remote privilege escalation, remote read and write
+    files on the filesystem, remote denial of service, remote code execution,
+    domain spoofing, use-after-free operations, information leakage, and
+    sandbox escapes. One of these is actively exploited. Most of the
+    vulnerabilities affect QtWebEngine, but there are some components in Qt6
+    that are affected by some of the vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6021">CVE-2025-6021</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6965">CVE-2025-6965</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10728">CVE-2025-10728</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10729">CVE-2025-10729</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11206">CVE-2025-11206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11207">CVE-2025-11207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11216">CVE-2025-11216</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11219">CVE-2025-11219</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11458">CVE-2025-11458</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11460">CVE-2025-11460</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11756">CVE-2025-11756</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12036">CVE-2025-12036</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12385">CVE-2025-12385</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12429">CVE-2025-12429</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12432">CVE-2025-12432</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12433">CVE-2025-12433</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12438">CVE-2025-12438</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12441">CVE-2025-12441</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12443">CVE-2025-12443</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12726">CVE-2025-12726</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13042">CVE-2025-13042</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13223">CVE-2025-13223</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24928">CVE-2025-24928</a>.</p>
+    <p>Users are advised to fix these vulnerabilities <em>immediately</em> by
+    updating to Qt6-6.10.1 and QtWebEngine-6.10.1 or later, using the
+    instructions from <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a> and
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.4-034"/>
     <h4>12.4 034 libsoup      Date: 2025-11-12  Severity: High</h4>
     <p>There have been several security vulnerabilities found in libsoup-3.6.5.
@@ -426,9 +644,10 @@
     from
     <a href="../view/svn/xsoft/inkscape.html">Inkscape (sysv)</a> or
     <a href="../view/systemd/xsoft/inkscape.html">Inkscape (systemd)</a>.
-    There is also a known build problem with Libreoffice, but that has not been
-    addressed yet due to other priorities regarding security updates. The advisory
-    will be updated once a fix is present in the book.</p>
+    For LibreOffice, you must use version 25.8.3.2 to prevent a build failure.
+    Follow the instructions from
+    <a href="../view/svn/xsoft/libreoffice.html">LibreOffice (sysv)</a> or
+    <a href="../view/systemd/xsoft/libreoffice.html">LibreOffice (systemd)</a>.</p>
 
     <a id="sa-12.4-019"/>
     <h4>12.4 019 Ruby          Date: 2025-10-10 Severity: High</h4>
@@ -13582,7 +13801,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     has misconfigured Dovecot with multiple password databases. The BLFS
     Editors have developed a patch to remediate this vulnerability.
     This vulnerability has been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30550 (not yet available)">CVE-2022-30550</a>.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30550">CVE-2022-30550</a>.
     More details can be found at
     <a href="https://seclists.org/oss-sec/2022/q3/33">oss-security posting</a>.</p>
     <p>To fix this vulnerability, rebuild Dovecot-2.3.19.1 with the patch using
