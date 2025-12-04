@@ -64,6 +64,22 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-048"/>
+    <h4>12.4 048 Wireshark    Date: 2025-12-04  Severity: Medium</h4>
+    <p>In Wireshark-4.6.2, two security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when processing crafted
+    packets on a network that uses the HTTP/3 or MEGACO protocols. Note that
+    this could be exploitable by a user opening a crafted packet capture file
+    as well. The only known impact though is an application crash, so if you
+    are not processing HTTP/3 or MEGACO protocols, there is no need to update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13945">CVE-2025-13945</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13946">CVE-2025-13946</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.6.2 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-12.4-047"/>
     <h4>12.4 047 libpng  Date: 2025-12-04  Severity: High</h4>
     <p>In libpng-1.6.52, a security vulnerability was fixed that could
