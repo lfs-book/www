@@ -64,8 +64,38 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-051"/>
+    <h4>12.4 051 libxslt      Date: 2025-12-05  Severity: High</h4>
+    <p>In libxslt-1.1.45, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crashes), memory corruption,
+    or unexpected behavior. All three vulnerabilities can allow for a denial
+    of service, but two of them also allow for type confusion. These two can
+    potentially be exploited through web browsers which process XSLT code inside
+    of stylesheets, and can possibly allow for unexpected behavior if an attacker
+    can corrupt memory. This could potentially allow for remote code execution.
+    It is thus recommended that all users with libxslt installed update to this
+    version as soon as possible. However, special care is required if updating
+    this package on a system with libxml2-2.14.x.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9714">CVE-2025-9714</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-7424">CVE-2025-7424</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11731">CVE-2025-11731</a>.</p>
+    <p>To fix these vulnerabilities, update to libxslt-1.1.45 or later using
+    the instructions from
+    <a href="../view/svn/general/libxslt.html">libxslt (sysv)</a> or
+    <a href="../view/systemd/general/libxslt.html">libxslt (systemd)</a>.</p>
+    <p>On a BLFS 12.4 system which has libxml2-2.14.x installed, this package
+    will fail to configure. The minimum version of libxml2 was increased to
+    2.15.1. However, this is only needed if you are planning on running the
+    test suite. To work around this, use the following command prior to
+    running configure:
+    <code>sed -i '/LIBXML_REQUIRED_VERSION=/s/2.15.1/2.14.0/' configure</code>.
+    This has been tested on a BLFS 12.4 system. Alternatively, users can
+    update to libxml2-2.15.x, but that may require updates to some packages.
+    The safer option is to just use this sed command.</p>
+
     <a id="sa-12.4-050"/>
-    <h4>12.4 050 Unbound     Date: 2025-12-04  Severity: Medium</h4>
+    <h4>12.4 050 Unbound      Date: 2025-12-04  Severity: Medium</h4>
     <p>In Unbound-1.24.2, a security vulnerability thought to be fixed by
     Unbound-1.24.1, but wasn't, was actually fixed that could allow
     for cache poisoning attacks.
