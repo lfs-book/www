@@ -89,6 +89,21 @@
     Consolidated Security Advisories</a> for more packages that aren't covered
     here.</p>
 
+    <a id="glfs-sa-12.4-003"/>
+    <h4>glfs-sa-12.4-003: FFmpeg - Rating: High (Date: December 4th, 2025)</h4>
+    <p>In FFmpeg-8.0.1, 1 security vulnerability was fixed that could
+    allow for use-after-free write operations. This
+    issues will not be fixed in FFmpeg-7.1.x.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59734">CVE-2025-59734</a>.
+    The issue can be triggered by multiple games, including LucasArts games.
+    Only an upgrade to FFmpeg-8.0.1 will fix the issue, but it breaks ABI and
+    API.</p>
+    <p>To upgrade to FFmpeg-8.0.1, follow the <a
+    href="https://glfs-book.github.io/glfs/wine/ffmpeg.html">FFmpeg
+    installation page</a>. SysVinit and Systemd instructions don't differ for
+    that page.</p>
+
     <a id="glfs-sa-12.4-002"/>
     <h4>glfs-sa-12.4-002: FFmpeg - Rating: High (Date: December 4th, 2025)</h4>
     <p>In FFmpeg-7.1.3, 2 security vulnerabilities were fixed that could
