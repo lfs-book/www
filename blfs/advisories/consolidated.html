@@ -64,6 +64,31 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-053"/>
+    <h4>12.4 053 urllib3      Date: 2025-12-05  Severity: High</h4>
+    <p>In urllib3-2.6.0, two security vulnerabilities were fixed that could
+    allow for a trivial remotely-exploitable denial of service. The first
+    vulnerability occurs because there are no limits on the amount of
+    links in a decompression chain, which allowed malicious servers to
+    insert an unlimited number of compression steps (causing extremely high
+    CPU usage and a massive memory allocation for the uncompressed data).
+    The other vulnerability occurs because the streaming API improperly
+    handled highly compressed data in such a way that allowed for urllib3
+    to fully decode a small amount of highly compressed data in a single
+    operation, leading to massive memory consumption and high CPU usage.
+    Upstream also notes that users who have Brotli installed should make
+    sure that they have updated to 1.2.0.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66418">CVE-2025-66418</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66471">CVE-2025-66471</a>.</p>
+    <p>To fix this vulnerability, update to urllib3-2.6.0 or later using the
+    instructions from
+    <a href="../view/svn/general/python-dependencies.html#urllib3">urllib3 (sysv)</a> or
+    <a href="../view/systemd/general/python-dependencies.html#urllib3.html">urllib3 (systemd)</a>.</p>
+    <p>In addition, users should make sure that Brotli is updated to 1.2.0 or
+    later using the instructions from
+    <a href="consolidated.html#sa-12.4-027">12-4.027</a>.</p>
+
     <a id="sa-12.4-052"/>
     <h4>12.4 052 xkbcomp      Date: 2025-12-05  Severity: Medium</h4>
     <p>In xkbcomp-1.5.0, four security vulnerabilities were fixed that could
