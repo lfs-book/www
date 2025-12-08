@@ -101,6 +101,20 @@
 
 <!-- end of brotli -->
 
+    <h3>c-ares</h3>
+
+    <a id="sa-12.4-055"/>
+    <h4>12.4 055 c-ares       Date: 2025-12-08  Severity: Medium</h4>
+    <p>In c-ares-1.34.6, a security vulnerability was fixed that could allow
+    for a remotely exploitable crash due to a use-after-free problem when
+    reading responses from a DNS server. The process_answer() function could
+    terminate a query after something such as maximum attempts, but it would
+    continue to process additional answers after closing the connection in
+    some cases. Update to c-ares-1.34.6.
+    <a href="consolidated.html#sa-12.4-055">12.4-055</a></p>
+
+<!-- end of c-ares -->
+
     <h3>CUPS</h3>
 
     <a id="sa-12.4-042"/>
