@@ -29,6 +29,10 @@
        <li>Due to problems with the systemd units for Kea, attempting to start
        the daemons will result in errors. Please install the systemd units for
        Kea from the blfs-systemd-units-20251204 tarball instead.</li>
+       <li>When configuring libsigc++ and libsigc++-3, the support for Boost
+       is disabled even though users will have Boost installed. To fix this,
+       run <code>sed -i "s/'system',//" meson.build</code> prior to changing
+       into the 'bld' directory.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
