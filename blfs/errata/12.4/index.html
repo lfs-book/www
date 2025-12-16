@@ -26,6 +26,10 @@
        <li>Due to a breaking API change in graphviz-13, valadoc may crash
        in some circumstances. The patch vala-0.56.18-graphviz_13_fix-1.patch
        fixes the issue.</li>
+       <li>When configuring libsigc++ and libsigc++-3, the support for Boost
+       is disabled even though users will have Boost installed. To fix this,
+       run <code>sed -i "s/'system',//" meson.build</code> prior to changing
+       into the 'bld' directory.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>

@@ -52,7 +52,87 @@
 
 <!-- end of PackageName -->
 
+    <h3>Apache HTTPD</h3>
+
+    <a id="sa-12.4.049"/>
+    <h4>12.4 049 Apache HTTPD Date: 2025-12-04  Severity: Medium</h4>
+    <p>In httpd-2.4.66, four security vulnerabilities were fixed that could
+    allow for unintended retry intervals when renewing ACME certificates,
+    for Server Side Includes to unexpectedly pass a shell escaped query
+    string to a command directive, for environment variables to be overridden
+    when using CGI programs, and for users to cause CGI scripts to run under
+    an unexpected username. Update to httpd-2.4.66 or later if you use the
+    mod_cgi, mod_cgid, mod_md, or Server Side Includes functionality.
+    <a href="consolidated.html#sa-12.4-049">12.4-049</a></p>
+
+<!-- end of Apache HTTPD -->
+
+    <h3>BIND</h3>
+
+    <a id="sa-12.4-025"/>
+    <h4>12.4 025 BIND        Date: 2025-11-04  Severity: Critical</h4>
+    <p>In BIND-9.20.15, three security vulnerabilities were fixed that could
+    allow for resource exhaustion as well as cache poisoning attacks. The
+    resource exhaustion vulnerability occurs when querying for records which
+    have a specially crafted zone that contains malformed DNSKEY records. The
+    first cache poisoning vulnerability occurs because BIND is too lenient when
+    accepting records from answers, which allows attackers to trivially inject
+    forged data into the cache. The other cache poisoning vulnerability occurs
+    due to a weakness in the PRNG that is used, which allows attackers to predict
+    the source port and query ID that BIND will use. Users who use the BIND server
+    should update to BIND-9.20.15 immediately, but if you are just using the
+    client utilities, there is no reason to upgrade.
+    <a href="consolidated.html#sa-12.4-025">12.4-025</a></p>
+
+<!-- end of BIND -->
+
+    <h3>brotli</h3>
+
+    <a id="sa-12.4-027"/>
+    <h4>12.4 027 brotli      Date: 2025-11-04  Severity: Low</h4>
+    <p>In brotli-1.2.0, some security mitigations were put into place that allow
+    for mitigation of unexpectedly large output. This was done by adding in the
+    Decompressor::can_accept_more_data method and the optional
+    output_buffer_limit argument into the Decompressor::process method. Note
+    that this is rated as Low because there is no CVE assigned and this change
+    only affects the Python bindings to brotli, which are not commonly used.
+    If you are using the Python bindings to brotli, update to brotli-1.2.0.
+    <a href="consolidated.html#sa-12.4-027">12.4-027</a></p>
+
+<!-- end of brotli -->
+
+    <h3>c-ares</h3>
+
+    <a id="sa-12.4-055"/>
+    <h4>12.4 055 c-ares       Date: 2025-12-08  Severity: Medium</h4>
+    <p>In c-ares-1.34.6, a security vulnerability was fixed that could allow
+    for a remotely exploitable crash due to a use-after-free problem when
+    reading responses from a DNS server. The process_answer() function could
+    terminate a query after something such as maximum attempts, but it would
+    continue to process additional answers after closing the connection in
+    some cases. Update to c-ares-1.34.6.
+    <a href="consolidated.html#sa-12.4-055">12.4-055</a></p>
+
+<!-- end of c-ares -->
+
     <h3>CUPS</h3>
+
+    <a id="sa-12.4-042"/>
+    <h4>12.4 042 CUPS  Updated: 2025-12-10  Severity: Medium</h4>
+    <p>In CUPS-2.4.15, two security vulnerabilities were fixed that could allow
+    for local denial of services and an unresponsive cupsd process. However,
+    major regressions were found in this release that result in applications
+    hanging. Update to CUPS-2.4.16 instead.
+    <a href="consolidated.html#sa-12.4-042">12.4-042</a></p>
+
+    <a id="sa-12.4-041"/>
+    <h4>12.4 041 cups-filters and libcupsfilters  Date: 2025-11-22  Severity: Medium</h4>
+    <p>A couple of patches for cups-filters-2.0.1 and libcupsfilters-2.1.1 fixes
+    three security vulnerabilities that could allow for heap buffer overflows
+    and out-of-bounds read access. Rebuild cups-filters-2.0.1 and
+    libcupsfilters-2.1.1 with the security patches listed on each page
+    as described in the consolidated advisory.
+    <a href="consolidated.html#sa-12.4-041">12.4-041</a></p>
 
     <a id="sa-12.4-006"/>
     <h4>12.4 006 CUPS         Date: 2025-09-30  Severity: High</h4>
@@ -70,8 +150,21 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-12.4-033"/>
+    <h4>12.4 033 cURL         Date: 2025-11-12  Severity: Medium</h4>
+    <p>In cURL-8.17.0, a security vulnerability was fixed that could allow for
+    a path traversal vulnerability when using the 'wcurl' utility with a URL
+    containing percent-encoded slashes (/ or \). Using percent encoded slashes
+    can trick wcurl into saving the output file outside of the current
+    directory, potentially allowing for attackers to place files in a different
+    place on a user's system without their knowledge. However, this only affects
+    users who are using the 'wcurl' utility - users who are just using libcurl
+    as a build dependency or the 'curl' utility are not impacted. If you are
+    using the 'wcurl' utility, update to cURL-8.17.0.
+    <a href="consolidated.html#sa-12.4-033">12.4-033</a></p>
+
     <a id="sa-12.4-008"/>
-    <h4>12.4 008 cURL         Date: 2025-09-30  Severity: Low</h4>
+    <h4>12.4 008 cURL         Updated: 2025-11-04  Severity: Low</h4>
     <p>In cURL-8.16.0, two security vulnerabilities were fixed that could allow
     for a predictable mask pattern to occur when using WebSockets (which can
     allow for a malicious server to induce traffic between machines which
@@ -80,6 +173,24 @@
     <a href="consolidated.html#sa-12.4-008">12.4-008</a></p>
 
 <!-- end of cURL -->
+
+    <h3>Dovecot</h3>
+
+    <a id="sa-12.4-031"/>
+    <h4>12.4 031 Dovecot      Date: 2025-11-07  Severity: High</h4>
+    <p>In Dovecot-2.4.2, a security vulnerability was fixed that could allow
+    for users to access other users' mail in certain situations. This occurs
+    because of a problem with authentication caching, where the first lookup
+    would be cached for all lookups across the server. This is because the
+    cache key was "%u", which no longer expands to the same as "${user}".
+    This does not affect the standard BLFS configuration as authentication
+    caching is disabled, but if you run a server which has auth cache
+    enabled, you should update your server to this version of Dovecot
+    immediately. Alternatively, you can disable authentication caching. If you
+    use a server with an affected configuration, update to Dovecot-2.4.2.
+    <a href="consolidated.html#sa-12.4-031">12.4-031</a></p>
+
+<!-- end of Dovecot -->
 
     <h3>Exiv2</h3>
 
@@ -109,6 +220,15 @@
 <!-- end of fetchmail -->
 
     <h3>Firefox</h3>
+
+    <a id="sa-12.4-045"/>
+    <h4>12.4 045 Firefox  Date: 2025-12-02  Severity: High</h4>
+    <p>In Firefox-140.5.0esr, nine security vulnerabilities were fixed that
+    could allow for race conditions, incorrect boundary conditions in the
+    JavaScript WebAssembly component, same-origin policy bypassing, mitigation
+    bypassing, use-after-free operations, and spoofing.
+    Update to Firefox-140.5.0esr.
+    <a href="consolidated.html#12.4-045">12.4-045</a></p>
 
     <a id="sa-12.4-022"/>
     <h4>12.4 022 Firefox  Date: 2025-10-14  Severity: High</h4>
@@ -185,6 +305,28 @@
 
 <!-- end of GIMP -->
 
+    <h3>glib</h3>
+
+    <a id="sa-12.4-056"/>
+    <h4>12.4 056 glib         Date: 2025-12-08  Severity: High</h4>
+    <p>In glib-2.86.3, a security vulnerability was fixed that could allow for
+    remote code execution or a denial of service (application crash) when an
+    application uses the g_escape_uri_string() function to escape a URI string.
+    The problem occurs due to a heap-based buffer overflow. Update to glib-2.86.3.
+    <a href="consolidated.html#sa-12.4-056">12.4-056</a></p>
+
+<!-- end of glib -->
+
+    <h3>GnuTLS</h3>
+
+    <a id="sa-12.4-038"/>
+    <h4>12.4 038 GnuTLS        Date: 2025-11-22  Severity: Low</h4>
+    <p>In GnuTLS-3.8.11, a security vulnerability was fixed that could allow
+    for a stack overwrite. Update to GnuTLS-3.8.11.
+    <a href="consolidated.html#sa-12.4-038">12.4-038</a></p>
+
+<!-- end of GnuTLS -->
+
     <h3>libaom</h3>
 
     <a id="sa-12.4-007"/>
@@ -199,6 +341,13 @@
 
     <h3>libarchive</h3>
 
+    <a id="sa-12.4-037"/>
+    <h4>12.4 037 libarchive    Date: 2025-11-22  Severity: High</h4>
+    <p>In libarchive-3.8.3, three security vulnerabilities were fixed that 
+    could allow for temporary file creation in an improper directory and buffer
+    overruns. Update to libarchive-3.8.3.
+    <a href="consolidated.html#sa-12.4-037">12.4-037</a></p>
+
     <a id="sa-12.4-024"/>
     <h4>12.4 024 libarchive  Date: 2025-10-17  Severity: Medium</h4>
     <p>In libarchive-3.8.2, a security vulnerability was fixed that could allow
@@ -210,6 +359,57 @@
     <a href="consolidated.html#sa-12.4-024">12.4-024</a></p>
 
 <!-- end of libarchive -->
+
+    <h3>libpng</h3>
+
+    <a id="sa-12.4-047"/>
+    <h4>12.4 047 libpng  Date: 2025-12-04  Severity: High</h4>
+    <p>In libpng-1.6.52, a security vulnerability was fixed that could
+    allow for heap buffer over-reads. This vulnerability, unlike previous
+    libpng vulnerabilities, doesn't need a malformed PNG file to be triggered;
+    instead, a valid image can trigger the issue.
+    Update to libpng-1.6.52.
+    <a href="consolidated.html#sa-12.4-047">12.4-047</a></p>
+
+    <a id="sa-12.4-043"/>
+    <h4>12.4 043 libpng  Date: 2025-12-02  Severity: High</h4>
+    <p>In libpng-1.6.51, four security vulnerabilities were fixed that could
+    allow for heap buffer over-reads, overflows, and out-of-bounds reads.
+    Update to libpng-1.6.51.
+    <a href="consolidated.html#sa-12.4-043">12.4-043</a></p>
+
+<!-- end of libpng -->
+
+    <h3>libsoup</h3>
+
+    <a id="sa-12.4-034"/>
+    <h4>12.4 034 libsoup      Updated: 2025-12-05  Severity: High</h4>
+    <p>There have been several security vulnerabilities found in libsoup-3.6.5.
+    No new release has been made upstream, but the BLFS team has developed a
+    patch to fix the vulnerabilities for which there are patches available.
+    These vulnerabilities can allow for a remotely exploitable denial of service
+    (excessive memory consumption and crashes), for cookie expiration logic
+    to be bypassed (leading to unintended or persistent cookie behavior), for
+    information disclosure in some circumstances, and for arbitrary code
+    execution. Rebuild libsoup-3.6.5 with the patch, and also update to
+    Epiphany-49.2 or later.
+    <a href="consolidated.html#sa-12.4-034">12.4-034</a></p>
+
+<!-- end of libsoup -->
+
+    <h3>libxslt</h3>
+
+    <a id="sa-12.4-051"/>
+    <h4>12.4 051 libxslt      Date: 2025-12-05  Severity: High</h4>
+    <p>In libxslt-1.1.45, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crashes), memory corruption,
+    or unexpected behavior. All three vulnerabilities can allow for a denial
+    of service, but two of them also allow for type confusion. Update to
+    libxslt-1.1.45, but read the instructions in the advisory if you are
+    still using libxml2-2.14.x.
+    <a href="consolidated.html#sa-12.4-051">12.4-051</a></p>
+
+<!-- end of libxslt -->
 
     <h3>OpenJPEG</h3>
 
@@ -265,6 +465,62 @@
 
 <!-- end of poppler -->
 
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-12.4-040"/>
+    <h4>12.4 040 PostgreSQL   Date: 2025-11-22  Severity: Medium</h4>
+    <p>In PostgreSQL-18.1, two security vulnerabilities were fixed that could
+    allow for a check for the schema CREATE privilege being skipped and
+    undersized allocations via integer wraparounds.
+    Update to PostgreSQL-18.1. If you are on PostgreSQL-17 and don't want to
+    update your database to 18.x, update to PostgreSQL-17.7 instead as described in
+    the consolidated advisory.
+    <a href="consolidated.html#sa-12.4-040">12.4-040</a></p>
+
+<!-- end of PostgreSQL -->
+
+    <h3>Qt and QtWebEngine</h3>
+
+    <a id="sa-12.4-035"/>
+    <h4>12.4 035 Qt6          Date: 2025-11-22  Severity: Critical</h4>
+    <p>In Qt6-6.10.1 and QtWebEngine-6.10.1, twenty-three security
+    vulnerabilities were fixed in that could allow for buffer overflows for
+    both the stack and heap, heap corruption, object corruption, out-of-bounds
+    memory read access, remote privilege escalation, remote read and write
+    files on the filesystem, remote denial of service, remote code execution,
+    domain spoofing, use-after-free operations, information leakage, and
+    sandbox escapes. One of these is actively exploited. Most of the
+    vulnerabilities affect QtWebEngine, but there are some components in Qt6
+    that are affected by some of the vulnerabilities. Users are advised to
+    update Qt6 and QtWebEngine <em>immediately</em> to 6.10.1.
+    <a href="consolidated.html#sa-12.4-035">12.4-035</a></p>
+
+    <a id="sa-12.4-013"/>
+    <h4>12.4 013 QtWebEngine   Date: 2025-10-02 Severity: Critical</h4>
+    <p>In QtWebEngine-6.9.3, fifteen security vulnerabilities were fixed that
+    could allow for remote code execution, information leakage, and content
+    security policy bypasses. At least three of these vulnerabilities are known
+    to be under active exploitation, and users are advised to update
+    QtWebEngine <em>immediately</em>, even if it is only used as a build
+    dependency. Update to QtWebEngine-6.9.3.
+    <a href="consolidated.html#sa-12.4-013">12.4-013</a></p>
+
+<!-- end of Qt and QtWebEngine -->
+
+    <h3>rsync</h3>
+
+    <a id="sa-12.4-039"/>
+    <h4>12.4 039 rsync        Date: 2025-11-22  Severity: Medium</h4>
+    <p>A patch for rsync-3.4.1 fixes a security vulnerability that could allow
+    for a out-of-bounds heap buffer read through a negative array index.
+    This can happen by a client acting as the reciever of an rsync file
+    transfer who has read access to the remote rsync module.
+    Rebuild rsync-3.4.1 with the security patch as described in the
+    consolidated advisory.
+    <a href="consolidated.html#sa-12.4-039">12.4-039</a>.</p>
+
+<!-- end of rsync -->
+
     <h3>Ruby</h3>
 
     <a id="sa-12.4-019"/>
@@ -278,21 +534,52 @@
 
 <!-- end of Ruby -->
 
-    <h3>QtWebEngine</h3>
+    <h3>Samba</h3>
 
-    <a id="sa-12.4-013"/>
-    <h4>12.4 013 QtWebEngine   Date: 2025-10-02 Severity: Critical</h4>
-    <p>In QtWebEngine-6.9.3, fifteen security vulnerabilities were fixed that
-    could allow for remote code execution, information leakage, and content
-    security policy bypasses. At least three of these vulnerabilities are known
-    to be under active exploitation, and users are advised to update
-    QtWebEngine <em>immediately</em>, even if it is only used as a build
-    dependency. Update to QtWebEngine-6.9.3.
-    <a href="consolidated.html#sa-12.4-013">12.4-013</a></p>
+    <a id="sa-12.4-032"/>
+    <h4>12.4 032 Samba        Date: 2025-11-07  Severity: Critical</h4>
+    <p>In Samba-4.23.3, two security vulnerabilities were fixed that could
+    allow for uninitialized memory disclosure and for command injection in
+    some configurations. Note that the default BLFS configuration is <em>NOT</em>
+    affected, but some obscure configurations may be. If your configuration
+    includes a domain controller with the WINS server enabled <em>and</em> the
+    "wins hook" option set, you need to update your server immediately. If your
+    configuration has the streams_xattr VFS object enabled in it's configuration,
+    you also need to update your server immediately. If you are not using either
+    of these configurations, there is no need to update. Otherwise, update to
+    Samba-4.23.3.
+    <a href="consolidated.html#sa-12.4-032">12.4-032</a></p>
 
-<!-- end of QtWebEngine -->
+<!-- end of Samba -->
+
+    <h3>Seamonkey</h3>
+
+    <a id="sa-12.4-030"/>
+    <h4>12.4 030 Seamonkey     Updated: 2025-11-07  Severity: Critical</h4>
+    <p>In Seamonkey-2.53.22, 18 security vulnerabilities were fixed that
+    could allow for incorrect error handling of script execution, local code
+    execution, double-free and use-after-free operations leading to memory
+    manipulation and arbitrary code execution (ACE), exposing of persistent
+    UUIDs, partional return value stack writes, truncated instructions,
+    incorrect JavaScript state machines, memory saftey bugs, sandbox escapes,
+    same-origin policy bypasses, integer overflows, out-of-bounds read/write in
+    privileged processes, cross-process information leakage, and non-writable
+    objects being in a writable state. Due to the critical nature of this
+    update, from protecting against ACE to sandbox escapes, please update to
+    Seamonkey-2.53.22 immediately.
+    <a href="consolidated.html#12.4-030">12.4-030</a></p>
+
+<!-- end of Seamonkey -->
 
     <h3>SpiderMonkey</h3>
+
+    <a id="sa-12.4-046"/>
+    <h4>12.4 046 SpiderMonkey  Date: 2025-12-02  Severity: High</h4>
+    <p>In SpiderMonkey from Firefox-140.5.0esr, one security vulnerability was
+    fixed that could allow for incorrect boundary conditions in the
+    JavaScript WebAssembly component.
+    Update to SpiderMonkey from Firefox-140.5.0esr.
+    <a href="consolidated.html#12.4-046">12.4-046</a></p>
 
     <a id="sa-12.4-002"/>
     <h4>12.4 002 SpiderMonkey  Date: 2025-09-19  Severity: Medium</h4>
@@ -304,6 +591,15 @@
 <!-- end of SpiderMonkey -->
 
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.4-044"/>
+    <h4>12.4 044 Thunderbird  Date: 2025-12-02  Severity: High</h4>
+    <p>In Thunderbird-140.5.0esr, nine security vulnerabilities were fixed that
+    could allow for race conditions, incorrect boundary conditions in the
+    JavaScript WebAssembly component, same-origin policy bypassing, mitigation
+    bypassing, use-after-free operations, and spoofing.
+    Update to Thunderbird-140.5.0esr.
+    <a href="consolidated.html#12.4-044">12.4-044</a></p>
 
     <a id="sa-12.4-023"/>
     <h4>12.4 023 Thunderbird Date: 2025-10-16  Severity: High</h4>
@@ -326,7 +622,79 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>Unbound</h3>
+
+    <a id="sa-12.4-050"/>
+    <h4>12.4 050 Unbound     Date: 2025-12-04  Severity: Medium</h4>
+    <p>In Unbound-1.24.2, a security vulnerability thought to be fixed by
+    Unbound-1.24.1, but wasn't, was actually fixed that could allow
+    for cache poisoning attacks.
+    Please see more information about the vulnerability in
+    <a href="#sa-12.4-026">SA-12.4-026</a>.
+    Update to Unbound-1.24.2 if you are currently using it.
+    <a href="consolidated.html#sa-12.4-050">12.4-050</a></p>
+
+    <a id="sa-12.4-026"/>
+    <h4>12.4 026 Unbound     Date: 2025-11-04  Severity: Medium</h4>
+    <p>In Unbound-1.24.1, a security vulnerability was fixed that could allow
+    for cache poisoning attacks. The vulnerability occurs because promiscuous
+    NS RRSets that complement DNS replies in the authority section can be used
+    to trick resolvers into updating their delegation information for the zone.
+    Unbound fixed this by scrubbing unsolicited NS RRSets as well as their
+    respective address records from replies, which mitigates this possibility.
+    Update to Unbound-1.24.1 if you are currently using it.
+    <a href="consolidated.html#sa-12.4-026">12.4-026</a></p>
+
+<!-- end of Unbound -->
+
+    <h3>urllib3</h3>
+
+    <a id="sa-12.4-053"/>
+    <h4>12.4 053 urllib3      Date: 2025-12-05  Severity: High</h4>
+    <p>In urllib3-2.6.0, two security vulnerabilities were fixed that could
+    allow for a trivial remotely-exploitable denial of service. The issues
+    occur when decompressing and processing data. Upstream notes that users
+    should update to Brotli-1.2.0 as well. Update to urllib3-2.6.0.
+    <a href="consolidated.html#sa-12.4-053">12.4-053</a></p>
+
+<!-- end of urllib3 -->
+
+    <h3>WebKitGTK</h3>
+
+    <a id="sa-12.4-054"/>
+    <h4>12.4 054 WebKitGTK    Date: 2025-12-05  Severity: Critical</h4>
+    <p>In WebKitGTK-2.50.3, twenty-two security vulnerabilities were fixed
+    that could allow for a remotely exploitable denial of service, remote
+    code execution, arbitrary code execution, cross-origin data exfiltration,
+    access to sensor information without a user's consent, information
+    disclosure, sensitive system information disclosure, and cross-origin
+    image exfiltration. These issues are due to a variety of problems including
+    use-after-frees, out-of-bounds reads/writes, buffer overflows, and more.
+    Most of them have been resolved with improved cache, state, and memory
+    handling. Update to WebKitGTK-2.50.3 immediately.
+    <a href="consolidated.html#sa-12.4-054">12.4-054</a></p>
+
+<!-- end of WebKitGTK -->
+
     <h3>Wireshark</h3>
+
+    <a id="sa-12.4-048"/>
+    <h4>12.4 048 Wireshark    Date: 2025-12-04  Severity: Medium</h4>
+    <p>In Wireshark-4.6.2, two security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when processing crafted
+    packets on a network that uses the HTTP/3 or MEGACO protocols. Note that
+    this could be exploitable by a user opening a crafted packet capture file
+    as well. The only known impact though is an application crash, so if you
+    are not processing HTTP/3 or MEGACO protocols, there is no need to update.
+    Update to Wireshark-4.6.2 if you are using either of these protocols.
+    <a href="consolidated.html#sa-12.4-048">12.4-048</a></p>
+
+    <a id="sa-12.4-036"/>
+    <h4>12.4 036 Wireshark    Date: 2025-11-22  Severity: Low</h4>
+    <p>In Wireshark-4.6.1, two security vulnerabilities were fixed that could
+    allow for crashes in the BPv7 and Kafka dissectors. Update to
+    Wireshark-4.6.1.
+    <a href="consolidated.html#sa-12.4-036">12.4-036</a></p>
 
     <a id="sa-12.4-011"/>
     <h4>12.4 011 Wireshark    Date: 2025-09-30  Severity: Low</h4>
@@ -340,4 +708,44 @@
 
 <!-- end of Wireshark -->
 
+    <h3>xkbcomp</h3>
+
+    <a id="sa-12.4-052"/>
+    <h4>12.4 052 xkbcomp      Date: 2025-12-05  Severity: Medium</h4>
+    <p>In xkbcomp-1.5.0, four security vulnerabilities were fixed that could
+    allow for a denial of service (application crashes). One of the issues is
+    due to endless recursion, while the other three are due to NULL pointer
+    dereferences. All of these vulnerabilities can be exploited by passing an
+    invalid X Keyboard Map to xkbcomp, but the only known impact is a crash of
+    the xkbcomp application. Update to xkbcomp-1.5.0 if you are experiencing
+    crashes when processing keyboard maps.
+    <a href="consolidated.html#sa-12.4-052">12.4-052</a></p>
+
+<!-- end of xkbcomp -->
+
+    <h3>Xorg-Server</h3>
+
+    <a id="sa-12.4-028"/>
+    <h4>12.4 028 Xorg-Server Date: 2025-11-04  Severity: High</h4>
+    <p>In Xorg-Server-21.1.20, three security vulnerabilities were fixed that
+    could allow for arbitrary code execution or denial of service when using
+    the X11 Present extension, when removing the Xkb resources for a client,
+    and when using the XkbSetCompatMap() function. These issues are all due
+    to use-after-free vulnerabilities. Update to Xorg-Server-21.1.20. If you
+    use the server from TigerVNC, also rebuild it against Xorg-Server-21.1.20.
+    <a href="consolidated.html#sa-12.4-028">12.4-028</a></p>
+
+<!-- end of Xorg-Server -->
+
+    <h3>Xwayland</h3>
+
+    <a id="sa-12.4-029"/>
+    <h4>12.4 029 Xwayland     Date: 2025-11-04  Severity: High</h4>
+    <p>In Xwayland-24.1.9, three security vulnerabilities were fixed that
+    could allow for arbitrary code execution or denial of service when using
+    the X11 Present extension, when removing the Xkb resources for a client,
+    and when using the XkbSetCompatMap() function. Update to Xwayland-24.1.9.
+    <a href="consolidated.html#sa-12.4-029">12.4-029</a></p>
+
+<!-- end of Xwayland -->
 <!--#include virtual="/common/footer.html" -->

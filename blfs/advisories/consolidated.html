@@ -64,6 +64,697 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-056"/>
+    <h4>12.4 056 glib         Date: 2025-12-08  Severity: High</h4>
+    <p>In glib-2.86.3, a security vulnerability was fixed that could allow for
+    remote code execution or a denial of service (application crash) when an
+    application uses the g_escape_uri_string() function to escape a URI string.
+    The problem occurs due to a heap-based buffer overflow, and if a string
+    contained a large amount of unacceptable characters, the calculation of the
+    length of the escaped string will overflow and lead to a write off the end
+    of the newly allocated string.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13601">CVE-2025-13601</a>.</p>
+    <p>To fix this vulnerability, update to glib-2.86.3 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+
+    <a id="sa-12.4-055"/>
+    <h4>12.4 055 c-ares       Date: 2025-12-08  Severity: Medium</h4>
+    <p>In c-ares-1.34.6, a security vulnerability was fixed that could allow
+    for a remotely exploitable crash due to a use-after-free problem when
+    reading responses from a DNS server. The process_answer() function could
+    terminate a query after something such as maximum attempts, but it would
+    continue to process additional answers after closing the connection in
+    some cases. The only known impact at this time is an application crash.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-62408">CVE-2025-62408</a>.</p>
+    <p>To fix this vulnerability, update to c-ares-1.34.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/c-ares.html">c-ares (sysv)</a> or
+    <a href="../view/systemd/basicnet/c-ares.html">c-ares (systemd)</a>.</p>
+
+    <a id="sa-12.4-054"/>
+    <h4>12.4 054 WebKitGTK    Date: 2025-12-05  Severity: Critical</h4>
+    <p>In WebKitGTK-2.50.3, twenty-two security vulnerabilities were fixed
+    that could allow for a remotely exploitable denial of service, remote
+    code execution, arbitrary code execution, cross-origin data exfiltration,
+    access to sensor information without a user's consent, information
+    disclosure, sensitive system information disclosure, and cross-origin
+    image exfiltration. These issues are due to a variety of problems including
+    use-after-frees, out-of-bounds reads/writes, buffer overflows, and more.
+    Most of them have been resolved with improved cache, state, and memory
+    handling. All users who have WebKitGTK installed should update immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43272">CVE-2025-43272</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43342">CVE-2025-43342</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43356">CVE-2025-43356</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43368">CVE-2025-43368</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43343">CVE-2025-43343</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43392">CVE-2025-43392</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43419">CVE-2025-43419</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43425">CVE-2025-43425</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43427">CVE-2025-43427</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43429">CVE-2025-43429</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43430">CVE-2025-43430</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43431">CVE-2025-43431</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43432">CVE-2025-43432</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43434">CVE-2025-43434</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43440">CVE-2025-43440</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43443">CVE-2025-43443</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43480">CVE-2025-43480</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13502">CVE-2025-13502</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13947">CVE-2025-13947</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43421">CVE-2025-43421</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43458">CVE-2025-43458</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66287">CVE-2025-66287</a>.</p>
+    <p>To fix these vulnerabilities, update to WebKitGTK-2.50.3 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-12.4-053"/>
+    <h4>12.4 053 urllib3      Date: 2025-12-05  Severity: High</h4>
+    <p>In urllib3-2.6.0, two security vulnerabilities were fixed that could
+    allow for a trivial remotely-exploitable denial of service. The first
+    vulnerability occurs because there are no limits on the amount of
+    links in a decompression chain, which allowed malicious servers to
+    insert an unlimited number of compression steps (causing extremely high
+    CPU usage and a massive memory allocation for the uncompressed data).
+    The other vulnerability occurs because the streaming API improperly
+    handled highly compressed data in such a way that allowed for urllib3
+    to fully decode a small amount of highly compressed data in a single
+    operation, leading to massive memory consumption and high CPU usage.
+    Upstream also notes that users who have Brotli installed should make
+    sure that they have updated to 1.2.0.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66418">CVE-2025-66418</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66471">CVE-2025-66471</a>.</p>
+    <p>To fix this vulnerability, update to urllib3-2.6.0 or later using the
+    instructions from
+    <a href="../view/svn/general/python-dependencies.html#urllib3">urllib3 (sysv)</a> or
+    <a href="../view/systemd/general/python-dependencies.html#urllib3.html">urllib3 (systemd)</a>.</p>
+    <p>In addition, users should make sure that Brotli is updated to 1.2.0 or
+    later using the instructions from
+    <a href="consolidated.html#sa-12.4-027">12-4.027</a>.</p>
+
+    <a id="sa-12.4-052"/>
+    <h4>12.4 052 xkbcomp      Date: 2025-12-05  Severity: Medium</h4>
+    <p>In xkbcomp-1.5.0, four security vulnerabilities were fixed that could
+    allow for a denial of service (application crashes). One of the issues is
+    due to endless recursion, while the other three are due to NULL pointer
+    dereferences. Two of the NULL pointer dereferences occur in the
+    ExprResolveLhs function, while the other is in the ResolveStateAndPredicate
+    function. All of these vulnerabilities can be exploited by passing an
+    invalid X Keyboard Map to xkbcomp, but the only known impact is a crash of
+    the xkbcomp application.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-15853">CVE-2018-18583</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-15859">CVE-2018-15859</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-15861">CVE-2018-15861</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-15863">CVE-2018-15863</a>.</p>
+    <p>To fix these vulnerabilities, update to xkbcomp-1.5.0 or later using
+    the instructions from
+    <a href="../view/svn/x/x7app.html">Xorg Applications (sysv)</a> or
+    <a href="../view/systemd/x/x7app.html">Xorg Applications (systemd)</a>.</p>
+
+    <a id="sa-12.4-051"/>
+    <h4>12.4 051 libxslt      Date: 2025-12-05  Severity: High</h4>
+    <p>In libxslt-1.1.45, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crashes), memory corruption,
+    or unexpected behavior. All three vulnerabilities can allow for a denial
+    of service, but two of them also allow for type confusion. These two can
+    potentially be exploited through web browsers which process XSLT code inside
+    of stylesheets, and can possibly allow for unexpected behavior if an attacker
+    can corrupt memory. This could potentially allow for remote code execution.
+    It is thus recommended that all users with libxslt installed update to this
+    version as soon as possible. However, special care is required if updating
+    this package on a system with libxml2-2.14.x.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9714">CVE-2025-9714</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-7424">CVE-2025-7424</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11731">CVE-2025-11731</a>.</p>
+    <p>To fix these vulnerabilities, update to libxslt-1.1.45 or later using
+    the instructions from
+    <a href="../view/svn/general/libxslt.html">libxslt (sysv)</a> or
+    <a href="../view/systemd/general/libxslt.html">libxslt (systemd)</a>.</p>
+    <p>On a BLFS 12.4 system which has libxml2-2.14.x installed, this package
+    will fail to configure. The minimum version of libxml2 was increased to
+    2.15.1. However, this is only needed if you are planning on running the
+    test suite. To work around this, use the following command prior to
+    running configure:
+    <code>sed -i '/LIBXML_REQUIRED_VERSION=/s/2.15.1/2.14.0/' configure</code>.
+    This has been tested on a BLFS 12.4 system. Alternatively, users can
+    update to libxml2-2.15.x, but that may require updates to some packages.
+    The safer option is to just use this sed command.</p>
+
+    <a id="sa-12.4-050"/>
+    <h4>12.4 050 Unbound      Date: 2025-12-04  Severity: Medium</h4>
+    <p>In Unbound-1.24.2, a security vulnerability thought to be fixed by
+    Unbound-1.24.1, but wasn't, was actually fixed that could allow
+    for cache poisoning attacks.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11411">CVE-2025-11411</a>.
+    Please see more information about the vulnerability in
+    <a href="#sa-12.4-026">SA-12.4-026</a>.</p>
+    <p>To fix this vulnerability, update to Unbound-1.24.2 or later using the
+    instructions from
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+
+    <a id="sa-12.4.049"/>
+    <h4>12.4 049 Apache HTTPD Date: 2025-12-04  Severity: Medium</h4>
+    <p>In httpd-2.4.66, four security vulnerabilities were fixed that could
+    allow for unintended retry intervals when renewing ACME certificates,
+    for Server Side Includes to unexpectedly pass a shell escaped query
+    string to a command directive, for environment variables to be overridden
+    when using CGI programs, and for users to cause CGI scripts to run under
+    an unexpected username. One additional vulnerability was fixed in this
+    release, but is designed for Windows only. The issue with unintended retry
+    intervals when renewing ACME certificates occurs when using mod_md, and
+    it causes all certificates to attempt to immediately renew repeatedly due
+    to an integer overflow changing the backoff timer to '0'. The Server Side
+    Includes vulnerability requires both Server Side Includes themselves to be
+    enabled, in conjunction with mod_cgid (<em>NOTE: not mod_cgi</em>), and with
+    <em>#exec cmd="..."</em> directives. The environment variable override
+    vulnerability can occur whenever 'mod_cgi' is in use. The CGI scripts running
+    under unexpected usernames vulnerability can occur when mod_userdir is used
+    in combination with suexec while a user also has access to the RequestHeader
+    directive in htaccess. Users who use mod_cgi, mod_cgid, mod_md, or Server
+    Side Includes should update to httpd-2.4.66 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55753">CVE-2025-55753</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-58098">CVE-2025-58098</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-65082">CVE-2025-65082</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66200">CVE-2025-66200</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.66 or later using the
+    instructions from
+    <a href="../view/svn/server/apache.html">Apache HTTPD (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
+
+    <a id="sa-12.4-048"/>
+    <h4>12.4 048 Wireshark    Date: 2025-12-04  Severity: Medium</h4>
+    <p>In Wireshark-4.6.2, two security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when processing crafted
+    packets on a network that uses the HTTP/3 or MEGACO protocols. Note that
+    this could be exploitable by a user opening a crafted packet capture file
+    as well. The only known impact though is an application crash, so if you
+    are not processing HTTP/3 or MEGACO protocols, there is no need to update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13945">CVE-2025-13945</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13946">CVE-2025-13946</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.6.2 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-12.4-047"/>
+    <h4>12.4 047 libpng  Date: 2025-12-04  Severity: High</h4>
+    <p>In libpng-1.6.52, a security vulnerability was fixed that could
+    allow for heap buffer over-reads. This vulnerability, unlike previous
+    libpng vulnerabilities, doesn't need a malformed PNG file to be triggered;
+    instead, a valid image can trigger the issue.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66293">CVE-2025-66293</a>.</p>
+    <p>To fix this vulnerability, update to libpng-1.6.52 using the
+    instructions from <a href="../view/svn/general/libpng.html">libpng
+    (sysv)</a> or <a href="../view/systemd/general/libpng.html">libpng
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-046"/>
+    <h4>12.4 046 SpiderMonkey  Date: 2025-12-02  Severity: High</h4>
+    <p>In SpiderMonkey from Firefox-140.5.0esr, a security vulnerability was
+    fixed that could allow for incorrect boundary conditions in the
+    JavaScript WebAssembly component.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13016">CVE-2025-13016</a>.</p>
+    <p>To fix this vulnerability, update to SpiderMonkey from
+    Firefox-140.5.0esr using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
+    <a id="sa-12.4-045"/>
+    <h4>12.4 045 Firefox  Date: 2025-12-02  Severity: High</h4>
+    <p>In Firefox-140.5.0esr, nine security vulnerabilities were fixed that
+    could allow for race conditions, incorrect boundary conditions in the
+    JavaScript WebAssembly component, same-origin policy bypassing, mitigation
+    bypassing, use-after-free operations, and spoofing.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13012">CVE-2025-13012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13013">CVE-2025-13013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13014">CVE-2025-13014</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13015">CVE-2025-13015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13016">CVE-2025-13016</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13017">CVE-2025-13017</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13018">CVE-2025-13018</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13019">CVE-2025-13019</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13020">CVE-2025-13020</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-140.5.0esr using the
+    instructions from <a href="../view/svn/xsoft/firefox.html">Firefox
+    (sysv)</a> or <a href="../view/systemd/xsoft/firefox.html">Firefox
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-044"/>
+    <h4>12.4 044 Thunderbird  Date: 2025-12-02  Severity: High</h4>
+    <p>In Thunderbird-140.5.0esr, nine security vulnerabilities were fixed that
+    could allow for race conditions, incorrect boundary conditions in the
+    JavaScript WebAssembly component, same-origin policy bypassing, mitigation
+    bypassing, use-after-free operations, and spoofing.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13012">CVE-2025-13012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13013">CVE-2025-13013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13014">CVE-2025-13014</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13015">CVE-2025-13015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13016">CVE-2025-13016</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13017">CVE-2025-13017</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13018">CVE-2025-13018</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13019">CVE-2025-13019</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13020">CVE-2025-13020</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-140.5.0esr using the
+    instructions from <a href="../view/svn/xsoft/thunderbird.html">Thunderbird
+    (sysv)</a> or <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-043"/>
+    <h4>12.4 043 libpng  Date: 2025-12-02  Severity: High</h4>
+    <p>In libpng-1.6.51, four security vulnerabilities were fixed that could
+    allow for heap buffer over-reads, overflows, and out-of-bounds reads.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64505">CVE-2025-64505</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64506">CVE-2025-64506</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64720">CVE-2025-64720</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-65018">CVE-2025-65018</a>.</p>
+    <p>To fix these vulnerabilities, update to libpng-1.6.51 using the
+    instructions from <a href="../view/svn/general/libpng.html">libpng
+    (sysv)</a> or <a href="../view/systemd/general/libpng.html">libpng
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-042"/>
+    <h4>12.4 042 CUPS  Updated: 2025-12-10  Severity: Medium</h4>
+    <p>In CUPS-2.4.15, two security vulnerabilities were fixed that could allow
+    for local denial of services and an unresponsive cupsd process. However,
+    major regressions were found in this update that cause problems with
+    applications hanging. Users who have installed this update should update to
+    CUPS-2.4.16 immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-58436">CVE-2025-58436</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61915">CVE-2025-61915</a>.</p>
+    <p>To fix these vulnerabilities, update to CUPS-2.4.16 using the instructions
+    from <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+    <p><em>Edited on 2025-12-10 to suggest using CUPS-2.4.16 due to major
+    regressions in the 2.4.15 release.</em></p>
+
+    <a id="sa-12.4-041"/>
+    <h4>12.4 041 cups-filters and libcupsfilters  Date: 2025-11-22  Severity: Medium</h4>
+    <p>A couple of patches for cups-filters-2.0.1 and libcupsfilters-2.1.1 fixes
+    three security vulnerabilities that could allow for heap buffer overflows
+    and out-of-bounds read access.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-57812">CVE-2025-57812</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64503">CVE-2025-64503</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64524">CVE-2025-64524</a>.</p>
+    <p>To fix these vulnerabilities, rebuild cups-filters-2.0.1 and
+    libcupsfilters-2.1.1 with the security patches listed on each page
+    using the instructions from
+    <a href="../view/svn/pst/cups-filters.html">cups-filters (sysv)</a> or
+    <a href="../view/systemd/pst/cups-filters.html">cups-filters (systemd)</a> and
+    <a href="../view/svn/pst/libcupsfilters.html">libcupsfilters (sysv)</a> or
+    <a href="../view/systemd/pst/libcupsfilters.html">libcupsfilters (systemd)</a>.</p>
+
+    <a id="sa-12.4-040"/>
+    <h4>12.4 040 PostgreSQL   Date: 2025-11-22  Severity: Medium</h4>
+    <p>In PostgreSQL-18.1, two security vulnerabilities were fixed that could
+    allow for a check for the schema CREATE privilege being skipped and
+    undersized allocations via integer wraparounds.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12817">CVE-2025-12817</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12818">CVE-2025-12818</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-18.1 using the
+    instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.
+    If you are on PostgreSQL-17 and don't want to update your database to 18.x,
+    update to PostgreSQL-17.7 instead using the instructions from
+    <a href="../view/12.4/server/postgresql.html">PostgreSQL (12.4 sysv)</a> or
+    <a href="../view/12.4-systemd/server/postgresql.html">PostgreSQL (12.4 systemd)</a>.</p>
+
+    <a id="sa-12.4-039"/>
+    <h4>12.4 039 rsync        Date: 2025-11-22  Severity: Medium</h4>
+    <p>A patch for rsync-3.4.1 fixes a security vulnerability that could allow
+    for a out-of-bounds heap buffer read through a negative array index.
+    This can happen by a client acting as the reciever of an rsync file
+    transfer who has read access to the remote rsync module.
+    This vulnerability has been assigned as
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10158">CVE-2025-10158</a>.</p>
+    <p>To fix this vulnerability, rebuild rsync-3.4.1 with the security patch
+    using the instructions from
+    <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
+    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+
+    <a id="sa-12.4-038"/>
+    <h4>12.4 038 GnuTLS        Date: 2025-11-22  Severity: Low</h4>
+    <p>In GnuTLS-3.8.11, a security vulnerability was fixed that could allow
+    for a stack overwrite. This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9820">CVE-2025-9820</a>.</p>
+    <p>To fix this vulnerability, update to GnuTLS-3.8.11 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
+    <a id="sa-12.4-037"/>
+    <h4>12.4 037 libarchive    Date: 2025-11-22  Severity: High</h4>
+    <p>In libarchive-3.8.3, three security vulnerabilities were fixed that
+    could allow for temporary file creation in an improper directory and buffer
+    overruns.
+    These vulnerabilities have not been assigned anywhere, but have Github
+    pull requests associated with them:
+    <a href="https://github.com/libarchive/libarchive/pull/2753">PR #2753</a>,
+    <a href="https://github.com/libarchive/libarchive/pull/2768">PR #2768</a>, and
+    <a href="https://github.com/libarchive/libarchive/pull/2769">PR #2769</a>.</p>
+    <p>To fix these vulnerabilities, update to libarchive-3.8.3 or later using
+    the instructions from
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
+    <a id="sa-12.4-036"/>
+    <h4>12.4 036 Wireshark    Date: 2025-11-22  Severity: Low</h4>
+    <p>In Wireshark-4.6.1, two security vulnerabilities were fixed that could
+    allow for crashes in the BPv7 and Kafka dissectors.
+    These vulnerabilities have been assigned
+    <a href="https://www.wireshark.org/security/wnpa-sec-2025-05.html">wnpa-sec-2025-05</a> and
+    <a href="https://www.wireshark.org/security/wnpa-sec-2025-06.html">wnpa-sec-2025-06</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.6.1 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-12.4-035"/>
+    <h4>12.4 035 Qt6          Date: 2025-11-22  Severity: Critical</h4>
+    <p>In Qt6-6.10.1 and QtWebEngine-6.10.1, twenty-three security
+    vulnerabilities were fixed in that could allow for buffer overflows for
+    both the stack and heap, heap corruption, object corruption, out-of-bounds
+    memory read access, remote privilege escalation, remote read and write
+    files on the filesystem, remote denial of service, remote code execution,
+    domain spoofing, use-after-free operations, information leakage, and
+    sandbox escapes. One of these is actively exploited. Most of the
+    vulnerabilities affect QtWebEngine, but there are some components in Qt6
+    that are affected by some of the vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6021">CVE-2025-6021</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6965">CVE-2025-6965</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10728">CVE-2025-10728</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10729">CVE-2025-10729</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11206">CVE-2025-11206</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11207">CVE-2025-11207</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11216">CVE-2025-11216</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11219">CVE-2025-11219</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11458">CVE-2025-11458</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11460">CVE-2025-11460</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11756">CVE-2025-11756</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12036">CVE-2025-12036</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12385">CVE-2025-12385</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12429">CVE-2025-12429</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12432">CVE-2025-12432</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12433">CVE-2025-12433</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12438">CVE-2025-12438</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12441">CVE-2025-12441</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12443">CVE-2025-12443</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12726">CVE-2025-12726</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13042">CVE-2025-13042</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13223">CVE-2025-13223</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24928">CVE-2025-24928</a>.</p>
+    <p>Users are advised to fix these vulnerabilities <em>immediately</em> by
+    updating to Qt6-6.10.1 and QtWebEngine-6.10.1 or later, using the
+    instructions from <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a> and
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <a id="sa-12.4-034"/>
+    <h4>12.4 034 libsoup      Updated: 2025-12-05  Severity: High</h4>
+    <p>There have been several security vulnerabilities found in libsoup-3.6.5.
+    No new release has been made upstream, but the BLFS team has developed a
+    patch to fix the vulnerabilities for which there are patches available.
+    These vulnerabilities can allow for a remotely exploitable denial of service
+    (excessive memory consumption and crashes), for cookie expiration logic
+    to be bypassed (leading to unintended or persistent cookie behavior), for
+    information disclosure in some circumstances, and for arbitrary code
+    execution. The vulnerabilities occur in a variety of different functions
+    and features of libsoup, including the multipart support, the HTTP/2
+    server, WebSockets support, and more. All users who have libsoup3 installed
+    are recommended to rebuild libsoup with the patch as soon as possible.
+    In addition to the security vulnerabilities, a fix for a potential deadlock
+    when using gstreamer has been resolved as well.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12105">CVE-2025-12105</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4948">CVE-2025-4948</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4945">CVE-2025-4945</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4969">CVE-2025-4969</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4476">CVE-2025-4476</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32914">CVE-2025-32914</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32908">CVE-2025-32908</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32907">CVE-2025-32907</a>.</p>
+    <p>To fix these vulnerabilities, rebuild libsoup with the patch using the
+    instructions from
+    <a href="../view/svn/basicnet/libsoup3.html">libsoup (sysv)</a> or
+    <a href="../view/systemd/basicnet/libsoup3.html">libsoup (systemd)</a>.</p>
+    <p>Users that have Epiphany installed should update to Epiphany-49.2 or
+    later to help mitigate the effects of CVE-2025-4035.</p>
+    <p><em>Edited on 2025-12-05 now that Epiphany-49.2 is in BLFS.</em></p>
+
+    <a id="sa-12.4-033"/>
+    <h4>12.4 033 cURL         Date: 2025-11-12  Severity: Medium</h4>
+    <p>In cURL-8.17.0, a security vulnerability was fixed that could allow for
+    a path traversal vulnerability when using the 'wcurl' utility with a URL
+    containing percent-encoded slashes (/ or \). Using percent encoded slashes
+    can trick wcurl into saving the output file outside of the current
+    directory, potentially allowing for attackers to place files in a different
+    place on a user's system without their knowledge. However, this only affects
+    users who are using the 'wcurl' utility - users who are just using libcurl
+    as a build dependency or the 'curl' utility are not impacted. If you are
+    unable to update cURL, a temporary workaround is to pass the
+    '--no-decode-filename' option  to the 'wcurl' command any time it is run.
+    This vulnerability has been assigned
+    <a href="https://curl.se/docs/CVE-2025-11563.html">CVE-2025-11563</a>.</p>
+    <p>To fix this vulnerability, update to cURL-8.17.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-12.4-032"/>
+    <h4>12.4 032 Samba        Date: 2025-11-07  Severity: Critical</h4>
+    <p>In Samba-4.23.3, two security vulnerabilities were fixed that could
+    allow for uninitialized memory disclosure and for command injection in
+    some configurations. Note that the default BLFS configuration is <em>NOT</em>
+    affected, but some obscure configurations may be. The command injection
+    vulnerability is rated as Critical and can occur if a configuration has
+    a WINS server hook script configured. The WINS server used by the Active
+    Directory Domain Controller did not validate user names passed to the WINS
+    hook program, and it passed them by inserting them into a string run by
+    a shell. However, for a system to be affected by this vulnerability, the
+    following conditions must be true:</p>
+    <ul>
+       <li>Samba must be configured to run as an Active Directory Domain
+           Controller. The default BLFS configuration is setup for file and
+           print sharing only due to the complexity of configuring Samba as
+           a domain controller.</li>
+       <li>The domain controller must have WINS support enabled.</li>
+       <li>The domain controller must have the 'wins hook' parameter set in
+           the smb.conf file.</li>
+    </ul>
+    <p>The uninitialized memory disclosure vulnerability occurs when a server
+    has the streams_xattr VFS object enabled. This is not set in the default
+    BLFS configuration, but may be in some users who have high performance needs.
+    These vulnerabilities have been assigned
+    <a href="https://www.samba.org/samba/security/CVE-2025-10230.html">CVE-2025-10230</a> and
+    <a href="https://www.samba.org/samba/security/CVE-2025-9640.html">CVE-2025-9640</a>.</p>
+    <p>To fix these vulnerabilities, update to Samba-4.23.3 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
+    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+
+    <a id="sa-12.4-031"/>
+    <h4>12.4 031 Dovecot      Date: 2025-11-07  Severity: High</h4>
+    <p>In Dovecot-2.4.2, a security vulnerability was fixed that could allow
+    for users to access other users' mail in certain situations. This occurs
+    because of a problem with authentication caching, where the first lookup
+    would be cached for all lookups across the server. This is because the
+    cache key was "%u", which no longer expands to the same as "${user}".
+    This does not affect the standard BLFS configuration as authentication
+    caching is disabled, but if you run a server which has auth cache
+    enabled, you should update your server to this version of Dovecot
+    immediately. Alternatively, you can disable authentication caching.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30189">CVE-2025-30189</a>.</p>
+    <p>To fix this vulnerability, update to Dovecot-2.4.2 or later using the
+    instructions from
+    <a href="../view/svn/server/dovecot.html">Dovecot (sysv)</a> or
+    <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
+
+    <a id="sa-12.4-030"/>
+    <h4>12.4 030 Seamonkey    Updated: 2025-11-07  Severity: Critical</h4>
+    <p>In Seamonkey-2.53.22, 18 security vulnerabilities were fixed that
+    could allow for incorrect error handling of script execution, local code
+    execution, double-free and use-after-free operations leading to memory
+    manipulation and arbitrary code execution (ACE), exposing of persistent
+    UUIDs, partional return value stack writes, truncated instructions,
+    incorrect JavaScript state machines, memory saftey bugs, sandbox escapes,
+    same-origin policy bypasses, integer overflows, out-of-bounds read/write in
+    privileged processes, cross-process information leakage, and non-writable
+    objects being in a writable state.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5263">CVE-2025-5263</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5264">CVE-2025-5264</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5265">CVE-2025-5265</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5283">CVE-2025-5283</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6424">CVE-2025-6424</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6425">CVE-2025-6425</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8027">CVE-2025-8027</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8028">CVE-2025-8028</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8033">CVE-2025-8033</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8034">CVE-2025-8034</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9179">CVE-2025-9179</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9180">CVE-2025-9180</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9185">CVE-2025-9185</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10533">CVE-2025-10533</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11709">CVE-2025-11709</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11710">CVE-2025-11710</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11711">CVE-2025-11711</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11714">CVE-2025-11714</a>.</p>
+    <p>To fix these vulnerabilities, update to Seamonkey-2.53.22 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <p>If you are on the version of ICU shipped with BLFS 12.4, please use the
+    same instructions that are in the BLFS 12.4 book for adjusting for ICU.</p>
+    <em>Updated 2025-11-07 to document changes required for ICU from 12.4, as
+    ICU has been updated in the development books and the sed command is now
+    incompatible.</em>
+
+    <a id="sa-12.4-029"/>
+    <h4>12.4 029 Xwayland     Date: 2025-11-04  Severity: High</h4>
+    <p>In Xwayland-24.1.9, three security vulnerabilities were fixed that
+    could allow for arbitrary code execution or denial of service when using
+    the X11 Present extension, when removing the Xkb resources for a client,
+    and when using the XkbSetCompatMap() function. The X11 Present
+    vulnerability occurs when processing and adding the notifications after
+    presenting a pixmap, because a dangling pointer may be left in the error
+    code path of the XPresentNotify function. This causes a use after free
+    whenever the notification structures are eventually destroyed, causing
+    memory corruption and a subsequent crash. The Xkb client resource
+    vulnerability occurs when removing the Xkb resources for a client.
+    The XkbRemoveResourceClient() function will free the XkbInterest data
+    associated with a device, but won't actually remove the resource
+    associated with it. This causes the resource delete function to
+    trigger a use-after-free when the client is terminated. The vulnerability
+    in the XkbSetCompatMap() function is due to a value overflow, because the
+    XkbCompatMap structure stores some values using an unsigned short, but it
+    fails to check if the sum of the input data might overflow the maximum
+    value.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2025-62229">CVE-2025-62229</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2025-62230">CVE-2025-62230</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2025-62231">CVE-2025-62231</a>.</p>
+    <p>To fix these vulnerabilities, update to Xwayland-24.1.9 or later using
+    the instructions from
+    <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
+    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+
+    <a id="sa-12.4-028"/>
+    <h4>12.4 028 Xorg-Server Date: 2025-11-04  Severity: High</h4>
+    <p>In Xorg-Server-21.1.20, three security vulnerabilities were fixed that
+    could allow for arbitrary code execution or denial of service when using
+    the X11 Present extension, when removing the Xkb resources for a client,
+    and when using the XkbSetCompatMap() function. The X11 Present
+    vulnerability occurs when processing and adding the notifications after
+    presenting a pixmap, because a dangling pointer may be left in the error
+    code path of the XPresentNotify function. This causes a use after free
+    whenever the notification structures are eventually destroyed, causing
+    memory corruption and a subsequent crash. The Xkb client resource
+    vulnerability occurs when removing the Xkb resources for a client.
+    The XkbRemoveResourceClient() function will free the XkbInterest data
+    associated with a device, but won't actually remove the resource
+    associated with it. This causes the resource delete function to
+    trigger a use-after-free when the client is terminated. The vulnerability
+    in the XkbSetCompatMap() function is due to a value overflow, because the
+    XkbCompatMap structure stores some values using an unsigned short, but it
+    fails to check if the sum of the input data might overflow the maximum
+    value. Note that these vulnerabilities can be exploited via TigerVNC as
+    well as SSH X Forwarding, where these vulnerabilities change from arbitrary
+    code execution problems to remote code execution issues.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2025-62229">CVE-2025-62229</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2025-62230">CVE-2025-62230</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2025-62231">CVE-2025-62231</a>.</p>
+    <p>To fix these vulnerabilities, update to Xorg-Server-21.1.20 or later
+    using the instructions from
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <p><em>NOTICE TO TIGERVNC USERS:</em> If you have the TigerVNC server
+    configured, you should rebuild TigerVNC with Xorg-Server-21.1.20 or later
+    to protect your systems against these vulnerabilities as well.</p>
+
+    <a id="sa-12.4-027"/>
+    <h4>12.4 027 brotli      Date: 2025-11-04  Severity: Low</h4>
+    <p>In brotli-1.2.0, some security mitigations were put into place that allow
+    for mitigation of unexpectedly large output. This was done by adding in the
+    Decompressor::can_accept_more_data method and the optional
+    output_buffer_limit argument into the Decompressor::process method. Note
+    that this is rated as Low because there is no CVE assigned and this change
+    only affects the Python bindings to brotli, which are not commonly used.</p>
+    <p>To gain these mitigations for the brotli python bindings, update to
+    brotli-1.2.0 or later using the instructions from
+    <a href="../view/svn/general/brotli.html">brotli (sysv)</a> or
+    <a href="../view/systemd/general/brotli.html">brotli (systemd)</a>.</p>
+
+    <a id="sa-12.4-026"/>
+    <h4>12.4 026 Unbound     Date: 2025-11-04  Severity: Medium</h4>
+    <p>In Unbound-1.24.1, a security vulnerability was fixed that could allow
+    for cache poisoning attacks. The vulnerability occurs because promiscuous
+    NS RRSets that complement DNS replies in the authority section can be used
+    to trick resolvers into updating their delegation information for the zone.
+    Usually these RRSets are used to update the resolver's knowledge of a DNS
+    zone's name servers, but if a malicious attacker is able to attach such
+    records into a reply, the attacker would poison Unbound's cache for the
+    delegation point. Unbound fixed this by scrubbing unsolicited NS RRSets
+    as well as their respective address records from replies, which mitigates
+    this possibility.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11411">CVE-2025-11411</a>.</p>
+    <p>To fix this vulnerability, update to Unbound-1.24.1 or later using the
+    instructions from
+    <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
+    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+
+    <a id="sa-12.4-025"/>
+    <h4>12.4 025 BIND        Date: 2025-11-04  Severity: Critical</h4>
+    <p>In BIND-9.20.15, three security vulnerabilities were fixed that could
+    allow for resource exhaustion as well as cache poisoning attacks. The
+    resource exhaustion vulnerability occurs when querying for records which
+    have a specially crafted zone that contains malformed DNSKEY records.
+    An attacker can cause the daemon to consume excess CPU resources until the
+    server crashes. The first cache poisoning vulnerability occurs because BIND
+    is too lenient when accepting records from answers, which allows attackers
+    to trivially inject forged data into the cache. This can happen when any
+    attacker submits a query to a server, and it will affect resolution of all
+    future queries when the data is cached. The other cache poisoning
+    vulnerability occurs due to a weakness in the PRNG that is used, which allows
+    attackers to predict the source port and query ID that BIND will use. This
+    causes BIND to be tricked into caching an attacker's responses if the data
+    is guessed correctly. All users who run a BIND server are recommended to
+    update to BIND-9.20.15 immediately, but there is no reason to upgrade
+    if you are just using the client utilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8677">CVE-2025-8677</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40778">CVE-2025-40778</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40780">CVE-2025-40780</a>.</p>
+    <p>To fix these vulnerabilities, update to BIND-9.20.15 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-12.4-024"/>
     <h4>12.4 024 libarchive  Date: 2025-10-17  Severity: Medium</h4>
     <p>In libarchive-3.8.2, a security vulnerability was fixed that could allow
@@ -163,9 +854,10 @@
     from
     <a href="../view/svn/xsoft/inkscape.html">Inkscape (sysv)</a> or
     <a href="../view/systemd/xsoft/inkscape.html">Inkscape (systemd)</a>.
-    There is also a known build problem with Libreoffice, but that has not been
-    addressed yet due to other priorities regarding security updates. The advisory
-    will be updated once a fix is present in the book.</p>
+    For LibreOffice, you must use version 25.8.3.2 to prevent a build failure.
+    Follow the instructions from
+    <a href="../view/svn/xsoft/libreoffice.html">LibreOffice (sysv)</a> or
+    <a href="../view/systemd/xsoft/libreoffice.html">LibreOffice (systemd)</a>.</p>
 
     <a id="sa-12.4-019"/>
     <h4>12.4 019 Ruby          Date: 2025-10-10 Severity: High</h4>
@@ -393,7 +1085,7 @@
     <a href="../view/systemd/general/openjpeg2.html">OpenJPEG (systemd)</a>.</p>
 
     <a id="sa-12.4-008"/>
-    <h4>12.4 008 cURL         Date: 2025-09-30  Severity: Low</h4>
+    <h4>12.4 008 cURL         Updated: 2025-11-04  Severity: Low</h4>
     <p>In cURL-8.16.0, two security vulnerabilities were fixed that could allow
     for a predictable mask pattern to occur when using WebSockets (which can
     allow for a malicious server to induce traffic between machines which
@@ -419,6 +1111,16 @@
     instructions from
     <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
     <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+    <p>If you install CMake after installing this security update, a minor
+    modification to the source code for CMake is required because of an API
+    change in cURL with this release. The following sed fixes the build
+    failure:</p>
+    <pre>sed -i 's/curl_proxytype/long/' Source/CTest/cmCTestCurl.h</pre>
+    <p>Alternatively, you can update to a later version of CMake to fix the
+    build failure. At the time of writing, CMake-4.1.2 is known to work on
+    BLFS 12.4 systems without known regressions.</p>
+    <p><em>Updated on 2025-11-04 to document the problems with compiling
+    the version of CMake in BLFS 12.4 with this version of cURL.</em></p>
 
     <a id="sa-12.4-007"/>
     <h4>12.4 007 libaom       Date: 2025-09-30  Severity: High</h4>
@@ -13309,7 +14011,7 @@ install -vm644 dest/usr/lib/libc.{a,so.6.dbg} /usr/lib</pre>
     has misconfigured Dovecot with multiple password databases. The BLFS
     Editors have developed a patch to remediate this vulnerability.
     This vulnerability has been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30550 (not yet available)">CVE-2022-30550</a>.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-30550">CVE-2022-30550</a>.
     More details can be found at
     <a href="https://seclists.org/oss-sec/2022/q3/33">oss-security posting</a>.</p>
     <p>To fix this vulnerability, rebuild Dovecot-2.3.19.1 with the patch using

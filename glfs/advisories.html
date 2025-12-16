@@ -18,11 +18,34 @@
     <br/>
 
     <h2>12.4 to 12.5</h2>
-    <h3>Broken changes</h3>
+    <h2>Broken changes</h2>
     <p>Packages removed from GLFS that are in BLFS may have gotten security
     updates. Read <a href="/blfs/advisories/12.4.html">BLFS 12.4 Security
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
     Consolidated Security Advisories</a> for such packages.</p>
+
+    <a id="glfs-brk-12.4-004"/>
+    <h4>glfs-brk-12.4-004: VDPAU (Date: November 24th, 2025)</h4>
+    <p>VDPAU support has been cut in Mesa-25.3.x, removing most of the VDPAU
+       drivers out there. The main reason for this is that the benefits of
+       VDPAU are minor and is restricted to X11 only. It has been superceded by
+       VA-API which is window-system independent and offers more benefits. It
+       is a logical step to cut VDPAU, given how most of the drivers are now
+       gone. However, NVIDIA technically has a VDPAU driver, but no VA-API
+       driver in the NVIDIA runfile. There is a VA-API NVIDIA driver in a
+       separate package (NVIDIA-VA-API-Driver) that provides decoding support
+       for multiple codecs and has been added to GLFS. It uses NVDEC as the
+       backend without requiring the CUDA NVCC compiler, leading to a simple
+       installation. Because of this, and how most GPUs have a VA-API driver,
+       VDPAU support has been cut in general from GLFS. This means the libvdpau
+       and libvdpau-va-gl packages are no longer offered in the book and VA-API
+       is preferred. For NVIDIA, CUDA is still offered in SLFS for packages
+       that want explicit control, like FFmpeg and OBS-Studio, and will not be
+       axed anytime soon. Part of this overall change is that nv-codec-headers
+       (ffnvcodec) has been moved from SLFS into GLFS to satisfy a dependency
+       for NVIDIA-VA-API-Driver. In any case, it was decided that users will
+       want to install nv-codec-headers (ffnvcodec) anyway for a plethora of
+       reasons.</p>
 
     <a id="glfs-brk-12.4-003"/>
     <h4>glfs-brk-12.4-003: GBM (Date: September 11th, 2025)</h4>
@@ -41,16 +64,16 @@
 
     <a id="glfs-brk-12.4-002"/>
     <h4>glfs-brk-12.4-002: Mesa OpenGL (Date: September 8th, 2025)</h4>
-    <p>GLFS used to support Mesa's core OpenGL libraries (libGL, libGLX,
-      libEGL, etc.) and equipped the user with the information needed to go
-      with any given core OpenGL library vendor. To a degree, GLFS still does;
-      however, Mesa as a core OpenGL library vendor is no longer supported in
-      the book. It instead prefers libglvnd and its instructions are designed
-      to now funnel the user into using it. It still equips the user with
-      information needed to use Mesa as the core OpenGL library vendor, and the
-      issues that might arise. Mesa as an OpenGL and other API driver vendor is
-      still supported as most drivers on Linux come from the project. But libGL
-      and other libraries of its ilk are now provided by libglvnd.</p>
+    <p>GLFS used to support Mesa's core OpenGL libraries (libGL, libEGL, etc.)
+      and equipped the user with the information needed to go with any given
+      core OpenGL library vendor. To a degree, GLFS still does; however, Mesa
+      as a core OpenGL library vendor is no longer supported in the book. It
+      instead prefers libglvnd and its instructions are designed to now funnel
+      the user into using it. It still equips the user with information needed
+      to use Mesa as the core OpenGL library vendor, and the issues that might
+      arise. Mesa as an OpenGL and other API driver vendor is still supported
+      as most drivers on Linux come from the project. However, libGL and other
+      libraries of its ilk are now provided by libglvnd.</p>
 
     <a id="glfs-brk-12.4-001"/>
     <h4>glfs-brk-12.4-001: PCRE2, SQLite3, Python3 (Date: September 4th, 2025)</h4>
@@ -58,19 +81,57 @@
     now in Multilib LFS and have proper lib32 instructions if applicable. Go to
     MLFS for updates to those packages.</p>
 
-    <br/>
-
-    <h3>Security Advisories</h3>
+    <h2>Security Advisories</h2>
     <p>Please read <a href="/blfs/advisories/12.4.html">BLFS 12.4 Security
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
     Consolidated Security Advisories</a> for more packages that aren't covered
     here.</p>
 
+    <a id="glfs-sa-12.4-003"/>
+    <h4>glfs-sa-12.4-003: FFmpeg - Rating: High (Date: December 4th, 2025)</h4>
+    <p>In FFmpeg-8.0.1, a security vulnerability was fixed that could
+    allow for use-after-free write operations. This
+    issue will not be fixed in FFmpeg-7.1.x.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59734">CVE-2025-59734</a>.
+    The issue can be triggered by multiple games, including LucasArts games.
+    Only an upgrade to FFmpeg-8.0.1 will fix the issue, but it breaks ABI and
+    API.</p>
+    <p>To upgrade to FFmpeg-8.0.1, follow the <a
+    href="https://glfs-book.github.io/glfs/wine/ffmpeg.html">FFmpeg
+    installation page</a>. SysVinit and Systemd instructions don't differ for
+    that page.</p>
+
+    <a id="glfs-sa-12.4-002"/>
+    <h4>glfs-sa-12.4-002: FFmpeg - Rating: High (Date: December 4th, 2025)</h4>
+    <p>In FFmpeg-7.1.3, two security vulnerabilities were fixed that could
+    allow for out-of-bounds write operations and integer overflows. These
+    issues are fixed in FFmpeg-8.0.1.
+    These security vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59733">CVE-2025-59733</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-63757">CVE-2025-63757</a>.</p>
+    <p>There is another vulnerability that most likely will not be fixed in
+    FFmpeg-7.1.x because the fixes required cannot be backported easily. It
+    allows for use-after-free write operations, and has a High rating.
+    That vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59734">CVE-2025-59734</a>.
+    The issue can be triggered by multiple games, including LucasArts games.
+    Only an upgrade to FFmpeg-8.0.1 will fix the issue, but it breaks ABI and
+    API.</p>
+    <p>Until most packages in BLFS and all of the packages in GLFS+SLFS are
+    tested and adapted, GLFS will keep FFmpeg at version 7.1.x. The
+    installation page for FFmpeg covers how to upgrade to version 8.0.1 to
+    solve that vulnerability.</p>
+    <p>To upgrade to FFmpeg-7.1.3 (or FFmpeg-8.0.1), follow the <a
+    href="https://glfs-book.github.io/glfs/wine/ffmpeg.html">FFmpeg
+    installation page</a>. SysVinit and Systemd instructions don't differ for
+    that page.</p>
+
     <a id="glfs-sa-12.4-001"/>
     <h4>glfs-sa-12.4-001: NVIDIA - Rating: High (Date: October 10th, 2025)</h4>
-    <p>In NVIDIA-580.95.05, 8 security vulnerabilities were fixed that could
-    allow for arbitrary code exectution (ACE), denial of service, privilege
-    escalation, data tampering, and information disclosure.
+    <p>In NVIDIA-580.95.05, eight security vulnerabilities were fixed that
+    could allow for arbitrary code exectution (ACE), denial of service,
+    privilege escalation, data tampering, and information disclosure.
     These security vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23280">CVE-2025-23280</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23282">CVE-2025-23282</a>,
@@ -93,7 +154,7 @@
     <br/>
 
     <h2>12.3 to 12.4</h2>
-    <h3>Broken changes</h3>
+    <h2>Broken changes</h2>
     <p>Packages removed from GLFS that are in BLFS may have gotten security
     updates. Read <a href="/blfs/advisories/12.3.html">BLFS 12.3 Security
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
@@ -160,9 +221,7 @@
     used it. It had no lib32 installation instructions, so feel free to follow
     BLFS for updates to the luit package.</p>
 
-    <br/>
-
-    <h3>Security Advisories</h3>
+    <h2>Security Advisories</h2>
     <p>Please read <a href="/blfs/advisories/12.3.html">BLFS 12.3 Security
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
     Consolidated Security Advisories</a> for more packages that aren't covered
