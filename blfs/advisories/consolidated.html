@@ -64,6 +64,27 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-060"/>
+    <h4>12.4 060 WebKitGTK    Date: 2025-12-16  Severity: Critical</h4>
+    <p>In WebKitGTK-2.50.4, seven security vulnerabilities were fixed
+    that could allow for memory corruption, crashes (Denial of Service), and
+    arbitrary code execution (ACE). The ACE issue is actively exploited and
+    documented by both Apple and CISA (Cybersecurity &amp; Infrastructure
+    Security Agency).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14174">CVE-2025-14174</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43501">CVE-2025-43501</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43529">CVE-2025-43529</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43531">CVE-2025-43531</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43535">CVE-2025-43535</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43536">CVE-2025-43536</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43541">CVE-2025-43541</a>.</p>
+    <p>As the ACE issue is actively exploited and is critical in nature on its
+    own, update <em>IMMEDIATELY</em> to WebKitGTK-2.50.4 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
     <a id="sa-12.4-059"/>
     <h4>12.4 059 SpiderMonkey  Date: 2025-12-16  Severity: High</h4>
     <p>In SpiderMonkey from Firefox-140.6.0esr, three security vulnerabilities
