@@ -64,6 +64,22 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-062"/>
+    <h4>12.4 062 Exim         Date: 2025-12-20  Severity: High</h4>
+    <p>In Exim-4.99.1, a security vulnerability was fixed that could allow for
+    a remote heap buffer overflow in some situations because database records
+    are cast directly to internal structures without validation. This only
+    affects some non-default rate-limit configurations when using SQLite or
+    hintdb as the database backend. The default configuration in BLFS is not
+    affected, but if you have modified the rate limit configurations, you
+    should update to Exim-4.99.1. There is no need to update otherwise.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-67896">CVE-2025-67896</a>.</p>
+    <p>To fix this vulnerability, update to Exim-4.99.1 or later using the
+    instructions from
+    <a href="../view/svn/server/exim.html">Exim (sysv)</a> or
+    <a href="../view/systemd/server/exim.html">Exim (systemd)</a>.</p>
+
     <a id="sa-12.4-061"/>
     <h4>12.4 061 Kea DHCP Server Date: 2025-12-20  Severity: High</h4>
     <p>In Kea-3.0.2, a security vulnerability was fixed that could allow for
@@ -78,7 +94,7 @@
     is <em>NOT</em> empty.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11232">CVE-2025-11232</a>.</p>
-    <p>To fix these vulnerabilities, update to Kea-3.0.2 or later using the
+    <p>To fix this vulnerability, update to Kea-3.0.2 or later using the
     instructions from
     <a href="../view/svn/server/kea.html">Kea (sysv)</a> or
     <a href="../view/systemd/server/kea.html">Kea (systemd)</a>.</p>

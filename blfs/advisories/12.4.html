@@ -192,6 +192,21 @@
 
 <!-- end of Dovecot -->
 
+    <h3>Exim</h3>
+
+    <a id="sa-12.4-062"/>
+    <h4>12.4 062 Exim         Date: 2025-12-20  Severity: High</h4>
+    <p>In Exim-4.99.1, a security vulnerability was fixed that could allow for
+    a remote heap buffer overflow in some situations because database records
+    are cast directly to internal structures without validation. This only
+    affects some non-default rate-limit configurations when using SQLite or
+    hintdb as the database backend. The default configuration in BLFS is not
+    affected, but if you have modified the rate limit configurations, you
+    should update to Exim-4.99.1. There is no need to update otherwise.
+    <a href="consolidated.html#sa-12.4-062">12.4-062</a></p>
+
+<!-- end of Exim -->
+
     <h3>Exiv2</h3>
 
     <a id="sa-12.4-010"/>
