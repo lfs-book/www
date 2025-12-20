@@ -64,6 +64,25 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-057"/>
+    <h4>12.4 057 Kea DHCP Server Date: 2025-12-20  Severity: High</h4>
+    <p>In Kea-3.0.2, a security vulnerability was fixed that could allow for
+    clients to crash the DHCP server. This issue is highly configuration
+    dependent. Unfortunately though, the default BLFS configuration is affected
+    because it uses Dynamic DNS updates. Users who are using the default BLFS
+    configuration of Kea should update to 3.0.2 as soon as possible because the
+    vulnerability is easy to exploit with certain options contained in DHCP
+    requests. For users not using the BLFS configuration, you are affected if
+    "hostname-char-replacement" is empty (which is the default setting),
+    "hostname-char-set" is at the default setting, and "ddns-qualifying-suffix"
+    is <em>NOT</em> empty.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11232">CVE-2025-11232</a>.</p>
+    <p>To fix these vulnerabilities, update to Kea-3.0.2 or later using the
+    instructions from
+    <a href="../view/svn/server/kea.html">Kea (sysv)</a> or
+    <a href="../view/systemd/server/kea.html">Kea (systemd)</a>.</p>
+
     <a id="sa-12.4-056"/>
     <h4>12.4 056 glib         Date: 2025-12-08  Severity: High</h4>
     <p>In glib-2.86.3, a security vulnerability was fixed that could allow for
