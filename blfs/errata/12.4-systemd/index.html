@@ -33,6 +33,11 @@
        is disabled even though users will have Boost installed. To fix this,
        run <code>sed -i "s/'system',//" meson.build</code> prior to changing
        into the 'bld' directory.</li>
+       <li>At the request of the system administrators at the Free Software 
+       Foundation we need to change all references to ftp.gnu.org/gnu to 
+       ftpmirror.gnu.org. There are 31 references to ftp.ftp.gnu.org/gnu 
+       in BLFS 12.4. When downloading these files, use the newer URL
+       to reduce the apparant hangs that sometimes occur.</li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
