@@ -64,6 +64,30 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-063"/>
+    <h4>12.4 063 Python (LFS and BLFS)  Date: 2025-12-23  Severity: Medium</h4>
+    <p>In Python-3.13.11 and Python-3.14.2, seven security vulnerabilities were
+    fixed that could allow for accepting inconsistent zip64 central directory
+    records, incorrect handling of maximum rows, lack of support for the
+    plaintext element, unensured linear complexity for parsing legacy HTTP
+    parameters, incorrect quadratic complexity, and denial of services.
+    Some of these vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8291">CVE-2025-8291</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12084">CVE-2025-12084</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13836">CVE-2025-13836</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13837">CVE-2025-13837</a>.
+    The rest haven't been assigned CVEs but have GitHub issues associated with
+    them:
+    <a href="https://github.com/python/cpython/issues/136063">gh-136063</a>,
+    <a href="https://github.com/python/cpython/issues/137836">gh-137836</a>, and
+    <a href="https://github.com/python/cpython/issues/139283">gh-139283</a>.</p>
+    <p>To fix these vulnerabilities, update Python. If you are on
+    Python-3.13.x, update to Python-3.13.11. Meanwhile, if you are on
+    Python-3.14.x, update to Python-3.14.2. In order to do so, follow the
+    instructions from
+    <a href="../view/svn/general/python.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python.html">Python (systemd)</a>.</p>
+
     <a id="sa-12.4-062"/>
     <h4>12.4 062 Exim         Date: 2025-12-20  Severity: High</h4>
     <p>In Exim-4.99.1, a security vulnerability was fixed that could allow for
