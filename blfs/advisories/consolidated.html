@@ -64,6 +64,141 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-063"/>
+    <h4>12.4 063 Python (LFS and BLFS)  Date: 2025-12-23  Severity: Medium</h4>
+    <p>In Python-3.13.11 and Python-3.14.2, seven security vulnerabilities were
+    fixed that could allow for accepting inconsistent zip64 central directory
+    records, incorrect handling of maximum rows, lack of support for the
+    plaintext element, unensured linear complexity for parsing legacy HTTP
+    parameters, incorrect quadratic complexity, and denial of services.
+    Some of these vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8291">CVE-2025-8291</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12084">CVE-2025-12084</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13836">CVE-2025-13836</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13837">CVE-2025-13837</a>.
+    The rest haven't been assigned CVEs but have GitHub issues associated with
+    them:
+    <a href="https://github.com/python/cpython/issues/136063">gh-136063</a>,
+    <a href="https://github.com/python/cpython/issues/137836">gh-137836</a>, and
+    <a href="https://github.com/python/cpython/issues/139283">gh-139283</a>.</p>
+    <p>To fix these vulnerabilities, update Python. If you are on
+    Python-3.13.x, update to Python-3.13.11. Meanwhile, if you are on
+    Python-3.14.x, update to Python-3.14.2. In order to do so, follow the
+    instructions from
+    <a href="../view/svn/general/python.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python.html">Python (systemd)</a>.</p>
+
+    <a id="sa-12.4-062"/>
+    <h4>12.4 062 Exim         Date: 2025-12-20  Severity: High</h4>
+    <p>In Exim-4.99.1, a security vulnerability was fixed that could allow for
+    a remote heap buffer overflow in some situations because database records
+    are cast directly to internal structures without validation. This only
+    affects some non-default rate-limit configurations when using SQLite or
+    hintdb as the database backend. The default configuration in BLFS is not
+    affected, but if you have modified the rate limit configurations, you
+    should update to Exim-4.99.1. There is no need to update otherwise.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-67896">CVE-2025-67896</a>.</p>
+    <p>To fix this vulnerability, update to Exim-4.99.1 or later using the
+    instructions from
+    <a href="../view/svn/server/exim.html">Exim (sysv)</a> or
+    <a href="../view/systemd/server/exim.html">Exim (systemd)</a>.</p>
+
+    <a id="sa-12.4-061"/>
+    <h4>12.4 061 Kea DHCP Server Date: 2025-12-20  Severity: High</h4>
+    <p>In Kea-3.0.2, a security vulnerability was fixed that could allow for
+    clients to crash the DHCP server. This issue is highly configuration
+    dependent. Unfortunately though, the default BLFS configuration is affected
+    because it uses Dynamic DNS updates. Users who are using the default BLFS
+    configuration of Kea should update to 3.0.2 as soon as possible because the
+    vulnerability is easy to exploit with certain options contained in DHCP
+    requests. For users not using the BLFS configuration, you are affected if
+    "hostname-char-replacement" is empty (which is the default setting),
+    "hostname-char-set" is at the default setting, and "ddns-qualifying-suffix"
+    is <em>NOT</em> empty.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11232">CVE-2025-11232</a>.</p>
+    <p>To fix this vulnerability, update to Kea-3.0.2 or later using the
+    instructions from
+    <a href="../view/svn/server/kea.html">Kea (sysv)</a> or
+    <a href="../view/systemd/server/kea.html">Kea (systemd)</a>.</p>
+
+    <a id="sa-12.4-060"/>
+    <h4>12.4 060 WebKitGTK    Date: 2025-12-16  Severity: Critical</h4>
+    <p>In WebKitGTK-2.50.4, seven security vulnerabilities were fixed
+    that could allow for memory corruption, crashes (Denial of Service), and
+    arbitrary code execution (ACE). The ACE issue is actively exploited and
+    documented by both Apple and CISA (Cybersecurity &amp; Infrastructure
+    Security Agency).
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14174">CVE-2025-14174</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43501">CVE-2025-43501</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43529">CVE-2025-43529</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43531">CVE-2025-43531</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43535">CVE-2025-43535</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43536">CVE-2025-43536</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-43541">CVE-2025-43541</a>.</p>
+    <p>As the ACE issue is actively exploited and is critical in nature on its
+    own, update <em>IMMEDIATELY</em> to WebKitGTK-2.50.4 or later using
+    the instructions from
+    <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
+    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+
+    <a id="sa-12.4-059"/>
+    <h4>12.4 059 SpiderMonkey  Date: 2025-12-16  Severity: High</h4>
+    <p>In SpiderMonkey from Firefox-140.6.0esr, three security vulnerabilities
+    were fixed fixed that could allow for sandbox escapes and JIT
+    miscompilations. These vulnerabilities has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14322">CVE-2025-14322</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14324">CVE-2025-14324</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14325">CVE-2025-14325</a>.</p>
+    <p>To fix these vulnerabilities, update to SpiderMonkey from
+    Firefox-140.6.0esr using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
+    <a id="sa-12.4-058"/>
+    <h4>12.4 058 Firefox  Date: 2025-12-16  Severity: High</h4>
+    <p>In Firefox-140.6.0esr, ten security vulnerabilities were fixed
+    that could allow for use-after-free operations, sandbox escapes, privilege
+    escalation, JIT miscompilations, same-origin bypasses, and memory safety
+    issues. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14321">CVE-2025-14321</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14322">CVE-2025-14322</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14323">CVE-2025-14323</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14324">CVE-2025-14324</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14325">CVE-2025-14325</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14328">CVE-2025-14328</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14329">CVE-2025-14329</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14330">CVE-2025-14330</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14331">CVE-2025-14331</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14333">CVE-2025-14333</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-140.6.0esr using the
+    instructions from <a href="../view/svn/xsoft/firefox.html">Firefox
+    (sysv)</a> or <a href="../view/systemd/xsoft/firefox.html">Firefox
+    (systemd)</a>.</p>
+
+    <a id="sa-12.4-057"/>
+    <h4>12.4 057 Thunderbird  Date: 2025-12-16  Severity: High</h4>
+    <p>In Thunderbird-140.6.0esr, ten security vulnerabilities were fixed
+    that could allow for use-after-free operations, sandbox escapes, privilege
+    escalation, JIT miscompilations, same-origin bypasses, and memory safety
+    issues. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14321">CVE-2025-14321</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14322">CVE-2025-14322</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14323">CVE-2025-14323</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14324">CVE-2025-14324</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14325">CVE-2025-14325</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14328">CVE-2025-14328</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14329">CVE-2025-14329</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14330">CVE-2025-14330</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14331">CVE-2025-14331</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14333">CVE-2025-14333</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-140.6.0esr using the
+    instructions from <a href="../view/svn/xsoft/thunderbird.html">Thunderbird
+    (sysv)</a> or <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird
+    (systemd)</a>.</p>
+
     <a id="sa-12.4-056"/>
     <h4>12.4 056 glib         Date: 2025-12-08  Severity: High</h4>
     <p>In glib-2.86.3, a security vulnerability was fixed that could allow for
