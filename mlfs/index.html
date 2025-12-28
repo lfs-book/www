@@ -3,131 +3,105 @@
 <!--#include virtual="menu.html" -->
 
     <div class="main">
-    <h1>What is MLFS (Multilib-LFS)?</h1>
+    <h1>What is Multilib Linux From Scratch?</h1>
 
     <p>
-      Multilib-LFS is a variant of the <a href="/lfs/view/development/">LFS book</a>.
-      This variant builds a system which is able to execute 32-bit binaries.
+      Multilib Linux From Scratch is a variant of the <a
+      href="/lfs/view/development/">LFS book</a> which sets up an LFS system
+      that is able to build and execute 32-bit binaries.
     </p>
 
     <p>
-      That sounds trivial, but it isn't. Nowadays, nearly all CPUs in our
-      computers are 64-bit, and most of them are Intel-compatible.
-      This has happened before, many years ago, where 16-bit CPUs (8086)
-      were common and new 32-bit CPUs were coming up (80386). Common to all
-      these CPUs is that they are able to execute machine instructions of
-      previous architectures, meaning that a 32-bit CPU can execute 16-bit
-      instructions, a 64-bit CPU can execute 32-bit instructions, and so on.
-      The problem is that the binary format in which those instructions
-      are stored differs.
+      Most x86 systems in the hands of users today are 64-bit, but 32-bit
+      systems are still in use and in some cases are actively produced. They
+      used to be a lot more common and had a lot of software made for them.
+      From this, there are certain cases where a project is only for 32-bit
+      or requires that the operating system can run 32-bit software.
     </p>
 
     <p>
-      Since this CPU architecture has existed for decades now, there is also
-      a lot of software written for it. Unfortunatly, some of this software
-      is only available in a pre-compiled binary, and no source code is
-      available anymore. This can be due to several different reasons, such
-      as the source code getting lost or never being published due to licensing
-      issues or because the creator did not want to release the source code.
-      In these cases though, the binary is still available.
+      The problem is that 32-bit software is different from 64-bit software.
+      Differences range from using different registers, different kernel codes,
+      among more. With some help from the kernel, most 64-bit CPUs can emulate
+      32-bit software. However, it is likely that the 32-bit software depends
+      on more software in that same format. That's the biggest issue that
+      MLFS solves. The book arms the system with the libraries necessary for
+      basic 32-bit emulation alongside the tools that are necessary to build
+      them.
     </p>
 
     <p>
-      Since the format of 64-bit and 32-bit binaries are different, these
-      old programs cannot be executed on modern systems. This is where
-      the multilib systems come to play and therefore Multilib-LFS. Multilib
-      systems provide the environment so that 32-bit binaries can be executed
-      on a 64-bit OS as well. This needs to be support in the kernel, but it
-      also needs several other core libraries to be available in 32-bit
-      versions.
-    </p>
-
-    <p>
-      But thats not all. There is another architecture which is somewhat
-      between 32- and 64-bit. Its called x32. That is, the binaries operate
-      with the full instruction set of a 64-bit CPU, but address space is
-      limited to 32-bit (~4GB). Executing such binaries does either need a
-      system built explicitly for x32 or a multilib system which is capable
-      of running those binaries.
-    </p>
-
-    <p>
-      The Multilib-LFS book is based on the actual LFS book but has some
-      extensions in the instructions. In most cases, this extensions are
-      repetitions of the build instructions, but just in another mode
-      (m32 and/or mx32).
+      Furthermore, this book covers the installation of x32-bit libraries.
+      x32-bit software operates with 64-bit instructions but only with a 32-bit
+      address space. Typically, only software that is open source can target
+      x32-bit. Most proprietary software never bother with it.
     </p>
 
     <h2>Why would I want an MLFS system?</h2>
-    <p>Usually, there is no need to run a multilib system. But there
-    might be circumstances where you need one:</p>
-
-    <h3>Old software only available as binary</h3>
-    <p>There might be software you want to use where that software is 32bit
-    and there are no sources available to recompile it. Even when source
-    code is available though, it might not be possible to recompile because of
-    unresolvable dependencies to other (old) packages. A printer driver
-    only available as 32bit binary was one of the reasons to kick-off
-    the mlfs project.</p>
-
-    <h3>Other software requires multilib</h3>
-    <p>For virtualization (here <a href="https://www.virtualbox.org/">VirtualBox</a>) m32-multilib
-    is named as a prerequisite. When you want to install VirtualBox
-    on a LFS system to be your VM host, only four additional non-BLFS
-    packages are need. If you want to rebuild the 64bit and 32bit guest
-    additions, a multilib OS is required to build them.</p>
-    <p>Also, <a href="/glfs">GLFS (Gaming LFS)</a> depends on multilib.</p>
+    <p>
+      There are various situations in which you would need the ability to run
+      32-bit software. For instance, some software may be proprietary and is
+      intended to run on the most systems possible. In this case, 32-bit can be
+      seen as a baseline, which 64-bit CPUs can emulate. Other times, the
+      target software is very old and the developers stopped targeting x86 in
+      the way that they used to. 32-bit software thus ends up as an artifact of
+      its time but may be necessary nonetheless as it may be the only viable
+      driver for a given device. Other instances can be a result of
+      virtualization. <a href="/glfs">GLFS</a> and <a href="/slfs">SLFS</a>
+      have packages that fall into those camps.
+    </p>
 
     <h2>Read online</h2>
     <p>
-      There are three versions of the Multilib-LFS online for <tt>sysv</tt>:
+      For SysVinit:
       <ul>
-        <li><a href="/~thomas/multilib-m32/">MLFS-sysv with m32 extensions</a>
+        <li><a href="/~thomas/multilib-m32/">MLFS with m32 extensions</a>
            (probably what you want)</li>
-        <li><a href="/~thomas/multilib-mx32/">MLFS-sysv with mx32 extensions</a></li>
-        <li><a href="/~thomas/multilib/">MLFS-sysv including both extensions</a></li>
+        <li><a href="/~thomas/multilib-mx32/">MLFS with mx32 extensions</a></li>
+        <li><a href="/~thomas/multilib/">MLFS with both extensions</a></li>
       </ul>
-      and three versions for <tt>systemd</tt>
+    </p>
+    <p>
+      For Systemd:
       <ul>
-        <li><a href="/~thomas/multilib-systemd-m32/">MLFS-systemd with m32 extensions</a>
-           (probably what you want if you like systemd)</li>
-        <li><a href="/~thomas/multilib-systemd-mx32/">MLFS-systemd with mx32 extensions</a></li>
-        <li><a href="/~thomas/multilib-systemd/">MLFS-systemd including both extensions</a></li>
+        <li><a href="/~thomas/multilib-systemd-m32/">MLFS (Systemd)
+          with m32 extensions</a>
+          (probably what you want)</li>
+        <li><a href="/~thomas/multilib-systemd-mx32/">MLFS (Systemd)
+          with mx32 extensions</a></li>
+        <li><a href="/~thomas/multilib-systemd/">MLFS (Systemd)
+          with both extensions</a></li>
       </ul>
-      These books are created when the LFS trunk has been merged to
-      the multilib branch. That merge is currently done manually and
-      therefore, it might be a few days behind.
     </p>
 
-    <h2>Limitations</h2>
-    <ul>
-      <li>
-        MLFS is hard to test unless there are old binaries available to use.
-        When such a binary is executable, it unfortunatly does not mean
-        that any other of those binaries will run, too. There might be
-        BLFS library packages required as dependencies in that particular
-        multilib environment. Neither MLFS nor BLFS covers that at the
-        moment (there is no MBLFS) but MLFS should give the user an idea on how
-        to build multilib versions of libraries.
-      </li>
-      <li>
-        MLFS is available for <tt>sysv</tt> and <tt>systemd</tt> as usual
-        (<tt>REV=sysv</tt> or <tt>REV=systemd</tt> as parameter to the make
-        command. See <a href="download.html">Download</a>).
-        Note that the systemd variant is currently maintained on a "best guess"
-        basis. That means that the systemd related instructions are
-        <i>not</i> tested. If you notice errors in that instructions, let me
-        know.
-      </li>
-    </ul>
+    <h2>Going Beyond MLFS</h2>
+    <p>
+      While MLFS is a variant of LFS, there isn't a variant of BLFS that is as
+      big as BLFS with multilib instructions; however, a good substitute is <a
+      href="/glfs">GLFS</a> which builds a good amount of 32-bit libraries and
+      enables 32-bit support in various toolchains like LLVM and Rustc. Take
+      and leave according to what you need.
+    </p>
+
+    <p>
+      Something worth keeping in mind is BLFS, GLFS, and SLFS are actively
+      tested with systems built with MLFS. Compatibility is strong. Using MLFS
+      instead of LFS is safe and is tested at the same time the rest of the LFS
+      books are.
+    </p>
 
     <h2>Thanks to</h2>
     <ul>
+      <li>Previous MLFS contributor: DJ Lucas</li>
+      <li>MLFS contributor:          Douglas Reno</li>
+      <li>MLFS contributor:          Xi Ruoyao</li>
+      <li>Previous editor:           Thomas Trepl</li>
+      <li>Editor:                    Zeckma</li>
       <li>William Feely who started a
           <a href="https://www.williamfeely.info/lfs-multilib/">similar project</a>
           a decade ago
       </li>
-      <li>DJ Lucas, Xi Ruoyao, Douglas R. Reno and many others more</li>
+      <li>Plus many more.</li>
     </ul>
 
 <!--#include virtual="/common/footer.html" -->
