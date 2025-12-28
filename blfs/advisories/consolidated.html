@@ -64,6 +64,27 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-064"/>
+    <h4>12.4 064 PHP                    Date: 2025-12-28  Severity: Medium</h4>
+    <p>In PHP-8.5.1, four security vulnerabilities were fixed that could allow
+    for information disclosure, heap buffer overflows, and denial of service
+    conditions (resource exhaustion and crashes). One of these vulnerabilities
+    occurs in a common component bundled with PHP that is also used by other
+    packages not in BLFS, known as uriparser. The remainder of the issues occur
+    in the PDO, Standard Library, and URI components. Users who have PHP
+    installed for any reason are recommended to update to this version of PHP
+    because of the vulnerabilities in the Standard Library.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14177">CVE-2025-14177</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14178">CVE-2025-14178</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14180">CVE-2025-14180</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-67899">CVE-2025-67899</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.5.1 or later using the
+    instructions from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <p>Alternatively, users may use PHP-8.4.16 using the same instructions.</p>
+
     <a id="sa-12.4-063"/>
     <h4>12.4 063 Python (LFS and BLFS)  Date: 2025-12-23  Severity: Medium</h4>
     <p>In Python-3.13.11 and Python-3.14.2, seven security vulnerabilities were
