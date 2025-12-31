@@ -589,6 +589,16 @@
 
     <h3>Ruby</h3>
 
+    <a id="sa-12.4-065"/>
+    <h4>12.4 065 Ruby                   Date: 2025-12-31  Severity: Low</h4>
+    <p>In Ruby-3.4.8, a security vulnerability was fixed in the bundled REXML
+    gem that can allow for a denial of service condition (application crash).
+    The vulnerability can occur when parsing XML that has multiple XML
+    declarations, but users are unaffected unless they are processing untrusted
+    XML files through Ruby. Update to Ruby-3.4.8 if you are processing untrusted
+    XML files and notice crashes.
+    <a href="consolidated.html#sa-12.4-065">12.4-065</a></p>
+
     <a id="sa-12.4-019"/>
     <h4>12.4 019 Ruby          Date: 2025-10-10 Severity: High</h4>
     <p>In Ruby-3.4.7, a security vulnerability was fixed that could allow
