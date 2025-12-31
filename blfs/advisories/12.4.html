@@ -396,6 +396,20 @@
 
 <!-- end of libarchive -->
 
+    <h3>libpcap</h3>
+
+    <a id="sa-12.4-066"/>
+    <h4>12.4 066 libpcap                Date: 2025-12-31  Severity: Low</h4>
+    <p>In libpcap-1.10.6, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when applications call the
+    pcap_ether_aton() function with crafted inputs. Upstream has rated the
+    vulnerability as Low because the attack complexity is high and it requires
+    root privileges to exploit. There is no reason to upgrade unless you are
+    having crashes in Wireshark, umockdev, or nmap. Update to libpcap-1.10.6.
+    <a href="consolidated.html#sa-12.4-066">12.4-066</a></p>
+
+<!-- end of libpcap -->
+
     <h3>libpng</h3>
 
     <a id="sa-12.4-047"/>

@@ -64,6 +64,28 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-066"/>
+    <h4>12.4 066 libpcap                Date: 2025-12-31  Severity: Low</h4>
+    <p>In libpcap-1.10.6, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when applications call the
+    pcap_ether_aton() function with crafted inputs. The function takes in a
+    string argument and returns a fixed-size allocated buffer, but the string
+    argument must be a well-formed MAC-48 address in a supported format, and
+    the requirement was not documented well. If an application calls the function
+    with an argument that deviates from the expected format, the function can
+    read data beyond the end of the provided string and write data beyond the
+    end of the buffer that gets allocated. In the case of BLFS however, the
+    only applications that use libpcap are Wireshark, nmap, and umockdev. If
+    you notice crashes in these applications, you should update to this version
+    of libpcap. However, upstream has rated the vulnerability as Low because
+    the attack complexity is high and it requires root privileges to exploit.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11961">CVE-2025-11961</a>.</p>
+    <p>To fix this vulnerability, update to libpcap-1.10.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libpcap.html">libpcap (sysv)</a> or
+    <a href="../view/systemd/basicnet/libpcap.html">libpcap (systemd)</a>.</p>
+
     <a id="sa-12.4-065"/>
     <h4>12.4 065 Ruby                   Date: 2025-12-31  Severity: Low</h4>
     <p>In Ruby-3.4.8, a security vulnerability was fixed in the bundled REXML
