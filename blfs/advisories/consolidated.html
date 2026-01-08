@@ -64,6 +64,35 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-067"/>
+    <h4>12.4 067 OpenJDK                Date: 2026-01-07  Severity: High</h4>
+    <p>In OpenJDK-21.0.9, three security vulnerabilities were fixed that
+    could allow for unauthenticated attackers to access any data on a system
+    running a Java application, for an unauthenticated attacker to create,
+    modify, or delete data accessible to a Java application, and for remotely
+    exploitable crashes. The data access vulnerability is under active
+    exploitation, and evidence has been shown that it's easy to exploit.
+    The vulnerabilities are in the JAXP, Security, and Libraries components.
+    None of the vulnerabilities require any user interaction or authentication
+    to exploit. BLFS 12.4 shipped with Java 24.0.2, but it's highly recommended
+    that users downgrade to 21.0.9 as it is the current LTS that works with the
+    applications in BLFS. Java 25 causes problems with Apache ANT, fop, and
+    others, and the BLFS team has elected to downgrade to the 21.x series
+    instead. No changes are required to other packages in the book to use this
+    version of Java.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53066">CVE-2025-53066</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53057">CVE-2025-53057</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61748">CVE-2025-61748</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-21.0.9 or later using
+    the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>If you want to use the pre-built binaries, update to Java-21.0.9 using
+    the instructions from
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
     <a id="sa-12.4-066"/>
     <h4>12.4 066 libpcap                Date: 2025-12-31  Severity: Low</h4>
     <p>In libpcap-1.10.6, a security vulnerability was fixed that could allow

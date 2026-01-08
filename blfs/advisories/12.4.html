@@ -461,6 +461,28 @@
 
 <!-- end of libxslt -->
 
+    <h3>OpenJDK</h3>
+
+    <a id="sa-12.4-067"/>
+    <h4>12.4 067 OpenJDK                Date: 2026-01-07  Severity: High</h4>
+    <p>In OpenJDK-21.0.9, three security vulnerabilities were fixed that
+    could allow for unauthenticated attackers to access any data on a system
+    running a Java application, for an unauthenticated attacker to create,
+    modify, or delete data accessible to a Java application, and for remotely
+    exploitable crashes. The data access vulnerability is under active
+    exploitation, and evidence has been shown that it's easy to exploit.
+    The vulnerabilities are in the JAXP, Security, and Libraries components.
+    None of the vulnerabilities require any user interaction or authentication
+    to exploit. BLFS 12.4 shipped with Java 24.0.2, but it's highly recommended
+    that users downgrade to 21.0.9 as it is the current LTS that works with the
+    applications in BLFS. Java 25 causes problems with Apache ANT, fop, and
+    others, and the BLFS team has elected to downgrade to the 21.x series
+    instead. No changes are required to other packages in the book to use this
+    version of Java. Update to OpenJDK-21.0.9 or the prebuilt binaries.
+    <a href="consolidated.html#sa-12.4-067">12.4-067</a></p>
+
+<!-- end of OpenJDK -->
+
     <h3>OpenJPEG</h3>
 
     <a id="sa-12.4-009"/>
