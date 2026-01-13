@@ -64,6 +64,94 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-067"/>
+    <h4>12.4 067 OpenJDK                Date: 2026-01-07  Severity: High</h4>
+    <p>In OpenJDK-21.0.9, three security vulnerabilities were fixed that
+    could allow for unauthenticated attackers to access any data on a system
+    running a Java application, for an unauthenticated attacker to create,
+    modify, or delete data accessible to a Java application, and for remotely
+    exploitable crashes. The data access vulnerability is under active
+    exploitation, and evidence has been shown that it's easy to exploit.
+    The vulnerabilities are in the JAXP, Security, and Libraries components.
+    None of the vulnerabilities require any user interaction or authentication
+    to exploit. BLFS 12.4 shipped with Java 24.0.2, but it's highly recommended
+    that users downgrade to 21.0.9 as it is the current LTS that works with the
+    applications in BLFS. Java 25 causes problems with Apache ANT, fop, and
+    others, and the BLFS team has elected to downgrade to the 21.x series
+    instead. No changes are required to other packages in the book to use this
+    version of Java.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53066">CVE-2025-53066</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53057">CVE-2025-53057</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61748">CVE-2025-61748</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-21.0.9 or later using
+    the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>If you want to use the pre-built binaries, update to Java-21.0.9 using
+    the instructions from
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
+    <a id="sa-12.4-066"/>
+    <h4>12.4 066 libpcap                Date: 2025-12-31  Severity: Low</h4>
+    <p>In libpcap-1.10.6, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when applications call the
+    pcap_ether_aton() function with crafted inputs. The function takes in a
+    string argument and returns a fixed-size allocated buffer, but the string
+    argument must be a well-formed MAC-48 address in a supported format, and
+    the requirement was not documented well. If an application calls the function
+    with an argument that deviates from the expected format, the function can
+    read data beyond the end of the provided string and write data beyond the
+    end of the buffer that gets allocated. In the case of BLFS however, the
+    only applications that use libpcap are Wireshark, nmap, and umockdev. If
+    you notice crashes in these applications, you should update to this version
+    of libpcap. However, upstream has rated the vulnerability as Low because
+    the attack complexity is high and it requires root privileges to exploit.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11961">CVE-2025-11961</a>.</p>
+    <p>To fix this vulnerability, update to libpcap-1.10.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libpcap.html">libpcap (sysv)</a> or
+    <a href="../view/systemd/basicnet/libpcap.html">libpcap (systemd)</a>.</p>
+
+    <a id="sa-12.4-065"/>
+    <h4>12.4 065 Ruby                   Date: 2025-12-31  Severity: Low</h4>
+    <p>In Ruby-3.4.8, a security vulnerability was fixed in the bundled REXML
+    gem that can allow for a denial of service condition (application crash).
+    The vulnerability can occur when parsing XML that has multiple XML
+    declarations, but users are unaffected unless they are processing untrusted
+    XML files through Ruby. If you process untrusted XML files and notice
+    crashes, you should update to this version of Ruby. Otherwise though there
+    is no need to upgrade.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-58767">CVE-2025-58767</a>.</p>
+    <p>To fix this vulnerability, update to Ruby-3.4.8 or later using the
+    instructions from
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
+    <a id="sa-12.4-064"/>
+    <h4>12.4 064 PHP                    Date: 2025-12-28  Severity: Medium</h4>
+    <p>In PHP-8.5.1, four security vulnerabilities were fixed that could allow
+    for information disclosure, heap buffer overflows, and denial of service
+    conditions (resource exhaustion and crashes). One of these vulnerabilities
+    occurs in a common component bundled with PHP that is also used by other
+    packages not in BLFS, known as uriparser. The remainder of the issues occur
+    in the PDO, Standard Library, and URI components. Users who have PHP
+    installed for any reason are recommended to update to this version of PHP
+    because of the vulnerabilities in the Standard Library.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14177">CVE-2025-14177</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14178">CVE-2025-14178</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14180">CVE-2025-14180</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-67899">CVE-2025-67899</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.5.1 or later using the
+    instructions from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <p>Alternatively, users may use PHP-8.4.16 using the same instructions.</p>
+
     <a id="sa-12.4-063"/>
     <h4>12.4 063 Python (LFS and BLFS)  Date: 2025-12-23  Severity: Medium</h4>
     <p>In Python-3.13.11 and Python-3.14.2, seven security vulnerabilities were

@@ -49,6 +49,28 @@
 
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-12.4-005"/>
+    <h4>slfs-sa-12.4-005: CDE - Rating: High (Date: January 7th, 2026)</h4>
+    <p>In CDE-2.5.3, along with numerous other improvements, several memory
+    safety problems were fixed. There were no CVEs assigned, but because of
+    the sensitive nature of some of the bugs, users should update to CDE-2.5.3
+    by following the instructions from the
+    <a href="https://glfs-book.github.io/slfs/wm/cde-de.html">CDE installation
+    page</a>. The SysVinit and systemd instructions for the page do differ
+    in the installation of bootscripts and systemd units, but users can use
+    the systemd-specific instructions from the SLFS 12.4 stable release if
+    this is a fresh installation, as no changes were made to the units.</p>
+
+    <a id="slfs-sa-12.4-004"/>
+    <h4>slfs-sa-12.4-004: i3 - Rating: High (Date: December 30th, 2025)</h4>
+    <p>In i3-4.25, along with other code improvements, the update fixed a
+    memory leak and use-after-free. These weren't assigned any IDs with any
+    security authority. To be safe, users should update to i3-4.25 or later by
+    following the <a
+    href="https://glfs-book.github.io/slfs/wm/i3-wm.html">i3
+    installation page</a>. SysVinit and Systemd instructions for the page do
+    not differ.</p>
+
     <a id="slfs-sa-12.4-003"/>
     <h4>slfs-sa-12.4-003: tornado - Rating: High (Date: December 15th, 2025)</h4>
     <p>In tornado-6.5.3, three security vulnerabilties were fixed that could

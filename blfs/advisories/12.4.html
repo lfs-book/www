@@ -396,6 +396,20 @@
 
 <!-- end of libarchive -->
 
+    <h3>libpcap</h3>
+
+    <a id="sa-12.4-066"/>
+    <h4>12.4 066 libpcap                Date: 2025-12-31  Severity: Low</h4>
+    <p>In libpcap-1.10.6, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when applications call the
+    pcap_ether_aton() function with crafted inputs. Upstream has rated the
+    vulnerability as Low because the attack complexity is high and it requires
+    root privileges to exploit. There is no reason to upgrade unless you are
+    having crashes in Wireshark, umockdev, or nmap. Update to libpcap-1.10.6.
+    <a href="consolidated.html#sa-12.4-066">12.4-066</a></p>
+
+<!-- end of libpcap -->
+
     <h3>libpng</h3>
 
     <a id="sa-12.4-047"/>
@@ -447,6 +461,28 @@
 
 <!-- end of libxslt -->
 
+    <h3>OpenJDK</h3>
+
+    <a id="sa-12.4-067"/>
+    <h4>12.4 067 OpenJDK                Date: 2026-01-07  Severity: High</h4>
+    <p>In OpenJDK-21.0.9, three security vulnerabilities were fixed that
+    could allow for unauthenticated attackers to access any data on a system
+    running a Java application, for an unauthenticated attacker to create,
+    modify, or delete data accessible to a Java application, and for remotely
+    exploitable crashes. The data access vulnerability is under active
+    exploitation, and evidence has been shown that it's easy to exploit.
+    The vulnerabilities are in the JAXP, Security, and Libraries components.
+    None of the vulnerabilities require any user interaction or authentication
+    to exploit. BLFS 12.4 shipped with Java 24.0.2, but it's highly recommended
+    that users downgrade to 21.0.9 as it is the current LTS that works with the
+    applications in BLFS. Java 25 causes problems with Apache ANT, fop, and
+    others, and the BLFS team has elected to downgrade to the 21.x series
+    instead. No changes are required to other packages in the book to use this
+    version of Java. Update to OpenJDK-21.0.9 or the prebuilt binaries.
+    <a href="consolidated.html#sa-12.4-067">12.4-067</a></p>
+
+<!-- end of OpenJDK -->
+
     <h3>OpenJPEG</h3>
 
     <a id="sa-12.4-009"/>
@@ -488,6 +524,23 @@
     <a href="consolidated.html#12.4-005">12.4-005</a></p>
 
 <!-- end of PCRE2 -->
+
+    <h3>PHP</h3>
+
+    <a id="sa-12.4-064"/>
+    <h4>12.4 064 PHP                    Date: 2025-12-28  Severity: Medium</h4>
+    <p>In PHP-8.5.1, four security vulnerabilities were fixed that could allow
+    for information disclosure, heap buffer overflows, and denial of service
+    conditions (resource exhaustion and crashes). One of these vulnerabilities
+    occurs in a common component bundled with PHP that is also used by other
+    packages not in BLFS, known as uriparser. The remainder of the issues occur
+    in the PDO, Standard Library, and URI components. Users who have PHP
+    installed for any reason are recommended to update to this version of PHP
+    because of the vulnerabilities in the Standard Library. Update to PHP-8.5.1
+    (or alternatively, 8.4.16).
+    <a href="consolidated.html#sa-12.4-064">12.4-064</a></p>
+
+<!-- end of PHP -->
 
     <h3>poppler</h3>
 
@@ -571,6 +624,16 @@
 <!-- end of rsync -->
 
     <h3>Ruby</h3>
+
+    <a id="sa-12.4-065"/>
+    <h4>12.4 065 Ruby                   Date: 2025-12-31  Severity: Low</h4>
+    <p>In Ruby-3.4.8, a security vulnerability was fixed in the bundled REXML
+    gem that can allow for a denial of service condition (application crash).
+    The vulnerability can occur when parsing XML that has multiple XML
+    declarations, but users are unaffected unless they are processing untrusted
+    XML files through Ruby. Update to Ruby-3.4.8 if you are processing untrusted
+    XML files and notice crashes.
+    <a href="consolidated.html#sa-12.4-065">12.4-065</a></p>
 
     <a id="sa-12.4-019"/>
     <h4>12.4 019 Ruby          Date: 2025-10-10 Severity: High</h4>
