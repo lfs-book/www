@@ -64,6 +64,21 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-070"/>
+    <h4>12.4 070 VLC                    Date: 2026-01-14  Severity: Critical</h4>
+    <p>In VLC-3.0.23, twenty-two security vulnerabilities were fixed that could
+    allow for out-of-bounds reads and writes, invalid memory freeing
+    operations, stack overflows, integer overflows, NULL dereferences,
+    undefined shifting, infinite loops, buffer overflows, and multiple-format
+    overflows. Only one of these vulnerabilities have had a CVE assigned, and
+    it's for an out-of-bounds read operation. It has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-51602">CVE-2025-51602</a>.</p>
+    <p>Since there are so many vulnerabilties fixed, it is highly
+    recommended to update <em>immediately</em> to VLC-3.0.23 or later by using
+    the instructions from <a href="../view/svn/multimedia/vlc.html">VLC
+    (sysv)</a> or <a href="../view/systemd/multimedia/vlc.html">VLC
+    (systemd)</a>.</p>
+
     <a id="sa-12.4-069"/>
     <h4>12.4 069 libtasn1               Date: 2026-01-14  Severity: High</h4>
     <p>In libtasn1-4.21.0, one security vulnerability was fixed that could allow
