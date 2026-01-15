@@ -64,6 +64,24 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-068"/>
+    <h4>12.4 068 cURL                    Date: 2026-01-14  Severity: Medium</h4>
+    <p>In cURL-8.18.0, six security vulnerabilities were fixed that could allow
+    for lack of QUIC certificate pinning with GnuTLS, broken TLS options,
+    bearer token leakage, OpenSSL partial chain store policy bypassing, libssh
+    global known_hosts overriding, and libssh key passphrase bypassing.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13034">CVE-2025-13034</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14017">CVE-2025-14017</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14524">CVE-2025-14524</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14819">CVE-2025-14819</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15079">CVE-2025-15079</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15224">CVE-2025-15224</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.18.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-12.4-067"/>
     <h4>12.4 067 OpenJDK                Date: 2026-01-07  Severity: High</h4>
     <p>In OpenJDK-21.0.9, three security vulnerabilities were fixed that
