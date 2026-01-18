@@ -17,6 +17,24 @@
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
     Consolidated Security Advisories</a> for such packages.</p>
 
+    <a id="slfs-brk-12.4-004"/>
+    <h4>slfs-brk-12.4-004: GNAT/GCC-Ada (Date: January 17th, 2026)</h4>
+    <p>The GNAT/GCC-Ada package has been dropped from SLFS. It was originally
+       in GLFS from the belief that it was needed for the MinGW-w64 toolchain
+       as Wine might need that Ada support. This is not the case as every DLL
+       in Wine is written in C. After learning this, the GNAT package was
+       removed from GLFS. After a year or so, it was added in SLFS. The grounds
+       for its addition weren't particularly strong, especially so since no
+       package in SLFS, GLFS, or BLFS needed it. It took time to ensure it
+       works, with no benefit. Another issue is that its installation could be
+       potentially dangerous for multiple reasons, namely for multilib support.
+       This is because GNAT is just GCC with Ada, a part of normal GCC, so the
+       installed GCC from LFS/MLFS/BLFS will get reinstalled, which can result
+       in something important lost, like x32-bit support for example. One wrong
+       mistake can also result in 32-bit support being removed from the
+       toolchain. It's much safer and easier for the SLFS team to say good-bye
+       to GNAT. GNAT won't be coming to GLFS or BLFS.</p>
+
     <a id="slfs-brk-12.4-003"/>
     <h4>slfs-brk-12.4-003: CUDA (Date: December 23rd, 2025)</h4>
     <p>The CUDA package has been moved to GLFS. NVIDIA recently released the
