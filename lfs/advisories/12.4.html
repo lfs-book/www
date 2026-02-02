@@ -48,7 +48,6 @@
     <!\-\- End of PackageName -->
     <!-- End of template -->
 
-<!--
     <h3>Glibc</h3>
 
     <p style="font-style: italic;">Updating Glibc from an earlier version
@@ -57,19 +56,12 @@
     book section for Glibc.  Follow it strictly or you may render the
     system completely unusable.</p>
 
-    <a id="sa-12.3-085"/>
-    <h4>12.3 085 glibc (LFS)              Date: 2025-08-05  Severity: Medium</h4>
-    <p>In glibc-2.42, a security vulnerability was fixed that can allow for
-    a double free when using the regcomp() function. The double free can be
-    accomplished by a malloc failure or by using an interposed malloc that
-    injects random malloc failures, and the double free is known to cause
-    buffer manipulation depending on how the regex passed to regcomp is
-    constructed. All versions from glibc-2.4 to 2.41 are known to be affected.
-    This can cause arbitrary code execution or a denial of service.</p>
-
-    <p>Please read the link to fix this vulnerability:
-    <a href="../../blfs/advisories/consolidated.html#sa-12.3-085">12.3-085</a></p>
--->
+    <a id="sa-12.4-079"/>
+    <h4>12.4 079 glibc (LFS)  Date: 2026-02-01  Severity: High</h4>
+    <p>In glibc-2.43, four security vulnerabilities were fixed
+    that could allow for buffer overflows, failure to save and restore
+    nonvolatile vectors, and double-free operations. Update to glibc-2.43.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.4-079">12.4-079</a></p>
 
 <!-- end of Glibc -->
 
