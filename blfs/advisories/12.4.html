@@ -383,6 +383,22 @@
 
 <!-- end of GnuTLS -->
 
+    <h3>gstreamer</h3>
+
+    <a id="sa-12.4-080"/>
+    <h4>12.4 080 gst-plugins-bad  Date: 2026-02-04  Severity: High</h4>
+    <p>In gst-plugins-bad-1.26.10, two security vulnerabilities were fixed
+    that could allow for out-of-bounds read operations in the MIDI parser, in
+    turn leading to a crash (DOS). Not many packages in BLFS, if any, use the
+    MIDI parser from gst-plugins-bad. Most opt for other solutions like
+    FluidSynth. There is still a possibility of a package using it, so users
+    should update regardless. Update to gstreamer, gst-plugins-base, and
+    gst-plugins-bad 1.26.10 or later. gstreamer-1.28.0 is ABI compatible with
+    1.26.x.
+    <a href="consolidated.html#sa-12.4-080">12.4-080</a></p>
+
+<!-- end of gstreamer -->
+
     <h3>Kea DHCP Server</h3>
 
     <a id="sa-12.4-061"/>
