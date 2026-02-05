@@ -64,6 +64,24 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-082"/>
+    <h4>12.4 082 BIND Date: 2026-02-05 Severity: High</h4>
+    <p>In BIND-9.20.18, a security vulnerability was fixed that could allow for
+    remote attackers to force the BIND DNS server to terminate unexpectedly.
+    The problem occurs whenever the server receives and attempts to parse
+    malformed BRID or HHIT records. The maximum extent of the vulnerability
+    is a denial of service condition (crash), but because it can be exploited
+    via standard DNS resolution, so users who are using it for a local caching
+    resolver can also be impacted by this vulnerability. However, the client
+    utilities are not impacted. If you are using BIND as a DNS server in any
+    capacity though, the BLFS team recommends updating to this version.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13878">CVE-2025-13878</a>.</p>
+    <p>To fix this vulnerability, update to BIND-9.20.18 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-12.4-081"/>
     <h4>12.4 081 Thunderbird  Date: 2026-02-04  Severity: Medium</h4>
     <p>In Thunderbird-140.7.1esr, one security vulnerability was fixed that
