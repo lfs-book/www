@@ -64,6 +64,30 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-083"/>
+    <h4>12.4 083 GnuPG  Date: 2026-02-05  Severity: High</h4>
+    <p>In GnuPG-2.5.17, three security vulnerabilities were fixed that could
+    allow for remote code execution and denial of service (application crashes)
+    when processing GnuPG data. The first vulnerability occurs because a crafted
+    CMS (S/MIME) EncryptedData message carrying an oversized wrapped session key
+    can cause a stack buffer overflow in the gpg-agent utility when it performs
+    PKDECRYPT--kem=CMS handling. This results in memory corruption that is known
+    to lead to remote code execution. The second vulnerability occurs in the
+    internal tpm2daemon when handling the PKDECRYPT command for TPM-backed RSA
+    and ECC keys. This issue is another stack buffer overflow that allows for
+    remote code execution. The third vulnerability is in the parse_signature
+    function, where a long signature packet length causes that function to return
+    success with it's data values set to NULL, leading to an application crash.
+    Users who have GnuPG installed are urged to update to this version of GnuPG.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24881">CVE-2026-24881</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24882">CVE-2026-24882</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24883">CVE-2026-24883</a>.</p>
+    <p>To fix these vulnerabilities, update to GnuPG-2.5.17 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+
     <a id="sa-12.4-082"/>
     <h4>12.4 082 BIND Date: 2026-02-05 Severity: High</h4>
     <p>In BIND-9.20.18, a security vulnerability was fixed that could allow for
