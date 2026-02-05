@@ -64,6 +64,39 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-085"/>
+    <h4>12.4 085 Qt6  Date: 2026-02-05  Severity: Critical</h4>
+    <p>In Qt6-6.10.2 and QtWebEngine-6.10.2, 14 security vulnerabilities were
+    resolved that could allow for remote code execution, remote arbitrary file
+    read/writes, mark of the web bypasses, sensitive information exfiltration
+    via remote access of the network log file, and denial of service
+    (application crashes). One of these issues is in the QtDeclarative component
+    within Qt itself, while the other 13 are in QtWebEngine. The QtWebEngine
+    issues are vulnerabilities fixed in the bundled copy of Chromium, affecting
+    it's ANGLE, V8, WebRTC, Loader, Media Stream, Downloads, and Network
+    components.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14576">CVE-2025-14576</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13042">CVE-2025-13042</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14174">CVE-2025-14174</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13639">CVE-2025-13639</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13638">CVE-2025-13638</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13721">CVE-2025-13721</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13720">CVE-2025-13720</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13634">CVE-2025-13634</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13224">CVE-2025-13224</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-141765">CVE-2025-141765</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0899">CVE-2026-0899</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0905">CVE-2026-0905</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0908">CVE-2026-0908</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1220">CVE-2026-1220</a>.</p>
+    <p>Users are advised to resolve these vulnerabilities immediately by
+    updating to Qt6-6.10.2 and QtWebEngine-6.10.2 or later, using the
+    instructions from <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a> and
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
     <a id="sa-12.4-084"/>
     <h4>12.4 084 FreeRDP  Date: 2026-02-05  Severity: High</h4>
     <p>In FreeRDP-3.22.0, a grand total of 12 security vulnerabilities were
