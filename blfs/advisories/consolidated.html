@@ -64,6 +64,32 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-088"/>
+    <h4>12.4 088 Python (LFS and BLFS)  Date: 2026-08-08  Severity: High</h4>
+    <p>In Python-3.11.12 and Python-3.14.2, five security vulnerabilities were
+    fixed that could allow for header injection within Python's WSGI support
+    whenever wsgiref.headers.Headers fields, values, and parameters are supplied
+    a C0 control character, for header injection to occur whenever the
+    http.cookie.Morsel function is used with a control character within the
+    cookie parameters, for header injection whenever newlines are supplied in
+    data: URL media types, for header injection when flattening an email message
+    using a modern email policy, and for header injection when using the
+    BytesGenerator class from the "email" module. Note that these vulnerabilities
+    primarily affect web server and email contexts, so users not using that
+    functionality are not affected by these vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0865">CVE-2026-0865</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1299">CVE-2026-1299</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0672">CVE-2026-0672</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15282">CVE-2025-15282</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11468">CVE-2025-11468</a>.</p>
+    <p>To fix these vulnerabilities, update Python. If you are on
+    Python-3.13.x, update to Python-3.13.12. Meanwhile, if you are on
+    Python-3.14.x, update to Python-3.14.3. In order to do so, follow the
+    instructions from
+    <a href="../view/svn/general/python.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python.html">Python (systemd)</a>.</p>
+
     <a id="sa-12.4-087"/>
     <h4>12.4 087 p11-kit  Date: 2026-02-08  Severity: High</h4>
     <p>In p11-kit-0.26.2, a security vulnerability was fixed that could allow
