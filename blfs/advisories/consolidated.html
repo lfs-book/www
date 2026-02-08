@@ -64,6 +64,32 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-086"/>
+    <h4>12.4 086 Expat (LFS) Date: 2026-02-08  Severity: Medium</h4>
+    <p>In Expat-2.7.4, two security vulnerabilities were fixed that could allow
+    for a denial of service (application crash) or for remote code execution.
+    The first vulnerability is in the XML_ExternalEntityParserCreate function,
+    and it occurs because the function fails to copy the encoding handler data
+    passed to XML_SetUnknownEncodingHandler from the parent to it's new parser.
+    This causes a NULL pointer dereference from external entities that declare
+    use of an unknown encoding. Note that an application must use both the
+    XML_ExternalEntityParserCreate and XML_SetUnknownEncodingHandler functions
+    to be vulnerable. The other vulnerability is in the doContent function,
+    and occurs because the function does not properly determine the buffer size
+    to use because there is no integer overflow check for tag buffer reallocation.
+    This could result in a remote code execution problem depending on whether
+    the application in use accepts untrusted input.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24515">CVE-2026-24515</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25210">CVE-2026-25210</a>.</p>
+    <p>To fix these vulnerabilities, update to Expat-2.7.4 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <p>Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa-12.4-085"/>
     <h4>12.4 085 Qt6  Date: 2026-02-05  Severity: Critical</h4>
     <p>In Qt6-6.10.2 and QtWebEngine-6.10.2, 14 security vulnerabilities were
@@ -1763,7 +1789,7 @@
     a web browser), updating to Expat-2.7.3 is recommended for all users.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59375">CVE-2025-59375</a>.</p>
-    <p>To fix these vulnerability, update to Expat-2.7.3 or later using the
+    <p>To fix this vulnerability, update to Expat-2.7.3 or later using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
     <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
