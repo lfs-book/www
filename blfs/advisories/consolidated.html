@@ -64,6 +64,22 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 12.5 books</h2>
 
+    <a id="sa-12.4-087"/>
+    <h4>12.4 087 p11-kit  Date: 2026-02-08  Severity: High</h4>
+    <p>In p11-kit-0.26.2, a security vulnerability was fixed that could allow
+    for a remotely exploitable denial of service. The vulnerability is in the
+    C_DeriveKey function, and occurs when using specific NULL parameters. These
+    parameters can be set when processing a remote token with specific IBM kyber
+    or IBM btc derive mechanism parameters. While the issue only allows for a
+    remotely exploitable denial of service, upstream has rated it as High
+    because the attack complexity is low.
+    This vulnerability has been assigned
+    <a href="https://www.suse.com/security/cve/CVE-2026-2100.html">CVE-2026-2100.</a>.</p>
+    <p>To fix this vulnerability, update to p11-kit-0.26.2 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/p11-kit.html">p11-kit (sysv)</a> or
+    <a href="../view/systemd/postlfs/p11-kit.html">p11-kit (systemd)</a>.</p>
+
     <a id="sa-12.4-086"/>
     <h4>12.4 086 Expat (LFS) Date: 2026-02-08  Severity: Medium</h4>
     <p>In Expat-2.7.4, two security vulnerabilities were fixed that could allow

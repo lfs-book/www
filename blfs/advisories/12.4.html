@@ -622,6 +622,21 @@
 
 <!-- end of OpenSSH -->
 
+    <h3>p11-kit</h3>
+
+    <a id="sa-12.4-087"/>
+    <h4>12.4 087 p11-kit  Date: 2026-02-08  Severity: High</h4>
+    <p>In p11-kit-0.26.2, a security vulnerability was fixed that could allow
+    for a remotely exploitable denial of service. The vulnerability is in the
+    C_DeriveKey function, and occurs when using specific NULL parameters. These
+    parameters can be set when processing a remote token with specific IBM kyber
+    or IBM btc derive mechanism parameters. While the issue only allows for a
+    remotely exploitable denial of service, upstream has rated it as High
+    because the attack complexity is low. Update to p11-kit-0.26.2.
+    <a href="consolidated.html#sa-12.4-087">12.4-087</a></p>
+
+<!-- end of p11-kit -->
+
     <h3>PCRE2</h3>
 
     <a id="sa-12.4-004"/>
