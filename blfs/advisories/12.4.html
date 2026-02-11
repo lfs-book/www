@@ -504,6 +504,18 @@
 
     <h3>libpng</h3>
 
+    <a id="sa-12.4-090"/>
+    <h4>12.4 090 libpng  Date: 2026-02-11  Severity: High</h4>
+    <p>In libpng-1.6.55, a security vulnerability was fixed that could allow
+    for information disclosure, remote code execution, and denial of service
+    (application crashes). The vulnerability occurs in valid PNG files, and
+    occurs in the png_set_quantize function. The issue is a heap buffer
+    overflow, and can be exploited in any context where a system may load a PNG
+    image. Unlike the more recent libpng security updates, this affects the
+    low level functions that many more applications use. Users who have libpng
+    installed for any reason should update immediately. Update to libpng-1.6.55.
+    <a href="consolidated.html#sa-12.4-090">12.4-090</a></p>
+
     <a id="sa-12.4-076"/>
     <h4>12.4 076 libpng                Date: 2026-01-14  Severity: Medium</h4>
     <p>In libpng-1.6.54, two security vulnerabilities were fixed
