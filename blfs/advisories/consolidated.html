@@ -64,6 +64,29 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-091"/>
+    <h4>12.4 091 libjxl  Date: 2026-02-11  Severity: High</h4>
+    <p>In libjxl-0.11.2, two security vulnerabilities were fixed that could
+    allow for a denial of service (application crash), information disclosure,
+    or remote code execution. The first vulnerability occurs because a specially
+    crafted file can cause libjxl's decoder to read pixel data from uninitialized
+    memory by referencing an outside image bound area in a subsequent path. This
+    is caused by an incorrect optimization which causes the decoder to omit
+    populating these areas. The other vulnerability affects BLFS installations
+    in particular because BLFS uses lcms2 for the color management backend.
+    The vulnerability allows for significant remote code execution and information
+    disclosure impacts when a specially crafted file is loaded into libjxl's
+    decoder that requests a color transformation of grayscale images to another
+    grayscale color space. Users who have libjxl installed should update to
+    this version immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12474">CVE-2025-12474</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1837">CVE-2026-1837</a>.</p>
+    <p>To fix these vulnerabilities, update to libjxl-0.11.2 or later using the
+    instructions from
+    <a href="../view/svn/general/libjxl.html">libjxl (sysv)</a> or
+    <a href="../view/systemd/general/libjxl.html">libjxl (systemd)</a>.</p>
+
     <a id="sa-12.4-090"/>
     <h4>12.4 090 libpng  Date: 2026-02-11  Severity: High</h4>
     <p>In libpng-1.6.55, a security vulnerability was fixed that could allow
