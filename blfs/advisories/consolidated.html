@@ -64,6 +64,33 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-097">
+    <h4>12.4 097 glib   Date: 2026-02-14  Severity: Medium</h4>
+    <p>In glib-2.86.4, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) and application instability.
+    The first issue occurs in the base64 encoding routines built into glib,
+    particularly when processing very large input data. The routines incorrectly
+    use integer types during length calculations, which causes glib to
+    miscalculate buffer boundaries. As a result, applications that process
+    untrusted or extremely large base64 input may crash or behave unexpectedly.
+    The next issue is in glib's content parsing logic, where a buffer underflow
+    vulnerability occurs because the length of a header line is stored in a
+    signed integer that can cause an integer wraparound for very large inputs.
+    In order to exploit this though, a user would have to install or process
+    a specifically crafted treemagic file, which causes application instability
+    or an application crash. The third issue is in glib's Unicode case
+    conversion implementation, where memory corruption can occur when processing
+    a specially crafted and extremely large Unicode string. Similar to the other
+    issues, this can allow for application crashes or instability.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1484">CVE-2026-1484</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1485">CVE-2026-1485</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1489">CVE-2026-1489</a>.</p>
+    <p>To fix these vulnerabilities, update to glib-2.86.4 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+
     <a id="sa-12.4-096">
     <h4>12.4 096 urllib3  Date: 2026-02-14  Severity: High</h4>
     <p>In urllib3-2.6.3, a security vulnerability was fixed that could allow
