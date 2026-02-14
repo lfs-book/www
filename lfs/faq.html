@@ -223,30 +223,70 @@
           you're trying to compile. Mostly, everything will be fine unless make
           quits with an error.</p>
           <p>Here's an example:</p>
-          <div class="cmd">
-            <p>sk ~/tmp $ cat &gt; Makefile<br />
-               main:<br />
-               gcc main.c<br />
-               sk ~/tmp $ cat &gt; main.c<br />
-               void main() { exit(0); }<br />
-               sk ~/tmp $ make<br />
-               gcc main.c<br />
-               <strong>main.c: In function `main':</strong><br />
-               <strong>main.c:1: warning: return type of `main' is not `int'</strong><br />
-               sk ~/tmp $ ######## that worked ########<br />
-               sk ~/tmp $<br />
-               sk ~/tmp $ cat &gt; main.c<br />
-               int main() { e<span class="strong">xx</span>it(0) }<br />
-               sk ~/tmp $ make<br />
-               gcc main.c<br />
-               <strong>main.c: In function `main':</strong><br />
-               <strong>main.c:1: parse error before `}'</strong><br />
-               <strong>make: *** [main] Error 1</strong><br />
-               sk ~/tmp $ ######## that failed ########<br />
-               sk ~/tmp $</p>
-          </div>
-          <p>If you can determine that some warning indicates a real bug in
-          the software, report to the maintainer of it.</p>
+          <pre>
+xry111 [ ~ ]$ cat test.c
+#include &lt;string.h&gt;
+
+bool
+test (const char *p)
+{
+  char *q = strchr (p, 'X');
+  return q &amp;&amp; q - p < 10;
+}
+xry111 [ ~ ]$ cc test.c -c
+t1.c: In function 'test':
+t1.c:6:13: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    6 |   char *q = strchr (p, 'X');
+      |             ^~~~~~
+xry111 [ ~ ]$ echo $?
+0
+</pre>
+
+          <p>This is a warning and the LFS editors generally ignore it.  If
+          you can determine that some warning indicates a real bug in the
+          package, report the bug to the package maintainer.  But for
+          another case:</p>
+
+		  <pre>
+xry111 [ ~ ]$ cat t2.c
+#include &lt;string.h&gt;
+
+void
+test (const char *p)
+{
+  strchr (p, 'X')[1] = 'Y';
+}
+xry111 [ ~ ]$ cc t2.c -c
+t2.c: In function 'test':
+t2.c:6:22: error: assignment of read-only location '*((const char *)strchr(p, 88) + 1)'
+    6 |   strchr (p, 'X')[1] = 'Y';
+      |                      ^
+xry111 [ ~ ]$ echo $?
+1
+          </pre>
+
+          <p>This is an error and it needs to be fixed for a LFS stable
+          release: a LFS editor will add a fix or a workaround into the book
+          when he notices it.</p>
+
+          <p>Note that some package maintainers enable <code>-Werror</code>
+          to turn warnings into errors:</p>
+
+		  <pre>
+xry111 [ ~ ]$ cc t1.c -c -Werror
+t1.c: In function 'test':
+t1.c:6:13: error: initialization discards 'const' qualifier from pointer target type [-Werror=discarded-qualifiers]
+    6 |   char *q = strchr (p, 'X');
+      |             ^~~~~~
+cc1: all warnings being treated as errors
+xry111 [ ~ ]$ echo $?
+1
+          </pre>
+
+          <p>The simplest workaround for such a case is dropping the
+          offending <code>-Werror</code> option: the build systems of many
+          packages provide an option to drop it, but for some other packages
+          it may be needed to hack the build system.</p>
         </dd>
 <!--        <dt id="really-small">How do I make that really small install the book mentions?</dt>
         <dd>

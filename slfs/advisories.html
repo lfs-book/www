@@ -17,6 +17,24 @@
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
     Consolidated Security Advisories</a> for such packages.</p>
 
+    <a id="slfs-brk-12.4-004"/>
+    <h4>slfs-brk-12.4-004: GNAT/GCC-Ada (Date: January 17th, 2026)</h4>
+    <p>The GNAT/GCC-Ada package has been dropped from SLFS. It was originally
+       in GLFS from the belief that it was needed for the MinGW-w64 toolchain
+       as Wine might need that Ada support. This is not the case as every DLL
+       in Wine is written in C. After learning this, the GNAT package was
+       removed from GLFS. After a year or so, it was added in SLFS. The grounds
+       for its addition weren't particularly strong, especially so since no
+       package in SLFS, GLFS, or BLFS needed it. It took time to ensure it
+       works, with no benefit. Another issue is that its installation could be
+       potentially dangerous for multiple reasons, namely for multilib support.
+       This is because GNAT is just GCC with Ada, a part of normal GCC, so the
+       installed GCC from LFS/MLFS/BLFS will get reinstalled, which can result
+       in something important lost, like x32-bit support for example. One wrong
+       mistake can also result in 32-bit support being removed from the
+       toolchain. It's much safer and easier for the SLFS team to say good-bye
+       to GNAT. GNAT won't be coming to GLFS or BLFS.</p>
+
     <a id="slfs-brk-12.4-003"/>
     <h4>slfs-brk-12.4-003: CUDA (Date: December 23rd, 2025)</h4>
     <p>The CUDA package has been moved to GLFS. NVIDIA recently released the
@@ -48,6 +66,29 @@
        and sdl2-compat.</p>
 
     <h2>Security Advisories</h2>
+
+    <a id="slfs-sa-12.4-006"/>
+    <h4>slfs-sa-12.4-006: OpenJDK-17 - Rating: High (Date: January 28th, 2026)</h4>
+    <p>In OpenJDK-17.0.18, four security vulnerabilties were fixed that could
+    allow for denial of service (DOS) attacks and modification of both critical
+    and Java data. In most cases, these attacks, allowing attackers with
+    network access to go through multiple protocols, don't require human
+    interaction. Some are very easy to exploit while others are more difficult.
+    These vulnerabilties are already being exploited, notably for Minecraft
+    servers. Because of this, it is highly recommended to update OpenJDK to
+    17.0.18 <em>immediately</em>.
+    These security vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21925">CVE-2025-21925</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21932">CVE-2025-21932</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21933">CVE-2025-21933</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-21945">CVE-2025-21945</a>.
+    These exploits are shared with OpenJDK-21.</p>
+    <p>To update to OpenJDK-17.0.18, follow the
+    <a href="https://glfs-book.github.io/slfs/general/openjdk.html">OpenJDK
+    installation page</a>. SysVinit and Systemd instructions for the page do
+    not differ. It is also highly recommended to update to OpenJDK-21.0.10 if
+    you have OpenJDK-21 installed. While not in BLFS currently, it will be
+    updated soon.</p> <!-- TODO: Update when the update is in BLFS. -->
 
     <a id="slfs-sa-12.4-005"/>
     <h4>slfs-sa-12.4-005: CDE - Rating: High (Date: January 7th, 2026)</h4>

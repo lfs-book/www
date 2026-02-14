@@ -48,7 +48,6 @@
     <!\-\- End of PackageName -->
     <!-- End of template -->
 
-<!--
     <h3>Glibc</h3>
 
     <p style="font-style: italic;">Updating Glibc from an earlier version
@@ -57,19 +56,12 @@
     book section for Glibc.  Follow it strictly or you may render the
     system completely unusable.</p>
 
-    <a id="sa-12.3-085"/>
-    <h4>12.3 085 glibc (LFS)              Date: 2025-08-05  Severity: Medium</h4>
-    <p>In glibc-2.42, a security vulnerability was fixed that can allow for
-    a double free when using the regcomp() function. The double free can be
-    accomplished by a malloc failure or by using an interposed malloc that
-    injects random malloc failures, and the double free is known to cause
-    buffer manipulation depending on how the regex passed to regcomp is
-    constructed. All versions from glibc-2.4 to 2.41 are known to be affected.
-    This can cause arbitrary code execution or a denial of service.</p>
-
-    <p>Please read the link to fix this vulnerability:
-    <a href="../../blfs/advisories/consolidated.html#sa-12.3-085">12.3-085</a></p>
--->
+    <a id="sa-12.4-079"/>
+    <h4>12.4 079 glibc (LFS)  Date: 2026-02-01  Severity: High</h4>
+    <p>In glibc-2.43, four security vulnerabilities were fixed
+    that could allow for buffer overflows, failure to save and restore
+    nonvolatile vectors, and double-free operations. Update to glibc-2.43.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.4-079">12.4-079</a></p>
 
 <!-- end of Glibc -->
 
@@ -89,6 +81,15 @@
 
     <h3>Expat</h3>
 
+
+    <a id="sa-12.4-086"/>
+    <h4>12.4 086 Expat (LFS) Date: 2026-02-08  Severity: Medium</h4>
+    <p>In Expat-2.7.4, two security vulnerabilities were fixed that could allow
+    for a denial of service (application crash) or for remote code execution.
+    These vulnerabilities are in the doContent and XML_ExternalEntityParserCreate
+    functions. Update to Expat-2.7.4.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.4-086">12.4-086</a></p>
+
     <a id="sa-12.4-005"/>
     <h4>12.4 005 Expat (LFS)  Date: 2025-09-30  Severity: High</h4>
     <p>In Expat-2.7.3, a security vulnerability was fixed that can allow for
@@ -104,6 +105,16 @@
 
     <h3>OpenSSL</h3>
 
+    <a id="sa-12.4-078"/>
+    <h4>12.4 078 OpenSSL (LFS)  Date: 2026-02-01  Severity: High</h4>
+    <p>In OpenSSL-3.6.1, twelve security vulnerabilities were fixed
+    that could allow for denial of service (DOS) attacks, stack buffer
+    overflows, NULL dereferencing operations, input truncation, excessive
+    memory allocation, out-of-bounds write operations, trailing bytes,
+    missing validation for ASN1, NULL pointer dereferencing operations, and
+    type confusion. Update to OpenSSL-3.6.1 (or 3.5.5).
+    <a href="../../blfs/advisories/consolidated.html#sa-12.4-078">12.4-078</a></p>
+
     <a id="sa-12.4-012"/>
     <h4>12.4 012 OpenSSL (LFS) Date: 2025-10-01 Severity: Medium</h4>
     <p>In OpenSSL-3.5.4, three security vulnerabilities were fixed that could
@@ -114,6 +125,23 @@
 <!-- end of OpenSSL -->
 
     <h3>Python</h3>
+
+    <a id="sa-12.4-088"/>
+    <h4>12.4 088 Python (LFS and BLFS)  Date: 2026-08-08  Severity: High</h4>
+    <p>In Python-3.11.12 and Python-3.14.2, five security vulnerabilities were
+    fixed that could allow for header injection within Python's WSGI support
+    whenever wsgiref.headers.Headers fields, values, and parameters are supplied
+    a C0 control character, for header injection to occur whenever the
+    http.cookie.Morsel function is used with a control character within the
+    cookie parameters, for header injection whenever newlines are supplied in
+    data: URL media types, for header injection when flattening an email message
+    using a modern email policy, and for header injection when using the
+    BytesGenerator class from the "email" module. Note that these vulnerabilities
+    primarily affect web server and email contexts, so users not using that
+    functionality are not affected by these vulnerabilities. If you are on
+    Python 3.13, update to Python 3.13.12. If you are on Python 3.14, update
+    to Python 3.14.3.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.4-088">12.4-088</a></p>
 
     <a id="sa-12.4-063"/>
     <h4>12.4 063 Python (LFS and BLFS)  Date: 2025-12-23  Severity: Medium</h4>
@@ -127,5 +155,21 @@
     <a href="../../blfs/advisories/consolidated.html#sa-12.4-063">12.4-063</a></p>
 
 <!-- end of Python -->
+
+    <h3>vim</h3>
+
+    <a id="sa-12.4-095"/>
+    <h4>12.4 095 vim (LFS and BLFS) Date: 2026-02-14  Severity: Medium</h4>
+    <p>In vim-9.1.2144, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) or possibly arbitrary code
+    execution when the 'helpfile' option is passed to vim. When processing vim
+    helpfile tags, vim copies the user-controlled 'helpfile' option into a
+    fixed-size heap buffer using an unsafe STRCPY() function without any
+    boundary checking. Users who do not use the 'helpfile' option are not
+    affected, and user interaction is required to exploit the vulnerability.
+    Update to vim-9.1.2144 if you use the helpfile option.
+    <a href="../../blfs/advisories/consolidated.html#sa-12.4-095">12.4-095</a></p>
+
+<!-- end of vim -->
 
 <!--#include virtual="/common/footer.html" -->

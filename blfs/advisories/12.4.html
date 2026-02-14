@@ -69,6 +69,17 @@
 
     <h3>BIND</h3>
 
+    <a id="sa-12.4-082"/>
+    <h4>12.4 082 BIND Date: 2026-02-05 Severity: High</h4>
+    <p>In BIND-9.20.18, a security vulnerability was fixed that could allow for
+    remote attackers to force the BIND DNS server to terminate unexpectedly.
+    The problem occurs whenever the server receives and attempts to parse
+    malformed BRID or HHIT records. Note that only the BIND server is affected,
+    and the client utilities are not. Users who use the BIND server in any
+    capacity should update to BIND-9.20.18 though because the vulnerability
+    can be exploited during normal usage.
+    <a href="consolidated.html#sa-12.4-082">12.4-082</a>.</p>
+
     <a id="sa-12.4-025"/>
     <h4>12.4 025 BIND        Date: 2025-11-04  Severity: Critical</h4>
     <p>In BIND-9.20.15, three security vulnerabilities were fixed that could
@@ -149,6 +160,15 @@
 <!-- end of CUPS -->
 
     <h3>cURL</h3>
+
+    <a id="sa-12.4-068"/>
+    <h4>12.4 068 cURL                    Date: 2026-01-14  Severity: Medium</h4>
+    <p>In cURL-8.18.0, six security vulnerabilities were fixed that could allow
+    for lack of QUIC certificate pinning with GnuTLS, broken TLS options,
+    bearer token leakage, OpenSSL partial chain store policy bypassing, libssh
+    global known_hosts overriding, and libssh key passphrase bypassing.
+    Update to cURL-8.17.0.
+    <a href="consolidated.html#sa-12.4-068">12.4-068</a></p>
 
     <a id="sa-12.4-033"/>
     <h4>12.4 033 cURL         Date: 2025-11-12  Severity: Medium</h4>
@@ -236,6 +256,16 @@
 
     <h3>Firefox</h3>
 
+    <a id="sa-12.4-072"/>
+    <h4>12.4 072 Firefox                Date: 2026-01-14  Severity: High</h4>
+    <p>In Firefox-140.7.0esr, thirteen security vulnerabilities were fixed that
+    could allow for spoofing, mitigation bypassing, sandbox escapes,
+    use-after-free operations, information disclosure, incorrect boundary
+    conditions, clickjacking, and memory safety exploitation.
+    Update to Firefox-140.7.0esr. Do note that if you want to use NSS and NSPR
+    for Firefox, NSPR must be at version 4.38.2.
+    <a href="consolidated.html#12.4-072">12.4-072</a></p>
+
     <a id="sa-12.4-058"/>
     <h4>12.4 058 Firefox  Date: 2025-12-16  Severity: High</h4>
     <p>In Firefox-140.6.0esr, ten security vulnerabilities were fixed
@@ -283,10 +313,34 @@
     vulnerabilities is known to be exploited in the wild. These vulnerabilities
     occur when encoding AAC files, processing MPEG-DASH manifests, and when
     decoding OpenEXR files. These issues all occur due to heap buffer overflows.
-    Note that ffmpeg is used in several contexts, including in web browsers                                                                                                                                          and media players. Update to ffmpeg-7.1.2.
+    Note that ffmpeg is used in several contexts, including in web browsers
+    and media players. Update to ffmpeg-7.1.2.
     <a href="consolidated.html#sa-12.4-014">12.4-014</a></p>
 
 <!-- end of ffmpeg -->
+
+    <h3>FreeRDP</h3>
+
+    <a id="sa-12.4-084"/>
+    <h4>12.4 084 FreeRDP  Date: 2026-02-05  Severity: High</h4>
+    <p>In FreeRDP-3.22.0, a grand total of 12 security vulnerabilities were
+    fixed that are in the FreeRDP client itself. One of the issues can also
+    affect the FreeRDP proxy handling code. Information on these vulnerabilities
+    isn't available yet other than the CVE numbers, as GitHub advisories have
+    not been issued for this release yet. Users should update FreeRDP however
+    due to the amount of issues resolved. Update to FreeRDP-3.12.0.
+    <a href="consolidated.html#sa-12.4-084">12.4-084</a></p>
+
+    <a id="sa-12.4-077"/>
+    <h4>12.4 077 FreeRDP               Date: 2026-01-21  Severity: High</h4>
+    <p>In FreeRDP-3.21.0, eight security vulnerabilities were fixed
+    that could allow for heap buffer overflows, global buffer overflows, and
+    use-after-free operations which can cause a crash (DOS) and heap
+    corruption. All of these vulnerabilities occur client-side.
+    Update to FreeRDP-3.21.0.
+    <a href="consolidated.html#sa-12.4-077">12.4-077</a></p>
+
+<!-- end of FreeRDP -->
 
     <h3>gegl</h3>
 
@@ -330,6 +384,14 @@
 
     <h3>glib</h3>
 
+    <a id="sa-12.4-097"/>
+    <h4>12.4 097 glib   Date: 2026-02-14  Severity: Medium</h4>
+    <p>In glib-2.86.4, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) and application instability.
+    These issues occur during Unicode case conversion, base64 encoding, and
+    when processing content types. Update to glib-2.86.4.
+    <a href="consolidated.html#sa-12.4-097">12.4-097</a></p>
+
     <a id="sa-12.4-056"/>
     <h4>12.4 056 glib         Date: 2025-12-08  Severity: High</h4>
     <p>In glib-2.86.3, a security vulnerability was fixed that could allow for
@@ -340,7 +402,29 @@
 
 <!-- end of glib -->
 
+    <h3>GnuPG</h3>
+
+    <a id="sa-12.4-083"/>
+    <h4>12.4 083 GnuPG  Date: 2026-02-05  Severity: High</h4>
+    <p>In GnuPG-2.5.17, three security vulnerabilities were fixed that could
+    allow for remote code execution and denial of service (application crashes)
+    when processing GnuPG data. All users who have GnuPG installed should update
+    to GnuPG-2.5.17 as soon as possible.
+    <a href="consolidated.html#sa-12.4-083">12.4-083</a></p>
+
+<!-- end of GnuPG -->
+
     <h3>GnuTLS</h3>
+
+
+    <a id="sa-12.4-089"/>
+    <h4>12.4 089 GnuTLS  Date: 2026-02-11  Severity: High</h4>
+    <p>In GnuTLS-3.8.12, two security vulnerabilities were fixed that could
+    allow for a denial of service (application crash or resource exhaustion).
+    The first vulnerability is a NULL pointer dereference while verifying
+    PSK binders, and the other is a name constaint performance issue.
+    Update to GnuTLS-3.8.12.
+    <a href="consolidated.html#sa-12.4-089">12.4-089</a></p>
 
     <a id="sa-12.4-038"/>
     <h4>12.4 038 GnuTLS        Date: 2025-11-22  Severity: Low</h4>
@@ -349,6 +433,71 @@
     <a href="consolidated.html#sa-12.4-038">12.4-038</a></p>
 
 <!-- end of GnuTLS -->
+
+    <h3>gstreamer</h3>
+
+    <a id="sa-12.4-080"/>
+    <h4>12.4 080 gst-plugins-bad  Date: 2026-02-04  Severity: High</h4>
+    <p>In gst-plugins-bad-1.26.10, two security vulnerabilities were fixed
+    that could allow for out-of-bounds read operations in the MIDI parser, in
+    turn leading to a crash (DOS). Not many packages in BLFS, if any, use the
+    MIDI parser from gst-plugins-bad. Most opt for other solutions like
+    FluidSynth. There is still a possibility of a package using it, so users
+    should update regardless. Update to gstreamer, gst-plugins-base, and
+    gst-plugins-bad 1.26.10 or later. gstreamer-1.28.0 is ABI compatible with
+    1.26.x.
+    <a href="consolidated.html#sa-12.4-080">12.4-080</a></p>
+
+<!-- end of gstreamer -->
+
+    <h3>ImageMagick</h3>
+
+    <a id="sa-12.4-094"/>
+    <h4>12.4 094 ImageMagick  Date: 2026-02-14  Severity: Critical</h4>
+    <p>In ImageMagick-7.1.2-13, thirteen security vulnerabilities were fixed
+    that could allow for denial of service (application crash), information
+    disclosure, remote code execution, and arbitrary code execution. These
+    vulnerabilities occur in a variety of different operations, including
+    when processing MSL, BMP, XBM, SVG, MVG, and TIM images, and when presenting
+    errors during normal operations. Users who have ImageMagick installed
+    should update immediately, especially if they process untrusted images or
+    host a website that uses ImageMagick for conversions. Proof of concept
+    exploits are available for many of these vulnerabilities. Some issues are
+    specific to 32-bit systems. Update to ImageMagick-7.1.2-13.
+    <a href="consolidated.html#sa-12.4-094">12.4-094</a></p>
+
+<!-- end of ImageMagick -->
+
+    <h3>intel-microcode</h3>
+
+    <a id="sa-12.4-092"/>
+    <h4>12.4 092 intel-microcode Date: 2026-02-11  Severity: High</h4>
+    <p>In intel-microcode-20260210, two security vulnerabilities were fixed
+    that could allow for privilege escalation or for a denial of service
+    (application crash). The first privilege escalation vulnerability affects
+    all Intel Core CPUs from the 6th generation to the 11th generation of CPUs,
+    as well as some CPUs from the Intel Pentium Gold and Celeron families. Some
+    CPUs from the Xeon W, E, D, and the 2nd/3rd Generation Intel Xeon Scalable
+    CPU family are also impacted. The other privilege escalation vulnerability
+    affects 10th generation Intel Core CPUs and later, including the Core Ultra
+    processor family, and some Intel Pentium and Celeron CPUs are affected.
+    In addition, the 3rd generation and later of Intel Xeon Scalable Processors
+    are affected, as well as some Xeon E, W, and D series processors. Several
+    functionality issues with the 10th generation and later of Intel Core CPUs
+    have been resolved, including the Core i3 N-series and several Xeon
+    CPU families. For additional information, please review the Intel Security
+    Advisories:</p>
+    <ul>
+       <li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01083.html">
+              INTEL-SA-01083 (CVE-2024-24853)</a></li>
+       <li><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01396.html">
+              INTEL-SA-01396 (CVE-2025-31648)</a></li>
+    </ul>
+    <p>To check if you are impacted and update your system, please follow the
+    instructions in the advisory.
+    <a href="consolidated.html#sa-12.4-092">12.4-092</a></p>
+
+<!-- end of intel-microcode -->
 
     <h3>Kea DHCP Server</h3>
 
@@ -396,6 +545,23 @@
 
 <!-- end of libarchive -->
 
+    <h3>libjxl</h3>
+
+   <a id="sa-12.4-091"/>
+    <h4>12.4 091 libjxl  Date: 2026-02-11  Severity: High</h4>
+    <p>In libjxl-0.11.2, two security vulnerabilities were fixed that could
+    allow for a denial of service (application crash), information disclosure,
+    or remote code execution. The first vulnerability occurs because a specially
+    crafted file can cause libjxl's decoder to read pixel data from uninitialized
+    memory by referencing an outside image bound area in a subsequent path.
+    The other vulnerability occurs when decoding images that request a colorspace
+    conversion, and particularly affects BLFS because of our usage of lcms2.
+    All users who have libjxl installed should update immediately, as all
+    contexts that libjxl is used can be exploited. Update to libjxl-0.11.2.
+    <a href="consolidated.html#sa-12.4-091">12.4-091</a></p>
+
+<!-- end of libjxl -->
+
     <h3>libpcap</h3>
 
     <a id="sa-12.4-066"/>
@@ -411,6 +577,25 @@
 <!-- end of libpcap -->
 
     <h3>libpng</h3>
+
+    <a id="sa-12.4-090"/>
+    <h4>12.4 090 libpng  Date: 2026-02-11  Severity: High</h4>
+    <p>In libpng-1.6.55, a security vulnerability was fixed that could allow
+    for information disclosure, remote code execution, and denial of service
+    (application crashes). The vulnerability occurs in valid PNG files, and
+    occurs in the png_set_quantize function. The issue is a heap buffer
+    overflow, and can be exploited in any context where a system may load a PNG
+    image. Unlike the more recent libpng security updates, this affects the
+    low level functions that many more applications use. Users who have libpng
+    installed for any reason should update immediately. Update to libpng-1.6.55.
+    <a href="consolidated.html#sa-12.4-090">12.4-090</a></p>
+
+    <a id="sa-12.4-076"/>
+    <h4>12.4 076 libpng                Date: 2026-01-14  Severity: Medium</h4>
+    <p>In libpng-1.6.54, two security vulnerabilities were fixed
+    that could allow for heap buffer over-read operations.
+    Update to libpng-1.6.54.
+    <a href="consolidated.html#sa-12.4-076">12.4-076</a></p>
 
     <a id="sa-12.4-047"/>
     <h4>12.4 047 libpng  Date: 2025-12-04  Severity: High</h4>
@@ -430,6 +615,17 @@
 
 <!-- end of libpng -->
 
+    <h3>librsvg</h3>
+
+    <a id="sa-12.4-098"/>
+    <h4>12.4 098 librsvg  Date: 2026-02-14  Severity: Medium</h4>
+    <p>In librsvg-2.61.4, a security vulnerability was fixed in the 'time' crate
+    that is used within librsvg that can allow for a denial of service condition
+    (application crash) via stack exhaustion. Update to librsvg-2.61.4.
+    <a href="consolidated.html#sa-12.4-098">12.4-098</a></p>
+
+<!-- end of librsvg -->
+
     <h3>libsoup</h3>
 
     <a id="sa-12.4-034"/>
@@ -447,6 +643,16 @@
 
 <!-- end of libsoup -->
 
+    <h3>libtasn1</h3>
+
+    <a id="sa-12.4-069"/>
+    <h4>12.4 069 libtasn1               Date: 2026-01-14  Severity: High</h4>
+    <p>In libtasn1-4.21.0, one security vulnerability was fixed that could allow
+    for a stack buffer overflow. Update to libtasn1-4.21.0.
+    <a href="consolidated.html#sa-12.4-069">12.4-69</a></p>
+
+<!-- end of libtasn1 -->
+
     <h3>libxslt</h3>
 
     <a id="sa-12.4-051"/>
@@ -460,6 +666,19 @@
     <a href="consolidated.html#sa-12.4-051">12.4-051</a></p>
 
 <!-- end of libxslt -->
+
+    <h3>Node.js</h3>
+
+    <a id="sa-12.4-071"/>
+    <h4>12.4 071 Node.js                Date: 2026-01-14  Severity: High</h4>
+    <p>In Node.js-22.22.0, six security vulnerabilities were fixed that could
+    allow for permission model bypassing, file system permission bypassing,
+    timeout-based race conditions, read-only permission model bypassing,
+    HTTP/2 server crashes, and process crashes.
+    Update to Node.js-22.22.0.
+    <a href="consolidated.html#sa-12.4-071">12.4-071</a></p>
+
+<!-- end of Node.js-->
 
     <h3>OpenJDK</h3>
 
@@ -510,6 +729,21 @@
 
 <!-- end of OpenSSH -->
 
+    <h3>p11-kit</h3>
+
+    <a id="sa-12.4-087"/>
+    <h4>12.4 087 p11-kit  Date: 2026-02-08  Severity: High</h4>
+    <p>In p11-kit-0.26.2, a security vulnerability was fixed that could allow
+    for a remotely exploitable denial of service. The vulnerability is in the
+    C_DeriveKey function, and occurs when using specific NULL parameters. These
+    parameters can be set when processing a remote token with specific IBM kyber
+    or IBM btc derive mechanism parameters. While the issue only allows for a
+    remotely exploitable denial of service, upstream has rated it as High
+    because the attack complexity is low. Update to p11-kit-0.26.2.
+    <a href="consolidated.html#sa-12.4-087">12.4-087</a></p>
+
+<!-- end of p11-kit -->
+
     <h3>PCRE2</h3>
 
     <a id="sa-12.4-004"/>
@@ -556,6 +790,17 @@
 
     <h3>PostgreSQL</h3>
 
+    <a id="sa-12.4-093"/>
+    <h4>12.4 093 PostgreSQL  Date: 2026-02-14  Severity: High</h4>
+    <p>In PostgreSQL-18.2, five security vulnerabilities were fixed that could
+    allow for memory disclosure, arbitrary code execution, and privilege
+    escalation. Update to PostgreSQL-18.2 immediately if you are using
+    PostgreSQL's server functionality, but there is no need to update if you
+    are only using the client libraries. If you are on PostgreSQL-17 and you
+    don't want to update your database to 18.x, update to PostgreSQL-17.8 as
+    described in the consolidated advisory.
+    <a href="consolidated.html#sa-12.4-093">12.4-093</a></p>
+
     <a id="sa-12.4-040"/>
     <h4>12.4 040 PostgreSQL   Date: 2025-11-22  Severity: Medium</h4>
     <p>In PostgreSQL-18.1, two security vulnerabilities were fixed that could
@@ -570,6 +815,23 @@
 
     <h3>Python</h3>
 
+    <a id="sa-12.4-088"/>
+    <h4>12.4 088 Python (LFS and BLFS)  Date: 2026-08-08  Severity: High</h4>
+    <p>In Python-3.11.12 and Python-3.14.2, five security vulnerabilities were
+    fixed that could allow for header injection within Python's WSGI support
+    whenever wsgiref.headers.Headers fields, values, and parameters are supplied
+    a C0 control character, for header injection to occur whenever the
+    http.cookie.Morsel function is used with a control character within the
+    cookie parameters, for header injection whenever newlines are supplied in
+    data: URL media types, for header injection when flattening an email message
+    using a modern email policy, and for header injection when using the
+    BytesGenerator class from the "email" module. Note that these vulnerabilities
+    primarily affect web server and email contexts, so users not using that
+    functionality are not affected by these vulnerabilities. If you are on
+    Python 3.13, update to Python 3.13.12. If you are on Python 3.14, update
+    to Python 3.14.3.
+    <a href="consolidated.html#sa-12.4-088">12.4-088</a></p>
+
     <a id="sa-12.4-063"/>
     <h4>12.4 063 Python (LFS and BLFS)  Date: 2025-12-23  Severity: Medium</h4>
     <p>In Python-3.13.11 and Python-3.14.2, seven security vulnerabilities were
@@ -582,6 +844,21 @@
     <a href="consolidated.html#sa-12.4-063">12.4-063</a></p>
 
 <!-- end of Python -->
+
+    <h3>Qt6 and QtWebEngine</h3>
+
+    <a id="sa-12.4-085"/>
+    <h4>12.4 085 Qt6  Date: 2026-02-05  Severity: Critical</h4>
+    <p>In Qt6-6.10.2 and QtWebEngine-6.10.2, 14 security vulnerabilities were
+    resolved that could allow for remote code execution, remote arbitrary file
+    read/writes, mark of the web bypasses, sensitive information exfiltration
+    via remote access of the network log file, and denial of service
+    (application crashes). One of these issues is in the QtDeclarative component
+    within Qt itself, while the other 13 are in QtWebEngine. The QtWebEngine
+    issues are vulnerabilities fixed in the bundled copy of Chromium, affecting
+    it's ANGLE, V8, WebRTC, Loader, Media Stream, Downloads, and Network
+    components. Update to Qt6 and QtWebEngine 6.10.2 immediately.
+    <a href="consolidated.html#sa-12.4-085">12.4-085</a>.</p>
 
     <a id="sa-12.4-035"/>
     <h4>12.4 035 Qt6          Date: 2025-11-22  Severity: Critical</h4>
@@ -666,6 +943,16 @@
 
     <h3>Seamonkey</h3>
 
+    <a id="sa-12.4-075"/>
+    <h4>12.4 075 Seamonkey                Date: 2026-01-14  Severity: High</h4>
+    <p>In Seamonkey-2.53.23, nineteen security vulnerabilities were fixed
+    that could allow for race conditions, mitigation bypassing, use-after-free
+    operations, spoofing, incorrect boundary conditions, same-origin policy
+    bypassing, sandbox escapes, privilege escalations, JIT miscompilations,
+    and memory safety expoitation.
+    Update to Seamonkey-2.53.23.
+    <a href="consolidated.html#12.4-075">12.4-075</a></p>
+
     <a id="sa-12.4-030"/>
     <h4>12.4 030 Seamonkey     Updated: 2025-11-07  Severity: Critical</h4>
     <p>In Seamonkey-2.53.22, 18 security vulnerabilities were fixed that
@@ -684,6 +971,13 @@
 <!-- end of Seamonkey -->
 
     <h3>SpiderMonkey</h3>
+
+    <a id="sa-12.4-073"/>
+    <h4>12.4 073 SpiderMonkey  Date: 2025-12-16  Severity: High</h4>
+    <p>In SpiderMonkey from Firefox-140.7.0esr, five security vulnerabilities
+    were fixed fixed that could allow for sandbox escapes and use-after-free
+    operations. Update to SpiderMonkey from Firefox-140.7.0esr.
+    <a href="consolidated.html#12.4-073">12.4-073</a></p>
 
     <a id="sa-12.4-059"/>
     <h4>12.4 059 SpiderMonkey  Date: 2025-12-16  Severity: High</h4>
@@ -710,6 +1004,23 @@
 <!-- end of SpiderMonkey -->
 
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.4-081"/>
+    <h4>12.4 081 Thunderbird  Date: 2026-02-04  Severity: Medium</h4>
+    <p>In Thunderbird-140.7.1esr, one security vulnerability was fixed that
+    could allow for modification or transfer of data from CSS in a partially
+    encrypted email once remote content is allowed.
+    Update to Thunderbird-140.7.1esr.
+    <a href="consolidated.html#12.4-081">12.4-081</a></p>
+
+    <a id="sa-12.4-074"/>
+    <h4>12.4 074 Thunderbird                Date: 2026-01-14  Severity: High</h4>
+    <p>In Thunderbird-140.7.0esr, thirteen security vulnerabilities were fixed
+    that could allow for spoofing, mitigation bypassing, sandbox escapes,
+    use-after-free operations, information disclosure, incorrect boundary
+    conditions, clickjacking, and memory safety exploitation.
+    Update to Thunderbird-140.7.0esr.
+    <a href="consolidated.html#12.4-074">12.4-074</a></p>
 
     <a id="sa-12.4-057"/>
     <h4>12.4 057 Thunderbird  Date: 2025-12-16  Severity: High</h4>
@@ -776,6 +1087,13 @@
 
     <h3>urllib3</h3>
 
+    <a id="sa-12.4-096"/>
+    <h4>12.4 096 urllib3  Date: 2026-02-14  Severity: High</h4>
+    <p>In urllib3-2.6.3, a security vulnerability was fixed that could allow
+    for a denial of service (application crash and excessive resource
+    consumption) when following HTTP redirects. Update to urllib3-2.6.3.
+    <a href="consolidated.html#sa-12.4-096">12.4-096</a></p>
+
     <a id="sa-12.4-053"/>
     <h4>12.4 053 urllib3      Date: 2025-12-05  Severity: High</h4>
     <p>In urllib3-2.6.0, two security vulnerabilities were fixed that could
@@ -785,6 +1103,36 @@
     <a href="consolidated.html#sa-12.4-053">12.4-053</a></p>
 
 <!-- end of urllib3 -->
+
+    <h3>vim</h3>
+
+    <a id="sa-12.4-095"/>
+    <h4>12.4 095 vim (LFS and BLFS) Date: 2026-02-14  Severity: Medium</h4>
+    <p>In vim-9.1.2144, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) or possibly arbitrary code
+    execution when the 'helpfile' option is passed to vim. When processing vim
+    helpfile tags, vim copies the user-controlled 'helpfile' option into a
+    fixed-size heap buffer using an unsafe STRCPY() function without any
+    boundary checking. Users who do not use the 'helpfile' option are not
+    affected, and user interaction is required to exploit the vulnerability.
+    Update to vim-9.1.2144 if you use the helpfile option.
+    <a href="consolidated.html#sa-12.4-095">12.4-095</a></p>
+
+<!-- end of vim -->
+
+    <h3>VLC</h3>
+
+    <a id="sa-12.4-070"/>
+    <h4>12.4 070 VLC                    Date: 2026-01-14  Severity: Critical</h4>
+    <p>In VLC-3.0.23, twenty-two security vulnerabilities were fixed that could
+    allow for out-of-bounds reads and writes, invalid memory freeing
+    operations, stack overflows, integer overflows, NULL dereferences,
+    undefined shifting, infinite loops, buffer overflows, and multiple-format
+    overflows. Since there are so many vulnerabilties fixed, it
+    is highly recommended to update <em>immediately</em> to VLC-3.0.23.
+    <a href="consolidated.html#sa-12.4-070">12.4-070</a></p>
+
+<!-- end of VLC -->
 
     <h3>WebKitGTK</h3>
 
