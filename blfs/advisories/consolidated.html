@@ -64,7 +64,22 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
-    <a id="sa-12.4-097">
+    <a id="sa-12.4-098"/>
+    <h4>12.4 098 librsvg  Date: 2026-02-14  Severity: Medium</h4>
+    <p>In librsvg-2.61.4, a security vulnerability was fixed in the 'time' crate
+    that is used within librsvg that can allow for a denial of service condition
+    (application crash) via stack exhaustion. The attack relies on deprecated
+    functionality that are part of the RFC 2822 format. In the case of librsvg,
+    this would mean loading a crafted SVG image as the attack vector.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25727">CVE-2026-25727</a>.</p>
+    <p>More information about this vulnerability can be found from the
+    <a href="https://rustsec.org/advisories/RUSTSEC-2026-0009.html">Rust Security Database Entry</a>.</p>
+    <p>To fix this vulnerability, update to librsvg-2.61.4 or later using
+    <a href="../view/svn/general/librsvg.html">librsvg (sysv)</a> or
+    <a href="../view/systemd/general/librsvg.html">librsvg (systemd)</a>.</p>
+
+    <a id="sa-12.4-097"/>
     <h4>12.4 097 glib   Date: 2026-02-14  Severity: Medium</h4>
     <p>In glib-2.86.4, three security vulnerabilities were fixed that could
     allow for a denial of service (application crash) and application instability.
@@ -91,7 +106,7 @@
     <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
     <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
 
-    <a id="sa-12.4-096">
+    <a id="sa-12.4-096"/>
     <h4>12.4 096 urllib3  Date: 2026-02-14  Severity: High</h4>
     <p>In urllib3-2.6.3, a security vulnerability was fixed that could allow
     for a denial of service (application crash and excessive resource
