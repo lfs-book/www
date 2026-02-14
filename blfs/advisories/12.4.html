@@ -1078,6 +1078,22 @@
 
 <!-- end of urllib3 -->
 
+    <h3>vim</h3>
+
+    <a id="sa-12.4-095"/>
+    <h4>12.4 095 vim (LFS and BLFS) Date: 2026-02-14  Severity: Medium</h4>
+    <p>In vim-9.1.2144, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) or possibly arbitrary code
+    execution when the 'helpfile' option is passed to vim. When processing vim
+    helpfile tags, vim copies the user-controlled 'helpfile' option into a
+    fixed-size heap buffer using an unsafe STRCPY() function without any
+    boundary checking. Users who do not use the 'helpfile' option are not
+    affected, and user interaction is required to exploit the vulnerability.
+    Update to vim-9.1.2144 if you use the helpfile option.
+    <a href="consolidated.html#sa-12.4-095">12.4-095</a></p>
+
+<!-- end of vim -->
+
     <h3>VLC</h3>
 
     <a id="sa-12.4-070"/>
