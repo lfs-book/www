@@ -64,6 +64,37 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-094"/>
+    <h4>12.4 094 ImageMagick  Date: 2026-02-14  Severity: Critical</h4>
+    <p>In ImageMagick-7.1.2-13, thirteen security vulnerabilities were fixed
+    that could allow for denial of service (application crash), information
+    disclosure, remote code execution, and arbitrary code execution. These
+    vulnerabilities occur in a variety of different operations, including
+    when processing MSL, BMP, XBM, SVG, MVG, and TIM images, and when presenting
+    errors during normal operations. Users who have ImageMagick installed
+    should update immediately, especially if they process untrusted images or
+    host a website that uses ImageMagick for conversions. Proof of concept
+    exploits are available for many of these vulnerabilities. Some issues are
+    specific to 32-bit systems.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-57803">CVE-2025-57803</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55298">CVE-2025-55298</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55212">CVE-2025-55212</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-57807">CVE-2025-57807</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-62171">CVE-2025-62171</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-62594">CVE-2025-62594</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66628">CVE-2025-66628</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-69204">CVE-2025-69204</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68950">CVE-2025-68950</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68618">CVE-2025-68618</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-23876">CVE-2026-23876</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-23952">CVE-2026-23952</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22770">CVE-2026-22770</a>.</p>
+    <p>To fix these vulnerabilities, update to ImageMagick-7.1.2-13 or later
+    using the instructions from
+    <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
+    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+
     <a id="sa-12.4-093"/>
     <h4>12.4 093 PostgreSQL  Date: 2026-02-14  Severity: High</h4>
     <p>In PostgreSQL-18.2, five security vulnerabilities were fixed that could
