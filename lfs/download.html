@@ -4,16 +4,53 @@
     <div class="main">
      <h1>Download the Linux From Scratch Book</h1>
 
-     <p>Several versions of the LFS book are available for download, 
-        in several formats:</p>
-
      <h2>Current Stable</h2>
      
-     <p>This is the latest released LFS book, well tested and mature 
-     enough for everyday use.</p>
+     <p>This is the latest released LFS systemd book, well tested and mature 
+        enough for everyday use.</p>
      
-     <p>You may download the stable book in various formats from the 
-        <a href="/lfs/downloads/stable/">stable book</a> directory.</p>
+     <p>You may download the stable book in various formats from the
+        <a href="/lfs/downloads/stable-systemd/">stable book</a> directory.</p>
+
+     <h3>Current Pre-release Version &mdash; LFS-13.0-systemd-rc1</h3>
+
+     <p>This is a candidate for a new version of lfs. It will be released as
+     stable in the near future and is in the meantime considered to be under
+     testing. This version uses systemd and the required packages and boot
+     process are significantly different from the prior System V version of LFS.
+     Major components of the book should stay unchanged from day to
+     day, but minor adjustments and bug fixes may be applied while the book
+     undergoes testing.</p>
+
+     <p>You may download the book from the
+        <a href="/lfs/downloads/13.0-systemd-rc1/">LFS-13.0-systemd-rc1</a> directory.
+     </p>
+
+     <h2>Current Development</h2>
+     
+     <p>This is the LFS systemd Book in its current development state. Changes can
+        happen that break the build temporarily.<br />
+        <em>Not recommended for inexperienced LFS'ers.</em>
+     </p>
+
+     <p>Daily rendered <a href="downloads/systemd/">snapshots</a> may be 
+        downloaded. Or check out the book's XML as above
+        and render it yourself:</p>
+
+     <div class="cmd">
+      <p>After the prerequisites listed in the INSTALL file are present, 
+         use 'make REV=systemd', to render the book.  Additional information is 
+         listed in the README file.</p>
+     </div>
+
+     <hr/>
+
+     <h2>Prior versions of LFS</h2>
+     
+     <p>The prior System V version of LFS is no longer maintained.</p>
+     
+     <p>You may download the most recent stable book in various formats from the 
+        <a href="/lfs/downloads/12.4/"></a> directory.</p>
 <!--
      <h2>Current Release Candidate Version &mdash; LFS-12.4-rc1</h2>
      <p>This is a soon-to-be-released LFS book undergoing the last 
@@ -23,9 +60,15 @@
         <a href="/lfs/downloads/12.4-rc1/">LFS-12.4-rc1</a> directory.
      </p>
 -->
-     <h2>Current Development</h2>
-     <p>This is the LFS Book in its current development state. Changes can
-        happen that break the build temporarily.<br />
+     <h2>Current Status</h2>
+     <p>This is the LFS System V Book in its current state. The build instructions
+        for packages are relatively unchanged when new packages are 
+        released and most of the instructions are common with the 
+        systemd book above. However the package instructions have not been 
+        validated for the System V environment.
+     </p>
+        
+     </p>
         <em>Not recommended for inexperienced LFS'ers.</em>
      </p>
      
@@ -45,44 +88,6 @@
      wiki page</a> for details.</p>
 
      <h2>Systemd version of LFS</h2>
-     <h2>Current Stable</h2>
-     
-     <p>This is the latest released LFS systemd book, well tested and mature 
-        enough for everyday use.</p>
-     
-     <p>You may download the stable book in various formats from the
-        <a href="/lfs/downloads/stable-systemd/">stable book</a> directory.</p>
-<!--
-     <h3>Current Pre-release Version &mdash; LFS-12.4-systemd-rc1</h3>
-
-     <p>This is a variation of LFS. It will be released as
-     stable in the near future and is in the meantime considered to be under
-     testing. This version uses systemd and the required packages and boot
-     process are significantly different from standard LFS.
-     Major components of the book should stay unchanged from day to
-     day, but minor adjustments and bug fixes may be applied while the book
-     undergoes testing.</p>
-
-     <p>You may download the book from the
-        <a href="/lfs/downloads/12.4-systemd-rc1/">LFS-12.4-systemd-rc1</a> directory.
-     </p>
--->
-     <h2>Current Development</h2>
-     
-     <p>This is the LFS systemd Book in its current development state. Changes can
-        happen that break the build temporarily.<br />
-        <em>Not recommended for inexperienced LFS'ers.</em>
-     </p>
-
-     <p>Daily rendered <a href="downloads/systemd/">snapshots</a> may be 
-        downloaded. Or check out the book's XML as above
-        and render it yourself:</p>
-
-     <div class="cmd">
-      <p>After the prerequisites listed in the INSTALL file are present, 
-         use 'make REV=systemd', to render the book.  Additional information is 
-         listed in the README file.</p>
-     </div>
 
      <h2>LFS Museum</h2>
      
@@ -114,7 +119,6 @@
 
            <li>Sources from your linux distro</li>
         </ul>
-        
 
         <h3 id="ftp">LFS HTTP/FTP Sites</h3>
 
