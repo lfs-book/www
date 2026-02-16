@@ -6,9 +6,9 @@
     <h1>What is Gaming Linux From Scratch?</h1>
 
     <p>
-      Gaming Linux From Scratch, which is based on the
-      <a href="/blfs/view/svn/">BLFS book</a>, helps you install gaming
-      support software, like Steam or Wine, on a new x86_64 LFS system.
+      Gaming Linux From Scratch, which is based on the <a href="/blfs">BLFS
+      book</a>, helps you install gaming support software, like Steam or Wine,
+      on a new x86_64 LFS system.
     </p>
 
     <p>
@@ -31,8 +31,8 @@
     <p>
       In cases where 32-bit libraries are needed, <a href="/mlfs">MLFS</a> is a
       required prerequisuite for this book.
-      <a href="/~thomas/multilib-m32/">MLFS with m32 extensions</a> is
-      the recommended choice to save disk usage and build times. mx32-bit at
+      <a href="/mlfs/dev-m32/">MLFS with 32-bit</a> is
+      the recommended choice to save disk usage and build times. x32-bit at
       present time is not very useful for Steam or Wine and seems to have some
       motions of being phased out. MLFS allows you to build 32-bit apps and
       libraries, the libraries being the most important part to get Steam and
@@ -41,7 +41,6 @@
 
 
     <h2>Why would I want a GLFS system?</h2>
-
     <p>
       Installing binary-only software on an LFS system is a contentious topic
       in the LFS community. However, a lot of people still want to play games
@@ -55,7 +54,6 @@
 
 
     <h2>What can I do with my GLFS system?</h2>
-
     <p>
       You will be able to use Steam, play popular games using Vulkan and
       OpenGL, use the proprietary NVIDIA driver and CUDA if wanted, and run
@@ -65,22 +63,42 @@
     </p>
 
 
-    <h2>Read Online</h2>
-
+    <h2>Read the Book Online</h2>
     <p>
-      You can read the book <a href="https://glfs-book.github.io/glfs">here.</a>
-      The book is rolling release, like MLFS. The only online rendered version
-      right now is System V, although you can
-      <a href="/glfs/download.html">download</a> the edition of the book that
-      has Systemd support.
+      GLFS has different versions that line up with LFS+BLFS+SLFS releases.
+      In the past, GLFS had support for both SysVinit and Systemd, but now only
+      Systemd is supported. The past versions exist as historical and
+      educational material.
     </p>
+    <h3>Current Stable</h3>
+    <p>These are the current stable versions of GLFS that are known to work
+    with an MLFS, BLFS, and SLFS stable platform.</p>
+    <ul>
+      <li><a href="view/stable/">GLFS stable, uses MLFS and BLFS stable
+      links</a></li>
+      <li><a href="view/stable-systemd/">GLFS stable (Systemd), uses MLFS and
+      BLFS stable Systemd links</a></li>
+    </ul>
+    <h3>Development</h3>
+    <p>This is GLFS in its current development state. A lot of effort is made
+    to ensure that the development version is as stable as can. However, there
+    can still be problems that can occur. In the past, this was the only way to
+    read the book online without grabbing a copy or rendering the book
+    yourself. Because of that, stability was and still is a major concern. Now,
+    everyone has more options.</p>
+    <ul>
+      <li><a href="view/dev/">GLFS development, uses MLFS and BLFS development
+      links</a></li>
+    </ul>
+    <h3>Other versions</h3>
+    <p>If you want to see older versions, you can browse all releases <a
+      href="view/">here</a>.</p>
 
 
     <h2>Thanks to</h2>
-
-      <p>
-        Douglas Reno, Rahul Chandra, Thomas Trepl, Xi Ruoyao, and the
-        <a href="https://glfs-book.github.io/glfs/introduction/credits.html">GLFS contributors</a>
-      </p>
+    <p>
+      Douglas Reno, Rahul Chandra, Thomas Trepl, Xi Ruoyao, and the
+      <a href="view/stable/introduction/credits.html">GLFS contributors</a>
+    </p>
 
 <!--#include virtual="/common/footer.html" -->

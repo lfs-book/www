@@ -6,17 +6,16 @@
 
       <h2>SLFS Releases</h2>
 
-      <p>On the SLFS site, the book is rolling release and is often rendered
-         right after the last Git commit or batch of commits in the Git source.
-         However, there are chunked HTML
+      <p>SLFS makes releases both on this site and on GitHub. Over here, the
+         releases are viewable online but doesn't host any tarballs of the
+         pages. However, there are chunked HTML tarballs in the GitHub
          <a href="https://github.com/glfs-book/slfs/releases">releases</a>.
          Each of them are versioned with the first four or more unique
          characters of the
          <a href="https://graphite.dev/guides/git-hashing">Git hash</a> at the
-         time of release. There are unstable (or pre-release) releases and
-         stable releases. If you don't want to download a release, you can also
-         render the book yourself. Stable releases will also show how to render
-         a local copy of the stable version on each Github release listing.
+         time of release. There are both stable and unstable releases. If you
+         don't want to download a release, nor want to read the book online,
+         you can render the book yourself.
       </p>
 
       <h2>SLFS Git</h2>
@@ -33,16 +32,15 @@
       <h2>Rendering the SLFS book</h2>
 
       <p>Rendering works the same way as it does with the *LFS books.
-         Read the included <tt>INSTALL.md</tt> for finding out what packages
+         Read the included <kbd>INSTALL.md</kbd> for finding out what packages
          you need in order to render the book in the way you want to.
-         <tt>README.md</tt> also provides information like rendering options
+         <kbd>README.md</kbd> also provides information like rendering options
          you may want to set.
       </p>
 
-      <p>If you want to render the Systemd version of the book, for example,
-         run:</p>
+      <p>To render the book, simply run the following:</p>
       <div class="cmd">
-        <p>make REV=systemd</p>
+        <p>make</p>
       </div>
 
       <h2>Packages for SLFS</h2>
