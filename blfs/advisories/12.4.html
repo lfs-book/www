@@ -653,6 +653,25 @@
 
 <!-- end of libtasn1 -->
 
+    <h3>libvpx</h3>
+
+    <a id="sa-12.4-100"/>
+    <h4>12.4 100 libvpx  Date: 2026-02-20  Severity: High</h4>
+    <p>In libvpx-1.16.0, a security vulnerability was discovered that could allow
+    for remote code execution when processing VP8 and VP9 files, or for a
+    denial of service (application crash). This vulnerability can be exploited
+    in a variety of contexts, including media players and web browsers. The
+    vulnerability was discovered in Mozilla Firefox, but can affect other browsers
+    when viewing webpages. The issue is due to a heap buffer overflow. Note that
+    this update can be challenging to do on a BLFS 12.4 system as several packages
+    will need to be rebuilt, since it is not ABI compatible with 1.15.2. However,
+    the patch works with libvpx-1.15.2 as well, so for BLFS 12.4 users, it is
+    safer to rebuild with the patch instead. Update to libvpx-1.16.0 and apply
+    the patch, or if on a BLFS 12.4 system, use the patch with libvpx-1.15.2.
+    <a href="consolidated.html#sa-12.4-100">12.4-100</a></p>
+
+<!-- end of libvpx -->
+
     <h3>libxslt</h3>
 
     <a id="sa-12.4-051"/>
