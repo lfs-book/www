@@ -64,6 +64,34 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-101"/>
+    <h4>12.4 101 libsoup  Date: 2026-02-20  Severity: High</h4>
+    <p>In libsoup-3.6.6, thirteen security vulnerabilities were fixed that
+    could allow for remote code execution, credential leakage to other servers,
+    CRLF injection, remote memory access, HTTP response splitting, HTTP request
+    smuggling, denial of service, and exposure of sensitive user information.
+    These vulnerabilities are in addition to the vulnerabilities fixed in our
+    previous security patch for libsoup. Users who have libsoup installed should
+    treat this update as urgent and update their systems immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9901">CVE-2025-9901</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11021">CVE-2025-11021</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14523">CVE-2025-14523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0716">CVE-2026-0716</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1760">CVE-2026-1760</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1801">CVE-2026-1801</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1761">CVE-2026-1761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2436">CVE-2026-2436</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1536">CVE-2026-1536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2443">CVE-2026-2443</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1467">CVE-2026-1467</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2369">CVE-2026-2369</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1539">CVE-2026-1539</a>.</p>
+    <p>To fix these vulnerabilities, update to libsoup-3.6.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libsoup3.html">libsoup3 (sysv)</a> or
+    <a href="../view/systemd/basicnet/libsoup3.html">libsoup3 (systemd)</a>.</p>
+
     <a id="sa-12.4-100"/>
     <h4>12.4 100 libvpx  Date: 2026-02-20  Severity: High</h4>
     <p>In libvpx-1.16.0, a security vulnerability was discovered that could allow
