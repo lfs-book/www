@@ -64,6 +64,28 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-107"/>
+    <h4>12.4 107 localsearch  Date: 2026-02-25  Severity: Medium</h4>
+    <p>In localsearch-3.10.2, five security vulnerabilities were discovered
+    that could allow for a remote attacker to cause a denial of service
+    (application crashes) or possibly information disclosure when localsearch
+    processes MP3 files. Four of these vulnerabilities are heap buffer
+    overflows, while the other vulnerability is a NULL pointer dereference. Proof
+    of concept exploits have been made available to the public for these issues.
+    One of the vulnerabilities has not been assigned a CVE.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2026-1764">CVE-2026-1764</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2026-1765">CVE-2026-1765</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2026-1766">CVE-2026-1766</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2026-1767">CVE-2026-1767</a>.</p>
+    <p>Additional information about the vulnerability that does not have a CVE
+    assigned can be found at
+    <a href="https://gitlab.gnome.org/GNOME/localsearch/-/issues/426">localsearch Issue #426</a>.</p>
+    <p>To fix these vulnerabilities, update to localsearch-3.10.2 with the
+    security patch using the instructions from
+    <a href="../view/svn/gnome/localsearch.html">localsearch (sysv)</a> or
+    <a href="../view/systemd/gnome/localsearch.html">localsearch (systemd)</a>.</p>
+
     <a id="sa-12.4-106"/>
     <h4>12.4 106 evolution-data-server  Date: 2026-02-25  Severity: Medium</h4>
     <p>In evolution-data-server-3.58.3, three security vulnerabilities were
@@ -72,7 +94,7 @@
     using the NTLM authentication algorithm, and for crashes when connecting
     to a POP3 email server. Only one of the three vulnerabilities has a CVE
     assigned as the other two vulnerabilities only cause crashes. Proof of
-    concepts have been made available to the public for these issues.
+    concept exploits have been made available to the public for these issues.
     This vulnerability has been assigned
     <a href="https://access.redhat.com/security/cve/cve-2026-2604">CVE-2026-2604</a>.</p>
     <p>Additional information on the two vulnerabilities that were not assigned
