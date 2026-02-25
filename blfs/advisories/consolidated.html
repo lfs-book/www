@@ -64,6 +64,26 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-106"/>
+    <h4>12.4 106 evolution-data-server  Date: 2026-02-25  Severity: Medium</h4>
+    <p>In evolution-data-server-3.58.3, three security vulnerabilities were
+    discovered that could allow for arbitrary file deletion when using the
+    addressbook service due to inconsistent URI handling, for crashes when
+    using the NTLM authentication algorithm, and for crashes when connecting
+    to a POP3 email server. Only one of the three vulnerabilities has a CVE
+    assigned as the other two vulnerabilities only cause crashes. Proof of
+    concepts have been made available to the public for these issues.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2026-2604">CVE-2026-2604</a>.</p>
+    <p>Additional information on the two vulnerabilities that were not assigned
+    CVEs can be found at
+    <a href="https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/625">evolution-data-server Issue #625</a> and
+    <a href="https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/626">evolution-data-server Issue #626</a>.</p>
+    <p>To fix these vulnerabilities, update to evolution-data-server-3.58.3 with the
+    security patch using the instructions from
+    <a href="../view/svn/gnome/evolution-data-server.html">evolution-data-server (sysv)</a> or
+    <a href="../view/systemd/gnome/evolution-data-server.html">evolution-data-server (systemd)</a>.</p>
+
     <a id="sa-12.4-105"/>
     <h4>12.4 105 GIMP  Date: 2026-02-25  Severity: Medium</h4>
     <p>In GIMP-3.0.6, five security vulnerabilities were discovered that could
