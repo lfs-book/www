@@ -1168,6 +1168,25 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>UDisks2</h3>
+
+    <a id="sa-12.4-110"/>
+    <h4>12.4 110 UDisks2  Date: 2026-03-01  Severity: High</h4>
+    <p>In UDisks-2.11.1, two security vulnerabilties were fixed that could
+    allow for denial of service (DOS) via irreversible data loss and weakened
+    confidentiality of encrypted storage. Local unprivileged users can
+    overwrite encryption metadata on block devices by instructing the UDisks
+    daemon to do so. It can invalidate the encryption keys and render the
+    volumes that were encrypted to be permanently inaccessible. A D-Bus method
+    that exports encryption metadata does not perform policy checks, which can
+    also lead to that metadata being read and written, leading to less
+    confidentiality of encryption.
+    Since the vulnerabilities can allow for permanent data loss, it is
+    recommended to update <em>immediately</em> to UDisks-2.11.1 or later.
+    <a href="consolidated.html#12.4-110">12.4-110</a></p>
+
+<!-- end of UDisks2 -->
+
     <h3>Unbound</h3>
 
     <a id="sa-12.4-050"/>
