@@ -64,6 +64,24 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-111"/>
+    <h4>12.4 111 gvfs Date: 2026-03-01  Severity: Medium</h4>
+    <p>In gvfs-1.58.2, two security vulnerabilities were fixed that could allow
+    for unintended termination of FTP commands, injection of arbitrary FTP
+    commands (allowing for arbitrary code execution, data exfiltration, and
+    possibly other severe impacts), and for port scanning to occur. These
+    vulnerabilities occur in the FTP backend for gvfs, and can be exploited
+    by a malicious FTP server. Users who are not using the FTP functionality
+    in gvfs are unaffected. Users who do use it though and who access untrusted
+    FTP sites should update gvfs immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28295">CVE-2026-28295</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28296">CVE-2026-28296</a>.</p>
+    <p>To fix these vulnerabilities, update to gvfs-1.58.2 or later using the
+    instructions from
+    <a href="../view/svn/gnome/gvfs.html">gvfs (sysv)</a> or
+    <a href="../view/systemd/gnome/gvfs.html">gvfs (systemd)</a>.</p>
+
     <a id="sa-12.4-110"/>
     <h4>12.4 110 UDisks2  Date: 2026-03-01  Severity: High</h4>
     <p>In UDisks-2.11.1, two security vulnerabilties were fixed that could
