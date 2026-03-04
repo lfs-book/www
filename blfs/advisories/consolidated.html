@@ -64,6 +64,29 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-112"/>
+    <h4>12.4 112 OpenJDK  Date: 2026-03-04  Severity: High</h4>
+    <p>In OpenJDK-21.0.10, four security vulnerabilities were fixed that could
+    allow for unauthorized creation, modification, or deletion of data and for
+    denial of service (application crashes). All four of these vulnerabilities
+    are remotely exploitable without user authentication, and the issues are
+    in the RMI, Networking, AWT, and Security components of OpenJDK. All users
+    who have OpenJDK installed should update as the vulnerabilities affect all
+    deployment use cases, rather than just in sandboxed applets.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21925">CVE-2026-21925</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21932">CVE-2026-21932</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21933">CVE-2026-21933</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21945">CVE-2026-21945</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-21.0.10 or later using
+    the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>If you want to use the pre-built binaries, update to Java-21.0.10 using
+    the instructions from
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
     <a id="sa-12.4-111"/>
     <h4>12.4 111 gvfs Date: 2026-03-01  Severity: Medium</h4>
     <p>In gvfs-1.58.2, two security vulnerabilities were fixed that could allow
