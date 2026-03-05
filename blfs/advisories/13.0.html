@@ -1,0 +1,69 @@
+<!--#set var="pageTitle" value="BLFS Security Advisories for 13.0" -->
+<!--#include virtual="/blfs/header.html" -->
+<!--#include virtual="/blfs/menu.html" -->
+    <div class="main">
+
+    <h2>BLFS Security Advisories for BLFS 13.0 and the current development books.</h2>
+
+    <a id="BLFS13.0"/>
+    <p>BLFS-13.0 was released on 2026-03-05</p>
+
+    <!-- Editors: Do not remove this entry, just comment it out. -->
+
+    <ul>
+      <li>There are currently no known security vulnerabilities for BLFS-13.0.</li>
+    </ul>
+
+    <!-- Editors: do the consolidated file first, to get the next number -->
+
+    <p style="font-style: italic;">This page is in alphabetical order of packages,
+    and if a package has multiple advisories the newer come first.</p>
+
+    <p> The links at the end of each item point to more details which have
+    links to the
+    development <!-- change to 'released' when links in consolidated are changed
+    after a release -->
+    books.</p>
+
+    <p>In general, the severity is taken from upstream, if supplied, or from
+    NVD (https://nvd.nist.gov/vuln/detail/) if an analysis is available there,
+    but individual severity ratings at NVD can change over time. If no other
+    information is available, 'High' will normally be assumed.</p>
+
+    <!-- After a release, copy for next book version, leave just template stuff
+     and initially say "There are no known vulnerabilities." -->
+
+<!-- start of list: Order is Alphabetic by package name (create multiple entries
+     if more than one package is involved, e.g. for those firefox updates which
+     also require JS to be updated.  Within each package, latest update first
+     and link to the consolidated page, e.g.
+     <a href="consolidated.html#sa-12.0-001">12.0-001</a> -->
+
+<!--
+    <h3>PackageName</h3>
+
+    <a id="sa-12.0-NNN"/>
+    <h4>12.0 NNN PackageName  Date: 2023-03-01  Severity: High</h4>
+    <p>Brief explanatory text, followed by link to the consolidated page.
+    <a href="consolidated.html#11.3-NNN">11.3-NNN</a></p>
+-->
+
+<!-- end of PackageName -->
+
+<!--
+    <h3>Apache HTTPD</h3>
+
+    <a id="sa-12.4.049"/>
+    <h4>12.4 049 Apache HTTPD Date: 2025-12-04  Severity: Medium</h4>
+    <p>In httpd-2.4.66, four security vulnerabilities were fixed that could
+    allow for unintended retry intervals when renewing ACME certificates,
+    for Server Side Includes to unexpectedly pass a shell escaped query
+    string to a command directive, for environment variables to be overridden
+    when using CGI programs, and for users to cause CGI scripts to run under
+    an unexpected username. Update to httpd-2.4.66 or later if you use the
+    mod_cgi, mod_cgid, mod_md, or Server Side Includes functionality.
+    <a href="consolidated.html#sa-12.4-049">12.4-049</a></p>
+-->
+<!-- end of Apache HTTPD -->
+
+<!--#include virtual="/common/footer.html" -->

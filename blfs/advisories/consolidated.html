@@ -54,14 +54,29 @@
     instructions from the development book for
      (BLFS links:)
     <a href="../view/svn/path/something.html">Package (sysv)</a> or
-    <a href="../view/systemd/path/something.html">Package (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/path/something.html">Package (systemd)</a>.</p>
      (LFS links:) - usually chapter08
     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
+    <a href="../../lfs/view/13.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>-->
 
     <!-- where a fix used a patch, maybe link to it. e.g.
     <a href="http://www.linuxfromscratch.org/patches/downloads/libexif/libexif-0.6.22-security_fixes-1.patch">libexif-0.6.22-security_fixes-1.patch</a>
      for clarity. -->
+
+    <h2>NOTICE: Security Advisories for BLFS 13.0 and later will not be
+    tested on SysV systems. They may work, but are not guaranteed to work by
+    the editors. The advisories for BLFS 12.4 will continue to point to the
+    development version of the books as no stable release of SysV for 13.0 has
+    been made, but this may change in the future. In the meantime, please use at
+    your own risk. The advisories for the systemd version will point to the 13.0
+    stable release. Efforts will be made to document possible problems in the
+    meantime for existing users of the SysV versions of the LFS family.</h2>
+
+    <h2>Items between the releases of the 13.0 and 13.1 books</h2>
+
+    <p>There are currently no known security vulnerabilities for the latest
+    releases of the books.</p>
+
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
     <a id="sa-12.4-112"/>
@@ -81,11 +96,11 @@
     <p>To fix these vulnerabilities, update to OpenJDK-21.0.10 or later using
     the instructions from
     <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
-    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
     <p>If you want to use the pre-built binaries, update to Java-21.0.10 using
     the instructions from
     <a href="../view/svn/general/java.html">Java (sysv)</a> or
-    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/java.html">Java (systemd)</a>.</p>
 
     <a id="sa-12.4-111"/>
     <h4>12.4 111 gvfs Date: 2026-03-01  Severity: Medium</h4>
@@ -103,7 +118,7 @@
     <p>To fix these vulnerabilities, update to gvfs-1.58.2 or later using the
     instructions from
     <a href="../view/svn/gnome/gvfs.html">gvfs (sysv)</a> or
-    <a href="../view/systemd/gnome/gvfs.html">gvfs (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/gnome/gvfs.html">gvfs (systemd)</a>.</p>
 
     <a id="sa-12.4-110"/>
     <h4>12.4 110 UDisks2  Date: 2026-03-01  Severity: High</h4>
@@ -122,7 +137,7 @@
     recommended to update <em>immediately</em> to UDisks-2.11.1 or later using
     the instructions from
     <a href="../view/svn/general/udisks2.html">UDisks2 (sysv)</a> or
-    <a href="../view/systemd/general/udisks2.html">UDisks2 (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/udisks2.html">UDisks2 (systemd)</a>.</p>
 
     <a id="sa-12.4-109"/>
     <h4>12.4 109 gstreamer  Date: 2026-03-01  Severity: High</h4>
@@ -149,7 +164,7 @@
     <p>To fix these vulnerabilities, update to gstreamer-1.28.1, and update the
     plugins to 1.28.1 as well. Do so by using the instructions from
     <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
-    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
 
     <a id="sa-12.4-108"/>
     <h4>12.4 108 vim (LFS and BLFS) Date: 2026-03-01  Severity: Medium</h4>
@@ -166,7 +181,7 @@
     <p>To fix these vulnerabilities, update to vim-9.2.0078 or later using the
     instructions from 
     <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
-    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/postlfs/vim.html">vim (systemd)</a>.</p>
 
     <a id="sa-12.4-107"/>
     <h4>12.4 107 localsearch  Date: 2026-02-25  Severity: Medium</h4>
@@ -188,7 +203,7 @@
     <p>To fix these vulnerabilities, update to localsearch-3.10.2 with the
     security patch using the instructions from
     <a href="../view/svn/gnome/localsearch.html">localsearch (sysv)</a> or
-    <a href="../view/systemd/gnome/localsearch.html">localsearch (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/gnome/localsearch.html">localsearch (systemd)</a>.</p>
 
     <a id="sa-12.4-106"/>
     <h4>12.4 106 evolution-data-server  Date: 2026-02-25  Severity: Medium</h4>
@@ -208,7 +223,7 @@
     <p>To fix these vulnerabilities, update to evolution-data-server-3.58.3 with the
     security patch using the instructions from
     <a href="../view/svn/gnome/evolution-data-server.html">evolution-data-server (sysv)</a> or
-    <a href="../view/systemd/gnome/evolution-data-server.html">evolution-data-server (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/gnome/evolution-data-server.html">evolution-data-server (systemd)</a>.</p>
 
     <a id="sa-12.4-105"/>
     <h4>12.4 105 GIMP  Date: 2026-02-25  Severity: Medium</h4>
@@ -232,7 +247,7 @@
     <p>To fix this vulnerability, update to GIMP-3.0.6 with the security patch
     using the instructions from
     <a href="../view/svn/xsoft/gimp.html">GIMP (sysv)</a> or
-    <a href="../view/systemd/xsoft/gimp.html">GIMP (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/gimp.html">GIMP (systemd)</a>.</p>
 
     <a id="sa-12.4-104"/>
     <h4>12.4 104 SpiderMonkey  Date: 2026-02-24  Severity: High</h4>
@@ -253,7 +268,7 @@
     <p>To fix these vulnerabilities, update to SpiderMonkey from
     Firefox-140.8.0esr or later using the instructions from
     <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
-    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
 
     <a id="sa-12.4-103"/>
     <h4>12.4 103 Firefox  Date: 2026-02-24  Severity: Critical</h4>
@@ -304,7 +319,7 @@
     therefore highly recommended to update to Firefox-140.8.0esr or later
     <em>immediately</em> using the instructions from
     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="sa-12.4-102"/>
     <h4>12.4 102 Thunderbird  Date: 2026-02-24  Severity: Critical</h4>
@@ -355,7 +370,7 @@
     therefore highly recommended to update to Thunderbird-140.8.0esr or later
     <em>immediately</em> using the instructions from
     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-12.4-101"/>
     <h4>12.4 101 libsoup  Date: 2026-02-20  Severity: High</h4>
@@ -383,7 +398,7 @@
     <p>To fix these vulnerabilities, update to libsoup-3.6.6 or later using the
     instructions from
     <a href="../view/svn/basicnet/libsoup3.html">libsoup3 (sysv)</a> or
-    <a href="../view/systemd/basicnet/libsoup3.html">libsoup3 (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/libsoup3.html">libsoup3 (systemd)</a>.</p>
 
     <a id="sa-12.4-100"/>
     <h4>12.4 100 libvpx  Date: 2026-02-20  Severity: High</h4>
@@ -402,7 +417,7 @@
     <p>To fix this vulnerability, update to libvpx-1.16.0 or later using the
     instructions with the patch from
     <a href="../view/svn/multimedia/libvpx.html">libvpx (sysv)</a> or
-    <a href="../view/systemd/multimedia/libvpx.html">libvpx (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/multimedia/libvpx.html">libvpx (systemd)</a>.</p>
     <p>After upgrading libvpx, users will need to reinstall the following
     packages on their system:</p>
     <ul>
@@ -418,7 +433,7 @@
     <p>Users who have Seamonkey should also reinstall that package with the
     included libvpx patch in
     <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>
+    <a href="../view/13.0-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>
     since the bundled libvpx gets used.</p>
 
     <a id="sa-12.4-099"/>
@@ -434,7 +449,7 @@
     <p>To fix this vulnerability, update to zlib-1.3.2 or later using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/zlib.html">zlib (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/zlib.html">zlib (systemd)</a>.</p>
+    <a href="../../lfs/view/13.0-systemd/chapter08/zlib.html">zlib (systemd)</a>.</p>
 
     <a id="sa-12.4-098"/>
     <h4>12.4 098 librsvg  Date: 2026-02-14  Severity: Medium</h4>
@@ -449,7 +464,7 @@
     <a href="https://rustsec.org/advisories/RUSTSEC-2026-0009.html">Rust Security Database Entry</a>.</p>
     <p>To fix this vulnerability, update to librsvg-2.61.4 or later using
     <a href="../view/svn/general/librsvg.html">librsvg (sysv)</a> or
-    <a href="../view/systemd/general/librsvg.html">librsvg (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/librsvg.html">librsvg (systemd)</a>.</p>
 
     <a id="sa-12.4-097"/>
     <h4>12.4 097 glib   Date: 2026-02-14  Severity: Medium</h4>
@@ -476,7 +491,7 @@
     <p>To fix these vulnerabilities, update to glib-2.86.4 or later using the
     instructions from
     <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
-    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/glib2.html">glib (systemd)</a>.</p>
 
     <a id="sa-12.4-096"/>
     <h4>12.4 096 urllib3  Date: 2026-02-14  Severity: High</h4>
@@ -496,7 +511,7 @@
     <p>To fix this vulnerability, update to urllib3-2.6.3 or later using the
     instructions from
     <a href="../view/svn/general/python-dependencies.html#urllib3">urllib3 (sysv)</a> or
-    <a href="../view/systemd/general/python-dependencies.html#urllib3.html">urllib3 (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/python-dependencies.html#urllib3.html">urllib3 (systemd)</a>.</p>
 
     <a id="sa-12.4-095"/>
     <h4>12.4 095 vim (LFS and BLFS) Date: 2026-02-14  Severity: Medium</h4>
@@ -512,7 +527,7 @@
     <p>To fix this vulnerability, update to vim-9.1.2144 or later using the
     instructions from
     <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
-    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/postlfs/vim.html">vim (systemd)</a>.</p>
 
     <a id="sa-12.4-094"/>
     <h4>12.4 094 ImageMagick  Date: 2026-02-14  Severity: Critical</h4>
@@ -543,7 +558,7 @@
     <p>To fix these vulnerabilities, update to ImageMagick-7.1.2-13 or later
     using the instructions from
     <a href="../view/svn/general/imagemagick.html">ImageMagick (sysv)</a> or
-    <a href="../view/systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/imagemagick.html">ImageMagick (systemd)</a>.</p>
 
     <a id="sa-12.4-093"/>
     <h4>12.4 093 PostgreSQL  Date: 2026-02-14  Severity: High</h4>
@@ -574,7 +589,7 @@
     <p>To fix these vulnerabilities, update to PostgreSQL-18.2 using the
     instructions from
     <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
-    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.
+    <a href="../view/13.0-systemd/server/postgresql.html">PostgreSQL (systemd)</a>.
     If you are on PostgreSQL-17 and don't want to update your database to 18.x,
     update to PostgreSQL-17.8 instead using the instructions from
     <a href="../view/12.4/server/postgresql.html">PostgreSQL (12.4 sysv)</a> or
@@ -613,7 +628,7 @@
     system is vulnerable, update to intel-microcode-20260210 or later using the
     instructions from
     <a href="../view/svn/postlfs/firmware.html">About Firmware (sysv)</a> or
-    <a href="../view/systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/postlfs/firmware.html">About Firmware (systemd)</a>.</p>
 
     <a id="sa-12.4-091"/>
     <h4>12.4 091 libjxl  Date: 2026-02-11  Severity: High</h4>
@@ -636,7 +651,7 @@
     <p>To fix these vulnerabilities, update to libjxl-0.11.2 or later using the
     instructions from
     <a href="../view/svn/general/libjxl.html">libjxl (sysv)</a> or
-    <a href="../view/systemd/general/libjxl.html">libjxl (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/libjxl.html">libjxl (systemd)</a>.</p>
 
     <a id="sa-12.4-090"/>
     <h4>12.4 090 libpng  Date: 2026-02-11  Severity: High</h4>
@@ -653,7 +668,7 @@
     <p>To fix this vulnerability, update to libpng-1.6.55 or later using the
     instructions from
     <a href="../view/svn/general/libpng.html">libpng (sysv)</a> or
-    <a href="../view/systemd/general/libpng.html">libpng (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/libpng.html">libpng (systemd)</a>.</p>
 
     <a id="sa-12.4-089"/>
     <h4>12.4 089 GnuTLS  Date: 2026-02-11  Severity: High</h4>
@@ -673,7 +688,7 @@
     <p>To fix these vulnerabilities, update to GnuTLS-3.8.12 or later using the
     instructions from
     <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
-    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
     <a id="sa-12.4-088"/>
     <h4>12.4 088 Python (LFS and BLFS)  Date: 2026-08-08  Severity: High</h4>
@@ -699,7 +714,7 @@
     Python-3.14.x, update to Python-3.14.3. In order to do so, follow the
     instructions from
     <a href="../view/svn/general/python3.html">Python (sysv)</a> or
-    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/python3.html">Python (systemd)</a>.</p>
 
     <a id="sa-12.4-087"/>
     <h4>12.4 087 p11-kit  Date: 2026-02-08  Severity: High</h4>
@@ -715,7 +730,7 @@
     <p>To fix this vulnerability, update to p11-kit-0.26.2 or later using the
     instructions from
     <a href="../view/svn/postlfs/p11-kit.html">p11-kit (sysv)</a> or
-    <a href="../view/systemd/postlfs/p11-kit.html">p11-kit (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/postlfs/p11-kit.html">p11-kit (systemd)</a>.</p>
 
     <a id="sa-12.4-086"/>
     <h4>12.4 086 Expat (LFS) Date: 2026-02-08  Severity: Medium</h4>
@@ -738,7 +753,7 @@
     <p>To fix these vulnerabilities, update to Expat-2.7.4 or later using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <a href="../../lfs/view/13.0-systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
     <p>Note: If you have installed docbook-utils from BLFS you will need to add
     "--without-docbook" to work around an error in configure, since our
     installation of docbook-utils uses SGML instead of XML.</p>
@@ -772,9 +787,9 @@
     <p>Users are advised to resolve these vulnerabilities immediately by
     updating to Qt6-6.10.2 and QtWebEngine-6.10.2 or later, using the
     instructions from <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
-    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a> and
+    <a href="../view/13.0-systemd/x/qt6.html">Qt6 (systemd)</a> and
     <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
-    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
     <a id="sa-12.4-084"/>
     <h4>12.4 084 FreeRDP  Date: 2026-02-05  Severity: High</h4>
@@ -800,7 +815,7 @@
     <p>To fix these vulnerabilities, update to FreeRDP-3.22.0 or later using
     the instructions from
     <a href="../view/svn/xsoft/freerdp.html">FreeRDP (sysv)</a> or
-    <a href="../view/systemd/xsoft/freerdp.html">FreeRDP (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/freerdp.html">FreeRDP (systemd)</a>.</p>
 
     <a id="sa-12.4-083"/>
     <h4>12.4 083 GnuPG  Date: 2026-02-05  Severity: High</h4>
@@ -824,7 +839,7 @@
     <p>To fix these vulnerabilities, update to GnuPG-2.5.17 or later using the
     instructions from
     <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
-    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
 
     <a id="sa-12.4-082"/>
     <h4>12.4 082 BIND Date: 2026-02-05 Severity: High</h4>
@@ -842,7 +857,7 @@
     <p>To fix this vulnerability, update to BIND-9.20.18 or later using the
     instructions from
     <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
-    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/server/bind.html">BIND (systemd)</a>.</p>
 
     <a id="sa-12.4-081"/>
     <h4>12.4 081 Thunderbird  Date: 2026-02-04  Severity: Medium</h4>
@@ -854,7 +869,7 @@
     <p>To fix this vulnerability, update to Thunderbird-140.7.1esr or later
     using the instructions from
     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-12.4-080"/>
     <h4>12.4 080 gst-plugins-bad  Date: 2026-02-04  Severity: High</h4>
@@ -869,12 +884,12 @@
     <p>To fix these vulnerabilities, update to gstreamer, gst-plugins-base, and
     gst-plugins-bad 1.26.10 or later using the instructions from
     <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
-    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>,
+    <a href="../view/13.0-systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>,
     <a href="../view/svn/multimedia/gst10-plugins-base.html">gst-plugins-base (sysv)</a> or
-    <a href="../view/systemd/multimedia/gst10-plugins-base.html">gst-plugins-base (systemd)</a>,
+    <a href="../view/13.0-systemd/multimedia/gst10-plugins-base.html">gst-plugins-base (systemd)</a>,
     and <a
     href="../view/svn/multimedia/gst10-plugins-bad.html">gst-plugins-bad (sysv)</a> or
-    <a href="../view/systemd/multimedia/gst10-plugins-bad.html">gst-plugins-bad (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/multimedia/gst10-plugins-bad.html">gst-plugins-bad (systemd)</a>.</p>
     <p>gstreamer-1.28.0 is ABI compatible with 1.26.x.</p>
 
     <a id="sa-12.4-079"/>
@@ -890,7 +905,7 @@
     <p>To fix these vulnerabilities, update to glibc-2.43 using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/glibc.html">glibc (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
+    <a href="../../lfs/view/13.0-systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
 
     <a id="sa-12.4-078"/>
     <h4>12.4 078 OpenSSL (LFS)  Date: 2026-02-01  Severity: High</h4>
@@ -915,7 +930,7 @@
     <p>To fix these vulnerabilities, update to OpenSSL-3.6.1 (or 3.5.5) using
     the instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <a href="../../lfs/view/13.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
 
     <a id="sa-12.4-077"/>
     <h4>12.4 077 FreeRDP               Date: 2026-01-21  Severity: High</h4>
@@ -935,7 +950,7 @@
     <p>To fix these vulnerabilities, update to FreeRDP-3.21.0 or later
     using the instructions from
     <a href="../view/svn/xsoft/freerdp.html">FreeRDP (sysv)</a> or
-    <a href="../view/systemd/xsoft/freerdp.html">FreeRDP (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/freerdp.html">FreeRDP (systemd)</a>.</p>
 
     <a id="sa-12.4-076"/>
     <h4>12.4 076 libpng                Date: 2026-01-14  Severity: Medium</h4>
@@ -947,7 +962,7 @@
     <p>To fix these vulnerabilities, update to libpng-1.6.54 or later
     using the instructions from
     <a href="../view/svn/general/libpng.html">libpng (sysv)</a> or
-    <a href="../view/systemd/general/libpng.html">libpng (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/libpng.html">libpng (systemd)</a>.</p>
 
     <a id="sa-12.4-075"/>
     <h4>12.4 075 Seamonkey                Date: 2026-01-14  Severity: High</h4>
@@ -979,7 +994,7 @@
     <p>To fix these vulnerabilities, update to Seamonkey-2.53.23 or later
     using the instructions from
     <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
 
     <a id="sa-12.4-074"/>
     <h4>12.4 074 Thunderbird                Date: 2026-01-14  Severity: High</h4>
@@ -1004,7 +1019,7 @@
     <p>To fix these vulnerabilities, update to Thunderbird-140.7.0esr or later
     using the instructions from
     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-12.4-073"/>
     <h4>12.4 073 SpiderMonkey  Date: 2025-12-16  Severity: High</h4>
@@ -1019,7 +1034,7 @@
     <p>To fix these vulnerabilities, update to SpiderMonkey from
     Firefox-140.7.0esr using the instructions from
     <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
-    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
 
     <a id="sa-12.4-072"/>
     <h4>12.4 072 Firefox                Date: 2026-01-14  Severity: High</h4>
@@ -1044,7 +1059,7 @@
     <p>To fix these vulnerabilities, update to Firefox-140.7.0esr or later
     using the instructions from
     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>. Do note
+    <a href="../view/13.0-systemd/xsoft/firefox.html">Firefox (systemd)</a>. Do note
     that if you want to use NSS and NSPR for Firefox, NSPR must be at version
     4.38.2.</p>
 
@@ -1064,7 +1079,7 @@
     <p>To fix these vulnerabilities, update to Node.js-22.22.0 or later using
     the instructions from
     <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
-    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
 
     <a id="sa-12.4-070"/>
     <h4>12.4 070 VLC                    Date: 2026-01-14  Severity: Critical</h4>
@@ -1078,7 +1093,7 @@
     <p>Since there are so many vulnerabilties fixed, it is highly
     recommended to update <em>immediately</em> to VLC-3.0.23 or later by using
     the instructions from <a href="../view/svn/multimedia/vlc.html">VLC
-    (sysv)</a> or <a href="../view/systemd/multimedia/vlc.html">VLC
+    (sysv)</a> or <a href="../view/13.0-systemd/multimedia/vlc.html">VLC
     (systemd)</a>.</p>
 
     <a id="sa-12.4-069"/>
@@ -1089,7 +1104,7 @@
     <p>To fix this vulnerability, update to libtasn1-4.21.0 or later using
     the instructions from
     <a href="../view/svn/general/libtasn1.html">libtasn1 (sysv)</a> or
-    <a href="../view/systemd/general/libtasn1.html">libtasn1 (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/libtasn1.html">libtasn1 (systemd)</a>.</p>
 
     <a id="sa-12.4-068"/>
     <h4>12.4 068 cURL                   Date: 2026-01-14  Severity: Medium</h4>
@@ -1107,7 +1122,7 @@
     <p>To fix these vulnerabilities, update to cURL-8.18.0 or later using the
     instructions from
     <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
-    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
 
     <a id="sa-12.4-067"/>
     <h4>12.4 067 OpenJDK                Date: 2026-01-07  Severity: High</h4>
@@ -1132,11 +1147,11 @@
     <p>To fix these vulnerabilities, update to OpenJDK-21.0.9 or later using
     the instructions from
     <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
-    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
     <p>If you want to use the pre-built binaries, update to Java-21.0.9 using
     the instructions from
     <a href="../view/svn/general/java.html">Java (sysv)</a> or
-    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/java.html">Java (systemd)</a>.</p>
 
     <a id="sa-12.4-066"/>
     <h4>12.4 066 libpcap                Date: 2025-12-31  Severity: Low</h4>
@@ -1158,7 +1173,7 @@
     <p>To fix this vulnerability, update to libpcap-1.10.6 or later using the
     instructions from
     <a href="../view/svn/basicnet/libpcap.html">libpcap (sysv)</a> or
-    <a href="../view/systemd/basicnet/libpcap.html">libpcap (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/libpcap.html">libpcap (systemd)</a>.</p>
 
     <a id="sa-12.4-065"/>
     <h4>12.4 065 Ruby                   Date: 2025-12-31  Severity: Low</h4>
@@ -1174,7 +1189,7 @@
     <p>To fix this vulnerability, update to Ruby-3.4.8 or later using the
     instructions from
     <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
-    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/ruby.html">Ruby (systemd)</a>.</p>
 
     <a id="sa-12.4-064"/>
     <h4>12.4 064 PHP                    Date: 2025-12-28  Severity: Medium</h4>
@@ -1194,7 +1209,7 @@
     <p>To fix these vulnerabilities, update to PHP-8.5.1 or later using the
     instructions from
     <a href="../view/svn/general/php.html">PHP (sysv)</a> or
-    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/php.html">PHP (systemd)</a>.</p>
     <p>Alternatively, users may use PHP-8.4.16 using the same instructions.</p>
 
     <a id="sa-12.4-063"/>
@@ -1219,7 +1234,7 @@
     Python-3.14.x, update to Python-3.14.2. In order to do so, follow the
     instructions from
     <a href="../view/svn/general/python.html">Python (sysv)</a> or
-    <a href="../view/systemd/general/python.html">Python (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/python.html">Python (systemd)</a>.</p>
 
     <a id="sa-12.4-062"/>
     <h4>12.4 062 Exim         Date: 2025-12-20  Severity: High</h4>
@@ -1235,7 +1250,7 @@
     <p>To fix this vulnerability, update to Exim-4.99.1 or later using the
     instructions from
     <a href="../view/svn/server/exim.html">Exim (sysv)</a> or
-    <a href="../view/systemd/server/exim.html">Exim (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/server/exim.html">Exim (systemd)</a>.</p>
 
     <a id="sa-12.4-061"/>
     <h4>12.4 061 Kea DHCP Server Date: 2025-12-20  Severity: High</h4>
@@ -1254,7 +1269,7 @@
     <p>To fix this vulnerability, update to Kea-3.0.2 or later using the
     instructions from
     <a href="../view/svn/server/kea.html">Kea (sysv)</a> or
-    <a href="../view/systemd/server/kea.html">Kea (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/server/kea.html">Kea (systemd)</a>.</p>
 
     <a id="sa-12.4-060"/>
     <h4>12.4 060 WebKitGTK    Date: 2025-12-16  Severity: Critical</h4>
@@ -1275,7 +1290,7 @@
     own, update <em>IMMEDIATELY</em> to WebKitGTK-2.50.4 or later using
     the instructions from
     <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
-    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
 
     <a id="sa-12.4-059"/>
     <h4>12.4 059 SpiderMonkey  Date: 2025-12-16  Severity: High</h4>
@@ -1288,7 +1303,7 @@
     <p>To fix these vulnerabilities, update to SpiderMonkey from
     Firefox-140.6.0esr using the instructions from
     <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
-    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
 
     <a id="sa-12.4-058"/>
     <h4>12.4 058 Firefox  Date: 2025-12-16  Severity: High</h4>
@@ -1308,7 +1323,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14333">CVE-2025-14333</a>.</p>
     <p>To fix these vulnerabilities, update to Firefox-140.6.0esr using the
     instructions from <a href="../view/svn/xsoft/firefox.html">Firefox
-    (sysv)</a> or <a href="../view/systemd/xsoft/firefox.html">Firefox
+    (sysv)</a> or <a href="../view/13.0-systemd/xsoft/firefox.html">Firefox
     (systemd)</a>.</p>
 
     <a id="sa-12.4-057"/>
@@ -1329,7 +1344,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14333">CVE-2025-14333</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-140.6.0esr using the
     instructions from <a href="../view/svn/xsoft/thunderbird.html">Thunderbird
-    (sysv)</a> or <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird
+    (sysv)</a> or <a href="../view/13.0-systemd/xsoft/thunderbird.html">Thunderbird
     (systemd)</a>.</p>
 
     <a id="sa-12.4-056"/>
@@ -1346,7 +1361,7 @@
     <p>To fix this vulnerability, update to glib-2.86.3 or later using the
     instructions from
     <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
-    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/glib2.html">glib (systemd)</a>.</p>
 
     <a id="sa-12.4-055"/>
     <h4>12.4 055 c-ares       Date: 2025-12-08  Severity: Medium</h4>
@@ -1361,7 +1376,7 @@
     <p>To fix this vulnerability, update to c-ares-1.34.6 or later using the
     instructions from
     <a href="../view/svn/basicnet/c-ares.html">c-ares (sysv)</a> or
-    <a href="../view/systemd/basicnet/c-ares.html">c-ares (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/c-ares.html">c-ares (systemd)</a>.</p>
 
     <a id="sa-12.4-054"/>
     <h4>12.4 054 WebKitGTK    Date: 2025-12-05  Severity: Critical</h4>
@@ -1400,7 +1415,7 @@
     <p>To fix these vulnerabilities, update to WebKitGTK-2.50.3 or later using
     the instructions from
     <a href="../view/svn/x/webkitgtk.html">WebKitGTK (sysv)</a> or
-    <a href="../view/systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/x/webkitgtk.html">WebKitGTK (systemd)</a>.</p>
 
     <a id="sa-12.4-053"/>
     <h4>12.4 053 urllib3      Date: 2025-12-05  Severity: High</h4>
@@ -1422,7 +1437,7 @@
     <p>To fix this vulnerability, update to urllib3-2.6.0 or later using the
     instructions from
     <a href="../view/svn/general/python-dependencies.html#urllib3">urllib3 (sysv)</a> or
-    <a href="../view/systemd/general/python-dependencies.html#urllib3.html">urllib3 (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/python-dependencies.html#urllib3.html">urllib3 (systemd)</a>.</p>
     <p>In addition, users should make sure that Brotli is updated to 1.2.0 or
     later using the instructions from
     <a href="consolidated.html#sa-12.4-027">12-4.027</a>.</p>
@@ -1445,7 +1460,7 @@
     <p>To fix these vulnerabilities, update to xkbcomp-1.5.0 or later using
     the instructions from
     <a href="../view/svn/x/x7app.html">Xorg Applications (sysv)</a> or
-    <a href="../view/systemd/x/x7app.html">Xorg Applications (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/x/x7app.html">Xorg Applications (systemd)</a>.</p>
 
     <a id="sa-12.4-051"/>
     <h4>12.4 051 libxslt      Date: 2025-12-05  Severity: High</h4>
@@ -1466,7 +1481,7 @@
     <p>To fix these vulnerabilities, update to libxslt-1.1.45 or later using
     the instructions from
     <a href="../view/svn/general/libxslt.html">libxslt (sysv)</a> or
-    <a href="../view/systemd/general/libxslt.html">libxslt (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/libxslt.html">libxslt (systemd)</a>.</p>
     <p>On a BLFS 12.4 system which has libxml2-2.14.x installed, this package
     will fail to configure. The minimum version of libxml2 was increased to
     2.15.1. However, this is only needed if you are planning on running the
@@ -1489,7 +1504,7 @@
     <p>To fix this vulnerability, update to Unbound-1.24.2 or later using the
     instructions from
     <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
-    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/server/unbound.html">Unbound (systemd)</a>.</p>
 
     <a id="sa-12.4.049"/>
     <h4>12.4 049 Apache HTTPD Date: 2025-12-04  Severity: Medium</h4>
@@ -1519,7 +1534,7 @@
     <p>To fix these vulnerabilities, update to httpd-2.4.66 or later using the
     instructions from
     <a href="../view/svn/server/apache.html">Apache HTTPD (sysv)</a> or
-    <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
 
     <a id="sa-12.4-048"/>
     <h4>12.4 048 Wireshark    Date: 2025-12-04  Severity: Medium</h4>
@@ -1535,7 +1550,7 @@
     <p>To fix these vulnerabilities, update to Wireshark-4.6.2 or later using
     the instructions from
     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="sa-12.4-047"/>
     <h4>12.4 047 libpng  Date: 2025-12-04  Severity: High</h4>
@@ -1547,7 +1562,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66293">CVE-2025-66293</a>.</p>
     <p>To fix this vulnerability, update to libpng-1.6.52 using the
     instructions from <a href="../view/svn/general/libpng.html">libpng
-    (sysv)</a> or <a href="../view/systemd/general/libpng.html">libpng
+    (sysv)</a> or <a href="../view/13.0-systemd/general/libpng.html">libpng
     (systemd)</a>.</p>
 
     <a id="sa-12.4-046"/>
@@ -1560,7 +1575,7 @@
     <p>To fix this vulnerability, update to SpiderMonkey from
     Firefox-140.5.0esr using the instructions from
     <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
-    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
 
     <a id="sa-12.4-045"/>
     <h4>12.4 045 Firefox  Date: 2025-12-02  Severity: High</h4>
@@ -1580,7 +1595,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13020">CVE-2025-13020</a>.</p>
     <p>To fix these vulnerabilities, update to Firefox-140.5.0esr using the
     instructions from <a href="../view/svn/xsoft/firefox.html">Firefox
-    (sysv)</a> or <a href="../view/systemd/xsoft/firefox.html">Firefox
+    (sysv)</a> or <a href="../view/13.0-systemd/xsoft/firefox.html">Firefox
     (systemd)</a>.</p>
 
     <a id="sa-12.4-044"/>
@@ -1601,7 +1616,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13020">CVE-2025-13020</a>.</p>
     <p>To fix these vulnerabilities, update to Thunderbird-140.5.0esr using the
     instructions from <a href="../view/svn/xsoft/thunderbird.html">Thunderbird
-    (sysv)</a> or <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird
+    (sysv)</a> or <a href="../view/13.0-systemd/xsoft/thunderbird.html">Thunderbird
     (systemd)</a>.</p>
 
     <a id="sa-12.4-043"/>
@@ -1615,7 +1630,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-65018">CVE-2025-65018</a>.</p>
     <p>To fix these vulnerabilities, update to libpng-1.6.51 using the
     instructions from <a href="../view/svn/general/libpng.html">libpng
-    (sysv)</a> or <a href="../view/systemd/general/libpng.html">libpng
+    (sysv)</a> or <a href="../view/13.0-systemd/general/libpng.html">libpng
     (systemd)</a>.</p>
 
     <a id="sa-12.4-042"/>
@@ -1630,7 +1645,7 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61915">CVE-2025-61915</a>.</p>
     <p>To fix these vulnerabilities, update to CUPS-2.4.16 using the instructions
     from <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
-    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/pst/cups.html">CUPS (systemd)</a>.</p>
     <p><em>Edited on 2025-12-10 to suggest using CUPS-2.4.16 due to major
     regressions in the 2.4.15 release.</em></p>
 
@@ -1647,9 +1662,9 @@
     libcupsfilters-2.1.1 with the security patches listed on each page
     using the instructions from
     <a href="../view/svn/pst/cups-filters.html">cups-filters (sysv)</a> or
-    <a href="../view/systemd/pst/cups-filters.html">cups-filters (systemd)</a> and
+    <a href="../view/13.0-systemd/pst/cups-filters.html">cups-filters (systemd)</a> and
     <a href="../view/svn/pst/libcupsfilters.html">libcupsfilters (sysv)</a> or
-    <a href="../view/systemd/pst/libcupsfilters.html">libcupsfilters (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/pst/libcupsfilters.html">libcupsfilters (systemd)</a>.</p>
 
     <a id="sa-12.4-040"/>
     <h4>12.4 040 PostgreSQL   Date: 2025-11-22  Severity: Medium</h4>
@@ -1662,7 +1677,7 @@
     <p>To fix these vulnerabilities, update to PostgreSQL-18.1 using the
     instructions from
     <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
-    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.
+    <a href="../view/13.0-systemd/server/postgresql.html">PostgreSQL (systemd)</a>.
     If you are on PostgreSQL-17 and don't want to update your database to 18.x,
     update to PostgreSQL-17.7 instead using the instructions from
     <a href="../view/12.4/server/postgresql.html">PostgreSQL (12.4 sysv)</a> or
@@ -1679,7 +1694,7 @@
     <p>To fix this vulnerability, rebuild rsync-3.4.1 with the security patch
     using the instructions from
     <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
-    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
 
     <a id="sa-12.4-038"/>
     <h4>12.4 038 GnuTLS        Date: 2025-11-22  Severity: Low</h4>
@@ -1689,7 +1704,7 @@
     <p>To fix this vulnerability, update to GnuTLS-3.8.11 or later using the
     instructions from
     <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
-    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
 
     <a id="sa-12.4-037"/>
     <h4>12.4 037 libarchive    Date: 2025-11-22  Severity: High</h4>
@@ -1704,7 +1719,7 @@
     <p>To fix these vulnerabilities, update to libarchive-3.8.3 or later using
     the instructions from
     <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
-    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
 
     <a id="sa-12.4-036"/>
     <h4>12.4 036 Wireshark    Date: 2025-11-22  Severity: Low</h4>
@@ -1716,7 +1731,7 @@
     <p>To fix these vulnerabilities, update to Wireshark-4.6.1 or later using the
     instructions from
     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="sa-12.4-035"/>
     <h4>12.4 035 Qt6          Date: 2025-11-22  Severity: Critical</h4>
@@ -1756,9 +1771,9 @@
     <p>Users are advised to fix these vulnerabilities <em>immediately</em> by
     updating to Qt6-6.10.1 and QtWebEngine-6.10.1 or later, using the
     instructions from <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
-    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a> and
+    <a href="../view/13.0-systemd/x/qt6.html">Qt6 (systemd)</a> and
     <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
-    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
     <a id="sa-12.4-034"/>
     <h4>12.4 034 libsoup      Updated: 2025-12-05  Severity: High</h4>
@@ -1787,7 +1802,7 @@
     <p>To fix these vulnerabilities, rebuild libsoup with the patch using the
     instructions from
     <a href="../view/svn/basicnet/libsoup3.html">libsoup (sysv)</a> or
-    <a href="../view/systemd/basicnet/libsoup3.html">libsoup (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/libsoup3.html">libsoup (systemd)</a>.</p>
     <p>Users that have Epiphany installed should update to Epiphany-49.2 or
     later to help mitigate the effects of CVE-2025-4035.</p>
     <p><em>Edited on 2025-12-05 now that Epiphany-49.2 is in BLFS.</em></p>
@@ -1809,7 +1824,7 @@
     <p>To fix this vulnerability, update to cURL-8.17.0 or later using the
     instructions from
     <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
-    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
 
     <a id="sa-12.4-032"/>
     <h4>12.4 032 Samba        Date: 2025-11-07  Severity: Critical</h4>
@@ -1841,7 +1856,7 @@
     <p>To fix these vulnerabilities, update to Samba-4.23.3 or later using the
     instructions from
     <a href="../view/svn/basicnet/samba.html">Samba (sysv)</a> or
-    <a href="../view/systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/samba.html">Samba (systemd)</a>.</p>
 
     <a id="sa-12.4-031"/>
     <h4>12.4 031 Dovecot      Date: 2025-11-07  Severity: High</h4>
@@ -1859,7 +1874,7 @@
     <p>To fix this vulnerability, update to Dovecot-2.4.2 or later using the
     instructions from
     <a href="../view/svn/server/dovecot.html">Dovecot (sysv)</a> or
-    <a href="../view/systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/server/dovecot.html">Dovecot (systemd)</a>.</p>
 
     <a id="sa-12.4-030"/>
     <h4>12.4 030 Seamonkey    Updated: 2025-11-07  Severity: Critical</h4>
@@ -1894,7 +1909,7 @@
     <p>To fix these vulnerabilities, update to Seamonkey-2.53.22 or later using
     the instructions from
     <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
-    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>.</p>
     <p>If you are on the version of ICU shipped with BLFS 12.4, please use the
     same instructions that are in the BLFS 12.4 book for adjusting for ICU.</p>
     <em>Updated 2025-11-07 to document changes required for ICU from 12.4, as
@@ -1928,7 +1943,7 @@
     <p>To fix these vulnerabilities, update to Xwayland-24.1.9 or later using
     the instructions from
     <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
-    <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
 
     <a id="sa-12.4-028"/>
     <h4>12.4 028 Xorg-Server Date: 2025-11-04  Severity: High</h4>
@@ -1959,7 +1974,7 @@
     <p>To fix these vulnerabilities, update to Xorg-Server-21.1.20 or later
     using the instructions from
     <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
-    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
     <p><em>NOTICE TO TIGERVNC USERS:</em> If you have the TigerVNC server
     configured, you should rebuild TigerVNC with Xorg-Server-21.1.20 or later
     to protect your systems against these vulnerabilities as well.</p>
@@ -1975,7 +1990,7 @@
     <p>To gain these mitigations for the brotli python bindings, update to
     brotli-1.2.0 or later using the instructions from
     <a href="../view/svn/general/brotli.html">brotli (sysv)</a> or
-    <a href="../view/systemd/general/brotli.html">brotli (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/brotli.html">brotli (systemd)</a>.</p>
 
     <a id="sa-12.4-026"/>
     <h4>12.4 026 Unbound     Date: 2025-11-04  Severity: Medium</h4>
@@ -1994,7 +2009,7 @@
     <p>To fix this vulnerability, update to Unbound-1.24.1 or later using the
     instructions from
     <a href="../view/svn/server/unbound.html">Unbound (sysv)</a> or
-    <a href="../view/systemd/server/unbound.html">Unbound (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/server/unbound.html">Unbound (systemd)</a>.</p>
 
     <a id="sa-12.4-025"/>
     <h4>12.4 025 BIND        Date: 2025-11-04  Severity: Critical</h4>
@@ -2021,7 +2036,7 @@
     <p>To fix these vulnerabilities, update to BIND-9.20.15 or later using the
     instructions from
     <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
-    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/server/bind.html">BIND (systemd)</a>.</p>
 
     <a id="sa-12.4-024"/>
     <h4>12.4 024 libarchive  Date: 2025-10-17  Severity: Medium</h4>
@@ -2037,7 +2052,7 @@
     <p>To fix this vulnerability, update to libarchive-3.8.2 or later using the
     instructions from
     <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
-    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
 
     <a id="sa-12.4-023"/>
     <h4>12.4 023 Thunderbird Date: 2025-10-16  Severity: High</h4>
@@ -2058,7 +2073,7 @@
     <p>To fix these vulnerabilities, update to Thunderbird-140.4.0esr or later
     using the instructions from
     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-12.4-022"/>
     <h4>12.4 022 Firefox  Date: 2025-10-14  Severity: High</h4>
@@ -2080,7 +2095,7 @@
     <p>To fix these vulnerabilities, update to Firefox-140.4.0esr or later
     using the instructions from
     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <a id="sa-12.4-021"/>
     <h4>12.4 021 gi_docgen     Date: 2025-10-14 Severity: Medium</h4>
@@ -2098,7 +2113,7 @@
     <p>To fix this vulnerability, update to gi_docgen-2025.5 or later using the
     instructions from
     <a href="../view/svn/general/python-modules.html#gi-docgen">gi_docgen (sysv)</a> or
-    <a href="../view/systemd/general/python-modules.html#gi-docgen">gi_docgen (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/python-modules.html#gi-docgen">gi_docgen (systemd)</a>.</p>
 
     <a id="sa-12.4-020"/>
     <h4>12.4 020 poppler       Date: 2025-10-14 Severity: Medium</h4>
@@ -2114,18 +2129,18 @@
     <p>To fix this vulnerability, update to poppler-25.10.0 or later using the
     instructions from
     <a href="../view/svn/general/poppler.html">poppler (sysv)</a> or
-    <a href="../view/systemd/general/poppler.html">poppler (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/poppler.html">poppler (systemd)</a>.</p>
     <p>Two packages in BLFS 12.4 are known to have issues with later versions of
     poppler at the time of this advisory. Inkscape is known to need a patch with
     poppler-25.09.0 (which also carries over to 25.10.0). If you are building
     Inkscape after installing this security update, please follow the instructions
     from
     <a href="../view/svn/xsoft/inkscape.html">Inkscape (sysv)</a> or
-    <a href="../view/systemd/xsoft/inkscape.html">Inkscape (systemd)</a>.
+    <a href="../view/13.0-systemd/xsoft/inkscape.html">Inkscape (systemd)</a>.
     For LibreOffice, you must use version 25.8.3.2 to prevent a build failure.
     Follow the instructions from
     <a href="../view/svn/xsoft/libreoffice.html">LibreOffice (sysv)</a> or
-    <a href="../view/systemd/xsoft/libreoffice.html">LibreOffice (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/libreoffice.html">LibreOffice (systemd)</a>.</p>
 
     <a id="sa-12.4-019"/>
     <h4>12.4 019 Ruby          Date: 2025-10-10 Severity: High</h4>
@@ -2144,7 +2159,7 @@
     <p>To fix this vulnerability, update to Ruby-3.4.7 or later using the
     instructions from
     <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
-    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/ruby.html">Ruby (systemd)</a>.</p>
 
     <a id="sa-12.4-018"/>
     <h4>12.4 018 OpenSSH       Date: 2025-10-10 Severity: Low</h4>
@@ -2160,7 +2175,7 @@
     <p>To fix this vulnerability, update to OpenSSH-10.1p1 or later using the
     instructions from
     <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
-    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
 
     <a id="sa-12.4-017"/>
     <h4>12.4 017 fetchmail     Date: 2025-10-10 Severity: Medium</h4>
@@ -2177,7 +2192,7 @@
     <p>To fix this vulnerability, update to fetchmail-6.5.6 or later using the
     instructions from
     <a href="../view/svn/basicnet/fetchmail.html">fetchmail (sysv)</a> or
-    <a href="../view/systemd/basicnet/fetchmail.html">fetchmail (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/fetchmail.html">fetchmail (systemd)</a>.</p>
 
     <a id="sa-12.4-016"/>
     <h4>12.4 016 GIMP          Date: 2025-10-10 Severity: High</h4>
@@ -2199,7 +2214,7 @@
     <p>To fix these vulnerabilities, update to GIMP-3.0.6 or later using the
     instructions from
     <a href="../view/svn/xsoft/gimp.html">GIMP (sysv)</a> or
-    <a href="../view/systemd/xsoft/gimp.html">GIMP (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/gimp.html">GIMP (systemd)</a>.</p>
 
     <a id="sa-12.4-015"/>
     <h4>12.4 015 gegl          Date: 2025-10-10 Severity: High</h4>
@@ -2216,7 +2231,7 @@
     <p>To fix this vulnerability, update to gegl-0.4.64 or later using the
     instructions from
     <a href="../view/svn/general/gegl.html">gegl (sysv)</a> or
-    <a href="../view/systemd/general/gegl.html">gegl (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/gegl.html">gegl (systemd)</a>.</p>
 
     <a id="sa-12.4-014"/>
     <h4>12.4 014 ffmpeg        Date: 2025-10-10 Severity: High</h4>
@@ -2236,7 +2251,7 @@
     <p>To fix these vulnerabilities, update to ffmpeg-7.1.2 or later using the
     instructions from
     <a href="../view/svn/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
-    <a href="../view/systemd/multimedia/ffmpeg.html">ffmpeg (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/multimedia/ffmpeg.html">ffmpeg (systemd)</a>.</p>
 
     <a id="sa-12.4-013"/>
     <h4>12.4 013 QtWebEngine   Date: 2025-10-02 Severity: Critical</h4>
@@ -2267,7 +2282,7 @@
     <p>To fix these vulnerabilities, update to QtWebEngine-6.9.3 or later using
     the instructions from
     <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
-    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
 
     <a id="sa-12.4-012"/>
     <h4>12.4 012 OpenSSL (LFS) Date: 2025-10-01 Severity: Medium</h4>
@@ -2294,7 +2309,7 @@
     <p>To fix these vulnerabilities, update to OpenSSL-3.5.4 (or 3.4.3) using
     the instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <a href="../../lfs/view/13.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
 <!-- <p>If you upgrade to OpenSSL-3.5.4 on a BLFS 12.4 system, you must rebuild
     OpenSSH due to a bug in the version of OpenSSL that LFS 12.4 shipped with
     that causes OpenSSH to think that it was built against a pre-release version
@@ -2313,7 +2328,7 @@
     <p>To fix this vulnerability, update to Wireshark-4.4.9 or later using the
     instructions from
     <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
-    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
 
     <a id="sa-12.4-010"/>
     <h4>12.4 010 Exiv2        Date: 2025-09-30  Severity: Low</h4>
@@ -2334,7 +2349,7 @@
     <p>To fix these vulnerabilities, update to Exiv2-0.28.7 or later using the
     instructions from
     <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
-    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
 
     <a id="sa-12.4-009"/>
     <h4>12.4 009 OpenJPEG     Date: 2025-09-30  Severity: Critical</h4>
@@ -2350,7 +2365,7 @@
     <p>To fix this vulnerability, update to OpenJPEG-2.5.4 or later using the
     instructions from
     <a href="../view/svn/general/openjpeg2.html">OpenJPEG (sysv)</a> or
-    <a href="../view/systemd/general/openjpeg2.html">OpenJPEG (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/openjpeg2.html">OpenJPEG (systemd)</a>.</p>
 
     <a id="sa-12.4-008"/>
     <h4>12.4 008 cURL         Updated: 2025-11-04  Severity: Low</h4>
@@ -2378,7 +2393,7 @@
     <p>To fix these vulnerabilities, update to cURL-8.16.0 or later using the
     instructions from
     <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
-    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
     <p>If you install CMake after installing this security update, a minor
     modification to the source code for CMake is required because of an API
     change in cURL with this release. The following sed fixes the build
@@ -2402,7 +2417,7 @@
     <p>To fix this vulnerability, update to libaom-3.13.1 or later using the
     instructions from
     <a href="../view/svn/multimedia/libaom.html">libaom (sysv)</a> or
-    <a href="../view/systemd/multimedia/libaom.html">libaom (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/multimedia/libaom.html">libaom (systemd)</a>.</p>
 
     <a id="sa-12.4-006"/>
     <h4>12.4 006 CUPS         Date: 2025-09-30  Severity: High</h4>
@@ -2424,7 +2439,7 @@
     <p>To fix these vulnerabilities, update to CUPS-2.4.14 or later using the
     instructions from
     <a href="../view/svn/pst/cups.html">CUPS (sysv)</a> or
-    <a href="../view/systemd/pst/cups.html">CUPS (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/pst/cups.html">CUPS (systemd)</a>.</p>
 
     <a id="sa-12.4-005"/>
     <h4>12.4 005 Expat (LFS)  Date: 2025-09-30  Severity: High</h4>
@@ -2445,7 +2460,7 @@
     <p>To fix this vulnerability, update to Expat-2.7.3 or later using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
-    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <a href="../../lfs/view/13.0-systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
     <p>Note: If you have installed docbook-utils from BLFS you will need to add
     "--without-docbook" to work around an error in configure, since our
     installation of docbook-utils uses SGML instead of XML.</p>
@@ -2488,7 +2503,7 @@
     <p>To fix these vulnerabilities, update to Thunderbird-140.3.0esr or later
     using the instructions for
     <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
-    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
 
     <a id="sa-12.4-002"/>
     <h4>12.4 002 SpiderMonkey  Date: 2025-09-19  Severity: Medium</h4>
@@ -2499,7 +2514,7 @@
     <p>To fix this vulnerability, update to SpiderMonkey from
     Firefox-140.3.0esr or later using the instructions for
     <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
-    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
 
     <a id="sa-12.4-001"/>
     <h4>12.4 001 Firefox  Date: 2025-09-19  Severity: High</h4>
@@ -2518,7 +2533,7 @@
     <p>To fix these vulnerabilities, update to Firefox-140.3.0esr or later
     using the instructions for
     <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
-    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+    <a href="../view/13.0-systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
 
     <h2>Items between the releases of the 12.3 and 12.4 books</h2>
 
@@ -4887,11 +4902,6 @@
     using the instructions from
     <a href="../view/12.4/general/spidermonkey.html">Spidermonkey (sysv)</a> or
     <a href="../view/12.4-systemd/general/spidermonkey.html">Spidermonkey (systemd)</a>.</p>
-
-    <!--
-    <p>There are currently no known security vulnerabilities for the latest
-    releases of the books.</p>
-    -->
 
     <h2>Items between the releases of the 12.2 and 12.3 books</h2>
 
