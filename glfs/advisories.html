@@ -24,6 +24,21 @@
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
     Consolidated Security Advisories</a> for such packages.</p>
 
+    <a id="glfs-brk-12.4-006"/>
+    <h4>glfs-brk-12.4-006: Pkgconf and Meson (Date: February 24th, 2026)</h4>
+    <p>GLFS previously installed files for Pkgconf and Meson to help aid with
+       targetting 32-bit on 64-bit. After attempting to upgrade lib32-Systemd
+       in MLFS, it revealed that it pulled in libraries that were only built
+       for 64-bit which led to linker errors. It made sense to move those files
+       to MLFS to make installing and upgrading a more reliable process.
+       The files for Meson in particular now include the
+       <kbd>--libdir=$PREFIX/lib32</kbd> option and GLFS now relies on it.
+       There are warnings on each page that uses Meson cross files about this.
+       For Pkgconf, the files can be installed from the MLFS <a
+       href="/mlfs/view/dev-m32/chapter08/pkgconf.html">Pkgconf</a> page. For
+       Meson, the files can be installed from the MLFS <a
+       href="/mlfs/view/dev-m32/chapter08/meson.html">Meson</a> page.</p>
+
     <a id="glfs-brk-12.4-005"/>
     <h4>glfs-brk-12.4-005: NVIDIA (Date: December 23rd, 2025)</h4>
     <p>NVIDIA released major version r590 which dropped support for pre-Turing

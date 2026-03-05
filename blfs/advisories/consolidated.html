@@ -64,6 +64,378 @@
      for clarity. -->
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
+    <a id="sa-12.4-112"/>
+    <h4>12.4 112 OpenJDK  Date: 2026-03-04  Severity: High</h4>
+    <p>In OpenJDK-21.0.10, four security vulnerabilities were fixed that could
+    allow for unauthorized creation, modification, or deletion of data and for
+    denial of service (application crashes). All four of these vulnerabilities
+    are remotely exploitable without user authentication, and the issues are
+    in the RMI, Networking, AWT, and Security components of OpenJDK. All users
+    who have OpenJDK installed should update as the vulnerabilities affect all
+    deployment use cases, rather than just in sandboxed applets.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21925">CVE-2026-21925</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21932">CVE-2026-21932</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21933">CVE-2026-21933</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21945">CVE-2026-21945</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenJDK-21.0.10 or later using
+    the instructions from
+    <a href="../view/svn/general/openjdk.html">OpenJDK (sysv)</a> or
+    <a href="../view/systemd/general/openjdk.html">OpenJDK (systemd)</a>.</p>
+    <p>If you want to use the pre-built binaries, update to Java-21.0.10 using
+    the instructions from
+    <a href="../view/svn/general/java.html">Java (sysv)</a> or
+    <a href="../view/systemd/general/java.html">Java (systemd)</a>.</p>
+
+    <a id="sa-12.4-111"/>
+    <h4>12.4 111 gvfs Date: 2026-03-01  Severity: Medium</h4>
+    <p>In gvfs-1.58.2, two security vulnerabilities were fixed that could allow
+    for unintended termination of FTP commands, injection of arbitrary FTP
+    commands (allowing for arbitrary code execution, data exfiltration, and
+    possibly other severe impacts), and for port scanning to occur. These
+    vulnerabilities occur in the FTP backend for gvfs, and can be exploited
+    by a malicious FTP server. Users who are not using the FTP functionality
+    in gvfs are unaffected. Users who do use it though and who access untrusted
+    FTP sites should update gvfs immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28295">CVE-2026-28295</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28296">CVE-2026-28296</a>.</p>
+    <p>To fix these vulnerabilities, update to gvfs-1.58.2 or later using the
+    instructions from
+    <a href="../view/svn/gnome/gvfs.html">gvfs (sysv)</a> or
+    <a href="../view/systemd/gnome/gvfs.html">gvfs (systemd)</a>.</p>
+
+    <a id="sa-12.4-110"/>
+    <h4>12.4 110 UDisks2  Date: 2026-03-01  Severity: High</h4>
+    <p>In UDisks-2.11.1, two security vulnerabilties were fixed that could
+    allow for denial of service (DOS) via irreversible data loss and weakened
+    confidentiality of encrypted storage. Local unprivileged users can
+    overwrite encryption metadata on block devices by instructing the UDisks
+    daemon to do so. It can invalidate the encryption keys and render the
+    volumes that were encrypted to be permanently inaccessible. A D-Bus method
+    that exports encryption metadata does not perform policy checks, which can
+    also lead to that metadata being read and written, leading to less
+    confidentiality of encryption. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26103">CVE-2026-26103</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26104">CVE-2026-26104</a>.</p>
+    <p>Since the vulnerabilities can allow for permanent data loss, it is
+    recommended to update <em>immediately</em> to UDisks-2.11.1 or later using
+    the instructions from
+    <a href="../view/svn/general/udisks2.html">UDisks2 (sysv)</a> or
+    <a href="../view/systemd/general/udisks2.html">UDisks2 (systemd)</a>.</p>
+
+    <a id="sa-12.4-109"/>
+    <h4>12.4 109 gstreamer  Date: 2026-03-01  Severity: High</h4>
+    <p>In the GStreamer-1.28.1 stack, twelve security vulnerabilities
+    were fixed that could allow for out-of-bounds read operations, heap and
+    stack buffer overflows, integer overflows, out-of-bounds write operations,
+    and denial of service (DOS) via a missing bounds check. Most of these
+    affect video parsers and demuxers, while another is caused by reading a
+    JPEG file. These vulnerabilities can cause remote code executon (RCE) and
+    information disclosure.
+    These vulnerabilities have been assigned
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0001.html">GStreamer-SA-2026-0001</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0002.html">GStreamer-SA-2026-0002</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0003.html">GStreamer-SA-2026-0003</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0004.html">GStreamer-SA-2026-0004</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0005.html">GStreamer-SA-2026-0005</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0006.html">GStreamer-SA-2026-0006</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0007.html">GStreamer-SA-2026-0007</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0008.html">GStreamer-SA-2026-0008</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0009.html">GStreamer-SA-2026-0009</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0010.html">GStreamer-SA-2026-0010</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0011.html">GStreamer-SA-2026-0011</a>, and
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0012.html">GStreamer-SA-2026-0012</a>.</p>
+    <p>To fix these vulnerabilities, update to gstreamer-1.28.1, and update the
+    plugins to 1.28.1 as well. Do so by using the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
+    <a id="sa-12.4-108"/>
+    <h4>12.4 108 vim (LFS and BLFS) Date: 2026-03-01  Severity: Medium</h4>
+    <p>In vim-9.2.0078, six security vulnerabilities were fixed that could
+    allow for command injection, heap and stack buffer overflows and
+    underflows, out-of-bounds read operations, and denial of service (DOS) via
+    improper input validation. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28417">CVE-2026-28417</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28418">CVE-2026-28418</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28419">CVE-2026-28419</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28420">CVE-2026-28420</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28421">CVE-2026-28421</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28422">CVE-2026-28422</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-9.2.0078 or later using the
+    instructions from 
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
+    <a id="sa-12.4-107"/>
+    <h4>12.4 107 localsearch  Date: 2026-02-25  Severity: Medium</h4>
+    <p>In localsearch-3.10.2, five security vulnerabilities were discovered
+    that could allow for a remote attacker to cause a denial of service
+    (application crashes) or possibly information disclosure when localsearch
+    processes MP3 files. Four of these vulnerabilities are heap buffer
+    overflows, while the other vulnerability is a NULL pointer dereference. Proof
+    of concept exploits have been made available to the public for these issues.
+    One of the vulnerabilities has not been assigned a CVE.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2026-1764">CVE-2026-1764</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2026-1765">CVE-2026-1765</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2026-1766">CVE-2026-1766</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2026-1767">CVE-2026-1767</a>.</p>
+    <p>Additional information about the vulnerability that does not have a CVE
+    assigned can be found at
+    <a href="https://gitlab.gnome.org/GNOME/localsearch/-/issues/426">localsearch Issue #426</a>.</p>
+    <p>To fix these vulnerabilities, update to localsearch-3.10.2 with the
+    security patch using the instructions from
+    <a href="../view/svn/gnome/localsearch.html">localsearch (sysv)</a> or
+    <a href="../view/systemd/gnome/localsearch.html">localsearch (systemd)</a>.</p>
+
+    <a id="sa-12.4-106"/>
+    <h4>12.4 106 evolution-data-server  Date: 2026-02-25  Severity: Medium</h4>
+    <p>In evolution-data-server-3.58.3, three security vulnerabilities were
+    discovered that could allow for arbitrary file deletion when using the
+    addressbook service due to inconsistent URI handling, for crashes when
+    using the NTLM authentication algorithm, and for crashes when connecting
+    to a POP3 email server. Only one of the three vulnerabilities has a CVE
+    assigned as the other two vulnerabilities only cause crashes. Proof of
+    concept exploits have been made available to the public for these issues.
+    This vulnerability has been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2026-2604">CVE-2026-2604</a>.</p>
+    <p>Additional information on the two vulnerabilities that were not assigned
+    CVEs can be found at
+    <a href="https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/625">evolution-data-server Issue #625</a> and
+    <a href="https://gitlab.gnome.org/GNOME/evolution-data-server/-/issues/626">evolution-data-server Issue #626</a>.</p>
+    <p>To fix these vulnerabilities, update to evolution-data-server-3.58.3 with the
+    security patch using the instructions from
+    <a href="../view/svn/gnome/evolution-data-server.html">evolution-data-server (sysv)</a> or
+    <a href="../view/systemd/gnome/evolution-data-server.html">evolution-data-server (systemd)</a>.</p>
+
+    <a id="sa-12.4-105"/>
+    <h4>12.4 105 GIMP  Date: 2026-02-25  Severity: Medium</h4>
+    <p>In GIMP-3.0.6, five security vulnerabilities were discovered that could
+    allow for information disclosure, arbitrary code execution, and denial of
+    service (application crashes). These vulnerabilities can occur when parsing
+    specially crafted ICO or PSD files. Note that in order to exploit any of
+    these vulnerabilities, a user must manually open an affected file. The issues
+    are caused by integer overflows, heap buffer overflows, and an uncontrolled
+    memory allocation. There are public proof of concepts available for all
+    five of these vulnerabilities. Only three of the five vulnerabilities have
+    been assigned CVEs.
+    These vulnerabilities have been assigned
+    <a href="https://access.redhat.com/security/cve/cve-2026-2272">CVE-2026-2272</a>,
+    <a href="https://access.redhat.com/security/cve/cve-2026-2271">CVE-2026-2271</a>, and
+    <a href="https://access.redhat.com/security/cve/cve-2026-2239">CVE-2026-2239</a>.</p>
+    <p>Additional information on the two vulnerabilities that were not assigned
+    CVEs can be found at:
+    <a href="https://gitlab.gnome.org/GNOME/gimp/-/issues/15814">GIMP Issue #15814</a> and
+    <a href="https://gitlab.gnome.org/GNOME/gimp/-/issues/15776">GIMP Issue #15776</a>.</p>
+    <p>To fix this vulnerability, update to GIMP-3.0.6 with the security patch
+    using the instructions from
+    <a href="../view/svn/xsoft/gimp.html">GIMP (sysv)</a> or
+    <a href="../view/systemd/xsoft/gimp.html">GIMP (systemd)</a>.</p>
+
+    <a id="sa-12.4-104"/>
+    <h4>12.4 104 SpiderMonkey  Date: 2026-02-24  Severity: High</h4>
+    <p>In SpiderMonkey from Firefox-140.8.0esr, ten security vulnerabilties
+    were fixed that could allow for use-after-free operations, integer
+    overflows, JIT miscompilations, information disclosure, and invalid pointer
+    abuse. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2758">CVE-2026-2758</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2762">CVE-2026-2762</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2763">CVE-2026-2763</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2764">CVE-2026-2764</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2765">CVE-2026-2765</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2766">CVE-2026-2766</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2767">CVE-2026-2767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2783">CVE-2026-2783</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2785">CVE-2026-2785</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2786">CVE-2026-2786</a>.</p>
+    <p>To fix these vulnerabilities, update to SpiderMonkey from
+    Firefox-140.8.0esr or later using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">SpiderMonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">SpiderMonkey (systemd)</a>.</p>
+
+    <a id="sa-12.4-103"/>
+    <h4>12.4 103 Firefox  Date: 2026-02-24  Severity: Critical</h4>
+    <p>In Firefox-140.8.0esr, thirty-seven security vulnerabilties were
+    fixed that could allow for incorrect boundary conditions, use-after-free
+    operations, sandbox escapes, integer overflows, JIT miscompilations,
+    mitigation bypassing, privilege escalation, information disclosure,
+    invalid pointer abuse, same-origin policy bypassing, and memory safety bug
+    exploitation. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2757">CVE-2026-2757</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2758">CVE-2026-2758</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2759">CVE-2026-2759</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2760">CVE-2026-2760</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2761">CVE-2026-2761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2762">CVE-2026-2762</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2763">CVE-2026-2763</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2764">CVE-2026-2764</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2765">CVE-2026-2765</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2766">CVE-2026-2766</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2767">CVE-2026-2767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2768">CVE-2026-2768</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2769">CVE-2026-2769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2770">CVE-2026-2770</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2771">CVE-2026-2771</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2772">CVE-2026-2772</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2773">CVE-2026-2773</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2774">CVE-2026-2774</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2775">CVE-2026-2775</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2776">CVE-2026-2776</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2777">CVE-2026-2777</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2778">CVE-2026-2778</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2779">CVE-2026-2779</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2780">CVE-2026-2780</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2781">CVE-2026-2781</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2782">CVE-2026-2782</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2783">CVE-2026-2783</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2784">CVE-2026-2784</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2785">CVE-2026-2785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2786">CVE-2026-2786</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2787">CVE-2026-2787</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2788">CVE-2026-2788</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2789">CVE-2026-2789</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2790">CVE-2026-2790</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2791">CVE-2026-2791</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2792">CVE-2026-2792</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2793">CVE-2026-2793</a>.</p>
+    <p>As the amount of vulnerabilities that were fixed is so high, it is
+    therefore highly recommended to update to Firefox-140.8.0esr or later
+    <em>immediately</em> using the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-12.4-102"/>
+    <h4>12.4 102 Thunderbird  Date: 2026-02-24  Severity: Critical</h4>
+    <p>In Thunderbird-140.8.0esr, thirty-seven security vulnerabilties were
+    fixed that could allow for incorrect boundary conditions, use-after-free
+    operations, sandbox escapes, integer overflows, JIT miscompilations,
+    mitigation bypassing, privilege escalation, information disclosure,
+    invalid pointer abuse, same-origin policy bypassing, and memory safety bug
+    exploitation. These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2757">CVE-2026-2757</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2758">CVE-2026-2758</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2759">CVE-2026-2759</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2760">CVE-2026-2760</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2761">CVE-2026-2761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2762">CVE-2026-2762</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2763">CVE-2026-2763</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2764">CVE-2026-2764</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2765">CVE-2026-2765</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2766">CVE-2026-2766</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2767">CVE-2026-2767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2768">CVE-2026-2768</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2769">CVE-2026-2769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2770">CVE-2026-2770</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2771">CVE-2026-2771</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2772">CVE-2026-2772</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2773">CVE-2026-2773</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2774">CVE-2026-2774</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2775">CVE-2026-2775</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2776">CVE-2026-2776</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2777">CVE-2026-2777</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2778">CVE-2026-2778</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2779">CVE-2026-2779</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2780">CVE-2026-2780</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2781">CVE-2026-2781</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2782">CVE-2026-2782</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2783">CVE-2026-2783</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2784">CVE-2026-2784</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2785">CVE-2026-2785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2786">CVE-2026-2786</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2787">CVE-2026-2787</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2788">CVE-2026-2788</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2789">CVE-2026-2789</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2790">CVE-2026-2790</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2791">CVE-2026-2791</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2792">CVE-2026-2792</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2793">CVE-2026-2793</a>.</p>
+    <p>As the amount of vulnerabilities that were fixed is so high, it is
+    therefore highly recommended to update to Thunderbird-140.8.0esr or later
+    <em>immediately</em> using the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-12.4-101"/>
+    <h4>12.4 101 libsoup  Date: 2026-02-20  Severity: High</h4>
+    <p>In libsoup-3.6.6, thirteen security vulnerabilities were fixed that
+    could allow for remote code execution, credential leakage to other servers,
+    CRLF injection, remote memory access, HTTP response splitting, HTTP request
+    smuggling, denial of service, and exposure of sensitive user information.
+    These vulnerabilities are in addition to the vulnerabilities fixed in our
+    previous security patch for libsoup. Users who have libsoup installed should
+    treat this update as urgent and update their systems immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-9901">CVE-2025-9901</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11021">CVE-2025-11021</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14523">CVE-2025-14523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0716">CVE-2026-0716</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1760">CVE-2026-1760</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1801">CVE-2026-1801</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1761">CVE-2026-1761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2436">CVE-2026-2436</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1536">CVE-2026-1536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2443">CVE-2026-2443</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1467">CVE-2026-1467</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2369">CVE-2026-2369</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1539">CVE-2026-1539</a>.</p>
+    <p>To fix these vulnerabilities, update to libsoup-3.6.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libsoup3.html">libsoup3 (sysv)</a> or
+    <a href="../view/systemd/basicnet/libsoup3.html">libsoup3 (systemd)</a>.</p>
+
+    <a id="sa-12.4-100"/>
+    <h4>12.4 100 libvpx  Date: 2026-02-20  Severity: High</h4>
+    <p>In libvpx-1.16.0, a security vulnerability was discovered that could allow
+    for remote code execution when processing VP8 and VP9 files, or for a
+    denial of service (application crash). This vulnerability can be exploited
+    in a variety of contexts, including media players and web browsers. The
+    vulnerability was discovered in Mozilla Firefox, but can affect other browsers
+    when viewing webpages. The issue is due to a heap buffer overflow. Note that
+    this update can be challenging to do on a BLFS 12.4 system as several packages
+    will need to be rebuilt, since it is not ABI compatible with 1.15.2. However,
+    the patch works with libvpx-1.15.2 as well, so for BLFS 12.4 users, it is
+    safer to rebuild with the patch instead.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2447">CVE-2026-2447</a>.</p>
+    <p>To fix this vulnerability, update to libvpx-1.16.0 or later using the
+    instructions with the patch from
+    <a href="../view/svn/multimedia/libvpx.html">libvpx (sysv)</a> or
+    <a href="../view/systemd/multimedia/libvpx.html">libvpx (systemd)</a>.</p>
+    <p>After upgrading libvpx, users will need to reinstall the following
+    packages on their system:</p>
+    <ul>
+      <li>ffmpeg</li>
+      <li>VLC</li>
+      <li>gst-plugins-good</li>
+      <li>xine-lib</li>
+      <li>Thunderbird</li>
+      <li>Firefox</li>
+    </ul>
+    <p>Alternatively, users of BLFS 12.4 may want to use the patch from that
+    page against libvpx-1.15.2 as it is confirmed to work properly.</p>
+    <p>Users who have Seamonkey should also reinstall that package with the
+    included libvpx patch in
+    <a href="../view/svn/xsoft/seamonkey.html">Seamonkey (sysv)</a> or
+    <a href="../view/systemd/xsoft/seamonkey.html">Seamonkey (systemd)</a>
+    since the bundled libvpx gets used.</p>
+
+    <a id="sa-12.4-099"/>
+    <h4>12.4 099 zlib (LFS) Date: 2026-02-20  Severity: High</h4>
+    <p>In zlib-1.3.2, ten security vulnerabilities were fixed that could allow
+    for arbitrary code execution, uninitialized memory disclosure, and for
+    denial of service attacks (some of which can be persistent). The issues
+    were discovered by 7asecurity, who performed a security audit on zlib
+    recently.
+    No CVEs have been found for these vulnerabilities at this time, but more
+    information can be found from the audit documentation:
+    <a href="https://7asecurity.com/reports/pentest-report-zlib-RC1.1.pdf">zlib Pentest Report</a>.</p>
+    <p>To fix this vulnerability, update to zlib-1.3.2 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/zlib.html">zlib (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/zlib.html">zlib (systemd)</a>.</p>
+
     <a id="sa-12.4-098"/>
     <h4>12.4 098 librsvg  Date: 2026-02-14  Severity: Medium</h4>
     <p>In librsvg-2.61.4, a security vulnerability was fixed in the 'time' crate

@@ -212,6 +212,20 @@
 
 <!-- end of Dovecot -->
 
+    <h3>evolution-data-server</h3>
+
+    <a id="sa-12.4-106"/>
+    <h4>12.4 106 evolution-data-server  Date: 2026-02-25  Severity: Medium</h4>
+    <p>In evolution-data-server-3.58.3, three security vulnerabilities were
+    discovered that could allow for arbitrary file deletion when using the
+    addressbook service due to inconsistent URI handling, for crashes when
+    using the NTLM authentication algorithm, and for crashes when connecting
+    to a POP3 email server. Update to evolution-data-server-3.58.3 with the
+    security patch.
+    <a href="consolidated.html#sa-12.4-106">12.4-106</a></p>
+
+<!-- end of evolution-data-server -->
+
     <h3>Exim</h3>
 
     <a id="sa-12.4-062"/>
@@ -255,6 +269,17 @@
 <!-- end of fetchmail -->
 
     <h3>Firefox</h3>
+
+    <a id="sa-12.4-103"/>
+    <h4>12.4 103 Thunderbird  Date: 2026-02-24  Severity: Critical</h4>
+    <p>In Firefox-140.8.0esr, thirty-seven security vulnerabilties were
+    fixed that could allow for incorrect boundary conditions, use-after-free
+    operations, sandbox escapes, integer overflows, JIT miscompilations,
+    mitigation bypassing, privilege escalation, information disclosure,
+    invalid pointer abuse, same-origin policy bypassing, and memory safety bug
+    exploitation. As the amount of vulnerabilities that were fixed is so high,
+    it is therefore highly recommended to update to Firefox-140.8.0esr or
+    later. <a href="consolidated.html#12.4-103">12.4-103</a></p>
 
     <a id="sa-12.4-072"/>
     <h4>12.4 072 Firefox                Date: 2026-01-14  Severity: High</h4>
@@ -372,6 +397,15 @@
 
     <h3>GIMP</h3>
 
+    <a id="sa-12.4-105"/>
+    <h4>12.4 105 GIMP  Date: 2026-02-25  Severity: Medium</h4>
+    <p>In GIMP-3.0.6, five security vulnerabilities were discovered that could
+    allow for information disclosure, arbitrary code execution, and denial of
+    service (application crashes). These vulnerabilities can occur when parsing
+    specially crafted ICO or PSD files. Users who are working with ICO or PSD
+    files should rebuild GIMP-3.0.6 with the security patch.
+    <a href="consolidated.html#sa-12.4-105">12.4-105</a></p>
+
     <a id="sa-12.4-016"/>
     <h4>12.4 016 GIMP          Date: 2025-10-10 Severity: High</h4>
     <p>In GIMP-3.0.6, six security vulnerabilities were fixed that could allow
@@ -436,6 +470,18 @@
 
     <h3>gstreamer</h3>
 
+    <a id="sa-12.4-109"/>
+    <h4>12.4 109 gstreamer  Date: 2026-03-01  Severity: High</h4>
+    <p>In the GStreamer-1.28.1 stack, twelve security vulnerabilities
+    were fixed that could allow for out-of-bounds read operations, heap and
+    stack buffer overflows, integer overflows, out-of-bounds write operations,
+    and denial of service (DOS) via a missing bounds check. Most of these
+    affect video parsers and demuxers, while another is caused by reading a
+    JPEG file. These vulnerabilities can cause remote code executon (RCE) and
+    information disclosure. Update to gstreamer-1.28.1, and update the
+    plugins to 1.28.1 as well.
+    <a href="consolidated.html#sa-12.4-109">12.4-109</a></p>
+
     <a id="sa-12.4-080"/>
     <h4>12.4 080 gst-plugins-bad  Date: 2026-02-04  Severity: High</h4>
     <p>In gst-plugins-bad-1.26.10, two security vulnerabilities were fixed
@@ -449,6 +495,22 @@
     <a href="consolidated.html#sa-12.4-080">12.4-080</a></p>
 
 <!-- end of gstreamer -->
+
+    <h3>gvfs</h3>
+
+    <a id="sa-12.4-111"/>
+    <h4>12.4 111 gvfs Date: 2026-03-01  Severity: Medium</h4>
+    <p>In gvfs-1.58.2, two security vulnerabilities were fixed that could allow
+    for unintended termination of FTP commands, injection of arbitrary FTP
+    commands (allowing for arbitrary code execution, data exfiltration, and
+    possibly other severe impacts), and for port scanning to occur. These
+    vulnerabilities occur in the FTP backend for gvfs, and can be exploited
+    by a malicious FTP server. Users who are not using the FTP functionality
+    in gvfs are unaffected. Users who do use it though and who access untrusted
+    FTP sites should update to gvfs-1.58.2 immediately.
+    <a href="consolidated.html#sa-12.4-111">12.4-111</a></p>
+
+<!-- end of gvfs -->
 
     <h3>ImageMagick</h3>
 
@@ -628,6 +690,18 @@
 
     <h3>libsoup</h3>
 
+    <a id="sa-12.4-101"/>
+    <h4>12.4 101 libsoup  Date: 2026-02-20  Severity: High</h4>
+    <p>In libsoup-3.6.6, thirteen security vulnerabilities were fixed that
+    could allow for remote code execution, credential leakage to other servers,
+    CRLF injection, remote memory access, HTTP response splitting, HTTP request
+    smuggling, denial of service, and exposure of sensitive user information.
+    These vulnerabilities are in addition to the vulnerabilities fixed in our
+    previous security patch for libsoup. Users who have libsoup installed should
+    treat this update as urgent and update their systems immediately. Update to
+    libsoup-3.6.6.
+    <a href="consolidated.html#sa-12.4-101">12.4-101</a></p>
+
     <a id="sa-12.4-034"/>
     <h4>12.4 034 libsoup      Updated: 2025-12-05  Severity: High</h4>
     <p>There have been several security vulnerabilities found in libsoup-3.6.5.
@@ -653,6 +727,25 @@
 
 <!-- end of libtasn1 -->
 
+    <h3>libvpx</h3>
+
+    <a id="sa-12.4-100"/>
+    <h4>12.4 100 libvpx  Date: 2026-02-20  Severity: High</h4>
+    <p>In libvpx-1.16.0, a security vulnerability was discovered that could allow
+    for remote code execution when processing VP8 and VP9 files, or for a
+    denial of service (application crash). This vulnerability can be exploited
+    in a variety of contexts, including media players and web browsers. The
+    vulnerability was discovered in Mozilla Firefox, but can affect other browsers
+    when viewing webpages. The issue is due to a heap buffer overflow. Note that
+    this update can be challenging to do on a BLFS 12.4 system as several packages
+    will need to be rebuilt, since it is not ABI compatible with 1.15.2. However,
+    the patch works with libvpx-1.15.2 as well, so for BLFS 12.4 users, it is
+    safer to rebuild with the patch instead. Update to libvpx-1.16.0 and apply
+    the patch, or if on a BLFS 12.4 system, use the patch with libvpx-1.15.2.
+    <a href="consolidated.html#sa-12.4-100">12.4-100</a></p>
+
+<!-- end of libvpx -->
+
     <h3>libxslt</h3>
 
     <a id="sa-12.4-051"/>
@@ -666,6 +759,18 @@
     <a href="consolidated.html#sa-12.4-051">12.4-051</a></p>
 
 <!-- end of libxslt -->
+
+    <h3>localsearch</h3>
+
+    <a id="sa-12.4-107"/>
+    <h4>12.4 107 localsearch  Date: 2026-02-25  Severity: Medium</h4>
+    <p>In localsearch-3.10.2, five security vulnerabilities were discovered
+    that could allow for a remote attacker to cause a denial of service
+    (application crashes) or possibly information disclosure when localsearch
+    processes MP3 files. Update to localsearch-3.10.2 with the security patch.
+    <a href="consolidated.html#sa-12.4-107">12.4-107</a></p>
+
+<!-- end of localsearch -->
 
     <h3>Node.js</h3>
 
@@ -681,6 +786,18 @@
 <!-- end of Node.js-->
 
     <h3>OpenJDK</h3>
+
+    <a id="sa-12.4-112"/>
+    <h4>12.4 112 OpenJDK  Date: 2026-03-04  Severity: High</h4>
+    <p>In OpenJDK-21.0.10, four security vulnerabilities were fixed that could
+    allow for unauthorized creation, modification, or deletion of data and for
+    denial of service (application crashes). All four of these vulnerabilities
+    are remotely exploitable without user authentication, and the issues are
+    in the RMI, Networking, AWT, and Security components of OpenJDK. All users
+    who have OpenJDK installed should update as the vulnerabilities affect all
+    deployment use cases, rather than just in sandboxed applets. Update to
+    OpenJDK-21.0.10 or use the pre-built binaries.
+    <a href="consolidated.html#sa-12.4-112">12.4-112</a></p>
 
     <a id="sa-12.4-067"/>
     <h4>12.4 067 OpenJDK                Date: 2026-01-07  Severity: High</h4>
@@ -972,10 +1089,18 @@
 
     <h3>SpiderMonkey</h3>
 
+    <a id="sa-12.4-104"/>
+    <h4>12.4 104 SpiderMonkey  Date: 2026-02-24  Severity: High</h4>
+    <p>In SpiderMonkey from Firefox-140.8.0esr, ten security vulnerabilties
+    were fixed that could allow for use-after-free operations, integer
+    overflows, JIT miscompilations, information disclosure, and invalid pointer
+    abuse. Update to SpiderMonkey from Firefox-140.8.0esr.
+    <a href="consolidated.html#12.4-104">12.4-104</a></p>
+
     <a id="sa-12.4-073"/>
     <h4>12.4 073 SpiderMonkey  Date: 2025-12-16  Severity: High</h4>
     <p>In SpiderMonkey from Firefox-140.7.0esr, five security vulnerabilities
-    were fixed fixed that could allow for sandbox escapes and use-after-free
+    were fixed that could allow for sandbox escapes and use-after-free
     operations. Update to SpiderMonkey from Firefox-140.7.0esr.
     <a href="consolidated.html#12.4-073">12.4-073</a></p>
 
@@ -1004,6 +1129,17 @@
 <!-- end of SpiderMonkey -->
 
     <h3>Thunderbird</h3>
+
+    <a id="sa-12.4-102"/>
+    <h4>12.4 102 Thunderbird  Date: 2026-02-24  Severity: Critical</h4>
+    <p>In Thunderbird-140.8.0esr, thirty-seven security vulnerabilties were
+    fixed that could allow for incorrect boundary conditions, use-after-free
+    operations, sandbox escapes, integer overflows, JIT miscompilations,
+    mitigation bypassing, privilege escalation, information disclosure,
+    invalid pointer abuse, same-origin policy bypassing, and memory safety bug
+    exploitation. As the amount of vulnerabilities that were fixed is so high,
+    it is therefore highly recommended to update to Thunderbird-140.8.0esr or
+    later. <a href="consolidated.html#12.4-102">12.4-102</a></p>
 
     <a id="sa-12.4-081"/>
     <h4>12.4 081 Thunderbird  Date: 2026-02-04  Severity: Medium</h4>
@@ -1060,6 +1196,25 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>UDisks2</h3>
+
+    <a id="sa-12.4-110"/>
+    <h4>12.4 110 UDisks2  Date: 2026-03-01  Severity: High</h4>
+    <p>In UDisks-2.11.1, two security vulnerabilties were fixed that could
+    allow for denial of service (DOS) via irreversible data loss and weakened
+    confidentiality of encrypted storage. Local unprivileged users can
+    overwrite encryption metadata on block devices by instructing the UDisks
+    daemon to do so. It can invalidate the encryption keys and render the
+    volumes that were encrypted to be permanently inaccessible. A D-Bus method
+    that exports encryption metadata does not perform policy checks, which can
+    also lead to that metadata being read and written, leading to less
+    confidentiality of encryption.
+    Since the vulnerabilities can allow for permanent data loss, it is
+    recommended to update <em>immediately</em> to UDisks-2.11.1 or later.
+    <a href="consolidated.html#12.4-110">12.4-110</a></p>
+
+<!-- end of UDisks2 -->
+
     <h3>Unbound</h3>
 
     <a id="sa-12.4-050"/>
@@ -1105,6 +1260,14 @@
 <!-- end of urllib3 -->
 
     <h3>vim</h3>
+
+    <a id="sa-12.4-108"/>
+    <h4>12.4 108 vim (LFS and BLFS) Date: 2026-03-01  Severity: Medium</h4>
+    <p>In vim-9.2.0078, six security vulnerabilities were fixed that could
+    allow for command injection, heap and stack buffer overflows and
+    underflows, out-of-bounds read operations, and denial of service (DOS) via
+    improper input validation. Update to vim-9.2.0078.
+    <a href="consolidated.html#sa-12.4-108">12.4-108</a></p>
 
     <a id="sa-12.4-095"/>
     <h4>12.4 095 vim (LFS and BLFS) Date: 2026-02-14  Severity: Medium</h4>
