@@ -7,7 +7,37 @@
      <p>Several versions of the BLFS book are available for download,
      each in several formats:</p>
 
-     <h2>Current Stable (version 12.4)</h2>
+     <h2>Current Stable Systemd (version 13.0)</h2>
+
+     <p>This is the latest released BLFS systemd book.</p>
+     <ul>
+      <li><a href="downloads/stable-systemd/blfs-book-13.0-systemd-html.tar.xz">
+          compressed HTML format, multiple pages</a></li>
+      <li><a href="downloads/stable-systemd/BLFS-BOOK-13.0-systemd-nochunks.html">
+           HTML format, single page</a></li>
+      <li><a href="downloads/stable-systemd/BLFS-BOOK-13.0-systemd-nochunks.html.xz">
+           compressed HTML format, single page</a></li>
+     </ul>
+
+     <p>A directory listing is <a href="downloads/stable-systemd">also available</a></p>
+
+     <h2>Current Systemd Development</h2>      
+     
+     <p>This is the BLFS Systemd Book in its current development state.
+        The instructions are generally stable, but
+        changes can happen that break the build temporarily.</p>
+
+     <p>Daily rendered <a href="downloads/systemd/">snapshots</a> may be downloaded. 
+        Or check out the book's XML from the Git repository and render it yourself
+        using the instruction above.</p>
+     
+     <div class="cmd">
+        <p>After the prerequisites listed in the INSTALL file are installed, 
+        use 'make REV=systemd', to render the book.  Additional information is 
+        listed in the README file.</p>
+     </div>
+
+     <h2>Current Stable System V (version 12.4)</h2>
      <p>This is the latest released BLFS book.</p>
      <ul>
       <li><a href="downloads/stable/blfs-book-12.4-html.tar.xz">
@@ -32,36 +62,6 @@
      
      <div class="cmd">
        <p>git clone https://git.linuxfromscratch.org/blfs.git blfs-git</p>
-     </div>
-
-     <h2>Current Stable Systemd (version 12.4)</h2>
-
-     <p>This is the latest released BLFS systemd book.</p>
-     <ul>
-      <li><a href="downloads/stable-systemd/blfs-book-12.4-systemd-html.tar.xz">
-          compressed HTML format, multiple pages</a></li>
-      <li><a href="downloads/stable-systemd/BLFS-BOOK-12.4-systemd-nochunks.html">
-           HTML format, single page</a></li>
-      <li><a href="downloads/stable-systemd/BLFS-BOOK-12.4-systemd-nochunks.html.xz">
-           compressed HTML format, single page</a></li>
-     </ul>
-
-     <p>A directory listing is <a href="downloads/stable-systemd">also available</a></p>
-
-     <h2>Current Systemd Development</h2>      
-     
-     <p>This is the BLFS Systemd Book in its current development state.
-        The instructions are generally stable, but
-        changes can happen that break the build temporarily.</p>
-
-     <p>Daily rendered <a href="downloads/systemd/">snapshots</a> may be downloaded. 
-        Or check out the book's XML from the Git repository and render it yourself
-        using the instruction above.</p>
-     
-     <div class="cmd">
-        <p>After the prerequisites listed in the INSTALL file are installed, 
-        use 'make REV=systemd', to render the book.  Additional information is 
-        listed in the README file.</p>
      </div>
 
      <h2>BLFS Museum</h2>
