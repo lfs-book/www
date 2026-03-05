@@ -12,25 +12,41 @@
              From Scratch. This version includes over 1000 packages
              beyond the base Linux From Scratch Version 13.0 book.  The book
              has over 1500 updates from the previous version including many 
-             text and formatting changes.</p>
+             text and formatting changes. This release also includes 112 security
+             updates over the previous release.</p>
 
-             <p>The book includes the Gnome, KDE/Plasma, xfce, and LXQt
+             <p>The book includes the GNOME, KDE Plasma, XFCE, and LXQt
              Desktop environments. It also includes many applications including
-             browsers, email readers, and office applications.</p>
+             browsers, email clients, video players, and office applications.</p>
 
              <p>
-             New packages that were added include: 
-              Showtime GNOME application,
-              Loupe GNOME application to replace EOG, 
-              simdutf needed for VTE, and 
-              blueprint-compiler (Python module) used by GNOME applications.
-
-             Please see the ChangeLog in the book for a full list of changes.
+             New packages that were added include:
+               Glycin sandboxed image loader,
+               Showtime - GNOME video player,
+               Loupe - GNOME image viewer (replacing EOG),
+               simdutf (needed for VTE),
+               kquickimageeditor and qtkeychain (needed for Plasma),
+               kddockwidgets (needed for Kdenlive),
+               lxqt-wayland-session (adding Wayland support to LXQt),
+               libheif and libde265 (needed for Glycin),
+               libfyaml (needed for AppStream),
+               SVT-AV1 and dav1d (adding additional support for AV1 encoding
+               and decoding),
+               SDL3 and sdl2-compat (replacing SDL2 with significantly improved
+               support for Wayland, input devices, and more),
+               Maturin, setuptools_rust, semantic_version, and uv_build
+               (Python modules needed for CacheControl), and
+               blueprint-compiler (Python module) used by GNOME applications.
+               Please see the ChangeLog in the book for a full list of changes.
              </p>
 
              <p>The following packages have been removed:
-                dhcpcd (not needed in systemd) and
-                bridge-utils (not needed in systemd)
+                atkmm-2.28.x (not needed with gtkmm-4),
+                dhcpcd (not needed in systemd),
+                bridge-utils (not needed in systemd),
+                pcre2 and sqlite (moved to LFS),
+                Sendmail (not needed with Exim and Postfix), and
+                webp-pixbuf-loader (not needed with glycin)
              </p>
 
              <p>You can view the 13.0 systemd version at 
