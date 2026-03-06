@@ -74,6 +74,25 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-002"/>
+    <h4>13.0 002 BIND  Date: 2026-03-06  Severity: Low</h4>
+    <p>In BIND-9.20.20, a security vulnerability was fixed in the delv utility
+    that could allow for a remotely exploitable crash in the dns_client_resolve()
+    function triggered by a DNAME response. The issue is due to a use after
+    free, and relies on a user passing a very rare set of options to exploit.
+    The only known impact is a crash, and the issue requires user interaction
+    to exploit, so upstream has rated the vulnerability as Low. This utility is
+    only installed in a full BIND installation, and does <em>NOT</em> affect
+    the BIND Utilities package in BLFS. If you are not experiencing crashes
+    in the 'delv' utility, there is no need to upgrade.
+    The vulnerability does not have a CVE assigned, but more details can be
+    found at the
+    <a href="https://gitlab.isc.org/isc-projects/bind9/-/issues/5728">upstream issue report</a>.</p>
+    <p>To fix this vulnerability, update to BIND-9.20.20 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
     <a id="sa-13.0-001"/>
     <h4>13.0 001 FreeRDP  Date: 2026-03-06  Severity: High</h4>
     <p>In FreeRDP-3.23.0, twelve security vulnerabilities were fixed that could

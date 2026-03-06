@@ -52,6 +52,22 @@
 
 <!-- end of PackageName -->
 
+    <h3>BIND</h3>
+
+    <a id="sa-13.0-002"/>
+    <h4>13.0 002 BIND  Date: 2026-03-06  Severity: Low</h4>
+    <p>In BIND-9.20.20, a security vulnerability was fixed in the delv utility
+    that could allow for a remotely exploitable crash in the dns_client_resolve()
+    function triggered by a DNAME response. The issue is due to a use after
+    free, and relies on a user passing a very rare set of options to exploit.
+    The only known impact is a crash, and the issue requires user interaction
+    to exploit, so upstream has rated the vulnerability as Low. This utility is
+    only installed in a full BIND installation, and does <em>NOT</em> affect
+    the BIND Utilities package in BLFS. If you are not experiencing crashes
+    in the 'delv' utility, there is no need to upgrade. Update to BIND-9.20.20.
+    <a href="consolidated.html#sa-13.0-002">13.0-002</a></p>
+
+<!-- end of BIND -->
 
     <h3>FreeRDP</h3>
 
