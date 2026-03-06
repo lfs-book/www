@@ -10,9 +10,11 @@
 
     <!-- Editors: Do not remove this entry, just comment it out. -->
 
+<!--
     <ul>
       <li>There are currently no known security vulnerabilities for BLFS-13.0.</li>
     </ul>
+-->
 
     <!-- Editors: do the consolidated file first, to get the next number -->
 
@@ -50,20 +52,21 @@
 
 <!-- end of PackageName -->
 
-<!--
-    <h3>Apache HTTPD</h3>
 
-    <a id="sa-12.4.049"/>
-    <h4>12.4 049 Apache HTTPD Date: 2025-12-04  Severity: Medium</h4>
-    <p>In httpd-2.4.66, four security vulnerabilities were fixed that could
-    allow for unintended retry intervals when renewing ACME certificates,
-    for Server Side Includes to unexpectedly pass a shell escaped query
-    string to a command directive, for environment variables to be overridden
-    when using CGI programs, and for users to cause CGI scripts to run under
-    an unexpected username. Update to httpd-2.4.66 or later if you use the
-    mod_cgi, mod_cgid, mod_md, or Server Side Includes functionality.
-    <a href="consolidated.html#sa-12.4-049">12.4-049</a></p>
--->
-<!-- end of Apache HTTPD -->
+    <h3>FreeRDP</h3>
+
+    <a id="sa-13.0-001"/>
+    <h4>13.0 001 FreeRDP  Date: 2026-03-06  Severity: High</h4>
+    <p>In FreeRDP-3.23.0, twelve security vulnerabilities were fixed that could
+    allow for remotely exploitable client and server crashes, information
+    disclosure, and remote code execution. This can occur in a large variety of
+    situations, including when using the clipboard redirection feature,
+    connecting to a server, and resizing the window. Users who have FreeRDP
+    installed should consider updating immediately if they connect to untrusted
+    servers or are hosting a publicly-accessible RDP server.
+    Update to FreeRDP-3.23.0.
+    <a href="consolidated.html#sa-13.0-001">13.0-001</a></p>
+
+<!-- end of FreeRDP -->
 
 <!--#include virtual="/common/footer.html" -->
