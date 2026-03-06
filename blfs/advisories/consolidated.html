@@ -893,19 +893,32 @@
     <p>gstreamer-1.28.0 is ABI compatible with 1.26.x.</p>
 
     <a id="sa-12.4-079"/>
-    <h4>12.4 079 glibc (LFS)  Date: 2026-02-01  Severity: High</h4>
-    <p>In glibc-2.43, four security vulnerabilities were fixed
-    that could allow for buffer overflows, failure to save and restore
-    nonvolatile vectors, and double-free operations.
+    <h4>12.4 079 glibc (LFS)  Updated: 2026-03-06  Severity: High</h4>
+    <p>In glibc-2.43, three security vulnerabilities were fixed
+    that could allow for heap corruption when using the memalign() function, for
+    stack contents to be leaked to a DNS resolver when using getnetbyaddr() and
+    getnetbyaddr_r(), and for uninitialized memory to be returned when using
+    wordexp() with WRDE_REUSE and WRDE_APPEND. Updating to glibc-2.43 on a LFS
+    12.4 system can be challenging because it will cause numerous build failures,
+    as well as memory corruption problems in glib2, and problems with valgrind.
+    Users who cannot upgrade to LFS 13.0 are recommended to apply the security
+    patch that was developed by the editors.
     These vulnerabilities have been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0395">CVE-2025-0395</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5702">CVE-2025-5702</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5745">CVE-2025-5745</a>, and
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8058">CVE-2025-8058</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0861">CVE-2026-0861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0915">CVE-2026-0915</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15281">CVE-2025-15281</a>.</p>
     <p>To fix these vulnerabilities, update to glibc-2.43 using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/glibc.html">glibc (sysv)</a> or
     <a href="../../lfs/view/13.0-systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
+    <p>Upgrading a system to glibc-2.43 can be challenging because numerous
+    build failures will occur, a memory corruption issue with glib2 will occur,
+    and valgrind will break due to system call table changes.
+    Users who are unable to update to LFS 13.0 should add the following patch:
+    <a href="https://linuxfromscratch.org/patches/downloads/glibc/glibc-2.42-security_fixes-1.patch">glibc-2.42-security_fixes-1.patch</a>
+    to the instructions from
+    <a href="../../lfs/view/12.4/chapter08/glibc.html">glibc in LFS 12.4 (sysv)</a> or
+    <a href="../../lfs/view/12.4-systemd/chapter08/glibc.html">glibc in LFS 12.4 (systemd)</a>.</p>
 
     <a id="sa-12.4-078"/>
     <h4>12.4 078 OpenSSL (LFS)  Date: 2026-02-01  Severity: High</h4>
