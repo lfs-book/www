@@ -74,6 +74,28 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-004"/>
+    <h4>13.0 004 Exiv2  Date: 2026-03-06  Severity: Low</h4>
+    <p>In Exiv2-0.28.8, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when using the exiv2
+    command line tool. The library itself is not affected. The first issue
+    is an out-of-bounds read that occurs when asking Exiv2 to process a CRW
+    image, but it is not reproducible outside of fuzzing. The next issue is
+    an integer overflow that occurs in the preview component when passing
+    extra command line arguments (such as '-pp') to the exiv2 command line
+    utility. The overflow is at a 4GB offset, which causes Exiv2 to crash.
+    The third issue causes an uncaught exception in the preview component
+    because an integer overflow causes the code to attempt to create a
+    massive std::vector, causing Exiv2 to crash.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25884">CVE-2026-25884</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27596">CVE-2026-27596</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27631">CVE-2026-27631</a>.</p>
+    <p>To fix these vulnerabilities, update to Exiv2-0.28.8 or later using the
+    instructions from
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
     <a id="sa-13.0-003"/>
     <h4>13.0 003 FreeType2  Date: 2026-03-06  Severity: Medium</h4>
     <p>In FreeType-2.14.2, a security vulnerability was fixed that could allow
