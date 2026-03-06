@@ -114,4 +114,20 @@
     <a href="consolidated.html#sa-13.0-003">13.0-003</a></p>
 
 <!-- end of FreeType -->
+
+    <h3>libxml2</h3>
+
+    <a id="sa-13.0-005"/>
+    <h4>13.0 005 libxml2  Date: 2026-03-06  Severity: Medium</h4>
+    <p>In libxml2-2.15.2, five security vulnerabilities were fixed that could
+    allow for a denial of service (resource exhaustion and application crashes)
+    when using the xmllint utility in some rare conditions, when an application
+    calls the xmlCatalogXMLResolveURI function when an XML catalog contains a
+    URI entry that references itself, when processing XML catalogs with repeated
+    nextCatalog elements pointing to the same downstream catalog, when parsing
+    XSL nodes, and when using the RelaxNG parser to include external schemas.
+    Update to libxml2-2.15.2.
+    <a href="consolidated.html#sa-13.0-005">13.0-005</a></p>
+
+<!-- end of libxml2 -->
 <!--#include virtual="/common/footer.html" -->
