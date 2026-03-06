@@ -9,6 +9,118 @@
        be aware of are reported here.</p>
 
     <dl class="newsItem">
+      <dt>GLFS-13.0 has been released!</dt>
+      <dd><em>Zeckma - 2026/03/05</em>
+
+        <p>The GLFS team is proud to present version 13.0 of Gaming Linux From
+           Scratch. This version includes over 120 packages beyond the base
+           Linux From Scratch and Multilib Linux From Scratch books to enable
+           execution of gaming support software. It has had over 200 updates
+           since 12.4, as well as many additions and other significant
+           changes.</p>
+
+        <p>The main kicker of this release, which is the same case with the
+           other LFS projects, is that SysVinit has been dropped as an option
+           and is no longer supported. What this means for GLFS is that the
+           SysVinit version as is cannot be read online but still exists in
+           the book source to be rendered. There are no promises that the
+           source will render for SysVinit or that the contained instructions
+           will work as shown. Previous versions that had official support for
+           SysVinit can be found <a href="/glfs/view/">here</a>.</p>
+
+        <p>Speaking of, starting with GLFS-13.0, stable releases and all
+           previous stable releases can now be read online via the above link!
+           It also has the current rolling release version if that is more your
+           speed.</p>
+
+        <p>Onto the more technical changes for the book, there have been some
+           package removals. PCRE2, SQLite, and Python3 have been removed as
+           their roles are now filled with LFS/MLFS. PCRE2 and SQLite are in
+           the precursor books, and the Python3 rebuild is no longer necessary
+           as SQLite is built before Python3 now. VDPAU has also been removed,
+           meaning that libvdapu and libvdpau-va-gl are no longer in the book.
+           VA-API is now the standard, and Mesa removed VDPAU support entirely.
+           The ply Python module has also been removed as it is no longer
+           necessary for any package in the book. The VDPAU and ply removals
+           are also reflected in BLFS; BLFS no longer has those packages.</p>
+
+        <p>There have been significant changes to the graphics stack.</p>
+
+        <p>In GLFS-12.4, Mesa's OpenGL libraries (<kbd>libGL</kbd>,
+           <kbd>libEGL</kbd>, etc.) have been supported, alongside libglvnd's
+           OpenGL libraries. In GLFS-13.0, Mesa's libraries have been dropped
+           in favor of libglvnd, returning to how it was in the beginning of
+           GLFS. There are various reasons for this change, most of them coming
+           down to compatibility with several binary applications, AppImages,
+           and package build systems (notably CMake-based). If desired, the
+           page for Mesa explains how to override this but it is heavily warned
+           against. GLU, which used to be in SLFS, is now in GLFS for
+           simplicity's sake. Among this change regarding OpenGL, the GBM
+           solution which previously came from Mesa has now been replaced with
+           a lighter yet fully compatible solution: libgbm. The libgbm package
+           only requires libdrm and it's installed by default. The Mesa
+           installation instructions call for libgbm instead of building
+           Mesa's solution. This has been a part of an initiative to have a
+           fully Mesa-less system for GPU drivers outside of Mesa like NVIDIA
+           while also providing light solutions for Mesa's backbone. The final
+           piece of this initiative was to include a few necessary C headers
+           and a <kbd>pkg-config</kbd> file from Mesa to provide full
+           compatibility to various packages like Xorg-Server and Mutter. A
+           dedicated page exists for this: "DRI from Mesa," which used to just
+           be included in the GBM page. The necessary files can either be
+           copied from the Mesa tarball or downloaded from the internet so that
+           the Mesa tarball can be skipped entirely if desired. Mesa and NVIDIA
+           are no longer build dependencies for any packages, but are still
+           needed at runtime depending on your GPU.</p>
+
+        <p>Besides the Mesa emancipation, NVIDIA released major version r590
+           which ended support for pre-turing GPUs. Thus, both NVIDIA-r590 and
+           NVIDIA-r580 are in the book. To have a more comprehensive setup,
+           packages from SLFS (nv-codec-headers (ffnvcodec) and CUDA) have been
+           moved to GLFS, and NVIDIA-VA-API-Driver was added to provide support
+           for VA-API on NVIDIA. This change meant the Graphics Chapter has
+           been split up into a precursor chapter, an NVIDIA chapter which is
+           split up for revisions, and a Mesa chapter.</p>
+
+        <p>OpenCL support has also now been added in the book via the
+           OpenCL-Headers and OCL-ICD (libOpenCL) package additions. Because
+           OCL-ICD requires Ruby, Ruby has also been added.</p>
+
+        <p>Since the amount of tooling has summed up to a lot, all of the
+           tools, Python modules, and build systems have been moved to a new
+           chapter called "Tooling."</p>
+
+        <p>Other package additions include SDL3 (SDL2 being moved to
+           sdl2-compat), libatomic_ops, inih, and GameMode.</p>
+
+        <p>There have been other smaller but notable changes. The NVIDIA
+           install script now has an uninstall option. Dependency lists are
+           now collapsible. FreeType2 no longer requires 2 passes since it can
+           now load HarfBuzz dynamically instead of linking. The GLFS logo has
+           been updated. Wine has a new WoW64 architecture. For lib32
+           installation instructions using Meson, the cross files are now used
+           by default, and depend on the pkgconf and Meson file creation in
+           MLFS. The GLFS theme is now dynamic, meaning that it changes based
+           on your browser theme preference. The light theme, part of the
+           dynamic theme, now matches the theme of LFS and BLFS. Images are no
+           longer used for boxes for notes and warnings, but instead use
+           unicode that should show on most devices.</p>
+
+        <p>There have been some rewrites, typo fixes, rewording, and other
+           documentation improvements.</p>
+
+        <p>You can read the GLFS-13.0
+           <a href="/glfs/view/13.0/">here</a>.
+        </p>
+        <p>MLFS now has a stable version starting with <a
+           href="/mlfs/view/13.0-m32/">13.0</a>.</p>
+        <p>For any issues, please direct them to the
+           <a href="https://github.com/glfs-book/glfs/issues">issue tracker</a>.
+        </p>
+      </dd>
+    </dl>
+
+    <dl class="newsItem">
       <dt>GLFS 12.4 has been released!</dt>
       <dd><em>Zeckma - 2025/08/31</em>
 
@@ -139,11 +251,11 @@
         and VKD3D-Proton for Wine. On top of this, Mesa's OpenGL libraries are
         now built instead of libglvnd's. Removed in this version is NVIDIA,
         libglvnd, GNAT (GCC-Ada), lib32-Check, and x11perf. Smaller changes
-        include not using a prefix for Xorg other than <tt>/usr</tt>, but sets
-        the prefix for Beyond Linux From Scratch compatibility; Steam can now
-        play games without setting a variable for each game as a fix was made
-        in Multilib Linux From Scratch; and MSVCRT is now the default C Runtime
-        used for the MinGW-w64 toolchain, instead of UCRT.</p>
+        include not using a prefix for Xorg other than <kbd>/usr</kbd>, but
+        sets the prefix for Beyond Linux From Scratch compatibility; Steam can
+        now play games without setting a variable for each game as a fix was
+        made in Multilib Linux From Scratch; and MSVCRT is now the default C
+        Runtime used for the MinGW-w64 toolchain, instead of UCRT.</p>
 
         <p>NVIDIA and libglvnd support is planned for 12.4 but is gone from
         this release.</p>
