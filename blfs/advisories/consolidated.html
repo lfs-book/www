@@ -74,6 +74,26 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-006"/>
+    <h4>13.0 006 Wireshark  Date: 2026-03-08  Severity: Medium</h4>
+    <p>In Wireshark-4.6.4, three security vulnerabilities were fixed that could
+    allow for a denial of service (memory exhaustion and remotely exploitable
+    crash) when dissecting USB HID packets, RF4CE Profile packets, or NTS-KE
+    packets. Users who are using Wireshark but are not operating a network
+    with NTS-KE or RF4CE Profile packets, or who are not using the USB HID
+    dissector, do not need to upgrade. However, if you are on a network
+    where those packet types are in use, or are using Wireshark to dissect
+    USB HID traffic, you should update Wireshark if you are experiencing
+    crashes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3201">CVE-2026-3201</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3202">CVE-2026-3202</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3203">CVE-2026-3203</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.6.4 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-13.0-005"/>
     <h4>13.0 005 libxml2  Date: 2026-03-06  Severity: Medium</h4>
     <p>In libxml2-2.15.2, five security vulnerabilities were fixed that could

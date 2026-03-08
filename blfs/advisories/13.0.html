@@ -130,4 +130,21 @@
     <a href="consolidated.html#sa-13.0-005">13.0-005</a></p>
 
 <!-- end of libxml2 -->
+
+    <h3>Wireshark</h3>
+
+    <a id="sa-13.0-006"/>
+    <h4>13.0 006 Wireshark  Date: 2026-03-08  Severity: Medium</h4>
+    <p>In Wireshark-4.6.4, three security vulnerabilities were fixed that could
+    allow for a denial of service (memory exhaustion and remotely exploitable
+    crash) when dissecting USB HID packets, RF4CE Profile packets, or NTS-KE
+    packets. Users who are using Wireshark but are not operating a network
+    with NTS-KE or RF4CE Profile packets, or who are not using the USB HID
+    dissector, do not need to upgrade. However, if you are on a network
+    where those packet types are in use, or are using Wireshark to dissect
+    USB HID traffic, you should update Wireshark if you are experiencing
+    crashes. Update to Wireshark-4.6.4.
+    <a href="consolidated.html#sa-13.0-006">13.0-006</a></p>
+
+<!-- end of Wireshark -->
 <!--#include virtual="/common/footer.html" -->
