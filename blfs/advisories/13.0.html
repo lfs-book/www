@@ -131,6 +131,21 @@
 
 <!-- end of libxml2 -->
 
+    <h3>nfs-utils</h3>
+
+    <a id="sa-13.0-007"/>
+    <h4>13.0 007 nfs-utils  Date: 2026-03-09  Severity: Medium</h4>
+    <p>In nfs-utils-2.8.6, a security vulnerability was fixed that could allow
+    for a NFSv3 client to escalate privileges assigned to it in the /etc/exports
+    file at mount time. It allows a client to access any subdirectory or
+    subtree of an exported directory regardless of file permissions or other
+    attributes that would normally be expected to apply to the client. This
+    primarily affects servers running NFS, but all users should update due to
+    other bugfixes in this package. Update to nfs-utils-2.8.6.
+    <a href="consolidated.html#sa-13.0-007">13.0-007</a></p>
+
+<!-- end of nfs-utils -->
+
     <h3>Wireshark</h3>
 
     <a id="sa-13.0-006"/>
