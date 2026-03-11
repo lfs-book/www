@@ -74,8 +74,158 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-007"/>
+    <h4>13.0 007 nfs-utils  Date: 2026-03-09  Severity: Medium</h4>
+    <p>In nfs-utils-2.8.6, a security vulnerability was fixed that could allow
+    for a NFSv3 client to escalate privileges assigned to it in the /etc/exports
+    file at mount time. It allows a client to access any subdirectory or
+    subtree of an exported directory regardless of file permissions or other
+    attributes that would normally be expected to apply to the client. This
+    primarily affects servers running NFS, but all users should update due to
+    other bugfixes in this package.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-12801">CVE-2025-12801</a>.</p>
+    <p>To fix this vulnerability, update to nfs-utils-2.8.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/nfs-utils.html">nfs-utils (sysv)</a> or
+    <a href="../view/systemd/basicnet/nfs-utils.html">nfs-utils (systemd)</a>.</p>
+
+    <a id="sa-13.0-006"/>
+    <h4>13.0 006 Wireshark  Date: 2026-03-08  Severity: Medium</h4>
+    <p>In Wireshark-4.6.4, three security vulnerabilities were fixed that could
+    allow for a denial of service (memory exhaustion and remotely exploitable
+    crash) when dissecting USB HID packets, RF4CE Profile packets, or NTS-KE
+    packets. Users who are using Wireshark but are not operating a network
+    with NTS-KE or RF4CE Profile packets, or who are not using the USB HID
+    dissector, do not need to upgrade. However, if you are on a network
+    where those packet types are in use, or are using Wireshark to dissect
+    USB HID traffic, you should update Wireshark if you are experiencing
+    crashes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3201">CVE-2026-3201</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3202">CVE-2026-3202</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3203">CVE-2026-3203</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.6.4 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-13.0-005"/>
+    <h4>13.0 005 libxml2  Date: 2026-03-06  Severity: Medium</h4>
+    <p>In libxml2-2.15.2, five security vulnerabilities were fixed that could
+    allow for a denial of service (resource exhaustion and application crashes)
+    when using the xmllint utility in some rare conditions, when an application
+    calls the xmlCatalogXMLResolveURI function when an XML catalog contains a
+    URI entry that references itself, when processing XML catalogs with repeated
+    nextCatalog elements pointing to the same downstream catalog, when parsing
+    XSL nodes, and when using the RelaxNG parser to include external schemas.
+    All of these vulnerabilities depend on special use cases, such as parsing
+    a syntatically-incorrect XML catalog or when providing commands to xmllint
+    that contain nothing but whitespace. The XML catalog vulnerabilities could
+    possibly be exploited remotely though in some web browser contexts, which
+    is why the update has been rated as medium instead of low. In addition to
+    these five vulnerabilities, several other denial of service fixes have
+    also been included in this update but were not assigned CVEs.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1757">CVE-2026-1757</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0990">CVE-2026-0990</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0992">CVE-2026-0992</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-10911">CVE-2025-10911</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0989">CVE-2026-0989</a>.</p>
+    <p>To fix these vulnerabilities, update to libxml2-2.15.2 or later using
+    the instructions from
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
+    <a id="sa-13.0-004"/>
+    <h4>13.0 004 Exiv2  Date: 2026-03-06  Severity: Low</h4>
+    <p>In Exiv2-0.28.8, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when using the exiv2
+    command line tool. The library itself is not affected. The first issue
+    is an out-of-bounds read that occurs when asking Exiv2 to process a CRW
+    image, but it is not reproducible outside of fuzzing. The next issue is
+    an integer overflow that occurs in the preview component when passing
+    extra command line arguments (such as '-pp') to the exiv2 command line
+    utility. The overflow is at a 4GB offset, which causes Exiv2 to crash.
+    The third issue causes an uncaught exception in the preview component
+    because an integer overflow causes the code to attempt to create a
+    massive std::vector, causing Exiv2 to crash.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25884">CVE-2026-25884</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27596">CVE-2026-27596</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27631">CVE-2026-27631</a>.</p>
+    <p>To fix these vulnerabilities, update to Exiv2-0.28.8 or later using the
+    instructions from
+    <a href="../view/svn/general/exiv2.html">Exiv2 (sysv)</a> or
+    <a href="../view/systemd/general/exiv2.html">Exiv2 (systemd)</a>.</p>
+
+    <a id="sa-13.0-003"/>
+    <h4>13.0 003 FreeType2  Date: 2026-03-06  Severity: Medium</h4>
+    <p>In FreeType-2.14.2, a security vulnerability was fixed that could allow
+    for arbitrary code execution, information disclosure, or a denial of service
+    (application crash) when processing the HVAR, VVAR, or MVAR tables in an
+    OpenType variable font. This problem occurs due to an out of bounds read,
+    caused by an integer overflow problem. This update also has several other
+    fixes for other potential security problems, and upstream recommends that
+    all users update to this version of FreeType.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-23865">CVE-2026-23865</a>.</p>
+    <p>To fix this vulnerability, update to FreeType-2.14.2 or later using the
+    instructions from
+    <a href="../view/svn/general/freetype2.html">FreeType (sysv)</a> or
+    <a href="../view/systemd/general/freetype2.html">FreeType (systemd)</a>.</p>
+
+    <a id="sa-13.0-002"/>
+    <h4>13.0 002 BIND  Date: 2026-03-06  Severity: Low</h4>
+    <p>In BIND-9.20.20, a security vulnerability was fixed in the delv utility
+    that could allow for a remotely exploitable crash in the dns_client_resolve()
+    function triggered by a DNAME response. The issue is due to a use after
+    free, and relies on a user passing a very rare set of options to exploit.
+    The only known impact is a crash, and the issue requires user interaction
+    to exploit, so upstream has rated the vulnerability as Low. This utility is
+    only installed in a full BIND installation, and does <em>NOT</em> affect
+    the BIND Utilities package in BLFS. If you are not experiencing crashes
+    in the 'delv' utility, there is no need to upgrade.
+    The vulnerability does not have a CVE assigned, but more details can be
+    found at the
+    <a href="https://gitlab.isc.org/isc-projects/bind9/-/issues/5728">upstream issue report</a>.</p>
+    <p>To fix this vulnerability, update to BIND-9.20.20 or later using the
+    instructions from
+    <a href="../view/svn/server/bind.html">BIND (sysv)</a> or
+    <a href="../view/systemd/server/bind.html">BIND (systemd)</a>.</p>
+
+    <a id="sa-13.0-001"/>
+    <h4>13.0 001 FreeRDP  Date: 2026-03-06  Severity: High</h4>
+    <p>In FreeRDP-3.23.0, twelve security vulnerabilities were fixed that could
+    allow for remotely exploitable client and server crashes, information
+    disclosure, and remote code execution. This can occur in a large variety of
+    situations, including when using the clipboard redirection feature,
+    connecting to a server, and resizing the window. Users who have FreeRDP
+    installed should consider updating immediately if they connect to untrusted
+    servers or are hosting a publicly-accessible RDP server. Proof of concept
+    exploits are available for all of these vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25997">CVE-2026-25997</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25959">CVE-2026-25959</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25955">CVE-2026-25955</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25954">CVE-2026-25954</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25953">CVE-2026-25953</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25952">CVE-2026-25952</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25942">CVE-2026-25942</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25941">CVE-2026-25941</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27951">CVE-2026-27951</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26965">CVE-2026-26965</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26955">CVE-2026-26955</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26271">CVE-2026-26271</a>.</p>
+    <p>To fix these vulnerabilities, update to FreeRDP-3.23.0 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/freerdp.html">FreeRDP (sysv)</a> or
+    <a href="../view/systemd/xsoft/freerdp.html">FreeRDP (systemd)</a>.</p>
+
+<!--
     <p>There are currently no known security vulnerabilities for the latest
     releases of the books.</p>
+-->
 
     <h2>Items between the releases of the 12.4 and 13.0 books</h2>
 
@@ -893,19 +1043,32 @@
     <p>gstreamer-1.28.0 is ABI compatible with 1.26.x.</p>
 
     <a id="sa-12.4-079"/>
-    <h4>12.4 079 glibc (LFS)  Date: 2026-02-01  Severity: High</h4>
-    <p>In glibc-2.43, four security vulnerabilities were fixed
-    that could allow for buffer overflows, failure to save and restore
-    nonvolatile vectors, and double-free operations.
+    <h4>12.4 079 glibc (LFS)  Updated: 2026-03-06  Severity: High</h4>
+    <p>In glibc-2.43, three security vulnerabilities were fixed
+    that could allow for heap corruption when using the memalign() function, for
+    stack contents to be leaked to a DNS resolver when using getnetbyaddr() and
+    getnetbyaddr_r(), and for uninitialized memory to be returned when using
+    wordexp() with WRDE_REUSE and WRDE_APPEND. Updating to glibc-2.43 on a LFS
+    12.4 system can be challenging because it will cause numerous build failures,
+    as well as memory corruption problems in glib2, and problems with valgrind.
+    Users who cannot upgrade to LFS 13.0 are recommended to apply the security
+    patch that was developed by the editors.
     These vulnerabilities have been assigned
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0395">CVE-2025-0395</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5702">CVE-2025-5702</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5745">CVE-2025-5745</a>, and
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8058">CVE-2025-8058</a>.</p>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0861">CVE-2026-0861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0915">CVE-2026-0915</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15281">CVE-2025-15281</a>.</p>
     <p>To fix these vulnerabilities, update to glibc-2.43 using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/glibc.html">glibc (sysv)</a> or
     <a href="../../lfs/view/13.0-systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
+    <p>Upgrading a system to glibc-2.43 can be challenging because numerous
+    build failures will occur, a memory corruption issue with glib2 will occur,
+    and valgrind will break due to system call table changes.
+    Users who are unable to update to LFS 13.0 should add the following patch:
+    <a href="https://linuxfromscratch.org/patches/downloads/glibc/glibc-2.42-security_fixes-1.patch">glibc-2.42-security_fixes-1.patch</a>
+    to the instructions from
+    <a href="../../lfs/view/12.4/chapter08/glibc.html">glibc in LFS 12.4 (sysv)</a> or
+    <a href="../../lfs/view/12.4-systemd/chapter08/glibc.html">glibc in LFS 12.4 (systemd)</a>.</p>
 
     <a id="sa-12.4-078"/>
     <h4>12.4 078 OpenSSL (LFS)  Date: 2026-02-01  Severity: High</h4>

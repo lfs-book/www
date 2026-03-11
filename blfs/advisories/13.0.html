@@ -10,9 +10,11 @@
 
     <!-- Editors: Do not remove this entry, just comment it out. -->
 
+<!--
     <ul>
       <li>There are currently no known security vulnerabilities for BLFS-13.0.</li>
     </ul>
+-->
 
     <!-- Editors: do the consolidated file first, to get the next number -->
 
@@ -50,20 +52,114 @@
 
 <!-- end of PackageName -->
 
-<!--
-    <h3>Apache HTTPD</h3>
+    <h3>BIND</h3>
 
-    <a id="sa-12.4.049"/>
-    <h4>12.4 049 Apache HTTPD Date: 2025-12-04  Severity: Medium</h4>
-    <p>In httpd-2.4.66, four security vulnerabilities were fixed that could
-    allow for unintended retry intervals when renewing ACME certificates,
-    for Server Side Includes to unexpectedly pass a shell escaped query
-    string to a command directive, for environment variables to be overridden
-    when using CGI programs, and for users to cause CGI scripts to run under
-    an unexpected username. Update to httpd-2.4.66 or later if you use the
-    mod_cgi, mod_cgid, mod_md, or Server Side Includes functionality.
-    <a href="consolidated.html#sa-12.4-049">12.4-049</a></p>
--->
-<!-- end of Apache HTTPD -->
+    <a id="sa-13.0-002"/>
+    <h4>13.0 002 BIND  Date: 2026-03-06  Severity: Low</h4>
+    <p>In BIND-9.20.20, a security vulnerability was fixed in the delv utility
+    that could allow for a remotely exploitable crash in the dns_client_resolve()
+    function triggered by a DNAME response. The issue is due to a use after
+    free, and relies on a user passing a very rare set of options to exploit.
+    The only known impact is a crash, and the issue requires user interaction
+    to exploit, so upstream has rated the vulnerability as Low. This utility is
+    only installed in a full BIND installation, and does <em>NOT</em> affect
+    the BIND Utilities package in BLFS. If you are not experiencing crashes
+    in the 'delv' utility, there is no need to upgrade. Update to BIND-9.20.20.
+    <a href="consolidated.html#sa-13.0-002">13.0-002</a></p>
 
+<!-- end of BIND -->
+
+    <h3>Exiv2</h3>
+
+    <a id="sa-13.0-004"/>
+    <h4>13.0 004 Exiv2  Date: 2026-03-06  Severity: Low</h4>
+    <p>In Exiv2-0.28.8, three security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when using the exiv2
+    command line tool. The library itself is not affected. Users that are
+    using the preview component (e.g. passing '-pp' to the exiv2 command
+    line tool) or who are processing CRW videos should update, as the issues
+    only affect those use cases. There is no need to update otherwise. Update
+    to Exiv2-0.28.8.
+    <a href="consolidated.html#sa-13.0-004">13.0-004</a></p>
+
+<!-- end of Exiv2 -->
+
+    <h3>FreeRDP</h3>
+
+    <a id="sa-13.0-001"/>
+    <h4>13.0 001 FreeRDP  Date: 2026-03-06  Severity: High</h4>
+    <p>In FreeRDP-3.23.0, twelve security vulnerabilities were fixed that could
+    allow for remotely exploitable client and server crashes, information
+    disclosure, and remote code execution. This can occur in a large variety of
+    situations, including when using the clipboard redirection feature,
+    connecting to a server, and resizing the window. Users who have FreeRDP
+    installed should consider updating immediately if they connect to untrusted
+    servers or are hosting a publicly-accessible RDP server.
+    Update to FreeRDP-3.23.0.
+    <a href="consolidated.html#sa-13.0-001">13.0-001</a></p>
+
+<!-- end of FreeRDP -->
+
+    <h3>FreeType</h3>
+
+    <a id="sa-13.0-003"/>
+    <h4>13.0 003 FreeType2  Date: 2026-03-06  Severity: Medium</h4>
+    <p>In FreeType-2.14.2, a security vulnerability was fixed that could allow
+    for arbitrary code execution, information disclosure, or a denial of service
+    (application crash) when processing the HVAR, VVAR, or MVAR tables in an
+    OpenType variable font. This problem occurs due to an out of bounds read,
+    caused by an integer overflow problem. This update also has several other
+    fixes for other potential security problems, and upstream recommends that
+    all users update to this version of FreeType. Update to FreeType-2.14.2.
+    <a href="consolidated.html#sa-13.0-003">13.0-003</a></p>
+
+<!-- end of FreeType -->
+
+    <h3>libxml2</h3>
+
+    <a id="sa-13.0-005"/>
+    <h4>13.0 005 libxml2  Date: 2026-03-06  Severity: Medium</h4>
+    <p>In libxml2-2.15.2, five security vulnerabilities were fixed that could
+    allow for a denial of service (resource exhaustion and application crashes)
+    when using the xmllint utility in some rare conditions, when an application
+    calls the xmlCatalogXMLResolveURI function when an XML catalog contains a
+    URI entry that references itself, when processing XML catalogs with repeated
+    nextCatalog elements pointing to the same downstream catalog, when parsing
+    XSL nodes, and when using the RelaxNG parser to include external schemas.
+    Update to libxml2-2.15.2.
+    <a href="consolidated.html#sa-13.0-005">13.0-005</a></p>
+
+<!-- end of libxml2 -->
+
+    <h3>nfs-utils</h3>
+
+    <a id="sa-13.0-007"/>
+    <h4>13.0 007 nfs-utils  Date: 2026-03-09  Severity: Medium</h4>
+    <p>In nfs-utils-2.8.6, a security vulnerability was fixed that could allow
+    for a NFSv3 client to escalate privileges assigned to it in the /etc/exports
+    file at mount time. It allows a client to access any subdirectory or
+    subtree of an exported directory regardless of file permissions or other
+    attributes that would normally be expected to apply to the client. This
+    primarily affects servers running NFS, but all users should update due to
+    other bugfixes in this package. Update to nfs-utils-2.8.6.
+    <a href="consolidated.html#sa-13.0-007">13.0-007</a></p>
+
+<!-- end of nfs-utils -->
+
+    <h3>Wireshark</h3>
+
+    <a id="sa-13.0-006"/>
+    <h4>13.0 006 Wireshark  Date: 2026-03-08  Severity: Medium</h4>
+    <p>In Wireshark-4.6.4, three security vulnerabilities were fixed that could
+    allow for a denial of service (memory exhaustion and remotely exploitable
+    crash) when dissecting USB HID packets, RF4CE Profile packets, or NTS-KE
+    packets. Users who are using Wireshark but are not operating a network
+    with NTS-KE or RF4CE Profile packets, or who are not using the USB HID
+    dissector, do not need to upgrade. However, if you are on a network
+    where those packet types are in use, or are using Wireshark to dissect
+    USB HID traffic, you should update Wireshark if you are experiencing
+    crashes. Update to Wireshark-4.6.4.
+    <a href="consolidated.html#sa-13.0-006">13.0-006</a></p>
+
+<!-- end of Wireshark -->
 <!--#include virtual="/common/footer.html" -->

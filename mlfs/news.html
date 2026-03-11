@@ -18,6 +18,38 @@
 -->
 
     <dl class="newsItem">
+      <dt>MLFS-13.0 Release</dt>
+      <dd><em>Zeckma - 2026/03/05</em>
+      <p>The Multilib Linux From Scratch team is proud to present version 13.0
+      of MLFS.</p>
+      <p>MLFS has the same changes discussed in the <a
+      href="/lfs/news.html">LFS release notes</a>, and more.</p>
+      <p>The main change is that more files are created within the instructions
+      of Pkgconf and Meson to better provide compilation for 32-bit and x32-bit
+      targets on x86_64. These files used to be created in GLFS, but upgrading
+      packages in LFS that use Meson-based systems can cause issues without
+      those files. The point of MLFS is to arm the system with a solid base for
+      targetting 32-bit and x32-bit on x86_64, so the files are better suited
+      for this book.</p>
+      <p>MLFS-12.4 switched to a different system of upgrading the kernel, but
+      MLFS-13.0 now once again uses the system LFS uses.</p>
+      <p>In an earlier announcement, it was explained that editorship changed,
+      and that the book got cleaned up. Both the looks and instructions of the
+      book are more concise.</p>
+      <p>For the next version, it is planned for x32-bit support to be
+      removed as its use in programs that don't have a 32-bit/64-bit version is
+      extremely limited.</p>
+      <p>The following versions of MLFS-13.0 that can be read are linked
+      below:</p>
+      <ul>
+        <li><a href="view/13.0/">MLFS-13.0 with 32-bit and x32-bit</a></li>
+        <li><a href="view/13.0-m32/">MLFS-13.0 with 32-bit</a></li>
+        <li><a href="view/13.0-mx32/">MLFS-13.0 with x32-bit</a></li>
+      </ul>
+      </dd>
+    </dl>
+
+    <dl class="newsItem">
       <dt>More releases online, change of editorship</dt>
       <dd><em>Zeckma - 2026/02/15</em>
         <p>Starting off, there have been efforts for a while to get MLFS

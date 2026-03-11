@@ -8,16 +8,20 @@
      <!-- Editors: Do not remove this entry, just comment it out. -->
 
 
+<!--
      <ul>
        <li>There are no current errata for blfs-13.0-systemd.</li> 
      </ul>
-<!--
-     <ul>
-       <li>The version of libinput shipped with BLFS 12.4 is known to cause
-       crashes on systems with ALPS touchpads, and 32-bit systems. Please
-       update to libinput-1.29.1 or later to resolve the problem.</li>
-     </ul>
 -->
+
+     <ul>
+       <li>The instructions for installing GRUB for EFI on a system that doesn't
+       already have GRUB installed are incorrect. The command for moving the
+       bash completions is no longer necessary.</li>
+       <li>The example configuration for GRUB uses the wrong kernel version.
+       Please replace "6.16.1-lfs-12.4" with "6.18.10-lfs-13.0-systemd".</li>
+     </ul>
+
      <h2>Known Security Vulnerabilities</h2>
      
      <p>Details of Security Advisories for this version of BLFS are now

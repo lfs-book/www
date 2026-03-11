@@ -9,6 +9,104 @@
        be aware of are reported here.</p>
 
     <dl class="newsItem">
+      <dt>SLFS 13.0 has been released!</dt>
+      <dd><em>Zeckma - 2026/03/05</em>
+
+      <p>The GLFS team is proud to present version 13.0 of Supplemental Linux
+         From Scratch. This version includes over 160 packages beyond the base
+         Linux From Scratch, Multilib LFS, Gaming LFS, and Beyond LFS books.
+         There were a little under 200 updates since 12.4, upon many additions
+         and other siginificant changes.</p>
+
+      <p>The main kicker of this release, which is the same case with the other
+         LFS projects, is that SysVinit has been dropped as an option and is no
+         longer supported. What this means for SLFS is that the SysVinit
+         version as is cannot be read online but still exists in the book
+         source to be rendered. There are no promises that the source will
+         render for SysVinit or that the contained instructions will work as
+         shown. Previous versions that had official support for SysVinit can be
+         found <a href="/slfs/view/">here</a>.</p>
+
+      <p>Speaking of, starting with SLFS-13.0, stable releases and all previous
+         stable releases can now be read online via the above link! It also has
+         the current rolling release version if that is more your speed.</p>
+
+      <p>Onto the more technical changes for the book, a decently big change is
+         that Mesa's OpenGL libraries (<kbd>libGL</kbd>, <kbd>libEGL</kbd>,
+         etc.) are no longer supported in the book. It's now expected to
+         install OpenGL libraries from <a
+         href="/glfs/view/13.0/shareddeps/libglvnd.html">libglvnd</a>.
+         Otherwise, it's known that some packages will fail to configure or
+         build with Mesa's OpenGL libraries, with a suspicion that Flatpak
+         applications using SDKs that use libglvnd may crash. OBS-Studio and
+         Hyprland are notable examples. Hyprland is a simple fix, but
+         OBS-Studio takes too much work to fix, considering the issue spreads
+         across multiple CMake files with complex logic.</p>
+
+      <p>Along with that change are thirty package additions: grim, slurp,
+         LADSPA-SDK, Noise-Suppression, wlroots, Autoconf Archive, awww/swww,
+         wgetpaste, hyprtoolkit (Hyprland Libraries), MangoWC, SceneFX, imv,
+         samurai, sdl12-compat, FluidSynth, wlr-randr, fish, mksh, SIMDe,
+         hyprwire (Hyprland Libraries), W3m, yyjson, cmark, libsodium, libzmq,
+         HIDAPI, Monero, tinyxxd, CGLM, and PlutoSVG. For cmark, if commonmark
+         was installed, the installation instructions will move the Python
+         script out of the way and put in the C binary in its place. tinyxxd
+         replaces Vim's xxd package. Thus, whenever Vim is reinstalled, it
+         replaces tinyxxd. Be careful when upgrading either of them.</p>
+
+      <p>Removed in 13.0 is Rofi-Wayland (replaced with Rofi), hyprland-qtutils
+         (replaced by hyprland-guiutils), sdl2-compat and SDL3 (moved to BLFS
+         and GLFS), nv-codec-headers/ffnvcodec (moved to GLFS), CUDA (moved to
+         GLFS), and GNAT/GCC-Ada (no packages in the books use ADA).</p>
+
+      <p>Now come some structural changes.</p>
+
+      <ul>
+        <li>
+          <p>The Binary section has dissolved. Fuse2 became a General Library,
+             OSTree became a General Utility, and Flatpak also became a General
+             Utility.</p>
+        </li>
+        <li>
+          <p>Multimedia has been moved to the General section.</p>
+        </li>
+        <li>
+          <p>Graphical Libraries have been moved to the Graphical Components
+             section.</p>
+        </li>
+      </ul>
+
+      <p>There are other small changes that are still notable.</p>
+
+      <ul>
+        <li>
+          <p>The theme is now dynamic, meaning that it changes based on your
+             browser theme preference. The light theme, part of the dynamic
+             theme, now matches the theme of LFS and BLFS.</p>
+        </li>
+        <li>
+          <p>Images are no longer used for boxes for notes and warnings, but
+             instead use unicode that should show on most devices.</p>
+        </li>
+      </ul>
+
+      <p>There have been typo fixes, rewording, and other documentation
+         improvements.</p>
+
+      <p>Despite not matching the growth size of the last update, 12.4, it is
+         still one full of many changes and additions that make it notable in
+         its own right.</p>
+
+        <p>You can read the SLFS-13.0
+           <a href="/slfs/view/13.0/">here</a>.
+        </p>
+        <p>For any issues, please direct them to the
+           <a href="https://github.com/glfs-book/slfs/issues">issue tracker</a>.
+        </p>
+      </dd>
+    </dl>
+
+    <dl class="newsItem">
       <dt>SLFS 12.4 has been released!</dt>
       <dd><em>Zeckma - 2025/08/31</em>
         <p>
@@ -54,7 +152,7 @@
           and build failures have been fixed. Beyond all that, some typos have
           been fixed.
         </p>
-        </p>
+        <p>
           This release may not be matched in terms of scale in proceeding
           releases. The amount of package additions, including moved packages
           from GLFS, reaches over 100 packages, over 3x the amount seen in

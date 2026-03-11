@@ -57,10 +57,17 @@
     system completely unusable.</p>
 
     <a id="sa-12.4-079"/>
-    <h4>12.4 079 glibc (LFS)  Date: 2026-02-01  Severity: High</h4>
-    <p>In glibc-2.43, four security vulnerabilities were fixed
-    that could allow for buffer overflows, failure to save and restore
-    nonvolatile vectors, and double-free operations. Update to glibc-2.43.
+    <h4>12.4 079 glibc (LFS)  Updated: 2026-03-06  Severity: High</h4>
+    <p>In glibc-2.43, three security vulnerabilities were fixed
+    that could allow for heap corruption when using the memalign() function, for
+    stack contents to be leaked to a DNS resolver when using getnetbyaddr() and
+    getnetbyaddr_r(), and for uninitialized memory to be returned when using 
+    wordexp() with WRDE_REUSE and WRDE_APPEND. Updating to glibc-2.43 on a LFS
+    12.4 system can be challenging because it will cause numerous build failures,
+    as well as memory corruption problems in glib2, and problems with valgrind.
+    Users who cannot upgrade to LFS 13.0 are recommended to apply the security
+    patch that was developed by the editors. Update to glibc-2.43 or apply the
+    patch that was developed by the editors.
     <a href="../../blfs/advisories/consolidated.html#sa-12.4-079">12.4-079</a></p>
 
 <!-- end of Glibc -->
