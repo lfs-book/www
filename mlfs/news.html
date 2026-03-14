@@ -18,6 +18,36 @@
 -->
 
     <dl class="newsItem">
+      <dt>Thomas' Multilib Pages Are Now Deprecated</dt>
+      <dd><em>Zeckma - 2026/03/13</em>
+      <p>For the majority of MLFS' life, the pages lived at <a
+      href="/~thomas/">~thomas/</a>, Thomas' name space, which most editors
+      of LFS/BLFS have their own. This has led to various issues.</p>
+      <p>It firstly does not feel official, and creating stable releases would
+      really clutter the name space. Another issue is that the pages have a
+      single rendering script that only Thomas or the user's cronjob can run,
+      and only a user with strong permissions can edit the rendering script.
+      The script itself led to and is still causes issues, with new issues soon
+      to come. One of those issues is that if the main LFS book's branch has
+      not been updated the last time the render script checked, it will never
+      render MLFS, even if changes to MLFS in particular have been made.
+      If changes to MLFS have been made a few days ago, and LFS has not had a
+      change, the script will not pull in the MLFS specific changes.</p>
+      <p>One of the upcoming changes will break the script. x32-bit library
+      support will be removed, a bit type that is very rarely needed in
+      practice. The vast majority of software that cannot be used reasonably
+      for another x86 bit size targets either 32-bit or 64-bit.</p>
+      <p>This will break the rendering script. When this change happens, the
+      rendering script will be removed, and every HTML in the multilib pages
+      will redirect to the canonical HTML dev index for MLFS as the canonical
+      pages will stay up to date. If you have the original MLFS pages
+      bookmarked, please change the bookmark to the new pages of your
+      choosing. If the development pages aren't your speed, you can view all
+      the available options <a href="view/">here</a>.</p>
+      </dd>
+    </dl>
+
+    <dl class="newsItem">
       <dt>MLFS-13.0 Release</dt>
       <dd><em>Zeckma - 2026/03/05</em>
       <p>The Multilib Linux From Scratch team is proud to present version 13.0
