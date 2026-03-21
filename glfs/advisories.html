@@ -17,7 +17,38 @@
 
     <br/>
 
-    <h2>12.4 to 12.5</h2>
+    <h2>13.0 to 13.1</h2>
+    <h2>Security Advisories</h2>
+    <p>Please read <a href="/blfs/advisories/12.4.html">BLFS 12.4 Security
+    Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
+    Consolidated Security Advisories</a> for more packages that aren't covered
+    here.</p>
+
+    <a id="glfs-sa-13.0-001"/>
+    <!-- High may be a bit overblown, but this has no CVE or rating. Being
+         careful here. -->
+    <h4>glfs-sa-13.0-001: NVIDIA-r580 - Rating: High (Date: March 21st, 2026)</h4>
+    <p>In NVIDIA-580.142, one security vulnerability was fixed that
+    could allow for a denial of service attack via a kernel crash by exploiting
+    a NULL pointer dereference. This issue affects the kernel-open kernel
+    modules in a file called
+    <kbd>kernel-open/common/displayport/src/dp_connectorimpl.cpp</kbd>. Despite
+    the kernel modules being open, everything in <kbd>kernel-open/common</kbd>
+    is precompiled in the <kbd>kernel-open/nvidia/nv-kernel.o_binary</kbd>
+    object relocatable. It can be compiled by installing <a
+    href="https://github.com/NVIDIA/open-gpu-kernel-modules">open-gpu-kernel-modules</a>,
+    not in GLFS currently. This issue has no CVE or any ID with security
+    authority. The pull request for the issue can be found at
+    <a href="https://github.com/NVIDIA/open-gpu-kernel-modules/pull/1040">open-gpu-kernel-modules#1040</a>.</p>
+    <p>Update to NVIDIA-580.142 or a later r580 version by following the <a
+    href="view/dev/shareddeps/nvidia-r580.html">GLFS NVIDIA-r580
+    installation page</a>. Ensure you download the latest install script and
+    manifest file if you previously downloaded them to ensure
+    compatibility.</p>
+
+    <br/>
+
+    <h2>12.4 to 13.0</h2>
     <h2>Broken changes</h2>
     <p>Packages removed from GLFS that are in BLFS may have gotten security
     updates. Read <a href="/blfs/advisories/12.4.html">BLFS 12.4 Security
@@ -35,9 +66,9 @@
        <kbd>--libdir=$PREFIX/lib32</kbd> option and GLFS now relies on it.
        There are warnings on each page that uses Meson cross files about this.
        For Pkgconf, the files can be installed from the MLFS <a
-       href="/mlfs/view/dev-m32/chapter08/pkgconf.html">Pkgconf</a> page. For
+       href="/mlfs/view/dev/chapter08/pkgconf.html">Pkgconf</a> page. For
        Meson, the files can be installed from the MLFS <a
-       href="/mlfs/view/dev-m32/chapter08/meson.html">Meson</a> page.</p>
+       href="/mlfs/view/dev/chapter08/meson.html">Meson</a> page.</p>
 
     <a id="glfs-brk-12.4-005"/>
     <h4>glfs-brk-12.4-005: NVIDIA (Date: December 23rd, 2025)</h4>
@@ -45,10 +76,10 @@
        NVIDIA cards. GLFS now includes two versions of NVIDIA (as well as CUDA)
        to provide support for pre and post Turing GPUs. You must now decide
        which version to install from. You should read <a
-       href="https://glfs-book.github.io/glfs/shareddeps/nvidia-rev.html">NVIDIA
+       href="view/dev/shareddeps/nvidia-rev.html">NVIDIA
        Revisions</a> to get an idea of what to install. If you have <a
-       href="https://glfs-book.github.io/glfs/shareddeps/nvidia.html">
-       https://glfs-book.github.io/glfs/shareddeps/nvidia.html</a> bookmarked
+       href="view/dev/shareddeps/nvidia.html">
+       https://linuxfromscratch.org/glfs/view/dev/shareddeps/nvidia.html</a> bookmarked
        and use it to install NVIDIA, you should be careful installing the
        package to avoid losing support for your GPU.</p>
 
@@ -122,7 +153,7 @@
     nvidia.ko kernel module. This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-33219">CVE-2025-33219</a>.</p>
     <p>First read <a
-    href="https://glfs-book.github.io/glfs/shareddeps/nvidia-rev.html">NVIDIA
+    href="view/dev/shareddeps/nvidia-rev.html">NVIDIA
     Revisions</a>, then go to the NVIDIA version that better suits your GPU to
     upgrade to a secure version.
     SysVinit and Systemd instructions differ for each version.</p>
@@ -138,7 +169,7 @@
     Only an upgrade to FFmpeg-8.0.1 will fix the issue, but it breaks ABI and
     API.</p>
     <p>To upgrade to FFmpeg-8.0.1, follow the <a
-    href="https://glfs-book.github.io/glfs/wine/ffmpeg.html">FFmpeg
+    href="view/dev/wine/ffmpeg.html">FFmpeg
     installation page</a>. SysVinit and Systemd instructions don't differ for
     that page.</p>
 
@@ -163,7 +194,7 @@
     installation page for FFmpeg covers how to upgrade to version 8.0.1 to
     solve that vulnerability.</p>
     <p>To upgrade to FFmpeg-7.1.3 (or FFmpeg-8.0.1), follow the <a
-    href="https://glfs-book.github.io/glfs/wine/ffmpeg.html">FFmpeg
+    href="view/dev/wine/ffmpeg.html">FFmpeg
     installation page</a>. SysVinit and Systemd instructions don't differ for
     that page.</p>
 
@@ -185,11 +216,10 @@
     of the major versions r570 (570.195.03) and r535 (535.274.02)
     immediately.</p>
     <p>To do so, follow the <a
-    href="https://glfs-book.github.io/glfs/shareddeps/nvidia.html">GLFS NVIDIA
+    href="view/dev/shareddeps/nvidia.html">GLFS NVIDIA
     installation page</a>. Ensure you download the latest install script and
     manifest file if you previously downloaded them to ensure
-    compatibility. SysVinit and Systemd instructions differ slightly. Render
-    a copy for the Systemd edition.</p>
+    compatibility. SysVinit and Systemd instructions differ slightly.</p>
 
     <br/>
 
@@ -208,13 +238,13 @@
     (originally LFS-QOL) did not exist. But now it exists to offload such
     packages. So it got moved. You can read installation instructions for it
     here: <a
-    href="https://glfs-book.github.io/slfs/graph/xcb-util-errors.html">xcb-util-errors</a>.
+    href="/slfs/view/dev/graph/xcb-util-errors.html">xcb-util-errors</a>.
     The page does not differ for Systemd.</p>
 
     <a id="glfs-brk-12.3-006"/>
     <h4>glfs-brk-12.3-006: AMDGPU PRO (Date: July 18th, 2025)</h4>
     <p>Following the AMDGPU PRO deprecation announcement, dated 2025/05/31 at
-    <a href="/glfs/news.html">GLFS News</a>, AMDGPU PRO has been removed from
+    <a href="news.html">GLFS News</a>, AMDGPU PRO has been removed from
     GLFS and there are no plans for it to return. Replace the AMDGPU PRO stack
     with libva, libvdpau, and Mesa.</p>
 
@@ -224,10 +254,7 @@
     No packages in GLFS use seatd. Originally, it was added in a time when SLFS
     (originally LFS-QOL) did not exist. But now it exists to offload such
     packages. So it got moved. You can read installation instructions for it
-    here: <a href="https://glfs-book.github.io/slfs/general/seatd.html">seatd
-    (SysVinit)</a>. For Systemd, you will need to render the SLFS book yourself
-    or <a href="https://github.com/glfs-book/slfs/releases">download a
-    release</a>.</p>
+    here: <a href="/slfs/view/dev/general/seatd.html">seatd</a>.</p>
 
     <a id="glfs-brk-12.3-004"/>
     <h4>glfs-brk-12.3-004: Git (Date: June 10th, 2025)</h4>
@@ -282,7 +309,7 @@
     updating to Fontconfig-2.17.1 to avoid font recaching bailing via fc-cache
     which can cause Steam to crash. This is not needed for the 2.16 series.</p>
     <p>To upgrade to Fontconfig-2.17.1, follow the <a
-    href="https://glfs-book.github.io/glfs/shareddeps/fontconfig.html">GLFS
+    href="view/dev/shareddeps/fontconfig.html">GLFS
     Fontconfig installation page</a> which does not differ for SysVinit/Systemd
     versions of the book.</p>
 
@@ -299,7 +326,7 @@
     vulnerabilities and update to NVIDIA-575.64 or any of the latest revisions
     of the other 3 latest major versions (570, 565, and 560) immediately.</p>
     <p>To do so, follow the <a
-    href="https://glfs-book.github.io/glfs/shareddeps/nvidia.html">GLFS NVIDIA
+    href="view/dev/shareddeps/nvidia.html">GLFS NVIDIA
     installation page</a>. Ensure you download the latest install script and
     manifest file if you previously downloaded them to ensure
     compatibility.</p>
@@ -314,7 +341,7 @@
     the vulnerability by doing one of two things: either upgrade libxml2 to
     2.14.4, or reinstall libxml2-1.13.8 with a patch.</p>
     <p>To upgrade to libxml2-2.14.4, follow the <a
-    href="https://glfs-book.github.io/glfs/shareddeps/libxml2.html">GLFS
+    href="view/dev/shareddeps/libxml2.html">GLFS
     libxml2 installation page</a> which does not differ for SysVinit/Systemd
     versions of the book.</p>
     <p>To reinstall libxml2-2.13.8 with the patch, download <a
