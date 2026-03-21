@@ -74,6 +74,22 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-009"/>
+    <h4>13.0 009 cURL  Date: 2026-03-09  Severity: Medium</h4>
+    <p>In cURL-8.19.0, four security vulnerabilities were fixed that could
+    allow for inappropriate HTTP Negoitation connection reuse, token leaks,
+    inappropriate proxy connection reuse with credentials, and use-after-free
+    operations via SMB connection reuse.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1965">CVE-2026-1965</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3783">CVE-2026-3783</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3784">CVE-2026-3784</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3805">CVE-2026-3805</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.19.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-13.0-008"/>
     <h4>13.0 008 systemd (LFS and BLFS)  Date: 2026-03-21  Severity: Medium</h4>
     <p>In systemd-259.5, a security vulnerability was fixed that could
