@@ -18,6 +18,25 @@
 -->
 
     <dl class="newsItem">
+      <dt>x32-bit support removed and other changes</dt>
+      <dd><em>Zeckma - 2026/03/21</em>
+      <p>Following the last announcement, x32-bit on 64-bit has been completely
+      removed from the development version of MLFS, and planned to land in
+      MLFS-13.1. Certain ordering and variable definitions are more
+      comprehensive for 32-bit on 64-bit.</p>
+      <p>When rendering the MLFS book, the <kbd>ARCH</kbd> parameter is now
+      gone. 32-bit support is now seamless in MLFS. This means that beyond
+      init system versions, there is only one version of MLFS per release.</p>
+      <p>Following the last announcement, Thomas' Multilib LFS pages have
+      been altered to redirect to the <a
+      href="view/dev/">MLFS development</a> index. This change came faster
+      because Thomas' multilib rendering script was broken and wasn't pulling
+      in necessary changes and security updates.</p>
+      </dd>
+    </dl>
+
+
+    <dl class="newsItem">
       <dt>Thomas' Multilib Pages Are Now Deprecated</dt>
       <dd><em>Zeckma - 2026/03/13</em>
       <p>For the majority of MLFS' life, the pages lived at <a
