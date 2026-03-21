@@ -74,6 +74,18 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-008"/>
+    <h4>13.0 008 systemd (LFS and BLFS)  Date: 2026-03-21  Severity: Medium</h4>
+    <p>In systemd-259.5, a security vulnerability was fixed that could
+    allow for local privilege escalation. This vulnerability was found in
+    systemd-machined, which can be triggered by a regular user logged into
+    a graphical environment who can escalate to the root user through an IPC
+    call. This vulnerability has been assigned
+    <a href="https://github.com/systemd/systemd/security/advisories/GHSA-6pwp-j5vg-5j6m">GHSA-6pwp-j5vg-5j6m</a>.</p>
+    <p>To fix this vulnerability, update to systemd-259.5 or later using the
+    instructions from
+    <a href="../view/systemd/general/systemd.html">systemd</a>.</p>
+
     <a id="sa-13.0-007"/>
     <h4>13.0 007 nfs-utils  Date: 2026-03-09  Severity: Medium</h4>
     <p>In nfs-utils-2.8.6, a security vulnerability was fixed that could allow
