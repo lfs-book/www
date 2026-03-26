@@ -74,6 +74,25 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-017"/>
+    <h4>13.0 017 requests   Date: 2026-03-26  Severity: Medium</h4>
+    <p>In requests-2.33.0, a security vulnerability was fixed that could allow
+    for a local attacker with write access to /tmp to pre-create a malicious
+    file that would be loaded in place of a legitimate file. This only affects
+    the requests.utils.extract_zipped_paths() utility function, and not the
+    standard usage of the requests library. The function uses a predictable
+    filename when extracting files from ZIP archives, and if a target file
+    already exists, it was reused without validation. Only applications which
+    use the function directly are affected, and at this time we are unaware of
+    any in BLFS. However, if you have third party Python modules installed
+    which may use the requests module, you should update to this version.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25645">CVE-2026-25645</a>.</p>
+    <p>To fix this vulnerability, update to requests-2.33.0 or later using the
+    instructions from
+    <a href="../view/svn/general/python-modules.html#requests">requests (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#requests">requests (systemd)</a>.</p>
+
     <a id="sa-13.0-016"/>
     <h4>13.0 016 libpng     Date: 2026-03-26  Severity: High</h4>
     <p>In libpng-1.6.56, two security vulnerabilities were fixed that could

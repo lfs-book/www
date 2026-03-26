@@ -232,6 +232,22 @@
 
 <!-- end of nghttp2 -->
 
+    <h3>requests</h3>
+
+    <a id="sa-13.0-017"/>
+    <h4>13.0 017 requests   Date: 2026-03-26  Severity: Medium</h4>
+    <p>In requests-2.33.0, a security vulnerability was fixed that could allow
+    for a local attacker with write access to /tmp to pre-create a malicious
+    file that would be loaded in place of a legitimate file. This only affects
+    the requests.utils.extract_zipped_paths() utility function, and not the
+    standard usage of the requests library. Only applications which use this
+    function directly are impacted, and none in BLFS at the moment use it.
+    However, if you have third party modules installed which may use requests,
+    you should update to requests-2.33.0 when it is convenient to do so.
+    <a href="consolidated.html#sa-13.0-017">13.0-017</a></p>
+
+<!-- end of requests -->
+
     <h3>systemd</h3>
 
     <a id="sa-13.0-008"/>
