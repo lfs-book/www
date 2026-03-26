@@ -172,6 +172,24 @@
 
 <!-- end of libde265 -->
 
+    <h3>libpng</h3>
+
+    <a id="sa-13.0-016"/>
+    <h4>13.0 016 libpng     Date: 2026-03-26  Severity: High</h4>
+    <p>In libpng-1.6.56, two security vulnerabilities were fixed that could
+    allow for remote code execution and information disclosure. The first
+    vulnerability is in the png_set_PLTE and png_set_tRNS functions, where
+    a 100% valid PNG file can trigger a use-after-free which can leak sensitive
+    heap contents, write attacker-influenced information to freed heap memory,
+    and on systems which use glibc (like LFS systems), cause trivial remote code
+    execution when loading the PNG file in contexts such as a web browser.
+    The other vulnerability is an out-of-bounds read/write that only occurs on
+    ARM/AArch64 systems which use the Neon optimizations. All users who have
+    libpng installed are urged to update immediately.
+    <a href="consolidated.html#sa-13.0-016">13.0-016</a></p>
+
+<!-- end of libpng -->
+
     <h3>libxml2</h3>
 
     <a id="sa-13.0-005"/>

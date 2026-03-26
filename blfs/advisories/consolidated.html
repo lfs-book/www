@@ -74,6 +74,30 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-016"/>
+    <h4>13.0 016 libpng     Date: 2026-03-26  Severity: High</h4>
+    <p>In libpng-1.6.56, two security vulnerabilities were fixed that could
+    allow for remote code execution and information disclosure. The first
+    vulnerability is in the png_set_PLTE and png_set_tRNS functions, where
+    a 100% valid PNG file can trigger a use-after-free which can leak sensitive
+    heap contents, write attacker-influenced information to freed heap memory,
+    and on systems which use glibc (like LFS systems), cause trivial remote code
+    execution when loading the PNG file in contexts such as a web browser.
+    Because web browsers are expected to load untrusted PNG files during normal
+    activities, all users who have libpng installed are urged to update
+    immediately. The other vulnerability is an out-of-bounds read/write during
+    palette expansion, but only ARM/AArch64 systems which use the Neon
+    optimized expansion functions are affected, so normal LFS users are not
+    affected. If you are running LFS on an ARM or AArch64 device though, you
+    should also update immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33416">CVE-2026-33416</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33636">CVE-2026-33636</a>.</p>
+    <p>To fix these vulnerabilities, update to libpng-1.6.56 or later using the
+    instructions from
+    <a href="../view/svn/general/libpng.html">libpng (sysv)</a> or
+    <a href="../view/systemd/general/libpng.html">libpng (systemd)</a>.</p>
+
     <a id="sa-13.0-015"/>
     <h4>13.0 015 WebKitGTK  Updated: 2026-03-26  Severity: Critical</h4>
     <p>In WebKitGTK-2.52.0, eight security vulnerabilities were fixed
