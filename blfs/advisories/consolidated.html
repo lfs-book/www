@@ -74,6 +74,33 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-031"/>
+    <h4>13.0 031 FreeRDP   Date: 2026-04-01  Severity: High</h4>
+    <p>In FreeRDP-3.24.2, 9 security vulnerabilities were fixed that could
+    allow for remote code execution, undefined behavior, and denial of service
+    (application crashes and memory corruption). These vulnerabilities occur
+    in a variety of situations, including when a user connects to a system or
+    interacts with a system after connecting. This can include when receiving
+    audio from the remote system. The most significant vulnerability in this
+    bunch is an attacker-controlled 33MB heap overflow in the H.264 YUV decoder,
+    which is used when a client is connected to a Windows Server 2012 or Windows
+    8.0 or later system. Users who use FreeRDP Server or connect to untrusted
+    clients should update to FreeRDP-3.24.2 immediately.
+    These vulnerabilities have been assigned
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33952">CVE-2026-33952</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33977">CVE-2026-33977</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33955">CVE-2026-33955</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33984">CVE-2026-33984</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33983">CVE-2026-33983</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33985">CVE-2026-33985</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33986">CVE-2026-33986</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33987">CVE-2026-33987</a>, and
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-33982">CVE-2026-33982</a>.</p>
+    <p>To fix these vulnerabilities, update to FreeRDP-3.24.2 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/freerdp.html">FreeRDP (sysv)</a> or
+    <a href="../view/systemd/xsoft/freerdp.html">FreeRDP (systemd)</a>.</p>
+
     <a id="sa-13.0-030"/>
     <h4>13.0 030 Node.js   Date: 2026-04-01  Severity: High</h4>
     <p>In Node.js-24.14.1, 8 security vulnerabilities were fixed that could
