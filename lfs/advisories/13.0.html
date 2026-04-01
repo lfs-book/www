@@ -46,7 +46,6 @@
     <!\-\- End of PackageName -->
     <!-- End of template -->
 
-<!-- Commenting out special text for glibc
     <h3>Glibc</h3>
 
     <p style="font-style: italic;">Updating Glibc from an earlier version
@@ -55,13 +54,19 @@
     book section for Glibc.  Follow it strictly or you may render the
     system completely unusable.</p>
 
-    <a id="sa-12.4-079"/>
-    <h4>12.4 079 glibc (LFS)  Date: 2026-02-01  Severity: High</h4>
-    <p>In glibc-2.43, four security vulnerabilities were fixed
-    that could allow for buffer overflows, failure to save and restore
-    nonvolatile vectors, and double-free operations. Update to glibc-2.43.
-    <a href="../../blfs/advisories/consolidated.html#sa-12.4-079">12.4-079</a></p>
--->
+
+    <a id="sa-13.0-021"/>
+    <h4>13.0 021 glibc (LFS)  Date: 2026-04-01  Severity: High</h4>
+    <p>In glibc-2.43, two security vulnerabilities were discovered that could
+    allow for applications to treat invalid DNS responses as valid. These
+    issues are both classified as violations of the DNS specification, and
+    were resolved by counting the amount of records expected as well as performing
+    input validation on hostnames in DNS records. Users should rebuild glibc
+    with the sed in the development book. Note that rebuilding glibc should
+    be done with extreme caution, and the instructions for updating glibc
+    on that page should be followed strictly to prevent a broken system.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-021">13.0-021</a></p>
+
 <!-- end of Glibc -->
 
 <!--
