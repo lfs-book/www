@@ -74,6 +74,26 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-023"/>
+    <h4>13.0 023 Perl (LFS)  Date: 2026-04-01  Severity: Critical</h4>
+    <p>In Perl-5.42.2, a security vulnerability was fixed by updating the
+    bundled Compress::Raw::Zlib module that could cause several of the zlib
+    security advisories from SA-12.4-099 to be exploited, as well as numerous
+    other internal improvements to that module that fix issues with newer
+    versions of zlib. Users are recommended to update immediately as CISA has
+    rated this vulnerability as Critical.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4176">CVE-2026-4176</a>.</p>
+    <p>This follows a Compress::Raw::Zlib security vulnerability as well,
+    which has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3381">CVE-2026-3381</a>,
+    which itself fixes
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27171">CVE-2026-27171</a>.</p>
+    <p>To fix this vulnerability, update to Perl-5.42.2 or later using the
+    instructions from the development books for
+    <a href="../../lfs/view/development/chapter08/perl.html">perl (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/perl.html">perl (systemd)</a>.</p>
+
     <a id="sa-13.0-022"/>
     <h4>13.0 022 Python (LFS and BLFS)  Date: 2026-04-01  Severity: High</h4>
     <p>In Python-3.14.3, three security vulnerabilities were found that could
