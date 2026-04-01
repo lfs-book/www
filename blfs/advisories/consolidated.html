@@ -74,6 +74,28 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-020"/>
+    <h4>13.0 020 XML-Parser (LFS)  Date: 2026-04-01  Severity: Critical</h4>
+    <p>In XML-Parser-2.54, two security vulnerabilities were fixed that could
+    allow for remote code execution or denial of service (application crashes)
+    when processing crafted XML documents. The first vulnerability is an
+    off-by-one heap buffer overflow in the st_serial_stack() function, which
+    occurs if an input causes the stack to not be expanded. The issue is known
+    to be exploitable via an XML file with deep element nesting. The other issue
+    occurs in the parse_stream() function where a UTF-8 PerlIO layer can overflow
+    the XML input buffer because Perl's read() function returns decoded
+    characters, while SvPV() returns multi-byte UTF-8 bytes that can exceed the
+    pre-allocated buffer size. This causes heap corruption and crashes.
+    Users are recommended to update XML-Parser to 2.54 immediately, as these
+    issues are now known to be exploited with public proof-of-concepts available.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2006-10002">CVE-2026-10002</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2006-10003">CVE-2026-10003</a>.</p>
+    <p>To fix these vulnerabilities, update to XML-Parser-2.54 or later using
+    the instructions from
+    <a href="../../lfs/view/development/chapter08/xml-parser.html">XML-Parser (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/xml-parser.html">XML-Parser (systemd)</a>.</p>
+
     <a id="sa-13.0-019"/>
     <h4>13.0 019 Expat (LFS)  Date: 2026-04-01  Severity: Medium</h4>
     <p>In Expat-2.7.5, three security vulnerabilities were fixed that could
