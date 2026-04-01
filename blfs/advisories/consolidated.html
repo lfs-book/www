@@ -1320,7 +1320,7 @@
     <p>gstreamer-1.28.0 is ABI compatible with 1.26.x.</p>
 
     <a id="sa-12.4-079"/>
-    <h4>12.4 079 glibc (LFS)  Updated: 2026-03-06  Severity: High</h4>
+    <h4>12.4 079 glibc (LFS)  Updated: 2026-04-01  Severity: High</h4>
     <p>In glibc-2.43, three security vulnerabilities were fixed
     that could allow for heap corruption when using the memalign() function, for
     stack contents to be leaked to a DNS resolver when using getnetbyaddr() and
@@ -1346,6 +1346,11 @@
     to the instructions from
     <a href="../../lfs/view/12.4/chapter08/glibc.html">glibc in LFS 12.4 (sysv)</a> or
     <a href="../../lfs/view/12.4-systemd/chapter08/glibc.html">glibc in LFS 12.4 (systemd)</a>.</p>
+    <p><em>IF YOU UPDATE OR REBUILD GLIBC, PLEASE FOLLOW THE INSTRUCTIONS IN THAT
+    PAGE ABOUT UPDATING GLIBC VERY CAREFULLY. FAILURE TO DO SO MAY RESULT IN A
+    BROKEN SYSTEM.</em></p>
+    <p><em>Updated on 2026-04-01 to add the disclaimer regarding rebuilding or
+    updating glibc.</em></p>
 
     <a id="sa-12.4-078"/>
     <h4>12.4 078 OpenSSL (LFS)  Date: 2026-02-01  Severity: High</h4>
