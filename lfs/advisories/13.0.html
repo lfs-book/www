@@ -91,4 +91,22 @@
 
 <!-- end of systemd -->
 
+    <h3>xz</h3>
+
+    <a id="sa-13.0-018"/>
+    <h4>13.0 018 xz (LFS)   Date: 2026-04-01  Severity: Critical</h4>
+    <p>In xz-5.8.3, a security vulnerability was fixed that could allow for
+    a buffer overflow to occur in the lzma_index_append() function that could
+    possibly allow for arbitrary code execution in some rare circumstances.
+    Upstream has noted that it's very unlikely that the bug can be triggered
+    in any real-world application, but the vulnerability has been marked as
+    Critical nonetheless. The vulnerablity occurs if lzma_index_decoder()
+    was used to decode an Index that contains no Records, as the resulting
+    lzma_index was left in a state where a subsequent lzma_index_append()
+    would not allocate enough memory, and thus the buffer overflow occurs.
+    However, there typically isn't a reason to append Records to a decoded
+    lzma_index. Update to xz-5.8.3.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-018">13.0-018</a></p>
+
+<!-- end of xz -->
 <!--#include virtual="/common/footer.html" -->
