@@ -74,6 +74,79 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-026"/>
+    <h4>13.0 026 QtWebEngine  Date: 2026-04-01  Severity: Critical</h4>
+    <p>In QtWebEngine-6.11.0, 47 security vulnerabilities were fixed that could
+    allow for remote code execution, object corruption, sensitive information
+    disclosure, cross-origin data exfiltration, sandbox escapes, for malicious
+    extensions to inject scripts or HTML into privileged pages, for same-origin
+    policy bypasses, and for navigation restriction bypasses. Two of these
+    vulnerabilities are known to be actively exploited by a threat actor, and it
+    is thus recommended that you update to Qt6 and QtWebEngine 6.11.0 immediately.
+    The vulnerabilities are in the bundled version of Chromium, within the
+    V8, Background Fetch API, ANGLE, Network, WebView, libvpx, CSS, File Input,
+    DevTools, Animation, Frames, Codecs, WebGPU, Medis, PDFium, Tint, PowerVR,
+    Navigation, WebAssembly, WebAudio, Skia, Extensions, Clipboard,
+    ChromeDriver, Resource Timing, WindowDialog, WebMIDI, MediaStream,
+    PictureInPicture, and TextEncoding components.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14766">CVE-2025-14766</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1504">CVE-2026-1504</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1220">CVE-2026-1220</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0908">CVE-2026-0908</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0905">CVE-2026-0905</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0902">CVE-2026-0902</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0899">CVE-2026-0899</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0628">CVE-2026-0628</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1861">CVE-2026-1861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2441">CVE-2026-2441</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2320">CVE-2026-2320</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2319">CVE-2026-2319</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2317">CVE-2026-2317</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2316">CVE-2026-2316</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2314">CVE-2026-2314</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2315">CVE-2026-2315</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2650">CVE-2026-2650</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2649">CVE-2026-2649</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2648">CVE-2026-2648</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3063">CVE-2026-3063</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3062">CVE-2026-3062</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3061">CVE-2026-3061</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3537">CVE-2026-3537</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3545">CVE-2026-3545</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3544">CVE-2026-3544</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3543">CVE-2026-3543</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3542">CVE-2026-3542</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3541">CVE-2026-3541</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3540">CVE-2026-3540</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3539">CVE-2026-3539</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3538">CVE-2026-3538</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3536">CVE-2026-3536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3910">CVE-2026-3910</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3909">CVE-2026-3909</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3919">CVE-2026-3919</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3942">CVE-2026-3942</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3941">CVE-2026-3941</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3940">CVE-2026-3940</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3938">CVE-2026-3938</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3934">CVE-2026-3934</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3931">CVE-2026-3931</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3929">CVE-2026-3929</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3926">CVE-2026-3926</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3924">CVE-2026-3924</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3923">CVE-2026-3923</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3922">CVE-2026-3922</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3921">CVE-2026-3921</a>.</p>
+    <p>Users are advised to resolve these vulnerabilities immediately by
+    updating to Qt6-6.11.0 and QtWebEngine-6.11.0 or later, using the
+    instructions from <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd)</a> and
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+    <p>Note that while only QtWebEngine is affected by these vulnerabilities,
+    it is unsafe to update QtWebEngine to a new minor version without also
+    updating Qt6, unlike with point versions.</p>
+
     <a id="sa-13.0-025"/>
     <h4>13.0 025 vim (LFS and BLFS)  Date: 2026-04-01  Severity: Critical</h4>
     <p>In vim-9.2.0272, a security vulnerability was fixed that could allow
