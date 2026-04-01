@@ -232,6 +232,21 @@
 
 <!-- end of nghttp2 -->
 
+    <h3>Python</h3>
+
+    <a id="sa-13.0-022"/>
+    <h4>13.0 022 Python (LFS and BLFS)  Date: 2026-04-01  Severity: High</h4>
+    <p>In Python-3.14.3, three security vulnerabilities were found that could
+    allow for a denial of service (application crash), for control characters
+    to be allowed inside of HTTP cookies, and for Python to accidentally pass
+    unexpected options to web browsers. Rebuild Python with the security fixes
+    patch. BLFS 12.4 users can safely use the patch against Python 3.13 with
+    the note that a new test failure will occur due to the test depending on
+    newer testing API from Python 3.14.
+    <a href="consolidated.html#sa-13.0-022">13.0-022</a></p>
+
+<!-- end of Python -->
+`
     <h3>requests</h3>
 
     <a id="sa-13.0-017"/>
