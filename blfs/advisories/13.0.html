@@ -123,6 +123,18 @@
 
     <h3>FreeType</h3>
 
+    <a id="sa-13.0-024"/>
+    <h4>13.0 024 FreeType  Date: 2026-04-01  Severity: High</h4>
+    <p>In FreeType-2.14.3, several potential memory safety problems were
+    resolved that could allow for arbitrary code execution (stack overflows)
+    and denial of service (memory leaks and boundary problems). Upstream has
+    been rather vague on the details of these issues, and the BLFS team was
+    only able to find the exact problems by reviewing the commits for the
+    2.14.3 release. Upstream however recommends that users upgrade immediately
+    to solve these problems, so we are filing an advisory even though there is
+    not much in the way of details. Update to FreeType-2.14.3.
+    <a href="consolidated.html#sa-13.0-024">13.0-024</a></p>
+
     <a id="sa-13.0-003"/>
     <h4>13.0 003 FreeType2  Date: 2026-03-06  Severity: Medium</h4>
     <p>In FreeType-2.14.2, a security vulnerability was fixed that could allow

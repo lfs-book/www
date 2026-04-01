@@ -74,6 +74,24 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-024"/>
+    <h4>13.0 024 FreeType  Date: 2026-04-01  Severity: High</h4>
+    <p>In FreeType-2.14.3, several potential memory safety problems were
+    resolved that could allow for arbitrary code execution (stack overflows)
+    and denial of service (memory leaks and boundary problems). Upstream has
+    been rather vague on the details of these issues, and the BLFS team was
+    only able to find the exact problems by reviewing the commits for the
+    2.14.3 release. Upstream however recommends that users upgrade immediately
+    to solve these problems, so we are filing an advisory even though there is
+    not much in the way of details.</p>
+    <p>The commits for the 2.14.3 release can be found at
+    <a href="https://gitlab.freedesktop.org/freetype/freetype/-/commits/VER-2-14-3">2.14.3 Commits</a>
+    for anyone interested in reviewing them.</p>
+    <p>To fix these vulnerabilities, update to FreeType-2.14.3 or later using
+    the instructions from
+    <a href="../view/svn/general/freetype2.html">FreeType (sysv)</a> or
+    <a href="../view/systemd/general/freetype2.html">FreeType (systemd)</a>.</p>
+
     <a id="sa-13.0-023"/>
     <h4>13.0 023 Perl (LFS)  Date: 2026-04-01  Severity: Critical</h4>
     <p>In Perl-5.42.2, a security vulnerability was fixed by updating the
