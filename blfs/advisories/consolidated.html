@@ -74,6 +74,29 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-030"/>
+    <h4>13.0 030 Node.js   Date: 2026-04-01  Severity: High</h4>
+    <p>In Node.js-24.14.1, 8 security vulnerabilities were fixed that could
+    allow for permission bypasses, remotely exploitable denial of service
+    (resource exhaustion and application crashes), and potential MAC forgery.
+    These can occur in a variety of situations, including when processing HTTP
+    requests, parsing URLs, performing cryptography operations, and accessing
+    files on the system. Note that the potential MAC forgery vulnerability
+    occurs due to a timing side-channel problem.
+    These vulnerabilities have been assigned
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-21710">CVE-2026-21710</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-21637">CVE-2026-21637</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-21717">CVE-2026-21717</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-21713">CVE-2026-21713</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-21714">CVE-2026-21714</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-21712">CVE-2026-21712</a>,
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-21716">CVE-2026-21716</a>, and
+    <a href="http://nvd.nist.gov/vuln/detail/CVE-2026-21715">CVE-2026-21715</a>.</p>
+    <p>To fix these vulnerabilities, update to Node.js-24.14.1 or later using
+    the instructions from
+    <a href="../view/svn/general/nodejs.html">Node.js (sysv)</a> or
+    <a href="../view/systemd/general/nodejs.html">Node.js (systemd)</a>.</p>
+
     <a id="sa-13.0-029"/>
     <h4>13.0 029 Thunderbird  Date: 2026-04-01  Severity: High</h4>
     <p>In Thunderbird-140.9.0esr, 40 security vulnerabilities were fixed that
