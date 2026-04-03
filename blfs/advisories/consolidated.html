@@ -74,6 +74,27 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-033"/>
+    <h4>13.0 033 glib     Date: 2026-04-03  Severity: High</h4>
+    <p>In glib-2.86.5, five security vulnerabilities were fixed that could
+    allow for information disclosure or denial of service (application crashes).
+    These vulnerabilities all occur due to small out-of-bounds reads and
+    buffer over-reads in a variety of crucial functions, including the
+    g_markup_escape_text(), gvs_tuple_is_normal(), g_date_time_get_ymd(),
+    g_utf8_next_char(), and g_utf8_prev_char() functions. The components
+    affected inside glib include GVariant, GMarkup, GDateTime, and GRegex.
+    No CVEs have been assigned for these vulnerabilities, but additional details
+    can be found in the following issue reports:
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3915">glib issue #3915</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3916">glib issue #3916</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3917">glib issue #3917</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3918">glib issue #3918</a>, and
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3919">glib issue #3919</a>.</p>
+    <p>To fix these vulnerabilities, update to glib-2.86.5 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+
     <a id="sa-13.0-032"/>
     <h4>13.0 032 OpenSSH   Date: 2026-04-03  Severity: High</h4>
     <p>In OpenSSH-10.3p1, five security vulnerabilities were fixed that could
