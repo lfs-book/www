@@ -285,6 +285,25 @@
 
 <!-- end of Node.js -->
 
+    <h3>OpenSSH</h3>
+
+    <a id="sa-13.0-032"/>
+    <h4>13.0 032 OpenSSH   Date: 2026-04-03  Severity: High</h4>
+    <p>In OpenSSH-10.3p1, five security vulnerabilities were fixed that could
+    allow for inappropriate matching of the authorized_keys file in some rare
+    circumstances, for downloads from SCP to be installed SUID/SGID in some
+    situations, for unexpected command execution to occur via shell
+    metacharacters in a username, for OpenSSH to use unintended ECSDA
+    algorithms, and for OpenSSH to omit connection multiplexing confirmation
+    for proxy-mode multiplexing sessions. Most of these vulnerabilities rely on
+    non-standard configurations or specific actions to take place. If you have
+    modified the default BLFS configuration for OpenSSH, review the consolidated
+    advisory to ensure that you are not affected. If you are affected, update to
+    OpenSSH-10.3p1. There is no reason to upgrade if you are not affected.
+    <a href="consolidated.html#sa-13.0-032">13.0-032</a></p>
+
+<!-- end of OpenSSH -->
+
     <h3>Python</h3>
 
     <a id="sa-13.0-022"/>

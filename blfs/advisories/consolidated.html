@@ -74,6 +74,38 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-032"/>
+    <h4>13.0 032 OpenSSH   Date: 2026-04-03  Severity: High</h4>
+    <p>In OpenSSH-10.3p1, five security vulnerabilities were fixed that could
+    allow for inappropriate matching of the authorized_keys file in some rare
+    circumstances, for downloads from SCP to be installed SUID/SGID in some
+    situations, for unexpected command execution to occur via shell
+    metacharacters in a username, for OpenSSH to use unintended ECSDA
+    algorithms, and for OpenSSH to omit connection multiplexing confirmation
+    for proxy-mode multiplexing sessions. Most of these vulnerabilities rely on
+    non-standard configurations or specific actions to take place. The issue
+    regarding authorized_keys occurs when the authorized_keys principal option
+    is used in conjunction with a Certificate Authority that makes certain use
+    of comma characters. The SCP vulnerability relies on a user performing a
+    transfer as root with the -O option, and without the -p option. The shell
+    command injection vulnerability occurs when a non-default configuration of
+    % in ssh_config is set (and when a username on the command line is untrusted),
+    the ECSDA algorithm vulnerability relies on PubkeyAcceptedAlgorithms or
+    HostbasedAcceptedAlgorithms being set, and the proxy-mode multiplexing
+    session issue relies on the usage of that functionality. Unless you use
+    any of these specific configurations by modifying the default configuration,
+    there is no reason to upgrade.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35414">CVE-2026-35414</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35385">CVE-2026-35385</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35386">CVE-2026-35386</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35387">CVE-2026-35387</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35388">CVE-2026-35388</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSH-10.3p1 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/openssh.html">OpenSSH (sysv)</a> or
+    <a href="../view/systemd/postlfs/openssh.html">OpenSSH (systemd)</a>.</p>
+
     <a id="sa-13.0-031"/>
     <h4>13.0 031 FreeRDP   Date: 2026-04-01  Severity: High</h4>
     <p>In FreeRDP-3.24.2, 9 security vulnerabilities were fixed that could
