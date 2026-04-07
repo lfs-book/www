@@ -16,12 +16,17 @@
     <h2>Security Advisories</h2>
 
     <a id="slfs-sa-13.0-003"/>
-    <h4>slfs-sa-13.0-003: Capstone - Rating: Medium (Date: April 7th, 2026)</h4>
+    <h4>slfs-sa-13.0-003: Capstone - Rating: Critical (Date: April 7th, 2026)</h4>
+    <!-- The links here for the advisories were broken (returning 404s), so
+    I decided to look at the GitHub repo for Capstone. Out there I found working
+    links to the advisories, but additionally found CVE identifiers. I've updated
+    this advisory to use the CVE identifiers instead and bumped the rating to
+    Critical as one of the CVEs is rated such by NVD. -renodr -->
     <p>In Capstone-5.0.7, two security vulnerabilities were fixed that could
     allow for a heap buffer overflow and stack buffer overflow and underflow.
     These security vulnerabilities have been assigned
-    <a href="https://github.com/advisories/GHSA-hj6g-v545-v7jg">GHSA-hj6g-v545-v7jg</a> and
-    <a href="https://github.com/advisories/GHSA-85f5-6xr3-q76r">GHSA-85f5-6xr3-q76r</a>.
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-67873">CVE-2025-67873</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68114">CVE-2025-68114</a>.
     You can update to Capstone-5.0.7 by following the
     <a href="view/dev/general/capstone.html">Capstone
     installation page</a>.</p>
