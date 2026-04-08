@@ -327,6 +327,20 @@
 
 <!-- end of OpenSSH -->
 
+    <h3>pytest</h3>
+
+    <a id="sa-13.0-035"/>
+    <h4>13.0 035 pytest    Date: 2026-04-08  Severity: Medium</h4>
+    <p>In pytest-9.0.3, a security vulnerability was fixed that could allow for
+    a denial of service (application crash) or possibly privilege escalation.
+    This is due to an unsafe use of temporary directories, where previous versions
+    allowed all users to write to the /tmp/pytest-of-${USER} directory. Note
+    that this would only be exploitable locally per upstream, and can only be
+    exploited while a test suite is running. Update to pytest-9.0.3.
+    <a href="consolidated.html#sa-13.0-035">13.0-035</a></p>
+
+<!-- end of pytest -->
+
     <h3>Python</h3>
 
     <a id="sa-13.0-022"/>
