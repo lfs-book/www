@@ -74,6 +74,43 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-036"/>
+    <h4>13.0 036 gstreamer  Date: 2026-04-08  Severity: High</h4>
+    <p>In gst-plugins-base, gst-plugins-bad, and gst-plugins-good 1.28.2,
+    eleven security vulnerabilities were fixed that could allow for information
+    disclosure, denial of service (memory exhaustion and application crashes),
+    and arbitrary code execution. These occur in a variety of functions,
+    including the SRT/WebVTT parser, the Matroska demuxer, the WAV parser
+    when decoding CUE files, the FLV demuxer, the mDVDsub subtitle parser,
+    the MOV/MP4 demuxer, the H.266/VVC parser, the JPEG 2000 decimator, the
+    AV1 LEB128 parser, and the H.264 video parser. The issues occur due to
+    a variety of cuases, including integer overflows, heap buffer overflows,
+    assertion failures, NULL pointer dereferences, and out-of-bounds accesses.
+    The gstreamer stack is used in a variety of contexts including web browsers
+    and media players. All users who have the gstreamer stack installed are
+    advised to update the stack to 1.28.2 immediately.</p>
+    <p>Only one of these vulnerabilities currently has a CVE assigned at
+    this time. Four more of them have CVEs pending. The vulnerability
+    that has a CVE assigned has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5056">CVE-2026-5056</a>.</p>
+    <p>Additional information about these vulnerabilities can be found at the
+    gstreamer security center. The advisories relevant to this update are:
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0013.html">GStreamer-SA-2026-0013</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0014.html">GStreamer-SA-2026-0014</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0015.html">GStreamer-SA-2026-0015</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0016.html">GStreamer-SA-2026-0016</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0017.html">GStreamer-SA-2026-0017</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0018.html">GStreamer-SA-2026-0018</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0019.html">GStreamer-SA-2026-0019</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0020.html">GStreamer-SA-2026-0020</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0021.html">GStreamer-SA-2026-0021</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0022.html">GStreamer-SA-2026-0022</a>, and
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0023.html">GStreamer-SA-2026-0023</a>.</p>
+    <p>To fix these vulnerabilities, update the gstreamer stack to 1.28.2 or
+    later starting with the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/13.0-systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
     <a id="sa-13.0-035"/>
     <h4>13.0 035 pytest    Date: 2026-04-08  Severity: Medium</h4>
     <p>In pytest-9.0.3, a security vulnerability was fixed that could allow for

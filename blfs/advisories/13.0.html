@@ -211,6 +211,25 @@
 
 <!-- end of glib -->
 
+    <h3>gstreamer</h3>
+
+    <a id="sa-13.0-036"/>
+    <h4>13.0 036 gstreamer  Date: 2026-04-08  Severity: High</h4>
+    <p>In gst-plugins-base, gst-plugins-bad, and gst-plugins-good 1.28.2,
+    eleven security vulnerabilities were fixed that could allow for information
+    disclosure, denial of service (memory exhaustion and application crashes),
+    and arbitrary code execution. These occur in a variety of functions,
+    including the SRT/WebVTT parser, the Matroska demuxer, the WAV parser
+    when decoding CUE files, the FLV demuxer, the mDVDsub subtitle parser,
+    the MOV/MP4 demuxer, the H.266/VVC parser, the JPEG 2000 decimator, the
+    AV1 LEB128 parser, and the H.264 video parser. Because of the variety
+    of circumstances where gstreamer is used (including web browsers and media
+    players), all users who have it installed are advised to update the stack
+    to 1.28.2 immediately.
+    <a href="consolidated.html#sa-13.0-036">13.0-036</a></p>
+
+<!-- end of gstreamer -->
+
     <h3>libde265</h3>
 
     <a id="sa-13.0-011"/>
