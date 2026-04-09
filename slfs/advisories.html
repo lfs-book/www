@@ -15,6 +15,42 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-009"/>
+    <h4>slfs-sa-13.0-009: Mbed-TLS - Rating: Critical (Date: April 8th, 2026)</h4>
+    <p>In Mbed-TLS-3.6.6, eleven security vulnerabilities were fixed that could
+    allow for client impersonation while resuming a TLS 1.3 session, for entropy
+    on some systems to fall back to /dev/urandom (causing insufficient randomness
+    for operations), for PSA random generator cloning (causing insufficient
+    randomness), for compiler-induced constant-time violations (causing a timing
+    based side channel leakage while performing RSA and CBC/ECB decryption),
+    for arbitrary code execution when setting a distinguished name, for
+    memory corruption when exporting FFDH public keys (allowing for arbitrary
+    code execution and system instability), for signature algorithm injection,
+    for an out-of-bounds read leading to information disclosure when using the
+    CCM API due to a multipart finish tag-length validation bypass, for
+    insufficient protection of serialized session or context data (leading to
+    potential arbitrary code execution or denial of service), and for a
+    buffer underread when using the x509_inet_pton_ipv6() function. The
+    overall impacts are denial of service (application crashes and system
+    instability), arbitrary code execution, information disclosure, and
+    insufficient randomness when performing a variety of operations using
+    Mbed-TLS. All users who have Mbed-TLS installed are recommended to update
+    immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34873">CVE-2026-34873</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34871">CVE-2026-34871</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25835">CVE-2026-25835</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66442">CVE-2025-66442</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34874">CVE-2026-34874</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34875">CVE-2026-34875</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34872">CVE-2026-34872</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25834">CVE-2026-25834</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34876">CVE-2026-34876</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34877">CVE-2026-34877</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25833">CVE-2026-25833</a>.</p>
+    <p>To fix these vulnerabilities, update to Mbed-TLS-3.6.6 by following the
+    <a href="view/general/mbedtls.html">Mbed-TLS installation page</a>.</p>
+
     <a id="slfs-sa-13.0-008"/>
     <h4>slfs-sa-13.0-008: libdatachannel - Rating: Medium (Date: April 8th, 2026)</h4>
     <p>In libdatachannel-0.24.2, a security vulnerability was fixed that could
