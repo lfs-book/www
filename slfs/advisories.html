@@ -15,6 +15,22 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-008"/>
+    <h4>slfs-sa-13.0-008: libdatachannel - Rating: Medium (Date: April 8th, 2026)</h4>
+    <p>In libdatachannel-0.24.2, a security vulnerability was fixed that could
+    allow for denial of service (application crashes) and potentially arbitrary
+    code execution when processing RTP and RTCP packets. These issues were
+    caused by a lack of size checks on untrusted input. The only place where
+    this package is used in SLFS is OBS Studio, so users who have OBS Studio
+    should update if they are regularly using OBS Studio to stream. Note that
+    users who only use OBS Studio for recording are not affected.
+    No CVE has been assigned for this vulnerability, but additional details
+    can be found at the
+    <a href="https://github.com/paullouisageneau/libdatachannel/pull/1531">upstream pull request</a>.</p>
+    <p>To fix this vulnerability, update to libdatachannel-0.24.2 by following
+    the <a href="view/general/libdatachannel.html">libdatachannel installation
+    page</a>.</p>
+
     <a id="slfs-sa-13.0-007"/>
     <h4>slfs-sa-13.0-007: Go - Rating: High (Date: April 8th, 2026)</h4>
     <p>In Go-1.26.2, ten security vulnerabilities were fixed that could allow
