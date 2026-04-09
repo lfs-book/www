@@ -15,6 +15,41 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-007"/>
+    <h4>slfs-sa-13.0-007: Go - Rating: High (Date: April 8th, 2026)</h4>
+    <p>In Go-1.26.2, ten security vulnerabilities were fixed that could allow
+    for the Root.Chmod function to follow symlinks on the target of a symlink
+    even when the target lies outside of the root, for JavaScript template
+    literal contexts to be incorrectly tracked, for excluded DNS contraints
+    in certificates to not be properly applied to wildcard domains, for
+    no-op interface conversions to bypass overlap checking, for possible
+    memory corruption after boundary check elimination, for unbounded
+    allocation when parsing old format GNU sparse maps in tarballs, for
+    multiple key update handshake messages to cause connection deadlocks,
+    for a trust layer bypass when using cgo and SWIG together, for
+    unexpected work during chain building (leading to a denial of service),
+    and for inefficient certificate policy validation leading to a denial of
+    service. These vulnerabilities occur in a variety of Go components,
+    including crypto/x509, cmd/go, crypto/tls, archive/tar, cmd/compile,
+    html/template, and os.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32282">CVE-2026-32282</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32282">CVE-2026-32289</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33810">CVE-2026-33810</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27144">CVE-2026-27144</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27143">CVE-2026-27143</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32288">CVE-2026-32288</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32283">CVE-2026-32283</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27140">CVE-2026-27140</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32280">CVE-2026-32280</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32281">CVE-2026-32281</a>.</p>
+    <p>To fix these vulnerabilities, update to Go-1.26.2 by following the
+    <a href="view/general/go.html">Go installation page</a>.</p>
+    <p>Note that after you reinstall Go, you must reinstall any packages that
+    use it. This is because the Go standard library is statically linked into
+    every program that you compile with it, and thus just updating the compiler
+    isn't enough to resolve most issues.</p>
+
     <a id="slfs-sa-13.0-006"/>
     <h4>slfs-sa-13.0-006: Flatpak - Rating: Critical (Date: April 8th, 2026)</h4>
     <p>In Flatpak-1.16.5, four security vulnerabilities were fixed that could
