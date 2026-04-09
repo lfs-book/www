@@ -15,6 +15,25 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-006"/>
+    <h4>slfs-sa-13.0-006: Flatpak - Rating: Critical (Date: April 8th, 2026)</h4>
+    <p>In Flatpak-1.16.5, four security vulnerabilities were fixed that could
+    allow for a complete and total sandbox escape, for arbitrary file deletion
+    on the host filesystem, for arbitrary read access to files in the
+    system-helper context, and for orphaning cross-user pull operations. The
+    sandbox escape vulnerability has been rated as Critical. The arbitrary file
+    deletion vulnerability has <em>NO</em> restriction, and every Flatpak app
+    can delete files on the host system. This update is urgent, and all users
+    who have Flatpak installed need to update to this version
+    <em>IMMEDIATELY</em> to protect their system and their data.
+    These vulnerabilities have been assigned
+    <a href="https://github.com/flatpak/flatpak/security/advisories/GHSA-cc2q-qc34-jprg">CVE-2026-34078</a>,
+    <a href="https://github.com/flatpak/flatpak/security/advisories/GHSA-p29x-r292-46pp">CVE-2026-34079</a>,
+    <a href="https://github.com/flatpak/flatpak/security/advisories/GHSA-2fxp-43j9-pwvc">GHSA-2fxp-43j9-pwvc</a>, and
+    <a href="https://github.com/flatpak/flatpak/security/advisories/GHSA-89xm-3m96-w3jg">GHSA-89xm-3m96-w3jg</a>.</p>
+    <p>To fix these vulnerabilities, update to Flatpak-1.16.5 by following the
+    <a href="view/general/flatpak.html">Flatpak installation page</a>.</p>
+
     <a id="slfs-sa-13.0-005"/>
     <h4>slfs-sa-13.0-005: NGINX - Rating: Medium (Date: April 8th, 2026)</h4>
     <p>In NGINX-1.29.8, a security vulnerability was fixed in the
