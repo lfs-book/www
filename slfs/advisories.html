@@ -15,6 +15,19 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-005"/>
+    <h4>slfs-sa-13.0-005: NGINX - Rating: Medium (Date: April 8th, 2026)</h4>
+    <p>In NGINX-1.29.8, a security vulnerability was fixed in the
+    ngx_http_upstream_copy_content_type() function that could allow for an
+    integer underflow while processing character sets. This is classified as
+    an out-of-bounds memory access vulnerability. This can cause a denial of
+    service (application crash) or possibly information disclosure.
+    This vulnerability has not been assigned a CVE, but additional information
+    about it can be found at
+    <a href="https://github.com/nginx/nginx/pull/1170">the upstream pull request</a>.</p>
+    <p>To fix this vulnerability, update to NGINX-1.29.8 by following the
+    <a href="view/dev/servers/nginx.html">NGINX installation page</a>.</p>
+
     <a id="slfs-sa-13.0-004"/>
     <h4>slfs-sa-13.0-004: NGINX - Rating: High (Date: April 7th, 2026)</h4>
     <p>In NGINX-1.29.7, six security vulnerabilities were fixed that could
