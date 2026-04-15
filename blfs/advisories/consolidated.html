@@ -74,6 +74,34 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+
+    <a id="sa-13.0-039"/>
+    <h4>13.0 039 OpenSSL (LFS)   Date: 2026-04-15  Severity: Medium</h4>
+    <p>In OpenSSL-3.6.2, seven security vulnerabilities were fixed that could
+    allow for contents of uninitialized memory to be sent to a malicious peer,
+    for denial of service (application crashes), and arbitrary code execution.
+    These occur in a variety of contexts in OpenSSL, including when applications
+    use RSASVE key encapsulation to establish a secret encryption key, when
+    applications use AES-CFB128 encryption or decryption on systems that
+    support the AVX-512 instruction set, when clients are configured to perform
+    DANE TLSA-based server authentication, when processing a delta CRL,
+    when processing CMS EnvelopedData messages with KeyAgreeRecipientInfo, when
+    processing CMS EnvelopedData messages with KeyTransportRecipientInfo, and
+    when performing hexadecimal strings on 32-bit platforms.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31790">CVE-2026-31790</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28386">CVE-2026-28386</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28387">CVE-2026-28387</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28388">CVE-2026-28388</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28389">CVE-2026-28389</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28390">CVE-2026-28390</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31789">CVE-2026-31789</a>.</p>
+    <p>To fix these vulnerabilities, update to OpenSSL-3.6.2 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
+    <p><em>LFS 12.4 USERS SHOULD USE OPENSSL-3.5.6 INSTEAD.</em></p>
+
     <a id="sa-13.0-038"/>
     <h4>13.0 038 Python (LFS and BLFS)  Date: 2026-04-15  Severity: Critical</h4>
     <p>In Python-3.14.4 (and 3.13.13), four security vulnerabilities were
