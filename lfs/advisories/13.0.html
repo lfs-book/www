@@ -112,6 +112,26 @@
 
     <h3>Python</h3>
 
+    <a id="sa-13.0-038"/>
+    <h4>13.0 038 Python (LFS and BLFS)  Date: 2026-04-15  Severity: Critical</h4>
+    <p>In Python-3.14.4 (and 3.13.13), four security vulnerabilities were
+    fixed. After release though, an additional four were resolved. These
+    vulnerabilities can allow for a variety of impacts, including denial
+    of service (application crashes), allowing data to be accepted by the base64
+    module that should've been processed differently, for input validation bypasses
+    when working with cookies in http.Cookies.Morsel (allowing injection of
+    control characters into cookies), for legacy *.pyc files to be incorrectly
+    handled (leading to unintentional behavior at runtime for various programs),
+    for arbitrary code execution when processing LZMA, BZ2, or GZIP compressed
+    files in Python, for CR/LF bytes to not be rejected by HTTP client proxy
+    tunnel headers, for commands to be injected into the underlying shell when
+    a Python script opens a web browser, and for memory corruption to occur
+    when using the remote debugging feature in Python 3.14 and later.
+    Update to Python-3.14.4 with the security fixes patch. BLFS 12.4 users
+    can safely use 3.13.13 with the patch but will need to skip a missing file
+    during the patch process.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-038">13.0-038</a></p>
+
     <a id="sa-13.0-022"/>
     <h4>13.0 022 Python (LFS and BLFS)  Date: 2026-04-01  Severity: High</h4>
     <p>In Python-3.14.3, three security vulnerabilities were found that could

@@ -74,6 +74,42 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-038"/>
+    <h4>13.0 038 Python (LFS and BLFS)  Date: 2026-04-15  Severity: Critical</h4>
+    <p>In Python-3.14.4 (and 3.13.13), four security vulnerabilities were
+    fixed. After release though, an additional four were resolved. These
+    vulnerabilities can allow for a variety of impacts, including denial
+    of service (application crashes), allowing data to be accepted by the base64
+    module that should've been processed differently, for input validation bypasses
+    when working with cookies in http.Cookies.Morsel (allowing injection of
+    control characters into cookies), for legacy *.pyc files to be incorrectly
+    handled (leading to unintentional behavior at runtime for various programs),
+    for arbitrary code execution when processing LZMA, BZ2, or GZIP compressed
+    files in Python, for CR/LF bytes to not be rejected by HTTP client proxy
+    tunnel headers, for commands to be injected into the underlying shell when
+    a Python script opens a web browser, and for memory corruption to occur
+    when using the remote debugging feature in Python 3.14 and later.
+    The vulnerabilities occur in a variety of built in modules, and users
+    are recommended to update as soon as possible due to the fact that two
+    of these vulnerabilities are due to incorrect fixes for previous issues.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4224">CVE-2026-4224</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3644">CVE-2026-3644</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2297">CVE-2026-2297</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3446">CVE-2026-3446</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6100">CVE-2026-3100</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1502">CVE-2026-1502</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4786">CVE-2026-4786</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5713">CVE-2026-5713</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.14.4 with the patch
+    using the instructions from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <p><em>LFS/BLFS 12.4 USERS CAN UPDATE TO PYTHON 3.13.13 TO PROTECT THEMSELVES
+    FROM THESE ISSUES. THE PATCH WILL WORK AGAINST PYTHON 3.13 WITH THE EXCEPTION
+    OF A FILE THAT DOESN'T EXIST AS THE REMOTE DEBUGGING MODULE WAS NOT INTRODUCED
+    UNTIL PYTHON 3.14.</em></p>
+
     <a id="sa-13.0-037"/>
     <h4>13.0 037 vim (LFS and BLFS)  Date: 2026-04-15  Severity: High</h4>
     <p>In vim-9.2.0340, two security vulnerabilities were fixed that
