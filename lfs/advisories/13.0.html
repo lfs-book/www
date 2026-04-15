@@ -139,6 +139,17 @@
 
     <h3>vim</h3>
 
+    <a id="sa-13.0-037"/>
+    <h4>13.0 037 vim (LFS and BLFS)  Date: 2026-04-15  Severity: High</h4>
+    <p>In vim-9.2.0340, two security vulnerabilities were fixed that
+    could allow for operating system command injection (resulting from a
+    sandbox escape in the modeline functionality), and for path traversal
+    issues when modifying the contents of Zip archives to cause vim
+    to overwrite files on the underlying system rather than the intended
+    contents of the Zip archive. All users are urged to update to vim-9.2.0340
+    immediately due to the risk of arbitrary command execution.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-037">13.0-037</a></p>
+
     <a id="sa-13.0-025"/>
     <h4>13.0 025 vim (LFS and BLFS)  Date: 2026-04-01  Severity: Critical</h4>
     <p>In vim-9.2.0272, a security vulnerability was fixed that could allow

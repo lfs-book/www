@@ -74,6 +74,27 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-037"/>
+    <h4>13.0 037 vim (LFS and BLFS)  Date: 2026-04-15  Severity: High</h4>
+    <p>In vim-9.2.0340, two security vulnerabilities were fixed that
+    could allow for operating system command injection (resulting from a
+    sandbox escape in the modeline functionality), and for path traversal
+    issues when modifying the contents of Zip archives to cause vim
+    to overwrite files on the underlying system rather than the intended
+    contents of the Zip archive. While the Zip vulnerability isn't as impactful
+    to users unless they explicitly are modifying the contents of a Zip
+    file using vim, the modeline bypass vulnerability is extremely impactful
+    to LFS users as it simply involves viewing an affected file to achieve
+    arbitrary command execution with the privileges of the user running vim.
+    All users who have vim installed are urged to upgrade immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34982">CVE-2026-34982</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35177">CVE-2026-35177</a>.</p>
+    <p>To fix this vulnerability, update to vim-9.2.0340 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
     <a id="sa-13.0-036"/>
     <h4>13.0 036 gstreamer  Date: 2026-04-08  Severity: High</h4>
     <p>In gst-plugins-base, gst-plugins-bad, and gst-plugins-good 1.28.2,
