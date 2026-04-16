@@ -74,6 +74,21 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-042"/>
+    <h4>13.0 042 xdg-dbus-proxy  Date: 2026-04-15  Severity: High</h4>
+    <p>In xdg-dbus-proxy-0.1.7, a security vulnerability was fixed that could
+    allow for D-Bus clients to intercept messages that they should not have
+    access to. It was fixed by adjusting the policy parser to be able to handle
+    settings with quotation marks and other cases. In BLFS, the only known
+    package to use xdg-dbus-proxy is WebKitGTK. Still though, users who have
+    this package installed should consider updating as soon as practical.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34080">CVE-2026-34080</a>.</p>
+    <p>To fix this vulnerability, update to xdg-dbus-proxy-0.1.7 or later
+    using the instructions from
+    <a href="../view/svn/general/xdg-dbus-proxy.html">xdg-dbus-proxy (sysv)</a> or
+    <a href="../view/systemd/general/xdg-dbus-proxy.html">xdg-dbus-proxy (systemd)</a>.</p>
+
     <a id="sa-13.0-041"/>
     <h4>13.0 041 Util-Linux (LFS)  Date: 2026-04-15  Severity: Medium</h4>
     <p>In Util-Linux-2.42, two security vulnerabilities were fixed that could
@@ -91,7 +106,7 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
     wasn't assigned a CVE.
     However, the mount symlink attack has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27456">CVE-2026-27456</a>.</p>
-    <p>To fix this vulnerability, update to Util-Linux-2.42 or later using the
+    <p>To fix these vulnerabilities, update to Util-Linux-2.42 or later using the
     instructions from
     <a href="../../lfs/view/development/chapter08/util-linux.html">Util-Linux (sysv)</a> or
     <a href="../../lfs/view/systemd/chapter08/util-linux.html">Util-Linux (systemd)</a>.</p>

@@ -528,4 +528,17 @@
     <a href="consolidated.html#sa-13.0-006">13.0-006</a></p>
 
 <!-- end of Wireshark -->
+
+    <h3>xdg-dbus-proxy</h3>
+
+    <a id="sa-13.0-042"/>
+    <h4>13.0 042 xdg-dbus-proxy  Date: 2026-04-15  Severity: High</h4>
+    <p>In xdg-dbus-proxy-0.1.7, a security vulnerability was fixed that could
+    allow for D-Bus clients to intercept messages that they should not have
+    access to. It was fixed by adjusting the policy parser to be able to handle
+    settings with quotation marks and other cases. In BLFS, the only known
+    package to use xdg-dbus-proxy is WebKitGTK. Update to xdg-dbus-proxy-0.1.7.
+    <a href="consolidated.html#sa-13.0-042">13.0-042</a></p>
+
+<!-- end of xdg-dbus-proxy -->
 <!--#include virtual="/common/footer.html" -->
