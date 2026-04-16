@@ -96,6 +96,19 @@
 
 <!-- end of Expat -->
 
+    <h3>libcap</h3>
+
+    <a id="sa-13.0-040"/>
+    <h4>13.0 040 libcap (LFS)  Date: 2026-04-15  Severity: Medium</h4>
+    <p>In libcap-2.78, a security vulnerability was fixed that could allow for
+    a local unprivileged user with write access to a directory to redirect
+    file capability updates to an attacker-controlled file. Doing so can cause
+    capabilities to be injected into (or stripped) from unintended executables,
+    which leads to privilege escalation. Update to libcap-2.78.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-040">13.0-040</a></p>
+
+<!-- end of libcap -->
+
     <h3>OpenSSL</h3>
 
     <a id="sa-13.0-039"/>

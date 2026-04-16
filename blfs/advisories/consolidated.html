@@ -74,6 +74,20 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-040"/>
+    <h4>13.0 040 libcap (LFS)  Date: 2026-04-15  Severity: Medium</h4>
+    <p>In libcap-2.78, a security vulnerability was fixed that could allow for
+    a local unprivileged user with write access to a directory to redirect
+    file capability updates to an attacker-controlled file. Doing so can cause
+    capabilities to be injected into (or stripped) from unintended executables,
+    which leads to privilege escalation. This occurs due to a TOCTOU (Time Of
+    Check To Time Of Use) race condition.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4878">CVE-2026-4878</a>.</p>
+    <p>To fix this vulnerability, update to libcap-2.78 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/libcap.html">libcap (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/libcap.html">libcap (systemd)</a>.</p>
 
     <a id="sa-13.0-039"/>
     <h4>13.0 039 OpenSSL (LFS)   Date: 2026-04-15  Severity: Medium</h4>
