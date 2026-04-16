@@ -541,4 +541,20 @@
     <a href="consolidated.html#sa-13.0-042">13.0-042</a></p>
 
 <!-- end of xdg-dbus-proxy -->
+
+    <h3>xdg-desktop-portal</h3>
+
+    <a id="sa-13.0-043"/>
+    <h4>13.0 043 xdg-desktop-portal  Date: 2026-04-15  Severity: Medium</h4>
+    <p>In xdg-desktop-portal-1.20.4, a security vulnerability was fixed that
+    could allow for an application which uses the Trash portal to delete any
+    arbitrary file off of the host that it has permissions to access. This is
+    identical to the recent Flatpak security vulnerability relating to this,
+    but affects any program that uses the Trash portal - not just in a Flatpak
+    context. In BLFS, this primarily includes file managers and some web
+    browsers, but could affect other programs as well depending on whether
+    they routinely create or delete files. Update to xdg-desktop-portal-1.20.4.
+    <a href="consolidated.html#sa-13.0-043">13.0-043</a></p>
+
+<!-- end of xdg-desktop-portal -->
 <!--#include virtual="/common/footer.html" -->

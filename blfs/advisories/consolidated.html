@@ -74,6 +74,30 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-043"/>
+    <h4>13.0 043 xdg-desktop-portal  Date: 2026-04-15  Severity: Medium</h4>
+    <p>In xdg-desktop-portal-1.20.4, a security vulnerability was fixed that
+    could allow for an application which uses the Trash portal to delete any
+    arbitrary file off of the host that it has permissions to access. This is
+    identical to the recent Flatpak security vulnerability relating to this,
+    but affects any program that uses the Trash portal - not just in a Flatpak
+    context. In BLFS, this primarily includes file managers and some web
+    browsers, but could affect other programs as well depending on whether
+    they routinely create or delete files. The vulnerability occurs due to a
+    TOCTOU race condition which can bypass symlink redirections, since the
+    portal uses g_file_trash() on a path which can traverse a client controlled
+    directory tree. Users who use Nautilus, Dolphin, Epiphany, or other
+    programs which are known to use portals, should especially consider
+    updating this package.
+    This vulnerability hasn't been assigned a CVE, but additional details
+    can be found at
+    <a href="https://github.com/flatpak/xdg-desktop-portal/security/advisories/GHSA-rqr9-jwwf-wxgj">
+    The upstream GitHub advisory</a>.</p>
+    <p>To fix this vulnerability, update to xdg-desktop-portal-1.20.4 or later
+    using the instructions from
+    <a href="../view/svn/x/xdg-desktop-portal.html">xdg-desktop-portal (sysv)</a> or
+    <a href="../view/systemd/x/xdg-desktop-portal.html">xdg-desktop-portal (systemd)</a>.</p>
+
     <a id="sa-13.0-042"/>
     <h4>13.0 042 xdg-dbus-proxy  Date: 2026-04-15  Severity: High</h4>
     <p>In xdg-dbus-proxy-0.1.7, a security vulnerability was fixed that could
