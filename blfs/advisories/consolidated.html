@@ -74,6 +74,29 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-044"/>
+    <h4>13.0 044 libexif  Date: 2026-04-15  Severity: High</h4>
+    <p>In libexif-0.6.26, three security vulnerabilities were fixed that could
+    allow for arbitrary code execution, denial of service (application
+    crashes), and information disclosure. The first vulnerability occurs
+    when processing Fuji and Olympus makernotes because of an unsigned integer
+    underflow, leading to denial of service and possibly information disclosure.
+    The second vulnerability is caused by an unsigned integer overflow when
+    processing Nikon makernotes, but note that only <em>32-bit systems</em>
+    are affected by the vulnerability. It also allows for denial of service
+    and information disclosure. The third vulnerability occurs when processing
+    generic makenotes, and is classified as a buffer overwrite due to an
+    integer underflow. This is the one that leads to arbitrary code execution.
+    All users who process untrusted images or EXIF metadata should update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40386">CVE-2026-40386</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40385">CVE-2026-40385</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32775">CVE-2026-32775</a>.</p>
+    <p>To fix these vulnerabilities, update to libexif-0.6.26 or later using
+    the instructions from
+    <a href="../view/svn/general/libexif.html">libexif (sysv)</a> or
+    <a href="../view/systemd/general/libexif.html">libexif (systemd)</a>.</p>
+
     <a id="sa-13.0-043"/>
     <h4>13.0 043 xdg-desktop-portal  Date: 2026-04-15  Severity: Medium</h4>
     <p>In xdg-desktop-portal-1.20.4, a security vulnerability was fixed that
