@@ -282,6 +282,19 @@
 
     <h3>libpng</h3>
 
+    <a id="sa-13.0-047"/>
+    <h4>13.0 047 libpng   Date: 2026-04-15  Severity: Medium</h4>
+    <p>In libpng-1.6.57, a security vulnerability was fixed that could allow for
+    a denial of service (application crash) or possibly heap information 
+    disclosure. This can occur with valid PNG files conforming to the PNG
+    specification, as any image that contains an affected chunk can trigger
+    the vulnerability. However, it is rated as Medium because only applications
+    that utilize the png_set_PLTE, png_set_tRNS, and png_set_hIST functions
+    are affected and only if they pass a pointer on an identical struct pair.
+    Most users should still consider upgrading though because this issue occurs
+    with valid PNG files. Update to libpng-1.6.57.
+    <a href="consolidated.html#sa-13.0-047">13.0-047</a></p>
+
     <a id="sa-13.0-016"/>
     <h4>13.0 016 libpng     Date: 2026-03-26  Severity: High</h4>
     <p>In libpng-1.6.56, two security vulnerabilities were fixed that could
