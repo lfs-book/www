@@ -189,6 +189,20 @@
 
 <!-- end of systemd -->
 
+    <h3>Util-Linux</h3>
+
+    <a id="sa-13.0-041"/>
+    <h4>13.0 041 Util-Linux (LFS)  Date: 2026-04-15  Severity: Medium</h4>
+    <p>In Util-Linux-2.42, two security vulnerabilities were fixed that could
+    allow for unauthorized read access to root protected files and block
+    devices, and for crashes when using udisks and other programs that use
+    the libblkid library. The unauthorized read vulnerability occurs when
+    using the 'mount' command due to a TOCTOU symlink attack via a loop device.
+    Note that in order to be affected, non-root users must be able to mount
+    loop devices. Update to Util-Linux-2.42.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-041">13.0-041</a></p>
+
+<!-- end of Util-Linux -->
 
     <h3>vim</h3>
 
