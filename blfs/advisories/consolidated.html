@@ -9134,7 +9134,7 @@ echo "ALTER DATABASE template0 with ALLOW_CONNECTIONS false;" | (su - postgres -
 echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS true;" | (su - postgres -c '/usr/bin/psql template1')
 echo "\i /usr/share/postgresql/fix-CVE-2024-4317.sql" | (su - postgres -c '/usr/bin/psql template1')
 echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -c '/usr/bin/psql template1')</pre>
-
+-->
     <a id="sa-12.1-047"/>
     <h4>12.1 047 QtWebEngine        Date: 2024-05-24  Severity: Critical</h4>
     <p>In QtWebEngine-6.7.1, seventeen security vulnerabilities were fixed that
@@ -9247,7 +9247,7 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-33870">CVE-2024-33870</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-33871">CVE-2024-33871</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-29510">CVE-2024-29510</a>.</p>
--->
+
     <!-- Change to NVD once it's no longer reserved -->
     <p>To fix these vulnerabilities, update to ghostscript-10.03.1 or later
     using the instructions from
