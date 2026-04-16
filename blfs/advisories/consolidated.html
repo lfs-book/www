@@ -9127,7 +9127,7 @@
     database created in the book, so you will need to change the name for any
     new databases that you have created. Run the following commands as the
     root user.</p>
-<!--
+<!-- xxxxxxx -->
 <pre>echo "\i /usr/share/postgresql/fix-CVE-2024-4317.sql" | (su - postgres -c '/usr/bin/psql test')
 echo "ALTER DATABASE template0 WITH ALLOW_CONNECTIONS true;" | (su - postgres -c '/usr/bin/psql template0')
 echo "\i /usr/share/postgresql/fix-CVE-2024-4317.sql" | (su - postgres -c '/usr/bin/psql template0')
@@ -9135,7 +9135,7 @@ echo "ALTER DATABASE template0 with ALLOW_CONNECTIONS false;" | (su - postgres -
 echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS true;" | (su - postgres -c '/usr/bin/psql template1')
 echo "\i /usr/share/postgresql/fix-CVE-2024-4317.sql" | (su - postgres -c '/usr/bin/psql template1')
 echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -c '/usr/bin/psql template1')</pre>
--->
+
     <a id="sa-12.1-047"/>
     <h4>12.1 047 QtWebEngine        Date: 2024-05-24  Severity: Critical</h4>
     <p>In QtWebEngine-6.7.1, seventeen security vulnerabilities were fixed that
