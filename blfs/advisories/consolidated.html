@@ -74,6 +74,35 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-048"/>
+    <h4>13.0 048 Xorg-Server  Date: 2026-04-15  Severity: High</h4>
+    <p>In Xorg-Server-21.1.22, five security vulnerabilities were fixed that
+    could allow for arbitrary code execution or denial of service (Xorg
+    crashes). These vulnerabilities occur in the XKB and XSYNC extensions.
+    The first vulnerability is an integer underflow in the XkbSetCompatMap()
+    function in the XKB extension, while the second is an out of bounds read
+    in the CheckSetGeom() function (also in the XKB extension). The next
+    vulnerability occurs in the XSYNC extension's miSyncTriggerFence() function,
+    and is classified as a use after free. The next issue is an out of bounds
+    read in the CheckModifierMap() function in the XKB extension, and the final
+    issue is a buffer overflow in the CheckKeyTypes() function in the XKB
+    extension. Note that these vulnerabilities change from arbitrary code
+    execution vulnerabilities to remote code execution issues if you are using
+    SSH X Forwarding or TigerVNC.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33999">CVE-2026-33999</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000">CVE-2026-34000</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34001">CVE-2026-34001</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002">CVE-2026-34002</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34003">CVE-2026-34003</a>.</p>
+    <p>To fix these vulnerabilities, update to Xorg-Server-21.1.22 or later
+    using the instructions from
+    <a href="../view/svn/x/xorg-server.html">Xorg-Server (sysv)</a> or
+    <a href="../view/systemd/x/xorg-server.html">Xorg-Server (systemd)</a>.</p>
+    <p><em>NOTICE TO TIGERVNC USERS:</em> If you have the TigerVNC server
+    configured, you should rebuild TigerVNC with Xorg-Server-21.1.22 or later
+    to protect your systems against these vulnerabilities as well.</p>
+
     <a id="sa-13.0-047"/>
     <h4>13.0 047 libpng   Date: 2026-04-15  Severity: Medium</h4>
     <p>In libpng-1.6.57, a security vulnerability was fixed that could allow for

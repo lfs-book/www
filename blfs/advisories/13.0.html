@@ -613,4 +613,24 @@
     <a href="consolidated.html#sa-13.0-043">13.0-043</a></p>
 
 <!-- end of xdg-desktop-portal -->
+
+    <h3>Xorg-Server</h3>
+
+    <a id="sa-13.0-048"/>
+    <h4>13.0 048 Xorg-Server  Date: 2026-04-15  Severity: High</h4>
+    <p>In Xorg-Server-21.1.22, five security vulnerabilities were fixed that
+    could allow for arbitrary code execution or denial of service (Xorg
+    crashes). These vulnerabilities occur in the XKB and XSYNC extensions.
+    The first vulnerability is an integer underflow in the XkbSetCompatMap()
+    function in the XKB extension, while the second is an out of bounds read
+    in the CheckSetGeom() function (also in the XKB extension). The next
+    vulnerability occurs in the XSYNC extension's miSyncTriggerFence() function,
+    and is classified as a use after free. The next issue is an out of bounds
+    read in the CheckModifierMap() function in the XKB extension, and the final
+    issue is a buffer overflow in the CheckKeyTypes() function in the XKB
+    extension. Update to Xorg-Server-21.1.22, and rebuild TigerVNC against
+    21.1.22 if it is installed.
+    <a href="consolidated.html#sa-13.0-048">13.0-048</a></p>
+
+<!-- end of Xorg-Server -->
 <!--#include virtual="/common/footer.html" -->
