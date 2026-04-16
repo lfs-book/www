@@ -74,6 +74,25 @@ u<!--#set var="pageTitle" value="LFS and BLFS consolidated list of security advi
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-046"/>
+    <h4>13.0 046 libarchive  Date: 2026-04-15  Severity: High</h4>
+    <p>In libarchive-3.8.7, seven security vulnerabilities were fixed that could
+    allow for denial of service (application crashes and memory exhaustion) as
+    well as arbitrary code execution. These vulnerabilities occur in the CAB,
+    CPIO, and ISO9660 formats, as well as in the 'untar' contrib script (which
+    is not installed by default and is sample code). If you use libarchive to
+    process ISO9660 formats (e.g. ISOs), CAB files, or for processing CPIO
+    formatted files, you should consider updating. There isn't much reason for
+    users who don't process those formats to update.
+    There are no CVEs assigned for these issues, but a full list of them
+    can be found at the
+    <a href="https://github.com/libarchive/libarchive/releases/tag/v3.8.7">libarchive 3.8.7
+    release notes</a>.</p>
+    <p>To fix these vulnerabilities, update to libarchive-3.8.7 or later using
+    the instructions from
+    <a href="../view/svn/general/libarchive.html">libarchive (sysv)</a> or
+    <a href="../view/systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
+
     <a id="sa-13.0-045"/>
     <h4>13.0 045 libraw   Date: 2026-04-15  Severity: Critical</h4>
     <p>In libraw-0.22.1, eight security vulnerabilities were fixed that could
