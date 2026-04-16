@@ -2,6 +2,7 @@
 <!--#include virtual="/blfs/header.html" -->
 <!-- try an LFS *and* BLFS menu at the side -->
 <!--#include virtual="/blfs/menuboth.html" -->
+<!--include virtual="/blfs/menu.html" -->
 <!-- perhaps review lfs/menu.html and blfs/menu.html to provide a custom menu
     for this page which covers both ?  -->
     <div class="main">
@@ -876,10 +877,8 @@
     recommended to apply the sed to their systems, as well as the security patch
     from SA-12.4-079, and rebuild glibc. The sed has been tested against glibc-2.42
     by one of the editors.</em></p>
-
     <!-- Tested against glibc-2.42 as part of my continuing support for security
     updates for LFS 12.4 systems. -renodr -->
-
     <p><em>IF YOU UPDATE OR REBUILD GLIBC, PLEASE FOLLOW THE INSTRUCTIONS IN THAT
     PAGE ABOUT UPDATING GLIBC VERY CAREFULLY. FAILURE TO DO SO MAY RESULT IN A
     BROKEN SYSTEM.</em></p>
@@ -953,11 +952,9 @@
     lzma_index.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34743">CVE-2026-34743</a>.</p>
-
     <!-- CVE details for the "Critical" rating found from Slackware and Tenable
     at https://www.tenable.com/cve/CVE-2026-34743 and
     http://www.slackware.com/security/viewer.php?l=slackware-security&y=2026&m=slackware-security.345460 -->
-
     <p>To fix this vulnerability, update to xz-5.8.3 or later using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/xz.html">xz (sysv)</a> or
@@ -3534,7 +3531,6 @@
     the instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/openssl.html">OpenSSL (sysv)</a> or
     <a href="../../lfs/view/13.0-systemd/chapter08/openssl.html">OpenSSL (systemd)</a>.</p>
-
 <!-- <p>If you upgrade to OpenSSL-3.5.4 on a BLFS 12.4 system, you must rebuild
     OpenSSH due to a bug in the version of OpenSSL that LFS 12.4 shipped with
     that causes OpenSSH to think that it was built against a pre-release version
@@ -4469,9 +4465,7 @@
 
     <a id="sa-12.3-072"/>
     <h4>12.3 072 vim (LFS and BLFS)       Date: 2025-07-16  Severity: Medium</h4>
-
     <!-- Upstream marked as Low, NVD and Github marked as Medium -->
-
     <p>In vim-9.1.1552, two security vulnerabilities were fixed that could allow
     for path traveral when using the tar.vim and zip.vim plugins to view a
     malicious TAR or ZIP file. It is possible for vim to extract arbitrary
@@ -9005,9 +8999,7 @@
     context of the current user on the next logon to the machine.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-36041">CVE-2024-36041</a>.</p>
-
     <!-- Untested, I'll test on a 12.1 system soon.-->
-
     <p>Because the development books have moved to Plasma 6, you should upgrade
     to plasma-workspace-5.27.11.1 by downloading and manually installing it after
     Plasma 5 if you are on BLFS 12.1.</p>
@@ -9015,7 +9007,7 @@
     plasma-workspace-6.0.5.1 using the instructions from
     <a href="../view/12.2/kde/plasma-all.html">Plasma (sysv)</a> or
     <a href="../view/12.2-systemd/kde/plasma-all.html">Plasma (systemd)</a>.</p>
-
+<!--
     <a id="sa-12.1-054"/>
     <h4>12.1 054 MariaDB            Date: 2024-05-31  Severity: Medium</h4>
     <p>In MariaDB-10.11.8, a security vulnerability was fixed that could allow
@@ -9255,9 +9247,8 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-33870">CVE-2024-33870</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-33871">CVE-2024-33871</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-29510">CVE-2024-29510</a>.</p>
-
+-->
     <!-- Change to NVD once it's no longer reserved -->
-<!--
     <p>To fix these vulnerabilities, update to ghostscript-10.03.1 or later
     using the instructions from
     <a href="../view/12.2/pst/gs.html">ghostscript (sysv)</a> or
@@ -9272,9 +9263,7 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     viewed in some applications.
     This vulnerability has been assigned
     <a href="https://www.suse.com/security/cve/CVE-2022-48622.html">CVE-2022-48622</a>.</p>
--->
     <!-- Change to NVD once it's rated -->
-<!--
     <p>To fix this vulnerability, update to gdk-pixbuf-2.42.12 or later using
     the instructions from
     <a href="../view/12.2/x/gdk-pixbuf.html">gdk-pixbuf (sysv)</a> or
@@ -9294,9 +9283,7 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     <a href="https://www.suse.com/security/cve/CVE-2024-4854.html">CVE-2024-4854</a>,
     <a href="https://www.suse.com/security/cve/CVE-2024-4853.html">CVE-2024-4853</a>, and
     <a href="https://www.suse.com/security/cve/CVE-2024-4855.html">CVE-2024-4855</a>.</p>
--->
     <!-- Change to NVD once it's rated -->
-<!--
     <p>To fix these vulnerabilities, update to Wireshark-4.2.5 or later using
     the instructions from
     <a href="../view/12.2/basicnet/wireshark.html">Wireshark (sysv)</a> or
@@ -9312,7 +9299,6 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     and upstream has thus rated the vulnerability as low.
     This vulnerability has been assigned
     <a href="https://www.suse.com/security/cve/CVE-2024-34459.html">CVE-2024-34459</a>.</p>
--->
     <!-- Change to NVD once it's rated -->
     <p>To fix this vulnerability, update to libxml2-2.12.7 or later using the
     instructions from
@@ -9623,7 +9609,6 @@ echo "ALTER DATABASE template1 with ALLOW_CONNECTIONS false;" | (su - postgres -
     <a href="../view/12.2-systemd/general/libarchive.html">libarchive (systemd)</a>.</p>
 
     <a id="sa-12.1-024"/>
-
     <!-- non-standard, because -dev has moved to Qt6 -->
     <h4>12.1 024 QtWebEngine-5.15-20240403  Date: 2024-04-09  Severity: Critical</h4>
     <p>In the QtWebEngine-5.15-20240403 snapshot 16 vulnerabilities, of which 2
