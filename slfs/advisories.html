@@ -68,7 +68,8 @@
     page</a>.</p>
 
     <a id="slfs-sa-13.0-007"/>
-    <h4>slfs-sa-13.0-007: Go - Rating: High (Date: April 8th, 2026)</h4>
+    <h4>slfs-sa-13.0-007: Go - Rating: Critical (Date: April 8th, 2026,
+                                                 Updated: April 18th, 2026)</h4>
     <p>In Go-1.26.2, ten security vulnerabilities were fixed that could allow
     for the Root.Chmod function to follow symlinks on the target of a symlink
     even when the target lies outside of the root, for JavaScript template
@@ -86,7 +87,7 @@
     html/template, and os.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32282">CVE-2026-32282</a>,
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32282">CVE-2026-32289</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32289">CVE-2026-32289</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33810">CVE-2026-33810</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27144">CVE-2026-27144</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27143">CVE-2026-27143</a>,
@@ -95,12 +96,16 @@
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27140">CVE-2026-27140</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32280">CVE-2026-32280</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32281">CVE-2026-32281</a>.</p>
-    <p>To fix these vulnerabilities, update to Go-1.26.2 by following the
-    <a href="view/general/go.html">Go installation page</a>.</p>
+    <p>Fix these vulnerabilities <em>immediately</em> by updating to Go-1.26.2,
+    following the <a href="view/general/go.html">Go installation page</a>.</p>
     <p>Note that after you reinstall Go, you must reinstall any packages that
     use it. This is because the Go standard library is statically linked into
     every program that you compile with it, and thus just updating the compiler
     isn't enough to resolve most issues.</p>
+    <p>Updated April 18th, 2026: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27143">CVE-2026-27143</a>
+    is now rated as critical, so the overall rating for this advisory has been
+    promoted from high to critical. A link was also pointing to the wrong
+    location, which has now been fixed.</p>
 
     <a id="slfs-sa-13.0-006"/>
     <h4>slfs-sa-13.0-006: Flatpak - Rating: Critical (Updated: April 15th, 2026)</h4>
