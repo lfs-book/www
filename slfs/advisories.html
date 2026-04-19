@@ -15,6 +15,21 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-010"/>
+    <h4>slfs-sa-13.0-010: asio - Rating: High (Date: April 19th, 2026)</h4>
+    <p>In asio-1-38-0, two security vulnerabilities were fixed that could
+    allow for denial of service (application crash) attacks via memory and
+    resource leakage. The affected components are
+    <kbd>ssl::detail::engine</kbd> and <kbd>asio::awaitable</kbd>.
+    No CVEs have been assigned for these vulnerabilities.
+    <p>To fix these vulnerabilities, update to asio-1-38-0 by following
+    the <a href="view/general/asio.html">asio installation page</a>.
+    Since asio is a header-only library, you must rebuild every package that
+    uses the asio headers. In SLFS, the packages that use asio headers are
+    websocketpp and OBS-Studio. Additionally, OBS-Studio pulls in websocketpp,
+    so update asio, rebuild websocketpp after, then OBS-Studio last.
+    BLFS and out-of-book packages may also pull in asio headers.</p>
+
     <a id="slfs-sa-13.0-009"/>
     <h4>slfs-sa-13.0-009: Mbed-TLS - Rating: Critical (Date: April 8th, 2026)</h4>
     <p>In Mbed-TLS-3.6.6, eleven security vulnerabilities were fixed that could
