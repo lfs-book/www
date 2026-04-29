@@ -530,6 +530,21 @@
 
 <!-- end of requests -->
 
+    <h3>rsync</h3>
+
+
+    <a id="sa-13.0-053"/>
+    <h4>13.0 053 rsync  Date: 2026-04-29  Severity: High</h4>
+    <p>In rsync-3.4.1, a security vulnerability was discovered which could
+    allow for a remotely exploitable crash and information disclosure when
+    an rsync client connects to a malicious server. Only users who pass the
+    -X option to rsync are affected, and this option is not passed by default.
+    If you do use the -X option though, you should apply the security patch in
+    BLFS to fix this vulnerability immediately.
+    <a href="consolidated.html#sa-13.0-053">13.0-053</a></p>
+
+<!-- end of rsync -->
+
     <h3>Spidermonkey</h3>
 
     <a id="sa-13.0-028"/>
