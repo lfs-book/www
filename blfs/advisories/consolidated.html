@@ -75,6 +75,23 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-051"/>
+    <h4>13.0 051 FreeRDP  Date: 2026-04-29  Severity: Medium</h4>
+    <p>In FreeRDP-3.25.0, a security vulnerability was fixed that could allow
+    for arbitrary files to be read or written because of a path traversal issue.
+    This does require users to be connected to a RDP server with drive
+    redirection enabled, but a rogue RDP server can read, list, or write files
+    one directory above the client's shared folder through RDPDR requests.
+    Note that FreeRDP-3.25.0 had a regression that caused gnome-connections to
+    fail to connect to any servers, so the BLFS team added a patch containing
+    multiple commits from upstream to resolve the problem.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40254">CVE-2026-40254</a>.</p>
+    <p>To fix this vulnerability, update to FreeRDP-3.25.0 or later using the
+    instructions from
+    <a href="../view/svn/xsoft/freerdp.html">FreeRDP (sysv)</a> or
+    <a href="../view/systemd/xsoft/freerdp.html">FreeRDP (systemd)</a>.</p>
+
     <a id="sa-13.0-050"/>
     <h4>13.0 050 GIMP   Date: 2026-04-16  Severity: High</h4>
     <p>In GIMP-3.2.2, twelve security vulnerabilities were fixed that could
