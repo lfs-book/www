@@ -75,6 +75,31 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-052"/>
+    <h4>13.0 052 cups   Date: 2026-04-29  Severity: High</h4>
+    <p>In cups-2.4.17, seven security vulnerabilities were fixed that could
+    allow for reliable remote code execution, arbitrary file creation,
+    authorization bypasses, path traversal, and remotely exploitable crashes.
+    In most cases this can be triggered via malicious print jobs, but there
+    is a writeup for the remote code execution vulnerability which demonstrates
+    that the vulnerability is possible on any system which has a shared printer.
+    There is also a writeup for the arbitrary file creation vulnerability which
+    demonstrates placing a file into the /etc/sudoers.d directory. All users who
+    have cups installed and enabled should update immediately to protect their
+    systems.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34980">CVE-2026-34980</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34990">CVE-2026-34990</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27447">CVE-2026-27447</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34978">CVE-2026-34978</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34979">CVE-2026-34979</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39314">CVE-2026-39314</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39316">CVE-2026-39316</a>.</p>
+    <p>To fix these vulnerabilities, update to cups-2.4.17 or later using the
+    instructions from
+    <a href="../view/svn/pst/cups.html">cups (sysv)</a> or
+    <a href="../view/systemd/pst/cups.html">cups (systemd)</a>.</p>
+
     <a id="sa-13.0-051"/>
     <h4>13.0 051 FreeRDP  Date: 2026-04-29  Severity: Medium</h4>
     <p>In FreeRDP-3.25.0, a security vulnerability was fixed that could allow
