@@ -75,6 +75,24 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-064"/>
+    <h4>13.0 064 inetutils (LFS)   Date: 2026-04-30  Severity: Critical</h4>
+    <p>In inetutils-2.8, three security vulnerabilities were resolved in the
+    telnet server that could allow for remote code execution, information
+    disclosure, privilege escalation, and authentication bypass. In addition,
+    the telnet client had a fix for a problem that allows for a remote telnet
+    server to dump the entire environment of a telnet client's shell. In LFS,
+    the telnet server is not built by default. However, if you have enabled the
+    telnet server for some reason, you need to update immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24061">CVE-2026-24061</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32746">CVE-2026-32746</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28372">CVE-2026-28372</a>.</p>
+    <p>To fix these vulnerabilities, update to inetutils-2.8 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/inetutils.html">inetutils (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/inetutils.html">inetutils (systemd)</a>.</p>
+
     <a id="sa-13.0-063"/>
     <h4>13.0 063 vim (LFS and BLFS)   Date: 2026-04-30  Severity: Medium</h4>
     <p>In vim-9.2.0421, two security vulnerabilities were fixed that could allow

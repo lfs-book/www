@@ -96,6 +96,22 @@
 
 <!-- end of Expat -->
 
+    <h3>inetutils</h3>
+
+    <a id="sa-13.0-064"/>
+    <h4>13.0 064 inetutils (LFS)   Date: 2026-04-30  Severity: Critical</h4>
+    <p>In inetutils-2.8, three security vulnerabilities were resolved in the
+    telnet server that could allow for remote code execution, information
+    disclosure, privilege escalation, and authentication bypass. In addition,
+    the telnet client had a fix for a problem that allows for a remote telnet
+    server to dump the entire environment of a telnet client's shell. In LFS,
+    the telnet server is not built by default. However, if you have enabled the
+    telnet server for some reason, you need to update immediately. Users who
+    use the telnet client should also update. Update to inetutils-2.8.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-064">13.0-064</a></p>
+
+<!-- end of inetutils -->
+
     <h3>libcap</h3>
 
     <a id="sa-13.0-040"/>
