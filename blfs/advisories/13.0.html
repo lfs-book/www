@@ -624,6 +624,21 @@
 
 <!-- end of rsync -->
 
+    <h3>Ruby</h3>
+
+
+    <a id="sa-13.0-061"/>
+    <h4>13.0 061 Ruby   Date: 2026-04-30  Severity: High</h4>
+    <p>In Ruby-4.0.3, a security vulnerability was fixed that could allow for
+    arbitrary code execution when an application calls the Marshal.load function
+    when the activesupport and ERB support is loaded. This vulnerability is in
+    the ERB gem bundled with Ruby. While users can update the gem on it's own,
+    the BLFS team recommends updating Ruby instead since it's a guaranteed way
+    to ensure that a fixed version is present. Update to Ruby-4.0.3.
+    <a href="consolidated.html#sa-13.0-061">13.0-061</a></p>
+
+<!-- end of Ruby -->
+
     <h3>rustc</h3>
 
     <a id="sa-13.0-055"/>

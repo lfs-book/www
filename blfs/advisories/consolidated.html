@@ -75,6 +75,26 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-061"/>
+    <h4>13.0 061 Ruby   Date: 2026-04-30  Severity: High</h4>
+    <p>In Ruby-4.0.3, a security vulnerability was fixed that could allow for
+    arbitrary code execution when an application calls the Marshal.load function
+    when the activesupport and ERB support is loaded. The issue is in the ERB
+    gem that is bundled with Ruby, and ERB is a templating system for Ruby.
+    ERB implements an @_init guard to prevent code execution whenever objects
+    are reconstructed via Marshel.load on untrusted data, but ERB#def_method,
+    ERB#def_module, and ERB#def_class evaluated the template's source without
+    checking the guard, which lets attackers bypass the @_init guard. Users
+    can alternatively update the ERB gem on it's own to 6.0.4, but the BLFS
+    team recommends updating Ruby instead as it's a guaranteed way to have
+    a fixed version of the gem.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41316">CVE-2026-41316</a>.</p>
+    <p>To fix this vulnerability, update to Ruby-4.0.3 or later using the
+    instructions from
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
     <a id="sa-13.0-060"/>
     <h4>13.0 060 libXpm   Date: 2026-04-30  Severity: Medium</h4>
     <p>In libXpm-3.5.19, a security vulnerability was fixed that could allow
