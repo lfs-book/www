@@ -75,6 +75,23 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-054"/>
+    <h4>13.0 054 ntfs-3g   Date: 2026-04-29  Severity: High</h4>
+    <p>In ntfs-3g-2026.2.25, a security vulnerability was fixed that could allow
+    for arbitrary code execution, possible privilege escalation, and denial of
+    service (application crashes and possibly a kernel panic) by opening a
+    maliciously crafted NTFS image or filesystem. The issue occurs because of a
+    heap buffer overflow in the conversion process from NTFS permissions to
+    POSIX permissions. Note that the ntfs-3g binary which is called by most of
+    the helper programs from ntfs-3g is installed as a SUID binary, which is how
+    the privilege escalation impact is possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40706">CVE-2026-40706</a>.</p>
+    <p>To fix this vulnerability, update to ntfs-3g-2026.2.25 or later using
+    the instructions from
+    <a href="../view/svn/postlfs/ntfs-3g.html">ntfs-3g (sysv)</a> or
+    <a href="../view/systemd/postlfs/ntfs-3g.html">ntfs-3g (systemd)</a>.</p>
+
     <a id="sa-13.0-053"/>
     <h4>13.0 053 rsync  Date: 2026-04-29  Severity: High</h4>
     <p>In rsync-3.4.1, a security vulnerability was discovered which could
