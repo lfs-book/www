@@ -99,6 +99,21 @@
 
 <!-- end of cURL -->
 
+    <h3>dash</h3>
+
+    <a id="sa-13.0-059"/>
+    <h4>13.0 059 dash   Date: 2026-04-30  Severity: Medium</h4>
+    <p>In dash-0.5.13.3, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) due to a floating point
+    exception when doing some arithmetic in shell scripts. The issue can occur
+    when something divides INTMAX_MIN by -1, which causes a signed overflow that
+    leads to a SIGFPE on affected systems. Users who use dash with shell scripts
+    that perform arithmetic should upgrade to dash-0.5.13.3 if they experience
+    crashes.
+    <a href="consolidated.html#sa-13.0-059">13.0-059</a></p>
+
+<!-- end of dash -->
+
     <h3>Exiv2</h3>
 
     <a id="sa-13.0-004"/>
