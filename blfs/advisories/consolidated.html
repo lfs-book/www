@@ -75,6 +75,26 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-063"/>
+    <h4>13.0 063 vim (LFS and BLFS)   Date: 2026-04-30  Severity: Medium</h4>
+    <p>In vim-9.2.0421, two security vulnerabilities were fixed that could allow
+    for OS command injection when processing tag files and when using sftp:// and
+    file:// URLs to access a file. In both of these cases, an attacker can
+    execute commands with the privileges of the user running vim. The second
+    command injection vulnerability occurs in the 'netrw' plugin, and the first
+    occurs when performing backtick expansion in tag filenames. Note that tag
+    files in working directories are opened my default, but a user must still
+    use tag navigation to be affected, and users must use sftp:// or file://
+    URLs to be affected by the other issue. This is why the issues are rated
+    as medium by upstream.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42307">CVE-2026-42307</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41411">CVE-2026-41411</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-9.2.0421 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
     <a id="sa-13.0-062"/>
     <h4>13.0 062 x265   Date: 2026-04-30  Severity: Medium</h4>
     <p>In x265-4.2, three security vulnerabilities were fixed that could allow
