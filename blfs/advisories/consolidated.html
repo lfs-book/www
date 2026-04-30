@@ -75,6 +75,23 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-062"/>
+    <h4>13.0 062 x265   Date: 2026-04-30  Severity: Medium</h4>
+    <p>In x265-4.2, three security vulnerabilities were fixed that could allow
+    for a denial of service (excessive memory consumption) when utilizing the
+    x265 command line tool, as well as when saving and loading analysis of a file,
+    and when computing the SEI buffer. Very limited details are available on
+    the issues and the commit upstream contains all of the fixes consolidated
+    into one large commit. All users who use x265 to analyze H.265 files or
+    who use the x265 command line tool should update.
+    No CVEs have been assigned for these issues, but more details can be found
+    at
+    <a href="https://x265.readthedocs.io/en/master/releasenotes.html#version-4-2">the release notes</a>.</p>
+    <p>To fix these vulnerabilities, update to x265-4.2 or later using the
+    instructions for
+    <a href="../view/svn/multimedia/x265.html">x265 (sysv)</a> or
+    <a href="../view/systemd/multimedia/x265.html">x265 (systemd)</a>.</p>
+
     <a id="sa-13.0-061"/>
     <h4>13.0 061 Ruby   Date: 2026-04-30  Severity: High</h4>
     <p>In Ruby-4.0.3, a security vulnerability was fixed that could allow for
