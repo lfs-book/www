@@ -178,7 +178,7 @@
     <a href="../view/systemd/xsoft/gimp.html">GIMP (systemd)</a>.</p>
 
     <a id="sa-13.0-049"/>
-    <h4>13.0 049 Xwayland  Date: 2026-04-15  Severity: High</h4>
+    <h4>13.0 049 Xwayland  Updated: 2026-04-29  Severity: High</h4>
     <p>In Xwayland-24.1.10, five security vulnerabilities were fixed that
     could allow for arbitrary code execution or denial of service (Xorg
     crashes). These vulnerabilities occur in the XKB and XSYNC extensions.
@@ -189,17 +189,22 @@
     and is classified as a use after free. The next issue is an out of bounds
     read in the CheckModifierMap() function in the XKB extension, and the final
     issue is a buffer overflow in the CheckKeyTypes() function in the XKB
-    extension.
+    extension. NOTE: Xwayland-24.1.11 was released on 2026-04-29 to fix
+    several major regressions in Xwayland-24.1.10. Users need to update to this
+    version instead.
     These vulnerabilities have been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33999">CVE-2026-33999</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000">CVE-2026-34000</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34001">CVE-2026-34001</a>,
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002">CVE-2026-34002</a>, and
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34003">CVE-2026-34003</a>.</p>
-    <p>To fix these vulnerabilities, update to Xwayland-24.1.10 or later
+    <p>To fix these vulnerabilities, update to Xwayland-24.1.11 or later
     using the instructions from
     <a href="../view/svn/x/xwayland.html">Xwayland (sysv)</a> or
     <a href="../view/systemd/x/xwayland.html">Xwayland (systemd)</a>.</p>
+    <em>Updated on 2026-04-29 to tell users to use Xwayland-24.1.11.
+    Xwayland-24.1.10 has several major regressions that caused unexpected
+    crashes and other problems, and 24.1.11 was released to fix these.</em>
 
     <a id="sa-13.0-048"/>
     <h4>13.0 048 Xorg-Server  Date: 2026-04-15  Severity: High</h4>
