@@ -411,6 +411,22 @@
 
 <!-- end of libxml2 -->
 
+    <h3>lxml (Python Module)</h3>
+
+    <a id="sa-13.0-058"/>
+    <h4>13.0 058 lxml (Python Module)  Date: 2026-04-30  Severity: High</h4>
+    <p>In lxml-6.1.0, a security vulnerability was fixed that could allow for
+    untrusted XML input to read local files on the system. This was because of
+    an XML External Entity Injection issue in the iterparse() function and the
+    ETCompatXMLParser parser. This affects the default configuration of lxml,
+    and an appication must initialize it with the resolve_entities option
+    explicitly set to False or 'internal' to work around the issue. Users who
+    regularly process untrusted XML input are advised to upgrade immediately.
+    Update to lxml-6.1.0.
+    <a href="consolidated.html#sa-13.0-058">13.0-058</a></p>
+
+<!-- end of lxml (Python Module) -->
+
     <h3>nfs-utils</h3>
 
     <a id="sa-13.0-007"/>
