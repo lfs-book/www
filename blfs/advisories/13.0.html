@@ -544,7 +544,6 @@
 
     <h3>rsync</h3>
 
-
     <a id="sa-13.0-053"/>
     <h4>13.0 053 rsync  Date: 2026-04-29  Severity: High</h4>
     <p>In rsync-3.4.1, a security vulnerability was discovered which could
@@ -556,6 +555,27 @@
     <a href="consolidated.html#sa-13.0-053">13.0-053</a></p>
 
 <!-- end of rsync -->
+
+    <h3>rustc</h3>
+
+    <a id="sa-13.0-055"/>
+    <h4>13.0 055 rustc   Date: 2026-04-29  Severity: Medium</h4>
+    <p>In rustc-1.94.1, two security vulnerabilities were fixed in the 'tar'
+    crate bundled with Cargo that could allow for a crafted tarball to modify
+    the permissions of arbitrary directories outside the extraction root and
+    for tarballs to be generated as a different size in some circumstances.
+    After this update was put into BLFS, another update was put in to allow
+    for OpenSSL-4.x compatibility which also fixed several vulnerabilities
+    that affect the 'rust-openssl' crate regardless of which OpenSSL version
+    is in use. Because BLFS 13.0 shipped with OpenSSL-3.6.x, three issues were
+    fixed in this update to the rust-openssl crate that can cause arbitrary
+    code execution and denial of service (application crashes) when working
+    with certificates. Users who have rust installed are urged to update to
+    rustc-1.94.1. Updating to 1.95.0 may require changes to other packages to
+    ensure that they build correctly. Update to rustc-1.94.1.
+    <a href="consolidated.html#sa-13.0-055">13.0-055</a></p>
+
+<!-- end of rustc -->
 
     <h3>Spidermonkey</h3>
 
