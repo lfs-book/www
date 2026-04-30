@@ -75,6 +75,26 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-065"/>
+    <h4>13.0 065 Expat (LFS)   Date: 2026-04-30  Severity: Low</h4>
+    <p>In Expat-2.8.0, a security vulnerability was fixed that could allow for
+    hash flooding when processing a crafted XML file. The issue occurs due to
+    insufficent entropy in the current hash flooding protection implementation,
+    where 4 to 8 bytes of entropy are used on a salt when up to 16 are actually
+    supported. The XML_SetHashSalt function was deprecated by upstream as well
+    in response to this, applications will need to start using the
+    XML_SetHashSalt16Bytes function instead of let Expat take care of the
+    entropy using it's own internal machinery.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41080">CVE-2026-41080</a>.</p>
+    <p>To fix these vulnerabilities, update to Expat-2.8.0 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <p>Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa-13.0-064"/>
     <h4>13.0 064 inetutils (LFS)   Date: 2026-04-30  Severity: Critical</h4>
     <p>In inetutils-2.8, three security vulnerabilities were resolved in the

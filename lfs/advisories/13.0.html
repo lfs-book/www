@@ -85,6 +85,15 @@
 
     <h3>Expat</h3>
 
+    <a id="sa-13.0-065"/>
+    <h4>13.0 065 Expat (LFS)   Date: 2026-04-30  Severity: Low</h4>
+    <p>In Expat-2.8.0, a security vulnerability was fixed that could allow for
+    hash flooding when processing a crafted XML file. The issue occurs due to
+    insufficent entropy in the current hash flooding protection implementation,
+    where 4 to 8 bytes of entropy are used on a salt when up to 16 are actually
+    supported. Update to Expat-2.8.0.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-065">13.0-065</a></p>
+
     <a id="sa-13.0-019"/>
     <h4>13.0 019 Expat (LFS)  Date: 2026-04-01  Severity: Medium</h4>
     <p>In Expat-2.7.5, three security vulnerabilities were fixed that could
