@@ -312,6 +312,21 @@
 
 <!-- end of libexif -->
 
+    <h3>libgcrypt</h3>
+
+    <a id="sa-13.0-056"/>
+    <h4>13.0 056 libgcrypt   Date: 2026-04-29  Severity: High</h4>
+    <p>In libgcrypt-1.12.2, two security vulnerabilities were fixed that could
+    allow for a denial of service when using the Dilithium signing algorithm or
+    when using ECDH encryption (including NIST, Brainpool, X448, or X25519
+    curves). The denial of service impact is memory corruption and subsequent
+    application crashes. There is also a possible remote code execution impact
+    but the possibility of this is extremely minimal because of modern hardening
+    in glibc. Update to libgcrypt-1.12.2.
+    <a href="consolidated.html#sa-13.0-056">13.0-056</a></p>
+
+<!-- end of libgcrypt -->
+
     <h3>libinput</h3>
 
     <a id="sa-13.0-034"/>

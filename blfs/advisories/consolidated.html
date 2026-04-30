@@ -75,6 +75,23 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-056"/>
+    <h4>13.0 056 libgcrypt   Date: 2026-04-29  Severity: High</h4>
+    <p>In libgcrypt-1.12.2, two security vulnerabilities were fixed that could
+    allow for a denial of service when using the Dilithium signing algorithm or
+    when using ECDH encryption (including NIST, Brainpool, X448, or X25519
+    curves). The denial of service impact is memory corruption and subsequent
+    application crashes. There is also a possible remote code execution impact
+    but the possibility of this is extremely minimal because of modern hardening
+    in glibc.
+    No CVEs have been assigned for these vulnerabilities, but more details can be
+    found at the upstream bug report at
+    <a href="https://dev.gnupg.org/T8211">Upstream Bug 8211</a>.</p>
+    <p>To fix these vulnerabilities, update to libgcrypt-1.12.2 or later using
+    the instructions from
+    <a href="../view/svn/general/libgcrypt.html">libgcrypt (sysv)</a> or
+    <a href="../view/systemd/general/libgcrypt.html">libgcrypt (systemd)</a>.</p>
+
     <a id="sa-13.0-055"/>
     <h4>13.0 055 rustc   Date: 2026-04-29  Severity: Medium</h4>
     <p>In rustc-1.94.1, two security vulnerabilities were fixed in the 'tar'
