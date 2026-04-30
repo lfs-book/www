@@ -75,6 +75,23 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-057"/>
+    <h4>13.0 057 libxml2   Date: 2026-04-29  Severity: High</h4>
+    <p>In libxml2-2.15.3, five security vulnerabilities were fixed that could
+    allow for type confusion and denial of service (application crashes). The
+    denial of service vulnerabilities occur due to use-after-free issues and
+    double frees. The vulnerabilities are in the parser itself as well as
+    entity support, the c14n support, and the Python bindings. Three additional
+    issues were fixed that could allow for memory leaks, but were not classified
+    as security vulnerabilities.
+    No CVEs were assigned for these vulnerabilities, but additional details
+    can be found at the
+    <a href="https://gitlab.gnome.org/GNOME/libxml2/-/blob/2.15/NEWS">NEWS file</a>.</p>
+    <p>To fix these vulnerabilities, update to libxml2-2.15.3 or later using
+    the instructions from
+    <a href="../view/svn/general/libxml2.html">libxml2 (sysv)</a> or
+    <a href="../view/systemd/general/libxml2.html">libxml2 (systemd)</a>.</p>
+
     <a id="sa-13.0-056"/>
     <h4>13.0 056 libgcrypt   Date: 2026-04-29  Severity: High</h4>
     <p>In libgcrypt-1.12.2, two security vulnerabilities were fixed that could
