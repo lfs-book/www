@@ -502,9 +502,9 @@ like</br>
         <dd>
           <p>Example of this error is:</p>
           <div class="cmd">
-            <p>/usr/bin/env: /bin/bash: No such file or directory</p>
+            <p>chroot: failed to run command '/usr/bin/env': No such file or directory</p>
           </div>
-          <p>If you are sure $LFS/bin/bash exists,
+          <p>If you are sure $LFS/usr/bin/env exists,
           what happens is likely that the path to the dynamic linker path
           embedded inside the executable is /lib64/ld-linux-x86-64.so.2
           (/lib/ld-linux.so.2 for 32-bit), and
