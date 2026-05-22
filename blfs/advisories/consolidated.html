@@ -75,6 +75,47 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-067"/>
+    <h4>13.0 067 glibc (LFS)  Date: 2026-05-22  Severity: Critical</h4>
+    <p>In glibc-2.43, three security vulnerabilities were discovered that could
+    allow for denial of service (application crashes) and possibly arbitrary
+    code execution and information disclosure. The first vulnerability occurs
+    in the iconv() function, where a remotely exploitable crash can occur with
+    an assertion failure when converting inputs from the IBM1390 or IBM1399
+    character sets. The next vulnerability is a heap buffer overflow which can
+    occur when calling the scanf() family of functions with a character match
+    from malloc (%md) if the format width specifier is greater than 1024. This
+    is a buffer overflow. The final vulnerability is in the ungetwc() function
+    when it is called on a FILE stream with wide characters encoded in a
+    character set that has overlaps between single byte and multi-byte
+    character encodings. This causes an attempt to read bytes before an
+    allocated buffer, resulting in potential disclosure of neighboring data
+    in the heap or a crash. In most cases, this causes an application crash.
+    Users should continue updating immediately due to the severity of these
+    vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4046">CVE-2026-4046</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5450">CVE-2026-5450</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5928">CVE-2026-5928</a>.</p>
+    <p>To fix these vulnerabilities, apply the consolidated patch from the glibc
+    page and rebuild glibc using the instructions from the current development
+    books for
+    <a href="../../lfs/view/development/chapter08/glibc.html">glibc (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
+    <p><em>Updating to glibc-2.43 on a LFS 12.4 system can be challenging because it
+    will cause numerous build failures, as well as memory corruption problems in
+    glib2, and problems with valgrind. Users who cannot upgrade to LFS 13.0 are
+    recommended to apply the consolidated patch to their systems, as well as the
+    security patch from SA-12.4-079, and rebuild glibc. The patch has been tested
+    against glibc-2.42 by one of the editors.</em></p>
+    <!-- Tested against glibc-2.42 as part of my continuing support for security
+    updates for LFS 12.4 systems. -renodr -->
+    <p><em>IF YOU UPDATE OR REBUILD GLIBC, PLEASE FOLLOW THE INSTRUCTIONS IN THAT
+    PAGE ABOUT UPDATING GLIBC VERY CAREFULLY. FAILURE TO DO SO MAY RESULT IN A
+    BROKEN SYSTEM.</em></p>
+    <p>The consolidated patch added to fix this set of vulnerabilities has the
+    added side effect of also resolving build failures with Linux-7.</p>
+
     <a id="sa-13.0-066"/>
     <h4>13.0 066 Linux Kernel (LFS)   Date: 2026-05-21  Severity: Critical</h4>
     <p>In Linux-7.0.9 and 6.18.32, several recent high profile vulnerabilities
