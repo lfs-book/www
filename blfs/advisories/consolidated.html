@@ -75,6 +75,56 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-066"/>
+    <h4>13.0 066 Linux Kernel (LFS)   Date: 2026-05-21  Severity: Critical</h4>
+    <p>In Linux-7.0.9 and 6.18.32, several recent high profile vulnerabilities
+    were resolved. These vulnerabilities have been termed CopyFail, DirtyFrag,
+    DirtyCrypt, and ssh-keysign-pwn. All four vulnerabilities allow for extremely
+    trivial privilege escalation, and CopyFail in particular overwrites the su
+    binary in memory via the page cache, allowing it to bypass any and all
+    password verification until the system has been rebooted. ssh-keysign-pwn
+    is named after one of the working exploits for this vulnerability, which
+    allows an unprivileged attacker to read the contents of ssh_host_*_key or
+    /etc/shadow (via the 'chage -l' command). All four of these vulnerabilities
+    have weaponized exploits available, and are under active exploitation at
+    this time. LFS versions back to LFS 9.1 are confirmed to be affected by
+    CopyFail, as are most distros from 2017 onwards as the functionality
+    required to exploit it is built into the kernel via 'make defconfig'.
+    At this time, two additional vulnerabilities of the CopyFail class termed
+    Fragnesia and PinTheft have not been resolved, but also are under active
+    exploitation. Note that while local privilege escalation has been identified
+    as one of the primary impacts, these vulnerabilities are being chained
+    together with exploits in other packages to give remote attackers root
+    access on a system once it has been compromised via other means. <em>ALL
+    users of LFS must immediately update to Linux-6.18.32 or 7.0.9.</em>.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46333">CVE-2026-46333</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31431">CVE-2026-31431</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31635">CVE-2026-31635</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43284">CVE-2026-42384</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43500">CVE-2026-43500</a>.</p>
+    <p>Some additional resources about these vulnerabilities include
+    <a href="https://kb.wisc.edu/wiscel/161414">University of Wisconsin at Madison Alert for DirtyDecrypt</a>,
+    <a href="https://github.com/V4bel/dirtyfrag/blob/master/assets/write-up.md">DirtyFrag Writeup</a>,
+    <a href="https://copy.fail/">CopyFail website</a>,
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-31431">US Government - KEV Catalog Entry for CopyFail</a>, and
+    <a href="https://www.openwall.com/lists/oss-security/2026/05/15/2">Qualys Security Advisory Mailing List Thread for ssh-keysign-pwn</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-7.0.9 or 6.18.32 or later
+    using the instructions from
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <p>If you are on a 13.0 or older system, the editors recommend using 6.18.32
+    as an additional patch will be required in Chapter 5 and Chapter 8 for glibc
+    due to changes in Linux-7.0. Linux-6.18.32 has been tested and known to work
+    on both LFS 12.4 (SysV) and LFS 13.0. The importance of these vulnerabilities
+    being fixed cannot be underscored enough. Immediate action must be taken
+    to protect your systems and your data. Please continue to monitor the
+    security advisories for additional information and take care of any existing
+    security updates to prevent further exposure for your system.</p>
+    <p>Additional stable kernel versions 6.12.90, 6.6.140, 6.6.173, 5.5.207,
+    and 5.10.256 were released for these issues but have not been tested by the
+    LFS editors.</p>
+
     <a id="sa-13.0-065"/>
     <h4>13.0 065 Expat (LFS)   Date: 2026-04-30  Severity: Low</h4>
     <p>In Expat-2.8.0, a security vulnerability was fixed that could allow for

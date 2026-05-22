@@ -134,6 +134,38 @@
 
 <!-- end of libcap -->
 
+    <h3>Linux Kernel</h3>
+
+    <a id="sa-13.0-066"/>
+    <h4>13.0 066 Linux Kernel (LFS)   Date: 2026-05-21  Severity: Critical</h4>
+    <p>In Linux-7.0.9 and 6.18.32, several recent high profile vulnerabilities
+    were resolved. These vulnerabilities have been termed CopyFail, DirtyFrag,
+    DirtyCrypt, and ssh-keysign-pwn. All four vulnerabilities allow for extremely
+    trivial privilege escalation, and CopyFail in particular overwrites the su
+    binary in memory via the page cache, allowing it to bypass any and all
+    password verification until the system has been rebooted. ssh-keysign-pwn
+    is named after one of the working exploits for this vulnerability, which
+    allows an unprivileged attacker to read the contents of ssh_host_*_key or
+    /etc/shadow (via the 'chage -l' command). All four of these vulnerabilities
+    have weaponized exploits available, and are under active exploitation at
+    this time. LFS versions back to LFS 9.1 are confirmed to be affected by
+    CopyFail, as are most distros from 2017 onwards as the functionality
+    required to exploit it is built into the kernel via 'make defconfig'.
+    At this time, two additional vulnerabilities of the CopyFail class termed
+    Fragnesia and PinTheft have not been resolved, but also are under active
+    exploitation. Note that while local privilege escalation has been identified
+    as one of the primary impacts, these vulnerabilities are being chained
+    together with exploits in other packages to give remote attackers root
+    access on a system once it has been compromised via other means. <em>ALL
+    users of LFS must immediately update to Linux-6.18.32 or 7.0.9.</em>.
+    The importance of updating cannot be underscored enough. Users also must
+    take care of other security updates to reduce exposure as soon as possible.
+    Please continue to monitor the Consolidated Advisories page for further
+    updates.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-066">13.0-066</a></p>
+
+<!-- end of Linux Kernel -->
+
     <h3>OpenSSL</h3>
 
     <a id="sa-13.0-039"/>
