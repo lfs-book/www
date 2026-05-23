@@ -537,6 +537,24 @@
 
 <!-- end of OpenSSH -->
 
+    <h3>ProFTPD</h3>
+
+    <a id="sa-13.0-075"/>
+    <h4>13.0 075 ProFTPD  Date: 2026-05-23  Severity: High</h4>
+    <p>In ProFTPD-1.3.9a, a security vulnerability was fixed which could allow
+    for unauthenticated remote code execution, privilege escalation, and
+    authentication bypasses in some circumstances. The issue is in the mod_sql
+    module, where a logic error in the is_escaped_text() function will let a
+    crafted username execute SQL commands when logging is enabled. The default
+    configuration in BLFS is not affected by this vulnerability as it doesn't
+    use mod_sql for retrieving credentials from an SQL database, and it also
+    doesn't enable logging to an SQL database either. If you have changed the
+    default BLFS configuration to enable SQL support though, you need to update
+    ProFTPD as soon as possible. Update to ProFTPD-1.3.9a.
+    <a href="consolidated.html#sa-13.0-075">13.0-075</a></p>
+
+<!-- end of ProFTPD -->
+
     <h3>pytest</h3>
 
     <a id="sa-13.0-035"/>

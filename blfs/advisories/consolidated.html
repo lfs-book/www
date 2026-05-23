@@ -75,6 +75,27 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-075"/>
+    <h4>13.0 075 ProFTPD  Date: 2026-05-23  Severity: High</h4>
+    <p>In ProFTPD-1.3.9a, a security vulnerability was fixed which could allow
+    for unauthenticated remote code execution, privilege escalation, and
+    authentication bypasses in some circumstances. The issue is in the mod_sql
+    module, where a logic error in the is_escaped_text() function will let a
+    crafted username execute SQL commands when logging is enabled. The default
+    configuration in BLFS is not affected by this vulnerability as it doesn't
+    use mod_sql for retrieving credentials from an SQL database, and it also
+    doesn't enable logging to an SQL database either. If you have changed the
+    default BLFS configuration to enable SQL support though, you need to update
+    ProFTPD as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42167">CVE-2026-42167</a>.</p>
+    <p>More information for affected users can be found at the
+    <a href="https://zeropath.com/blog/proftpd-cve-2026-42167-auth-bypass-privesc-rce">Zeropath write-up</a>.</p>
+    <p>To fix this vulnerability, update to ProFTPD-1.3.9a or later using the
+    instructions from
+    <a href="../view/svn/server/proftpd.html">ProFTPD (sysv)</a> or
+    <a href="../view/systemd/server/proftpd.html">ProFTPD (systemd)</a>.</p>
+
     <a id="sa-13.0-074"/>
     <h4>13.0 074 Thunderbird  Date: 2026-05-23  Severity: Critical</h4>
     <p>In Thunderbird-140.11.0esr, fifty-five security vulnerabilities were fixed
