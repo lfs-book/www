@@ -328,7 +328,7 @@
     <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
 
     <a id="sa-13.0-062"/>
-    <h4>13.0 062 x265   Date: 2026-04-30  Severity: Medium</h4>
+    <h4>13.0 062 x265   Date: 2026-05-22  Severity: Medium</h4>
     <p>In x265-4.2, three security vulnerabilities were fixed that could allow
     for a denial of service (excessive memory consumption) when utilizing the
     x265 command line tool, as well as when saving and loading analysis of a file,
@@ -343,6 +343,16 @@
     instructions for
     <a href="../view/svn/multimedia/x265.html">x265 (sysv)</a> or
     <a href="../view/systemd/multimedia/x265.html">x265 (systemd)</a>.</p>
+    <p>After updating x265, users will need to reinstall the following
+    packages on their system because of a SONAME bump:</p>
+    <ul>
+      <li>ffmpeg</li>
+      <li>VLC</li>
+      <li>gst-plugins-bad</li>
+      <li>libheif</li>
+    </ul>
+    <p><em>Updated on 2026-05-22 to document that several packages will need to
+    be rebuilt because of a SONAME bump.</em></p>
 
     <a id="sa-13.0-061"/>
     <h4>13.0 061 Ruby   Date: 2026-04-30  Severity: High</h4>
