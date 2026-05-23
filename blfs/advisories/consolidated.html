@@ -75,6 +75,39 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-070"/>
+    <h4>13.0 070 Python (LFS and BLFS)  Date: 2026-05-22  Severity: Critical</h4>
+    <p>In Python-3.14.5, three security vulnerabilities were fixed that could
+    allow for XML hash flooding, FTP connection redirection and port scanning
+    via FTP, and for the 'pip' command to install incorrect files based off the
+    name of an archive. The XML hash vulnerability affects the builtin XML
+    module's xml.parsers.expat and xml.etree.ElementTree functions, and the
+    issue is caused by usage of insufficent entropy. The vulnerability in the
+    FTP module is caused by the ftpcp() function not using the actual peer
+    address and trusting a server-supplied PASV host address instead (server
+    side request forgery). The vulnerability in the 'pip' command is caused by
+    the command handling concatenated tar and ZIP files as ZIP files
+    unconditionally, regardless of the filename or whether a file is both a ZIP
+    and a TAR archive. The new behavior forces the command to only proceed with
+    installation of a module if the file uniquely identifies itself as a ZIP or
+    as a TAR archive. Note that users must update to at least Expat-2.8.0 to
+    fully resolve the XML hash flooding vulnerability.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3219">CVE-2026-3219</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7210">CVE-2026-7210</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8328">CVE-2026-8328</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.14.5 with the patch
+    using the instructions from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <p><em>LFS/BLFS 12.4 USERS SHOULD STAY ON PYTHON 3.13.13 TO PROTECT THEMSELVES
+    FROM THESE ISSUES, BUT APPLY THE PATCH FOR 3.14.4 LOCATED AT
+    <a href="https://linuxfromscratch.org/patches/downloads/Python/Python-3.14.4-security_fixes-2.patch">Python-3.14.4-security_fixes-2.patch</a>
+    AS WELL AS APPLY THE SECURITY FIXES PATCH FROM THE BLFS PYTHON PAGE. THE
+    PATCHES HAVE BEEN TESTED AGAINST 3.13.13. HOWEVER, NOTE THAT THE PATCH FOR
+    PYTHON-3.14.4 WILL HAVE A HUNK THAT NEEDS TO BE SKIPPED BECAUSE OF A MODULE
+    THAT DOES NOT EXIST IN PYTHON 3.13.</em></p>
+
     <a id="sa-13.0-069"/>
     <h4>13.0 069 Expat (LFS)  Date: 2026-05-22  Severity: High</h4>
     <p>In Expat-2.8.1, a security vulnerability was fixed that could allow for
