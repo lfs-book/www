@@ -75,6 +75,27 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-069"/>
+    <h4>13.0 069 Expat (LFS)  Date: 2026-05-22  Severity: High</h4>
+    <p>In Expat-2.8.1, a security vulnerability was fixed that could allow for
+    a denial of service (application crash and excessive resource consumption)
+    when processing crafted XML input. The underlying problem was due to extreme
+    computational complexity of the attribute name collision checks. Upstream
+    has noted that this vulnerability is easy to exploit because layers of
+    compression around the XML input will significantly reduce the minimum
+    attack payload size. Because Expat is used in a variety of contexts
+    (including web browsers), users are recommended to update as soon as
+    possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45186">CVE-2026-45186</a>.</p>
+    <p>To fix this vulnerability, update to Expat-2.8.1 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <p>Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
     <a id="sa-13.0-068"/>
     <h4>13.0 068 sed (LFS)  Date: 2026-05-22  Severity: Low</h4>
     <p>In sed-4.10, a security vulnerability was fixed that could allow for an
