@@ -81,10 +81,10 @@
     allow for remote code execution, denial of service (application crashes),
     and path traversal leading to arbitrary file reads. These issues occur in
     a variety of different functions including GMarkup, GVariant, GDateTime,
-    GDateTime, and GDBus. One of the notable issues is a flag confusion issue
-    in GRegex which can result in an unbounded out-of-bounds read off the
-    start of a regex input string. Most of them are out-of-bounds reads,
-    off-by-one errors, buffer over-reads, and an integer overflow.
+    and GDBus. One of the notable issues is a flag confusion issue in GRegex
+    which can result in an unbounded out-of-bounds read off the start of a
+    regex input string. Most of them are out-of-bounds reads, off-by-one
+    errors, buffer over-reads, and an integer overflow.
     These vulnerabilities have not been assigned CVEs, but additional details
     about them can be found from the upstream bug reports:
     <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3915">#3915</a>,
