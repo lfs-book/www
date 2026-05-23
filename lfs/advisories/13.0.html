@@ -242,6 +242,21 @@
 
 <!-- end of Python -->
 
+    <h3>sed</h3>
+
+    <a id="sa-13.0-068"/>
+    <h4>13.0 068 sed (LFS)  Date: 2026-05-22  Severity: Low</h4>
+    <p>In sed-4.10, a security vulnerability was fixed that could allow for an
+    attacker to overwrite a file with attacker-controlled content due to a
+    TOCTOU race condition. In order for this vulnerability to be exploited,
+    a user must invoke sed with both the '-i' and the '--follow-symlinks'
+    options, and an attacker must replace the target of a symlink within an
+    extremely small window of time. Because of this reason, upstream has
+    marked the vulnerability as low. Update to sed-4.10.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-068">13.0-068</a></p>
+
+<!-- end of sed -->
+
     <h3>systemd</h3>
 
     <a id="sa-13.0-008"/>
