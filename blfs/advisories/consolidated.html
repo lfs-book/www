@@ -75,6 +75,31 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-071"/>
+    <h4>13.0 071 vim (LFS and BLFS)  Date: 2026-05-22  Severity: Medium</h4>
+    <p>In vim-9.2.0481, four security vulnerabilities were fixed that could
+    allow for a denial of service (application crash), for OS Command Injection,
+    and for vimscript code injection. The denial of service vulnerability occurs
+    due to a 72-byte heap buffer overflow that can occur when loading a crafted
+    .spl file to perform spell checking on a file. The two OS Command Injection
+    issues can occur when using the ':find' command when a 'path' option
+    contains backtick enclosed shell commands and when using vim to view
+    a crafted .tgz file. The vimscript code injection vulnerability occurs
+    when unmarking files from the global marked-file list in the netrw plugin.
+    This allows a crafted filename containing a double quote to break out of
+    a quoted string literal and execute arbitrary vimscript, including shell
+    commands. Users who use vimscript, perform spell checking, use the ':find'
+    command, or who view arbitrary tar files using vim are advised to update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44656">CVE-2026-44656</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45130">CVE-2026-45130</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46483">CVE-2026-46483</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43961">CVE-2026-43961</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-9.2.0481 using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
     <a id="sa-13.0-070"/>
     <h4>13.0 070 Python (LFS and BLFS)  Date: 2026-05-22  Severity: Critical</h4>
     <p>In Python-3.14.5, three security vulnerabilities were fixed that could
