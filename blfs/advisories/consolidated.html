@@ -75,6 +75,34 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-079"/>
+    <h4>13.0 079 Apache HTTPD  Date: 2026-05-13  Severity: Critical</h4>
+    <p>In httpd-2.4.67, eleven security vulnerabilities were fixed that could
+    allow for trivial remote code execution, denial of service (resource
+    exhaustion and server crashes), memory disclosure, privilege escalation,
+    HTTP response splitting, and authentication bypasses. These vulnerabilities
+    are in a large variety of modules, including HTTP/2 support, mod_md,
+    mod_rewrite, mod_dav_lock, mod_auth_digest, mod_authn_socache, and
+    mod_proxy_ajp. All users who have httpd installed should update immediately
+    due to the remote code execution vulnerability which affects the commonly
+    enabled HTTP/2 support.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-23198">CVE-2026-23198</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24072">CVE-2026-24072</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28780">CVE-2026-28780</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29168">CVE-2026-29168</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29169">CVE-2026-29169</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33006">CVE-2026-33006</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33007">CVE-2026-33007</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33523">CVE-2026-33523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33857">CVE-2026-33857</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34032">CVE-2026-34032</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34059">CVE-2026-34059</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.67 or later using the
+    instructions from
+    <a href="../view/svn/server/apache.html">Apache HTTPD (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
+
     <a id="sa-13.0-078"/>
     <h4>13.0 078 glib  Date: 2026-05-13  Severity: High</h4>
     <p>In glib-2.88.1, nine security vulnerabilities were fixed that could
