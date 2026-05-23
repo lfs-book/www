@@ -75,6 +75,24 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-072"/>
+    <h4>13.0 072 Spidermonkey  Date: 2026-05-23  Severity:  High</h4>
+    <p>In Spidermonkey from Firefox-140.11.0esr, four security vulnerabilities
+    were fixed that could allow for remote code execution, information
+    disclosure, and denial of service. These issues occur due to incorrect
+    boundary access, invalid pointers, and use-after-free vulnerabilities.
+    The issues are in the core JavaScript engine as well as the WebAssembly and
+    JIT components.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6754">CVE-2026-6754</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6757">CVE-2026-6757</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8388">CVE-2026-8388</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8391">CVE-2026-8391</a>.</p>
+    <p>To fix these vulnerabilities, update to Spidermonkey-140.11.0 or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">Spidermonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">Spidermonkey (systemd)</a>.</p>
+
     <a id="sa-13.0-071"/>
     <h4>13.0 071 vim (LFS and BLFS)  Date: 2026-05-22  Severity: Medium</h4>
     <p>In vim-9.2.0481, four security vulnerabilities were fixed that could
