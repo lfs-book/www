@@ -75,8 +75,200 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-071"/>
+    <h4>13.0 071 vim (LFS and BLFS)  Date: 2026-05-22  Severity: Medium</h4>
+    <p>In vim-9.2.0481, four security vulnerabilities were fixed that could
+    allow for a denial of service (application crash), for OS Command Injection,
+    and for vimscript code injection. The denial of service vulnerability occurs
+    due to a 72-byte heap buffer overflow that can occur when loading a crafted
+    .spl file to perform spell checking on a file. The two OS Command Injection
+    issues can occur when using the ':find' command when a 'path' option
+    contains backtick enclosed shell commands and when using vim to view
+    a crafted .tgz file. The vimscript code injection vulnerability occurs
+    when unmarking files from the global marked-file list in the netrw plugin.
+    This allows a crafted filename containing a double quote to break out of
+    a quoted string literal and execute arbitrary vimscript, including shell
+    commands. Users who use vimscript, perform spell checking, use the ':find'
+    command, or who view arbitrary tar files using vim are advised to update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44656">CVE-2026-44656</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45130">CVE-2026-45130</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46483">CVE-2026-46483</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43961">CVE-2026-43961</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-9.2.0481 using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
+    <a id="sa-13.0-070"/>
+    <h4>13.0 070 Python (LFS and BLFS)  Date: 2026-05-22  Severity: Critical</h4>
+    <p>In Python-3.14.5, three security vulnerabilities were fixed that could
+    allow for XML hash flooding, FTP connection redirection and port scanning
+    via FTP, and for the 'pip' command to install incorrect files based off the
+    name of an archive. The XML hash vulnerability affects the builtin XML
+    module's xml.parsers.expat and xml.etree.ElementTree functions, and the
+    issue is caused by usage of insufficent entropy. The vulnerability in the
+    FTP module is caused by the ftpcp() function not using the actual peer
+    address and trusting a server-supplied PASV host address instead (server
+    side request forgery). The vulnerability in the 'pip' command is caused by
+    the command handling concatenated tar and ZIP files as ZIP files
+    unconditionally, regardless of the filename or whether a file is both a ZIP
+    and a TAR archive. The new behavior forces the command to only proceed with
+    installation of a module if the file uniquely identifies itself as a ZIP or
+    as a TAR archive. Note that users must update to at least Expat-2.8.0 to
+    fully resolve the XML hash flooding vulnerability.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3219">CVE-2026-3219</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7210">CVE-2026-7210</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8328">CVE-2026-8328</a>.</p>
+    <p>To fix these vulnerabilities, update to Python-3.14.5 with the patch
+    using the instructions from
+    <a href="../view/svn/general/python3.html">Python (sysv)</a> or
+    <a href="../view/systemd/general/python3.html">Python (systemd)</a>.</p>
+    <p><em>LFS/BLFS 12.4 USERS SHOULD STAY ON PYTHON 3.13.13 TO PROTECT THEMSELVES
+    FROM THESE ISSUES, BUT APPLY THE PATCH FOR 3.14.4 LOCATED AT
+    <a href="https://linuxfromscratch.org/patches/downloads/Python/Python-3.14.4-security_fixes-2.patch">Python-3.14.4-security_fixes-2.patch</a>
+    AS WELL AS APPLY THE SECURITY FIXES PATCH FROM THE BLFS PYTHON PAGE. THE
+    PATCHES HAVE BEEN TESTED AGAINST 3.13.13. HOWEVER, NOTE THAT THE PATCH FOR
+    PYTHON-3.14.4 WILL HAVE A HUNK THAT NEEDS TO BE SKIPPED BECAUSE OF A MODULE
+    THAT DOES NOT EXIST IN PYTHON 3.13.</em></p>
+
+    <a id="sa-13.0-069"/>
+    <h4>13.0 069 Expat (LFS)  Date: 2026-05-22  Severity: High</h4>
+    <p>In Expat-2.8.1, a security vulnerability was fixed that could allow for
+    a denial of service (application crash and excessive resource consumption)
+    when processing crafted XML input. The underlying problem was due to extreme
+    computational complexity of the attribute name collision checks. Upstream
+    has noted that this vulnerability is easy to exploit because layers of
+    compression around the XML input will significantly reduce the minimum
+    attack payload size. Because Expat is used in a variety of contexts
+    (including web browsers), users are recommended to update as soon as
+    possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45186">CVE-2026-45186</a>.</p>
+    <p>To fix this vulnerability, update to Expat-2.8.1 or later using the
+    instructions from the LFS book for
+    <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
+    <p>Note: If you have installed docbook-utils from BLFS you will need to add
+    "--without-docbook" to work around an error in configure, since our
+    installation of docbook-utils uses SGML instead of XML.</p>
+
+    <a id="sa-13.0-068"/>
+    <h4>13.0 068 sed (LFS)  Date: 2026-05-22  Severity: Low</h4>
+    <p>In sed-4.10, a security vulnerability was fixed that could allow for an
+    attacker to overwrite a file with attacker-controlled content due to a
+    TOCTOU race condition. In order for this vulnerability to be exploited,
+    a user must invoke sed with both the '-i' and the '--follow-symlinks'
+    options, and an attacker must replace the target of a symlink within an
+    extremely small window of time. Because of this reason, upstream has
+    marked the vulnerability as low. However, if you are on a system which
+    has multiple users and you are calling sed with '--follow-symlinks' and
+    '-i', you should consider updating to this version of sed.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5958">CVE-2026-5958</a>.</p>
+    <p>To fix this vulnerability, update to sed-4.10 or later using the
+    instructions from the development books for
+    <a href="../../lfs/view/development/chapter08/sed.html">sed (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/sed.html">sed (systemd)</a>.</p>
+    <p><em>NOTE: If you run the test suite for sed using these instructions,
+    use "make check" as an unprivileged user as the tester user was removed at
+    the end of Chapter 8.</em></p>
+
+    <a id="sa-13.0-067"/>
+    <h4>13.0 067 glibc (LFS)  Date: 2026-05-22  Severity: Critical</h4>
+    <p>In glibc-2.43, three security vulnerabilities were discovered that could
+    allow for denial of service (application crashes) and possibly arbitrary
+    code execution and information disclosure. The first vulnerability occurs
+    in the iconv() function, where a remotely exploitable crash can occur with
+    an assertion failure when converting inputs from the IBM1390 or IBM1399
+    character sets. The next vulnerability is a heap buffer overflow which can
+    occur when calling the scanf() family of functions with a character match
+    from malloc (%md) if the format width specifier is greater than 1024. This
+    is a buffer overflow. The final vulnerability is in the ungetwc() function
+    when it is called on a FILE stream with wide characters encoded in a
+    character set that has overlaps between single byte and multi-byte
+    character encodings. This causes an attempt to read bytes before an
+    allocated buffer, resulting in potential disclosure of neighboring data
+    in the heap or a crash. In most cases, this causes an application crash.
+    Users should continue updating immediately due to the severity of these
+    vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4046">CVE-2026-4046</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5450">CVE-2026-5450</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5928">CVE-2026-5928</a>.</p>
+    <p>To fix these vulnerabilities, apply the consolidated patch from the glibc
+    page and rebuild glibc using the instructions from the current development
+    books for
+    <a href="../../lfs/view/development/chapter08/glibc.html">glibc (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter08/glibc.html">glibc (systemd)</a>.</p>
+    <p><em>Updating to glibc-2.43 on a LFS 12.4 system can be challenging because it
+    will cause numerous build failures, as well as memory corruption problems in
+    glib2, and problems with valgrind. Users who cannot upgrade to LFS 13.0 are
+    recommended to apply the consolidated patch to their systems, as well as the
+    security patch from SA-12.4-079, and rebuild glibc. The patch has been tested
+    against glibc-2.42 by one of the editors.</em></p>
+    <!-- Tested against glibc-2.42 as part of my continuing support for security
+    updates for LFS 12.4 systems. -renodr -->
+    <p><em>IF YOU UPDATE OR REBUILD GLIBC, PLEASE FOLLOW THE INSTRUCTIONS IN THAT
+    PAGE ABOUT UPDATING GLIBC VERY CAREFULLY. FAILURE TO DO SO MAY RESULT IN A
+    BROKEN SYSTEM.</em></p>
+    <p>The consolidated patch added to fix this set of vulnerabilities has the
+    added side effect of also resolving build failures with Linux-7.</p>
+
+    <a id="sa-13.0-066"/>
+    <h4>13.0 066 Linux Kernel (LFS)   Date: 2026-05-21  Severity: Critical</h4>
+    <p>In Linux-7.0.9 and 6.18.32, several recent high profile vulnerabilities
+    were resolved. These vulnerabilities have been termed CopyFail, DirtyFrag,
+    DirtyCrypt, and ssh-keysign-pwn. All four vulnerabilities allow for extremely
+    trivial privilege escalation, and CopyFail in particular overwrites the su
+    binary in memory via the page cache, allowing it to bypass any and all
+    password verification until the system has been rebooted. ssh-keysign-pwn
+    is named after one of the working exploits for this vulnerability, which
+    allows an unprivileged attacker to read the contents of ssh_host_*_key or
+    /etc/shadow (via the 'chage -l' command). All four of these vulnerabilities
+    have weaponized exploits available, and are under active exploitation at
+    this time. LFS versions back to LFS 9.1 are confirmed to be affected by
+    CopyFail, as are most distros from 2017 onwards as the functionality
+    required to exploit it is built into the kernel via 'make defconfig'.
+    At this time, two additional vulnerabilities of the CopyFail class termed
+    Fragnesia and PinTheft have not been resolved, but also are under active
+    exploitation. Note that while local privilege escalation has been identified
+    as one of the primary impacts, these vulnerabilities are being chained
+    together with exploits in other packages to give remote attackers root
+    access on a system once it has been compromised via other means. <em>ALL
+    users of LFS must immediately update to Linux-6.18.32 or 7.0.9.</em>
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46333">CVE-2026-46333</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31431">CVE-2026-31431</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-31635">CVE-2026-31635</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43284">CVE-2026-42384</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43500">CVE-2026-43500</a>.</p>
+    <p>Some additional resources about these vulnerabilities include
+    <a href="https://kb.wisc.edu/wiscel/161414">University of Wisconsin at Madison Alert for DirtyDecrypt</a>,
+    <a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html">Gentoo News regarding kernel vulnerabilities</a>,
+    <a href="https://github.com/V4bel/dirtyfrag/blob/master/assets/write-up.md">DirtyFrag Writeup</a>,
+    <a href="https://copy.fail/">CopyFail website</a>,
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-31431">US Government - KEV Catalog Entry for CopyFail</a>, and
+    <a href="https://www.openwall.com/lists/oss-security/2026/05/15/2">Qualys Security Advisory Mailing List Thread for ssh-keysign-pwn</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-7.0.9 or 6.18.32 or later
+    using the instructions from
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <p>If you are on a 13.0 or older system, the editors recommend using 6.18.32
+    as an additional patch will be required in Chapter 5 and Chapter 8 for glibc
+    due to changes in Linux-7.0. Linux-6.18.32 has been tested and known to work
+    on both LFS 12.4 (SysV) and LFS 13.0. The importance of these vulnerabilities
+    being fixed cannot be underscored enough. Immediate action must be taken
+    to protect your systems and your data. Please continue to monitor the
+    security advisories for additional information and take care of any existing
+    security updates to prevent further exposure for your system.</p>
+    <p>Additional stable kernel versions 6.12.90, 6.6.140, 6.6.173, 5.5.207,
+    and 5.10.256 were released for these issues but have not been tested by the
+    LFS editors.</p>
+
     <a id="sa-13.0-065"/>
-    <h4>13.0 065 Expat (LFS)   Date: 2026-04-30  Severity: Low</h4>
+    <h4>13.0 065 Expat (LFS)   Updated: 2026-05-22  Severity: Low</h4>
     <p>In Expat-2.8.0, a security vulnerability was fixed that could allow for
     hash flooding when processing a crafted XML file. The issue occurs due to
     insufficent entropy in the current hash flooding protection implementation,
@@ -87,13 +279,15 @@
     entropy using it's own internal machinery.
     This vulnerability has been assigned
     <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41080">CVE-2026-41080</a>.</p>
-    <p>To fix these vulnerabilities, update to Expat-2.8.0 or later using the
+    <p>To fix this vulnerability, update to Expat-2.8.0 or later using the
     instructions from the LFS book for
     <a href="../../lfs/view/development/chapter08/expat.html">Expat (sysv)</a> or
     <a href="../../lfs/view/systemd/chapter08/expat.html">Expat (systemd)</a>.</p>
     <p>Note: If you have installed docbook-utils from BLFS you will need to add
     "--without-docbook" to work around an error in configure, since our
     installation of docbook-utils uses SGML instead of XML.</p>
+    <p><em>Updated on 2026-05-22 for a minor grammar issue in the instructions
+    for resolving the vulnerability.</em></p>
 
     <a id="sa-13.0-064"/>
     <h4>13.0 064 inetutils (LFS)   Date: 2026-04-30  Severity: Critical</h4>
@@ -134,7 +328,7 @@
     <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
 
     <a id="sa-13.0-062"/>
-    <h4>13.0 062 x265   Date: 2026-04-30  Severity: Medium</h4>
+    <h4>13.0 062 x265   Date: 2026-05-22  Severity: Medium</h4>
     <p>In x265-4.2, three security vulnerabilities were fixed that could allow
     for a denial of service (excessive memory consumption) when utilizing the
     x265 command line tool, as well as when saving and loading analysis of a file,
@@ -149,6 +343,16 @@
     instructions for
     <a href="../view/svn/multimedia/x265.html">x265 (sysv)</a> or
     <a href="../view/systemd/multimedia/x265.html">x265 (systemd)</a>.</p>
+    <p>After updating x265, users will need to reinstall the following
+    packages on their system because of a SONAME bump:</p>
+    <ul>
+      <li>ffmpeg</li>
+      <li>VLC</li>
+      <li>gst-plugins-bad</li>
+      <li>libheif</li>
+    </ul>
+    <p><em>Updated on 2026-05-22 to document that several packages will need to
+    be rebuilt because of a SONAME bump.</em></p>
 
     <a id="sa-13.0-061"/>
     <h4>13.0 061 Ruby   Date: 2026-04-30  Severity: High</h4>

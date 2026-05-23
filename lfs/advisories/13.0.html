@@ -54,6 +54,15 @@
     book section for Glibc.  Follow it strictly or you may render the
     system completely unusable.</p>
 
+    <a id="sa-13.0-067"/>
+    <h4>13.0 067 glibc (LFS)  Date: 2026-05-22  Severity: Critical</h4>
+    <p>In glibc-2.43, three security vulnerabilities were discovered that could
+    allow for denial of service (application crashes) and possibly arbitrary
+    code execution and information disclosure. Users should rebuild glibc
+    with the consolidated patch in the development book immediately. Note that
+    rebuilding glibc should be done with extreme caution, and the instructions
+    on that page should be followed strictly to prevent a broken system.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-067">13.0-067</a></p>
 
     <a id="sa-13.0-021"/>
     <h4>13.0 021 glibc (LFS)  Date: 2026-04-01  Severity: High</h4>
@@ -85,14 +94,25 @@
 
     <h3>Expat</h3>
 
+    <a id="sa-13.0-069"/>
+    <h4>13.0 069 Expat (LFS)  Date: 2026-05-22  Severity: High</h4>
+    <p>In Expat-2.8.1, a security vulnerability was fixed that could allow for
+    a denial of service (application crash and excessive resource consumption)
+    when processing crafted XML input. The underlying problem was due to extreme
+    computational complexity of the attribute name collision checks. Update to
+    Expat-2.8.1 as soon as possible.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-069">13.0-069</a></p>
+
     <a id="sa-13.0-065"/>
-    <h4>13.0 065 Expat (LFS)   Date: 2026-04-30  Severity: Low</h4>
+    <h4>13.0 065 Expat (LFS)   Updated: 2026-05-22  Severity: Low</h4>
     <p>In Expat-2.8.0, a security vulnerability was fixed that could allow for
     hash flooding when processing a crafted XML file. The issue occurs due to
     insufficent entropy in the current hash flooding protection implementation,
     where 4 to 8 bytes of entropy are used on a salt when up to 16 are actually
     supported. Update to Expat-2.8.0.
     <a href="../../blfs/advisories/consolidated.html#sa-13.0-065">13.0-065</a></p>
+    <p><em>Updated on 2026-05-22 for a grammar fix in the consolidated advisory.
+    No changes were made to this page for this advisory.</em></p>
 
     <a id="sa-13.0-019"/>
     <h4>13.0 019 Expat (LFS)  Date: 2026-04-01  Severity: Medium</h4>
@@ -134,6 +154,38 @@
 
 <!-- end of libcap -->
 
+    <h3>Linux Kernel</h3>
+
+    <a id="sa-13.0-066"/>
+    <h4>13.0 066 Linux Kernel (LFS)   Date: 2026-05-21  Severity: Critical</h4>
+    <p>In Linux-7.0.9 and 6.18.32, several recent high profile vulnerabilities
+    were resolved. These vulnerabilities have been termed CopyFail, DirtyFrag,
+    DirtyCrypt, and ssh-keysign-pwn. All four vulnerabilities allow for extremely
+    trivial privilege escalation, and CopyFail in particular overwrites the su
+    binary in memory via the page cache, allowing it to bypass any and all
+    password verification until the system has been rebooted. ssh-keysign-pwn
+    is named after one of the working exploits for this vulnerability, which
+    allows an unprivileged attacker to read the contents of ssh_host_*_key or
+    /etc/shadow (via the 'chage -l' command). All four of these vulnerabilities
+    have weaponized exploits available, and are under active exploitation at
+    this time. LFS versions back to LFS 9.1 are confirmed to be affected by
+    CopyFail, as are most distros from 2017 onwards as the functionality
+    required to exploit it is built into the kernel via 'make defconfig'.
+    At this time, two additional vulnerabilities of the CopyFail class termed
+    Fragnesia and PinTheft have not been resolved, but also are under active
+    exploitation. Note that while local privilege escalation has been identified
+    as one of the primary impacts, these vulnerabilities are being chained
+    together with exploits in other packages to give remote attackers root
+    access on a system once it has been compromised via other means. <em>ALL
+    users of LFS must immediately update to Linux-6.18.32 or 7.0.9.</em>
+    The importance of updating cannot be underscored enough. Users also must
+    take care of other security updates to reduce exposure as soon as possible.
+    Please continue to monitor the Consolidated Advisories page for further
+    updates.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-066">13.0-066</a></p>
+
+<!-- end of Linux Kernel -->
+
     <h3>OpenSSL</h3>
 
     <a id="sa-13.0-039"/>
@@ -170,6 +222,16 @@
 
     <h3>Python</h3>
 
+    <a id="sa-13.0-070"/>
+    <h4>13.0 070 Python (LFS and BLFS)  Date: 2026-05-22  Severity: Critical</h4>
+    <p>In Python-3.14.5, three security vulnerabilities were fixed that could
+    allow for XML hash flooding, FTP connection redirection and port scanning
+    via FTP, and for the 'pip' command to install incorrect files based off the
+    name of an archive. Update to Python-3.14.5 with the security fixes patch.
+    Note that you must also update to Expat-2.8.0 or later to fully resolve the
+    XML hash flooding vulnerability.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-070">13.0-070</a></p>
+
     <a id="sa-13.0-038"/>
     <h4>13.0 038 Python (LFS and BLFS)  Date: 2026-04-15  Severity: Critical</h4>
     <p>In Python-3.14.4 (and 3.13.13), four security vulnerabilities were
@@ -201,6 +263,21 @@
 
 <!-- end of Python -->
 
+    <h3>sed</h3>
+
+    <a id="sa-13.0-068"/>
+    <h4>13.0 068 sed (LFS)  Date: 2026-05-22  Severity: Low</h4>
+    <p>In sed-4.10, a security vulnerability was fixed that could allow for an
+    attacker to overwrite a file with attacker-controlled content due to a
+    TOCTOU race condition. In order for this vulnerability to be exploited,
+    a user must invoke sed with both the '-i' and the '--follow-symlinks'
+    options, and an attacker must replace the target of a symlink within an
+    extremely small window of time. Because of this reason, upstream has
+    marked the vulnerability as low. Update to sed-4.10.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-068">13.0-068</a></p>
+
+<!-- end of sed -->
+
     <h3>systemd</h3>
 
     <a id="sa-13.0-008"/>
@@ -230,6 +307,15 @@
 <!-- end of Util-Linux -->
 
     <h3>vim</h3>
+
+    <a id="sa-13.0-071"/>
+    <h4>13.0 071 vim (LFS and BLFS)  Date: 2026-05-22  Severity: Medium</h4>
+    <p>In vim-9.2.0481, four security vulnerabilities were fixed that could
+    allow for a denial of service (application crash), for OS Command Injection,
+    and for vimscript code injection. Users who use vimscript, perform spell
+    checking, use the ':find' command, or who view arbitrary tar files using
+    vim are advised to update. Update to vim-9.2.0481.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-071">13.0-071</a></p>
 
     <a id="sa-13.0-063"/>
     <h4>13.0 063 vim (LFS and BLFS)   Date: 2026-04-30  Severity: Medium</h4>
