@@ -75,6 +75,62 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-077"/>
+    <h4>13.0 077 Wireshark  Date: 2026-05-13  Severity: High</h4>
+    <p>In Wireshark-4.6.5, thirty-nine security vulnerabilities were fixed that
+    could allow for denial of service and potentially remote code execution
+    when picking up crafted packets on a network, when using the sharkd utility,
+    and when importing profiles from other systems. These specifically impact
+    the HTTP, SMB2, GSM RP, WebSocket, RPKI-Router, MBIM, OpenFlow v5, OpenFlow
+    v6, GNW, MySQL, IEEE 802.11, RTSP, ASN.1 PER, TLS, iLBC, DCP-ETSI, SANE,
+    Kismet, USB HID, DLMS/COSEM, ZigBee, BEEP, iLBC, SDP, AMR-NB, RDP, SBC,
+    K12 RF5, AFP, ICMPv6, FC-SWILS, BT-DHT, and Monero packet and protocol
+    dissectors. All users who have Wireshark installed should upgrade since
+    several of these protocols are commonly used on networks.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5409">CVE-2026-5409</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5408">CVE-2026-5408</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5406">CVE-2026-5406</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5407">CVE-2026-5407</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5299">CVE-2026-5299</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5401">CVE-2026-5401</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5402">CVE-2026-5402</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5404">CVE-2026-5404</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5403">CVE-2026-5403</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5405">CVE-2026-5405</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5654">CVE-2026-5464</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5655">CVE-2026-5655</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5657">CVE-2026-5657</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5656">CVE-2026-5656</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5653">CVE-2026-5653</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6538">CVE-2026-6538</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6537">CVE-2026-6537</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6536">CVE-2026-6536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6535">CVE-2026-6535</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6534">CVE-2026-6534</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6533">CVE-2026-6533</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6532">CVE-2026-6532</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6531">CVE-2026-6531</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6530">CVE-2026-6530</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6529">CVE-2026-6529</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6528">CVE-2026-6528</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6527">CVE-2026-6527</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6526">CVE-2026-6526</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6525">CVE-2026-6525</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6524">CVE-2026-6524</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6523">CVE-2026-6523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6521">CVE-2026-6521</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6520">CVE-2026-6520</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6519">CVE-2026-6519</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6522">CVE-2026-6522</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6870">CVE-2026-6870</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6869">CVE-2026-6869</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6868">CVE-2026-6868</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.6.5 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-13.0-076"/>
     <h4>13.0 076 GnuTLS  Date: 2026-05-13  Severity: Critical</h4>
     <p>In GnuTLS-3.8.13, thirteen vulnerabilities were fixed that could allow
