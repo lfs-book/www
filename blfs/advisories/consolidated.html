@@ -75,6 +75,32 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-078"/>
+    <h4>13.0 078 glib  Date: 2026-05-13  Severity: High</h4>
+    <p>In glib-2.88.1, nine security vulnerabilities were fixed that could
+    allow for remote code execution, denial of service (application crashes),
+    and path traversal leading to arbitrary file reads. These issues occur in
+    a variety of different functions including GMarkup, GVariant, GDateTime,
+    GDateTime, and GDBus. One of the notable issues is a flag confusion issue
+    in GRegex which can result in an unbounded out-of-bounds read off the
+    start of a regex input string. Most of them are out-of-bounds reads,
+    off-by-one errors, buffer over-reads, and an integer overflow.
+    These vulnerabilities have not been assigned CVEs, but additional details
+    about them can be found from the upstream bug reports:
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3915">#3915</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3916">#3916</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3917">#3917</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3918">#3918</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3919">#3919</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3925">#3925</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3930">#3930</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3931">#3931</a>, and
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3933">#3933</a>.</p>
+    <p>To fix these vulnerabilities, update to glib-2.88.1 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+
     <a id="sa-13.0-077"/>
     <h4>13.0 077 Wireshark  Date: 2026-05-13  Severity: High</h4>
     <p>In Wireshark-4.6.5, thirty-nine security vulnerabilities were fixed that
