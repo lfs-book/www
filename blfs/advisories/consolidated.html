@@ -75,6 +75,20 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-085"/>
+    <h4>13.0 085 ffmpeg  Date: 2026-05-24  Severity: High</h4>
+    <p>In ffmpeg-8.1.1, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when processing media files.
+    This can be remotely exploited with no user interaction in web browsers
+    and media player contexts. The underlying problem is an out-of-bounds
+    read in the read_global_param() function. The only impact is a crash.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30997">CVE-2026-30997</a>.</p>
+    <p>To fix this vulnerability, update to ffmpeg-8.1.1 or later using the
+    instructions from
+    <a href="../view/svn/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
+    <a href="../view/systemd/multimedia/ffmpeg.html">ffmpeg (systemd)</a>.</p>
+
     <a id="sa-13.0-084"/>
     <h4>13.0 084 Postfix  Date: 2026-05-24  Severity: High</h4>
     <p>In Postfix-3.11.2, a security vulnerability was fixed that could allow
