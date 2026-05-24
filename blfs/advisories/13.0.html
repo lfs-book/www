@@ -810,6 +810,23 @@
 
 <!-- end of systemd -->
 
+    <h3>Text::CSV_XS</h3>
+
+    <a id="sa-13.0-082"/>
+    <h4>13.0 082 Text::CSV_XS  Date: 2026-05-24  Severity: High</h4>
+    <p>In Text::CSV_XS-1.62, a security vulnerability was fixed that could
+    allow for type confusion or denial of service (application crashes). This
+    can show up in crafted CSV input passed to this Perl module, and occurs
+    due to a use-after-free when registered callbacks extend the Perl argument
+    stack. This Perl module is only used by Biber in BLFS, so users who have
+    that package installed and who process untrusted input will want to update.
+    Users who have written Perl code that utilizes this module  will also
+    want to update if they use the Parse, print, getline, or getline_all
+    methods in their code. Update to Text::CSV_XS-1.62.
+    <a href="consolidated.html#sa-13.0-082">13.0-082</a></p>
+
+<!-- end of Text::CSV_XS -->
+
     <h3>Thunderbird</h3>
 
     <a id="sa-13.0-074"/>
