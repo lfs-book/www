@@ -726,6 +726,22 @@
 
     <h3>rsync</h3>
 
+    <a id="sa-13.0-083"/>
+    <h4>13.0 083 rsync  Date: 2026-05-24  Severity: High</h4>
+    <p>In rsync-3.4.3, six security vulnerabilities were fixed that could
+    allow for local privilege escalation, remotely exploitable file overwrites,
+    hostname/ACL bypasses, remotely exploitable information disclosure (leaking
+    process memory contents including passwords, heap and library pointers, and
+    environment variables), and remotely exploitable denial of service (daemon
+    crashes). The default BLFS configuration is affected by three of these
+    vulnerabilities, while the other three are only exploitable when a user
+    has RSYNC_PROXY set or when the server is running with "daemon chroot = no".
+    The vulnerabilities that the default configuration is affected by include
+    the remotely exploitable information disclosure and the two denial of
+    service issues. Update to rsync-3.4.3 immediately, especially if you are
+    running the rsyncd daemon.
+    <a href="consolidated.html#sa-13.0-083">13.0-083</a></p>
+
     <a id="sa-13.0-053"/>
     <h4>13.0 053 rsync  Date: 2026-04-29  Severity: High</h4>
     <p>In rsync-3.4.1, a security vulnerability was discovered which could
@@ -739,7 +755,6 @@
 <!-- end of rsync -->
 
     <h3>Ruby</h3>
-
 
     <a id="sa-13.0-061"/>
     <h4>13.0 061 Ruby   Date: 2026-04-30  Severity: High</h4>
