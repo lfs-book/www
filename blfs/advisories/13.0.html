@@ -524,6 +524,21 @@
 
 <!-- end of lxml (Python Module) -->
 
+    <h3>MIT Kerberos V5</h3>
+
+    <a id="sa-13.0-081"/>
+    <h4>13.0 081 MIT Kerberos V5  Date: 2026-05-24  Severity: Medium</h4>
+    <p>In krb5-1.22.2, two security vulnerabilities were discovered that could
+    allow for remotely exploitable denial of service (Kerberos server crash).
+    These issues are caused by a null pointer dereference and a read overrun
+    when the krb5-kdc daemon recieves crafted input during authentication.
+    This can allow unauthenticated remote attackers to crash the daemon. Memory
+    disclosure does not appear to be possible. The client libraries and programs
+    are not affected. Apply the security fixes patch if you are using the server.
+    <a href="consolidated.html#sa-13.0-081">13.0-081</a></p>
+
+<!-- end of MIT Kerberos V5 -->
+
     <h3>nfs-utils</h3>
 
     <a id="sa-13.0-007"/>

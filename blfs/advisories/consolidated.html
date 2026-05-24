@@ -75,6 +75,24 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-081"/>
+    <h4>13.0 081 MIT Kerberos V5  Date: 2026-05-24  Severity: Medium</h4>
+    <p>In krb5-1.22.2, two security vulnerabilities were discovered that could
+    allow for remotely exploitable denial of service (Kerberos server crash).
+    These issues are caused by a null pointer dereference and a read overrun
+    when the krb5-kdc daemon recieves crafted input during authentication.
+    This can allow unauthenticated remote attackers to crash the daemon. Memory
+    disclosure does not appear to be possible. The client libraries and programs
+    are not affected. Users only need to apply the security fixes patch if
+    they are using the server components and are experiencing crashes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40355">CVE-2026-40355</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40356">CVE-2026-40356</a>.</p>
+    <p>To fix these vulnerabilities, apply the security fixes patch to krb5
+    using the instructions from
+    <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5 (sysv)</a> or
+    <a href="../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5 (systemd)</a>.</p>
+
     <a id="sa-13.0-080"/>
     <h4>13.0 080 lcms2  Date: 2026-05-13  Severity: High</h4>
     <p>In lcms-2.19, a security vulnerability was fixed that could allow for
