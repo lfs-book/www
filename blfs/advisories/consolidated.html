@@ -75,6 +75,23 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-088"/>
+    <h4>13.0 088 libgpg-error  Date: 2026-05-24  Severity: High</h4>
+    <p>In libgpg-error-1.61, two security vulnerabilities were fixed that
+    could allow for a denial of service (application crash) and possibly
+    arbitrary code execution. These issues occur in the es_printf() and the
+    vfnameconcat functions, where a stack overflow is possible in the
+    es_printf() function using the %.100f format, and an out-of-bounds read
+    is possible in the vfnameconcat function. The buffer overflow is known
+    to be exploitable in some circumstances.
+    No CVEs were assigned for these vulnerabilities, however more details
+    can be found at the
+    <a href="https://dev.gnupg.org/T8239.html">libgpg-error release notes</a>.</p>
+    <p>To fix these vulnerabilities, update to libgpg-error-1.61 or later using
+    the instructions from
+    <a href="../view/svn/general/libgpg-error.html">libgpg-error (sysv)</a> or
+    <a href="../view/systemd/general/libgpg-error.html">libgpg-error (systemd)</a>.</p>
+
     <a id="sa-13.0-087"/>
     <h4>13.0 087 cURL  Date: 2026-05-24  Severity: Medium</h4>
     <p>In cURL-8.20.0, seven security vulnerabilities were fixed that could
