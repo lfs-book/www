@@ -75,6 +75,31 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-087"/>
+    <h4>13.0 087 cURL  Date: 2026-05-24  Severity: Medium</h4>
+    <p>In cURL-8.20.0, seven security vulnerabilities were fixed that could
+    allow for cleartext transmission of sensitive information (due to invalid
+    connection reuse), for authentication bypass when using HTTP Negotiate, for
+    SMB connections to download or upload the wrong file, for proxy credentials
+    to be leaked when using a proxy to connect to a second proxy, for cookie
+    leaks, for credentials to be exposed to remote servers when using a .netrc
+    file, and for cross-proxy Digest authentication state leakage. Note that
+    the cleartext transmission of sensitive information vulnerability requires
+    the usage of an IMAP, POP, or SMTP URL scheme, and that SMB support is
+    disabled by default and only supports the long outdated SMB1.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4873">CVE-2026-4873</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5545">CVE-2026-5545</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5773">CVE-2026-5773</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6523">CVE-2026-6523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6276">CVE-2026-6276</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6429">CVE-2026-6429</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7168">CVE-2026-7168</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.20.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
     <a id="sa-13.0-086"/>
     <h4>13.0 086 FreeRDP  Date: 2026-05-24  Severity: High</h4>
     <p>In FreeRDP-3.26.0, four security vulnerabilities were fixed that could
