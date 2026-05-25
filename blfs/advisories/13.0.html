@@ -930,6 +930,23 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>urllib3</h3>
+
+    <a id="sa-13.0-089"/>
+    <h4>13.0 089 urllib3  Date: 2026-05-24  Severity: High</h4>
+    <p>In urllib3-2.7.0, two security vulnerabilities were fixed that could
+    allow for sensitive headers to be forwarded across origins, and for
+    denial of service (significant CPU usage and massive memory consumption).
+    The sensitive header forwarding vulnerability occurs if a program calls
+    the ProxyManager.connection_from_url() function and they allow cross
+    origin redirects. The denial of service vulnerability occurs because
+    of a decompression bomb exploitable in the streaming API. Note that users
+    will also want to be on at least brotli-1.2.0 to prevent additional impacts
+    from this vulnerability. Update to urllib3-2.7.0.
+    <a href="consolidated.html#sa-13.0-089">13.0-089</a></p>
+
+<!-- end of urllib3 -->
+
     <h3>vim</h3>
 
     <a id="sa-13.0-071"/>
