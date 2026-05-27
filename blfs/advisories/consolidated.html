@@ -75,6 +75,22 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-093"/>
+    <h4>13.0 093 GnuPG  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In GnuPG-2.5.20, several security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when processing crafted
+    certificates, utilizing SC-HSM SmartCards, processing key signatures, and
+    using the 'gpgsm' utility. The only known impact of these problems is a
+    crash, and users should upgrade if they start experiencing crashes out of
+    the 'gpg' or 'gpgsm' commands when utilizing untrusted input.
+    There have not been any CVEs assigned to these vulnerabilities, but details
+    can be found at the
+    <a href="https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000505.html">GnuPG 2.5.20 Release Notes</a>.</p>
+    <p>To fix these vulnerabilities, update to GnuPG-2.5.20 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+
     <a id="sa-13.0-092"/>
     <h4>13.0 092 libwww-perl  Date: 2026-05-26  Severity: Medium</h4>
     <p>In libwww-perl-6.83, a security vulnerability was fixed that could allow
