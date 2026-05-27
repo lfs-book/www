@@ -826,6 +826,20 @@
 
 <!-- end of Python -->
 
+    <h3>Qt6</h3>
+
+    <a id="sa-13.0-096"/>
+    <h4>13.0 096 Qt6  Date: 2026-05-26  Severity: High</h4>
+    <p>In Qt6-6.11.1, a security vulnerability was fixed in the QtSVG module
+    that could allow for a denial of service (application crash) when loading
+    a crafted SVG image. This issue occurs due to an out of bounds read when
+    processing SVG marker references, followed by an infinite recursion problem.
+    This can be exploitable remotely in the context of web browsers that use
+    QtWebEngine, such as Falkon. Update to Qt6-6.11.1.
+    <a href="consolidated.html#sa-13.0-096">13.0-096</a></p>
+
+<!-- end of Qt6 -->
+
     <h3>QtWebEngine</h3>
 
     <a id="sa-13.0-026"/>
