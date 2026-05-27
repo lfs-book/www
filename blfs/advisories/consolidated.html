@@ -75,6 +75,24 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-095"/>
+    <h4>13.0 095 lxml (Python Module)  Date: 2026-05-26  Severity: High</h4>
+    <!-- Rating as High as very few details are available. The Fedora
+    advisory linked in the release notes is still not public yet. -->
+    <p>In lxml-6.1.1, a security vulnerability was fixed that can be
+    used for URL bypass attacks in embedded SVG, MathML, and other HTML5
+    content. This issue occurs because the known link attributes from the
+    'lxml.html.defs.link_attrs' set was missing 'xlink:href', which
+    allowed for unauthorized files to be loaded.
+    No details are available publicly about this vulnerability because the
+    upstream advisory has not been published yet, but when it is available,
+    it can be found at
+    <a href="https://github.com/fedora-python/lxml_html_clean/security/advisories/GHSA-4jhm-jv67-739f">the GitHub Security Advisory</a>.</p>
+    <p>To fix this vulnerability, update to lxml-6.1.1 or later using the
+    instructions from
+    <a href="../view/svn/general/python-modules.html#lxml">lxml (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#lxml">lxml (systemd)</a>.</p>
+
     <a id="sa-13.0-094"/>
     <h4>13.0 094 libpng  Date: 2026-05-26  Severity: Medium</h4>
     <p>In libpng-1.6.58's libpng-1.6.58-apng patch, a security vulnerability
