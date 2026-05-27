@@ -357,6 +357,21 @@
 
     <h3>gstreamer</h3>
 
+    <a id="sa-13.0-091"/>
+    <h4>13.0 091 gstreamer  Date: 2026-05-26  Severity: High</h4>
+    <p>In gstreamer, gst-plugins-bad, and gst-plugins-good-1.28.3, six security
+    vulnerabilities were fixed that could allow for arbitrary code execution,
+    data corruption, denial of service (application crashes), and information
+    disclosure of sensitive memory contents. These vulnerabilities occur in the
+    H.266/VVC parser, the MXF demuxer, the MOV/MP4 demuxer, the MPEG PS PES
+    header parser, and the core GStreamer libraries themselves. Because the
+    gstreamer suite is used in a variety of contexts (including audio/video
+    editors, media players, and web browsers), and the fact that one of the
+    arbitrary code execution and data corruption vulnerabilities is in the
+    core of gstreamer itself, all users who have the suite installed should
+    update as soon as possible. Update the gstreamer stack to 1.28.3.
+    <a href="consolidated.html#sa-13.0-091">13.0-091</a></p>
+
     <a id="sa-13.0-036"/>
     <h4>13.0 036 gstreamer  Date: 2026-04-08  Severity: High</h4>
     <p>In gst-plugins-base, gst-plugins-bad, and gst-plugins-good 1.28.2,
@@ -657,7 +672,6 @@
 <!-- end of OpenSSH -->
 
     <h3>PHP</h3>
-
 
     <a id="sa-13.0-090"/>
     <h4>13.0 090 PHP  Date: 2026-05-26  Severity: Critical</h4>
