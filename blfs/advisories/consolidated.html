@@ -75,6 +75,25 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-094"/>
+    <h4>13.0 094 libpng  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In libpng-1.6.58's libpng-1.6.58-apng patch, a security vulnerability
+    was fixed that could allow for chunk smuggling in the push-mode APNG
+    parser. This can allow for crafted APNG images to cause a denial of service
+    (application crash). Note that this cannot cause code execution because
+    the compressed output of some APNG images write into a pre-allocated row
+    buffer. However, in BLFS, libpng's APNG support is heavily utilized with
+    Firefox, Thunderbird, and Seamonkey. Users who use those packages should
+    apply this update to their systems.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40930">CVE-2026-40930</a>.</p>
+    <p>Additional details can be found in the
+    <a href="https://github.com/pnggroup/libpng/security/advisories/GHSA-c4v6-gxrq-6g2x">GitHub Security Advisory</a>.</p>
+    <p>To fix this vulnerability, update to libpng-1.6.58 or later with the
+    updated apng patch using the instructions from
+    <a href="../view/svn/general/libpng.html">libpng (sysv)</a> or
+    <a href="../view/systemd/general/libpng.html">libpng (systemd)</a>.</p>
+
     <a id="sa-13.0-093"/>
     <h4>13.0 093 GnuPG  Date: 2026-05-26  Severity: Medium</h4>
     <p>In GnuPG-2.5.20, several security vulnerabilities were fixed that could

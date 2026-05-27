@@ -500,6 +500,18 @@
 
     <h3>libpng</h3>
 
+    <a id="sa-13.0-094"/>
+    <h4>13.0 094 libpng  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In libpng-1.6.58's libpng-1.6.58-apng patch, a security vulnerability
+    was fixed that could allow for chunk smuggling in the push-mode APNG
+    parser. This can allow for crafted APNG images to cause a denial of service
+    (application crash). Note that this cannot cause code execution because
+    the compressed output of some APNG images write into a pre-allocated row
+    buffer. However, in BLFS, libpng's APNG support is heavily utilized with
+    Firefox, Thunderbird, and Seamonkey. Users who use those packages should
+    apply this update to their systems. Update to libpng-1.6.58.
+    <a href="consolidated.html#sa-13.0-094">13.0-094</a></p>
+
     <a id="sa-13.0-047"/>
     <h4>13.0 047 libpng   Date: 2026-04-15  Severity: Medium</h4>
     <p>In libpng-1.6.57, a security vulnerability was fixed that could allow for
