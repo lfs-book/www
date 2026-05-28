@@ -75,6 +75,55 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-098"/>
+    <h4>13.0 098 Linux Kernel (LFS)  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In Linux-7.0.10 and 6.18.33, two security vulnerabilities were fixed
+    that could allow for local privilege escalation. These are amongst the
+    same class as CopyFail, as both of them have proof of concept exploits that
+    allow for extremely trivial local privilege escalation by overwriting a
+    version of /usr/bin/su in the page cache, which is never written to disk.
+    The first vulnerability has been termed Fragnesia, and it involved the
+    XFRM ESP-in-TCP subsystem in the kernel which is enabled by default via
+    a 'make defconfig'. Because of this, it is reasonably assumed that all
+    LFS users who are running a Linux-4.9.x kernel or later are affected by
+    this issue (and the first release of LFS to include a kernel affected
+    was LFS 8.0). The other vulnerability has been termed PinTheft, which
+    affected the RDS module combined with the io_uring subsystem. Thankfully
+    though the RDS module is not enabled by default in the kernel, so only
+    users who have explicitly enabled CONFIG_RDS are vulnerable to this
+    issue. The first LFS version affected by this issue is 8.3 (from 2018).
+    Similar to CopyFail and other derivatives, these vulnerabilities disable
+    password authentication for 'su' until the system is rebooted or the page
+    cache is emptied. Note that while local privilege escalation has been
+    identified as one of the primary impacts, these vulnerabilities are being
+    chained together with exploits in other packages to give remote attackers
+    root access on a system once it has been compromised via other means.
+    <em>ALL users of LFS must immediately update to Linux-6.18.33 or 7.0.10.</em>
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300">CVE-2026-46300</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43494">CVE-2026-43494</a>.</p>
+    <p>Additional information about these issues can be found at
+    <a href="https://github.com/v12-security/pocs/tree/main/fragnesia">the Fragnesia writeup</a>,
+    <a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html">Gentoo's statement about Fragnesia</a>,
+    <a href="https://tuxcare.com/blog/fragnesia-cve-2026-46300/">TuxCare post about Fragnesia</a>,
+    <a href="https://blog.cloudlinux.com/pintheft-cloudlinux-platforms-not-affected">CloudLinux post about PinTheft</a>, and
+    <a href="https://github.com/v12-security/pocs/tree/main/pintheft">the PinTheft writeup</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-7.0.10 or 6.18.33 or later
+    using the instructions from
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <p>If you are on a 13.0 or older system, the editors recommend using 6.18.33
+    as an additional patch will be required in Chapter 5 and Chapter 8 for glibc
+    due to changes in Linux-7.0. Linux-6.18.33 has been tested and known to work
+    on both LFS 12.4 (SysV) and LFS 13.0. The importance of these vulnerabilities
+    being fixed cannot be underscored enough. Immediate action must be taken
+    to protect your systems and your data. Please continue to monitor the
+    security advisories for additional information and take care of any existing
+    security updates to prevent further exposure for your system.</p>
+    <p>Additional stable kernel versions 6.12.91, 6.6.141, 6.6.174, 5.15.208,
+    and 5.10.257 were released for these issues but have not been tested by the
+    LFS editors.</p>
+
     <a id="sa-13.0-097"/>
     <h4>13.0 097 QtWebEngine  Date: 2026-05-28  Severity: Critical</h4>
     <p>In QtWebEngine-6.11.1, 153 security vulnerabilities were fixed that
@@ -1118,7 +1167,7 @@
     to protect your systems and your data. Please continue to monitor the
     security advisories for additional information and take care of any existing
     security updates to prevent further exposure for your system.</p>
-    <p>Additional stable kernel versions 6.12.90, 6.6.140, 6.6.173, 5.5.207,
+    <p>Additional stable kernel versions 6.12.90, 6.6.140, 6.6.173, 5.15.207,
     and 5.10.256 were released for these issues but have not been tested by the
     LFS editors.</p>
 
