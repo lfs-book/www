@@ -143,6 +143,22 @@
 
 <!-- end of dash -->
 
+    <h3>Evince</h3>
+
+    <a id="sa-13.0-101"/>
+    <h4>13.0 101 Evince  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In Evince-48.4, a security vulnerability was fixed that could allow for
+    trivial remote code execution when opening a crafted PDF file. This issue
+    occurs due to argv injection via the /GoToR action, and a proof of concept
+    is public as well as a generator for malicious PDFs. The vulnerability
+    simply relies on a user opening a crafted PDF file to exploit, no further
+    interaction by the user is required. All users who have Evince installed
+    need to update immediately, especially if they review PDFs sent to them
+    from other sources. Update to Evince-48.4.
+    <a href="consolidated.html#sa-13.0-101">13.0-101</a></p>
+
+<!-- end of Evince -->
+
     <h3>Exiv2</h3>
 
     <a id="sa-13.0-004"/>
