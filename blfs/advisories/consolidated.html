@@ -75,6 +75,46 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-103"/>
+    <h4>13.0 103 libheif  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In libheif-1.22.2, 21 security vulnerabilities were fixed that could
+    allow for denial of service (application crashes, system resource
+    exhaustion, and memory corruption), information disclosure, remote
+    code execution, and arbitrary code execution. These issues occur due to
+    a large variety of problems, including out-of-bounds read/writes, heap
+    buffer overflows, integer overflows, and NULL pointer dereferences. The
+    issues can be exploited by processing crafted HEIF images. All users who
+    have libheif installed should update immediately due to several of the
+    issues allowing for code execution, especially as the attacker will have
+    full control over the overflowed content since some issues have to do with
+    Chroma pixel values.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32738">CVE-2026-32738</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32739">CVE-2026-32739</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32740">CVE-2026-32740</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32741">CVE-2026-32741</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32814">CVE-2026-32814</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32882">CVE-2026-32882</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41069">CVE-2026-41069</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41071">CVE-2026-41071</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47178">CVE-2026-47178</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47247">CVE-2026-47247</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47251">CVE-2026-47251</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47254">CVE-2026-47254</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47709">CVE-2026-47709</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47714">CVE-2026-47714</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48029">CVE-2026-48029</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-95jx-g5vf-cpp8">GHSA-95jx-g5vf-cpp8</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-p4r6-6972-g26m">GHSA-p4r6-6972-g26m</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-jh2w-m72q-q595">GHSA-jh2w-m72q-q595</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-9h96-c44j-jpq9">GHSA-9h96-c44j-jpq9</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-r7qj-cg5r-r6vf">GHSA-r7qj-cg5r-r6vf</a>, and
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-5hqq-636x-r3cr">GHSA-5hqq-636x-r3cr</a>.</p>
+    <p>To fix these vulnerabilities, update to libheif-1.22.2 or later using
+    the instructions from
+    <a href="../view/svn/general/libheif.html">libheif (sysv)</a> or
+    <a href="../view/systemd/general/libheif.html">libheif (systemd)</a>.</p>
+
     <a id="sa-13.0-102"/>
     <h4>13.0 102 HTML::Parser  Date: 2026-05-28  Severity: High</h4>
     <p>In HTML::Parser-3.85, a security vulnerability was fixed that could
