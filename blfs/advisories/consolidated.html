@@ -75,6 +75,39 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-105"/>
+    <h4>13.0 105 MariaDB  Date: 2026-05-29  Severity: High</h4>
+    <p>In MariaDB-11.8.7, five security vulnerabilities were fixed that could
+    allow for SQL injection, arbitrary shell command execution, path traversal,
+    and authorization bypasses. The SQL injection vulnerability occurs when a
+    database uses the big5 character set because mysql_real_escape_string() did
+    not properly handle this character set. The arbitrary shell command execution
+    issue occurs when restoring a database made via the mariabackup SST method,
+    because some parameters were not properly validated. The path traversal
+    issue occurs when utilizing mbstream, as mbstream did not check for /../
+    when unpacking an archive. This allows for an archive to create files
+    outside of the target directory path. The first authorization bypass
+    occurs in role-based routine-level privilege checks, where a user getting
+    EXECUTE access to a stored routine can see the routine definition even
+    without SHOW CREATE ROUTINE privilges. The other authorization bypass issue
+    occurs because MariaDB allowed SELECT ... INTO OUTFILE and SELECT ... INTO
+    DUMPFILE without verifying the FILE privilege if the FROM clause only
+    contained subqueries. All users who have a MariaDB server running should
+    update, but users only using the client functionality are safe from these
+    vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44173">CVE-2026-44173</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44172">CVE-2026-44172</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44171">CVE-2026-44171</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44169">CVE-2026-44169</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44168">CVE-2026-44168</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-11.8.7 or later using
+    the instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <p>Alternatively, users may update to MariaDB-11.4.11, 10.11.17, or 10.6.26,
+    but note that these have not been tested by the BLFS team.</p>
+
     <a id="sa-13.0-104"/>
     <h4>13.0 104 HTTP::Daemon  Date: 2026-05-29  Severity: Critical</h4>
     <p>In HTTP::Daemon-6.17, a security vulnerability was fixed that could
