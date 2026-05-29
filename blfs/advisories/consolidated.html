@@ -75,6 +75,21 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-102"/>
+    <h4>13.0 102 HTML::Parser  Date: 2026-05-28  Severity: High</h4>
+    <p>In HTML::Parser-3.85, a security vulnerability was fixed that could
+    allow for a denial of service (application crash) when processing a
+    crafted HTML file. The issue occurs when decoding UTF-8 entities, and
+    is classifed as a heap use-after-free. From an analysis of the fix however,
+    the only known impact is an application crash. Users who are using the
+    HTML::Parser perl module and encounter crashes should upgrade.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8829">CVE-2026-8829</a>.</p>
+    <p>To fix this vulnerability, update to HTML::Parser-3.85 or later using
+    the instructions from
+    <a href="../view/svn/general/perl-modules.html#perl-html-parser">HTML::Parser (sysv)</a> or
+    <a href="../view/systemd/general/perl-modules.html#perl-html-parser">HTML::Parser (systemd)</a>.</p>
+
     <a id="sa-13.0-101"/>
     <h4>13.0 101 Evince  Date: 2026-05-28  Severity: Critical</h4>
     <p>In Evince-48.4, a security vulnerability was fixed that could allow for
