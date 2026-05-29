@@ -75,6 +75,26 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-104"/>
+    <h4>13.0 104 HTTP::Daemon  Date: 2026-05-29  Severity: Critical</h4>
+    <p>In HTTP::Daemon-6.17, a security vulnerability was fixed that could
+    allow for OS Command Injection while processing untrusted input passed into
+    the send_file() function. It is also possible for the read-pipe form to
+    leak subprocess stdout output into an HTTP request body, and the write-mode
+    form can create or truncate files at attacker chosen paths. In BLFS, this
+    module is only used by the test suite for Wget. However, users who may have
+    written code that uses this module should update this package immediately,
+    especially if they are running it as a publicly-accessible HTTP server.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8450">CVE-2026-8450</a>.</p>
+    <p>To fix this vulnerability, update to HTTP::Daemon-6.17 or later using
+    the instructions from
+    <a href="../view/svn/general/perl-modules.html#perl-http-daemon">HTTP::Daemon (sysv)</a> or
+    <a href="../view/systemd/general/perl-modules.html#perl-http-daemon">HTTP::Daemon (systemd)</a>.</p>
+    <p>Note that the dependencies and build instructions for this package have
+    changed significantly. Please pay extra attention to these changes when
+    updating this package.</p>
+
     <a id="sa-13.0-103"/>
     <h4>13.0 103 libheif  Date: 2026-05-28  Severity: Critical</h4>
     <p>In libheif-1.22.2, 21 security vulnerabilities were fixed that could

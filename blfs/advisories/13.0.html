@@ -317,6 +317,23 @@
 
 <!-- end of HTML::Parser -->
 
+    <h3>HTTP::Daemon</h3>
+
+    <a id="sa-13.0-104"/>
+    <h4>13.0 104 HTTP::Daemon  Date: 2026-05-29  Severity: Critical</h4>
+    <p>In HTTP::Daemon-6.17, a security vulnerability was fixed that could
+    allow for OS Command Injection while processing untrusted input passed into
+    the send_file() function. It is also possible for the read-pipe form to
+    leak subprocess stdout output into an HTTP request body, and the write-mode
+    form can create or truncate files at attacker chosen paths. In BLFS, this
+    module is only used by the test suite for Wget. However, users who may have
+    written code that uses this module should update this package immediately,
+    especially if they are running it as a publicly-accessible HTTP server.
+    Update to HTTP::Daemon-6.17.
+    <a href="consolidated.html#sa-13.0-104">13.0-104</a></p>
+
+<!-- end of HTTP::Daemon -->
+
     <h3>ghostscript</h3>
 
     <a id="sa-13.0-100"/>
