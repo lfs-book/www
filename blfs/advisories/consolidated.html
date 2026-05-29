@@ -75,6 +75,43 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-108"/>
+    <h4>13.0 108 PostgreSQL  Date: 2026-05-29  Severity: High</h4>
+    <p>In PostgreSQL-18.4 (and 17.10 for *LFS 12.4 users), eleven security
+    vulnerabilities were fixed that could allow for SQL injection, denial
+    of service (application crashes), authentication bypasses, information
+    disclosure, arbitrary unrelated file overwrites when restoring backups,
+    remote code execution on client systems, password disclosure, and remote
+    code execution on PostgreSQL servers. These issues occur due to a variety
+    of situations, including when performing queries, running the timeofday()
+    function, creating objects, restoring backups, creating subscriptions,
+    accessing a PostgreSQL database from a client, authenticating to a server
+    that uses MD5 password hashing, when executing REFRESH PUBLICATION on a
+    subscription, and when updating columns in a database. Since one of the
+    vulnerabilities allows a superuser on a server to overwrite stack memory
+    in clients, all users who have PostgreSQL installed should update as soon
+    as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6638">CVE-2026-6638</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6637">CVE-2026-6637</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6575">CVE-2026-6575</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6479">CVE-2026-6479</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6478">CVE-2026-6478</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6477">CVE-2026-6477</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6476">CVE-2026-6476</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6475">CVE-2026-6475</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6474">CVE-2026-6474</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6473">CVE-2026-6473</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6472">CVE-2026-6472</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-18.4 (or 17.10) or
+    later using the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+    <p>Users may alternatively consider updating to 16.14, 15.18, or 14.23, but
+    note that the BLFS team has not verified that these versions work.</p>
+    <p>Users who update between major versions of PostgreSQL should pay close
+    attention to the upgrade instructions on the PostgreSQL page.</p>
+
     <a id="sa-13.0-107"/>
     <h4>13.0 107 XML::LibXML  Date: 2026-05-29  Severity: High</h4>
     <p>In XML::LibXML-2.013, a security vulnerability was fixed that could
