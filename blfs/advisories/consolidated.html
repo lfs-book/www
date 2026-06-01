@@ -907,7 +907,7 @@
     <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
 
     <a id="sa-13.0-078"/>
-    <h4>13.0 078 glib  Date: 2026-05-23  Severity: High</h4>
+    <h4>13.0 078 glib  Date: 2026-06-01  Severity: High</h4>
     <p>In glib-2.88.1, nine security vulnerabilities were fixed that could
     allow for remote code execution, denial of service (application crashes),
     and path traversal leading to arbitrary file reads. These issues occur in
@@ -931,6 +931,13 @@
     instructions from
     <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
     <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+    <p>In addition, users should upgrade to pygobject-3.56.3 or later to resolve
+    significant runtime problems with packages that use that module. To do this,
+    follow the instructions from
+    <a href="../view/svn/general/python-modules.html#pygobject3">PyGObject (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#pygobject3">PyGObject (systemd)</a>.</p>
+    <p><em>Updated on 2026-06-01 to document the need to upgrade PyGObject at
+    the same time to fix runtime problems.</em></p>
 
     <a id="sa-13.0-077"/>
     <h4>13.0 077 Wireshark  Date: 2026-05-23  Severity: High</h4>

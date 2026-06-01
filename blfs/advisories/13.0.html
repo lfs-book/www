@@ -382,13 +382,16 @@
     <h3>glib</h3>
 
     <a id="sa-13.0-078"/>
-    <h4>13.0 078 glib  Date: 2026-05-23  Severity: High</h4>
+    <h4>13.0 078 glib  Date: 2026-06-01  Severity: High</h4>
     <p>In glib-2.88.1, nine security vulnerabilities were fixed that could
     allow for remote code execution, denial of service (application crashes),
     and path traversal leading to arbitrary file reads. These issues occur in
     a variety of different functions including GMarkup, GVariant, GDateTime,
-    and GDBus. Update to glib-2.88.1.
+    and GDBus. Update to glib-2.88.1. Users who have PyGObject installed also
+    need to update to 3.56.3.
     <a href="consolidated.html#sa-13.0-078">13.0-078</a></p>
+    <p><em>Updated to document the need to update PyGObject to resolve runtime
+    problems.</em></p>
 
     <a id="sa-13.0-033"/>
     <h4>13.0 033 glib     Date: 2026-04-03  Severity: High</h4>
