@@ -75,6 +75,24 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-109"/>
+    <h4>13.0 109 libaom  Date: 2026-06-01  Severity: High</h4>
+    <p>In libaom-3.14.1, several security issues were fixed that could
+    allow for a denial of service and potentially information disclosure
+    when processing crafted videos that use the AOM codec. These issues include
+    assertion failures, integer overflows, and NULL pointer dereferences. Few
+    details are available on these vulnerabilities, but they should be treated
+    as security issues as proof of concepts are available for the integer
+    overflow and NULL pointer dereference vulnerabilities.
+    No CVEs have been assigned for these issues, but additional details can
+    be found at the changelogs for libaom-3.14.0 and 3.14.1:
+    <a href="https://aomedia.googlesource.com/aom/+/refs/tags/v3.14.0">3.14.0 changelog</a> and
+    <a href="https://aomedia.googlesource.com/aom/+/refs/tags/v3.14.1">3.14.1 changelog</a>.</p>
+    <p>To fix these vulnerabilities, update to libaom-3.14.1 or later using the
+    instructions from
+    <a href="../view/svn/multimedia/libaom.html">libaom (sysv)</a> or
+    <a href="../view/systemd/multimedia/libaom.html">libaom (systemd)</a>.</p>
+
     <a id="sa-13.0-108"/>
     <h4>13.0 108 PostgreSQL  Date: 2026-05-29  Severity: High</h4>
     <p>In PostgreSQL-18.4 (and 17.10 for *LFS 12.4 users), eleven security
