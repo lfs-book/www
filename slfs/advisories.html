@@ -15,6 +15,37 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-012"/>
+    <h4>slfs-sa-13.0-012: NGINX - Rating: Critical (Date: May 29th, 2026)</h4>
+    <p>In NGINX-1.31.1, seven security vulnerabilities were fixed that could
+    allow for buffer overflows and overreads in the
+    <kbd>ngx_http_charset_module</kbd>,
+    <kbd>ngx_http_rewrite_module</kbd>,
+    <kbd>ngx_http_scgi_module</kbd>, and
+    <kbd>ngx_http_uwsgi_module</kbd> modules, HTTP/3 address spoofing,
+    use-after-free operations within the
+    OCSP (Online Certificate Status Protocol) resolver, and HTTP/2 request
+    injections.</p>
+    <p>The buffer overflows and overreads are especially dangerous, as this can
+    lead to remote code execution (RCE), not just arbitrary code execution
+    (ACE). This, however, requires that ALSR is disabled on the systems hosting
+    the NGINX instance(s), or the attacker(s) are given a situation where the
+    systems can have ALSR bypassed, possibly with a chained security
+    vulnerability with NGINX or another project.</p>
+    <p>These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-9256">CVE-2026-9256</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40460">CVE-2026-40460</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40701">CVE-2026-40701</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42926">CVE-2026-42926</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42934">CVE-2026-42934</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42945">CVE-2026-42945</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42946">CVE-2026-42946</a>.</p>
+    <p>As the nature of these vulnerabilites include opportunities to remotely
+    attack an HTTP server, it is highly recommended to fix these
+    vulnerabilities <em>immediately</em> by updating to NGINX-1.31.1. You can
+    do by following the
+    <a href="view/servers/nginx.html">NGINX installation page</a>.</p>
+
     <a id="slfs-sa-13.0-011"/>
     <h4>slfs-sa-13.0-011: pycurl - Rating: High (Date: May 9th, 2026)</h4>
     <p>In pycurl-7.46.0, five security vulnerabilities were fixed that could
