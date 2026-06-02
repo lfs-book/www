@@ -75,6 +75,24 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-117"/>
+    <h4>13.0 117 sshfs  Date: 2026-06-01  Severity: Critical</h4>
+    <p>In sshfs-3.7.6, two security vulnerabilities were fixed that could allow
+    for argument injection when connecting to a SSH server, and for remote
+    servers to be able to read/write files from outside of the directory where
+    an SSHFS filesystem is mounted via a symlink escape. The argument injection
+    vulnerability does not require authentication to exploit, though it is only
+    locally exploitable. The remotely exploitable read/write vulnerability
+    is dangerous as the default configuration will follow server provided
+    symlinks. A proof of concept exploit is public for these vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47187">CVE-2026-47187</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48711">CVE-2026-48711</a>.</p>
+    <p>To fix these vulnerabilities, update to sshfs-3.7.6 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/sshfs.html">sshfs (sysv)</a> or
+    <a href="../view/systemd/postlfs/sshfs.html">sshfs (systemd)</a>.</p>
+
     <a id="sa-13.0-116"/>
     <h4>13.0 116 libde265  Date: 2026-06-01  Severity: High</h4>
     <p>In libde265-1.1.0, four security vulnerabilities were fixed that could
