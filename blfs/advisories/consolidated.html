@@ -75,6 +75,36 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-114"/>
+    <h4>13.0 114 7zip  Date: 2026-06-01  Severity: High</h4>
+    <p>In 7zip-26.01, eight security vulnerabilities were fixed that could allow
+    for denial of service (application crashes and resource exhaustion),
+    information disclosure, and arbitrary code execution. These issues occur
+    when processing SquashFS files, UEFI capsules, UDF disc images, WIM images,
+    UEFI firmware images, 'ar' archives, and NTFS filesystem images. The NTFS
+    filesystem image vulnerability allows for arbitrary code execution, while
+    the others allow for crashes and information disclosure (in some cases
+    causing memory contents to be written to a file being processed). Users
+    who are using 7zip to process UEFI firmware images/capsules, SquashFS
+    files, UDF disc images, WIM images, 'ar' archives, or NTFS filesystem
+    images should update as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48092">CVE-2026-48092</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48101">CVE-2026-48101</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48102">CVE-2026-48102</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48103">CVE-2026-48103</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48104">CVE-2026-48104</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48111">CVE-2026-48111</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48112">CVE-2026-48112</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48095">CVE-2026-48095</a>.</p>
+    <p>Additional details on these vulnerabilities can be found at
+    <a href="https://securitylab.github.com/advisories/GHSL-2026-115_GHSL-2026-122_7-zip/">GitHub Security Lab GHSL-2026-115-GHSL-2026-122</a> and
+    <a href="https://securitylab.github.com/advisories/GHSL-2026-140_7-Zip/">GitHub Security Lab GHSL-2026-140</a>.</p>
+    <p>To fix these vulnerabilities, update to 7zip-26.01 or later using the
+    instructions from
+    <a href="../view/svn/general/7zip.html">7zip (sysv)</a> or
+    <a href="../view/systemd/general/7zip.html">7zip (systemd)</a>.</p>
+
     <a id="sa-13.0-113"/>
     <h4>13.0 113 libslirp  Date: 2026-06-01  Severity: High</h4>
     <p>In libslirp-4.9.2, a security vulnerability was fixed that could allow
