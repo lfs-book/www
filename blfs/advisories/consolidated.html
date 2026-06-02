@@ -75,6 +75,21 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-112"/>
+    <h4>13.0 112 Wireshark  Date: 2026-06-01  Severity: Low</h4>
+    <p>In Wireshark-4.6.6, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) with crafted ROHC packets. The
+    issue occurs because a crafted packet can cause Wireshark to create a NULL
+    buffer and then write a single byte to it. Users who are operating on a
+    network that uses the ROHC protocol should update if they begin to
+    experience crashes.
+    This vulnerability has been assigned
+    <a href="https://www.wireshark.org/security/wnpa-sec-2026-51">wnpa-sec-2026-51</a>.</p>
+    <p>To fix this vulnerability, update to Wireshark-4.6.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
     <a id="sa-13.0-111"/>
     <h4>13.0 111 vim (LFS and BLFS)  Date: 2026-06-01  Severity: Medium</h4>
     <p>In vim-9.2.0567, five security vulnerabilities were fixed that could
