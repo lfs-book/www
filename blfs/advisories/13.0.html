@@ -1060,6 +1060,21 @@
 
 <!-- end of requests -->
 
+    <h3>rpcbind</h3>
+
+    <a id="sa-13.0-115"/>
+    <h4>13.0 115 rpcbind  Date: 2026-06-01  Severity: High</h4>
+    <p>In rpcbind-1.2.9, five security vulnerabilities were fixed that could
+    allow for remote code execution or denial of service (excessive memory
+    consumption and daemon crashes). The remote code execution vulnerability
+    occurs due to a stack overflow that can occur when using the 'rpcinfo'
+    command to retrieve information from a RPC server. The other four issues
+    occur due to memory leaks and unauthenticated oversized allocation in the
+    rpcbind daemon itself. Update to rpcbind-1.2.9.
+    <a href="consolidated.html#sa-13.0-115">13.0-115</a></p>
+
+<!-- end of rpcbind -->
+
     <h3>rsync</h3>
 
     <a id="sa-13.0-083"/>
