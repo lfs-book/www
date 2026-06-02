@@ -732,6 +732,21 @@
 
     <h3>MariaDB</h3>
 
+    <a id="sa-13.0-110"/>
+    <h4>13.0 110 MariaDB  Date: 2026-06-01  Severity: Critical</h4>
+    <p>In MariaDB-11.8.8, three security vulnerabilities were fixed that could
+    allow for remote code execution, remotely exploitable OS command injection,
+    and information disclosure. These vulnerabilities do not affect the default
+    BLFS configuration as they require the use of the Galera cluster support.
+    However, users who have MariaDB installed and who utilize the Galera cluster
+    support should consider updating immediately to protect your systems. Users
+    who update to MariaDB-12.3.x must pay extremely close attention to the
+    information regarding upgrading this package. Update to MariaDB-11.8.8 if
+    you are utilizing the Galera clustering support. Alternatively users may
+    update to MariaDB-11.4.12, 10.11.18, or 10.6.27, but note that these have
+    not been tested by the BLFS team.
+    <a href="consolidated.html#sa-13.0-110">13.0-110</a></p>
+
     <a id="sa-13.0-105"/>
     <h4>13.0 105 MariaDB  Date: 2026-05-29  Severity: High</h4>
     <p>In MariaDB-11.8.7, five security vulnerabilities were fixed that could

@@ -75,6 +75,34 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-110"/>
+    <h4>13.0 110 MariaDB  Date: 2026-06-01  Severity: Critical</h4>
+    <p>In MariaDB-11.8.8, three security vulnerabilities were fixed that could
+    allow for remote code execution, remotely exploitable OS command injection,
+    and information disclosure. These vulnerabilities do not affect the default
+    BLFS configuration as they require the use of the Galera cluster support.
+    However, users who have MariaDB installed and who utilize the Galera cluster
+    support should consider updating immediately to protect your systems. There
+    aren't much in the way of details on these vulnerabilities yet, however the
+    commits that fixed them are now public.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49261">CVE-2026-49261</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48165">CVE-2026-48165</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48163">CVE-2026-48163</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-11.8.8 or later using
+    the instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <p>Note that while the development books are on MariaDB-12.3.x, it may be
+    worth staying on the 11.8.x series if users are utilizing the Galera
+    clustering support or if they do not want to go through the upgrade process
+    for the database. The Galera clustering support is no longer included with
+    MariaDB-12.3.x. <em>Users who decide to upgrade to MariaDB-12.3.x must pay
+    extremely close attention to the caution in the book regarding the proper
+    upgrade process to avoid losing all of the data in their database.</em></p>
+    <p>Alternatively, users may update to MariaDB-11.4.12, 10.11.18, or 10.6.27,
+    but note that these have not been tested by the BLFS team.</p>
+
     <a id="sa-13.0-109"/>
     <h4>13.0 109 libaom  Date: 2026-06-01  Severity: High</h4>
     <p>In libaom-3.14.1, several security issues were fixed that could
