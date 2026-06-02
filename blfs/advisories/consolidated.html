@@ -75,6 +75,21 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-113"/>
+    <h4>13.0 113 libslirp  Date: 2026-06-01  Severity: High</h4>
+    <p>In libslirp-4.9.2, a security vulnerability was fixed that could allow
+    for significant information disclosure. This due to an integer underflow
+    when libslirp is processing "urgent data". Upstream resolved the issue by
+    capping the urgent data count to what is actually available. Further details
+    about the vulnerability are not available at this time unfortunately.
+    The upstream issue can be found at
+    <a href="https://gitlab.freedesktop.org/slirp/libslirp/-/work_items/93">#93</a>
+    when it is available.</p>
+    <p>To fix this vulnerability, update to libslirp-4.9.2 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libslirp.html">libslirp (sysv)</a> or
+    <a href="../view/systemd/basicnet/libslirp.html">libslirp (systemd)</a>.</p>
+
     <a id="sa-13.0-112"/>
     <h4>13.0 112 Wireshark  Date: 2026-06-01  Severity: Low</h4>
     <p>In Wireshark-4.6.6, a security vulnerability was fixed that could allow
