@@ -15,6 +15,37 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-013"/>
+    <h4>slfs-sa-13.0-013: Go - Rating: High (Date: June 1st, 2026)</h4>
+    <p>In Go-1.26.3, eleven security vulnerabilities were fixed that could
+    allow for checksums to be bypassed during a build procedure, for queries
+    to ReverseProxy to be forwarded to unexpected locations, for denial of
+    service conditions (excessive CPU exhaustion and memory allocations,
+    infinite loops, and application crashes), for the "go bug" to accidentally
+    overwrite targets of attacker-controlled symlinks, for "go tool pack" to
+    extract files to arbitrary locations on a filesystem, and for cross-site
+    scripting. These vulnerabilities occur in a variety of different components,
+    including cmd/go, net/http/httputil, net, net/mail, and html/template. The
+    checksum bypass vulnerability can allow for supply chain attacks.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42501">CVE-2026-42501</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39825">CVE-2026-39825</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39836">CVE-2026-39836</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42499">CVE-2026-42499</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39820">CVE-2026-39820</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39819">CVE-2026-39819</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39817">CVE-2026-39817</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33814">CVE-2026-33814</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39826">CVE-2026-39826</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33811">CVE-2026-33811</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-39823">CVE-2026-39823</a>.</p>
+    <p>Fix these vulnerabilities <em>immediately</em> by updating to Go-1.26.3,
+    following the <a href="view/general/go.html">Go installation page</a>.</p>
+    <p>Note that after you reinstall Go, you must reinstall any packages that
+    use it. This is because the Go standard library is statically linked into
+    every program that you compile with it, and thus just updating the compiler
+    isn't enough to resolve most issues.</p>
+
     <a id="slfs-sa-13.0-012"/>
     <h4>slfs-sa-13.0-012: NGINX - Rating: Critical (Date: May 29th, 2026)</h4>
     <p>In NGINX-1.31.1, seven security vulnerabilities were fixed that could
