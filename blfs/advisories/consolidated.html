@@ -75,6 +75,35 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-111"/>
+    <h4>13.0 111 vim (LFS and BLFS)  Date: 2026-06-01  Severity: Medium</h4>
+    <p>In vim-9.2.0567, five security vulnerabilities were fixed that could
+    allow for Vimscript code injection, denial of service (application crashes),
+    and arbitrary code execution. The Vimscript code injection issues occur in
+    the netrw plugin (where a crafted directory name can cause execution of
+    arbitrary Vimscript), and in the cucumber filetype plugin on vim builds
+    which include Ruby support (which is not enabled by default in either LFS
+    or BLFS, even if Ruby is installed). The denial of service vulnerabilities
+    occur in the spell file parser (where a planted spell file and spell
+    checking being enabled can trigger an out-of-bounds read), and in the
+    terminal screen snapshot function (which is used if a program is running
+    in a :terminal window). The arbitrary code execution issue occurs in the
+    Python Omni-Completion support, where vim has the possibility of importing
+    and executing Python code from a Python file that is being viewed if the
+    omni-completion support is utilized. Users who use the :terminal functionality,
+    who use omni-completion support, who use the netrw plugin, who use the
+    cucumber filetype plugin, and who use spellchecking should update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43961">CVE-2026-43961</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47162">CVE-2026-47162</a>,
+    <a href="https://github.com/vim/vim/security/advisories/GHSA-3h95-3962-mmvf">GHSA-3h95-3962-mmvf</a>,
+    <a href="https://github.com/vim/vim/security/advisories/GHSA-52mc-rq6p-rc7c">GHSA-52mc-rq6p-rc7c</a>, and
+    <a href="https://github.com/vim/vim/security/advisories/GHSA-47gw-8gc3-mgcm">GHSA-47gw-8gc3-mgcm</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-9.2.0567 using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
     <a id="sa-13.0-110"/>
     <h4>13.0 110 MariaDB  Date: 2026-06-01  Severity: Critical</h4>
     <p>In MariaDB-11.8.8, three security vulnerabilities were fixed that could
