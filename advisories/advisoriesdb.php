@@ -4,7 +4,6 @@ $user        = "advisory_user";
 $db_password = "";
 $mysqli      = NULL;
 
-
 function DisplayErrorMessage($message)
 {
    printf("<blockquote><blockquote><blockquote><h3 style='color: #cc0000;'>");
