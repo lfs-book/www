@@ -52,6 +52,37 @@
 
 <!-- end of PackageName -->
 
+    <h3>7zip</h3>
+
+    <a id="sa-13.0-114"/>
+    <h4>13.0 114 7zip  Date: 2026-06-01  Severity: High</h4>
+    <p>In 7zip-26.01, eight security vulnerabilities were fixed that could allow
+    for denial of service (application crashes and resource exhaustion),
+    information disclosure, and arbitrary code execution. These issues occur
+    when processing SquashFS files, UEFI capsules, UDF disc images, WIM images,
+    UEFI firmware images, 'ar' archives, and NTFS filesystem images. Users that
+    are working with these types of images should update to 7zip-26.01.
+    <a href="consolidated.html#sa-13.0-114">13.0-114</a></p>
+
+<!-- end of 7zip -->
+
+    <h3>Apache HTTPD</h3>
+
+    <a id="sa-13.0-079"/>
+    <h4>13.0 079 Apache HTTPD  Date: 2026-05-23  Severity: Critical</h4>
+    <p>In httpd-2.4.67, eleven security vulnerabilities were fixed that could
+    allow for trivial remote code execution, denial of service (resource
+    exhaustion and server crashes), memory disclosure, privilege escalation,
+    HTTP response splitting, and authentication bypasses. These vulnerabilities
+    are in a large variety of modules, including HTTP/2 support, mod_md,
+    mod_rewrite, mod_dav_lock, mod_auth_digest, mod_authn_socache, and
+    mod_proxy_ajp. All users who have httpd installed should update immediately
+    due to the remote code execution vulnerability which affects the commonly
+    enabled HTTP/2 support. Update to httpd-2.4.67.
+    <a href="consolidated.html#sa-13.0-079">13.0-079</a></p>
+
+<!-- end of Apache HTTPD -->
+
     <h3>BIND</h3>
 
     <a id="sa-13.0-002"/>
@@ -89,6 +120,18 @@
 
     <h3>cURL</h3>
 
+    <a id="sa-13.0-087"/>
+    <h4>13.0 087 cURL  Date: 2026-05-24  Severity: Medium</h4>
+    <p>In cURL-8.20.0, seven security vulnerabilities were fixed that could
+    allow for cleartext transmission of sensitive information (due to invalid
+    connection reuse), for authentication bypass when using HTTP Negotiate, for
+    SMB connections to download or upload the wrong file, for proxy credentials
+    to be leaked when using a proxy to connect to a second proxy, for cookie
+    leaks, for credentials to be exposed to remote servers when using a .netrc
+    file, and for cross-proxy Digest authentication state leakage. Update to
+    cURL-8.20.0, especially if you use IMAP/POP3/SMTP URL schemes or SMB.
+    <a href="consolidated.html#sa-13.0-087">13.0-087</a></p>
+
     <a id="sa-13.0-009"/>
     <h4>13.0 009 cURL  Date: 2026-03-21  Severity: Medium</h4>
     <p>In cURL-8.19.0, four security vulnerabilities were fixed that could
@@ -114,6 +157,22 @@
 
 <!-- end of dash -->
 
+    <h3>Evince</h3>
+
+    <a id="sa-13.0-101"/>
+    <h4>13.0 101 Evince  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In Evince-48.4, a security vulnerability was fixed that could allow for
+    trivial remote code execution when opening a crafted PDF file. This issue
+    occurs due to argv injection via the /GoToR action, and a proof of concept
+    is public as well as a generator for malicious PDFs. The vulnerability
+    simply relies on a user opening a crafted PDF file to exploit, no further
+    interaction by the user is required. All users who have Evince installed
+    need to update immediately, especially if they review PDFs sent to them
+    from other sources. Update to Evince-48.4.
+    <a href="consolidated.html#sa-13.0-101">13.0-101</a></p>
+
+<!-- end of Evince -->
+
     <h3>Exiv2</h3>
 
     <a id="sa-13.0-004"/>
@@ -129,7 +188,31 @@
 
 <!-- end of Exiv2 -->
 
+    <h3>ffmpeg</h3>
+
+    <a id="sa-13.0-085"/>
+    <h4>13.0 085 ffmpeg  Date: 2026-05-24  Severity: High</h4>
+    <p>In ffmpeg-8.1.1, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when processing media files.
+    This can be remotely exploited with no user interaction in web browsers
+    and media player contexts. Update to ffmpeg-8.1.1.
+    <a href="consolidated.html#sa-13.0-085">13.0-085</a></p>
+
+<!-- end of ffmpeg -->
+
     <h3>Firefox</h3>
+
+    <a id="sa-13.0-073"/>
+    <h4>13.0 073 Firefox  Date: 2026-05-23  Severity: Critical</h4>
+    <p>In Firefox-140.11.0esr, fifty-five security vulnerabilities were fixed
+    that could allow for remote code execution, denial of service (application
+    crashes and resource exhaustion), information disclosure, privilege
+    escalation, UI spoofing, mitigation bypasses, same-origin policy bypasses,
+    and sandbox escapes. All users of Firefox must update immediately to protect
+    their systems, especially since the sandbox escape vulnerabilities
+    significantly amplify the severity of the remote code execution
+    vulnerabilities fixed in this update. Update to Firefox-140.11.0esr.
+    <a href="consolidated.html#sa-13.0-073">13.0-073</a></p>
 
     <a id="sa-13.0-027"/>
     <h4>13.0 027 Firefox   Date: 2026-04-01  Severity: High</h4>
@@ -146,6 +229,15 @@
 
     <h3>FreeRDP</h3>
 
+    <a id="sa-13.0-086"/>
+    <h4>13.0 086 FreeRDP  Date: 2026-05-24  Severity: High</h4>
+    <p>In FreeRDP-3.26.0, four security vulnerabilities were fixed that could
+    allow for remote code execution and denial of service. These issues can
+    occur when using clipboard redirection, when using RDPGFX, and when using
+    RDPEAR. These vulnerabilities require a user to connect to a malicious
+    RDP server, and as such most users will be fine as long as they are not
+    connecting to untrusted systems using FreeRDP. Update to FreeRDP-3.26.0.
+    <a href="consolidated.html#sa-13.0-086">13.0-086</a></p>
 
     <a id="sa-13.0-051"/>
     <h4>13.0 051 FreeRDP  Date: 2026-04-29  Severity: Medium</h4>
@@ -227,6 +319,50 @@
 
 <!-- end of Fuse -->
 
+    <h3>HTML::Parser</h3>
+
+    <a id="sa-13.0-102"/>
+    <h4>13.0 102 HTML::Parser  Date: 2026-05-28  Severity: High</h4>
+    <p>In HTML::Parser-3.85, a security vulnerability was fixed that could
+    allow for a denial of service (application crash) when processing a
+    crafted HTML file. Update to HTML::Parser-3.85 if you are encountering
+    crashes when processing HTML files with this perl module.
+    <a href="consolidated.html#sa-13.0-102">13.0-102</a></p>
+
+<!-- end of HTML::Parser -->
+
+    <h3>HTTP::Daemon</h3>
+
+    <a id="sa-13.0-104"/>
+    <h4>13.0 104 HTTP::Daemon  Date: 2026-05-29  Severity: Critical</h4>
+    <p>In HTTP::Daemon-6.17, a security vulnerability was fixed that could
+    allow for OS Command Injection while processing untrusted input passed into
+    the send_file() function. It is also possible for the read-pipe form to
+    leak subprocess stdout output into an HTTP request body, and the write-mode
+    form can create or truncate files at attacker chosen paths. In BLFS, this
+    module is only used by the test suite for Wget. However, users who may have
+    written code that uses this module should update this package immediately,
+    especially if they are running it as a publicly-accessible HTTP server.
+    Update to HTTP::Daemon-6.17.
+    <a href="consolidated.html#sa-13.0-104">13.0-104</a></p>
+
+<!-- end of HTTP::Daemon -->
+
+    <h3>ghostscript</h3>
+
+    <a id="sa-13.0-100"/>
+    <h4>13.0 100 ghostscript  Date: 2026-05-28  Severity: High</h4>
+    <p>In ghostscript-10.07.1, several potential security vulnerabilities were
+    fixed that could allow for denial of service (application crashes) and
+    potential arbitrary code execution when processing crafted PostScript files.
+    Note that ghostscript is commonly used with cups-filters to convert print
+    jobs to PostScript. Users should upgrade to ghostscript-10.07.1 if they
+    start experiencing random crashes when processing PostScript files or
+    sending print jobs.
+    <a href="consolidated.html#sa-13.0-100">13.0-100</a></p>
+
+<!-- end of ghostscript -->
+
     <h3>giflib</h3>
 
     <a id="sa-13.0-010"/>
@@ -259,6 +395,18 @@
 
     <h3>glib</h3>
 
+    <a id="sa-13.0-078"/>
+    <h4>13.0 078 glib  Date: 2026-06-01  Severity: High</h4>
+    <p>In glib-2.88.1, nine security vulnerabilities were fixed that could
+    allow for remote code execution, denial of service (application crashes),
+    and path traversal leading to arbitrary file reads. These issues occur in
+    a variety of different functions including GMarkup, GVariant, GDateTime,
+    and GDBus. Update to glib-2.88.1. Users who have PyGObject installed also
+    need to update to 3.56.3.
+    <a href="consolidated.html#sa-13.0-078">13.0-078</a></p>
+    <p><em>Updated to document the need to update PyGObject to resolve runtime
+    problems.</em></p>
+
     <a id="sa-13.0-033"/>
     <h4>13.0 033 glib     Date: 2026-04-03  Severity: High</h4>
     <p>In glib-2.86.5, five security vulnerabilities were fixed that could
@@ -269,7 +417,51 @@
 
 <!-- end of glib -->
 
+    <h3>GnuPG</h3>
+
+    <a id="sa-13.0-093"/>
+    <h4>13.0 093 GnuPG  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In GnuPG-2.5.20, several security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when processing crafted
+    certificates, utilizing SC-HSM SmartCards, processing key signatures, and
+    using the 'gpgsm' utility. The only known impact of these problems is a
+    crash. Update to GnuPG-2.5.20 if you experience crashes using the 'gpg' and
+    the 'gpgsm' utilities, or while utilizing SmartCards.
+    <a href="consolidated.html#sa-13.0-093">13.0-093</a></p>
+
+<!-- end of GnuPG -->
+
+    <h3>GnuTLS</h3>
+
+    <a id="sa-13.0-076"/>
+    <h4>13.0 076 GnuTLS  Date: 2026-05-23  Severity: Critical</h4>
+    <p>In GnuTLS-3.8.13, thirteen vulnerabilities were fixed that could allow
+    for remote code execution, information disclosure, denial of service
+    (undefined behavior and application crashes), authentication bypass, domain
+    names being accepted that should've been rejected, certificate name
+    constraint bypasses, misuse of certificates, accepting of revoked
+    certificates, and private key disclosure. All users who have GnuTLS
+    installed should update to 3.8.13 immediately.
+    <a href="consolidated.html#sa-13.0-076">13.0-076</a></p>
+
+<!-- end of GnuTLS -->
+
     <h3>gstreamer</h3>
+
+    <a id="sa-13.0-091"/>
+    <h4>13.0 091 gstreamer  Date: 2026-05-26  Severity: High</h4>
+    <p>In gstreamer, gst-plugins-bad, and gst-plugins-good-1.28.3, six security
+    vulnerabilities were fixed that could allow for arbitrary code execution,
+    data corruption, denial of service (application crashes), and information
+    disclosure of sensitive memory contents. These vulnerabilities occur in the
+    H.266/VVC parser, the MXF demuxer, the MOV/MP4 demuxer, the MPEG PS PES
+    header parser, and the core GStreamer libraries themselves. Because the
+    gstreamer suite is used in a variety of contexts (including audio/video
+    editors, media players, and web browsers), and the fact that one of the
+    arbitrary code execution and data corruption vulnerabilities is in the
+    core of gstreamer itself, all users who have the suite installed should
+    update as soon as possible. Update the gstreamer stack to 1.28.3.
+    <a href="consolidated.html#sa-13.0-091">13.0-091</a></p>
 
     <a id="sa-13.0-036"/>
     <h4>13.0 036 gstreamer  Date: 2026-04-08  Severity: High</h4>
@@ -288,6 +480,36 @@
 
 <!-- end of gstreamer -->
 
+    <h3>lcms2</h3>
+
+    <a id="sa-13.0-080"/>
+    <h4>13.0 080 lcms2  Date: 2026-05-23  Severity: High</h4>
+    <p>In lcms-2.19, a security vulnerability was fixed that could allow for
+    a crash or potentially information disclosure when processing a crafted
+    image file to retrieve a color profile. This vulnerability is classified
+    as an integer overflow in the CubeSize() function as an overflow check
+    was performed after multiplication and not before. There is a 992-byte
+    PDF file available to the public  that is able to trigger a crash in
+    poppler, OpenJDK, Okular, Evince, GIMP, cups-filters, LibreOffice,
+    and Tumbler (from XFCE). Users should update to this version especially
+    if they start experiencing unexplainable crashes in these programs, or
+    if they explicitly disable ASLR on their systems. Update to lcms2-2.19.
+    <a href="consolidated.html#sa-13.0-080">13.0-080</a></p>
+
+<!-- end of lcms2 -->
+
+    <h3>libaom</h3>
+
+    <a id="sa-13.0-109"/>
+    <h4>13.0 109 libaom  Date: 2026-06-01  Severity: High</h4>
+    <p>In libaom-3.14.1, several security issues were fixed that could
+    allow for a denial of service and potentially information disclosure
+    when processing crafted videos that use the AOM codec. Update to
+    libaom-3.14.1.
+    <a href="consolidated.html#sa-13.0-109">13.0-109</a></p>
+
+<!-- end of libaom -->
+
     <h3>libarchive</h3>
 
     <a id="sa-13.0-046"/>
@@ -305,6 +527,20 @@
 <!-- end of libarchive -->
 
     <h3>libde265</h3>
+
+    <a id="sa-13.0-116"/>
+    <h4>13.0 116 libde265  Date: 2026-06-01  Severity: High</h4>
+    <p>In libde265-1.1.0, four security vulnerabilities were fixed that could
+    allow for remote code execution and denial of service (application crashes
+    and excessive resource consumption). Update to libde265-1.1.0.
+    <a href="consolidated.html#sa-13.0-116">13.0-116</a></p>
+
+    <a id="sa-13.0-099"/>
+    <h4>13.0 099 libde265  Date: 2026-05-28  Severity: Medium</h4>
+    <p>In libde265-1.0.19, two security vulnerabilities were fixed that could
+    allow for denial of service (application crashes) when processing crafted
+    video files using the H.265 video codec. Update to libde265-1.0.19.
+    <a href="consolidated.html#sa-13.0-099">13.0-099</a></p>
 
     <a id="sa-13.0-011"/>
     <h4>13.0 011 libde265  Date: 2026-03-21  Severity: High</h4>
@@ -327,6 +563,29 @@
 
 <!-- end of libexif -->
 
+    <h3>libheif</h3>
+
+    <a id="sa-13.0-118"/>
+    <h4>13.0 118 libheif  Date: 2026-06-01  Severity: High</h4>
+    <p>In libheif-1.23.0, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when processing a crafted HEIF
+    image. Update to libheif-1.23.0 if you begin experiencing crashes.
+    <a href="consolidated.html#sa-13.0-118">13.0-118</a></p>
+
+    <a id="sa-13.0-103"/>
+    <h4>13.0 103 libheif  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In libheif-1.22.2, 21 security vulnerabilities were fixed that could
+    allow for denial of service (application crashes, system resource
+    exhaustion, and memory corruption), information disclosure, remote
+    code execution, and arbitrary code execution. All users who have libheif
+    installed should update immediately due to several of the issues allowing
+    for code execution, especially as the attacker will have full control over
+    the overflowed content since some issues have to do with Chroma pixel
+    values. Update to libheif-1.22.2.
+    <a href="consolidated.html#sa-13.0-103">13.0-103</a></p>
+
+<!-- end of libheif -->
+
     <h3>libgcrypt</h3>
 
     <a id="sa-13.0-056"/>
@@ -342,6 +601,18 @@
 
 <!-- end of libgcrypt -->
 
+    <h3>libgpg-error</h3>
+
+    <a id="sa-13.0-088"/>
+    <h4>13.0 088 libgpg-error  Date: 2026-05-24  Severity: High</h4>
+    <p>In libgpg-error-1.61, two security vulnerabilities were fixed that
+    could allow for a denial of service (application crash) and possibly
+    arbitrary code execution. These issues occur in the es_printf() and the
+    vfnameconcat functions. Update to libgpg-error-1.61.
+    <a href="consolidated.html#sa-13.0-088">13.0-088</a></p>
+
+<!-- end of libgpg-error -->
+
     <h3>libinput</h3>
 
     <a id="sa-13.0-034"/>
@@ -354,6 +625,18 @@
 <!-- end of libinput -->
 
     <h3>libpng</h3>
+
+    <a id="sa-13.0-094"/>
+    <h4>13.0 094 libpng  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In libpng-1.6.58's libpng-1.6.58-apng patch, a security vulnerability
+    was fixed that could allow for chunk smuggling in the push-mode APNG
+    parser. This can allow for crafted APNG images to cause a denial of service
+    (application crash). Note that this cannot cause code execution because
+    the compressed output of some APNG images write into a pre-allocated row
+    buffer. However, in BLFS, libpng's APNG support is heavily utilized with
+    Firefox, Thunderbird, and Seamonkey. Users who use those packages should
+    apply this update to their systems. Update to libpng-1.6.58.
+    <a href="consolidated.html#sa-13.0-094">13.0-094</a></p>
 
     <a id="sa-13.0-047"/>
     <h4>13.0 047 libpng   Date: 2026-04-15  Severity: Medium</h4>
@@ -399,6 +682,28 @@
 
 <!-- end of libraw -->
 
+    <h3>libslirp</h3>
+
+    <a id="sa-13.0-113"/>
+    <h4>13.0 113 libslirp  Date: 2026-06-01  Severity: High</h4>
+    <p>In libslirp-4.9.2, a security vulnerability was fixed that could allow
+    for significant information disclosure. This due to an integer underflow
+    when libslirp is processing "urgent data". Update to libslirp-4.9.2.
+    <a href="consolidated.html#sa-13.0-113">13.0-113</a></p>
+
+<!-- end of libslirp -->
+
+    <h3>libwww-perl</h3>
+
+    <a id="sa-13.0-092"/>
+    <h4>13.0 092 libwww-perl  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In libwww-perl-6.83, a security vulnerability was fixed that could allow
+    for Authorization and Proxy-Authorization headers to be leaked to an
+    attacker-controlled host on cross-origin redirects. Update to libwww-perl-6.83.
+    <a href="consolidated.html#sa-13.0-092">13.0-092</a></p>
+
+<!-- end of libwww-perl -->
+
     <h3>libxml2</h3>
 
     <a id="sa-13.0-057"/>
@@ -410,7 +715,7 @@
     entity support, the c14n support, and the Python bindings. Three additional
     issues were fixed that could allow for memory leaks, but were not classified
     as security vulnerabilities. Update to libxml2-2.15.3.
-    <a href="consolidated.html#as-13.0-057">13.0-057</a></p>
+    <a href="consolidated.html#sa-13.0-057">13.0-057</a></p>
 
     <a id="sa-13.0-005"/>
     <h4>13.0 005 libxml2  Date: 2026-03-06  Severity: Medium</h4>
@@ -439,6 +744,17 @@
 
     <h3>lxml (Python Module)</h3>
 
+    <a id="sa-13.0-095"/>
+    <h4>13.0 095 lxml (Python Module)  Date: 2026-05-26  Severity: High</h4>
+    <!-- Rating as High as very few details are available. The Fedora
+    advisory linked in the release notes is still not public yet. -->
+    <p>In lxml-6.1.1, a security vulnerability was fixed that can be
+    used for URL bypass attacks in embedded SVG, MathML, and other HTML5
+    content. This issue occurs because the known link attributes from the
+    'lxml.html.defs.link_attrs' set was missing 'xlink:href', which
+    allowed for unauthorized files to be loaded. Update to lxml-6.1.1.
+    <a href="consolidated.html#sa-13.0-095">13.0-095</a></p>
+
     <a id="sa-13.0-058"/>
     <h4>13.0 058 lxml (Python Module)  Date: 2026-04-30  Severity: High</h4>
     <p>In lxml-6.1.0, a security vulnerability was fixed that could allow for
@@ -452,6 +768,50 @@
     <a href="consolidated.html#sa-13.0-058">13.0-058</a></p>
 
 <!-- end of lxml (Python Module) -->
+
+    <h3>MariaDB</h3>
+
+    <a id="sa-13.0-110"/>
+    <h4>13.0 110 MariaDB  Date: 2026-06-01  Severity: Critical</h4>
+    <p>In MariaDB-11.8.8, three security vulnerabilities were fixed that could
+    allow for remote code execution, remotely exploitable OS command injection,
+    and information disclosure. These vulnerabilities do not affect the default
+    BLFS configuration as they require the use of the Galera cluster support.
+    However, users who have MariaDB installed and who utilize the Galera cluster
+    support should consider updating immediately to protect your systems. Users
+    who update to MariaDB-12.3.x must pay extremely close attention to the
+    information regarding upgrading this package. Update to MariaDB-11.8.8 if
+    you are utilizing the Galera clustering support. Alternatively users may
+    update to MariaDB-11.4.12, 10.11.18, or 10.6.27, but note that these have
+    not been tested by the BLFS team.
+    <a href="consolidated.html#sa-13.0-110">13.0-110</a></p>
+
+    <a id="sa-13.0-105"/>
+    <h4>13.0 105 MariaDB  Date: 2026-05-29  Severity: High</h4>
+    <p>In MariaDB-11.8.7, five security vulnerabilities were fixed that could
+    allow for SQL injection, arbitrary shell command execution, path traversal,
+    and authorization bypasses. The client components are not affected. Update
+    to MariaDB-11.8.7 if you are running a MariaDB server. Alternatively, users
+    may update to MariaDB-11.4.11, 10.11.17, or 10.6.26, but note that these
+    have not been tested by the BLFS team.
+    <a href="consolidated.html#sa-13.0-105">13.0-105</a></p>
+
+<!-- end of MariaDB -->
+
+    <h3>MIT Kerberos V5</h3>
+
+    <a id="sa-13.0-081"/>
+    <h4>13.0 081 MIT Kerberos V5  Date: 2026-05-24  Severity: Medium</h4>
+    <p>In krb5-1.22.2, two security vulnerabilities were discovered that could
+    allow for remotely exploitable denial of service (Kerberos server crash).
+    These issues are caused by a null pointer dereference and a read overrun
+    when the krb5-kdc daemon recieves crafted input during authentication.
+    This can allow unauthenticated remote attackers to crash the daemon. Memory
+    disclosure does not appear to be possible. The client libraries and programs
+    are not affected. Apply the security fixes patch if you are using the server.
+    <a href="consolidated.html#sa-13.0-081">13.0-081</a></p>
+
+<!-- end of MIT Kerberos V5 -->
 
     <h3>nfs-utils</h3>
 
@@ -525,6 +885,70 @@
 
 <!-- end of OpenSSH -->
 
+    <h3>PHP</h3>
+
+    <a id="sa-13.0-090"/>
+    <h4>13.0 090 PHP  Date: 2026-05-26  Severity: Critical</h4>
+    <p>In PHP-8.5.6, eleven security vulnerabilities were fixed that could
+    allow for denial of service (application crashes, infinite loops, and
+    excessive resource consumption), cross site scripting, remotely exploitable
+    information disclosure, SQL injection, remote code execution, and for
+    numeric truncation (leading to incorrect information being returned from
+    a PHP program). These vulnerabilities occur in a variety of different areas
+    in PHP itself, including the standard library, URI, SOAP, PDO_Firebird,
+    MBString, FPM, and DOM. All users who have PHP installed are urged to update
+    to 8.5.6 immediately, especially if they are running it on a web server.
+    <a href="consolidated.html#sa-13.0-090">13.0-090</a></p>
+
+<!-- end of PHP -->
+
+    <h3>Postfix</h3>
+
+    <a id="sa-13.0-084"/>
+    <h4>13.0 084 Postfix  Date: 2026-05-24  Severity: High</h4>
+    <p>In Postfix-3.11.2, a security vulnerability was fixed that could allow
+    for a remotely exploitable denial of service (daemon crash). The issue is
+    a buffer over-read, which can occur when Postfix receives an enhanced status
+    code not followed by other text (e.g. 5.7.2 without text after the three
+    number code). Update to Postfix-3.11.2.
+    <a href="consolidated.html#sa-13.0-084">13.0-084</a></p>
+
+<!-- end of Postfix -->
+
+    <h3>PostgreSQL</h3>
+
+    <a id="sa-13.0-108"/>
+    <h4>13.0 108 PostgreSQL  Date: 2026-05-29  Severity: High</h4>
+    <p>In PostgreSQL-18.4 (and 17.10 for *LFS 12.4 users), eleven security
+    vulnerabilities were fixed that could allow for SQL injection, denial
+    of service (application crashes), authentication bypasses, information
+    disclosure, arbitrary unrelated file overwrites when restoring backups,
+    remote code execution on client systems, password disclosure, and remote
+    code execution on PostgreSQL servers. Update to PostgreSQL-18.4/17.10
+    as soon as possible, especially because one of the vulnerabilities allows
+    for clients to have stack memory overwritten by the server.
+    <a href="consolidated.html#sa-13.0-108">13.0-108</a></p>
+
+<!-- end of PostgreSQL -->
+
+    <h3>ProFTPD</h3>
+
+    <a id="sa-13.0-075"/>
+    <h4>13.0 075 ProFTPD  Date: 2026-05-23  Severity: High</h4>
+    <p>In ProFTPD-1.3.9a, a security vulnerability was fixed which could allow
+    for unauthenticated remote code execution, privilege escalation, and
+    authentication bypasses in some circumstances. The issue is in the mod_sql
+    module, where a logic error in the is_escaped_text() function will let a
+    crafted username execute SQL commands when logging is enabled. The default
+    configuration in BLFS is not affected by this vulnerability as it doesn't
+    use mod_sql for retrieving credentials from an SQL database, and it also
+    doesn't enable logging to an SQL database either. If you have changed the
+    default BLFS configuration to enable SQL support though, you need to update
+    ProFTPD as soon as possible. Update to ProFTPD-1.3.9a.
+    <a href="consolidated.html#sa-13.0-075">13.0-075</a></p>
+
+<!-- end of ProFTPD -->
+
     <h3>pytest</h3>
 
     <a id="sa-13.0-035"/>
@@ -584,7 +1008,37 @@
 
 <!-- end of Python -->
 
+    <h3>Qt6</h3>
+
+    <a id="sa-13.0-096"/>
+    <h4>13.0 096 Qt6  Date: 2026-05-28  Severity: High</h4>
+    <p>In Qt6-6.11.1, a security vulnerability was fixed in the QtSVG module
+    that could allow for a denial of service (application crash) when loading
+    a crafted SVG image. This issue occurs due to an out of bounds read when
+    processing SVG marker references, followed by an infinite recursion problem.
+    This can be exploitable remotely in the context of web browsers that use
+    QtWebEngine, such as Falkon. Update to Qt6-6.11.1.
+    <a href="consolidated.html#sa-13.0-096">13.0-096</a></p>
+
+<!-- end of Qt6 -->
+
     <h3>QtWebEngine</h3>
+
+    <a id="sa-13.0-097"/>
+    <h4>13.0 097 QtWebEngine  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In QtWebEngine-6.11.1, 153 security vulnerabilities were fixed that
+    could allow for remote code execution, cross-origin data exfiltration,
+    sandbox escapes, for remote attackers to read/write files from a user's
+    filesystem, arbitrary code execution, sensitive information disclosure,
+    for attackers to brute force sensitive information (such as passwords) from
+    PDF files, UI spoofing, arbitrary scripts or HTML injection, for attackers
+    to force multiple downloads to happen simultaneously, for same origin policy
+    bypasses, for navigation restriction bypasses, for URL bar spoofing, for
+    content security policy bypasses, for enterprise host restriction bypasses,
+    and for site isolation bypasses. One of these vulnerabilities is known to be
+    actively exploited. <em>ALL</em> users who have QtWebEngine installed need
+    to update to QtWebEngine-6.11.1 immediately.
+    <a href="consolidated.html#sa-13.0-097">13.0-097</a></p>
 
     <a id="sa-13.0-026"/>
     <h4>13.0 026 QtWebEngine  Updated: 2026-04-03  Severity: Critical</h4>
@@ -620,7 +1074,38 @@
 
 <!-- end of requests -->
 
+    <h3>rpcbind</h3>
+
+    <a id="sa-13.0-115"/>
+    <h4>13.0 115 rpcbind  Date: 2026-06-01  Severity: High</h4>
+    <p>In rpcbind-1.2.9, five security vulnerabilities were fixed that could
+    allow for remote code execution or denial of service (excessive memory
+    consumption and daemon crashes). The remote code execution vulnerability
+    occurs due to a stack overflow that can occur when using the 'rpcinfo'
+    command to retrieve information from a RPC server. The other four issues
+    occur due to memory leaks and unauthenticated oversized allocation in the
+    rpcbind daemon itself. Update to rpcbind-1.2.9.
+    <a href="consolidated.html#sa-13.0-115">13.0-115</a></p>
+
+<!-- end of rpcbind -->
+
     <h3>rsync</h3>
+
+    <a id="sa-13.0-083"/>
+    <h4>13.0 083 rsync  Date: 2026-05-24  Severity: High</h4>
+    <p>In rsync-3.4.3, six security vulnerabilities were fixed that could
+    allow for local privilege escalation, remotely exploitable file overwrites,
+    hostname/ACL bypasses, remotely exploitable information disclosure (leaking
+    process memory contents including passwords, heap and library pointers, and
+    environment variables), and remotely exploitable denial of service (daemon
+    crashes). The default BLFS configuration is affected by three of these
+    vulnerabilities, while the other three are only exploitable when a user
+    has RSYNC_PROXY set or when the server is running with "daemon chroot = no".
+    The vulnerabilities that the default configuration is affected by include
+    the remotely exploitable information disclosure and the two denial of
+    service issues. Update to rsync-3.4.3 immediately, especially if you are
+    running the rsyncd daemon.
+    <a href="consolidated.html#sa-13.0-083">13.0-083</a></p>
 
     <a id="sa-13.0-053"/>
     <h4>13.0 053 rsync  Date: 2026-04-29  Severity: High</h4>
@@ -636,6 +1121,12 @@
 
     <h3>Ruby</h3>
 
+    <a id="sa-13.0-106"/>
+    <h4>13.0 106 Ruby  Date: 2026-05-29  Severity: High</h4>
+    <p>In Ruby-4.0.5, a security vulnerability was fixed that could allow for
+    a denial of service (application crash) and possible memory corruption
+    when processing DNS responses. Update to Ruby-4.0.5.
+    <a href="consolidated.html#sa-13.0-106">13.0-106</a></p>
 
     <a id="sa-13.0-061"/>
     <h4>13.0 061 Ruby   Date: 2026-04-30  Severity: High</h4>
@@ -672,6 +1163,16 @@
 
     <h3>Spidermonkey</h3>
 
+    <a id="sa-13.0-072"/>
+    <h4>13.0 072 Spidermonkey  Date: 2026-05-23  Severity:  High</h4>
+    <p>In Spidermonkey from Firefox-140.11.0esr, four security vulnerabilities
+    were fixed that could allow for remote code execution, information
+    disclosure, and denial of service. These issues occur due to incorrect
+    boundary access, invalid pointers, and use-after-free vulnerabilities.
+    The issues are in the core JavaScript engine as well as the WebAssembly and
+    JIT components. Update to Spidermonkey-140.11.0.
+    <a href="consolidated.html#sa-13.0-072">13.0-072</a></p>
+
     <a id="sa-13.0-028"/>
     <h4>13.0 028 Spidermonkey  Date: 2026-04-01  Severity: High</h4>
     <p>In Spidermonkey from Firefox-140.9.0esr, four security vulnerabilities
@@ -682,6 +1183,18 @@
     <a href="consolidated.html#sa-13.0-028">13.0-028</a></p>
 
 <!-- end of Spidermonkey -->
+
+    <h3>sshfs</h3>
+
+    <a id="sa-13.0-117"/>
+    <h4>13.0 117 sshfs  Date: 2026-06-01  Severity: Critical</h4>
+    <p>In sshfs-3.7.6, two security vulnerabilities were fixed that could allow
+    for argument injection when connecting to a SSH server, and for remote
+    servers to be able to read/write files from outside of the directory where
+    an SSHFS filesystem is mounted via a symlink escape. Update to sshfs-3.7.6.
+    <a href="consolidated.html#sa-13.0-117">13.0-117</a></p>
+
+<!-- end of sshfs -->
 
     <h3>systemd</h3>
 
@@ -696,7 +1209,36 @@
 
 <!-- end of systemd -->
 
+    <h3>Text::CSV_XS</h3>
+
+    <a id="sa-13.0-082"/>
+    <h4>13.0 082 Text::CSV_XS  Date: 2026-05-24  Severity: High</h4>
+    <p>In Text::CSV_XS-1.62, a security vulnerability was fixed that could
+    allow for type confusion or denial of service (application crashes). This
+    can show up in crafted CSV input passed to this Perl module, and occurs
+    due to a use-after-free when registered callbacks extend the Perl argument
+    stack. This Perl module is only used by Biber in BLFS, so users who have
+    that package installed and who process untrusted input will want to update.
+    Users who have written Perl code that utilizes this module  will also
+    want to update if they use the Parse, print, getline, or getline_all
+    methods in their code. Update to Text::CSV_XS-1.62.
+    <a href="consolidated.html#sa-13.0-082">13.0-082</a></p>
+
+<!-- end of Text::CSV_XS -->
+
     <h3>Thunderbird</h3>
+
+    <a id="sa-13.0-074"/>
+    <h4>13.0 074 Thunderbird  Date: 2026-05-23  Severity: Critical</h4>
+    <p>In Thunderbird-140.11.0esr, fifty-five security vulnerabilities were fixed
+    that could allow for remote code execution, denial of service (application
+    crashes and resource exhaustion), information disclosure, privilege
+    escalation, UI spoofing, mitigation bypasses, same-origin policy bypasses,
+    and sandbox escapes. All users of Thunderbird must update immediately to
+    protect their systems, especially since the sandbox escape vulnerabilities
+    significantly amplify the severity of the remote code execution
+    vulnerabilities fixed in this update. Update to Thunderbird-140.11.0esr.
+    <a href="consolidated.html#sa-13.0-074">13.0-074</a></p>
 
     <a id="sa-13.0-029"/>
     <h4>13.0 029 Thunderbird  Date: 2026-04-01  Severity: High</h4>
@@ -714,7 +1256,34 @@
 
 <!-- end of Thunderbird -->
 
+    <h3>urllib3</h3>
+
+    <a id="sa-13.0-089"/>
+    <h4>13.0 089 urllib3  Date: 2026-05-24  Severity: High</h4>
+    <p>In urllib3-2.7.0, two security vulnerabilities were fixed that could
+    allow for sensitive headers to be forwarded across origins, and for
+    denial of service (significant CPU usage and massive memory consumption).
+    The sensitive header forwarding vulnerability occurs if a program calls
+    the ProxyManager.connection_from_url() function and they allow cross
+    origin redirects. The denial of service vulnerability occurs because
+    of a decompression bomb exploitable in the streaming API. Note that users
+    will also want to be on at least brotli-1.2.0 to prevent additional impacts
+    from this vulnerability. Update to urllib3-2.7.0.
+    <a href="consolidated.html#sa-13.0-089">13.0-089</a></p>
+
+<!-- end of urllib3 -->
+
     <h3>vim</h3>
+
+    <a id="sa-13.0-111"/>
+    <h4>13.0 111 vim (LFS and BLFS)  Date: 2026-06-01  Severity: Medium</h4>
+    <p>In vim-9.2.0567, five security vulnerabilities were fixed that could
+    allow for Vimscript code injection, denial of service (application crashes),
+    and arbitrary code execution. Users who use the :terminal command, who
+    use the netrw plugin, who use the cucumber filetype plugin, who perform
+    spell checks, or who use the omni-completion support should update. Update
+    to vim-9.2.0567.
+    <a href="consolidated.html#sa-13.0-111">13.0-111</a></p>
 
     <a id="sa-13.0-071"/>
     <h4>13.0 071 vim (LFS and BLFS)  Date: 2026-05-22  Severity: Medium</h4>
@@ -770,6 +1339,28 @@
 <!-- end of WebKitGTK -->
 
     <h3>Wireshark</h3>
+
+    <a id="sa-13.0-112"/>
+    <h4>13.0 112 Wireshark  Date: 2026-06-01  Severity: Low</h4>
+    <p>In Wireshark-4.6.6, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) with crafted ROHC packets. Users
+    who are operating on a network where the ROHC protocol is used should update
+    if they begin to experience crashes. Update to Wireshark-4.6.6.
+    <a href="consolidated.html#sa-13.0-112">13.0-112</a></p>
+
+    <a id="sa-13.0-077"/>
+    <h4>13.0 077 Wireshark  Date: 2026-05-23  Severity: High</h4>
+    <p>In Wireshark-4.6.5, thirty-nine security vulnerabilities were fixed that
+    could allow for denial of service and potentially remote code execution
+    when picking up crafted packets on a network, when using the sharkd utility,
+    and when importing profiles from other systems. These specifically impact
+    the HTTP, SMB2, GSM RP, WebSocket, RPKI-Router, MBIM, OpenFlow v5, OpenFlow
+    v6, GNW, MySQL, IEEE 802.11, RTSP, ASN.1 PER, TLS, iLBC, DCP-ETSI, SANE,
+    Kismet, USB HID, DLMS/COSEM, ZigBee, BEEP, iLBC, SDP, AMR-NB, RDP, SBC,
+    K12 RF5, AFP, ICMPv6, FC-SWILS, BT-DHT, and Monero packet and protocol
+    dissectors. All users who have Wireshark installed should update to
+    Wireshark-4.6.5 since several of these protocols are commonly used on networks.
+    <a href="consolidated.html#sa-13.0-077">13.0-077</a>.</p>
 
     <a id="sa-13.0-006"/>
     <h4>13.0 006 Wireshark  Date: 2026-03-08  Severity: Medium</h4>
@@ -831,6 +1422,19 @@
     <a href="consolidated.html#sa-13.0-043">13.0-043</a></p>
 
 <!-- end of xdg-desktop-portal -->
+
+    <h3>XML::LibXML</h3>
+
+    <a id="sa-13.0-107"/>
+    <h4>13.0 107 XML::LibXML  Date: 2026-05-29  Severity: High</h4>
+    <p>In XML::LibXML-2.013, a security vulnerability was fixed that could
+    allow for a denial of service (application crash) when processing a
+    crafted XML file that contains node names that are truncated UTF-8 byte
+    sequences. Update to XML::LibXML-2.013 if you are experiencing crashes
+    from Perl applications using this XML::LibXML.
+    <a href="consolidated.html#sa-13.0-107">13.0-107</a></p>
+
+<!-- end of XML::LibXML -->
 
     <h3>Xorg-Server</h3>
 

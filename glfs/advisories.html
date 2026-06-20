@@ -18,6 +18,36 @@
     <br/>
 
     <h2>13.0 to 13.1</h2>
+    <h2>Broken changes</h2>
+    <p>Packages removed from GLFS that are in BLFS may have gotten security
+    updates. Read <a href="/blfs/advisories/13.0.html">BLFS 13.0 Security
+    Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS
+    Consolidated Security Advisories</a> for such packages.</p>
+
+    <a id="glfs-brk-13.0-001"/>
+    <h4>glfs-brk-13.0-001: OpenCL and Ruby (Date: May 29th, 2026)</h4>
+    <p>GLFS used to install OCL-ICD from OCL-Dev as the OpenCL ICD loader.
+       This in turn required Ruby, and Ruby was only required for that package.
+       KhronosGroup has a compatible open source loader, called
+       OpenCL-ICD-Loader, which at the moment of this being issued is at OpenCL
+       API version 3. The only dependencies it requires are CMake and the
+       OpenCL headers.</p>
+    <p>As a result, OCL-ICD has been removed in favor of this compatible ICD
+       loader, which is now part of a page called "OpenCL-SDK". The OpenCL-SDK
+       page used to be called "OpenCL-Headers", but now everything is provided
+       all at once. All the packages in it are at the same version. Ruby has
+       also been removed since it is no longer needed in GLFS, although it has
+       more applications in and out of BLFS. Ruby is a BLFS package, and often
+       has security updates. You can update Ruby from the BLFS <a
+       href="/blfs/view/systemd/general/ruby.html">Ruby</a> page. OCL-ICD was
+       a GLFS-specific package. BLFS does not provide traditional OpenCL
+       support besides libclc for Mesa, but Mesa does not provide an OpenCL
+       ICD in BLFS unless an ICD loader is present and you opt-in to RustICL
+       (RustICL is not enabled by default). Migrating from OCL-ICD to the
+       complete KronosGroup OpenCL-SDK is safe, and recommended as it provides
+       CMake Find Modules for OpenCL so that CMake projects can do a standard
+       check for OpenCL without Pkg-Config.</p>
+
     <h2>Security Advisories</h2>
     <p>Please read <a href="/blfs/advisories/13.0.html">BLFS 13.0 Security
     Advisories</a> and <a href="/blfs/advisories/consolidated.html">BLFS

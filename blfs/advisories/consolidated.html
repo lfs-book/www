@@ -75,6 +75,1359 @@
 
     <h2>Items between the releases of the 13.0 and 13.1 books</h2>
 
+    <a id="sa-13.0-118"/>
+    <h4>13.0 118 libheif  Date: 2026-06-01  Severity: High</h4>
+    <p>In libheif-1.23.0, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when processing a crafted HEIF
+    image. The vulnerability occurs due to an unbounded heap allocation issue.
+    This is extremely trivial to exploit and can be exploited remotely via
+    web browsers. Users who have libheif installed should upgrade if they begin
+    experiencing crashes or OOM conditions.
+    This vulnerability has been assigned
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-jvmp-j3cw-84mh">GHSA-jvmp-j3cw-84mh</a>.</p>
+    <p>To fix this vulnerability, update to libheif-1.23.0 or later using the
+    instructions from
+    <a href="../view/svn/general/libheif.html">libheif (sysv)</a> or
+    <a href="../view/systemd/general/libheif.html">libheif (systemd)</a>.</p>
+
+    <a id="sa-13.0-117"/>
+    <h4>13.0 117 sshfs  Date: 2026-06-01  Severity: Critical</h4>
+    <p>In sshfs-3.7.6, two security vulnerabilities were fixed that could allow
+    for argument injection when connecting to a SSH server, and for remote
+    servers to be able to read/write files from outside of the directory where
+    an SSHFS filesystem is mounted via a symlink escape. The argument injection
+    vulnerability does not require authentication to exploit, though it is only
+    locally exploitable. The remotely exploitable read/write vulnerability
+    is dangerous as the default configuration will follow server provided
+    symlinks. A proof of concept exploit is public for these vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47187">CVE-2026-47187</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48711">CVE-2026-48711</a>.</p>
+    <p>To fix these vulnerabilities, update to sshfs-3.7.6 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/sshfs.html">sshfs (sysv)</a> or
+    <a href="../view/systemd/postlfs/sshfs.html">sshfs (systemd)</a>.</p>
+
+    <a id="sa-13.0-116"/>
+    <h4>13.0 116 libde265  Date: 2026-06-01  Severity: High</h4>
+    <p>In libde265-1.1.0, four security vulnerabilities were fixed that could
+    allow for remote code execution and denial of service (application crashes
+    and excessive resource consumption). These issues rely on a user processing
+    a malicious video using the H.265 video codec, and occur due to a heap
+    buffer overflow, an out-of-bounds write, quadratic CPU consumption,
+    and unbounded memory accumulation. The heap buffer overflow vulnerability
+    has a high potential for remote code execution as it allows for 4GB of data
+    to be potentially written into a 1KB buffer. Proof of concepts have been
+    made public for these vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49346">CVE-2026-49346</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49295">CVE-2026-49295</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49337">CVE-2026-49337</a>, and
+    <a href="https://github.com/strukturag/libde265/security/advisories/GHSA-x27c-jp65-g395">GHSA-x27c-jp65-g395</a>.</p>
+    <p>To fix these vulnerabilities, update to libde265-1.1.0 or later using
+    the instructions from
+    <a href="../view/svn/multimedia/libde265.html">libde265 (sysv)</a> or
+    <a href="../view/systemd/multimedia/libde265.html">libde265 (systemd)</a>.</p>
+
+    <a id="sa-13.0-115"/>
+    <h4>13.0 115 rpcbind  Date: 2026-06-01  Severity: High</h4>
+    <p>In rpcbind-1.2.9, five security vulnerabilities were fixed that could
+    allow for remote code execution or denial of service (excessive memory
+    consumption and daemon crashes). The remote code execution vulnerability
+    occurs due to a stack overflow that can occur when using the 'rpcinfo'
+    command to retrieve information from a RPC server. The other four issues
+    occur due to memory leaks and unauthenticated oversized allocation in the
+    rpcbind daemon itself.
+    No CVEs have been assigned for these issues, but links to the commits where
+    these issues have been resolved can be found at
+    <a href="https://git.linux-nfs.org/?p=steved/rpcbind.git;a=shortlog;h=refs/tags/rpcbind-1_2_9">the rpcbind 1.2.9 shortlog</a>.</p>
+    <p>To fix these vulnerabilities, update to rpcbind-1.2.9 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/rpcbind.html">rpcbind (sysv)</a> or
+    <a href="../view/systemd/basicnet/rpcbind.html">rpcbind (systemd)</a>.</p>
+
+    <a id="sa-13.0-114"/>
+    <h4>13.0 114 7zip  Date: 2026-06-01  Severity: High</h4>
+    <p>In 7zip-26.01, eight security vulnerabilities were fixed that could allow
+    for denial of service (application crashes and resource exhaustion),
+    information disclosure, and arbitrary code execution. These issues occur
+    when processing SquashFS files, UEFI capsules, UDF disc images, WIM images,
+    UEFI firmware images, 'ar' archives, and NTFS filesystem images. The NTFS
+    filesystem image vulnerability allows for arbitrary code execution, while
+    the others allow for crashes and information disclosure (in some cases
+    causing memory contents to be written to a file being processed). Users
+    who are using 7zip to process UEFI firmware images/capsules, SquashFS
+    files, UDF disc images, WIM images, 'ar' archives, or NTFS filesystem
+    images should update as soon as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48092">CVE-2026-48092</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48101">CVE-2026-48101</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48102">CVE-2026-48102</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48103">CVE-2026-48103</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48104">CVE-2026-48104</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48111">CVE-2026-48111</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48112">CVE-2026-48112</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48095">CVE-2026-48095</a>.</p>
+    <p>Additional details on these vulnerabilities can be found at
+    <a href="https://securitylab.github.com/advisories/GHSL-2026-115_GHSL-2026-122_7-zip/">GitHub Security Lab GHSL-2026-115-GHSL-2026-122</a> and
+    <a href="https://securitylab.github.com/advisories/GHSL-2026-140_7-Zip/">GitHub Security Lab GHSL-2026-140</a>.</p>
+    <p>To fix these vulnerabilities, update to 7zip-26.01 or later using the
+    instructions from
+    <a href="../view/svn/general/7zip.html">7zip (sysv)</a> or
+    <a href="../view/systemd/general/7zip.html">7zip (systemd)</a>.</p>
+
+    <a id="sa-13.0-113"/>
+    <h4>13.0 113 libslirp  Date: 2026-06-01  Severity: High</h4>
+    <p>In libslirp-4.9.2, a security vulnerability was fixed that could allow
+    for significant information disclosure. This due to an integer underflow
+    when libslirp is processing "urgent data". Upstream resolved the issue by
+    capping the urgent data count to what is actually available. Further details
+    about the vulnerability are not available at this time unfortunately.
+    The upstream issue can be found at
+    <a href="https://gitlab.freedesktop.org/slirp/libslirp/-/work_items/93">#93</a>
+    when it is available.</p>
+    <p>To fix this vulnerability, update to libslirp-4.9.2 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/libslirp.html">libslirp (sysv)</a> or
+    <a href="../view/systemd/basicnet/libslirp.html">libslirp (systemd)</a>.</p>
+
+    <a id="sa-13.0-112"/>
+    <h4>13.0 112 Wireshark  Date: 2026-06-01  Severity: Low</h4>
+    <p>In Wireshark-4.6.6, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) with crafted ROHC packets. The
+    issue occurs because a crafted packet can cause Wireshark to create a NULL
+    buffer and then write a single byte to it. Users who are operating on a
+    network that uses the ROHC protocol should update if they begin to
+    experience crashes.
+    This vulnerability has been assigned
+    <a href="https://www.wireshark.org/security/wnpa-sec-2026-51">wnpa-sec-2026-51</a>.</p>
+    <p>To fix this vulnerability, update to Wireshark-4.6.6 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-13.0-111"/>
+    <h4>13.0 111 vim (LFS and BLFS)  Date: 2026-06-01  Severity: Medium</h4>
+    <p>In vim-9.2.0567, five security vulnerabilities were fixed that could
+    allow for Vimscript code injection, denial of service (application crashes),
+    and arbitrary code execution. The Vimscript code injection issues occur in
+    the netrw plugin (where a crafted directory name can cause execution of
+    arbitrary Vimscript), and in the cucumber filetype plugin on vim builds
+    which include Ruby support (which is not enabled by default in either LFS
+    or BLFS, even if Ruby is installed). The denial of service vulnerabilities
+    occur in the spell file parser (where a planted spell file and spell
+    checking being enabled can trigger an out-of-bounds read), and in the
+    terminal screen snapshot function (which is used if a program is running
+    in a :terminal window). The arbitrary code execution issue occurs in the
+    Python Omni-Completion support, where vim has the possibility of importing
+    and executing Python code from a Python file that is being viewed if the
+    omni-completion support is utilized. Users who use the :terminal functionality,
+    who use omni-completion support, who use the netrw plugin, who use the
+    cucumber filetype plugin, and who use spellchecking should update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43961">CVE-2026-43961</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47162">CVE-2026-47162</a>,
+    <a href="https://github.com/vim/vim/security/advisories/GHSA-3h95-3962-mmvf">GHSA-3h95-3962-mmvf</a>,
+    <a href="https://github.com/vim/vim/security/advisories/GHSA-52mc-rq6p-rc7c">GHSA-52mc-rq6p-rc7c</a>, and
+    <a href="https://github.com/vim/vim/security/advisories/GHSA-47gw-8gc3-mgcm">GHSA-47gw-8gc3-mgcm</a>.</p>
+    <p>To fix these vulnerabilities, update to vim-9.2.0567 using the
+    instructions from
+    <a href="../view/svn/postlfs/vim.html">vim (sysv)</a> or
+    <a href="../view/systemd/postlfs/vim.html">vim (systemd)</a>.</p>
+
+    <a id="sa-13.0-110"/>
+    <h4>13.0 110 MariaDB  Date: 2026-06-01  Severity: Critical</h4>
+    <p>In MariaDB-11.8.8, three security vulnerabilities were fixed that could
+    allow for remote code execution, remotely exploitable OS command injection,
+    and information disclosure. These vulnerabilities do not affect the default
+    BLFS configuration as they require the use of the Galera cluster support.
+    However, users who have MariaDB installed and who utilize the Galera cluster
+    support should consider updating immediately to protect your systems. There
+    aren't much in the way of details on these vulnerabilities yet, however the
+    commits that fixed them are now public.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49261">CVE-2026-49261</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48165">CVE-2026-48165</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48163">CVE-2026-48163</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-11.8.8 or later using
+    the instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <p>Note that while the development books are on MariaDB-12.3.x, it may be
+    worth staying on the 11.8.x series if users are utilizing the Galera
+    clustering support or if they do not want to go through the upgrade process
+    for the database. The Galera clustering support is no longer included with
+    MariaDB-12.3.x. <em>Users who decide to upgrade to MariaDB-12.3.x must pay
+    extremely close attention to the caution in the book regarding the proper
+    upgrade process to avoid losing all of the data in their database.</em></p>
+    <p>Alternatively, users may update to MariaDB-11.4.12, 10.11.18, or 10.6.27,
+    but note that these have not been tested by the BLFS team.</p>
+
+    <a id="sa-13.0-109"/>
+    <h4>13.0 109 libaom  Date: 2026-06-01  Severity: High</h4>
+    <p>In libaom-3.14.1, several security issues were fixed that could
+    allow for a denial of service and potentially information disclosure
+    when processing crafted videos that use the AOM codec. These issues include
+    assertion failures, integer overflows, and NULL pointer dereferences. Few
+    details are available on these vulnerabilities, but they should be treated
+    as security issues as proof of concepts are available for the integer
+    overflow and NULL pointer dereference vulnerabilities.
+    No CVEs have been assigned for these issues, but additional details can
+    be found at the changelogs for libaom-3.14.0 and 3.14.1:
+    <a href="https://aomedia.googlesource.com/aom/+/refs/tags/v3.14.0">3.14.0 changelog</a> and
+    <a href="https://aomedia.googlesource.com/aom/+/refs/tags/v3.14.1">3.14.1 changelog</a>.</p>
+    <p>To fix these vulnerabilities, update to libaom-3.14.1 or later using the
+    instructions from
+    <a href="../view/svn/multimedia/libaom.html">libaom (sysv)</a> or
+    <a href="../view/systemd/multimedia/libaom.html">libaom (systemd)</a>.</p>
+
+    <a id="sa-13.0-108"/>
+    <h4>13.0 108 PostgreSQL  Date: 2026-05-29  Severity: High</h4>
+    <p>In PostgreSQL-18.4 (and 17.10 for *LFS 12.4 users), eleven security
+    vulnerabilities were fixed that could allow for SQL injection, denial
+    of service (application crashes), authentication bypasses, information
+    disclosure, arbitrary unrelated file overwrites when restoring backups,
+    remote code execution on client systems, password disclosure, and remote
+    code execution on PostgreSQL servers. These issues occur due to a variety
+    of situations, including when performing queries, running the timeofday()
+    function, creating objects, restoring backups, creating subscriptions,
+    accessing a PostgreSQL database from a client, authenticating to a server
+    that uses MD5 password hashing, when executing REFRESH PUBLICATION on a
+    subscription, and when updating columns in a database. Since one of the
+    vulnerabilities allows a superuser on a server to overwrite stack memory
+    in clients, all users who have PostgreSQL installed should update as soon
+    as possible.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6638">CVE-2026-6638</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6637">CVE-2026-6637</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6575">CVE-2026-6575</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6479">CVE-2026-6479</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6478">CVE-2026-6478</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6477">CVE-2026-6477</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6476">CVE-2026-6476</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6475">CVE-2026-6475</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6474">CVE-2026-6474</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6473">CVE-2026-6473</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6472">CVE-2026-6472</a>.</p>
+    <p>To fix these vulnerabilities, update to PostgreSQL-18.4 (or 17.10) or
+    later using the instructions from
+    <a href="../view/svn/server/postgresql.html">PostgreSQL (sysv)</a> or
+    <a href="../view/systemd/server/postgresql.html">PostgreSQL (systemd)</a>.</p>
+    <p>Users may alternatively consider updating to 16.14, 15.18, or 14.23, but
+    note that the BLFS team has not verified that these versions work.</p>
+    <p>Users who update between major versions of PostgreSQL should pay close
+    attention to the upgrade instructions on the PostgreSQL page.</p>
+
+    <a id="sa-13.0-107"/>
+    <h4>13.0 107 XML::LibXML  Date: 2026-05-29  Severity: High</h4>
+    <p>In XML::LibXML-2.013, a security vulnerability was fixed that could
+    allow for a denial of service (application crash) when processing a
+    crafted XML file that contains node names that are truncated UTF-8 byte
+    sequences. The problem results in an out-of-bounds read, where a node name
+    that ends in the middle of a multibyte sequence will cause the parser to
+    read past the end of the input string and into adjacent heap memory. The
+    only known impact at this time is an application crash, and users should
+    update if they begin experiencing crashes from Perl programs that utilize
+    XML::LibXML.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8177">CVE-2026-8177</a>.</p>
+    <p>To fix this vulnerability, update to XML::LibXML using the instructions
+    from
+    <a href="../view/svn/general/perl-deps.html#perl-xml-libxml">XML::LibXML (sysv)</a> or
+    <a href="../view/systemd/general/perl-deps.html#perl-xml-libxml">XML::LibXML (systemd)</a>.</p>
+
+    <a id="sa-13.0-106"/>
+    <h4>13.0 106 Ruby  Date: 2026-05-29  Severity: High</h4>
+    <p>In Ruby-4.0.5, a security vulnerability was fixed that could allow for
+    a denial of service (application crash) and possible memory corruption
+    when processing DNS responses. The issue occurs due to a race condition,
+    which causes a use-after-free in the getaddrinfo timeout handler. The
+    vulnerability relies on the remote attacker being able to delay DNS
+    responses near a user-specified timeout. Applications which use the
+    Addrinfo.getaddrinfo or Socket.tcp functions with a specific timeout set
+    are affected.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46727">CVE-2026-46727</a>.</p>
+    <p>To fix this vulnerability, update to Ruby-4.0.5 or later using the
+    instructions from
+    <a href="../view/svn/general/ruby.html">Ruby (sysv)</a> or
+    <a href="../view/systemd/general/ruby.html">Ruby (systemd)</a>.</p>
+
+    <a id="sa-13.0-105"/>
+    <h4>13.0 105 MariaDB  Date: 2026-05-29  Severity: High</h4>
+    <p>In MariaDB-11.8.7, five security vulnerabilities were fixed that could
+    allow for SQL injection, arbitrary shell command execution, path traversal,
+    and authorization bypasses. The SQL injection vulnerability occurs when a
+    database uses the big5 character set because mysql_real_escape_string() did
+    not properly handle this character set. The arbitrary shell command execution
+    issue occurs when restoring a database made via the mariabackup SST method,
+    because some parameters were not properly validated. The path traversal
+    issue occurs when utilizing mbstream, as mbstream did not check for /../
+    when unpacking an archive. This allows for an archive to create files
+    outside of the target directory path. The first authorization bypass
+    occurs in role-based routine-level privilege checks, where a user getting
+    EXECUTE access to a stored routine can see the routine definition even
+    without SHOW CREATE ROUTINE privilges. The other authorization bypass issue
+    occurs because MariaDB allowed SELECT ... INTO OUTFILE and SELECT ... INTO
+    DUMPFILE without verifying the FILE privilege if the FROM clause only
+    contained subqueries. All users who have a MariaDB server running should
+    update, but users only using the client functionality are safe from these
+    vulnerabilities.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44173">CVE-2026-44173</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44172">CVE-2026-44172</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44171">CVE-2026-44171</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44169">CVE-2026-44169</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44168">CVE-2026-44168</a>.</p>
+    <p>To fix these vulnerabilities, update to MariaDB-11.8.7 or later using
+    the instructions from
+    <a href="../view/svn/server/mariadb.html">MariaDB (sysv)</a> or
+    <a href="../view/systemd/server/mariadb.html">MariaDB (systemd)</a>.</p>
+    <p>Alternatively, users may update to MariaDB-11.4.11, 10.11.17, or 10.6.26,
+    but note that these have not been tested by the BLFS team.</p>
+
+    <a id="sa-13.0-104"/>
+    <h4>13.0 104 HTTP::Daemon  Date: 2026-05-29  Severity: Critical</h4>
+    <p>In HTTP::Daemon-6.17, a security vulnerability was fixed that could
+    allow for OS Command Injection while processing untrusted input passed into
+    the send_file() function. It is also possible for the read-pipe form to
+    leak subprocess stdout output into an HTTP request body, and the write-mode
+    form can create or truncate files at attacker chosen paths. In BLFS, this
+    module is only used by the test suite for Wget. However, users who may have
+    written code that uses this module should update this package immediately,
+    especially if they are running it as a publicly-accessible HTTP server.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8450">CVE-2026-8450</a>.</p>
+    <p>To fix this vulnerability, update to HTTP::Daemon-6.17 or later using
+    the instructions from
+    <a href="../view/svn/general/perl-modules.html#perl-http-daemon">HTTP::Daemon (sysv)</a> or
+    <a href="../view/systemd/general/perl-modules.html#perl-http-daemon">HTTP::Daemon (systemd)</a>.</p>
+    <p>Note that the dependencies and build instructions for this package have
+    changed significantly. Please pay extra attention to these changes when
+    updating this package.</p>
+
+    <a id="sa-13.0-103"/>
+    <h4>13.0 103 libheif  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In libheif-1.22.2, 21 security vulnerabilities were fixed that could
+    allow for denial of service (application crashes, system resource
+    exhaustion, and memory corruption), information disclosure, remote
+    code execution, and arbitrary code execution. These issues occur due to
+    a large variety of problems, including out-of-bounds read/writes, heap
+    buffer overflows, integer overflows, and NULL pointer dereferences. The
+    issues can be exploited by processing crafted HEIF images. All users who
+    have libheif installed should update immediately due to several of the
+    issues allowing for code execution, especially as the attacker will have
+    full control over the overflowed content since some issues have to do with
+    Chroma pixel values.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32738">CVE-2026-32738</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32739">CVE-2026-32739</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32740">CVE-2026-32740</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32741">CVE-2026-32741</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32814">CVE-2026-32814</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32882">CVE-2026-32882</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41069">CVE-2026-41069</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41071">CVE-2026-41071</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47178">CVE-2026-47178</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47247">CVE-2026-47247</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47251">CVE-2026-47251</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47254">CVE-2026-47254</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47709">CVE-2026-47709</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47714">CVE-2026-47714</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48029">CVE-2026-48029</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-95jx-g5vf-cpp8">GHSA-95jx-g5vf-cpp8</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-p4r6-6972-g26m">GHSA-p4r6-6972-g26m</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-jh2w-m72q-q595">GHSA-jh2w-m72q-q595</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-9h96-c44j-jpq9">GHSA-9h96-c44j-jpq9</a>,
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-r7qj-cg5r-r6vf">GHSA-r7qj-cg5r-r6vf</a>, and
+    <a href="https://github.com/strukturag/libheif/security/advisories/GHSA-5hqq-636x-r3cr">GHSA-5hqq-636x-r3cr</a>.</p>
+    <p>To fix these vulnerabilities, update to libheif-1.22.2 or later using
+    the instructions from
+    <a href="../view/svn/general/libheif.html">libheif (sysv)</a> or
+    <a href="../view/systemd/general/libheif.html">libheif (systemd)</a>.</p>
+
+    <a id="sa-13.0-102"/>
+    <h4>13.0 102 HTML::Parser  Date: 2026-05-28  Severity: High</h4>
+    <p>In HTML::Parser-3.85, a security vulnerability was fixed that could
+    allow for a denial of service (application crash) when processing a
+    crafted HTML file. The issue occurs when decoding UTF-8 entities, and
+    is classifed as a heap use-after-free. From an analysis of the fix however,
+    the only known impact is an application crash. Users who are using the
+    HTML::Parser perl module and encounter crashes should upgrade.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8829">CVE-2026-8829</a>.</p>
+    <p>To fix this vulnerability, update to HTML::Parser-3.85 or later using
+    the instructions from
+    <a href="../view/svn/general/perl-modules.html#perl-html-parser">HTML::Parser (sysv)</a> or
+    <a href="../view/systemd/general/perl-modules.html#perl-html-parser">HTML::Parser (systemd)</a>.</p>
+
+    <a id="sa-13.0-101"/>
+    <h4>13.0 101 Evince  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In Evince-48.4, a security vulnerability was fixed that could allow for
+    trivial remote code execution when opening a crafted PDF file. This issue
+    occurs due to argv injection via the /GoToR action, and a proof of concept
+    is public as well as a generator for malicious PDFs. The vulnerability
+    simply relies on a user opening a crafted PDF file to exploit, no further
+    interaction by the user is required. All users who have Evince installed
+    need to update immediately, especially if they review PDFs sent to them
+    from other sources.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46529">CVE-2026-46529</a>, and
+    additional details can be found at the
+    <a href="https://gitlab.gnome.org/GNOME/evince/-/work_items/2153">upstream bug report</a>.</p>
+    <p>Additional resources include a blog post from a
+    <a href="https://blogs.gnome.org/mcatanzaro/2026/05/21/single-click-code-execution-exploit-for-evince-atril-and-xreader/">GNOME security team member on this issue</a>.</p>
+    <p>To fix this vulnerability, update to Evince-48.4 or later uisng the
+    instructions from
+    <a href="../view/svn/gnome/evince.html">Evince (sysv)</a> or
+    <a href="../view/systemd/gnome/evince.html">Evince (systemd)</a>.</p>
+
+    <a id="sa-13.0-100"/>
+    <h4>13.0 100 ghostscript  Date: 2026-05-28  Severity: High</h4>
+    <p>In ghostscript-10.07.1, several potential security vulnerabilities were
+    fixed that could allow for denial of service (application crashes) and
+    potential arbitrary code execution when processing crafted PostScript files.
+    Upstream did not request any CVEs, but a brief analysis of the commit logs
+    and some testing shows that a majority of the issues are heap buffer
+    overflows, integer overflows, infinite loops, and logic errors. Note that
+    ghostscript is commonly used with cups-filters, and users will want to
+    update if they start experiencing crashes when sending print jobs to a
+    printer or processing PostScript files.
+    Details on these vulnerabilities are slim, but some resources include the
+    <a href="https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/log/?h=gs10.07.1">ghostscript-10.07.1 git log</a> and
+    <a href="https://ghostscript.readthedocs.io/en/gs10.07.1/News.html">the release notes</a>.</p>
+    <p>To fix these vulnerabilities, update to ghostscript-10.07.1 or later
+    using the instructions from
+    <a href="../view/svn/pst/gs.html">ghostscript (sysv)</a> or
+    <a href="../view/systemd/pst/gs.html">ghostscript (sysv)</a>.</p>
+
+    <a id="sa-13.0-099"/>
+    <h4>13.0 099 libde265  Date: 2026-05-28  Severity: Medium</h4>
+    <p>In libde265-1.0.19, two security vulnerabilities were fixed that could
+    allow for denial of service (application crashes) when processing crafted
+    video files using the H.265 video codec. These issues are both heap buffer
+    overflows caused by out-of-bounds reads in the decode_slice_unit_WPP() and
+    the decode_slice_unit_tiles() functions. The only known impact is denial
+    of service.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45382">CVE-2026-45382</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45383">CVE-2026-45383</a>.</p>
+    <p>To fix these vulnerabilities, update to libde265-1.0.19 or later using
+    the instructions from
+    <a href="../view/svn/multimedia/libde265.html">libde265 (sysv)</a> or
+    <a href="../view/systemd/multimedia/libde265.html">libde265 (systemd)</a>.</p>
+
+    <a id="sa-13.0-098"/>
+    <h4>13.0 098 Linux Kernel (LFS)  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In Linux-7.0.10 and 6.18.33, two security vulnerabilities were fixed
+    that could allow for local privilege escalation. These are amongst the
+    same class as CopyFail, as both of them have proof of concept exploits that
+    allow for extremely trivial local privilege escalation by overwriting a
+    version of /usr/bin/su in the page cache, which is never written to disk.
+    The first vulnerability has been termed Fragnesia, and it involved the
+    XFRM ESP-in-TCP subsystem in the kernel which is enabled by default via
+    a 'make defconfig'. Because of this, it is reasonably assumed that all
+    LFS users who are running a Linux-4.9.x kernel or later are affected by
+    this issue (and the first release of LFS to include a kernel affected
+    was LFS 8.0). The other vulnerability has been termed PinTheft, which
+    affected the RDS module combined with the io_uring subsystem. Thankfully
+    though the RDS module is not enabled by default in the kernel, so only
+    users who have explicitly enabled CONFIG_RDS are vulnerable to this
+    issue. The first LFS version affected by this issue is 8.3 (from 2018).
+    Similar to CopyFail and other derivatives, these vulnerabilities disable
+    password authentication for 'su' until the system is rebooted or the page
+    cache is emptied. Note that while local privilege escalation has been
+    identified as one of the primary impacts, these vulnerabilities are being
+    chained together with exploits in other packages to give remote attackers
+    root access on a system once it has been compromised via other means.
+    <em>ALL users of LFS must immediately update to Linux-6.18.33 or 7.0.10.</em>
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300">CVE-2026-46300</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43494">CVE-2026-43494</a>.</p>
+    <p>Additional information about these issues can be found at
+    <a href="https://github.com/v12-security/pocs/tree/main/fragnesia">the Fragnesia writeup</a>,
+    <a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html">Gentoo's statement about Fragnesia</a>,
+    <a href="https://tuxcare.com/blog/fragnesia-cve-2026-46300/">TuxCare post about Fragnesia</a>,
+    <a href="https://blog.cloudlinux.com/pintheft-cloudlinux-platforms-not-affected">CloudLinux post about PinTheft</a>, and
+    <a href="https://github.com/v12-security/pocs/tree/main/pintheft">the PinTheft writeup</a>.</p>
+    <p>To fix these vulnerabilities, update to Linux-7.0.10 or 6.18.33 or later
+    using the instructions from
+    <a href="../../lfs/view/development/chapter10/kernel.html">Linux Kernel (sysv)</a> or
+    <a href="../../lfs/view/systemd/chapter10/kernel.html">Linux Kernel (systemd)</a>.</p>
+    <p>If you are on a 13.0 or older system, the editors recommend using 6.18.33
+    as an additional patch will be required in Chapter 5 and Chapter 8 for glibc
+    due to changes in Linux-7.0. Linux-6.18.33 has been tested and known to work
+    on both LFS 12.4 (SysV) and LFS 13.0. The importance of these vulnerabilities
+    being fixed cannot be underscored enough. Immediate action must be taken
+    to protect your systems and your data. Please continue to monitor the
+    security advisories for additional information and take care of any existing
+    security updates to prevent further exposure for your system.</p>
+    <p>Additional stable kernel versions 6.12.91, 6.6.141, 6.6.174, 5.15.208,
+    and 5.10.257 were released for these issues but have not been tested by the
+    LFS editors.</p>
+
+    <a id="sa-13.0-097"/>
+    <h4>13.0 097 QtWebEngine  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In QtWebEngine-6.11.1, 153 security vulnerabilities were fixed that
+    could allow for remote code execution, cross-origin data exfiltration,
+    sandbox escapes, for remote attackers to read/write files from a user's
+    filesystem, arbitrary code execution, sensitive information disclosure,
+    for attackers to brute force sensitive information (such as passwords)
+    from PDF files, UI spoofing, arbitrary scripts or HTML injection, for
+    attackers to force multiple downloads to happen simultaneously, for same
+    origin policy bypasses, for navigation restriction bypasses, for URL bar
+    spoofing, for content security policy bypasses, for enterprise host
+    restriction bypasses, and for site isolation bypasses. These occur in a
+    large variety of different components within the bundled version of
+    Chromium, including Network, PDFium, V8, Extensions, Dawn, ANGLE, WebAudio,
+    Navigation, Blink, WebRTC, WebAudio, CSS, Skia, WebGL, Base, Fonts,
+    WebCodecs, WebUSB, Codecs, GPU, Compositing, PDF, History Navigation,
+    Downloads, Audio, WebSockets, IframeSandbox, Media, WebML, Browser UI,
+    Fullscreen, ServiceWorkers, Prerender, Turbofan, Graphite, Viz, Filesystem,
+    Accessibility, Passwords, CORS, Forms, Proxy, DevTools, WebMIDI, Views,
+    Compositing, WebView, Feedback, Tint, Cast, Canvas, DOM, and SVG. One of
+    these vulnerabilities is known to be actively exploited in the wild, but
+    <em>ALL</em> users who have QtWebEngine installed need to update immediately
+    due to the sheer number of vulnerabilities fixed and their impacts.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4454">CVE-2026-4454</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4455">CVE-2026-4455</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4457">CVE-2026-4457</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4458">CVE-2026-4458</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4453">CVE-2026-4453</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4452">CVE-2026-4452</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4450">CVE-2026-4450</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4459">CVE-2026-4459</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4464">CVE-2026-4464</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4451">CVE-2026-4451</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4449">CVE-2026-4449</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4448">CVE-2026-4448</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4446">CVE-2026-4446</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4445">CVE-2026-4445</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4444">CVE-2026-4444</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4443">CVE-2026-4443</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4442">CVE-2026-4442</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4459">CVE-2026-4459</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4460">CVE-2026-4460</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4462">CVE-2026-4462</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4463">CVE-2026-4463</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4440">CVE-2026-4440</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4441">CVE-2026-4441</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4677">CVE-2026-4677</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4679">CVE-2026-4679</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4675">CVE-2026-4675</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4674">CVE-2026-4674</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5283">CVE-2026-5283</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5282">CVE-2026-5282</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5281">CVE-2026-5281</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5280">CVE-2026-5280</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5279">CVE-2026-5279</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5277">CVE-2026-5277</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5276">CVE-2026-5276</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5275">CVE-2026-5275</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5274">CVE-2026-5274</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5272">CVE-2026-5272</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5273">CVE-2026-5273</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5292">CVE-2026-5292</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5291">CVE-2026-5291</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5290">CVE-2026-5290</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5289">CVE-2026-5289</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5287">CVE-2026-5287</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5285">CVE-2026-5285</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5284">CVE-2026-5284</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5889">CVE-2026-5889</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5890">CVE-2026-5890</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5888">CVE-2026-5888</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5899">CVE-2026-5899</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5900">CVE-2026-5900</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5896">CVE-2026-5896</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5919">CVE-2026-5919</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5903">CVE-2026-5903</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5904">CVE-2026-5904</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5907">CVE-2026-5907</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5908">CVE-2026-5908</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5909">CVE-2026-5909</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5910">CVE-2026-5910</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5912">CVE-2026-5912</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5918">CVE-2026-5918</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5915">CVE-2026-5915</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5914">CVE-2026-5914</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5877">CVE-2026-5877</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5878">CVE-2026-5878</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5879">CVE-2026-5879</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5876">CVE-2026-5876</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5880">CVE-2026-5880</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5875">CVE-2026-5875</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5882">CVE-2026-5882</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5884">CVE-2026-5884</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5885">CVE-2026-5886</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5893">CVE-2026-5893</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5863">CVE-2026-5863</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5862">CVE-2026-5862</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5860">CVE-2026-5860</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5861">CVE-2026-5861</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5865">CVE-2026-5865</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5866">CVE-2026-5866</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5868">CVE-2026-5868</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5870">CVE-2026-5870</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5871">CVE-2026-5871</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5872">CVE-2026-5872</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5911">CVE-2026-5911</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6299">CVE-2026-6299</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5883">CVE-2026-5883</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5913">CVE-2026-5913</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5894">CVE-2026-5894</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6363">CVE-2026-6363</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6364">CVE-2026-6364</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6359">CVE-2026-6359</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6300">CVE-2026-6300</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6301">CVE-2026-6301</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6302">CVE-2026-6302</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6303">CVE-2026-6303</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6304">CVE-2026-6304</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6305">CVE-2026-6305</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6306">CVE-2026-6306</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6308">CVE-2026-6308</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6307">CVE-2026-6307</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6309">CVE-2026-6309</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6360">CVE-2026-6360</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6311">CVE-2026-6311</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6312">CVE-2026-6312</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6313">CVE-2026-6313</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6314">CVE-2026-6314</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6316">CVE-2026-6316</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6361">CVE-2026-6361</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6362">CVE-2026-6362</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5886">CVE-2026-5886</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5891">CVE-2026-5891</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5873">CVE-2026-5873</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6298">CVE-2026-6298</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6297">CVE-2026-6297</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6296">CVE-2026-6296</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6919">CVE-2026-6919</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5901">CVE-2026-5901</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6920">CVE-2026-6920</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7350">CVE-2026-7350</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7343">CVE-2026-7343</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7359">CVE-2026-7359</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7340">CVE-2026-7340</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7339">CVE-2026-7339</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7360">CVE-2026-7360</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7335">CVE-2026-7335</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7355">CVE-2026-7355</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7333">CVE-2026-7333</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7357">CVE-2026-7357</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7336">CVE-2026-7336</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7356">CVE-2026-7356</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7354">CVE-2026-7354</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7353">CVE-2026-7353</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7341">CVE-2026-7341</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7342">CVE-2026-7342</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7351">CVE-2026-7351</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7348">CVE-2026-7348</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7346">CVE-2026-7346</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7345">CVE-2026-7345</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7349">CVE-2026-7349</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7344">CVE-2026-7344</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7363">CVE-2026-7363</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7917">CVE-2026-7919</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7914">CVE-2026-7914</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7912">CVE-2026-7912</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7910">CVE-2026-7910</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7908">CVE-2026-7908</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7907">CVE-2026-7907</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7906">CVE-2026-7906</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7904">CVE-2026-7904</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7903">CVE-2026-7903</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7902">CVE-2026-7902</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7901">CVE-2026-7901</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7900">CVE-2026-7900</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7899">CVE-2026-7899</a>.</p>
+    <p>To fix these vulnerabilities, update to QtWebEngine-6.11.1 or later using
+    the instructions from
+    <a href="../view/svn/x/qtwebengine.html">QtWebEngine (sysv)</a> or
+    <a href="../view/systemd/x/qtwebengine.html">QtWebEngine (systemd)</a>.</p>
+
+    <a id="sa-13.0-096"/>
+    <h4>13.0 096 Qt6  Date: 2026-05-28  Severity: High</h4>
+    <p>In Qt6-6.11.1, a security vulnerability was fixed in the QtSVG module
+    that could allow for a denial of service (application crash) when loading
+    a crafted SVG image. This issue occurs due to an out of bounds read when
+    processing SVG marker references, followed by an infinite recursion problem.
+    This can be exploitable remotely in the context of web browsers that use
+    QtWebEngine, such as Falkon. The vulnerability is trivial to exploit.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6210">CVE-2026-6210</a>.</p>
+    <p>To fix this vulnerability, update to Qt6-6.11.1 or later using the
+    instructions from
+    <a href="../view/svn/x/qt6.html">Qt6 (sysv)</a> or
+    <a href="../view/systemd/x/qt6.html">Qt6 (systemd0</a>.</p>
+
+    <a id="sa-13.0-095"/>
+    <h4>13.0 095 lxml (Python Module)  Date: 2026-05-26  Severity: High</h4>
+    <!-- Rating as High as very few details are available. The Fedora
+    advisory linked in the release notes is still not public yet. -->
+    <p>In lxml-6.1.1, a security vulnerability was fixed that can be
+    used for URL bypass attacks in embedded SVG, MathML, and other HTML5
+    content. This issue occurs because the known link attributes from the
+    'lxml.html.defs.link_attrs' set was missing 'xlink:href', which
+    allowed for unauthorized files to be loaded.
+    No details are available publicly about this vulnerability because the
+    upstream advisory has not been published yet, but when it is available,
+    it can be found at
+    <a href="https://github.com/fedora-python/lxml_html_clean/security/advisories/GHSA-4jhm-jv67-739f">the GitHub Security Advisory</a>.</p>
+    <p>To fix this vulnerability, update to lxml-6.1.1 or later using the
+    instructions from
+    <a href="../view/svn/general/python-modules.html#lxml">lxml (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#lxml">lxml (systemd)</a>.</p>
+
+    <a id="sa-13.0-094"/>
+    <h4>13.0 094 libpng  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In libpng-1.6.58's libpng-1.6.58-apng patch, a security vulnerability
+    was fixed that could allow for chunk smuggling in the push-mode APNG
+    parser. This can allow for crafted APNG images to cause a denial of service
+    (application crash). Note that this cannot cause code execution because
+    the compressed output of some APNG images write into a pre-allocated row
+    buffer. However, in BLFS, libpng's APNG support is heavily utilized with
+    Firefox, Thunderbird, and Seamonkey. Users who use those packages should
+    apply this update to their systems.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40930">CVE-2026-40930</a>.</p>
+    <p>Additional details can be found in the
+    <a href="https://github.com/pnggroup/libpng/security/advisories/GHSA-c4v6-gxrq-6g2x">GitHub Security Advisory</a>.</p>
+    <p>To fix this vulnerability, update to libpng-1.6.58 or later with the
+    updated apng patch using the instructions from
+    <a href="../view/svn/general/libpng.html">libpng (sysv)</a> or
+    <a href="../view/systemd/general/libpng.html">libpng (systemd)</a>.</p>
+
+    <a id="sa-13.0-093"/>
+    <h4>13.0 093 GnuPG  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In GnuPG-2.5.20, several security vulnerabilities were fixed that could
+    allow for a denial of service (application crash) when processing crafted
+    certificates, utilizing SC-HSM SmartCards, processing key signatures, and
+    using the 'gpgsm' utility. The only known impact of these problems is a
+    crash, and users should upgrade if they start experiencing crashes out of
+    the 'gpg' or 'gpgsm' commands when utilizing untrusted input.
+    There have not been any CVEs assigned to these vulnerabilities, but details
+    can be found at the
+    <a href="https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000505.html">GnuPG 2.5.20 Release Notes</a>.</p>
+    <p>To fix these vulnerabilities, update to GnuPG-2.5.20 or later using the
+    instructions from
+    <a href="../view/svn/postlfs/gnupg.html">GnuPG (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnupg.html">GnuPG (systemd)</a>.</p>
+
+    <a id="sa-13.0-092"/>
+    <h4>13.0 092 libwww-perl  Date: 2026-05-26  Severity: Medium</h4>
+    <p>In libwww-perl-6.83, a security vulnerability was fixed that could allow
+    for Authorization and Proxy-Authorization headers to be leaked to an
+    attacker-controlled host on cross-origin redirects. This occurs because the
+    redirect handler only strips Host and Cookie fields before issuing a follow
+    up request on a HTTP 3XX response, and caller-supplied Authorization and
+    Proxy-Authorization headers are not stripped and sent unchanged to the
+    redirect target.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8368">CVE-2026-8368</a>.</p>
+    <p>To fix this vulnerability, update to libwww-perl-6.83 or later using the
+    instructions from
+    <a href="../view/svn/general/perl-modules.html#perl-libwww-perl">libwww-perl (sysv)</a> or
+    <a href="../view/systemd/general/perl.modules.html#perl-libwww-perl">libwww-perl (systemd)</a>.</p>
+
+    <a id="sa-13.0-091"/>
+    <h4>13.0 091 gstreamer  Date: 2026-05-26  Severity: High</h4>
+    <p>In gstreamer, gst-plugins-bad, and gst-plugins-good-1.28.3, six security
+    vulnerabilities were fixed that could allow for arbitrary code execution,
+    data corruption, denial of service (application crashes), and information
+    disclosure of sensitive memory contents. These vulnerabilities occur in the
+    H.266/VVC parser, the MXF demuxer, the MOV/MP4 demuxer, the MPEG PS PES
+    header parser, and the core GStreamer libraries themselves. Because the
+    gstreamer suite is used in a variety of contexts (including audio/video
+    editors, media players, and web browsers), and the fact that one of the
+    arbitrary code execution and data corruption vulnerabilities is in the
+    core of gstreamer itself, all users who have the suite installed should
+    update as soon as possible.
+    These vulnerabilities have not been assigned CVEs, but additional details
+    can be found upstream from the GStreamer Security Center:
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0024.html">GStreamer-SA-2026-0024</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0025.html">GStreamer-SA-2026-0025</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0026.html">GStreamer-SA-2026-0026</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0027.html">GStreamer-SA-2026-0027</a>,
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0028.html">GStreamer-SA-2026-0028</a>, and
+    <a href="https://gstreamer.freedesktop.org/security/sa-2026-0029.html">GStreamer-SA-2026-0029</a>.</p>
+    <p>To fix these vulnerabilities, update the gstreamer stack to 1.28.3 or
+    later starting with the instructions from
+    <a href="../view/svn/multimedia/gstreamer10.html">gstreamer (sysv)</a> or
+    <a href="../view/systemd/multimedia/gstreamer10.html">gstreamer (systemd)</a>.</p>
+
+    <a id="sa-13.0-090"/>
+    <h4>13.0 090 PHP  Date: 2026-05-26  Severity: Critical</h4>
+    <p>In PHP-8.5.6, eleven security vulnerabilities were fixed that could
+    allow for denial of service (application crashes, infinite loops, and
+    excessive resource consumption), cross site scripting, remotely exploitable
+    information disclosure, SQL injection, remote code execution, and for
+    numeric truncation (leading to incorrect information being returned from
+    a PHP program). These vulnerabilities occur in a variety of different areas
+    in PHP itself, including the standard library, URI, SOAP, PDO_Firebird,
+    MBString, FPM, and DOM. All users who have PHP installed are urged to update
+    immediately, especially if they are running it on a web server.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7263">CVE-2026-7263</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6735">CVE-2026-6735</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6104">CVE-2026-6104</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7259">CVE-2026-7259</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-14179">CVE-2025-14179</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6722">CVE-2026-6722</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7261">CVE-2026-7261</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7262">CVE-2026-7262</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7568">CVE-2026-7568</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7258">CVE-2026-7258</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42371">CVE-2026-42371</a>.</p>
+    <p>To fix these vulnerabilities, update to PHP-8.5.6 or later using the
+    instructions from
+    <a href="../view/svn/general/php.html">PHP (sysv)</a> or
+    <a href="../view/systemd/general/php.html">PHP (systemd)</a>.</p>
+    <p>Alternatively, users may use PHP-8.4.21 using the same instructions.</p>
+
+    <a id="sa-13.0-089"/>
+    <h4>13.0 089 urllib3  Date: 2026-05-24  Severity: High</h4>
+    <p>In urllib3-2.7.0, two security vulnerabilities were fixed that could
+    allow for sensitive headers to be forwarded across origins, and for
+    denial of service (significant CPU usage and massive memory consumption).
+    The sensitive header forwarding vulnerability occurs if a program calls
+    the ProxyManager.connection_from_url() function and they allow cross
+    origin redirects. The denial of service vulnerability occurs because
+    of a decompression bomb exploitable in the streaming API. Note that users
+    will also want to be on at least brotli-1.2.0 to prevent additional impacts
+    from this vulnerability.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44432">CVE-2026-44432</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44431">CVE-2026-44431</a>.</p>
+    <p>To fix these vulnerabilities, update to urllib3-2.7.0 or later using the
+    instructions from
+    <a href="../view/svn/general/python-dependencies.html#urllib3">urllib3 (sysv)</a> or
+    <a href="../view/systemd/general/python-dependencies.html#urllib3">urllib3 (systemd)</a>.</p>
+
+    <a id="sa-13.0-088"/>
+    <h4>13.0 088 libgpg-error  Date: 2026-05-24  Severity: High</h4>
+    <p>In libgpg-error-1.61, two security vulnerabilities were fixed that
+    could allow for a denial of service (application crash) and possibly
+    arbitrary code execution. These issues occur in the es_printf() and the
+    vfnameconcat functions, where a stack overflow is possible in the
+    es_printf() function using the %.100f format, and an out-of-bounds read
+    is possible in the vfnameconcat function. The buffer overflow is known
+    to be exploitable in some circumstances.
+    No CVEs were assigned for these vulnerabilities, however more details
+    can be found at the
+    <a href="https://dev.gnupg.org/T8239.html">libgpg-error release notes</a>.</p>
+    <p>To fix these vulnerabilities, update to libgpg-error-1.61 or later using
+    the instructions from
+    <a href="../view/svn/general/libgpg-error.html">libgpg-error (sysv)</a> or
+    <a href="../view/systemd/general/libgpg-error.html">libgpg-error (systemd)</a>.</p>
+
+    <a id="sa-13.0-087"/>
+    <h4>13.0 087 cURL  Date: 2026-05-24  Severity: Medium</h4>
+    <p>In cURL-8.20.0, seven security vulnerabilities were fixed that could
+    allow for cleartext transmission of sensitive information (due to invalid
+    connection reuse), for authentication bypass when using HTTP Negotiate, for
+    SMB connections to download or upload the wrong file, for proxy credentials
+    to be leaked when using a proxy to connect to a second proxy, for cookie
+    leaks, for credentials to be exposed to remote servers when using a .netrc
+    file, and for cross-proxy Digest authentication state leakage. Note that
+    the cleartext transmission of sensitive information vulnerability requires
+    the usage of an IMAP, POP, or SMTP URL scheme, and that SMB support is
+    disabled by default and only supports the long outdated SMB1.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4873">CVE-2026-4873</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5545">CVE-2026-5545</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5773">CVE-2026-5773</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6523">CVE-2026-6523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6276">CVE-2026-6276</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6429">CVE-2026-6429</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7168">CVE-2026-7168</a>.</p>
+    <p>To fix these vulnerabilities, update to cURL-8.20.0 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/curl.html">cURL (sysv)</a> or
+    <a href="../view/systemd/basicnet/curl.html">cURL (systemd)</a>.</p>
+
+    <a id="sa-13.0-086"/>
+    <h4>13.0 086 FreeRDP  Date: 2026-05-24  Severity: High</h4>
+    <p>In FreeRDP-3.26.0, four security vulnerabilities were fixed that could
+    allow for remote code execution and denial of service. These issues can
+    occur when using clipboard redirection, when using RDPGFX, and when using
+    RDPEAR. These vulnerabilities require a user to connect to a malicious
+    RDP server, and as such most users will be fine as long as they are not
+    connecting to untrusted systems using FreeRDP. If you are connecting to
+    untrusted systems though, you should update immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44420">CVE-2026-44420</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45700">CVE-2026-45700</a>,
+    <a href="https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-p6r2-4hgm-m6ff">GHSA-p6r2-4hgm-m6ff</a>, and
+    <a href="https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-j9q5-7g8m-jc9v">GHSA-j9q5-7g8m-jc9v</a>.</p>
+    <p>To fix these vulnerabilities, update to FreeRDP-3.26.0 or later using
+    the instructions from
+    <a href="../view/svn/xsoft/freerdp.html">FreeRDP (sysv)</a> or
+    <a href="../view/systemd/xsoft/freerdp.html">FreeRDP (systemd)</a>.</p>
+
+    <a id="sa-13.0-085"/>
+    <h4>13.0 085 ffmpeg  Date: 2026-05-24  Severity: High</h4>
+    <p>In ffmpeg-8.1.1, a security vulnerability was fixed that could allow
+    for a denial of service (application crash) when processing media files.
+    This can be remotely exploited with no user interaction in web browsers
+    and media player contexts. The underlying problem is an out-of-bounds
+    read in the read_global_param() function. The only impact is a crash.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30997">CVE-2026-30997</a>.</p>
+    <p>To fix this vulnerability, update to ffmpeg-8.1.1 or later using the
+    instructions from
+    <a href="../view/svn/multimedia/ffmpeg.html">ffmpeg (sysv)</a> or
+    <a href="../view/systemd/multimedia/ffmpeg.html">ffmpeg (systemd)</a>.</p>
+
+    <a id="sa-13.0-084"/>
+    <h4>13.0 084 Postfix  Date: 2026-05-24  Severity: High</h4>
+    <p>In Postfix-3.11.2, a security vulnerability was fixed that could allow
+    for a remotely exploitable denial of service (daemon crash). The issue is
+    a buffer over-read, which can occur when Postfix receives an enhanced status
+    code not followed by other text (e.g. 5.7.2 without text after the three
+    number code). The only known impact of this vulnerability is a crash. Note
+    that the issue can't be triggered with an SMTP or LMTP server response, but
+    can via error logging, header checks, body checks, or milters.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43964">CVE-2026-43964</a>.</p>
+    <p>To fix this vulnerability, update to Postfix-3.11.2 or later using the
+    instructions from
+    <a href="../view/svn/server/postfix.html">Postfix (sysv)</a> or
+    <a href="../view/systemd/server/postfix.html">Postfix (systemd)</a>.</p>
+    <p>Note that users on older versions of Postfix may want to use the latest
+    versions of those release branches instead, such as 3.10.9, 3.9.10, and
+    3.8.16.</p>
+
+    <a id="sa-13.0-083"/>
+    <h4>13.0 083 rsync  Date: 2026-05-24  Severity: High</h4>
+    <p>In rsync-3.4.3, six security vulnerabilities were fixed that could
+    allow for local privilege escalation, remotely exploitable file overwrites,
+    hostname/ACL bypasses, remotely exploitable information disclosure (leaking
+    process memory contents including passwords, heap and library pointers, and
+    environment variables), and remotely exploitable denial of service (daemon
+    crashes). The default BLFS configuration is affected by three of these
+    vulnerabilities, while the other three are only exploitable when a user
+    has RSYNC_PROXY set or when the server is running with "daemon chroot = no".
+    The vulnerabilities that the default configuration is affected by include
+    the remotely exploitable information disclosure and the two denial of
+    service issues. The arbitrary file write, local privilege escalation, and
+    the hostname/ACL bypass vulnerability do not affect the default BLFS
+    configuration, but may affect users if they have modified the configuration.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29518">CVE-2026-29518</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43617">CVE-2026-43617</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43618">CVE-2026-43618</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43619">CVE-2026-43619</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-43620">CVE-2026-43620</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45232">CVE-2026-45232</a>.</p>
+    <p>To fix these vulnerabilities, update to rsync-3.4.3 or later using the
+    instructions from
+    <a href="../view/svn/basicnet/rsync.html">rsync (sysv)</a> or
+    <a href="../view/systemd/basicnet/rsync.html">rsync (systemd)</a>.</p>
+
+    <a id="sa-13.0-082"/>
+    <h4>13.0 082 Text::CSV_XS  Date: 2026-05-24  Severity: High</h4>
+    <p>In Text::CSV_XS-1.62, a security vulnerability was fixed that could
+    allow for type confusion or denial of service (application crashes). This
+    can show up in crafted CSV input passed to this Perl module, and occurs
+    due to a use-after-free when registered callbacks extend the Perl argument
+    stack. This Perl module is only used by Biber in BLFS, so users who have
+    that package installed and who process untrusted input will want to update.
+    Users who have written Perl code that utilizes this module  will also
+    want to update if they use the Parse, print, getline, or getline_all
+    methods in their code.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7111">CVE-2026-7111</a>.</p>
+    <p>To fix this vulnerability, update to Text::CSV_XS-1.62 or later using
+    the instructions from
+    <a href="../view/svn/general/perl-deps.html#perl-text-csv_xs">Text::CSV_XS (sysv)</a> or
+    <a href="../view/systemd/general/perl-deps.html#perl-text-csv_xs">Text::CSV_XS (systemd)</a>.</p>
+
+    <a id="sa-13.0-081"/>
+    <h4>13.0 081 MIT Kerberos V5  Date: 2026-05-24  Severity: Medium</h4>
+    <p>In krb5-1.22.2, two security vulnerabilities were discovered that could
+    allow for remotely exploitable denial of service (Kerberos server crash).
+    These issues are caused by a null pointer dereference and a read overrun
+    when the krb5-kdc daemon recieves crafted input during authentication.
+    This can allow unauthenticated remote attackers to crash the daemon. Memory
+    disclosure does not appear to be possible. The client libraries and programs
+    are not affected. Users only need to apply the security fixes patch if
+    they are using the server components and are experiencing crashes.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40355">CVE-2026-40355</a> and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40356">CVE-2026-40356</a>.</p>
+    <p>To fix these vulnerabilities, apply the security fixes patch to krb5
+    using the instructions from
+    <a href="../view/svn/postlfs/mitkrb.html">MIT Kerberos V5 (sysv)</a> or
+    <a href="../view/systemd/postlfs/mitkrb.html">MIT Kerberos V5 (systemd)</a>.</p>
+
+    <a id="sa-13.0-080"/>
+    <h4>13.0 080 lcms2  Date: 2026-05-23  Severity: High</h4>
+    <p>In lcms-2.19, a security vulnerability was fixed that could allow for
+    a crash or potentially information disclosure when processing a crafted
+    image file to retrieve a color profile. This vulnerability is classified
+    as an integer overflow in the CubeSize() function as an overflow check
+    was performed after multiplication and not before. There is a 992-byte
+    PDF file available to the public  that is able to trigger a crash in
+    poppler, OpenJDK, Okular, Evince, GIMP, cups-filters, LibreOffice,
+    and Tumbler (from XFCE). Users should update to this version especially
+    if they start experiencing unexplainable crashes in these programs, or
+    if they explicitly disable ASLR on their systems. The primary impact is
+    a crash, though information disclosure has been demonstrated if ASLR has
+    been disabled on a system.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41254">CVE-2026-41254</a>.</p>
+    <p>To fix this vulnerability, update to lcms2-2.19 or later using the
+    instructions from
+    <a href="../view/svn/general/lcms2.html">lcms2 (sysv)</a> or
+    <a href="../view/systemd/general/lcms2.html">lcms2 (systemd)</a>.</p>
+
+    <a id="sa-13.0-079"/>
+    <h4>13.0 079 Apache HTTPD  Date: 2026-05-23  Severity: Critical</h4>
+    <p>In httpd-2.4.67, eleven security vulnerabilities were fixed that could
+    allow for trivial remote code execution, denial of service (resource
+    exhaustion and server crashes), memory disclosure, privilege escalation,
+    HTTP response splitting, and authentication bypasses. These vulnerabilities
+    are in a large variety of modules, including HTTP/2 support, mod_md,
+    mod_rewrite, mod_dav_lock, mod_auth_digest, mod_authn_socache, and
+    mod_proxy_ajp. All users who have httpd installed should update immediately
+    due to the remote code execution vulnerability which affects the commonly
+    enabled HTTP/2 support.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-23198">CVE-2026-23198</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24072">CVE-2026-24072</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28780">CVE-2026-28780</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29168">CVE-2026-29168</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29169">CVE-2026-29169</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33006">CVE-2026-33006</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33007">CVE-2026-33007</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33523">CVE-2026-33523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33857">CVE-2026-33857</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34032">CVE-2026-34032</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34059">CVE-2026-34059</a>.</p>
+    <p>To fix these vulnerabilities, update to httpd-2.4.67 or later using the
+    instructions from
+    <a href="../view/svn/server/apache.html">Apache HTTPD (sysv)</a> or
+    <a href="../view/systemd/server/apache.html">Apache HTTPD (systemd)</a>.</p>
+
+    <a id="sa-13.0-078"/>
+    <h4>13.0 078 glib  Date: 2026-06-01  Severity: High</h4>
+    <p>In glib-2.88.1, nine security vulnerabilities were fixed that could
+    allow for remote code execution, denial of service (application crashes),
+    and path traversal leading to arbitrary file reads. These issues occur in
+    a variety of different functions including GMarkup, GVariant, GDateTime,
+    and GDBus. One of the notable issues is a flag confusion issue in GRegex
+    which can result in an unbounded out-of-bounds read off the start of a
+    regex input string. Most of them are out-of-bounds reads, off-by-one
+    errors, buffer over-reads, and an integer overflow.
+    These vulnerabilities have not been assigned CVEs, but additional details
+    about them can be found from the upstream bug reports:
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3915">#3915</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3916">#3916</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3917">#3917</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3918">#3918</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3919">#3919</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3925">#3925</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3930">#3930</a>,
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3931">#3931</a>, and
+    <a href="https://gitlab.gnome.org/GNOME/glib/-/issues/3933">#3933</a>.</p>
+    <p>To fix these vulnerabilities, update to glib-2.88.1 or later using the
+    instructions from
+    <a href="../view/svn/general/glib2.html">glib (sysv)</a> or
+    <a href="../view/systemd/general/glib2.html">glib (systemd)</a>.</p>
+    <p>In addition, users should upgrade to pygobject-3.56.3 or later to resolve
+    significant runtime problems with packages that use that module. To do this,
+    follow the instructions from
+    <a href="../view/svn/general/python-modules.html#pygobject3">PyGObject (sysv)</a> or
+    <a href="../view/systemd/general/python-modules.html#pygobject3">PyGObject (systemd)</a>.</p>
+    <p><em>Updated on 2026-06-01 to document the need to upgrade PyGObject at
+    the same time to fix runtime problems.</em></p>
+
+    <a id="sa-13.0-077"/>
+    <h4>13.0 077 Wireshark  Date: 2026-05-23  Severity: High</h4>
+    <p>In Wireshark-4.6.5, thirty-nine security vulnerabilities were fixed that
+    could allow for denial of service and potentially remote code execution
+    when picking up crafted packets on a network, when using the sharkd utility,
+    and when importing profiles from other systems. These specifically impact
+    the HTTP, SMB2, GSM RP, WebSocket, RPKI-Router, MBIM, OpenFlow v5, OpenFlow
+    v6, GNW, MySQL, IEEE 802.11, RTSP, ASN.1 PER, TLS, iLBC, DCP-ETSI, SANE,
+    Kismet, USB HID, DLMS/COSEM, ZigBee, BEEP, iLBC, SDP, AMR-NB, RDP, SBC,
+    K12 RF5, AFP, ICMPv6, FC-SWILS, BT-DHT, and Monero packet and protocol
+    dissectors. All users who have Wireshark installed should upgrade since
+    several of these protocols are commonly used on networks.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5409">CVE-2026-5409</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5408">CVE-2026-5408</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5406">CVE-2026-5406</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5407">CVE-2026-5407</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5299">CVE-2026-5299</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5401">CVE-2026-5401</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5402">CVE-2026-5402</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5404">CVE-2026-5404</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5403">CVE-2026-5403</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5405">CVE-2026-5405</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5654">CVE-2026-5464</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5655">CVE-2026-5655</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5657">CVE-2026-5657</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5656">CVE-2026-5656</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5653">CVE-2026-5653</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6538">CVE-2026-6538</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6537">CVE-2026-6537</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6536">CVE-2026-6536</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6535">CVE-2026-6535</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6534">CVE-2026-6534</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6533">CVE-2026-6533</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6532">CVE-2026-6532</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6531">CVE-2026-6531</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6530">CVE-2026-6530</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6529">CVE-2026-6529</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6528">CVE-2026-6528</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6527">CVE-2026-6527</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6526">CVE-2026-6526</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6525">CVE-2026-6525</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6524">CVE-2026-6524</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6523">CVE-2026-6523</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6521">CVE-2026-6521</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6520">CVE-2026-6520</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6519">CVE-2026-6519</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6522">CVE-2026-6522</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6870">CVE-2026-6870</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6869">CVE-2026-6869</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6868">CVE-2026-6868</a>.</p>
+    <p>To fix these vulnerabilities, update to Wireshark-4.6.5 or later using
+    the instructions from
+    <a href="../view/svn/basicnet/wireshark.html">Wireshark (sysv)</a> or
+    <a href="../view/systemd/basicnet/wireshark.html">Wireshark (systemd)</a>.</p>
+
+    <a id="sa-13.0-076"/>
+    <h4>13.0 076 GnuTLS  Date: 2026-05-23  Severity: Critical</h4>
+    <p>In GnuTLS-3.8.13, thirteen vulnerabilities were fixed that could allow
+    for remote code execution, information disclosure, denial of service
+    (undefined behavior and application crashes), authentication bypass, domain
+    names being accepted that should've been rejected, certificate name
+    constraint bypasses, misuse of certificates, accepting of revoked
+    certificates, and private key disclosure. These issues occur due to a
+    variety of problems, including heap buffer overflows and underflows,
+    invalid comparisons, logic errors, use-after-frees, and timing side
+    channels, and some of the vulnerabilities can occur when validating
+    certificates and using DTLS. All users who have GnuTLS installed should
+    update immediately.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33846">CVE-2026-33846</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42009">CVE-2026-42009</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33845">CVE-2026-33845</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42010">CVE-2026-42010</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3833">CVE-2026-3833</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42011">CVE-2026-42011</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42012">CVE-2026-42012</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42013">CVE-2026-42013</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42014">CVE-2026-42014</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5260">CVE-2026-5260</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42015">CVE-2026-42015</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3832">CVE-2026-3832</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5419">CVE-2026-5419</a>.</p>
+    <p>To fix these vulnerabilitites, update to GnuTLS-3.8.13 or later using
+    the instructions from
+    <a href="../view/svn/postlfs/gnutls.html">GnuTLS (sysv)</a> or
+    <a href="../view/systemd/postlfs/gnutls.html">GnuTLS (systemd)</a>.</p>
+
+    <a id="sa-13.0-075"/>
+    <h4>13.0 075 ProFTPD  Date: 2026-05-23  Severity: High</h4>
+    <p>In ProFTPD-1.3.9a, a security vulnerability was fixed which could allow
+    for unauthenticated remote code execution, privilege escalation, and
+    authentication bypasses in some circumstances. The issue is in the mod_sql
+    module, where a logic error in the is_escaped_text() function will let a
+    crafted username execute SQL commands when logging is enabled. The default
+    configuration in BLFS is not affected by this vulnerability as it doesn't
+    use mod_sql for retrieving credentials from an SQL database, and it also
+    doesn't enable logging to an SQL database either. If you have changed the
+    default BLFS configuration to enable SQL support though, you need to update
+    ProFTPD as soon as possible.
+    This vulnerability has been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42167">CVE-2026-42167</a>.</p>
+    <p>More information for affected users can be found at the
+    <a href="https://zeropath.com/blog/proftpd-cve-2026-42167-auth-bypass-privesc-rce">Zeropath write-up</a>.</p>
+    <p>To fix this vulnerability, update to ProFTPD-1.3.9a or later using the
+    instructions from
+    <a href="../view/svn/server/proftpd.html">ProFTPD (sysv)</a> or
+    <a href="../view/systemd/server/proftpd.html">ProFTPD (systemd)</a>.</p>
+
+    <a id="sa-13.0-074"/>
+    <h4>13.0 074 Thunderbird  Date: 2026-05-23  Severity: Critical</h4>
+    <p>In Thunderbird-140.11.0esr, fifty-five security vulnerabilities were fixed
+    that could allow for remote code execution, denial of service (application
+    crashes and resource exhaustion), information disclosure, privilege
+    escalation, UI spoofing, mitigation bypasses, same-origin policy bypasses,
+    and sandbox escapes. The vulnerabilities occur in a variety of components,
+    including the JavaScript engine, NSS, DOM: Security, Form Autofill, Audio/
+    Video: Web Codecs, Widgets, Security: Process Sandboxing, DOM: Workers,
+    Networking: JAR, Enterprise Policies, Audio/Video, Disability Access APIs,
+    Profile Backup, Networking: HTTP, JavaScript Engine: JIT, WebIDL,
+    DOM: Networking, WebRTC, Storage: IndexedDB, Debugger, DOM: Device
+    Interfaces, DOM: Core and HTML, JavaScript: WebAssembly, Graphics: WebRender,
+    Graphics: Canvas2D, and Graphics: Text. All users of Thunderbird must update
+    immediately to protect their systems, especially since the sandbox escape
+    vulnerabilities significantly amplify the severity of the remote code
+    execution vulnerabilities fixed in this update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5732">CVE-2026-5732</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5731">CVE-2026-5731</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5734">CVE-2026-5734</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6746">CVE-2026-6746</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6747">CVE-2026-6747</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6748">CVE-2026-6748</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6749">CVE-2026-6749</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6750">CVE-2026-6750</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6751">CVE-2026-6751</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6752">CVE-2026-6752</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6753">CVE-2026-6753</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6754">CVE-2026-6754</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6757">CVE-2026-6757</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6759">CVE-2026-6759</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6761">CVE-2026-6761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6762">CVE-2026-6762</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6763">CVE-2026-6763</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6764">CVE-2026-6764</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6765">CVE-2026-6765</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6766">CVE-2026-6766</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6767">CVE-2026-6767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6769">CVE-2026-6769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6770">CVE-2026-6770</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6771">CVE-2026-6771</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6772">CVE-2026-6772</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6776">CVE-2026-6776</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6785">CVE-2026-6785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6786">CVE-2026-6786</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7320">CVE-2026-7320</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7321">CVE-2026-7321</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7322">CVE-2026-7322</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7323">CVE-2026-7323</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8090">CVE-2026-8090</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8094">CVE-2026-8094</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8092">CVE-2026-8092</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8946">CVE-2026-8946</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8388">CVE-2026-8388</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8947">CVE-2026-8947</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8391">CVE-2026-8391</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8401">CVE-2026-8401</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8949">CVE-2026-8949</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8950">CVE-2026-8950</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8953">CVE-2026-8953</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8954">CVE-2026-8954</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8955">CVE-2026-8955</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8956">CVE-2026-8956</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8957">CVE-2026-8957</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8958">CVE-2026-8958</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8959">CVE-2026-8959</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8961">CVE-2026-8961</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8962">CVE-2026-8962</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8968">CVE-2026-8968</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8970">CVE-2026-8970</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8974">CVE-2026-8974</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8975">CVE-2026-8975</a>.</p>
+    <p>To fix these vulnerabilities, update to Thunderbird-140.9.0esr or later using
+    the instructions from
+    <a href="../view/svn/xsoft/thunderbird.html">Thunderbird (sysv)</a> or
+    <a href="../view/systemd/xsoft/thunderbird.html">Thunderbird (systemd)</a>.</p>
+
+    <a id="sa-13.0-073"/>
+    <h4>13.0 073 Firefox  Date: 2026-05-23  Severity: Critical</h4>
+    <p>In Firefox-140.11.0esr, fifty-five security vulnerabilities were fixed
+    that could allow for remote code execution, denial of service (application
+    crashes and resource exhaustion), information disclosure, privilege
+    escalation, UI spoofing, mitigation bypasses, same-origin policy bypasses,
+    and sandbox escapes. The vulnerabilities occur in a variety of components,
+    including the JavaScript engine, NSS, DOM: Security, Form Autofill, Audio/
+    Video: Web Codecs, Widgets, Security: Process Sandboxing, DOM: Workers,
+    Networking: JAR, Enterprise Policies, Audio/Video, Disability Access APIs,
+    Profile Backup, Networking: HTTP, JavaScript Engine: JIT, WebIDL,
+    DOM: Networking, WebRTC, Storage: IndexedDB, Debugger, DOM: Device
+    Interfaces, DOM: Core and HTML, JavaScript: WebAssembly, Graphics: WebRender,
+    Graphics: Canvas2D, and Graphics: Text. All users of Firefox must update
+    immediately to protect their systems, especially since the sandbox escape
+    vulnerabilities significantly amplify the severity of the remote code
+    execution vulnerabilities fixed in this update.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5732">CVE-2026-5732</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5731">CVE-2026-5731</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5734">CVE-2026-5734</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6746">CVE-2026-6746</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6747">CVE-2026-6747</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6748">CVE-2026-6748</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6749">CVE-2026-6749</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6750">CVE-2026-6750</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6751">CVE-2026-6751</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6752">CVE-2026-6752</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6753">CVE-2026-6753</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6754">CVE-2026-6754</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6757">CVE-2026-6757</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6759">CVE-2026-6759</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6761">CVE-2026-6761</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6762">CVE-2026-6762</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6763">CVE-2026-6763</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6764">CVE-2026-6764</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6765">CVE-2026-6765</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6766">CVE-2026-6766</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6767">CVE-2026-6767</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6769">CVE-2026-6769</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6770">CVE-2026-6770</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6771">CVE-2026-6771</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6772">CVE-2026-6772</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6776">CVE-2026-6776</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6785">CVE-2026-6785</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6786">CVE-2026-6786</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7320">CVE-2026-7320</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7321">CVE-2026-7321</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7322">CVE-2026-7322</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7323">CVE-2026-7323</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8090">CVE-2026-8090</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8094">CVE-2026-8094</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8092">CVE-2026-8092</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8946">CVE-2026-8946</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8388">CVE-2026-8388</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8947">CVE-2026-8947</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8391">CVE-2026-8391</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8401">CVE-2026-8401</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8949">CVE-2026-8949</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8950">CVE-2026-8950</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8953">CVE-2026-8953</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8954">CVE-2026-8954</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8955">CVE-2026-8955</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8956">CVE-2026-8956</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8957">CVE-2026-8957</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8958">CVE-2026-8958</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8959">CVE-2026-8959</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8961">CVE-2026-8961</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8962">CVE-2026-8962</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8968">CVE-2026-8968</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8970">CVE-2026-8970</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8974">CVE-2026-8974</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8975">CVE-2026-8975</a>.</p>
+    <p>To fix these vulnerabilities, update to Firefox-140.9.0esr or later using
+    the instructions from
+    <a href="../view/svn/xsoft/firefox.html">Firefox (sysv)</a> or
+    <a href="../view/systemd/xsoft/firefox.html">Firefox (systemd)</a>.</p>
+
+    <a id="sa-13.0-072"/>
+    <h4>13.0 072 Spidermonkey  Date: 2026-05-23  Severity:  High</h4>
+    <p>In Spidermonkey from Firefox-140.11.0esr, four security vulnerabilities
+    were fixed that could allow for remote code execution, information
+    disclosure, and denial of service. These issues occur due to incorrect
+    boundary access, invalid pointers, and use-after-free vulnerabilities.
+    The issues are in the core JavaScript engine as well as the WebAssembly and
+    JIT components.
+    These vulnerabilities have been assigned
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6754">CVE-2026-6754</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6757">CVE-2026-6757</a>,
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8388">CVE-2026-8388</a>, and
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8391">CVE-2026-8391</a>.</p>
+    <p>To fix these vulnerabilities, update to Spidermonkey-140.11.0 or later
+    using the instructions from
+    <a href="../view/svn/general/spidermonkey.html">Spidermonkey (sysv)</a> or
+    <a href="../view/systemd/general/spidermonkey.html">Spidermonkey (systemd)</a>.</p>
+
     <a id="sa-13.0-071"/>
     <h4>13.0 071 vim (LFS and BLFS)  Date: 2026-05-22  Severity: Medium</h4>
     <p>In vim-9.2.0481, four security vulnerabilities were fixed that could
@@ -263,7 +1616,7 @@
     to protect your systems and your data. Please continue to monitor the
     security advisories for additional information and take care of any existing
     security updates to prevent further exposure for your system.</p>
-    <p>Additional stable kernel versions 6.12.90, 6.6.140, 6.6.173, 5.5.207,
+    <p>Additional stable kernel versions 6.12.90, 6.6.140, 6.6.173, 5.15.207,
     and 5.10.256 were released for these issues but have not been tested by the
     LFS editors.</p>
 

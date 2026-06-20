@@ -156,6 +156,36 @@
 
     <h3>Linux Kernel</h3>
 
+    <a id="sa-13.0-098"/>
+    <h4>13.0 098 Linux Kernel (LFS)  Date: 2026-05-28  Severity: Critical</h4>
+    <p>In Linux-7.0.10 and 6.18.33, two security vulnerabilities were fixed
+    that could allow for local privilege escalation. These are amongst the
+    same class as CopyFail, as both of them have proof of concept exploits that
+    allow for extremely trivial local privilege escalation by overwriting a
+    version of /usr/bin/su in the page cache, which is never written to disk.
+    The first vulnerability has been termed Fragnesia, and it involved the
+    XFRM ESP-in-TCP subsystem in the kernel which is enabled by default via
+    a 'make defconfig'. Because of this, it is reasonably assumed that all
+    LFS users who are running a Linux-4.9.x kernel or later are affected by
+    this issue (and the first release of LFS to include a kernel affected
+    was LFS 8.0). The other vulnerability has been termed PinTheft, which
+    affected the RDS module combined with the io_uring subsystem. Thankfully
+    though the RDS module is not enabled by default in the kernel, so only
+    users who have explicitly enabled CONFIG_RDS are vulnerable to this
+    issue. The first LFS version affected by this issue is 8.3 (from 2018).
+    Similar to CopyFail and other derivatives, these vulnerabilities disable
+    password authentication for 'su' until the system is rebooted or the page
+    cache is emptied. Note that while local privilege escalation has been
+    identified as one of the primary impacts, these vulnerabilities are being
+    chained together with exploits in other packages to give remote attackers
+    root access on a system once it has been compromised via other means.
+    <em>ALL users of LFS must immediately update to Linux-6.18.33 or 7.0.10.</em>
+    The importance of updating cannot be underscored enough. Users also must
+    take care of other security updates to reduce exposure as soon as possible.
+    Please continue to monitor the Consolidated Advisories page for further
+    updates.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-098">13.0-098</a></p>
+
     <a id="sa-13.0-066"/>
     <h4>13.0 066 Linux Kernel (LFS)   Date: 2026-05-21  Severity: Critical</h4>
     <p>In Linux-7.0.9 and 6.18.32, several recent high profile vulnerabilities
@@ -307,6 +337,16 @@
 <!-- end of Util-Linux -->
 
     <h3>vim</h3>
+
+    <a id="sa-13.0-111"/>
+    <h4>13.0 111 vim (LFS and BLFS)  Date: 2026-06-01  Severity: Medium</h4>
+    <p>In vim-9.2.0567, five security vulnerabilities were fixed that could
+    allow for Vimscript code injection, denial of service (application crashes),
+    and arbitrary code execution. Users who use the :terminal command, who
+    use the netrw plugin, who use the cucumber filetype plugin, who perform
+    spell checks, or who use the omni-completion support should update. Update
+    to vim-9.2.0567.
+    <a href="../../blfs/advisories/consolidated.html#sa-13.0-111">13.0-111</a></p>
 
     <a id="sa-13.0-071"/>
     <h4>13.0 071 vim (LFS and BLFS)  Date: 2026-05-22  Severity: Medium</h4>
