@@ -1,5 +1,10 @@
 Updating after a new release of the books:
 
+Contact Bruce to get him to update the security advisories table to add a
+new version of LFS/BLFS to the database.
+
+### THE BELOW SECTION IS OBSOLETE BUT IS KEPT FOR HISTORICAL PURPOSES ###
+
 In LFS,
 
 1. update index.html -
