@@ -21,9 +21,28 @@ while ( list($v) = $result->fetch_row() )
   $versions[] = $v;
 }
 
-// Get the header and footer code
-$handle = fopen("header.tmpl", "r");
+// Get the headers, menu, and footer code
+$handle  = fopen("header1.html", "r");
+$header1 = fread($handle, 8192);
+fclose($handle);
+
+# Fix the title of the page
+$lines = explode("\n", $header1);
+$lines[5] = "    <title>Security Advisories</title>";
+$header1 = implode("\n", $lines);
+
+$handle = fopen("header.html", "r");
 $header = fread($handle, 8192);
+fclose($handle);
+
+# Remove first line from the header
+$lines = explode("\n", $header);
+unset($lines[0]);
+$header = implode("\n", $lines);
+
+
+$handle  = fopen("menu.html", "r");
+$menu    = fread($handle, 8192);
 fclose($handle);
 
 $handle = fopen("footer.html", "r");
@@ -33,7 +52,9 @@ fclose($handle);
 $submit = ( isset($_POST['submit']) ) ? $_POST['submit'] : "notset";
 
 // Start output
+print $header1;
 print $header;
+print $menu;
 
 $pop_message   = "";
 $list_packages = "";
@@ -53,6 +74,7 @@ function main()
 
   global $versions;
 
+  print "<div class='main'>\n";
   print "<h2>Linux From Scratch Security Advisories</h2>\n";
   print "<form method='post' action='{$_SERVER['PHP_SELF']}'>\n";
 
