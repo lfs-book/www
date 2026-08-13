@@ -15,6 +15,37 @@
     <h2>13.0 to 13.1</h2>
     <h2>Security Advisories</h2>
 
+    <a id="slfs-sa-13.0-015"/>
+    <h4>slfs-sa-13.0-015: tornado - Rating: High (Date: July 14th, 2026)</h4>
+    <p>In tornado-6.5.7, six security vulnerabilities were fixed that could
+    allow for auth and cookie headers being part of the request when following
+    redirects to different origins, DOS attacks, out-of-bounds read operations,
+    improper reponse parsing, credential reuse, and unlimited memory
+    consumption. Some of these have IDs associated with them. Associated GHSAs
+    are listed as
+    <a href="https://github.com/advisories/GHSA-3x9g-8vmp-wqvf">GHSA-3x9g-8vmp-wqvf</a>,
+    <a href="https://github.com/advisories/GHSA-mgf9-4vpg-hj56">GHSA-mgf9-4vpg-hj56</a>,
+    <a href="https://github.com/advisories/GHSA-cx3h-4qpv-8hc9">GHSA-cx3h-4qpv-8hc9</a>, and
+    <a href="https://github.com/advisories/GHSA-pw6j-qg29-8w7f">GHSA-pw6j-qg29-8w7f</a>.</p>
+    <p>To fix these vulnerabilties, update to tornado-6.5.7 by
+     following the
+    <a href="view/dev/general/python-dependencies.html#tornado">tornado
+    installation page</a>.</p>
+
+    <a id="slfs-sa-13.0-014"/>
+    <h4>slfs-sa-13.0-014: Capstone - Rating: Medium (Date: July 14th, 2026)</h4>
+    <p>In Capstone-5.0.9, three security vulnerabilities were fixed that could
+    allow for out-of-bounds read operations, DOS attacks, no-progress
+    disassembly, parser desynchronization, and null pointer dereferences. CVEs
+    that have been assigned are not public, but the GitHub Security Advisories
+    have all the information. The GHSAs are listed as
+    <a href="https://github.com/capstone-engine/capstone/security/advisories/GHSA-289w-cm54-fgrm">GHSA-289w-cm54-fgrm</a>,
+    <a href="https://github.com/capstone-engine/capstone/security/advisories/GHSA-5m9f-vqcm-g5pr">GHSA-5m9f-vqcm-g5pr</a>, and
+    <a href="https://github.com/capstone-engine/capstone/security/advisories/GHSA-jrw4-wj52-2vw8">GHSA-jrw4-wj52-2vw8</a>.</p>
+    <p>To fix these vulnerabilties, update to Capstone-5.0.9 by
+    following the <a href="view/general/capstone.html">Capstone installation
+    page</a>.</p>
+
     <a id="slfs-sa-13.0-013"/>
     <h4>slfs-sa-13.0-013: Go - Rating: High (Date: June 1st, 2026)</h4>
     <p>In Go-1.26.3, eleven security vulnerabilities were fixed that could
