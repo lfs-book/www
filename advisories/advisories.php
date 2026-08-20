@@ -417,7 +417,7 @@ function display_all( $severity )
       $query .= " WHERE severity='$level'";
    }
 
-   $query .= " ORDER BY id;";
+   $query .= " ORDER BY id DESC;";
 
    $result = query_db( $query );
 
