@@ -414,8 +414,10 @@ function display_all( $severity )
    if ( $severity != "" )
    {
       $level = $_POST['level'];
-      $query .= " WHERE severity='$level';";
+      $query .= " WHERE severity='$level'";
    }
+
+   $query .= " ORDER BY id;";
 
    $result = query_db( $query );
 
