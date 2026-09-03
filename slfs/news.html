@@ -9,6 +9,50 @@
        be aware of are reported here.</p>
 
     <dl class="newsItem">
+      <dt>SLFS 13.1 has been released!</dt>
+      <dd><em>Zeckma - 2026/09/02</em>
+        <p>The GLFS team is proud to present version 13.1 of Supplemental Linux
+           From Scratch. This version includes over 175 packages beyond the
+           base Linux From Scratch, Multilib LFS, Gaming LFS, and Beyond LFS
+           books. There were over 220 updates since 13.0, upon many additions
+           and other siginificant changes.</p>
+        <p>SLFS has accrued many packages over its lifespan, and this release
+           shows that once again, with even more oxidation and rusting within
+           the book. Among the package additions are: full installation of
+           Shaderc (some packages need the full package while BLFS only ships
+           glslc), libbacktrace, PCSX2, PCSX-Redux, MIPSel, GLFW, Capstone,
+           XMLStarlet, NGINX, Go, libx86emu, hwinfo, QuaZip, evdevhook2, typst,
+           ripgrep, libunbound from Unbound (init-system-agnostic), cJSON,
+           RTMPDump, Mtools, Limine, jemalloc, fd, jaq, Waypipe, Helix,
+           dmidecode, and RapidYAML. In total, that leads to twenty-eight new
+           packages.</p>
+        <p>Some packages, however, were moved to BLFS and/or GLFS, namely
+           involving wlroots, Wayfire, and what they depend on. Among the moved
+           packages were: yyjson, xdg-desktop-portal-wlr, xcb-util-errors,
+           wlroots, Wayfire, wayfire-extra-plugins, seatd, nlohmann-json, and
+           libliftoff. In total, that's nine packages. That means that after
+           the lost packages, 13.1 gained nineteen packages in total.</p>
+        <p>There hasn't been many technical changes beyond adapting packages in
+           SLFS to the updated LFS base. Some packages have proven to be
+           especially troublesome due to their age, and s4-3b1-pc7300, which
+           includes a SysV filesystem kernel module, is an entirely SLFS-fueled
+           effort.</p>
+        <p>SLFS would not be where it is without the wonderful community and
+           its contributions, from and for the community. It's from the
+           community that keeps updates under control, with another member
+           creating software to help track all the updates. It's been inspiring
+           to see a community band together to create an amazing resource for
+           everyone.</p>
+        <p>With that, you can read SLFS-13.1
+           <a href="/slfs/view/13.1/">here</a>.
+        </p>
+        <p>For any issues, please direct them to the
+           <a href="https://github.com/glfs-book/slfs/issues">issue tracker</a>.
+        </p>
+      </dd>
+    </dl>
+
+    <dl class="newsItem">
       <dt>SLFS 13.0 has been released!</dt>
       <dd><em>Zeckma - 2026/03/05</em>
 
@@ -97,8 +141,7 @@
          still one full of many changes and additions that make it notable in
          its own right.</p>
 
-        <p>You can read the SLFS-13.0
-           <a href="/slfs/view/13.0/">here</a>.
+        <p>You can read SLFS-13.0 <a href="/slfs/view/13.0/">here</a>.
         </p>
         <p>For any issues, please direct them to the
            <a href="https://github.com/glfs-book/slfs/issues">issue tracker</a>.
