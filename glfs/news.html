@@ -9,6 +9,99 @@
        be aware of are reported here.</p>
 
     <dl class="newsItem">
+      <dt>GLFS-13.1 has been released!</dt>
+      <dd><em>Zeckma - 2026/09/02</em>
+
+        <p>The GLFS team is proud to present version 13.1 of Gaming Linux From
+           Scratch. This version includes over 120 (over 210 if package bundles
+           count for each tarball) packages beyond the base Linux From Scratch
+           and Multilib Linux From Scratch books to enable execution of gaming
+           support software. It has had over 220 updates since 13.0, as well as
+           some additions and changes.</p>
+        <p>Unlike GLFS' sister project, Supplemental LFS, this release doesn't
+           have nearly as much package additions; however, there's still a good
+           amount of changes to talk about. Immediately off-the-bat, the
+           section "Shared Dependencies" (shareddeps in the source and links)
+           has been renamed to "Core" to be a bit more comprehensive. SLFS has
+           already been adapted to use the new links. Another notable change is
+           that OpenCL is now installed through OpenCL-SDK, very similar to
+           Vulkan-SDK. GLFS-13.0 installs OCL-ICD, but 13.1 now installs
+           OpenCL-ICD-Loader (within OpenCL-SDK) from KhronosGroup, who
+           supplies the Vulkan-SDK and the OpenCL header variants:
+           OpenCL-Headers, and OpenCL-CLHPP. This was done since it now has
+           backing from KG and avoids the Ruby dependency altogether, which
+           tends to get security updates. It is completely compatible, and
+           using NVIDIA's OpenCL driver works as expected.</p>
+        <p>Package bundles have had some additions from within, such as
+           Vulkan-SDK which now installs Vulkan-Utility-Libraries and
+           Vulkan-Tools. These provide demos and libraries some projects may
+           depend on. Vulkan-Tools provides vkcube and vulkaninfo, both of
+           which are great ways to see if a Vulkan ICD (Installable Client
+           Driver) is installed and are effictively the Vulkan equivalents of
+           glxgears and glxinfo. The vulkaninfo utility outputs a lot, so you
+           will need to filter it in some way. XCB-Utils, matching with BLFS'
+           XCB-Utilities, has xcb-util-errors now a part of the suite.
+           Developers use this most for Xwayland integration within Wayland
+           compositors. This used to be SLFS-only. GStreamer-Suite was also
+           renamed to just GStreamer. GStreamer-Stack was considered for a
+           rename, but was ultimately decided against, since upstream mainly
+           refers to the set as just GStreamer. With a recent LAME update,
+           mpg123 became a recommended dependency, so mpg123 was added to
+           satisfy that.</p>
+        <p>There were some notable package enhancements. Instructions for
+           lib32, or 32-bit on 64-bit, have been added for GnuTLS, Nettle, and
+           p11-kit. Some 32-bit projects may want to use them. cURL and Rustc
+           have utilized nghttp2 more, so nghttp2 has been added in the service
+           for those two packages, but is beneficial to other projects like
+           CMake. Xserver packages, Xorg-Server and Xwayland, now have included
+           patches applied so that Mesa-only interfaces are no longer required.
+           This means a Mesa tarball is no longer required for any of GLFS for
+           NVIDIA-only systems. libglvnd also has a patch, but this one is
+           focused on bringing forward extensions required for some EGL
+           projects, due to a muddied past in regards to device querying and
+           information. NVIDIA doesn't present a number of those extensions
+           except for one, so the patch exposes all of the extensions if just
+           one is present. Steam now installs some Udev rulesets for Steam
+           Input and VR. A VR guide is planned for 13.2. The process of
+           installing NVIDIA is no longer operated using a script, but instead
+           through the official runfile execution method. This greatly shortens
+           page length and makes instructions less confusing and more easier to
+           read. The benefit of the script, however, was the ability to finely
+           tune how the driver was installed. The set of scripts were getting
+           harder to maintain, though, and any change meant changing all the
+           scripts. This was a benefit and a clear loss.</p>
+        <p>Package removals were done for a lack of use. Among them were NVIDIA
+           EGL Libraries, DRI, Ruby, OCL-ICD, and libclc. NVIDIA EGL Libraries
+           were now provided by the NVIDIA runfiles. DRI was no longer
+           necessary due to Xserver patching, and they were the only projects
+           using the API. Ruby was removed since OCL-ICD got removed, and
+           OCL-ICD overwrites OpenCL-SDK. libclc, which Mesa prefers a fork of,
+           only covers D3D and RustICL. D3D and RustICL are not enabled in
+           GLFS, so libclc no longer had use.</p>
+        <p>Something exciting has happened, though, and it involves OpenRC! The
+           SysV active discontinuation has upset many people, but there was a
+           plan for a SysV-to-OpenRC transition which fell through due to time.
+           But there has been OpenRC progress. MLFS has full OpenRC support,
+           and so does GLFS! OpenRC is effectively done for both MLFS and GLFS.
+           BLFS and SLFS still need adaption. BLFS is in progress, but SLFS
+           hasn't been quite started. For that reason, the OpenRC versions
+           aren't advertised openly quite yet. If you want to give MLFS and
+           GLFS OpenRC a try, find OpenRC releases here:</p>
+        <ul>
+           <li><a href="/mlfs/view/">MLFS</a></li>
+           <li><a href="/glfs/view/">GLFS</a></li>
+        </ul>
+        <p>There have been some rewrites, typo fixes, rewording, and other
+           documentation improvements.</p>
+        <p>You can read GLFS-13.1 <a href="/glfs/view/13.1/">here</a>.
+        </p>
+        <p>For any issues, please direct them to the
+           <a href="https://github.com/glfs-book/glfs/issues">issue tracker</a>.
+        </p>
+      </dd>
+    </dl>
+
+    <dl class="newsItem">
       <dt>GLFS-13.0 has been released!</dt>
       <dd><em>Zeckma - 2026/03/05</em>
 
@@ -109,7 +202,7 @@
         <p>There have been some rewrites, typo fixes, rewording, and other
            documentation improvements.</p>
 
-        <p>You can read the GLFS-13.0
+        <p>You can read GLFS-13.0
            <a href="/glfs/view/13.0/">here</a>.
         </p>
         <p>MLFS now has a stable version starting with <a

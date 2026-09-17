@@ -13,6 +13,28 @@
      </ul>
 -->
 
+     <ul>
+       <li>Some demonstrations of kernel configuration are outdated for the
+       Linux kernel version (7.1.8) shipped by LFS 13.1:
+         <ul>
+           <li>In the ntfs-3g page, <code>[NTFS_FS]</code> is now a distinct
+           NTFS file system driver, but BLFS 13.1 incorrectly described
+           it as an alias of <code>[NTFS3_FS]</code>.  Despite that, we
+           still recommend to enabling both as modules for coverage.</li>
+           <li><code>[IPV6]</code> is now impossible to be built as a
+           module.  Fortunately BLFS has been always demonstrating to
+           enable it as a part of the main kernel image instead of a module
+           for a long time, but it should now be demonstrated as
+           <code>[*]</code>, instead of <code>&lt;*&gt;</code> in BLFS
+           13.1.</li>
+           <li>Various items in the Graphics support section (demonstrated
+           in the Mesa and Xorg Server pages) are ordered differently in
+           Linux 7.1.8 configuration interface from the BLFS 13.1 book.</li>
+         </ul></li>
+       <li>json-c is a required dependency of accountservices but it's
+       missed in BLFS 13.1.</li>
+     </ul>
+
      <h2>Known Security Vulnerabilities</h2>
      
      <p>Details of Security Advisories for this version of BLFS are now
