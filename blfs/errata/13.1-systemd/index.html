@@ -33,6 +33,17 @@
          </ul></li>
        <li>json-c is a required dependency of accountservice but it's
        missed in BLFS 13.1.</li>
+       <li>
+         <p>Instructions for Xorg legacy have an issue in BLFS 13.1:
+	 the line</p>
+         <div class="cmd">
+           <p>for package in $(grep -v '^#' ../legacy.md5 | awk '{print $3}')</p>
+	 </div>
+         <p>should be changed to:</p>
+         <div class="cmd">
+           <p>for package in $(grep -v '^#' ../legacy.md5 | awk '{print $2}')</p>
+	 </div>
+       </li>
      </ul>
 
      <h2>Known Security Vulnerabilities</h2>
